@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, Video, Mic, GraduationCap, BookOpen, Award, Rocket } from 'lucide-react';
+import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, Mic, GraduationCap, BookOpen, Award, Rocket } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 const navigation = [{
   name: 'News',
@@ -45,11 +45,6 @@ const navigation = [{
     href: '/video/podcasts',
     icon: Mic,
     description: 'Expert financial discussions'
-  }, {
-    name: 'Webinars',
-    href: '/video/webinars',
-    icon: Video,
-    description: 'Live and recorded sessions'
   }]
 }, {
   name: 'Education',
