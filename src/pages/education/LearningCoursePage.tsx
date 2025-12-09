@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
-import { Rocket, CheckCircle, Clock, Users, Star, Bell } from 'lucide-react';
+import { Rocket, CheckCircle, Clock, Users, Star, Bell, Play, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
@@ -23,7 +23,64 @@ const features = [
   'Certificate upon completion',
   'Lifetime access to materials',
   'Community discussion forums',
+  'Monthly live Q&A sessions',
+  'Downloadable resources & templates',
 ];
+
+const instructors = [
+  {
+    name: 'Dr. Michael Torres',
+    title: 'Lead Instructor',
+    credentials: 'CFA, CMT, PhD Finance',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+    bio: '20+ years of experience in institutional asset management. Former portfolio manager at Fidelity Investments.',
+  },
+  {
+    name: 'Sarah Mitchell',
+    title: 'Technical Analysis Expert',
+    credentials: 'CMT, Market Technician',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face',
+    bio: 'Author of "Chart Patterns That Work" and regular contributor to technical analysis publications.',
+  },
+  {
+    name: 'James Chen',
+    title: 'Portfolio Strategy Instructor',
+    credentials: 'CFA, CAIA',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    bio: 'Former quantitative strategist at Goldman Sachs. Specializes in factor investing and portfolio optimization.',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Jennifer Adams',
+    role: 'Software Engineer',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+    quote: 'This course transformed my understanding of the markets. The practical exercises and real-world case studies made complex concepts accessible.',
+    rating: 5,
+  },
+  {
+    name: 'Robert Kim',
+    role: 'Small Business Owner',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+    quote: 'Finally, an investment course that goes beyond basics without being overwhelming. The instructor support is exceptional.',
+    rating: 5,
+  },
+  {
+    name: 'Maria Garcia',
+    role: 'Healthcare Professional',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face',
+    quote: 'Worth every minute. I went from knowing nothing about investing to confidently managing my own portfolio.',
+    rating: 5,
+  },
+];
+
+const sampleLesson = {
+  title: 'Understanding Market Orders vs Limit Orders',
+  duration: '12 min',
+  module: 'Module 1: Introduction to Financial Markets',
+  thumbnail: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop',
+};
 
 export default function LearningCoursePage() {
   const [email, setEmail] = useState('');
@@ -44,7 +101,7 @@ export default function LearningCoursePage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
               <Rocket className="h-4 w-4" />
-              <span className="text-sm font-medium">Coming Soon</span>
+              <span className="text-sm font-medium">Launching Q1 2025</span>
             </div>
             <h1 className="heading-hero mb-6">
               Master the Markets
@@ -91,7 +148,34 @@ export default function LearningCoursePage() {
             </div>
           </div>
 
-          {/* Course Modules */}
+          {/* Sample Lesson Preview */}
+          <div className="mb-16">
+            <h2 className="heading-lg text-center mb-8">Preview a Sample Lesson</h2>
+            <div className="glass-card overflow-hidden max-w-3xl mx-auto">
+              <div className="aspect-video relative group cursor-pointer">
+                <img 
+                  src={sampleLesson.thumbnail} 
+                  alt={sampleLesson.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-background/60 flex items-center justify-center group-hover:bg-background/40 transition-colors">
+                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Play className="h-8 w-8 text-primary-foreground ml-1" />
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-xs text-muted-foreground mb-1">{sampleLesson.module}</p>
+                  <h3 className="font-semibold text-foreground">{sampleLesson.title}</h3>
+                  <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
+                    <Clock className="h-3 w-3" />
+                    <span>{sampleLesson.duration}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Course Modules & Features */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="heading-lg mb-6">Course Curriculum</h2>
@@ -147,11 +231,60 @@ export default function LearningCoursePage() {
             </div>
           </div>
 
+          {/* Instructors */}
+          <div className="mb-16">
+            <h2 className="heading-lg text-center mb-8">Meet Your Instructors</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {instructors.map((instructor) => (
+                <div key={instructor.name} className="glass-card p-6 text-center">
+                  <img 
+                    src={instructor.image} 
+                    alt={instructor.name}
+                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="font-semibold text-lg">{instructor.name}</h3>
+                  <p className="text-primary text-sm mb-1">{instructor.title}</p>
+                  <p className="text-xs text-muted-foreground mb-3">{instructor.credentials}</p>
+                  <p className="text-sm text-muted-foreground">{instructor.bio}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="mb-16">
+            <h2 className="heading-lg text-center mb-8">What Students Say</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.name} className="glass-card p-6">
+                  <Quote className="h-8 w-8 text-primary/30 mb-4" />
+                  <p className="body-sm mb-6">"{testimonial.quote}"</p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-medium text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-0.5 mt-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="glass-card p-8 lg:p-12 text-center">
             <h2 className="heading-md mb-4">Be the First to Know</h2>
             <p className="body-lg mb-6 max-w-2xl mx-auto">
-              Join our waitlist to get early access and exclusive launch pricing when the course becomes available.
+              Join our waitlist to get early access and exclusive launch pricing when the course becomes available in Q1 2025.
             </p>
             <form onSubmit={handleNotify} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <Input

@@ -22,14 +22,10 @@ const footerLinks = {
     href: '/markets/currencies',
     icon: DollarSign
   }],
-  video: [{
+video: [{
     name: 'Podcasts',
     href: '/video/podcasts',
     icon: Mic
-  }, {
-    name: 'Webinars',
-    href: '/video/webinars',
-    icon: Video
   }],
   education: [{
     name: 'Basic Articles',
