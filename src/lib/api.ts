@@ -520,3 +520,8 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
   await delay(500);
   return mockForumComments.filter(c => c.topicId === topicId);
 }
+
+export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
+  await delay(500);
+  return mockForumTopics.find(topic => topic.id === id) || null;
+}

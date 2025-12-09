@@ -7,12 +7,16 @@ const corsHeaders = {
 };
 
 // Market category search queries for NewsAPI
+// Trusted financial news sources
+const trustedSources = 'bloomberg,reuters,the-wall-street-journal,financial-times,cnbc,business-insider,fortune,the-economist';
+
 const marketQueries: Record<string, string> = {
-  indices: 'stock market OR S&P 500 OR dow jones OR nasdaq OR index',
-  stocks: 'stocks OR shares OR earnings OR IPO OR stock price',
-  crypto: 'bitcoin OR ethereum OR cryptocurrency OR crypto OR blockchain',
-  commodities: 'gold price OR oil price OR commodities OR crude OR precious metals',
-  political: 'federal reserve OR interest rates OR economic policy OR trade war OR central bank OR inflation',
+  indices: '(S&P 500 OR dow jones OR nasdaq OR russell 2000 OR FTSE) AND (market OR trading OR stocks)',
+  stocks: '(earnings OR IPO OR stock price OR shares OR quarterly results) AND (company OR corporation)',
+  crypto: '(bitcoin OR ethereum OR cryptocurrency OR blockchain OR DeFi) AND (price OR trading OR market)',
+  commodities: '(gold OR oil OR silver OR copper OR natural gas) AND (price OR trading OR commodities)',
+  political: '(federal reserve OR interest rates OR inflation OR monetary policy OR economic growth) AND (economy OR markets)',
+  forex: '(USD OR EUR OR GBP OR currency) AND (exchange rate OR forex OR trading)',
 };
 
 interface NewsAPIArticle {
@@ -83,9 +87,10 @@ serve(async (req) => {
         try {
           const newsApiUrl = `https://newsapi.org/v2/everything?` + new URLSearchParams({
             q: query,
+            sources: trustedSources,
             language: 'en',
             sortBy: 'publishedAt',
-            pageSize: '15',
+            pageSize: '20',
             apiKey: NEWSAPI_KEY,
           });
 
