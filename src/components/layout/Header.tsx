@@ -41,29 +41,39 @@ const navigation = [{
   name: 'Video',
   href: '/video',
   children: [{
+    name: 'Видеотека',
+    href: '/video',
+    icon: GraduationCap,
+    description: 'Образовательные видео'
+  }, {
     name: 'Podcasts',
     href: '/video/podcasts',
     icon: Mic,
-    description: 'Expert financial discussions'
+    description: 'Аудио дискуссии экспертов'
   }]
 }, {
   name: 'Education',
   href: '/education',
   children: [{
-    name: 'Basic Articles',
+    name: 'Базовые статьи',
     href: '/education/basic',
     icon: BookOpen,
-    description: 'Fundamentals for beginners'
+    description: 'Основы для начинающих'
   }, {
-    name: 'Advanced Articles',
+    name: 'Продвинутые статьи',
     href: '/education/advanced',
     icon: Award,
-    description: 'In-depth analysis and strategies'
+    description: 'Углублённый анализ'
   }, {
-    name: 'Learning Course',
-    href: '/education/course',
+    name: 'Курс инвестора',
+    href: '/course',
     icon: Rocket,
-    description: 'Structured learning path'
+    description: 'Структурированное обучение'
+  }, {
+    name: 'Предложить статью',
+    href: '/articles/submit',
+    icon: GraduationCap,
+    description: 'Стать автором'
   }]
 }, {
   name: 'Companies',

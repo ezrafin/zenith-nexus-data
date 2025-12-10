@@ -28,10 +28,16 @@ import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 // Video Pages
 import PodcastsPage from "./pages/video/PodcastsPage";
+import VideoLibraryPage from "./pages/video/VideoLibraryPage";
+import VideoDetailPage from "./pages/video/VideoDetailPage";
 // Education Pages
 import BasicArticlesPage from "./pages/education/BasicArticlesPage";
 import AdvancedArticlesPage from "./pages/education/AdvancedArticlesPage";
 import LearningCoursePage from "./pages/education/LearningCoursePage";
+// Course Platform
+import CoursePlatformPage from "./pages/course/CoursePlatformPage";
+// Article Submission
+import ArticleSubmissionPage from "./pages/articles/ArticleSubmissionPage";
 
 const queryClient = new QueryClient();
 
@@ -66,11 +72,17 @@ const App = () => (
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
 {/* Video Pages */}
+          <Route path="/video" element={<VideoLibraryPage />} />
           <Route path="/video/podcasts" element={<PodcastsPage />} />
+          <Route path="/video/:videoId" element={<VideoDetailPage />} />
           {/* Education Pages */}
           <Route path="/education/basic" element={<BasicArticlesPage />} />
           <Route path="/education/advanced" element={<AdvancedArticlesPage />} />
           <Route path="/education/course" element={<LearningCoursePage />} />
+          {/* Course Platform */}
+          <Route path="/course" element={<CoursePlatformPage />} />
+          {/* Article Submission */}
+          <Route path="/articles/submit" element={<ArticleSubmissionPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
