@@ -1,15 +1,20 @@
-import { useEffect, useId } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface StructuredDataProps {
   data: object | object[];
 }
 
 export function StructuredData({ data }: StructuredDataProps) {
-  const uniqueId = useId().replace(/:/g, '-');
-  const scriptId = `structured-data-${uniqueId}`;
+  const scriptIdRef = useRef<string | null>(null);
+  
+  // Generate stable ID only once
+  if (!scriptIdRef.current) {
+    scriptIdRef.current = `structured-data-${Math.random().toString(36).substring(2, 11)}`;
+  }
 
   useEffect(() => {
     try {
+      const scriptId = scriptIdRef.current!;
       let script = document.getElementById(scriptId) as HTMLScriptElement;
 
       if (!script) {
@@ -24,7 +29,7 @@ export function StructuredData({ data }: StructuredDataProps) {
     } catch (error) {
       console.error('StructuredData error:', error);
     }
-  }, [data, scriptId]);
+  }, [data]); // Remove scriptId from dependencies
 
   return null;
 }

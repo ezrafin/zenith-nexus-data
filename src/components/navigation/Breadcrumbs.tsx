@@ -18,12 +18,23 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
-  const location = useLocation();
+  // useLocation must be called unconditionally (React hooks rule)
+  // We'll use it if available, otherwise fallback to window.location
+  let location: { pathname: string };
+  try {
+    location = useLocation();
+  } catch (error) {
+    // If useLocation fails, create a fallback location object
+    // This shouldn't happen in normal usage, but handles edge cases
+    location = { pathname: typeof window !== 'undefined' ? window.location.pathname : '/' };
+  }
   
   // Add try-catch for safety
   let breadcrumbItems: BreadcrumbItemType[];
   try {
-    breadcrumbItems = items || generateBreadcrumbs(location.pathname, pageTitle);
+    // Get pathname - prefer location from hook, fallback to window
+    const pathname = location?.pathname || (typeof window !== 'undefined' ? window.location.pathname : '/');
+    breadcrumbItems = items || generateBreadcrumbs(pathname, pageTitle);
   } catch (error) {
     console.error('Breadcrumb generation error:', error);
     breadcrumbItems = [];
