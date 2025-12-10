@@ -1,7 +1,19 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, Mic, GraduationCap, BookOpen, Award, Rocket } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, Mic, GraduationCap, BookOpen, Award, Rocket, User, LogOut, Settings, Bookmark } from 'lucide-react';
+import { MarketAlerts } from '@/components/markets/MarketAlerts';
+import { AchievementSystem } from '@/components/forum/AchievementSystem';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useUser } from '@/context/UserContext';
+import { UserAvatar } from '@/components/user/UserAvatar';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 const navigation = [{
   name: 'News',
   href: '/news'
@@ -87,6 +99,8 @@ export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { user, profile, signOut } = useUser();
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -148,10 +162,74 @@ export function Header() {
 
           {/* Live indicator + CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            
-            <Link to="/analytics" className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:shadow-primary/25">
-              Subscribe
-            </Link>
+            {user && (
+              <>
+                <MarketAlerts />
+                <AchievementSystem />
+              </>
+            )}
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors">
+                    <UserAvatar profile={profile} size="sm" />
+                    <span className="text-sm font-medium">{profile?.display_name || user.email}</span>
+                    <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuLabel>
+                    <div className="flex flex-col space-y-1">
+                      <p className="text-sm font-medium">{profile?.display_name || 'User'}</p>
+                      <p className="text-xs text-muted-foreground">{user.email}</p>
+                    </div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => navigate('/profile')}>
+                    <User className="mr-2 h-4 w-4" />
+                    Profile
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => navigate('/watchlists')}>
+                    <TrendingUp className="mr-2 h-4 w-4" />
+                    Watchlists
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => navigate('/bookmarks')}>
+                    <BookOpen className="mr-2 h-4 w-4" />
+                    Bookmarks
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => navigate('/community')}>
+                    <TrendingUp className="mr-2 h-4 w-4" />
+                    Community
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => navigate('/settings')}>
+                    <Settings className="mr-2 h-4 w-4" />
+                    Settings
+                  </DropdownMenuItem>
+                  {/* Moderator link - would check user role in real app */}
+                  {/* <DropdownMenuItem onClick={() => navigate('/admin/moderation')}>
+                    <Shield className="mr-2 h-4 w-4" />
+                    Moderation
+                  </DropdownMenuItem> */}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={async () => {
+                    await signOut();
+                    navigate('/');
+                  }}>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Sign out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <>
+                <Link to="/auth/login" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                  Sign in
+                </Link>
+                <Link to="/auth/register" className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:shadow-primary/25">
+                  Sign up
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -189,10 +267,33 @@ export function Header() {
                   </div> : <Link key={item.name} to={item.href} onClick={() => setMobileMenuOpen(false)} className={`block px-4 py-2 text-sm rounded-lg transition-colors ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
                     {item.name}
                   </Link>)}
-              <div className="pt-4 px-4">
-                <Link to="/analytics" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center px-4 py-3 text-sm font-medium bg-primary text-primary-foreground rounded-lg">
-                  Subscribe
-                </Link>
+              <div className="pt-4 px-4 space-y-2">
+                {user ? (
+                  <>
+                    <Link to="/profile" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center px-4 py-3 text-sm font-medium border border-border rounded-lg">
+                      Profile
+                    </Link>
+                    <button
+                      onClick={async () => {
+                        await signOut();
+                        setMobileMenuOpen(false);
+                        navigate('/');
+                      }}
+                      className="block w-full text-center px-4 py-3 text-sm font-medium text-destructive border border-destructive/50 rounded-lg"
+                    >
+                      Sign out
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/auth/login" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center px-4 py-3 text-sm font-medium border border-border rounded-lg">
+                      Sign in
+                    </Link>
+                    <Link to="/auth/register" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center px-4 py-3 text-sm font-medium bg-primary text-primary-foreground rounded-lg">
+                      Sign up
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>}

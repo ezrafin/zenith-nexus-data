@@ -3,17 +3,19 @@ import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, ArrowUpDown, ChevronUp, ChevronDown } from 'lucide-react';
 import { MarketData } from '@/lib/api';
 import { SimpleChart } from './SimpleChart';
+import { WatchlistButton } from './markets/WatchlistButton';
 
 interface MarketTableProps {
   data: MarketData[];
   showVolume?: boolean;
   showChart?: boolean;
+  marketType?: 'indices' | 'stocks' | 'crypto' | 'commodities' | 'currencies';
 }
 
 type SortKey = 'symbol' | 'name' | 'price' | 'change' | 'changePercent' | 'volume';
 type SortDirection = 'asc' | 'desc';
 
-export function MarketTable({ data, showVolume = false, showChart = true }: MarketTableProps) {
+export function MarketTable({ data, showVolume = false, showChart = true, marketType = 'stocks' }: MarketTableProps) {
   const [sortKey, setSortKey] = useState<SortKey>('symbol');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
 
@@ -126,6 +128,9 @@ export function MarketTable({ data, showVolume = false, showChart = true }: Mark
                   <span className="text-xs font-medium text-muted-foreground">7D</span>
                 </th>
               )}
+              <th className="text-center px-4 py-3 w-24">
+                <span className="text-xs font-medium text-muted-foreground">Actions</span>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -177,6 +182,11 @@ export function MarketTable({ data, showVolume = false, showChart = true }: Mark
                       </div>
                     </td>
                   )}
+                  <td className="px-4 py-4">
+                    <div className="flex justify-center">
+                      <WatchlistButton symbol={item.symbol} marketType={marketType} />
+                    </div>
+                  </td>
                 </motion.tr>
               );
             })}

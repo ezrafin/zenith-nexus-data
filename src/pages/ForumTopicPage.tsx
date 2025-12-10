@@ -3,8 +3,17 @@ import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchTopicById, fetchForumComments, ForumTopic, ForumComment } from '@/lib/api';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
-import { ArrowLeft, ThumbsUp, ThumbsDown, MessageCircle, Calendar, Eye, Award, Star } from 'lucide-react';
+import { ReplyEditor } from '@/components/forum/ReplyEditor';
+import { ReactionButton } from '@/components/forum/ReactionButton';
+import { ReportButton } from '@/components/forum/ReportButton';
+import { UserAvatar } from '@/components/user/UserAvatar';
+import { useUser } from '@/context/UserContext';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+import { ArrowLeft, ThumbsUp, ThumbsDown, MessageCircle, Calendar, Eye, Award, Star, Bookmark, Share2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const userLevels = [
   { min: 0, name: 'Newbie', color: 'bg-muted text-muted-foreground' },
@@ -20,9 +29,13 @@ function getUserLevel(rating: number) {
 
 export default function ForumTopicPage() {
   const { topicId } = useParams();
+  const { user, profile } = useUser();
   const [topic, setTopic] = useState<ForumTopic | null>(null);
   const [comments, setComments] = useState<ForumComment[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [submittingReply, setSubmittingReply] = useState(false);
 
   useEffect(() => {
     async function loadData() {
@@ -38,7 +51,129 @@ export default function ForumTopicPage() {
     }
 
     loadData();
-  }, [topicId]);
+    checkBookmarkStatus();
+    checkFollowStatus();
+  }, [topicId, user]);
+
+  const checkBookmarkStatus = async () => {
+    if (!user || !topicId) return;
+    try {
+      const { data } = await supabase
+        .from('forum_bookmarks')
+        .select('id')
+        .eq('user_id', user.id)
+        .eq('discussion_id', topicId)
+        .single();
+      setIsBookmarked(!!data);
+    } catch (error) {
+      // Not bookmarked
+    }
+  };
+
+  const checkFollowStatus = async () => {
+    if (!user || !topicId) return;
+    try {
+      const { data } = await supabase
+        .from('forum_follows')
+        .select('id')
+        .eq('user_id', user.id)
+        .eq('discussion_id', topicId)
+        .single();
+      setIsFollowing(!!data);
+    } catch (error) {
+      // Not following
+    }
+  };
+
+  const toggleBookmark = async () => {
+    if (!user || !topicId) {
+      toast.error('Please sign in to bookmark discussions');
+      return;
+    }
+
+    try {
+      if (isBookmarked) {
+        await supabase
+          .from('forum_bookmarks')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('discussion_id', topicId);
+        setIsBookmarked(false);
+        toast.success('Removed from bookmarks');
+      } else {
+        await supabase
+          .from('forum_bookmarks')
+          .insert({
+            user_id: user.id,
+            discussion_id: topicId,
+          });
+        setIsBookmarked(true);
+        toast.success('Added to bookmarks');
+      }
+    } catch (error) {
+      toast.error('Failed to update bookmark');
+    }
+  };
+
+  const toggleFollow = async () => {
+    if (!user || !topicId) {
+      toast.error('Please sign in to follow discussions');
+      return;
+    }
+
+    try {
+      if (isFollowing) {
+        await supabase
+          .from('forum_follows')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('discussion_id', topicId);
+        setIsFollowing(false);
+        toast.success('Unfollowed discussion');
+      } else {
+        await supabase
+          .from('forum_follows')
+          .insert({
+            user_id: user.id,
+            discussion_id: topicId,
+          });
+        setIsFollowing(true);
+        toast.success('Following discussion');
+      }
+    } catch (error) {
+      toast.error('Failed to update follow status');
+    }
+  };
+
+  const handleReplySubmit = async (content: string) => {
+    if (!user || !topicId) {
+      toast.error('Please sign in to reply');
+      return;
+    }
+
+    setSubmittingReply(true);
+    try {
+      const { error } = await supabase
+        .from('forum_replies')
+        .insert({
+          discussion_id: topicId,
+          content,
+          author_name: profile?.display_name || user.email || 'Anonymous',
+          user_id: user.id,
+        });
+
+      if (error) throw error;
+
+      // Refresh comments
+      const commentsData = await fetchForumComments(topicId);
+      setComments(commentsData);
+      toast.success('Reply posted');
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to post reply');
+    } finally {
+      setSubmittingReply(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -84,17 +219,46 @@ export default function ForumTopicPage() {
             Back to forum
           </Link>
 
-          <h1 className="heading-md mb-6">{topic.title}</h1>
+          <div className="flex items-start justify-between gap-4 mb-6">
+            <h1 className="heading-md flex-1">{topic.title}</h1>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleBookmark}
+                className={cn(isBookmarked && 'bg-primary/10')}
+              >
+                <Bookmark className={cn('h-4 w-4 mr-2', isBookmarked && 'fill-current')} />
+                {isBookmarked ? 'Bookmarked' : 'Bookmark'}
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleFollow}
+                className={cn(isFollowing && 'bg-primary/10')}
+              >
+                {isFollowing ? 'Following' : 'Follow'}
+              </Button>
+              <Button variant="outline" size="sm">
+                <Share2 className="h-4 w-4 mr-2" />
+                Share
+              </Button>
+              <ReportButton
+                contentType="discussion"
+                contentId={topicId!}
+              />
+            </div>
+          </div>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-3">
+            <Link to={`/users/${topic.authorId || 'unknown'}`} className="flex items-center gap-3 hover:text-primary transition-colors">
               <img
                 src={topic.authorAvatar}
                 alt={topic.author}
                 className="w-8 h-8 rounded-full ring-2 ring-border"
               />
               <span className="font-medium text-foreground">{topic.author}</span>
-            </div>
+            </Link>
             <span className="flex items-center gap-1.5">
               <Calendar className="h-4 w-4" />
               {new Date(topic.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
@@ -110,6 +274,39 @@ export default function ForumTopicPage() {
           </div>
         </div>
       </section>
+
+      {/* Topic Content */}
+      {topic.content && (
+        <section className="section-spacing-sm border-b border-border">
+          <div className="container-wide">
+            <article className="premium-card p-6 md:p-8">
+              <div className="prose prose-invert max-w-none mb-6">
+                <p className="text-foreground leading-relaxed whitespace-pre-wrap">{topic.content}</p>
+              </div>
+              
+              {/* Topic Reactions */}
+              <div className="flex items-center gap-2 flex-wrap pt-4 border-t border-border/60">
+                <ReactionButton
+                  contentType="discussion"
+                  contentId={topic.id}
+                  reactionType="like"
+                  count={topic.like_count || 0}
+                />
+                <ReactionButton
+                  contentType="discussion"
+                  contentId={topic.id}
+                  reactionType="helpful"
+                />
+                <ReactionButton
+                  contentType="discussion"
+                  contentId={topic.id}
+                  reactionType="insightful"
+                />
+              </div>
+            </article>
+          </div>
+        </section>
+      )}
 
       {/* Comments */}
       <section className="section-spacing-sm">
@@ -140,7 +337,9 @@ export default function ForumTopicPage() {
                           </div>
                         </div>
                         <div className="md:mt-2 text-center md:text-left">
-                          <span className="font-medium block">{comment.author}</span>
+                          <Link to={`/users/${comment.authorId || 'unknown'}`} className="font-medium block hover:text-primary transition-colors">
+                            {comment.author}
+                          </Link>
                           <span className={cn('inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mt-1', level.color)}>
                             {level.name === 'Guru' && <Star className="h-3 w-3" />}
                             {level.name === 'Expert' && <Award className="h-3 w-3" />}
@@ -166,17 +365,31 @@ export default function ForumTopicPage() {
                       </p>
                       
                       {/* Actions */}
-                      <div className="flex items-center gap-4 pt-4 border-t border-border/60">
-                        <button className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-positive transition-colors">
-                          <ThumbsUp className="h-4 w-4" />
-                          <span className="tabular-nums">{comment.rating}</span>
-                        </button>
-                        <button className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-negative transition-colors">
-                          <ThumbsDown className="h-4 w-4" />
-                        </button>
-                        <button className="text-sm text-muted-foreground hover:text-primary transition-colors ml-auto">
+                      <div className="flex items-center gap-2 flex-wrap pt-4 border-t border-border/60">
+                        <ReactionButton
+                          contentType="reply"
+                          contentId={comment.id}
+                          reactionType="like"
+                          count={comment.rating}
+                        />
+                        <ReactionButton
+                          contentType="reply"
+                          contentId={comment.id}
+                          reactionType="helpful"
+                        />
+                        <ReactionButton
+                          contentType="reply"
+                          contentId={comment.id}
+                          reactionType="insightful"
+                        />
+                        <button className="text-sm text-muted-foreground hover:text-primary transition-colors">
                           Reply
                         </button>
+                        <ReportButton
+                          contentType="reply"
+                          contentId={comment.id}
+                          className="ml-auto"
+                        />
                       </div>
                     </div>
                   </div>
@@ -186,22 +399,23 @@ export default function ForumTopicPage() {
           </div>
 
           {/* Reply Form */}
-          <div className="mt-8 md:mt-12 p-6 md:p-8 rounded-xl border border-border/60 bg-card">
-            <h3 className="font-heading font-medium text-lg mb-4">Write a Reply</h3>
-            <textarea
-              placeholder="Share your thoughts..."
-              className="w-full p-4 rounded-lg border border-border/60 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none transition-all"
-              rows={5}
-            />
-            <div className="flex items-center justify-between mt-4">
-              <p className="text-xs text-muted-foreground">
-                Be respectful and courteous to other members
-              </p>
-              <button className="btn-primary">
-                Submit
-              </button>
+          {user ? (
+            <div className="mt-8 md:mt-12 p-6 md:p-8 rounded-xl border border-border/60 bg-card">
+              <h3 className="font-heading font-medium text-lg mb-4">Write a Reply</h3>
+              <ReplyEditor
+                onSubmit={handleReplySubmit}
+                isSubmitting={submittingReply}
+                placeholder="Share your thoughts... (Markdown supported)"
+              />
             </div>
-          </div>
+          ) : (
+            <div className="mt-8 md:mt-12 p-6 md:p-8 rounded-xl border border-border/60 bg-card text-center">
+              <p className="text-muted-foreground mb-4">Please sign in to reply to this discussion</p>
+              <Link to="/auth/login">
+                <Button>Sign in</Button>
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     </Layout>

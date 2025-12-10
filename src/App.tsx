@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { UserProvider } from "@/context/UserContext";
 import Index from "./pages/Index";
 import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
@@ -38,15 +39,38 @@ import LearningCoursePage from "./pages/education/LearningCoursePage";
 import CoursePlatformPage from "./pages/course/CoursePlatformPage";
 // Article Submission
 import ArticleSubmissionPage from "./pages/articles/ArticleSubmissionPage";
+// Auth Pages
+import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
+import AuthCallbackPage from "./pages/auth/AuthCallbackPage";
+// Profile
+import ProfilePage from "./pages/auth/ProfilePage";
+// Settings
+import SettingsPage from "./pages/SettingsPage";
+// Watchlists
+import WatchlistPage from "./pages/WatchlistPage";
+// Forum
+import CreateDiscussionPage from "./pages/forum/CreateDiscussionPage";
+// Bookmarks
+import BookmarksPage from "./pages/BookmarksPage";
+// User Profile
+import UserProfilePage from "./pages/users/UserProfilePage";
+// Community
+import CommunityPage from "./pages/CommunityPage";
+// Admin
+import ModerationPage from "./pages/admin/ModerationPage";
+// Collections
+import CollectionDetailPage from "./pages/collections/CollectionDetailPage";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+    <UserProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/news" element={<NewsPage />} />
@@ -58,6 +82,7 @@ const App = () => (
           <Route path="/companies" element={<CompaniesPage />} />
           <Route path="/companies/:slug" element={<CompanyDetailPage />} />
           <Route path="/forum" element={<ForumPage />} />
+          <Route path="/forum/new" element={<CreateDiscussionPage />} />
           <Route path="/forum/:topicId" element={<ForumTopicPage />} />
           {/* Information Pages */}
           <Route path="/about" element={<AboutPage />} />
@@ -83,10 +108,31 @@ const App = () => (
           <Route path="/course" element={<CoursePlatformPage />} />
           {/* Article Submission */}
           <Route path="/articles/submit" element={<ArticleSubmissionPage />} />
+          {/* Auth Routes */}
+          <Route path="/auth/login" element={<LoginPage />} />
+          <Route path="/auth/register" element={<RegisterPage />} />
+          <Route path="/auth/callback" element={<AuthCallbackPage />} />
+          {/* Profile */}
+          <Route path="/profile" element={<ProfilePage />} />
+          {/* Settings */}
+          <Route path="/settings" element={<SettingsPage />} />
+          {/* Watchlists */}
+          <Route path="/watchlists" element={<WatchlistPage />} />
+          {/* Bookmarks */}
+          <Route path="/bookmarks" element={<BookmarksPage />} />
+          {/* User Profile */}
+          <Route path="/users/:userId" element={<UserProfilePage />} />
+          {/* Community */}
+          <Route path="/community" element={<CommunityPage />} />
+          {/* Admin */}
+          <Route path="/admin/moderation" element={<ModerationPage />} />
+          {/* Collections */}
+          <Route path="/collections/:id" element={<CollectionDetailPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
+    </UserProvider>
   </QueryClientProvider>
 );
 

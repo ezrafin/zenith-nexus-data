@@ -6,13 +6,20 @@ import { NewsCard } from '@/components/NewsCard';
 import { AnalyticsCard } from '@/components/AnalyticsCard';
 import { MarketMiniTable } from '@/components/MarketMiniTable';
 import { EmailSubscription } from '@/components/EmailSubscription';
+import { RecommendedContent } from '@/components/recommendations/RecommendedContent';
+import { TrendingContent } from '@/components/recommendations/TrendingContent';
+import { FollowAuthors } from '@/components/recommendations/FollowAuthors';
+import { ContentCollections } from '@/components/recommendations/ContentCollections';
+import { MarketOverview } from '@/components/charts/MarketOverview';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { LastUpdated } from '@/components/LastUpdated';
 import { useMarketData } from '@/hooks/useMarketData';
 import { fetchNews, fetchAnalytics, NewsItem, AnalyticsArticle } from '@/lib/api';
 import { ArrowRight, TrendingUp, BarChart3, Newspaper, Coins, Bitcoin, DollarSign } from 'lucide-react';
+import { useUser } from '@/context/UserContext';
 
 export default function Index() {
+  const { user } = useUser();
   const [news, setNews] = useState<NewsItem[]>([]);
   const [analytics, setAnalytics] = useState<AnalyticsArticle[]>([]);
   const [contentLoading, setContentLoading] = useState(true);
@@ -189,6 +196,25 @@ export default function Index() {
           )}
         </div>
       </section>
+
+      {/* Recommended Content & Market Overview */}
+      {user && (
+        <section className="section-spacing bg-secondary/30">
+          <div className="container-wide">
+            <div className="grid lg:grid-cols-4 gap-8">
+              <div className="lg:col-span-2 space-y-8">
+                <RecommendedContent limit={6} />
+                <TrendingContent limit={5} />
+              </div>
+              <div className="lg:col-span-2 space-y-8">
+                <MarketOverview />
+                <FollowAuthors limit={5} />
+                <ContentCollections />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <EmailSubscription />
     </Layout>

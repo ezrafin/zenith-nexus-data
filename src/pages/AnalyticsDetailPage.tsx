@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchAnalyticsBySlug, AnalyticsArticle } from '@/lib/api';
-import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
+import { BookmarkButton } from '@/components/content/BookmarkButton';
+import { RelatedContent } from '@/components/content/RelatedContent';
+import { useReadingHistory } from '@/hooks/useReadingHistory';
+import { Calendar, Clock, User, ArrowLeft, Share2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const typeLabels: Record<string, string> = {
   expert: 'Expert Opinion',
@@ -15,6 +19,7 @@ export default function AnalyticsDetailPage() {
   const { slug } = useParams();
   const [article, setArticle] = useState<AnalyticsArticle | null>(null);
   const [loading, setLoading] = useState(true);
+  const { addToHistory } = useReadingHistory();
 
   useEffect(() => {
     async function loadArticle() {
@@ -22,11 +27,16 @@ export default function AnalyticsDetailPage() {
         const data = await fetchAnalyticsBySlug(slug);
         setArticle(data);
         setLoading(false);
+        
+        // Add to reading history
+        if (data) {
+          addToHistory('analytics', slug);
+        }
       }
     }
 
     loadArticle();
-  }, [slug]);
+  }, [slug, addToHistory]);
 
   if (loading) {
     return (
@@ -77,7 +87,16 @@ export default function AnalyticsDetailPage() {
             </span>
           </div>
 
-          <h1 className="heading-lg mb-6">{article.title}</h1>
+          <div className="flex items-start justify-between gap-4 mb-6">
+            <h1 className="heading-lg flex-1">{article.title}</h1>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <BookmarkButton contentType="analytics" contentId={article.slug} />
+              <Button variant="outline" size="sm">
+                <Share2 className="h-4 w-4 mr-2" />
+                Share
+              </Button>
+            </div>
+          </div>
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
             <span className="flex items-center gap-2">
@@ -97,6 +116,17 @@ export default function AnalyticsDetailPage() {
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-muted-foreground mb-6">{article.excerpt}</p>
             <p className="text-foreground leading-relaxed">{article.content}</p>
+          </div>
+
+          {/* Related Content */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <RelatedContent
+              items={[
+                // Would fetch from API based on topic/tags
+                { type: 'analytics', id: '1', title: 'Related analysis 1' },
+                { type: 'analytics', id: '2', title: 'Related analysis 2' },
+              ]}
+            />
           </div>
         </div>
       </article>

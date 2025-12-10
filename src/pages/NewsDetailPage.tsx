@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchNewsById, NewsItem } from '@/lib/api';
-import { Calendar, ExternalLink, ArrowLeft } from 'lucide-react';
+import { BookmarkButton } from '@/components/content/BookmarkButton';
+import { RelatedContent } from '@/components/content/RelatedContent';
+import { useReadingHistory } from '@/hooks/useReadingHistory';
+import { Calendar, ExternalLink, ArrowLeft, Share2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const marketLabels: Record<string, string> = {
   indices: 'Indices',
@@ -17,6 +21,7 @@ export default function NewsDetailPage() {
   const { id } = useParams();
   const [news, setNews] = useState<NewsItem | null>(null);
   const [loading, setLoading] = useState(true);
+  const { addToHistory } = useReadingHistory();
 
   useEffect(() => {
     async function loadNews() {
@@ -24,11 +29,16 @@ export default function NewsDetailPage() {
         const data = await fetchNewsById(id);
         setNews(data);
         setLoading(false);
+        
+        // Add to reading history
+        if (data) {
+          addToHistory('article', id);
+        }
       }
     }
 
     loadNews();
-  }, [id]);
+  }, [id, addToHistory]);
 
   if (loading) {
     return (
@@ -88,7 +98,16 @@ export default function NewsDetailPage() {
             </span>
           </div>
 
-          <h1 className="heading-lg mb-6">{news.title}</h1>
+          <div className="flex items-start justify-between gap-4 mb-6">
+            <h1 className="heading-lg flex-1">{news.title}</h1>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <BookmarkButton contentType="article" contentId={news.id} />
+              <Button variant="outline" size="sm">
+                <Share2 className="h-4 w-4 mr-2" />
+                Share
+              </Button>
+            </div>
+          </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
             <ExternalLink className="h-4 w-4" />
@@ -98,6 +117,17 @@ export default function NewsDetailPage() {
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-muted-foreground mb-6">{news.excerpt}</p>
             <p className="text-foreground leading-relaxed">{news.content}</p>
+          </div>
+
+          {/* Related Content */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <RelatedContent
+              items={[
+                // Would fetch from API based on market/tags
+                { type: 'article', id: '1', title: 'Related article 1' },
+                { type: 'article', id: '2', title: 'Related article 2' },
+              ]}
+            />
           </div>
         </div>
       </article>

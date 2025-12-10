@@ -112,18 +112,22 @@ export interface ForumTopic {
   id: string;
   categoryId: string;
   title: string;
+  content?: string;
   author: string;
+  authorId?: string;
   authorAvatar: string;
   date: string;
   replies: number;
   views: number;
   lastActivity: string;
+  like_count?: number;
 }
 
 export interface ForumComment {
   id: string;
   topicId: string;
   author: string;
+  authorId?: string;
   authorAvatar: string;
   content: string;
   date: string;

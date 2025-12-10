@@ -112,7 +112,7 @@ export default function MarketsPage() {
                 <SkeletonTable rows={10} />
               </div>
             ) : (
-              <MarketTable data={data} showVolume={info.showVolume} />
+              <MarketTable data={data} showVolume={info.showVolume} marketType={marketType} />
             )}
           </div>
         </div>
