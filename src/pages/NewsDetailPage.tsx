@@ -79,7 +79,8 @@ export default function NewsDetailPage() {
   if (!news) return null;
 
   const articleUrl = `https://investopatronus.com/news/${id}`;
-  const articleImage = news.image || 'https://investopatronus.com/og-image.png';
+  const articleImage = news.imageUrl || 'https://investopatronus.com/og-image.png';
+  const articleAuthor = news.source || 'Unknown';
 
   return (
     <Layout>
@@ -88,7 +89,7 @@ export default function NewsDetailPage() {
         description={news.excerpt}
         image={articleImage}
         type="article"
-        author={news.author}
+        author={articleAuthor}
         publishedTime={news.date}
       />
       <StructuredData
@@ -99,7 +100,7 @@ export default function NewsDetailPage() {
             news.excerpt,
             articleImage,
             news.date,
-            news.author,
+            articleAuthor,
             articleUrl
           ),
         ]}

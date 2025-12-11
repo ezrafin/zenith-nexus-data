@@ -22,7 +22,7 @@ interface Watchlist {
 interface WatchlistItem {
   id: string;
   symbol: string;
-  market_type: 'indices' | 'stocks' | 'crypto' | 'commodities' | 'currencies';
+  market_type: string;
 }
 
 const marketIcons = {
@@ -75,7 +75,7 @@ export default function WatchlistPage() {
         })
       );
 
-      setWatchlists(watchlistsWithItems);
+      setWatchlists(watchlistsWithItems as Watchlist[]);
     } catch (error) {
       console.error('Error loading watchlists:', error);
       toast.error('Failed to load watchlists');
@@ -282,7 +282,7 @@ function WatchlistCard({ watchlist, onDelete }: { watchlist: Watchlist; onDelete
       ) : (
         <div className="space-y-2">
           {watchlist.items.map((item) => {
-            const Icon = marketIcons[item.market_type];
+            const Icon = marketIcons[item.market_type as keyof typeof marketIcons] || TrendingUp;
             return (
               <div
                 key={item.id}
