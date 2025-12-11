@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { fetchNewsById, NewsItem } from '@/lib/api';
+import { fetchNewsById, fetchNews, NewsItem } from '@/lib/api';
 import { BookmarkButton } from '@/components/content/BookmarkButton';
 import { RelatedContent } from '@/components/content/RelatedContent';
 import { useReadingHistory } from '@/hooks/useReadingHistory';
@@ -11,6 +11,7 @@ import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
 import { generateArticleSchema, generateOrganizationSchema } from '@/utils/structuredData';
 import { Calendar, ExternalLink, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
 
 const marketLabels: Record<string, string> = {
   indices: 'Indices',
@@ -24,6 +25,7 @@ const marketLabels: Record<string, string> = {
 export default function NewsDetailPage() {
   const { id } = useParams();
   const [news, setNews] = useState<NewsItem | null>(null);
+  const [relatedNews, setRelatedNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const { addToHistory } = useReadingHistory();
 
@@ -37,6 +39,13 @@ export default function NewsDetailPage() {
         // Add to reading history
         if (data) {
           addToHistory('article', id);
+          
+          // Load related news based on market
+          const allNews = await fetchNews({ market: data.market });
+          const related = allNews
+            .filter(item => item.id !== id)
+            .slice(0, 3);
+          setRelatedNews(related);
         }
       }
     }
@@ -76,11 +85,39 @@ export default function NewsDetailPage() {
     );
   }
 
-  if (!news) return null;
-
-  const articleUrl = `https://investopatronus.com/news/${id}`;
+  const articleUrl = `${window.location.origin}/news/${id}`;
   const articleImage = news.imageUrl || 'https://investopatronus.com/og-image.png';
   const articleAuthor = news.source || 'Unknown';
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: news.title,
+          text: news.excerpt,
+          url: articleUrl,
+        });
+      } catch (error: any) {
+        if (error.name !== 'AbortError') {
+          // Fallback to clipboard if share fails
+          try {
+            await navigator.clipboard.writeText(articleUrl);
+            toast.success('Link copied to clipboard');
+          } catch (clipboardError) {
+            toast.error('Failed to copy link');
+          }
+        }
+      }
+    } else {
+      // Fallback to clipboard
+      try {
+        await navigator.clipboard.writeText(articleUrl);
+        toast.success('Link copied to clipboard');
+      } catch (error) {
+        toast.error('Failed to copy link');
+      }
+    }
+  };
 
   return (
     <Layout>
@@ -127,7 +164,7 @@ export default function NewsDetailPage() {
             <h1 className="heading-lg flex-1">{news.title}</h1>
             <div className="flex items-center gap-2 flex-shrink-0">
               <BookmarkButton contentType="article" contentId={news.id} />
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="h-4 w-4 mr-2" />
                 Share
               </Button>
@@ -145,15 +182,17 @@ export default function NewsDetailPage() {
           </div>
 
           {/* Related Content */}
-          <div className="mt-12 pt-8 border-t border-border">
-            <RelatedContent
-              items={[
-                // Would fetch from API based on market/tags
-                { type: 'article', id: '1', title: 'Related article 1' },
-                { type: 'article', id: '2', title: 'Related article 2' },
-              ]}
-            />
-          </div>
+          {relatedNews.length > 0 && (
+            <div className="mt-12 pt-8 border-t border-border">
+              <RelatedContent
+                items={relatedNews.map(item => ({
+                  type: 'news' as const,
+                  id: item.id,
+                  title: item.title,
+                }))}
+              />
+            </div>
+          )}
         </div>
       </article>
     </Layout>

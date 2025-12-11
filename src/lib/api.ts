@@ -397,19 +397,89 @@ const mockForumComments: ForumComment[] = [
 
 // API Functions
 export async function fetchNews(filters?: { market?: string; source?: string }): Promise<NewsItem[]> {
-  await delay(800);
-  let result = [...mockNews];
-  
-  if (filters?.market && filters.market !== 'all') {
-    result = result.filter(item => item.market === filters.market);
+  try {
+    const { supabase } = await import('@/integrations/supabase/client');
+    
+    let query = supabase
+      .from('news_articles')
+      .select('*')
+      .order('published_at', { ascending: false })
+      .limit(100);
+    
+    if (filters?.market && filters.market !== 'all') {
+      query = query.eq('market', filters.market);
+    }
+    
+    if (filters?.source) {
+      query = query.eq('source_name', filters.source);
+    }
+    
+    const { data, error } = await query;
+    
+    if (error) {
+      console.error('Error fetching news:', error);
+      // Fallback to mock data
+      let result = [...mockNews];
+      if (filters?.market && filters.market !== 'all') {
+        result = result.filter(item => item.market === filters.market);
+      }
+      return result;
+    }
+    
+    // Transform database format to NewsItem format
+    return (data || []).map(article => ({
+      id: article.id,
+      title: article.title,
+      excerpt: article.excerpt || '',
+      content: article.content || article.excerpt || '',
+      date: article.published_at,
+      source: article.source_name,
+      market: (article.market as NewsItem['market']) || 'general',
+      imageUrl: article.image_url || undefined,
+    }));
+  } catch (error) {
+    console.error('Error in fetchNews:', error);
+    // Fallback to mock data
+    let result = [...mockNews];
+    if (filters?.market && filters.market !== 'all') {
+      result = result.filter(item => item.market === filters.market);
+    }
+    return result;
   }
-  
-  return result;
 }
 
 export async function fetchNewsById(id: string): Promise<NewsItem | null> {
-  await delay(500);
-  return mockNews.find(item => item.id === id) || null;
+  try {
+    const { supabase } = await import('@/integrations/supabase/client');
+    
+    const { data, error } = await supabase
+      .from('news_articles')
+      .select('*')
+      .eq('id', id)
+      .single();
+    
+    if (error || !data) {
+      console.error('Error fetching news by id:', error);
+      // Fallback to mock data
+      return mockNews.find(item => item.id === id) || null;
+    }
+    
+    // Transform database format to NewsItem format
+    return {
+      id: data.id,
+      title: data.title,
+      excerpt: data.excerpt || '',
+      content: data.content || data.excerpt || '',
+      date: data.published_at,
+      source: data.source_name,
+      market: (data.market as NewsItem['market']) || 'general',
+      imageUrl: data.image_url || undefined,
+    };
+  } catch (error) {
+    console.error('Error in fetchNewsById:', error);
+    // Fallback to mock data
+    return mockNews.find(item => item.id === id) || null;
+  }
 }
 
 export async function fetchAnalytics(type?: string): Promise<AnalyticsArticle[]> {

@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CompanyCard } from '@/components/CompanyCard';
 import { fetchCompanies } from '@/lib/api';
+import { toast } from 'sonner';
 
 const typeLabels: Record<string, string> = {
   expert: 'Expert Opinion',
@@ -89,10 +90,38 @@ export default function AnalyticsDetailPage() {
     );
   }
 
-  if (!article) return null;
-
-  const articleUrl = `https://investopatronus.com/analytics/${slug}`;
+  const articleUrl = `${window.location.origin}/analytics/${slug}`;
   const articleImage = article.imageUrl || 'https://investopatronus.com/og-image.png';
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: article.title,
+          text: article.excerpt,
+          url: articleUrl,
+        });
+      } catch (error: any) {
+        if (error.name !== 'AbortError') {
+          // Fallback to clipboard if share fails
+          try {
+            await navigator.clipboard.writeText(articleUrl);
+            toast.success('Link copied to clipboard');
+          } catch (clipboardError) {
+            toast.error('Failed to copy link');
+          }
+        }
+      }
+    } else {
+      // Fallback to clipboard
+      try {
+        await navigator.clipboard.writeText(articleUrl);
+        toast.success('Link copied to clipboard');
+      } catch (error) {
+        toast.error('Failed to copy link');
+      }
+    }
+  };
 
   return (
     <Layout>
@@ -146,7 +175,7 @@ export default function AnalyticsDetailPage() {
             <h1 className="heading-lg flex-1">{article.title}</h1>
             <div className="flex items-center gap-2 flex-shrink-0">
               <BookmarkButton contentType="analytics" contentId={article.slug} />
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="h-4 w-4 mr-2" />
                 Share
               </Button>

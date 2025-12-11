@@ -154,12 +154,12 @@ export default function Index() {
 
           {contentLoading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} lines={3} />)}
+              {Array.from({ length: 3 }).map((_, i) => <SkeletonCard key={i} lines={3} />)}
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {news.slice(0, 6).map((item, index) => (
-                <NewsCard key={item.id} news={item} featured={index === 0} index={index} />
+              {news.slice(0, 3).map((item, index) => (
+                <NewsCard key={item.id} news={item} featured={true} index={index} />
               ))}
             </div>
           )}
