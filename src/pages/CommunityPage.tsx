@@ -66,7 +66,6 @@ export default function CommunityPage() {
               <ContentCollections />
             </div>
           </div>
-          </Tabs>
         </div>
       </div>
     </Layout>

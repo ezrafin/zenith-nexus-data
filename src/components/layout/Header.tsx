@@ -158,7 +158,7 @@ export function Header() {
                 </div> : <Link key={item.name} to={item.href} className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
                   {item.name}
                 </Link>)}
-          </div>
+          </nav>
 
           {/* Live indicator + CTA */}
           <div className="hidden lg:flex items-center gap-4">
