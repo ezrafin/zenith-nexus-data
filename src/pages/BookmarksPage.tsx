@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface BookmarkItem {
   id: string;
-  content_type: 'article' | 'forum' | 'video' | 'analytics';
+  content_type: string;
   content_id: string;
   created_at: string;
   title?: string;
@@ -84,7 +84,7 @@ export default function BookmarksPage() {
         })
       );
 
-      setBookmarks(bookmarksWithData);
+      setBookmarks(bookmarksWithData as BookmarkItem[]);
     } catch (error) {
       console.error('Error loading bookmarks:', error);
       toast.error('Failed to load bookmarks');
@@ -130,8 +130,9 @@ export default function BookmarksPage() {
       case 'forum':
         return `/forum/${bookmark.content_id}`;
       case 'article':
-      case 'news':
-        return `/news/${bookmark.content_id}`;
+        case 'news':
+        case 'article':
+          return `/news/${bookmark.content_id}`;
       case 'video':
         return `/video/${bookmark.content_id}`;
       case 'analytics':

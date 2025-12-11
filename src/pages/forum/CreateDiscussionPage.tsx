@@ -11,7 +11,6 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { ArrowLeft, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Textarea } from '@/components/ui/textarea';
 
 const categories = [
   { id: 'investments', name: 'Investments' },

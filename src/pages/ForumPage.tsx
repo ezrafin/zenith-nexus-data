@@ -256,7 +256,7 @@ export default function ForumPage() {
                   to={`/forum/${topic.id}`}
                   className={cn(
                     'flex items-center gap-4 p-4 md:p-6 hover:bg-secondary/50 transition-colors',
-                    index !== recentTopics.length - 1 && 'border-b border-border/60'
+                    index !== filteredAndSortedTopics.length - 1 && 'border-b border-border/60'
                   )}
                 >
                   {/* Avatar with level indicator */}
