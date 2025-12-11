@@ -5,7 +5,6 @@ import { MarketAlerts } from '@/components/markets/MarketAlerts';
 import { AchievementSystem } from '@/components/forum/AchievementSystem';
 import { Trophy } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
-import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useUser } from '@/context/UserContext';
 import { UserAvatar } from '@/components/user/UserAvatar';
