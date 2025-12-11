@@ -1,4 +1,5 @@
 // Mock API functions - replace with real API calls later
+import { supabase } from "@/integrations/supabase/client";
 
 // Simulated network delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -528,24 +529,115 @@ export async function fetchCompanyBySlug(slug: string): Promise<Company | null> 
 }
 
 export async function fetchForumCategories(): Promise<ForumCategory[]> {
-  await delay(600);
-  return mockForumCategories;
+  try {
+    const { data, error } = await supabase
+      .from('forum_categories')
+      .select('*')
+      .order('name');
+    
+    if (error) throw error;
+    
+    return (data || []).map(cat => ({
+      id: cat.slug,
+      name: cat.name,
+      description: cat.description || '',
+      topicCount: cat.topic_count || 0,
+      postCount: 0,
+    }));
+  } catch (error) {
+    console.error('Error fetching forum categories:', error);
+    return mockForumCategories;
+  }
 }
 
 export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[]> {
-  await delay(700);
-  if (categoryId) {
-    return mockForumTopics.filter(t => t.categoryId === categoryId);
+  try {
+    let query = supabase
+      .from('forum_discussions')
+      .select('*')
+      .order('is_pinned', { ascending: false })
+      .order('created_at', { ascending: false });
+    
+    if (categoryId) {
+      query = query.eq('category', categoryId);
+    }
+    
+    const { data, error } = await query;
+    
+    if (error) throw error;
+    
+    return (data || []).map(topic => ({
+      id: topic.id,
+      categoryId: topic.category,
+      title: topic.title,
+      content: topic.content,
+      author: topic.author_name,
+      authorAvatar: getAuthorAvatar(topic.author_name),
+      date: topic.created_at,
+      replies: topic.reply_count || 0,
+      views: topic.view_count || 0,
+      lastActivity: topic.updated_at,
+    }));
+  } catch (error) {
+    console.error('Error fetching forum topics:', error);
+    if (categoryId) {
+      return mockForumTopics.filter(t => t.categoryId === categoryId);
+    }
+    return mockForumTopics;
   }
-  return mockForumTopics;
 }
 
 export async function fetchForumComments(topicId: string): Promise<ForumComment[]> {
-  await delay(500);
-  return mockForumComments.filter(c => c.topicId === topicId);
+  try {
+    const { data, error } = await supabase
+      .from('forum_replies')
+      .select('*')
+      .eq('discussion_id', topicId)
+      .order('created_at');
+    
+    if (error) throw error;
+    
+    return (data || []).map(reply => ({
+      id: reply.id,
+      topicId: reply.discussion_id,
+      author: reply.author_name,
+      authorAvatar: getAuthorAvatar(reply.author_name),
+      content: reply.content,
+      date: reply.created_at,
+      rating: 0,
+    }));
+  } catch (error) {
+    console.error('Error fetching forum comments:', error);
+    return mockForumComments.filter(c => c.topicId === topicId);
+  }
 }
 
 export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
-  await delay(500);
-  return mockForumTopics.find(topic => topic.id === id) || null;
+  try {
+    const { data, error } = await supabase
+      .from('forum_discussions')
+      .select('*')
+      .eq('id', id)
+      .single();
+    
+    if (error) throw error;
+    
+    if (!data) return null;
+    
+    return {
+      id: data.id,
+      categoryId: data.category,
+      title: data.title,
+      content: data.content,
+      author: data.author_name,
+      authorAvatar: getAuthorAvatar(data.author_name),
+      date: data.created_at,
+      replies: data.reply_count || 0,
+      views: data.view_count || 0,
+      lastActivity: data.updated_at,
+    };
+  } catch (error) {
+    console.error('Error fetching topic by id:', error);
+    return mockForumTopics.find(topic => topic.id === id) || null;
+  }
 }
