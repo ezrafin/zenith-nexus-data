@@ -36,6 +36,7 @@ import LearningCoursePage from "./pages/education/LearningCoursePage";
 // Course Platform
 import CoursePlatformPage from "./pages/course/CoursePlatformPage";
 // Article Submission
+import ArticleSubmissionPage from "./pages/articles/ArticleSubmissionPage";
 // Auth Pages
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
@@ -56,7 +57,6 @@ import UserProfilePage from "./pages/users/UserProfilePage";
 import CommunityPage from "./pages/CommunityPage";
 // Admin
 import ModerationPage from "./pages/admin/ModerationPage";
-import TopicRequestsPage from "./pages/admin/TopicRequestsPage";
 // Collections
 import CollectionDetailPage from "./pages/collections/CollectionDetailPage";
 
@@ -102,6 +102,8 @@ const App = () => (
           <Route path="/education/video" element={<VideoLibraryPage />} />
           {/* Course Platform */}
           <Route path="/course" element={<CoursePlatformPage />} />
+          {/* Article Submission */}
+          <Route path="/articles/submit" element={<ArticleSubmissionPage />} />
           {/* Auth Routes */}
           <Route path="/auth/login" element={<LoginPage />} />
           <Route path="/auth/register" element={<RegisterPage />} />
@@ -120,7 +122,6 @@ const App = () => (
           <Route path="/community" element={<CommunityPage />} />
           {/* Admin */}
           <Route path="/admin/moderation" element={<ModerationPage />} />
-          <Route path="/admin/topic-requests" element={<TopicRequestsPage />} />
           {/* Collections */}
           <Route path="/collections/:id" element={<CollectionDetailPage />} />
           <Route path="*" element={<NotFound />} />

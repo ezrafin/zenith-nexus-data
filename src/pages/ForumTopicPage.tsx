@@ -6,7 +6,6 @@ import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ReplyEditor } from '@/components/forum/ReplyEditor';
 import { ReactionButton } from '@/components/forum/ReactionButton';
 import { ReportButton } from '@/components/forum/ReportButton';
-import { AdminComment } from '@/components/forum/AdminComment';
 import { UserAvatar } from '@/components/user/UserAvatar';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
@@ -340,9 +339,6 @@ export default function ForumTopicPage() {
                           className="ml-auto"
                         />
                       </div>
-                      
-                      {/* Admin Comments */}
-                      <AdminComment replyId={comment.id} />
                     </div>
                   </div>
                 </article>

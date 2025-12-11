@@ -58,25 +58,25 @@ export default function CreateDiscussionPage() {
         .map((tag) => tag.trim())
         .filter((tag) => tag.length > 0);
 
-      // Create a topic request instead of direct discussion
       const { data, error } = await supabase
-        .from('forum_topic_requests')
+        .from('forum_discussions')
         .insert({
-          requester_name: profile?.display_name || profile?.username || user.email || 'Anonymous',
-          requester_email: user.email || '',
-          topic_title: title.trim(),
-          topic_description: content.trim(),
-          status: 'pending',
+          title: title.trim(),
+          content: content.trim(),
+          author_name: profile?.display_name || user.email || 'Anonymous',
+          category,
+          tags: tagsArray,
+          user_id: user.id,
         })
         .select()
         .single();
 
       if (error) throw error;
 
-      toast.success('Discussion request submitted! It will be reviewed by an admin before being published.');
-      navigate('/forum');
+      toast.success('Discussion created successfully');
+      navigate(`/forum/${data.id}`);
     } catch (error: any) {
-      toast.error(error.message || 'Failed to submit discussion request');
+      toast.error(error.message || 'Failed to create discussion');
     } finally {
       setSubmitting(false);
     }
@@ -87,10 +87,7 @@ export default function CreateDiscussionPage() {
       <div className="section-spacing">
         <div className="container-wide max-w-4xl">
 
-          <h1 className="heading-lg mb-8">Request New Discussion</h1>
-          <p className="text-muted-foreground mb-6">
-            Submit a discussion topic for review. Once approved by an admin, it will be published on the forum.
-          </p>
+          <h1 className="heading-lg mb-8">Create New Discussion</h1>
 
           <div className="premium-card p-6 md:p-8 space-y-6">
             <div className="space-y-2">
@@ -158,7 +155,7 @@ export default function CreateDiscussionPage() {
                 </Link>
                 <Button type="submit" disabled={submitting || !title.trim() || !content.trim()}>
                   <Send className="mr-2 h-4 w-4" />
-                  {submitting ? 'Submitting...' : 'Submit for Review'}
+                  {submitting ? 'Creating...' : 'Create Discussion'}
                 </Button>
               </div>
             </form>

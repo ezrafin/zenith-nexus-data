@@ -9,7 +9,7 @@ import { useUserPreferences } from '@/hooks/useUserPreferences';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Save, Palette, Globe, RefreshCw, TrendingUp, Lock, Eye, EyeOff } from 'lucide-react';
+import { Save, Bell, Palette, Globe, RefreshCw, TrendingUp, Lock, Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function SettingsPage() {
@@ -168,6 +168,48 @@ export default function SettingsPage() {
                       <SelectItem value="300">5 minutes</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+              </div>
+            </div>
+
+            {/* Notifications */}
+            <div className="premium-card p-6">
+              <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
+                <Bell className="h-5 w-5" />
+                Notifications
+              </h2>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="space-y-0.5">
+                    <Label htmlFor="emailNotifications">Email Notifications</Label>
+                    <p className="text-sm text-muted-foreground">
+                      Receive email updates about your activity
+                    </p>
+                  </div>
+                  <Switch
+                    id="emailNotifications"
+                    checked={localPrefs.email_notifications}
+                    onCheckedChange={(checked) =>
+                      setLocalPrefs({ ...localPrefs, email_notifications: checked })
+                    }
+                  />
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="space-y-0.5">
+                    <Label htmlFor="pushNotifications">Push Notifications</Label>
+                    <p className="text-sm text-muted-foreground">
+                      Receive browser push notifications
+                    </p>
+                  </div>
+                  <Switch
+                    id="pushNotifications"
+                    checked={localPrefs.push_notifications}
+                    onCheckedChange={(checked) =>
+                      setLocalPrefs({ ...localPrefs, push_notifications: checked })
+                    }
+                  />
                 </div>
               </div>
             </div>

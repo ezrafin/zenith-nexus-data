@@ -1,7 +1,5 @@
 // Mock API functions - replace with real API calls later
 
-import { supabase } from '@/integrations/supabase/client';
-
 // Simulated network delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -536,119 +534,18 @@ export async function fetchForumCategories(): Promise<ForumCategory[]> {
 
 export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[]> {
   await delay(700);
-  
-  // Fetch from database - only approved discussions
-  try {
-    let query = supabase
-      .from('forum_discussions')
-      .select('*')
-      .eq('is_approved', true)
-      .order('created_at', { ascending: false });
-
-    if (categoryId) {
-      query = query.eq('category', categoryId);
-    }
-
-    const { data, error } = await query;
-
-    if (error) throw error;
-
-    // Map database format to ForumTopic format
-    return (data || []).map(item => ({
-      id: item.id,
-      title: item.title,
-      author: item.author_name,
-      authorId: item.user_id || '',
-      authorAvatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(item.author_name)}&background=random`,
-      categoryId: item.category,
-      replies: item.reply_count || 0,
-      views: item.view_count || 0,
-      date: item.created_at,
-      content: item.content,
-      tags: item.tags || [],
-      like_count: item.like_count || 0,
-      isPinned: item.is_pinned || false,
-      isFeatured: item.is_featured || false,
-    }));
-  } catch (error) {
-    console.error('Error fetching forum topics:', error);
-    // Fallback to mock data
-    if (categoryId) {
-      return mockForumTopics.filter(t => t.categoryId === categoryId);
-    }
-    return mockForumTopics;
+  if (categoryId) {
+    return mockForumTopics.filter(t => t.categoryId === categoryId);
   }
+  return mockForumTopics;
 }
 
 export async function fetchForumComments(topicId: string): Promise<ForumComment[]> {
   await delay(500);
-  
-  try {
-    const { data, error } = await supabase
-      .from('forum_replies')
-      .select('*')
-      .eq('discussion_id', topicId)
-      .order('created_at', { ascending: true });
-
-    if (error) throw error;
-
-    // Map database format to ForumComment format
-    return (data || []).map(item => ({
-      id: item.id,
-      topicId: topicId,
-      author: item.author_name,
-      authorId: item.user_id || '',
-      authorAvatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(item.author_name)}&background=random`,
-      content: item.content,
-      date: new Date(item.created_at).toLocaleDateString('en-US', { 
-        day: 'numeric', 
-        month: 'long', 
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-      }),
-      rating: item.like_count || 0,
-    }));
-  } catch (error) {
-    console.error('Error fetching comments:', error);
-    // Fallback to mock data
-    return mockForumComments.filter(c => c.topicId === topicId);
-  }
+  return mockForumComments.filter(c => c.topicId === topicId);
 }
 
 export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
   await delay(500);
-  
-  try {
-    const { data, error } = await supabase
-      .from('forum_discussions')
-      .select('*')
-      .eq('id', id)
-      .eq('is_approved', true)
-      .single();
-
-    if (error) throw error;
-    if (!data) return null;
-
-    return {
-      id: data.id,
-      title: data.title,
-      author: data.author_name,
-      authorId: data.user_id || '',
-      authorAvatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(data.author_name)}&background=random`,
-      categoryId: data.category,
-      replies: data.reply_count || 0,
-      views: data.view_count || 0,
-      date: data.created_at,
-      content: data.content,
-      tags: data.tags || [],
-      like_count: data.like_count || 0,
-      isPinned: data.is_pinned || false,
-      isFeatured: data.is_featured || false,
-    };
-  } catch (error) {
-    console.error('Error fetching topic:', error);
-    // Fallback to mock data
-    return mockForumTopics.find(topic => topic.id === id) || null;
-  }
+  return mockForumTopics.find(topic => topic.id === id) || null;
 }

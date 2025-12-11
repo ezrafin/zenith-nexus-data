@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Check } from 'lucide-react';
-import { toast } from 'sonner';
-import { supabase } from '@/integrations/supabase/client';
-import { useUser } from '@/context/UserContext';
+import { toast } from '@/hooks/use-toast';
 
 export function EmailSubscription() {
-  const { user } = useUser();
-  const [email, setEmail] = useState(user?.email || '');
+  const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,55 +13,15 @@ export function EmailSubscription() {
     if (!email) return;
 
     setIsLoading(true);
-    try {
-      // Check if email is already subscribed
-      const { data: existing } = await supabase
-        .from('newsletter_subscriptions')
-        .select('id, is_active')
-        .eq('email', email.toLowerCase().trim())
-        .maybeSingle();
-
-      if (existing) {
-        if (existing.is_active) {
-          toast.info('You are already subscribed to our newsletter');
-          setIsSubmitted(true);
-          setIsLoading(false);
-          return;
-        } else {
-          // Reactivate subscription
-          const { error: updateError } = await supabase
-            .from('newsletter_subscriptions')
-            .update({
-              is_active: true,
-              unsubscribed_at: null,
-              user_id: user?.id || null,
-            })
-            .eq('id', existing.id);
-
-          if (updateError) throw updateError;
-        }
-      } else {
-        // Create new subscription
-        const { error: insertError } = await supabase
-          .from('newsletter_subscriptions')
-          .insert({
-            email: email.toLowerCase().trim(),
-            user_id: user?.id || null,
-            is_active: true,
-            source: 'website',
-          });
-
-        if (insertError) throw insertError;
-      }
-
-      setIsSubmitted(true);
-      toast.success("You're now subscribed to INVESTOPATRONUS newsletter");
-    } catch (error: any) {
-      console.error('Error subscribing to newsletter:', error);
-      toast.error(error.message || 'Failed to subscribe. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setIsLoading(false);
+    setIsSubmitted(true);
+    
+    toast({
+      title: "Success!",
+      description: "You're now subscribed to INVESTOPATRONUS newsletter",
+    });
   };
 
   return (
