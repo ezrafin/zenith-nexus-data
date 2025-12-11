@@ -5,6 +5,7 @@ import { fetchAnalyticsBySlug, AnalyticsArticle } from '@/lib/api';
 import { BookmarkButton } from '@/components/content/BookmarkButton';
 import { RelatedContent } from '@/components/content/RelatedContent';
 import { useReadingHistory } from '@/hooks/useReadingHistory';
+import { useRelatedContent } from '@/hooks/useRelatedContent';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
@@ -24,6 +25,14 @@ export default function AnalyticsDetailPage() {
   const [article, setArticle] = useState<AnalyticsArticle | null>(null);
   const [loading, setLoading] = useState(true);
   const { addToHistory } = useReadingHistory();
+  
+  // Fetch related content based on article type/category
+  const { relatedItems } = useRelatedContent({
+    contentType: 'analytics',
+    contentId: slug || '',
+    category: article?.type,
+    limit: 4,
+  });
 
   useEffect(() => {
     async function loadArticle() {
@@ -143,15 +152,11 @@ export default function AnalyticsDetailPage() {
           </div>
 
           {/* Related Content */}
-          <div className="mt-12 pt-8 border-t border-border">
-            <RelatedContent
-              items={[
-                // Would fetch from API based on topic/tags
-                { type: 'analytics', id: '1', title: 'Related analysis 1' },
-                { type: 'analytics', id: '2', title: 'Related analysis 2' },
-              ]}
-            />
-          </div>
+          {relatedItems.length > 0 && (
+            <div className="mt-12 pt-8 border-t border-border">
+              <RelatedContent items={relatedItems} />
+            </div>
+          )}
         </div>
       </article>
     </Layout>

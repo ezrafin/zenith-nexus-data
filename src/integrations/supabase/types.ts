@@ -14,6 +14,92 @@ export type Database = {
   }
   public: {
     Tables: {
+      analytics_article_tags: {
+        Row: {
+          article_slug: string
+          created_at: string
+          id: string
+          tag_id: string
+        }
+        Insert: {
+          article_slug: string
+          created_at?: string
+          id?: string
+          tag_id: string
+        }
+        Update: {
+          article_slug?: string
+          created_at?: string
+          id?: string
+          tag_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "analytics_article_tags_tag_id_fkey"
+            columns: ["tag_id"]
+            isOneToOne: false
+            referencedRelation: "article_tags"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      article_tags: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          slug?: string
+        }
+        Relationships: []
+      }
+      content_relationships: {
+        Row: {
+          created_at: string
+          id: string
+          related_id: string
+          related_type: string
+          relationship_type: string
+          relevance_score: number
+          source_id: string
+          source_type: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          related_id: string
+          related_type: string
+          relationship_type?: string
+          relevance_score?: number
+          source_id: string
+          source_type: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          related_id?: string
+          related_type?: string
+          relationship_type?: string
+          relevance_score?: number
+          source_id?: string
+          source_type?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       forum_discussions: {
         Row: {
           author_name: string
