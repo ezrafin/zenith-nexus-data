@@ -317,8 +317,6 @@ function generateAnalyticsArticles(): AnalyticsArticle[] {
 // Mock Analytics Data with expanded articles - generated with proper date distribution
 const mockAnalytics: AnalyticsArticle[] = generateAnalyticsArticles();
 
-const mockAnalytics: AnalyticsArticle[] = generateAnalyticsArticles();
-
 // Mock Market Data
 const mockIndices: MarketData[] = [
   { symbol: 'SPX', name: 'S&P 500', price: 6012.50, change: 45.30, changePercent: 0.76, high: 6025.00, low: 5980.00 },

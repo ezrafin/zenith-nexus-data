@@ -130,9 +130,8 @@ export default function BookmarksPage() {
       case 'forum':
         return `/forum/${bookmark.content_id}`;
       case 'article':
-        case 'news':
-        case 'article':
-          return `/news/${bookmark.content_id}`;
+      case 'news':
+        return `/news/${bookmark.content_id}`;
       case 'video':
         return `/video/${bookmark.content_id}`;
       case 'analytics':
