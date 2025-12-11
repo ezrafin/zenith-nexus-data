@@ -3,46 +3,32 @@ import { Link } from 'react-router-dom';
 
 const authors = [
   {
-    name: 'Michael Chen',
+    name: 'Christina Summerbell',
     role: 'Senior Market Analyst',
-    bio: 'Michael has over 15 years of experience in equity research and portfolio management. He specializes in technology and growth stocks.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    bio: 'Christina has over 15 years of experience in equity research and portfolio management. She specializes in technology and growth stocks.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face',
     articles: 156,
   },
   {
-    name: 'Sarah Johnson',
+    name: 'Assunta Novak',
     role: 'Cryptocurrency Expert',
-    bio: 'Sarah is a blockchain researcher and cryptocurrency analyst who has been covering digital assets since 2015.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face',
+    bio: 'Assunta is a blockchain researcher and cryptocurrency analyst who has been covering digital assets since 2015.',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face',
     articles: 89,
   },
   {
-    name: 'David Williams',
+    name: 'Sorrel Danvers',
     role: 'Commodities Analyst',
-    bio: 'David specializes in precious metals and energy markets with a background in commodity trading.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
+    bio: 'Sorrel specializes in precious metals and energy markets with a background in commodity trading.',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face',
     articles: 112,
   },
   {
-    name: 'Emily Rodriguez',
+    name: 'Lysander Truog',
     role: 'Fixed Income Specialist',
-    bio: 'Emily covers bond markets and interest rate dynamics, helping investors navigate the fixed income landscape.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
-    articles: 78,
-  },
-  {
-    name: 'James Thompson',
-    role: 'Forex Analyst',
-    bio: 'James has been analyzing currency markets for over a decade, focusing on major and emerging market pairs.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+    bio: 'Lysander covers bond markets and interest rate dynamics, helping investors navigate the fixed income landscape.',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face',
     articles: 134,
-  },
-  {
-    name: 'Lisa Park',
-    role: 'ETF Strategist',
-    bio: 'Lisa helps investors build diversified portfolios using ETFs, with expertise in factor investing.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face',
-    articles: 67,
   },
 ];
 

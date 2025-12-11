@@ -24,12 +24,6 @@ const values = [
   },
 ];
 
-const team = [
-  { name: 'Alexander Mitchell', role: 'CEO & Founder', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face' },
-  { name: 'Sarah Chen', role: 'Chief Investment Officer', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face' },
-  { name: 'David Rosenberg', role: 'Head of Research', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face' },
-  { name: 'Emily Thompson', role: 'Chief Technology Officer', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face' },
-];
 
 export default function AboutPage() {
   return (
@@ -109,28 +103,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Team */}
-        <section className="container-wide section-spacing">
-          <div className="text-center mb-12">
-            <h2 className="heading-lg mb-4">Leadership Team</h2>
-            <p className="body-lg max-w-2xl mx-auto">
-              Meet the experienced professionals behind INVESTOPATRONUS.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-border"
-                />
-                <h3 className="font-semibold">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
     </Layout>
   );
