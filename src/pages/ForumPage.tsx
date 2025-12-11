@@ -40,10 +40,12 @@ export default function ForumPage() {
   }, [categoryFilter]);
 
   const categoryIcons: Record<string, typeof MessageSquare> = {
-    investments: TrendingUp,
-    companies: MessageSquare,
-    markets: Flame,
+    general: MessageSquare,
+    stocks: TrendingUp,
     crypto: MessageCircle,
+    etfs: Flame,
+    beginners: Users,
+    news: Eye,
   };
 
   // Filter and sort topics

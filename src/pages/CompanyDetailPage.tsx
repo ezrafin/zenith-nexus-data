@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchCompanyBySlug, fetchNews, fetchAnalytics, fetchCompanies, Company, NewsItem, AnalyticsArticle } from '@/lib/api';
+import { organizations, Organization } from '@/lib/organizations';
 import { NewsCard } from '@/components/NewsCard';
 import { AnalyticsCard } from '@/components/AnalyticsCard';
 import { CompanyCard } from '@/components/CompanyCard';
@@ -12,6 +13,22 @@ import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
 import { generateOrganizationSchema } from '@/utils/structuredData';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { Building2, MapPin, Users, Calendar, DollarSign } from 'lucide-react';
+
+// Helper to convert Organization to Company format
+function organizationToCompany(org: Organization): Company {
+  return {
+    slug: org.id,
+    name: org.name,
+    logo: org.logo,
+    sector: org.type.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    description: org.description,
+    founded: org.founded,
+    headquarters: org.headquarters,
+    employees: 'N/A',
+    marketCap: org.aum || 'N/A',
+    overview: org.description,
+  };
+}
 
 export default function CompanyDetailPage() {
   const { slug } = useParams();
@@ -24,21 +41,41 @@ export default function CompanyDetailPage() {
   useEffect(() => {
     async function loadData() {
       if (slug) {
-        const [companyData, newsData, analyticsData, companiesData] = await Promise.all([
-          fetchCompanyBySlug(slug),
+        // First try to find in organizations data
+        const org = organizations.find(o => o.id === slug);
+        
+        let companyData: Company | null = null;
+        if (org) {
+          companyData = organizationToCompany(org);
+        } else {
+          // Fall back to legacy mock data
+          companyData = await fetchCompanyBySlug(slug);
+        }
+
+        const [newsData, analyticsData, companiesData] = await Promise.all([
           fetchNews(),
           fetchAnalytics(),
           fetchCompanies(),
         ]);
+        
         setCompany(companyData);
         setNews(newsData.slice(0, 3));
         setAnalytics(analyticsData.slice(0, 2));
-        // Filter similar companies (same sector, exclude current)
-        setSimilarCompanies(
-          companiesData
-            .filter(c => c.slug !== slug && c.sector === companyData?.sector)
+        
+        // For similar companies, find other organizations of same type
+        if (org) {
+          const similarOrgs = organizations
+            .filter(o => o.id !== slug && o.type === org.type)
             .slice(0, 3)
-        );
+            .map(organizationToCompany);
+          setSimilarCompanies(similarOrgs);
+        } else {
+          setSimilarCompanies(
+            companiesData
+              .filter(c => c.slug !== slug && c.sector === companyData?.sector)
+              .slice(0, 3)
+          );
+        }
         setLoading(false);
       }
     }

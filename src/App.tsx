@@ -35,8 +35,6 @@ import AdvancedArticlesPage from "./pages/education/AdvancedArticlesPage";
 import LearningCoursePage from "./pages/education/LearningCoursePage";
 // Course Platform
 import CoursePlatformPage from "./pages/course/CoursePlatformPage";
-// Article Submission
-import ArticleSubmissionPage from "./pages/articles/ArticleSubmissionPage";
 // Auth Pages
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
@@ -102,8 +100,6 @@ const App = () => (
           <Route path="/education/video" element={<VideoLibraryPage />} />
           {/* Course Platform */}
           <Route path="/course" element={<CoursePlatformPage />} />
-          {/* Article Submission */}
-          <Route path="/articles/submit" element={<ArticleSubmissionPage />} />
           {/* Auth Routes */}
           <Route path="/auth/login" element={<LoginPage />} />
           <Route path="/auth/register" element={<RegisterPage />} />
