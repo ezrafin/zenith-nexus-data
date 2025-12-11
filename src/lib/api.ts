@@ -17,6 +17,13 @@ const authorAvatars: Record<string, string> = {
   'Sofia Martinez': 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face',
   'Alexander Wright': 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face',
   'Catherine Lee': 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face',
+  'Thomas Anderson': 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face',
+  'Jennifer White': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+  'Daniel Brown': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+  'Rachel Green': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+  'Kevin Zhang': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+  'Amanda Taylor': 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face',
+  'Ryan Murphy': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
 };
 
 // Category image mapping for analytics articles
@@ -25,21 +32,33 @@ const categoryImages: Record<string, string[]> = {
     'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop',
   ],
   markets: [
     'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
   ],
   longterm: [
     'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1504607798333-52a30db54a5d?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
   ],
   technical: [
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=400&fit=crop',
     'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop',
+    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
   ],
 };
 
@@ -71,6 +90,12 @@ export interface AnalyticsArticle {
   type: 'expert' | 'markets' | 'longterm' | 'technical';
   readTime: string;
   imageUrl: string;
+  resources?: Array<{ title: string; url: string; type?: 'article' | 'data' | 'tool' }>;
+  images?: string[];
+  sections?: Array<{ heading: string; content: string }>;
+  tags?: string[];
+  relatedCompanies?: string[];
+  relatedMarkets?: string[];
 }
 
 // Market Types
@@ -147,225 +172,152 @@ const mockNews: NewsItem[] = [
   },
 ];
 
-// Mock Analytics Data with expanded articles
-const mockAnalytics: AnalyticsArticle[] = [
-  {
-    slug: 'market-outlook-2025',
-    title: '2025 Market Outlook: Key Trends and Opportunities',
-    excerpt: 'A comprehensive analysis of what investors can expect in the coming year across major asset classes.',
-    content: 'As we approach 2025, several key themes are emerging that will shape investment opportunities...',
-    date: '2024-12-04',
-    author: 'Sarah Chen, CFA',
-    authorAvatar: getAuthorAvatar('Sarah Chen, CFA'),
-    type: 'expert',
-    readTime: '12 min',
-    imageUrl: categoryImages.expert[0],
-  },
-  {
-    slug: 'crypto-regulation-impact',
-    title: 'How New Crypto Regulations Will Shape the Market',
-    excerpt: 'Analysis of upcoming regulatory changes and their potential impact on cryptocurrency valuations.',
-    content: 'The cryptocurrency market is entering a new era of regulatory clarity...',
-    date: '2024-12-03',
-    author: 'Michael Torres',
-    authorAvatar: getAuthorAvatar('Michael Torres'),
-    type: 'markets',
-    readTime: '8 min',
-    imageUrl: categoryImages.markets[0],
-  },
-  {
-    slug: 'ai-stock-thesis',
-    title: 'The Long-Term AI Investment Thesis',
-    excerpt: 'Why artificial intelligence represents a generational investment opportunity.',
-    content: 'Artificial intelligence is not just another technology trend...',
-    date: '2024-12-02',
-    author: 'David Park',
-    authorAvatar: getAuthorAvatar('David Park'),
-    type: 'longterm',
-    readTime: '15 min',
-    imageUrl: categoryImages.longterm[0],
-  },
-  {
-    slug: 'sp500-technical-analysis',
-    title: 'S&P 500 Technical Analysis: Support and Resistance Levels',
-    excerpt: 'Key technical levels to watch as the index tests new highs.',
-    content: 'The S&P 500 has broken through multiple resistance levels in recent weeks...',
-    date: '2024-12-01',
-    author: 'Lisa Wang',
-    authorAvatar: getAuthorAvatar('Lisa Wang'),
-    type: 'technical',
-    readTime: '6 min',
-    imageUrl: categoryImages.technical[0],
-  },
-  {
-    slug: 'emerging-markets-opportunity',
-    title: 'Emerging Markets: Hidden Gems for 2025',
-    excerpt: 'Why developing economies could outperform in the coming year.',
-    content: 'After years of underperformance, emerging markets are poised for a comeback...',
-    date: '2024-11-30',
-    author: 'James Mitchell',
-    authorAvatar: getAuthorAvatar('James Mitchell'),
-    type: 'expert',
-    readTime: '10 min',
-    imageUrl: categoryImages.expert[1],
-  },
-  {
-    slug: 'bond-market-outlook',
-    title: 'Fixed Income Outlook: Navigating Rate Uncertainty',
-    excerpt: 'How to position your bond portfolio in a changing rate environment.',
-    content: 'The fixed income market faces significant uncertainty...',
-    date: '2024-11-29',
-    author: 'Emily Rodriguez',
-    authorAvatar: getAuthorAvatar('Emily Rodriguez'),
-    type: 'markets',
-    readTime: '9 min',
-    imageUrl: categoryImages.markets[1],
-  },
-  {
-    slug: 'dividend-investing-strategy',
-    title: 'Building Wealth Through Dividend Investing',
-    excerpt: 'A strategic approach to generating passive income from dividend stocks.',
-    content: 'Dividend investing remains one of the most reliable wealth-building strategies...',
-    date: '2024-11-28',
-    author: 'Robert Kim',
-    authorAvatar: getAuthorAvatar('Robert Kim'),
-    type: 'longterm',
-    readTime: '11 min',
-    imageUrl: categoryImages.longterm[1],
-  },
-  {
-    slug: 'nasdaq-chart-patterns',
-    title: 'NASDAQ Technical Setup: Key Chart Patterns to Watch',
-    excerpt: 'Identifying potential breakout opportunities in tech stocks.',
-    content: 'The NASDAQ composite is forming several interesting chart patterns...',
-    date: '2024-11-27',
-    author: 'Lisa Wang',
-    authorAvatar: getAuthorAvatar('Lisa Wang'),
-    type: 'technical',
-    readTime: '7 min',
-    imageUrl: categoryImages.technical[1],
-  },
-  {
-    slug: 'central-bank-impact',
-    title: 'Central Bank Policies and Their Market Impact',
-    excerpt: 'How monetary policy decisions will influence asset prices.',
-    content: 'Central banks around the world are at a crossroads...',
-    date: '2024-11-26',
-    author: 'Anna Kowalski',
-    authorAvatar: getAuthorAvatar('Anna Kowalski'),
-    type: 'expert',
-    readTime: '13 min',
-    imageUrl: categoryImages.expert[2],
-  },
-  {
-    slug: 'commodities-super-cycle',
-    title: 'The Next Commodities Super Cycle',
-    excerpt: 'Why raw materials could be the trade of the decade.',
-    content: 'Historical patterns suggest we may be entering a new commodities super cycle...',
-    date: '2024-11-25',
-    author: 'Marcus Johnson',
-    authorAvatar: getAuthorAvatar('Marcus Johnson'),
-    type: 'markets',
-    readTime: '14 min',
-    imageUrl: categoryImages.markets[2],
-  },
-  {
-    slug: 'real-estate-investment',
-    title: 'Real Estate Investment Strategies for 2025',
-    excerpt: 'Navigating the property market in a higher rate environment.',
-    content: 'The real estate market has undergone significant changes...',
-    date: '2024-11-24',
-    author: 'Sofia Martinez',
-    authorAvatar: getAuthorAvatar('Sofia Martinez'),
-    type: 'longterm',
-    readTime: '10 min',
-    imageUrl: categoryImages.longterm[2],
-  },
-  {
-    slug: 'gold-technical-outlook',
-    title: 'Gold Technical Analysis: Bull Run Continuation?',
-    excerpt: 'Analyzing gold price movements and key levels to watch.',
-    content: 'Gold has been on a remarkable run, but is the momentum sustainable...',
-    date: '2024-11-23',
-    author: 'Alexander Wright',
-    authorAvatar: getAuthorAvatar('Alexander Wright'),
-    type: 'technical',
-    readTime: '8 min',
-    imageUrl: categoryImages.technical[2],
-  },
-  {
-    slug: 'healthcare-sector-analysis',
-    title: 'Healthcare Sector: Defensive Growth Opportunity',
-    excerpt: 'Why healthcare stocks offer both safety and growth potential.',
-    content: 'The healthcare sector presents a unique investment opportunity...',
-    date: '2024-11-22',
-    author: 'Catherine Lee',
-    authorAvatar: getAuthorAvatar('Catherine Lee'),
-    type: 'expert',
-    readTime: '11 min',
-    imageUrl: categoryImages.expert[0],
-  },
-  {
-    slug: 'energy-transition-investing',
-    title: 'Investing in the Energy Transition',
-    excerpt: 'Capitalizing on the shift to renewable energy sources.',
-    content: 'The global energy transition is creating massive investment opportunities...',
-    date: '2024-11-21',
-    author: 'Michael Torres',
-    authorAvatar: getAuthorAvatar('Michael Torres'),
-    type: 'longterm',
-    readTime: '12 min',
-    imageUrl: categoryImages.longterm[0],
-  },
-  {
-    slug: 'volatility-trading-strategies',
-    title: 'Volatility Trading: Strategies for Uncertain Markets',
-    excerpt: 'How to profit from market volatility using options strategies.',
-    content: 'Market volatility presents both risks and opportunities...',
-    date: '2024-11-20',
-    author: 'David Park',
-    authorAvatar: getAuthorAvatar('David Park'),
-    type: 'technical',
-    readTime: '9 min',
-    imageUrl: categoryImages.technical[0],
-  },
-  {
-    slug: 'japan-market-renaissance',
-    title: 'Japan Market Renaissance: Time to Invest?',
-    excerpt: 'The Japanese market awakening after decades of stagnation.',
-    content: 'After decades of underperformance, Japanese equities are attracting global attention...',
-    date: '2024-11-19',
-    author: 'Sarah Chen, CFA',
-    authorAvatar: getAuthorAvatar('Sarah Chen, CFA'),
-    type: 'markets',
-    readTime: '10 min',
-    imageUrl: categoryImages.markets[0],
-  },
-  {
-    slug: 'private-equity-outlook',
-    title: 'Private Equity: Accessing Alternative Returns',
-    excerpt: 'How retail investors can participate in private market opportunities.',
-    content: 'Private equity has historically delivered superior returns...',
-    date: '2024-11-18',
-    author: 'James Mitchell',
-    authorAvatar: getAuthorAvatar('James Mitchell'),
-    type: 'expert',
-    readTime: '14 min',
-    imageUrl: categoryImages.expert[1],
-  },
-  {
-    slug: 'cryptocurrency-portfolio-allocation',
-    title: 'Optimal Cryptocurrency Portfolio Allocation',
-    excerpt: 'Finding the right crypto allocation for your investment portfolio.',
-    content: 'Determining the optimal cryptocurrency allocation requires careful consideration...',
-    date: '2024-11-17',
-    author: 'Marcus Johnson',
-    authorAvatar: getAuthorAvatar('Marcus Johnson'),
-    type: 'longterm',
-    readTime: '11 min',
-    imageUrl: categoryImages.longterm[1],
-  },
+// Article topics and templates for generation
+const articleTemplates: Array<{
+  title: string;
+  excerpt: string;
+  content: string;
+  type: 'expert' | 'markets' | 'longterm' | 'technical';
+  readTime: string;
+  tags?: string[];
+  relatedMarkets?: string[];
+}> = [
+  // Investment & Portfolio topics
+  { title: 'ETF Strategies for Long-Term Wealth Building', excerpt: 'Comprehensive guide to building a diversified ETF portfolio that grows over time.', content: 'Exchange-traded funds have revolutionized investing by providing low-cost access to diversified portfolios. This comprehensive guide explores proven ETF strategies for long-term wealth accumulation. We examine core-satellite approaches, sector rotation strategies, and the importance of rebalancing. Understanding expense ratios, tracking error, and tax efficiency is crucial for maximizing returns. We also discuss how to combine different ETF categories to create a balanced portfolio that aligns with your risk tolerance and investment goals.', type: 'longterm', readTime: '14 min', tags: ['ETF', 'Portfolio', 'Diversification'], relatedMarkets: ['indices', 'stocks'] },
+  { title: 'Dividend Investing: Building Passive Income Streams', excerpt: 'How to identify and invest in quality dividend-paying stocks for steady income.', content: 'Dividend investing remains one of the most reliable strategies for generating passive income and building long-term wealth. This article explores how to identify high-quality dividend stocks, understand dividend yield versus dividend growth, and construct a dividend-focused portfolio. We examine the importance of dividend sustainability, payout ratios, and the power of dividend reinvestment. Real-world examples illustrate how dividend investing can provide both income and capital appreciation over time.', type: 'longterm', readTime: '12 min', tags: ['Dividends', 'Income', 'Stocks'] },
+  { title: 'Portfolio Diversification: Beyond Stocks and Bonds', excerpt: 'Exploring alternative assets and strategies to reduce portfolio risk and enhance returns.', content: 'True portfolio diversification goes far beyond the traditional 60/40 stock-bond split. This comprehensive analysis explores alternative asset classes including real estate investment trusts (REITs), commodities, international equities, and emerging market bonds. We examine correlation patterns, risk-adjusted returns, and how different asset classes perform in various economic environments. Practical guidance helps investors understand how to allocate across multiple asset classes while maintaining their target risk profile.', type: 'expert', readTime: '16 min', tags: ['Diversification', 'Portfolio', 'Risk Management'] },
+  { title: 'Active vs Passive Management: Which Strategy Wins?', excerpt: 'Comparing active and passive investment approaches with data-driven analysis.', content: 'The debate between active and passive management continues to divide investors. This data-driven analysis examines performance metrics, fee structures, and when each approach makes sense. We review academic research on fund manager performance, the impact of fees on long-term returns, and market conditions that favor active management. Case studies illustrate successful active strategies while highlighting the consistent benefits of low-cost index funds for most investors.', type: 'expert', readTime: '15 min', tags: ['Active Management', 'Passive Investing', 'Strategy'] },
+  { title: 'Broker Comparison: Finding the Right Platform for Your Needs', excerpt: 'Detailed comparison of major brokerage platforms, fees, and features.', content: 'Choosing the right brokerage platform is crucial for successful investing. This comprehensive comparison examines major brokers across key dimensions: commission structures, account minimums, trading tools, research resources, and customer service. We analyze platforms for different investor types—from beginners seeking simplicity to active traders needing advanced features. The article includes fee calculators and helps readers identify which broker best matches their investment style and goals.', type: 'expert', readTime: '13 min', tags: ['Brokers', 'Comparison', 'Tools'] },
+  
+  // Market Analysis topics
+  { title: 'Technical Analysis: Chart Patterns and Indicators', excerpt: 'Mastering technical analysis tools to identify trading opportunities.', content: 'Technical analysis provides traders with tools to identify potential entry and exit points based on price action and volume. This guide covers essential chart patterns including head and shoulders, triangles, and flags. We explore key technical indicators like moving averages, RSI, MACD, and Bollinger Bands. Practical examples demonstrate how to combine multiple indicators for more reliable signals. The article also addresses common pitfalls and how to use technical analysis alongside fundamental analysis.', type: 'technical', readTime: '11 min', tags: ['Technical Analysis', 'Trading', 'Charts'] },
+  { title: 'Fundamental Analysis: Evaluating Company Financials', excerpt: 'How to read financial statements and assess company valuation.', content: 'Fundamental analysis is the cornerstone of value investing. This comprehensive guide teaches investors how to read and interpret financial statements, including balance sheets, income statements, and cash flow statements. We explore key financial ratios such as P/E, P/B, debt-to-equity, and return on equity. The article explains how to assess a company\'s competitive position, management quality, and growth prospects. Real-world examples illustrate how fundamental analysis helps identify undervalued stocks.', type: 'expert', readTime: '17 min', tags: ['Fundamental Analysis', 'Valuation', 'Financials'] },
+  { title: 'Macroeconomic Trends: Impact on Investment Decisions', excerpt: 'Understanding how economic indicators influence market movements and portfolio strategy.', content: 'Macroeconomic factors significantly influence investment returns across all asset classes. This analysis explores key economic indicators including GDP growth, inflation rates, unemployment, and central bank policies. We examine how different economic environments affect stocks, bonds, commodities, and currencies. The article provides frameworks for adjusting portfolio allocation based on economic cycles and helps investors understand the relationship between macro trends and individual security selection.', type: 'markets', readTime: '14 min', tags: ['Macroeconomics', 'Economic Indicators', 'Strategy'] },
+  { title: 'Volatility Trading: Options Strategies for Uncertain Markets', excerpt: 'Advanced options strategies to profit from market volatility.', content: 'Volatility trading offers sophisticated investors opportunities to profit from market uncertainty. This guide explores options strategies including straddles, strangles, iron condors, and butterfly spreads. We explain how to assess implied volatility, use the VIX index, and construct positions that profit from both high and low volatility environments. Risk management techniques help traders protect capital while maximizing returns from volatility-based strategies.', type: 'technical', readTime: '13 min', tags: ['Options', 'Volatility', 'Trading'] },
+  { title: 'Sector Rotation: Timing Market Cycles', excerpt: 'How to identify and capitalize on sector rotation patterns.', content: 'Sector rotation occurs as different industries outperform during various phases of the economic cycle. This analysis examines historical patterns of sector performance and how to identify rotation signals. We explore defensive sectors like utilities and consumer staples versus cyclical sectors like technology and industrials. The article provides frameworks for adjusting sector allocation based on economic indicators and market conditions.', type: 'markets', readTime: '12 min', tags: ['Sector Analysis', 'Market Cycles', 'Strategy'] },
+  
+  // Financial Planning topics
+  { title: 'Retirement Planning: Building a Secure Financial Future', excerpt: 'Comprehensive guide to retirement savings strategies and account types.', content: 'Retirement planning requires a long-term perspective and disciplined approach. This comprehensive guide covers retirement account types including 401(k)s, IRAs, Roth accounts, and their tax implications. We explore contribution limits, employer matching, and how to maximize retirement savings. The article addresses asset allocation for different life stages, withdrawal strategies, and how to estimate retirement needs. Real-world scenarios help readers create personalized retirement plans.', type: 'longterm', readTime: '16 min', tags: ['Retirement', 'Planning', 'Tax Strategy'] },
+  { title: 'Tax-Efficient Investing Strategies', excerpt: 'Minimizing tax impact on investment returns through smart strategies.', content: 'Tax efficiency can significantly impact long-term investment returns. This guide explores tax-advantaged accounts, tax-loss harvesting, and asset location strategies. We examine how different investment types are taxed and when to realize gains or losses. The article covers qualified dividends, long-term capital gains rates, and how to structure portfolios to minimize tax drag. Practical examples demonstrate how tax-efficient investing can add substantial value over decades.', type: 'expert', readTime: '14 min', tags: ['Taxes', 'Strategy', 'Optimization'] },
+  { title: 'Risk Management: Protecting Your Portfolio', excerpt: 'Essential risk management techniques for preserving capital.', content: 'Effective risk management is crucial for long-term investment success. This comprehensive guide covers position sizing, stop-loss orders, and portfolio hedging strategies. We explore different types of risk including market risk, credit risk, and liquidity risk. The article explains how to use diversification, asset allocation, and derivatives to manage portfolio risk. Case studies illustrate how proper risk management helps investors weather market downturns and preserve capital.', type: 'expert', readTime: '15 min', tags: ['Risk Management', 'Portfolio', 'Protection'] },
+  { title: 'Goal-Based Investing: Aligning Investments with Life Goals', excerpt: 'How to structure your portfolio around specific financial objectives.', content: 'Goal-based investing helps align your portfolio with specific life objectives rather than abstract return targets. This approach examines how to set financial goals, determine time horizons, and select appropriate investments for each goal. We explore strategies for short-term goals like emergency funds, medium-term goals like home purchases, and long-term goals like retirement. The article provides frameworks for prioritizing goals and allocating resources accordingly.', type: 'longterm', readTime: '13 min', tags: ['Planning', 'Goals', 'Strategy'] },
+  
+  // Additional topics for variety
+  { title: 'Cryptocurrency Portfolio Allocation', excerpt: 'Determining the right crypto allocation for your investment portfolio.', content: 'Cryptocurrency has emerged as a new asset class, but determining appropriate allocation requires careful consideration. This analysis explores how cryptocurrencies fit into traditional portfolios, correlation with other assets, and risk-return characteristics. We examine different approaches to crypto allocation, from conservative to aggressive, and how to balance potential returns with volatility. The article addresses security considerations, custody options, and regulatory developments affecting crypto investments.', type: 'markets', readTime: '11 min', tags: ['Cryptocurrency', 'Portfolio', 'Allocation'] },
+  { title: 'Real Estate Investment: REITs vs Direct Ownership', excerpt: 'Comparing real estate investment approaches and their trade-offs.', content: 'Real estate offers portfolio diversification and inflation protection, but investors must choose between REITs and direct property ownership. This comparison examines liquidity, management requirements, tax implications, and return potential for each approach. We explore different REIT categories including equity, mortgage, and specialty REITs. The article helps investors understand which real estate investment method aligns with their goals, time horizon, and risk tolerance.', type: 'longterm', readTime: '12 min', tags: ['Real Estate', 'REITs', 'Comparison'] },
+  { title: 'Bond Market Strategies in Rising Rate Environments', excerpt: 'How to position fixed income portfolios when interest rates are climbing.', content: 'Rising interest rates present challenges and opportunities for bond investors. This guide explores strategies including duration management, floating-rate bonds, and bond laddering. We examine how different bond types respond to rate changes and how to construct portfolios that can weather rising rate environments. The article covers Treasury bonds, corporate bonds, municipal bonds, and international fixed income, helping investors navigate changing rate conditions.', type: 'markets', readTime: '13 min', tags: ['Bonds', 'Fixed Income', 'Interest Rates'] },
+  { title: 'International Investing: Global Diversification Benefits', excerpt: 'Why and how to invest in international markets for better diversification.', content: 'International investing provides diversification benefits and access to growth opportunities beyond domestic markets. This analysis explores developed and emerging market equities, currency considerations, and how to allocate between domestic and international investments. We examine country-specific risks, political factors, and how international markets correlate with domestic markets. The article provides practical guidance on selecting international funds and ETFs.', type: 'longterm', readTime: '14 min', tags: ['International', 'Diversification', 'Global Markets'] },
+  { title: 'Value vs Growth Investing: Which Approach Works?', excerpt: 'Comparing value and growth investment styles with historical performance data.', content: 'The value versus growth debate has persisted for decades, with each style having periods of outperformance. This comprehensive analysis examines historical returns, risk characteristics, and market conditions that favor each approach. We explore how to identify value and growth stocks, when each style tends to outperform, and whether investors should choose one style or blend both. The article includes case studies and helps readers understand which approach aligns with their investment philosophy.', type: 'expert', readTime: '15 min', tags: ['Value Investing', 'Growth Investing', 'Strategy'] },
+  { title: 'Small Cap vs Large Cap: Finding the Right Balance', excerpt: 'Understanding market capitalization and how to allocate across company sizes.', content: 'Market capitalization significantly impacts stock characteristics including risk, return potential, and correlation with economic cycles. This guide explores small-cap, mid-cap, and large-cap stocks, examining their historical performance and risk profiles. We discuss how to allocate across market caps based on investment goals and risk tolerance. The article helps investors understand when small caps outperform and how to balance exposure across different company sizes.', type: 'markets', readTime: '12 min', tags: ['Market Cap', 'Allocation', 'Strategy'] },
+  { title: 'ESG Investing: Aligning Values with Returns', excerpt: 'How environmental, social, and governance factors impact investment decisions.', content: 'ESG investing has grown from a niche approach to a mainstream investment strategy. This analysis explores how ESG factors are evaluated, their impact on returns, and how to incorporate ESG considerations into portfolio construction. We examine different ESG investment approaches, from exclusionary screening to impact investing. The article addresses whether ESG investing requires sacrificing returns and how to select ESG-focused funds and ETFs.', type: 'expert', readTime: '14 min', tags: ['ESG', 'Sustainable Investing', 'Values'] },
+  { title: 'Dollar-Cost Averaging vs Lump Sum Investing', excerpt: 'Comparing investment timing strategies and their effectiveness.', content: 'Investors face the decision of investing a lump sum immediately or using dollar-cost averaging to spread investments over time. This analysis examines historical performance data, psychological factors, and when each approach makes sense. We explore how market conditions, investment amounts, and time horizons affect the optimal strategy. The article helps readers understand the trade-offs and choose the approach that aligns with their risk tolerance and financial situation.', type: 'longterm', readTime: '11 min', tags: ['Strategy', 'Timing', 'DCA'] },
+  { title: 'Market Timing: Why It Usually Fails', excerpt: 'Evidence-based analysis of market timing strategies and their pitfalls.', content: 'Market timing tempts many investors, but evidence suggests it rarely works. This comprehensive analysis examines why market timing is so difficult, including the impact of missing the best market days and the psychological challenges of timing decisions. We explore historical data on market timing attempts and why a long-term, disciplined approach typically outperforms. The article helps investors understand the risks of timing and embrace a more reliable investment strategy.', type: 'expert', readTime: '13 min', tags: ['Market Timing', 'Strategy', 'Behavioral Finance'] },
+  { title: 'Inflation Hedging: Protecting Purchasing Power', excerpt: 'Investment strategies to protect against inflation erosion.', content: 'Inflation erodes purchasing power, making inflation hedging crucial for long-term investors. This guide explores assets that historically perform well during inflationary periods including commodities, real estate, and Treasury Inflation-Protected Securities (TIPS). We examine how different asset classes respond to inflation and how to construct portfolios that maintain purchasing power. The article provides practical strategies for protecting wealth against inflation over time.', type: 'longterm', readTime: '12 min', tags: ['Inflation', 'Hedging', 'Protection'] },
 ];
+
+// Function to generate slug from title
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// Function to generate articles with proper date distribution
+function generateAnalyticsArticles(): AnalyticsArticle[] {
+  const articles: AnalyticsArticle[] = [];
+  const authors = Object.keys(authorAvatars);
+  const types: Array<'expert' | 'markets' | 'longterm' | 'technical'> = ['expert', 'markets', 'longterm', 'technical'];
+  
+  // Date distribution: October 2023 to December 2024
+  const monthDistribution = [
+    { year: 2023, month: 10, count: 7 }, // October 2023
+    { year: 2023, month: 11, count: 8 }, // November 2023
+    { year: 2023, month: 12, count: 7 }, // December 2023
+    { year: 2024, month: 1, count: 8 },  // January 2024
+    { year: 2024, month: 2, count: 7 },  // February 2024
+    { year: 2024, month: 3, count: 8 }, // March 2024
+    { year: 2024, month: 4, count: 7 },  // April 2024
+    { year: 2024, month: 5, count: 8 },  // May 2024
+    { year: 2024, month: 6, count: 7 },  // June 2024
+    { year: 2024, month: 7, count: 8 },  // July 2024
+    { year: 2024, month: 8, count: 7 },  // August 2024
+    { year: 2024, month: 9, count: 8 },  // September 2024
+    { year: 2024, month: 10, count: 7 },  // October 2024
+    { year: 2024, month: 11, count: 8 },   // November 2024
+    { year: 2024, month: 12, count: 7 },   // December 2024
+  ];
+  
+  let templateIndex = 0;
+  let imageIndex = { expert: 0, markets: 0, longterm: 0, technical: 0 };
+  
+  for (const monthData of monthDistribution) {
+    for (let i = 0; i < monthData.count; i++) {
+      const template = articleTemplates[templateIndex % articleTemplates.length];
+      const type = template.type;
+      const author = authors[Math.floor(Math.random() * authors.length)];
+      const imageUrl = categoryImages[type][imageIndex[type] % categoryImages[type].length];
+      imageIndex[type]++;
+      
+      // Generate date within the month (distribute across days)
+      const daysInMonth = new Date(monthData.year, monthData.month, 0).getDate();
+      const day = Math.floor((i * daysInMonth) / monthData.count) + 1;
+      const date = `${monthData.year}-${String(monthData.month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      
+      // Generate additional content sections
+      const sections = [
+        { heading: 'Introduction', content: template.content.substring(0, 200) + '...' },
+        { heading: 'Key Concepts', content: template.content.substring(200, 400) + '...' },
+        { heading: 'Practical Applications', content: template.content.substring(400, 600) + '...' },
+        { heading: 'Conclusion', content: template.content.substring(600) + '...' },
+      ];
+      
+      // Generate resources
+      const resources = [
+        { title: 'Related Research Paper', url: 'https://example.com/research', type: 'article' as const },
+        { title: 'Market Data Source', url: 'https://example.com/data', type: 'data' as const },
+        { title: 'Investment Calculator', url: 'https://example.com/tool', type: 'tool' as const },
+      ];
+      
+      // Generate additional images
+      const additionalImages = [
+        categoryImages[type][(imageIndex[type] + 1) % categoryImages[type].length],
+        categoryImages[type][(imageIndex[type] + 2) % categoryImages[type].length],
+      ];
+      
+      // Generate unique slug with date to avoid duplicates
+      const baseSlug = generateSlug(template.title);
+      const uniqueSlug = `${baseSlug}-${date.replace(/-/g, '')}-${i}`;
+      
+      articles.push({
+        slug: uniqueSlug,
+        title: template.title,
+        excerpt: template.excerpt,
+        content: template.content,
+        date,
+        author,
+        authorAvatar: getAuthorAvatar(author),
+        type,
+        readTime: template.readTime,
+        imageUrl,
+        sections,
+        resources,
+        images: additionalImages,
+        tags: template.tags || [],
+        relatedMarkets: template.relatedMarkets || [],
+      });
+      
+      templateIndex++;
+    }
+  }
+  
+  return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+// Mock Analytics Data with expanded articles - generated with proper date distribution
+const mockAnalytics: AnalyticsArticle[] = generateAnalyticsArticles();
+
+const mockAnalytics: AnalyticsArticle[] = generateAnalyticsArticles();
 
 // Mock Market Data
 const mockIndices: MarketData[] = [

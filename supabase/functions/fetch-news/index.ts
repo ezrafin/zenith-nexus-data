@@ -62,16 +62,16 @@ serve(async (req) => {
     
     console.log(`Fetching news for market: ${market}, forceRefresh: ${forceRefresh}`);
 
-    // Check if we need to fetch new data (every 30 minutes)
+    // Check if we need to fetch new data (every 1 hour)
     const { data: fetchLog } = await supabase
       .from('news_fetch_log')
       .select('last_fetched_at')
       .eq('market', market === 'all' ? 'general' : market)
       .maybeSingle();
 
-    const thirtyMinutesAgo = new Date(Date.now() - 30 * 60 * 1000);
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
     const lastFetched = fetchLog?.last_fetched_at ? new Date(fetchLog.last_fetched_at) : null;
-    const needsRefresh = forceRefresh || !lastFetched || lastFetched < thirtyMinutesAgo;
+    const needsRefresh = forceRefresh || !lastFetched || lastFetched < oneHourAgo;
 
     if (needsRefresh) {
       console.log('Fetching fresh news from NewsAPI...');

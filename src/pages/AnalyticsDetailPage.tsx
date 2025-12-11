@@ -10,8 +10,11 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
 import { generateArticleSchema, generateOrganizationSchema } from '@/utils/structuredData';
-import { Calendar, Clock, User, Share2 } from 'lucide-react';
+import { Calendar, Clock, User, Share2, ExternalLink, Tag, Building2, Image as ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { CompanyCard } from '@/components/CompanyCard';
+import { fetchCompanies } from '@/lib/api';
 
 const typeLabels: Record<string, string> = {
   expert: 'Expert Opinion',
@@ -24,6 +27,7 @@ export default function AnalyticsDetailPage() {
   const { slug } = useParams();
   const [article, setArticle] = useState<AnalyticsArticle | null>(null);
   const [loading, setLoading] = useState(true);
+  const [relatedCompanies, setRelatedCompanies] = useState<any[]>([]);
   const { addToHistory } = useReadingHistory();
   
   // Fetch related content based on article type/category
@@ -44,6 +48,13 @@ export default function AnalyticsDetailPage() {
         // Add to reading history
         if (data) {
           addToHistory('analytics', slug);
+          
+          // Load related companies if specified
+          if (data.relatedCompanies && data.relatedCompanies.length > 0) {
+            const companies = await fetchCompanies();
+            const filtered = companies.filter(c => data.relatedCompanies?.includes(c.slug));
+            setRelatedCompanies(filtered);
+          }
         }
       }
     }
@@ -81,7 +92,7 @@ export default function AnalyticsDetailPage() {
   if (!article) return null;
 
   const articleUrl = `https://investopatronus.com/analytics/${slug}`;
-  const articleImage = 'https://investopatronus.com/og-image.png';
+  const articleImage = article.imageUrl || 'https://investopatronus.com/og-image.png';
 
   return (
     <Layout>
@@ -109,6 +120,17 @@ export default function AnalyticsDetailPage() {
       <article className="section-spacing">
         <div className="container-narrow">
           <Breadcrumbs pageTitle={article.title} />
+
+          {/* Hero Image */}
+          {article.imageUrl && (
+            <div className="mb-8 rounded-xl overflow-hidden">
+              <img
+                src={article.imageUrl}
+                alt={article.title}
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+          )}
 
           <div className="flex items-center gap-3 mb-6">
             <span className="px-3 py-1 text-sm font-medium rounded bg-primary/10 text-primary">
@@ -146,10 +168,107 @@ export default function AnalyticsDetailPage() {
             </span>
           </div>
 
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-6">{article.excerpt}</p>
-            <p className="text-foreground leading-relaxed">{article.content}</p>
+          {/* Tags */}
+          {article.tags && article.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-8">
+              {article.tags.map((tag) => (
+                <Badge key={tag} variant="outline" className="flex items-center gap-1">
+                  <Tag className="h-3 w-3" />
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          )}
+
+          {/* Excerpt */}
+          <div className="prose prose-lg max-w-none mb-8">
+            <p className="text-lg text-muted-foreground">{article.excerpt}</p>
           </div>
+
+          {/* Structured Content Sections */}
+          {article.sections && article.sections.length > 0 ? (
+            <div className="space-y-8 mb-12">
+              {article.sections.map((section, index) => (
+                <div key={index} className="space-y-4">
+                  <h2 className="heading-sm">{section.heading}</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-foreground leading-relaxed">{section.content}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="prose prose-lg max-w-none mb-12">
+              <p className="text-foreground leading-relaxed">{article.content}</p>
+            </div>
+          )}
+
+          {/* Image Gallery */}
+          {article.images && article.images.length > 0 && (
+            <div className="mb-12">
+              <h2 className="heading-sm mb-6 flex items-center gap-2">
+                <ImageIcon className="h-5 w-5" />
+                Image Gallery
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {article.images.map((image, index) => (
+                  <div key={index} className="rounded-xl overflow-hidden">
+                    <img
+                      src={image}
+                      alt={`${article.title} - Image ${index + 1}`}
+                      className="w-full h-64 object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Resources and Links */}
+          {article.resources && article.resources.length > 0 && (
+            <div className="mb-12 p-6 rounded-xl border border-border bg-secondary/30">
+              <h2 className="heading-sm mb-6 flex items-center gap-2">
+                <ExternalLink className="h-5 w-5" />
+                Resources & Links
+              </h2>
+              <div className="space-y-3">
+                {article.resources.map((resource, index) => (
+                  <a
+                    key={index}
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 rounded-lg border border-border hover:bg-secondary transition-colors group"
+                  >
+                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <div className="flex-1">
+                      <div className="font-medium group-hover:text-primary transition-colors">
+                        {resource.title}
+                      </div>
+                      {resource.type && (
+                        <div className="text-xs text-muted-foreground capitalize">{resource.type}</div>
+                      )}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Related Companies */}
+          {relatedCompanies.length > 0 && (
+            <div className="mb-12">
+              <h2 className="heading-sm mb-6 flex items-center gap-2">
+                <Building2 className="h-5 w-5" />
+                Related Companies
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {relatedCompanies.map((company, index) => (
+                  <CompanyCard key={company.slug} company={company} index={index} />
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Related Content */}
           {relatedItems.length > 0 && (

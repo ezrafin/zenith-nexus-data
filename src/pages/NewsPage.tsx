@@ -5,10 +5,8 @@ import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { Button } from '@/components/ui/button';
 import { Pagination } from '@/components/Pagination';
 import { useNews } from '@/hooks/useNews';
-import { RefreshCw, Clock, Download } from 'lucide-react';
+import { RefreshCw, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
 
 const ITEMS_PER_PAGE = 15;
 
@@ -27,58 +25,10 @@ export default function NewsPage() {
   const { news, loading, error, lastUpdated, refetch } = useNews(activeFilter);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  const [isFetchingHistorical, setIsFetchingHistorical] = useState(false);
-
   const handleRefresh = async () => {
     setIsRefreshing(true);
     await refetch();
     setIsRefreshing(false);
-  };
-
-  const handleFetchHistorical = async () => {
-    setIsFetchingHistorical(true);
-    toast.info('Starting historical news fetch... This may take a few minutes.');
-    
-    try {
-      // Fetch 14 months of data in batches (2 months at a time to avoid timeouts)
-      const now = new Date();
-      let totalInserted = 0;
-      
-      for (let i = 0; i < 7; i++) {
-        const toDate = new Date(now);
-        toDate.setMonth(toDate.getMonth() - (i * 2));
-        
-        const fromDate = new Date(toDate);
-        fromDate.setMonth(fromDate.getMonth() - 2);
-        
-        const { data, error } = await supabase.functions.invoke('fetch-guardian-news', {
-          body: {
-            fromDate: fromDate.toISOString().split('T')[0],
-            toDate: toDate.toISOString().split('T')[0],
-            maxPages: 10,
-          },
-        });
-        
-        if (error) {
-          console.error('Batch error:', error);
-          toast.error(`Error fetching batch ${i + 1}: ${error.message}`);
-        } else if (data) {
-          totalInserted += data.totalInserted || 0;
-          toast.success(`Batch ${i + 1}/7: Added ${data.totalInserted} articles`);
-        }
-        
-        // Small delay between batches
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-      
-      toast.success(`Historical fetch complete! Added ${totalInserted} total articles.`);
-      refetch();
-    } catch (error) {
-      console.error('Historical fetch error:', error);
-      toast.error('Failed to fetch historical news');
-    } finally {
-      setIsFetchingHistorical(false);
-    }
   };
 
   const handleFilterChange = (filter: string) => {
@@ -124,16 +74,6 @@ export default function NewsPage() {
                     Updated {formatLastUpdated(lastUpdated)}
                   </span>
                 )}
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleFetchHistorical}
-                  disabled={loading || isFetchingHistorical}
-                  className="gap-2"
-                >
-                  <Download className={cn("h-4 w-4", isFetchingHistorical && "animate-pulse")} />
-                  {isFetchingHistorical ? 'Fetching...' : 'Load Historical'}
-                </Button>
                 <Button
                   variant="outline"
                   size="sm"
