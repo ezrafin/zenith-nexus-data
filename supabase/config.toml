@@ -1,1 +1,4 @@
 project_id = "xyhrzgdpycmjqbbnvqdp"
+
+[functions.fetch-guardian-news]
+verify_jwt = false
