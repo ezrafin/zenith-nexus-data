@@ -35,7 +35,7 @@ export default function AboutPage() {
             <span className="badge-primary mb-4">About Us</span>
             <h1 className="heading-xl mb-6">Your Guardian in Global Markets</h1>
             <p className="body-xl">
-              INVESTOPATRONUS was founded with a simple mission: to democratize access to professional-grade financial data and analysis for investors of all levels.
+              INVESTOPATRONUS was launched with a simple mission: to democratize access to professional-grade financial data and analysis for investors of all levels.
             </p>
           </div>
         </section>
@@ -47,7 +47,7 @@ export default function AboutPage() {
               <h2 className="heading-lg mb-6">Our Story</h2>
               <div className="space-y-4 body-lg">
                 <p>
-                  Founded in 2020, INVESTOPATRONUS emerged from a simple observation: individual investors deserve the same quality of financial data and analysis that institutional investors enjoy.
+                  Launched in 2020, INVESTOPATRONUS emerged from a simple observation: individual investors deserve the same quality of financial data and analysis that institutional investors enjoy.
                 </p>
                 <p>
                   Our team of experienced financial analysts, data scientists, and software engineers work together to bring you real-time market data, comprehensive analysis, and educational resources.

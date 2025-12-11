@@ -74,11 +74,6 @@ const navigation = [{
     href: '/course',
     icon: Rocket,
     description: 'Structured learning'
-  }, {
-    name: 'Submit Article',
-    href: '/articles/submit',
-    icon: GraduationCap,
-    description: 'Become an author'
   }]
 }, {
   name: 'Companies',
@@ -328,9 +323,14 @@ function AchievementBadge({ userId }: { userId: string }) {
 function AchievementMenuItem() {
   const [open, setOpen] = useState(false);
 
+  const handleSelect = (e: Event) => {
+    e.preventDefault();
+    setOpen(true);
+  };
+
   return (
     <>
-      <DropdownMenuItem onClick={() => setOpen(true)}>
+      <DropdownMenuItem onSelect={handleSelect}>
         <Trophy className="mr-2 h-4 w-4" />
         Achievements
       </DropdownMenuItem>

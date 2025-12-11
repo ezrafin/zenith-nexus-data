@@ -77,7 +77,7 @@ export default function CompanyDetailPage() {
   }
 
   const stats = [
-    { label: 'Founded', value: company.founded, icon: Calendar },
+    { label: 'Established', value: company.founded, icon: Calendar },
     { label: 'Headquarters', value: company.headquarters, icon: MapPin },
     { label: 'Employees', value: company.employees, icon: Users },
     { label: 'Market Cap', value: company.marketCap, icon: DollarSign },
@@ -172,7 +172,7 @@ export default function CompanyDetailPage() {
                   <td className="px-4 md:px-6 py-4 text-sm font-medium text-right">{company.employees}</td>
                 </tr>
                 <tr className="hover:bg-secondary/50 transition-colors">
-                  <td className="px-4 md:px-6 py-4 text-sm text-muted-foreground">Year Founded</td>
+                  <td className="px-4 md:px-6 py-4 text-sm text-muted-foreground">Year Established</td>
                   <td className="px-4 md:px-6 py-4 text-sm font-medium text-right">{company.founded}</td>
                 </tr>
               <tr className="hover:bg-secondary/50 transition-colors">

@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { useUser } from '@/context/UserContext';
+import { isAdmin } from '@/utils/admin';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
-import { Shield, Trash2, Lock, Pin, CheckCircle, XCircle } from 'lucide-react';
+import { Shield, Trash2, Lock, Pin, CheckCircle, XCircle, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -110,10 +111,9 @@ export default function ModerationPage() {
     );
   }
 
-  // In a real app, check if user has moderator role
-  const isModerator = false; // Placeholder
+  const userIsAdmin = isAdmin(user.email);
 
-  if (!isModerator) {
+  if (!userIsAdmin) {
     return (
       <Layout>
         <div className="min-h-[80vh] flex items-center justify-center">
@@ -136,6 +136,12 @@ export default function ModerationPage() {
               <h1 className="heading-lg mb-2">Moderation Dashboard</h1>
               <p className="text-muted-foreground">Review and manage reported content</p>
             </div>
+            <Link to="/admin/topic-requests">
+              <Button variant="outline">
+                <MessageSquare className="h-4 w-4 mr-2" />
+                Topic Requests
+              </Button>
+            </Link>
           </div>
 
           <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'pending' | 'all')}>
