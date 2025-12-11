@@ -33,7 +33,6 @@ export function useAuth(): UseAuthReturn {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
@@ -44,7 +43,6 @@ export function useAuth(): UseAuthReturn {
       }
     });
 
-    // Listen for auth changes
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (_event, session) => {
@@ -63,14 +61,26 @@ export function useAuth(): UseAuthReturn {
 
   const loadProfile = async (userId: string) => {
     try {
-      const { data, error } = await supabase
-        .from('user_profiles')
+      const { data, error } = await (supabase
+        .from('profiles' as any)
         .select('*')
         .eq('id', userId)
-        .single();
+        .maybeSingle() as any);
 
       if (error) throw error;
-      setProfile(data);
+      if (data) {
+        setProfile({
+          id: data.id,
+          username: data.username,
+          display_name: data.display_name,
+          bio: data.bio,
+          avatar_url: data.avatar_url,
+          reputation: data.reputation_score || 0,
+          post_count: data.posts_count || 0,
+          comment_count: 0,
+          privacy_level: 'public',
+        });
+      }
     } catch (error) {
       console.error('Error loading profile:', error);
     } finally {
@@ -79,15 +89,12 @@ export function useAuth(): UseAuthReturn {
   };
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
     return { error };
   };
 
   const signUp = async (email: string, password: string, username?: string) => {
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -107,40 +114,21 @@ export function useAuth(): UseAuthReturn {
   const signInWithOAuth = async (provider: 'google' | 'github') => {
     await supabase.auth.signInWithOAuth({
       provider,
-      options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
-      },
+      options: { redirectTo: `${window.location.origin}/auth/callback` },
     });
   };
 
   const updateProfile = async (updates: Partial<UserProfile>) => {
     if (!user) return { error: new Error('Not authenticated') };
 
-    const { error } = await supabase
-      .from('user_profiles')
-      .update({
-        ...updates,
-        updated_at: new Date().toISOString(),
-      })
-      .eq('id', user.id);
+    const { error } = await (supabase
+      .from('profiles' as any)
+      .update({ ...updates, updated_at: new Date().toISOString() })
+      .eq('id', user.id) as any);
 
-    if (!error) {
-      await loadProfile(user.id);
-    }
-
+    if (!error) await loadProfile(user.id);
     return { error };
   };
 
-  return {
-    user,
-    profile,
-    session,
-    loading,
-    signIn,
-    signUp,
-    signOut,
-    signInWithOAuth,
-    updateProfile,
-  };
+  return { user, profile, session, loading, signIn, signUp, signOut, signInWithOAuth, updateProfile };
 }
-

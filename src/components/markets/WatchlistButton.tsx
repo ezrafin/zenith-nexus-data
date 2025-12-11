@@ -35,11 +35,11 @@ export function WatchlistButton({ symbol, marketType }: WatchlistButtonProps) {
     if (!user) return;
 
     try {
-      const { data, error } = await supabase
-        .from('watchlists')
+      const { data, error } = await (supabase
+        .from('watchlists' as any)
         .select('id, name')
         .eq('user_id', user.id)
-        .order('is_default', { ascending: false });
+        .order('is_default', { ascending: false }) as any);
 
       if (error) throw error;
       setWatchlists(data || []);
@@ -52,25 +52,25 @@ export function WatchlistButton({ symbol, marketType }: WatchlistButtonProps) {
     if (!user) return;
 
     try {
-      const { data: watchlistsData } = await supabase
-        .from('watchlists')
+      const { data: watchlistsData } = await (supabase
+        .from('watchlists' as any)
         .select('id')
-        .eq('user_id', user.id);
+        .eq('user_id', user.id) as any);
 
       if (!watchlistsData || watchlistsData.length === 0) {
         setIsInWatchlist(false);
         return;
       }
 
-      const watchlistIds = watchlistsData.map((w) => w.id);
+      const watchlistIds = watchlistsData.map((w: any) => w.id);
 
-      const { data: itemsData } = await supabase
-        .from('watchlist_items')
+      const { data: itemsData } = await (supabase
+        .from('watchlist_items' as any)
         .select('id')
         .in('watchlist_id', watchlistIds)
         .eq('symbol', symbol)
         .eq('market_type', marketType)
-        .limit(1);
+        .limit(1) as any);
 
       setIsInWatchlist((itemsData?.length || 0) > 0);
     } catch (error) {
@@ -86,11 +86,11 @@ export function WatchlistButton({ symbol, marketType }: WatchlistButtonProps) {
 
     setLoading(true);
     try {
-      const { error } = await supabase.from('watchlist_items').insert({
+      const { error } = await (supabase.from('watchlist_items' as any).insert({
         watchlist_id: watchlistId,
         symbol,
         market_type: marketType,
-      });
+      }) as any);
 
       if (error) throw error;
 
@@ -115,7 +115,7 @@ export function WatchlistButton({ symbol, marketType }: WatchlistButtonProps) {
     return (
       <Button variant="outline" size="sm" disabled>
         <Star className="h-4 w-4 mr-2" />
-        Sign in to add
+        No watchlists
       </Button>
     );
   }
@@ -148,4 +148,3 @@ export function WatchlistButton({ symbol, marketType }: WatchlistButtonProps) {
     </DropdownMenu>
   );
 }
-

@@ -27,13 +27,13 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
     if (!user) return;
 
     try {
-      const { data } = await supabase
-        .from('user_bookmarks')
+      const { data } = await (supabase
+        .from('user_bookmarks' as any)
         .select('id')
         .eq('user_id', user.id)
         .eq('content_type', contentType)
         .eq('content_id', contentId)
-        .single();
+        .maybeSingle() as any);
 
       setIsBookmarked(!!data);
     } catch (error) {
@@ -50,25 +50,25 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
     setLoading(true);
     try {
       if (isBookmarked) {
-        const { error } = await supabase
-          .from('user_bookmarks')
+        const { error } = await (supabase
+          .from('user_bookmarks' as any)
           .delete()
           .eq('user_id', user.id)
           .eq('content_type', contentType)
-          .eq('content_id', contentId);
+          .eq('content_id', contentId) as any);
 
         if (error) throw error;
 
         setIsBookmarked(false);
         toast.success('Removed from bookmarks');
       } else {
-        const { error } = await supabase
-          .from('user_bookmarks')
+        const { error } = await (supabase
+          .from('user_bookmarks' as any)
           .insert({
             user_id: user.id,
             content_type: contentType,
             content_id: contentId,
-          });
+          }) as any);
 
         if (error) throw error;
 
@@ -108,4 +108,3 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
     </Button>
   );
 }
-

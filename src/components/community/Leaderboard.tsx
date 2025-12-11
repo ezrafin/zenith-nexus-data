@@ -11,12 +11,11 @@ interface LeaderboardEntry {
   username: string | null;
   display_name: string | null;
   avatar_url: string | null;
-  reputation: number;
-  post_count: number;
-  comment_count: number;
+  reputation_score: number;
+  posts_count: number;
 }
 
-type LeaderboardType = 'reputation' | 'posts' | 'comments' | 'helpful';
+type LeaderboardType = 'reputation' | 'posts';
 
 export function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
@@ -30,25 +29,17 @@ export function Leaderboard() {
   const loadLeaderboard = async () => {
     setLoading(true);
     try {
-      let query = supabase
-        .from('user_profiles')
-        .select('id, username, display_name, avatar_url, reputation, post_count, comment_count')
-        .not('reputation', 'is', null)
+      let query = (supabase
+        .from('profiles' as any)
+        .select('id, username, display_name, avatar_url, reputation_score, posts_count') as any)
         .limit(100);
 
       switch (type) {
         case 'reputation':
-          query = query.order('reputation', { ascending: false });
+          query = query.order('reputation_score', { ascending: false });
           break;
         case 'posts':
-          query = query.order('post_count', { ascending: false });
-          break;
-        case 'comments':
-          query = query.order('comment_count', { ascending: false });
-          break;
-        case 'helpful':
-          // Would need to calculate from reactions
-          query = query.order('reputation', { ascending: false });
+          query = query.order('posts_count', { ascending: false });
           break;
       }
 
@@ -73,13 +64,9 @@ export function Leaderboard() {
   const getValue = (entry: LeaderboardEntry) => {
     switch (type) {
       case 'reputation':
-        return entry.reputation;
+        return entry.reputation_score || 0;
       case 'posts':
-        return entry.post_count;
-      case 'comments':
-        return entry.comment_count;
-      case 'helpful':
-        return entry.reputation; // Placeholder
+        return entry.posts_count || 0;
       default:
         return 0;
     }
@@ -91,10 +78,6 @@ export function Leaderboard() {
         return 'Reputation';
       case 'posts':
         return 'Posts';
-      case 'comments':
-        return 'Comments';
-      case 'helpful':
-        return 'Helpful';
       default:
         return '';
     }
@@ -110,11 +93,9 @@ export function Leaderboard() {
       </div>
 
       <Tabs value={type} onValueChange={(value) => setType(value as LeaderboardType)}>
-        <TabsList className="grid w-full grid-cols-4 mb-6">
+        <TabsList className="grid w-full grid-cols-2 mb-6">
           <TabsTrigger value="reputation">Reputation</TabsTrigger>
           <TabsTrigger value="posts">Posts</TabsTrigger>
-          <TabsTrigger value="comments">Comments</TabsTrigger>
-          <TabsTrigger value="helpful">Helpful</TabsTrigger>
         </TabsList>
 
         <TabsContent value={type}>
@@ -126,7 +107,7 @@ export function Leaderboard() {
             </div>
           ) : leaderboard.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
-              No data available
+              No data available yet. Be the first to participate!
             </div>
           ) : (
             <div className="space-y-2">
@@ -137,9 +118,9 @@ export function Leaderboard() {
                   username: entry.username,
                   display_name: entry.display_name,
                   avatar_url: entry.avatar_url,
-                  reputation: entry.reputation,
-                  post_count: entry.post_count,
-                  comment_count: entry.comment_count,
+                  reputation: entry.reputation_score || 0,
+                  post_count: entry.posts_count || 0,
+                  comment_count: 0,
                   bio: null,
                   privacy_level: 'public' as const,
                 };
@@ -173,4 +154,3 @@ export function Leaderboard() {
     </div>
   );
 }
-

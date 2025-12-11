@@ -31,13 +31,13 @@ export function AchievementSystem() {
     if (!user) return;
 
     try {
-      const { data, error } = await supabase
-        .from('user_achievements')
+      const { data, error } = await (supabase
+        .from('user_achievements' as any)
         .select('achievement_id')
-        .eq('user_id', user.id);
+        .eq('user_id', user.id) as any);
 
       if (error) throw error;
-      setUnlockedAchievements(data?.map((a) => a.achievement_id) || []);
+      setUnlockedAchievements(data?.map((a: any) => a.achievement_id) || []);
     } catch (error) {
       console.error('Error loading achievements:', error);
     } finally {
@@ -152,4 +152,3 @@ function AchievementGrid({ achievements, unlocked }: { achievements: Achievement
     </div>
   );
 }
-

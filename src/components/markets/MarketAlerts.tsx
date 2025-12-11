@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Bell, Trash2, AlertCircle } from 'lucide-react';
+import { Bell, Trash2 } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -19,10 +19,9 @@ import {
 interface MarketAlert {
   id: string;
   symbol: string;
-  market_type: 'indices' | 'stocks' | 'crypto' | 'commodities' | 'currencies';
-  alert_type: 'price_above' | 'price_below' | 'percent_change_up' | 'percent_change_down';
-  target_value: number | null;
-  target_percent: number | null;
+  market_type: string;
+  alert_type: string;
+  target_value: number;
   is_active: boolean;
   triggered_at: string | null;
   created_at: string;
@@ -46,11 +45,11 @@ export function MarketAlerts() {
     if (!user) return;
 
     try {
-      const { data, error } = await supabase
-        .from('market_alerts')
+      const { data, error } = await (supabase
+        .from('market_alerts' as any)
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false }) as any);
 
       if (error) throw error;
       setAlerts(data || []);
@@ -64,10 +63,10 @@ export function MarketAlerts() {
 
   const deleteAlert = async (id: string) => {
     try {
-      const { error } = await supabase
-        .from('market_alerts')
+      const { error } = await (supabase
+        .from('market_alerts' as any)
         .delete()
-        .eq('id', id);
+        .eq('id', id) as any);
 
       if (error) throw error;
 
@@ -94,7 +93,7 @@ export function MarketAlerts() {
         <DialogHeader>
           <DialogTitle>Market Alerts</DialogTitle>
           <DialogDescription>
-            Get notified when your watched instruments reach target prices or percentage changes
+            Get notified when your watched instruments reach target prices
           </DialogDescription>
         </DialogHeader>
 
@@ -144,8 +143,8 @@ export function MarketAlerts() {
                     <div className="text-sm text-muted-foreground">
                       {alert.alert_type === 'price_above' && `Alert when price > $${alert.target_value}`}
                       {alert.alert_type === 'price_below' && `Alert when price < $${alert.target_value}`}
-                      {alert.alert_type === 'percent_change_up' && `Alert when price increases by ${alert.target_percent}%`}
-                      {alert.alert_type === 'percent_change_down' && `Alert when price decreases by ${alert.target_percent}%`}
+                      {alert.alert_type === 'percent_change_up' && `Alert when price increases by ${alert.target_value}%`}
+                      {alert.alert_type === 'percent_change_down' && `Alert when price decreases by ${alert.target_value}%`}
                     </div>
                     {alert.triggered_at && (
                       <div className="text-xs text-muted-foreground mt-1">
@@ -174,27 +173,25 @@ export function MarketAlerts() {
 function CreateAlertForm({ onSuccess }: { onSuccess: () => void }) {
   const { user } = useUser();
   const [symbol, setSymbol] = useState('');
-  const [marketType, setMarketType] = useState<'indices' | 'stocks' | 'crypto' | 'commodities' | 'currencies'>('stocks');
-  const [alertType, setAlertType] = useState<'price_above' | 'price_below' | 'percent_change_up' | 'percent_change_down'>('price_above');
+  const [marketType, setMarketType] = useState<string>('stocks');
+  const [alertType, setAlertType] = useState<string>('price_above');
   const [targetValue, setTargetValue] = useState('');
-  const [targetPercent, setTargetPercent] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user || !symbol.trim()) return;
+    if (!user || !symbol.trim() || !targetValue) return;
 
     setSubmitting(true);
     try {
-      const { error } = await supabase.from('market_alerts').insert({
+      const { error } = await (supabase.from('market_alerts' as any).insert({
         user_id: user.id,
         symbol: symbol.toUpperCase().trim(),
         market_type: marketType,
         alert_type: alertType,
-        target_value: alertType.includes('price') ? parseFloat(targetValue) : null,
-        target_percent: alertType.includes('percent') ? parseFloat(targetPercent) : null,
-      });
+        target_value: parseFloat(targetValue),
+      }) as any);
 
       if (error) throw error;
 
@@ -202,7 +199,6 @@ function CreateAlertForm({ onSuccess }: { onSuccess: () => void }) {
       setOpen(false);
       setSymbol('');
       setTargetValue('');
-      setTargetPercent('');
       onSuccess();
     } catch (error: any) {
       toast.error(error.message || 'Failed to create alert');
@@ -240,7 +236,7 @@ function CreateAlertForm({ onSuccess }: { onSuccess: () => void }) {
 
           <div className="space-y-2">
             <Label htmlFor="market-type">Market Type</Label>
-            <Select value={marketType} onValueChange={(value: typeof marketType) => setMarketType(value)}>
+            <Select value={marketType} onValueChange={setMarketType}>
               <SelectTrigger id="market-type">
                 <SelectValue />
               </SelectTrigger>
@@ -256,7 +252,7 @@ function CreateAlertForm({ onSuccess }: { onSuccess: () => void }) {
 
           <div className="space-y-2">
             <Label htmlFor="alert-type">Alert Type</Label>
-            <Select value={alertType} onValueChange={(value: typeof alertType) => setAlertType(value)}>
+            <Select value={alertType} onValueChange={setAlertType}>
               <SelectTrigger id="alert-type">
                 <SelectValue />
               </SelectTrigger>
@@ -269,33 +265,20 @@ function CreateAlertForm({ onSuccess }: { onSuccess: () => void }) {
             </Select>
           </div>
 
-          {alertType.includes('price') ? (
-            <div className="space-y-2">
-              <Label htmlFor="target-value">Target Price ($)</Label>
-              <Input
-                id="target-value"
-                type="number"
-                step="0.01"
-                value={targetValue}
-                onChange={(e) => setTargetValue(e.target.value)}
-                placeholder="150.00"
-                required
-              />
-            </div>
-          ) : (
-            <div className="space-y-2">
-              <Label htmlFor="target-percent">Target Percentage (%)</Label>
-              <Input
-                id="target-percent"
-                type="number"
-                step="0.1"
-                value={targetPercent}
-                onChange={(e) => setTargetPercent(e.target.value)}
-                placeholder="5.0"
-                required
-              />
-            </div>
-          )}
+          <div className="space-y-2">
+            <Label htmlFor="target-value">
+              {alertType.includes('price') ? 'Target Price ($)' : 'Target Percentage (%)'}
+            </Label>
+            <Input
+              id="target-value"
+              type="number"
+              step="0.01"
+              value={targetValue}
+              onChange={(e) => setTargetValue(e.target.value)}
+              placeholder={alertType.includes('price') ? '150.00' : '5.0'}
+              required
+            />
+          </div>
 
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={() => setOpen(false)}>
@@ -310,4 +293,3 @@ function CreateAlertForm({ onSuccess }: { onSuccess: () => void }) {
     </Dialog>
   );
 }
-

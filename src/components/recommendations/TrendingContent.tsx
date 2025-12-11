@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface TrendingItem {
   id: string;
-  type: 'article' | 'forum' | 'video' | 'analytics';
+  type: 'article' | 'forum' | 'video' | 'analytics' | 'news';
   title: string;
   views?: number;
   likes?: number;
@@ -51,9 +51,9 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
       // Get trending forum discussions
       const { data: forumData } = await supabase
         .from('forum_discussions')
-        .select('id, title, created_at, views, like_count, user_profiles(display_name, username)')
+        .select('id, title, created_at, view_count, reply_count, author_name')
         .gte('created_at', startDate.toISOString())
-        .order('views', { ascending: false })
+        .order('view_count', { ascending: false })
         .limit(limit);
 
       if (forumData) {
@@ -62,18 +62,18 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
             id: item.id,
             type: 'forum',
             title: item.title,
-            views: item.views || 0,
-            likes: item.like_count || 0,
+            views: item.view_count || 0,
+            comments: item.reply_count || 0,
             created_at: item.created_at,
-            author: item.user_profiles?.display_name || item.user_profiles?.username || 'Anonymous',
+            author: item.author_name || 'Anonymous',
           });
         });
       }
 
-      // Get trending news articles (would need views column in real implementation)
+      // Get trending news articles
       const { data: newsData } = await supabase
         .from('news_articles')
-        .select('id, title, published_at')
+        .select('id, title, published_at, author')
         .gte('published_at', startDate.toISOString())
         .order('published_at', { ascending: false })
         .limit(limit);
@@ -82,14 +82,15 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
         newsData.forEach((item: any) => {
           trendingItems.push({
             id: item.id,
-            type: 'article',
+            type: 'news',
             title: item.title,
             created_at: item.published_at,
+            author: item.author || 'Unknown',
           });
         });
       }
 
-      // Sort by engagement score (views + likes + comments)
+      // Sort by engagement score (views + comments)
       trendingItems.sort((a, b) => {
         const scoreA = (a.views || 0) + (a.likes || 0) * 2 + (a.comments || 0) * 1.5;
         const scoreB = (b.views || 0) + (b.likes || 0) * 2 + (b.comments || 0) * 1.5;
@@ -222,4 +223,3 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
     </div>
   );
 }
-

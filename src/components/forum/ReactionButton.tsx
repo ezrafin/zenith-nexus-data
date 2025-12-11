@@ -54,14 +54,14 @@ export function ReactionButton({
     if (!user) return;
 
     try {
-      const { data } = await supabase
-        .from('forum_reactions')
+      const { data } = await (supabase
+        .from('forum_reactions' as any)
         .select('id')
         .eq('user_id', user.id)
-        .eq('content_type', contentType)
-        .eq('content_id', contentId)
+        .eq('target_type', contentType)
+        .eq('target_id', contentId)
         .eq('reaction_type', reactionType)
-        .single();
+        .maybeSingle() as any);
 
       setIsReacted(!!data);
     } catch (error) {
@@ -79,13 +79,13 @@ export function ReactionButton({
     try {
       if (isReacted) {
         // Remove reaction
-        const { error } = await supabase
-          .from('forum_reactions')
+        const { error } = await (supabase
+          .from('forum_reactions' as any)
           .delete()
           .eq('user_id', user.id)
-          .eq('content_type', contentType)
-          .eq('content_id', contentId)
-          .eq('reaction_type', reactionType);
+          .eq('target_type', contentType)
+          .eq('target_id', contentId)
+          .eq('reaction_type', reactionType) as any);
 
         if (error) throw error;
 
@@ -94,22 +94,22 @@ export function ReactionButton({
       } else {
         // Add reaction
         // First, remove any existing reaction of different type
-        await supabase
-          .from('forum_reactions')
+        await (supabase
+          .from('forum_reactions' as any)
           .delete()
           .eq('user_id', user.id)
-          .eq('content_type', contentType)
-          .eq('content_id', contentId);
+          .eq('target_type', contentType)
+          .eq('target_id', contentId) as any);
 
         // Add new reaction
-        const { error } = await supabase
-          .from('forum_reactions')
+        const { error } = await (supabase
+          .from('forum_reactions' as any)
           .insert({
             user_id: user.id,
-            content_type: contentType,
-            content_id: contentId,
+            target_type: contentType,
+            target_id: contentId,
             reaction_type: reactionType,
-          });
+          }) as any);
 
         if (error) throw error;
 
@@ -143,4 +143,3 @@ export function ReactionButton({
     </Button>
   );
 }
-

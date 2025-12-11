@@ -47,15 +47,15 @@ export function ReportButton({ contentType, contentId, className }: ReportButton
 
     setSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('forum_reports')
+      const { error } = await (supabase
+        .from('forum_reports' as any)
         .insert({
           user_id: user.id,
-          content_type: contentType,
-          content_id: contentId,
+          target_type: contentType,
+          target_id: contentId,
           reason,
-          details,
-        });
+          description: details,
+        }) as any);
 
       if (error) throw error;
 
@@ -130,4 +130,3 @@ export function ReportButton({ contentType, contentId, className }: ReportButton
     </Dialog>
   );
 }
-

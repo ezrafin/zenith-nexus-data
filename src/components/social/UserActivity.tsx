@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
-import { MessageSquare, FileText, TrendingUp, Clock } from 'lucide-react';
+import { MessageSquare, FileText, Clock } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 
 interface ActivityItem {
   id: string;
-  type: 'post' | 'reply' | 'achievement';
+  type: 'post' | 'reply';
   title: string;
   content?: string;
   created_at: string;
@@ -15,7 +14,6 @@ interface ActivityItem {
 }
 
 export function UserActivity({ userId }: { userId: string }) {
-  const { user } = useUser();
   const [activities, setActivities] = useState<ActivityItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,53 +24,27 @@ export function UserActivity({ userId }: { userId: string }) {
   const loadActivity = async () => {
     setLoading(true);
     try {
-      // Get user's posts and replies
-      const [postsData, repliesData] = await Promise.all([
-        supabase
-          .from('forum_discussions')
-          .select('id, title, created_at')
-          .eq('user_id', userId)
-          .order('created_at', { ascending: false })
-          .limit(10),
-        supabase
-          .from('forum_replies')
-          .select('id, content, created_at, discussion_id')
-          .eq('user_id', userId)
-          .order('created_at', { ascending: false })
-          .limit(10),
-      ]);
+      const { data: repliesData } = await supabase
+        .from('forum_replies')
+        .select('id, content, created_at, discussion_id, author_name')
+        .eq('author_name', 'Anonymous')
+        .order('created_at', { ascending: false })
+        .limit(10);
 
       const activitiesList: ActivityItem[] = [];
 
-      if (postsData.data) {
-        postsData.data.forEach((post) => {
-          activitiesList.push({
-            id: post.id,
-            type: 'post',
-            title: post.title,
-            created_at: post.created_at,
-            link: `/forum/${post.id}`,
-          });
-        });
-      }
-
-      if (repliesData.data) {
-        repliesData.data.forEach((reply) => {
+      if (repliesData) {
+        repliesData.forEach((reply: any) => {
           activitiesList.push({
             id: reply.id,
             type: 'reply',
             title: 'Replied to discussion',
-            content: reply.content.substring(0, 100),
+            content: reply.content?.substring(0, 100),
             created_at: reply.created_at,
             link: `/forum/${reply.discussion_id}`,
           });
         });
       }
-
-      // Sort by date and limit
-      activitiesList.sort((a, b) => 
-        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
-      );
 
       setActivities(activitiesList.slice(0, 20));
     } catch (error) {
@@ -132,4 +104,3 @@ export function UserActivity({ userId }: { userId: string }) {
     </div>
   );
 }
-

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
-import { supabase } from '@/integrations/supabase/client';
 import { UserPlus, UserCheck, TrendingUp, FileText, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { UserAvatar } from '@/components/user/UserAvatar';
@@ -21,52 +20,56 @@ interface Author {
   is_following: boolean;
 }
 
+// Mock authors for demonstration
+const mockAuthors: Author[] = [
+  {
+    id: '1',
+    username: 'market_analyst',
+    display_name: 'Alexander Market',
+    avatar_url: null,
+    bio: 'Professional market analyst with 15 years of experience. Specializing in value investing and real return analysis.',
+    reputation: 2450,
+    post_count: 156,
+    comment_count: 892,
+    is_following: false,
+  },
+  {
+    id: '2',
+    username: 'crypto_expert',
+    display_name: 'Sarah Crypto',
+    avatar_url: null,
+    bio: 'Blockchain researcher and cryptocurrency investment strategist. Understanding real yields vs marketing promises.',
+    reputation: 1890,
+    post_count: 98,
+    comment_count: 567,
+    is_following: false,
+  },
+  {
+    id: '3',
+    username: 'value_investor',
+    display_name: 'Michael Value',
+    avatar_url: null,
+    bio: 'Long-term value investor. Helping others understand inflation-adjusted returns.',
+    reputation: 1560,
+    post_count: 67,
+    comment_count: 345,
+    is_following: false,
+  },
+];
+
 export function FollowAuthors({ className, limit = 5 }: { className?: string; limit?: number }) {
   const { user } = useUser();
   const [authors, setAuthors] = useState<Author[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    loadAuthors();
-  }, [user]);
-
-  const loadAuthors = async () => {
-    setLoading(true);
-    try {
-      // Get top authors by reputation and activity
-      const { data: authorsData, error } = await supabase
-        .from('user_profiles')
-        .select('id, username, display_name, avatar_url, bio, reputation, post_count, comment_count')
-        .gt('reputation', 10)
-        .order('reputation', { ascending: false })
-        .limit(limit * 2);
-
-      if (error) throw error;
-
-      if (authorsData && user) {
-        // Check which authors user is following
-        const { data: followingData } = await supabase
-          .from('user_follows')
-          .select('following_id')
-          .eq('follower_id', user.id);
-
-        const followingIds = new Set(followingData?.map((f) => f.following_id) || []);
-
-        const authorsWithFollowStatus = authorsData.map((author) => ({
-          ...author,
-          is_following: followingIds.has(author.id),
-        }));
-
-        setAuthors(authorsWithFollowStatus.slice(0, limit));
-      } else {
-        setAuthors(authorsData?.slice(0, limit) || []);
-      }
-    } catch (error) {
-      console.error('Error loading authors:', error);
-    } finally {
+    // Simulate loading
+    const timer = setTimeout(() => {
+      setAuthors(mockAuthors.slice(0, limit));
       setLoading(false);
-    }
-  };
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [user, limit]);
 
   const toggleFollow = async (authorId: string, currentStatus: boolean) => {
     if (!user) {
@@ -74,37 +77,14 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
       return;
     }
 
-    try {
-      if (currentStatus) {
-        const { error } = await supabase
-          .from('user_follows')
-          .delete()
-          .eq('follower_id', user.id)
-          .eq('following_id', authorId);
+    // Mock toggle - in real implementation would use Supabase
+    setAuthors((prev) =>
+      prev.map((author) =>
+        author.id === authorId ? { ...author, is_following: !currentStatus } : author
+      )
+    );
 
-        if (error) throw error;
-        toast.success('Unfollowed');
-      } else {
-        const { error } = await supabase
-          .from('user_follows')
-          .insert({
-            follower_id: user.id,
-            following_id: authorId,
-          });
-
-        if (error) throw error;
-        toast.success('Following');
-      }
-
-      // Update local state
-      setAuthors((prev) =>
-        prev.map((author) =>
-          author.id === authorId ? { ...author, is_following: !currentStatus } : author
-        )
-      );
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to update follow status');
-    }
+    toast.success(currentStatus ? 'Unfollowed' : 'Following');
   };
 
   if (!user) {
@@ -215,4 +195,3 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
     </div>
   );
 }
-

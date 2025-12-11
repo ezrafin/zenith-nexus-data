@@ -3,7 +3,7 @@ import { Newspaper, MessageSquare, FileText, Video, ArrowRight } from 'lucide-re
 import { cn } from '@/lib/utils';
 
 interface RelatedItem {
-  type: 'article' | 'forum' | 'video' | 'analytics';
+  type: 'article' | 'forum' | 'video' | 'analytics' | 'news';
   id: string;
   title: string;
 }
@@ -71,4 +71,3 @@ export function RelatedContent({ items, className }: RelatedContentProps) {
     </div>
   );
 }
-

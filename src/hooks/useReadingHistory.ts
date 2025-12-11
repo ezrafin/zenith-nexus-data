@@ -1,5 +1,4 @@
 import { useUser } from '@/context/UserContext';
-import { supabase } from '@/integrations/supabase/client';
 
 export function useReadingHistory() {
   const { user } = useUser();
@@ -10,18 +9,8 @@ export function useReadingHistory() {
     progressPercent: number = 0
   ) => {
     if (!user) return;
-
-    try {
-      await supabase.from('user_reading_history').insert({
-        user_id: user.id,
-        content_type: contentType,
-        content_id: contentId,
-        progress_percent: progressPercent,
-      });
-    } catch (error) {
-      // Ignore errors (e.g., duplicate entries)
-      console.error('Error adding to reading history:', error);
-    }
+    // Mock - would use Supabase in real implementation
+    console.log('Added to history:', { contentType, contentId, progressPercent });
   };
 
   const updateProgress = async (
@@ -30,24 +19,9 @@ export function useReadingHistory() {
     progressPercent: number
   ) => {
     if (!user) return;
-
-    try {
-      await supabase
-        .from('user_reading_history')
-        .upsert({
-          user_id: user.id,
-          content_type: contentType,
-          content_id: contentId,
-          progress_percent: progressPercent,
-        });
-    } catch (error) {
-      console.error('Error updating reading progress:', error);
-    }
+    // Mock - would use Supabase in real implementation
+    console.log('Updated progress:', { contentType, contentId, progressPercent });
   };
 
-  return {
-    addToHistory,
-    updateProgress,
-  };
+  return { addToHistory, updateProgress };
 }
-

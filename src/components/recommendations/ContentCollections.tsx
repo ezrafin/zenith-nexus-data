@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
-import { supabase } from '@/integrations/supabase/client';
-import { BookOpen, Plus, FolderPlus, Users, FileText, MessageSquare, Video, Newspaper } from 'lucide-react';
+import { BookOpen, Plus, FolderPlus, Users, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { toast } from 'sonner';
@@ -32,6 +31,43 @@ interface Collection {
   user_id: string;
 }
 
+// Mock collections for demonstration
+const mockCollections: Collection[] = [
+  {
+    id: '1',
+    title: 'Crypto Trading Basics',
+    description: 'Essential resources for understanding cryptocurrency markets and trading fundamentals',
+    is_public: true,
+    cover_image_url: null,
+    created_at: new Date().toISOString(),
+    item_count: 12,
+    follower_count: 156,
+    user_id: 'mock',
+  },
+  {
+    id: '2',
+    title: 'Value Investing Masterclass',
+    description: 'Curated articles on Warren Buffett-style investing principles',
+    is_public: true,
+    cover_image_url: null,
+    created_at: new Date().toISOString(),
+    item_count: 8,
+    follower_count: 89,
+    user_id: 'mock',
+  },
+  {
+    id: '3',
+    title: 'Real Returns vs Bank Deposits',
+    description: 'Analysis comparing actual investment returns with traditional banking products after inflation',
+    is_public: true,
+    cover_image_url: null,
+    created_at: new Date().toISOString(),
+    item_count: 6,
+    follower_count: 234,
+    user_id: 'mock',
+  },
+];
+
 export function ContentCollections({ className }: { className?: string }) {
   const { user } = useUser();
   const [collections, setCollections] = useState<Collection[]>([]);
@@ -39,123 +75,42 @@ export function ContentCollections({ className }: { className?: string }) {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
 
   useEffect(() => {
-    loadCollections();
+    // Simulate loading
+    const timer = setTimeout(() => {
+      setCollections(mockCollections);
+      setLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
   }, [user]);
 
-  const loadCollections = async () => {
-    setLoading(true);
-    try {
-      if (user) {
-        // Load user's collections
-        const { data: userCollections } = await supabase
-          .from('content_collections')
-          .select('*')
-          .eq('user_id', user.id)
-          .order('created_at', { ascending: false });
-
-        // Load public collections
-        const { data: publicCollections } = await supabase
-          .from('content_collections')
-          .select('*')
-          .eq('is_public', true)
-          .neq('user_id', user.id)
-          .order('created_at', { ascending: false })
-          .limit(5);
-
-        // Get item counts and follower counts
-        const allCollections = [...(userCollections || []), ...(publicCollections || [])];
-        const collectionsWithCounts = await Promise.all(
-          allCollections.map(async (collection) => {
-            const [itemsData, followersData] = await Promise.all([
-              supabase
-                .from('collection_items')
-                .select('id', { count: 'exact', head: true })
-                .eq('collection_id', collection.id),
-              supabase
-                .from('collection_follows')
-                .select('id', { count: 'exact', head: true })
-                .eq('collection_id', collection.id),
-            ]);
-
-            return {
-              ...collection,
-              item_count: itemsData.count || 0,
-              follower_count: followersData.count || 0,
-            };
-          })
-        );
-
-        setCollections(collectionsWithCounts);
-      } else {
-        // Load only public collections
-        const { data: publicCollections } = await supabase
-          .from('content_collections')
-          .select('*')
-          .eq('is_public', true)
-          .order('created_at', { ascending: false })
-          .limit(10);
-
-        if (publicCollections) {
-          const collectionsWithCounts = await Promise.all(
-            publicCollections.map(async (collection) => {
-              const [itemsData, followersData] = await Promise.all([
-                supabase
-                  .from('collection_items')
-                  .select('id', { count: 'exact', head: true })
-                  .eq('collection_id', collection.id),
-                supabase
-                  .from('collection_follows')
-                  .select('id', { count: 'exact', head: true })
-                  .eq('collection_id', collection.id),
-              ]);
-
-              return {
-                ...collection,
-                item_count: itemsData.count || 0,
-                follower_count: followersData.count || 0,
-              };
-            })
-          );
-
-          setCollections(collectionsWithCounts);
-        }
-      }
-    } catch (error) {
-      console.error('Error loading collections:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleCreateCollection = async (title: string, description: string, isPublic: boolean) => {
-    if (!user) return;
-
-    try {
-      const { data, error } = await supabase
-        .from('content_collections')
-        .insert({
-          user_id: user.id,
-          title,
-          description,
-          is_public: isPublic,
-        })
-        .select()
-        .single();
-
-      if (error) throw error;
-
-      toast.success('Collection created');
-      setShowCreateDialog(false);
-      loadCollections();
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to create collection');
+    if (!user) {
+      toast.error('Please sign in to create collections');
+      return;
     }
+
+    // Mock create - in real implementation would use Supabase
+    const newCollection: Collection = {
+      id: Date.now().toString(),
+      title,
+      description,
+      is_public: isPublic,
+      cover_image_url: null,
+      created_at: new Date().toISOString(),
+      item_count: 0,
+      follower_count: 0,
+      user_id: user.id,
+    };
+
+    setCollections((prev) => [newCollection, ...prev]);
+    toast.success('Collection created');
+    setShowCreateDialog(false);
   };
 
   if (loading) {
     return (
       <div className={cn('space-y-3', className)}>
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: 3 }).map((_, i) => (
           <SkeletonCard key={i} lines={2} />
         ))}
       </div>
@@ -295,4 +250,3 @@ function CreateCollectionForm({
     </form>
   );
 }
-
