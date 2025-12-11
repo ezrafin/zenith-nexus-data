@@ -86,9 +86,6 @@ export default function NewsPage() {
                 </Button>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground">
-              Powered by NewsAPI.org • Showing {paginatedNews.length} of {news.length} articles
-            </p>
           </div>
 
           {/* Filters */}

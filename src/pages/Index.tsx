@@ -67,17 +67,18 @@ export default function Index() {
       {/* Hero Section */}
       <section className="min-h-[80vh] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 hero-gradient" />
-        <div className="container-wide py-20 md:py-32 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url('/hero-background.jpg')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        <div className="container-wide py-20 md:py-32 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8">
-              <span className="live-dot" />
-              Data updates in real-time
-            </div>
             <h1 className="heading-hero mb-6">
               Your Guardian in
               <span className="block text-muted-foreground">Global Markets</span>
