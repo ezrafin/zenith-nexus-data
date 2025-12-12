@@ -1,3 +1,4 @@
+import { useState, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { MarketTable } from '@/components/MarketTable';
@@ -6,7 +7,8 @@ import { SkeletonTable } from '@/components/ui/skeleton-card';
 import { LastUpdated } from '@/components/LastUpdated';
 import { useMarketData } from '@/hooks/useMarketData';
 import { cn } from '@/lib/utils';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
 type MarketType = 'indices' | 'stocks' | 'commodities' | 'crypto' | 'currencies';
 
@@ -49,14 +51,71 @@ const marketTabs: { type: MarketType; label: string }[] = [
 export default function MarketsPage() {
   const { type } = useParams<{ type: MarketType }>();
   const marketType = (type as MarketType) || 'indices';
+  const [searchQuery, setSearchQuery] = useState('');
   
+  // Load current market type data
   const { data, loading, error, lastUpdated, refresh } = useMarketData({
     type: marketType,
     refreshInterval: marketType === 'crypto' ? 120000 : 60000,
   });
 
+  // Load all market types for search (only when search is active)
+  const shouldLoadAll = searchQuery.trim().length > 0;
+  const { data: allIndices } = useMarketData({ type: 'indices', refreshInterval: shouldLoadAll ? 0 : 0 });
+  const { data: allStocks } = useMarketData({ type: 'stocks', refreshInterval: shouldLoadAll ? 0 : 0 });
+  const { data: allCrypto } = useMarketData({ type: 'crypto', refreshInterval: shouldLoadAll ? 0 : 0 });
+  const { data: allCommodities } = useMarketData({ type: 'commodities', refreshInterval: shouldLoadAll ? 0 : 0 });
+  const { data: allCurrencies } = useMarketData({ type: 'currencies', refreshInterval: shouldLoadAll ? 0 : 0 });
+
   const info = marketInfo[marketType] || marketInfo.indices;
   const isPositive = data.length > 0 && data[0].changePercent >= 0;
+
+  // Combine all assets for search
+  const allAssets = useMemo(() => {
+    if (!shouldLoadAll) return [];
+    return [
+      ...allIndices.map(item => ({ ...item, marketType: 'indices' as const })),
+      ...allStocks.map(item => ({ ...item, marketType: 'stocks' as const })),
+      ...allCrypto.map(item => ({ ...item, marketType: 'crypto' as const })),
+      ...allCommodities.map(item => ({ ...item, marketType: 'commodities' as const })),
+      ...allCurrencies.map(item => ({ ...item, marketType: 'currencies' as const })),
+    ];
+  }, [shouldLoadAll, allIndices, allStocks, allCrypto, allCommodities, allCurrencies]);
+
+  // Calculate market cap (price * volume if available, otherwise use price)
+  const getMarketCap = (item: typeof data[0]) => {
+    if (item.volume) {
+      const volumeNum = parseFloat(item.volume.replace(/[^0-9.]/g, ''));
+      return item.price * volumeNum;
+    }
+    return item.price;
+  };
+
+  // Get top 50 by market cap (default view)
+  const top50Data = useMemo(() => {
+    const sorted = [...data].sort((a, b) => getMarketCap(b) - getMarketCap(a));
+    return sorted.slice(0, 50);
+  }, [data]);
+
+  // Filter data based on search
+  const filteredData = useMemo(() => {
+    if (!searchQuery.trim() || allAssets.length === 0) {
+      return [];
+    }
+
+    const query = searchQuery.toLowerCase().trim();
+    return allAssets
+      .filter(item => 
+        item.symbol.toLowerCase().startsWith(query) || 
+        item.name.toLowerCase().startsWith(query)
+      )
+      .slice(0, 100); // Limit search results to 100
+  }, [searchQuery, allAssets]);
+
+  // Display data: search results if searching, otherwise top 50
+  const displayData = searchQuery.trim() && filteredData.length > 0 
+    ? filteredData 
+    : top50Data;
 
   return (
     <Layout>
@@ -71,7 +130,7 @@ export default function MarketsPage() {
           </div>
 
           {/* Market Tabs */}
-          <div className="flex flex-wrap gap-2 mb-10 border-b border-border pb-4">
+          <div className="flex flex-wrap gap-2 mb-6 border-b border-border pb-4">
             {marketTabs.map((tab) => (
               <Link
                 key={tab.type}
@@ -86,6 +145,41 @@ export default function MarketsPage() {
                 {tab.label}
               </Link>
             ))}
+          </div>
+
+          {/* Search Filter */}
+          <div className="mb-6">
+            <div className="relative max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search by symbol or name (e.g., AAPL, Bitcoin)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-10"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+            {searchQuery && (
+              <p className="mt-2 text-sm text-muted-foreground">
+                {filteredData.length > 0 
+                  ? `Found ${filteredData.length} ${filteredData.length === 1 ? 'asset' : 'assets'} matching "${searchQuery}"`
+                  : `No assets found matching "${searchQuery}"`
+                }
+              </p>
+            )}
+            {!searchQuery && (
+              <p className="mt-2 text-sm text-muted-foreground">
+                Showing top 50 assets by market capitalization
+              </p>
+            )}
           </div>
 
           {/* Error State */}
@@ -112,7 +206,11 @@ export default function MarketsPage() {
                 <SkeletonTable rows={10} />
               </div>
             ) : (
-              <MarketTable data={data} showVolume={info.showVolume} marketType={marketType} />
+              <MarketTable 
+                data={displayData.map(({ marketType: _, ...item }) => item)} 
+                showVolume={info.showVolume} 
+                marketType={marketType} 
+              />
             )}
           </div>
         </div>
