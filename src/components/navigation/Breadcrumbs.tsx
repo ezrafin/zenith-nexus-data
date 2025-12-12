@@ -56,31 +56,33 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
   return (
     <>
       {structuredData && <StructuredData data={structuredData} />}
-      <Breadcrumb className={className}>
-        <BreadcrumbList>
-          {breadcrumbItems.map((item, index) => {
-            const isLast = index === breadcrumbItems.length - 1;
-            const path = item.url.replace('https://investopatronus.com', '');
+      <div className="mb-6 md:mb-8">
+        <Breadcrumb className={className}>
+          <BreadcrumbList>
+            {breadcrumbItems.map((item, index) => {
+              const isLast = index === breadcrumbItems.length - 1;
+              const path = item.url.replace('https://investopatronus.com', '');
 
-            return (
-              <div key={item.url} className="flex items-center">
-                {isLast ? (
-                  <BreadcrumbPage>{item.name}</BreadcrumbPage>
-                ) : (
-                  <>
-                    <BreadcrumbItem>
-                      <BreadcrumbLink asChild>
-                        <Link to={path}>{item.name}</Link>
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator />
-                  </>
-                )}
-              </div>
-            );
-          })}
-        </BreadcrumbList>
-      </Breadcrumb>
+              return (
+                <div key={item.url} className="flex items-center">
+                  {isLast ? (
+                    <BreadcrumbPage>{item.name}</BreadcrumbPage>
+                  ) : (
+                    <>
+                      <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                          <Link to={path}>{item.name}</Link>
+                        </BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbSeparator />
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
     </>
   );
 }
