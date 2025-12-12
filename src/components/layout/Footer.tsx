@@ -85,14 +85,14 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-6">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4">
+            <Link to="/" className="flex justify-center mb-4">
               <img 
                 src="/investo.png" 
                 alt="INVESTOPATRONUS" 
-                className="h-8 md:h-10"
+                className="h-12 md:h-16 lg:h-20"
               />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6 text-center">
               Your Guardian in Global Markets. Professional analytics and real-time financial data.
             </p>
           </div>
