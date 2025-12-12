@@ -19,7 +19,6 @@ const typeLabels: Record<OrganizationType, string> = {
   bank: 'Bank',
   exchange: 'Exchange',
   asset_manager: 'Asset Manager',
-  fintech: 'Fintech',
   pension_fund: 'Pension Fund',
   wealth_manager: 'Wealth Manager',
 };
@@ -30,7 +29,6 @@ const typeColors: Record<OrganizationType, string> = {
   bank: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
   exchange: 'bg-orange-500/10 text-orange-500 border-orange-500/20',
   asset_manager: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20',
-  fintech: 'bg-pink-500/10 text-pink-500 border-pink-500/20',
   pension_fund: 'bg-amber-500/10 text-amber-500 border-amber-500/20',
   wealth_manager: 'bg-indigo-500/10 text-indigo-500 border-indigo-500/20',
 };
