@@ -1,11 +1,11 @@
 import { useEffect, useState, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchForumCategories, fetchForumTopics, ForumCategory, ForumTopic } from '@/lib/api';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ForumFilters, SortOption, DateFilter } from '@/components/forum/ForumFilters';
 import { ForumSorting } from '@/components/forum/ForumSorting';
-import { MessageSquare, Users, Clock, Eye, MessageCircle, TrendingUp, Briefcase, ArrowUpRight, Plus, HelpCircle, Newspaper, Coins, AlertCircle, RefreshCw } from 'lucide-react';
+import { MessageSquare, Users, Clock, Eye, MessageCircle, TrendingUp, Briefcase, ArrowUpRight, Plus, HelpCircle, Newspaper, Coins, AlertCircle, RefreshCw, MoreHorizontal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useUser } from '@/context/UserContext';
@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 
 export default function ForumPage() {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const { user } = useUser();
   const [categories, setCategories] = useState<ForumCategory[]>([]);
   const [topics, setTopics] = useState<ForumTopic[]>([]);
@@ -46,6 +47,14 @@ export default function ForumPage() {
     }
   };
 
+  // Sync categoryFilter with URL params when they change
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category') || undefined;
+    if (categoryFromUrl !== categoryFilter) {
+      setCategoryFilter(categoryFromUrl);
+    }
+  }, [searchParams]);
+
   useEffect(() => {
     loadData();
   }, [categoryFilter]);
@@ -58,6 +67,7 @@ export default function ForumPage() {
     etfs: Briefcase,
     beginners: HelpCircle,
     news: Newspaper,
+    other: MoreHorizontal,
   };
 
   // Filter and sort topics
@@ -125,11 +135,24 @@ export default function ForumPage() {
     return filtered;
   }, [topics, sortBy, dateFilter, searchQuery]);
 
+  // Update URL when category filter changes
+  const handleCategoryChange = (category: string | undefined) => {
+    setCategoryFilter(category);
+    const params = new URLSearchParams(searchParams);
+    if (category) {
+      params.set('category', category);
+    } else {
+      params.delete('category');
+    }
+    navigate(`/forum?${params.toString()}`, { replace: true });
+  };
+
   const handleClearFilters = () => {
     setCategoryFilter(undefined);
     setDateFilter('all');
     setSearchQuery('');
     setSortBy('newest');
+    navigate('/forum', { replace: true });
   };
 
   return (
@@ -218,7 +241,7 @@ export default function ForumPage() {
               sortBy={sortBy}
               onSortChange={setSortBy}
               categoryFilter={categoryFilter}
-              onCategoryChange={setCategoryFilter}
+              onCategoryChange={handleCategoryChange}
               dateFilter={dateFilter}
               onDateFilterChange={setDateFilter}
               searchQuery={searchQuery}

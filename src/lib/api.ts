@@ -383,6 +383,7 @@ const mockForumCategories: ForumCategory[] = [
   { id: 'etfs', name: 'ETFs & Funds', description: 'Exchange-traded funds and mutual funds discussion', topicCount: 5, postCount: 80 },
   { id: 'beginners', name: 'Beginner Questions', description: 'New to investing? Ask your questions here', topicCount: 20, postCount: 250 },
   { id: 'news', name: 'Market News', description: 'Discuss breaking market news and events', topicCount: 10, postCount: 130 },
+  { id: 'other', name: 'Other', description: 'Topics that don\'t fit into other categories', topicCount: 0, postCount: 0 },
 ];
 
 const mockForumTopics: ForumTopic[] = [
