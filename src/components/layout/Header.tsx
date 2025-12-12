@@ -105,6 +105,11 @@ export function Header() {
               alt="INVESTOPATRONUS" 
               className="h-8 md:h-10 transition-transform duration-300 group-hover:scale-105"
             />
+            <img 
+              src="/investo-text.png" 
+              alt="INVESTOPATRONUS" 
+              className="h-5 md:h-6 transition-opacity duration-300 group-hover:opacity-80"
+            />
           </Link>
 
                  {/* Desktop Navigation */}
