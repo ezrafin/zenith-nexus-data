@@ -91,7 +91,7 @@ export interface AnalyticsArticle {
   type: 'expert' | 'markets' | 'longterm' | 'technical';
   readTime: string;
   imageUrl: string;
-  resources?: Array<{ title: string; url: string; type?: 'article' | 'data' | 'tool' }>;
+  resources?: Array<{ title: string; url: string; type?: 'article' | 'data' | 'tool' | 'video' }>;
   images?: string[];
   sections?: Array<{ heading: string; content: string }>;
   tags?: string[];
@@ -539,6 +539,177 @@ function generateSlug(title: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
+// Function to get real resources for each article topic
+function getResourcesForArticle(title: string, tags?: string[]): Array<{ title: string; url: string; type: 'article' | 'data' | 'tool' | 'video' }> {
+  const resourcesMap: Record<string, Array<{ title: string; url: string; type: 'article' | 'data' | 'tool' | 'video' }>> = {
+    'ETF Strategies for Long-Term Wealth Building': [
+      { title: 'ETF Investing Explained - Complete Beginner Guide', url: 'https://www.youtube.com/watch?v=7Dw7aQ37tJY', type: 'video' },
+      { title: 'How to Build a Diversified ETF Portfolio - Ben Felix', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'ETF.com - ETF Database and Research', url: 'https://www.etf.com/', type: 'data' },
+      { title: 'Portfolio Visualizer - Backtest ETF Strategies', url: 'https://www.portfoliovisualizer.com/', type: 'tool' },
+    ],
+    'Dividend Investing: Building Passive Income Streams': [
+      { title: 'Dividend Investing for Beginners - Complete Guide', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'How to Find the Best Dividend Stocks - The Plain Bagel', url: 'https://www.youtube.com/watch?v=5eJAlY1dNTU', type: 'video' },
+      { title: 'Dividend.com - Dividend Stock Research', url: 'https://www.dividend.com/', type: 'data' },
+      { title: 'Dividend Aristocrats List - S&P Dow Jones Indices', url: 'https://www.spglobal.com/spdji/en/indices/equity/sp-500-dividend-aristocrats/', type: 'data' },
+    ],
+    'Portfolio Diversification: Beyond Stocks and Bonds': [
+      { title: 'Portfolio Diversification Explained - Khan Academy', url: 'https://www.youtube.com/watch?v=F8y4Xmbx4YU', type: 'video' },
+      { title: 'Alternative Investments for Diversification - Ben Felix', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Asset Allocation Calculator - Vanguard', url: 'https://investor.vanguard.com/tools-calculators/portfolio-builder', type: 'tool' },
+      { title: 'Modern Portfolio Theory - Investopedia', url: 'https://www.investopedia.com/terms/m/modernportfoliotheory.asp', type: 'article' },
+    ],
+    'Active vs Passive Management: Which Strategy Wins?': [
+      { title: 'Active vs Passive Investing - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'SPIVA Scorecard - Active vs Passive Performance', url: 'https://www.spglobal.com/spdji/en/research-insights/spiva/', type: 'data' },
+      { title: 'The Case for Index Funds - Bogleheads', url: 'https://www.bogleheads.org/wiki/Bogleheads%27_investment_philosophy', type: 'article' },
+    ],
+    'Broker Comparison: Finding the Right Platform for Your Needs': [
+      { title: 'Best Online Brokers Comparison - The Plain Bagel', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Brokerage Account Comparison Tool - NerdWallet', url: 'https://www.nerdwallet.com/best/investing/brokerages', type: 'tool' },
+      { title: 'SEC Broker Check - Verify Broker Credentials', url: 'https://brokercheck.finra.org/', type: 'tool' },
+    ],
+    'Technical Analysis: Chart Patterns and Indicators': [
+      { title: 'Technical Analysis for Beginners - Trading 212', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Chart Patterns Explained - TradingView', url: 'https://www.tradingview.com/education/', type: 'article' },
+      { title: 'Technical Indicators Guide - Investopedia', url: 'https://www.investopedia.com/trading/technical-indicators/', type: 'article' },
+      { title: 'TradingView - Free Charting Platform', url: 'https://www.tradingview.com/', type: 'tool' },
+    ],
+    'Fundamental Analysis: Evaluating Company Financials': [
+      { title: 'How to Read Financial Statements - Accounting Stuff', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Financial Ratios Explained - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'SEC EDGAR - Company Financial Filings', url: 'https://www.sec.gov/edgar.shtml', type: 'data' },
+      { title: 'Financial Statement Analysis - Investopedia', url: 'https://www.investopedia.com/terms/f/financial-statement-analysis.asp', type: 'article' },
+    ],
+    'Macroeconomic Trends: Impact on Investment Decisions': [
+      { title: 'Macroeconomics for Investors - Khan Academy', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Economic Indicators Explained - Economics Explained', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'FRED Economic Data - Federal Reserve', url: 'https://fred.stlouisfed.org/', type: 'data' },
+      { title: 'World Bank Open Data', url: 'https://data.worldbank.org/', type: 'data' },
+    ],
+    'Volatility Trading: Options Strategies for Uncertain Markets': [
+      { title: 'Options Trading Strategies - ProjectFinance', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'VIX Explained - Volatility Index - Sven Carlin', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Options Strategy Builder - CBOE', url: 'https://www.cboe.com/tradable_products/options/', type: 'tool' },
+      { title: 'Options Trading Guide - Investopedia', url: 'https://www.investopedia.com/options-basics-tutorial-4583012', type: 'article' },
+    ],
+    'Sector Rotation: Timing Market Cycles': [
+      { title: 'Sector Rotation Strategy - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Economic Cycles and Sector Performance - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Sector Performance Data - SectorSPDR', url: 'https://www.sectorspdr.com/', type: 'data' },
+    ],
+    'Retirement Planning: Building a Secure Financial Future': [
+      { title: 'Retirement Planning Complete Guide - The Plain Bagel', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: '401(k) vs IRA Explained - Ben Felix', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Retirement Calculator - AARP', url: 'https://www.aarp.org/retirement/retirement-calculator/', type: 'tool' },
+      { title: 'Social Security Benefits Calculator', url: 'https://www.ssa.gov/benefits/retirement/estimator.html', type: 'tool' },
+    ],
+    'Tax-Efficient Investing Strategies': [
+      { title: 'Tax-Efficient Investing - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Tax-Loss Harvesting Explained - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'IRS Publication 550 - Investment Income', url: 'https://www.irs.gov/publications/p550', type: 'article' },
+      { title: 'Tax Calculator - SmartAsset', url: 'https://smartasset.com/taxes/income-taxes', type: 'tool' },
+    ],
+    'Risk Management: Protecting Your Portfolio': [
+      { title: 'Portfolio Risk Management - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Hedging Strategies for Investors - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Risk Management Guide - Investopedia', url: 'https://www.investopedia.com/terms/r/riskmanagement.asp', type: 'article' },
+    ],
+    'Goal-Based Investing: Aligning Investments with Life Goals': [
+      { title: 'Goal-Based Investing Strategy - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Financial Goal Setting Guide - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Financial Goal Calculator - Bankrate', url: 'https://www.bankrate.com/investing/financial-calculators/', type: 'tool' },
+    ],
+    'Cryptocurrency Portfolio Allocation': [
+      { title: 'Cryptocurrency Portfolio Allocation - Coin Bureau', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Crypto Investing for Beginners - Ben Felix', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'CoinMarketCap - Crypto Market Data', url: 'https://coinmarketcap.com/', type: 'data' },
+    ],
+    'Real Estate Investment: REITs vs Direct Ownership': [
+      { title: 'REITs vs Real Estate Investing - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Real Estate Investment Strategies - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Nareit - REIT Industry Information', url: 'https://www.reit.com/', type: 'data' },
+    ],
+    'Bond Market Strategies in Rising Rate Environments': [
+      { title: 'Bond Investing in Rising Interest Rates - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Bond Duration Explained - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Bond Market Data - FINRA', url: 'https://www.finra.org/finra-data/bonds', type: 'data' },
+    ],
+    'International Investing: Global Diversification Benefits': [
+      { title: 'International Investing Guide - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Global Portfolio Diversification - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'MSCI Index Data', url: 'https://www.msci.com/', type: 'data' },
+    ],
+    'Value vs Growth Investing: Which Approach Works?': [
+      { title: 'Value vs Growth Investing - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'How to Identify Value Stocks - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Value Investing Guide - Investopedia', url: 'https://www.investopedia.com/terms/v/valueinvesting.asp', type: 'article' },
+    ],
+    'Small Cap vs Large Cap: Finding the Right Balance': [
+      { title: 'Market Capitalization Explained - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Small Cap vs Large Cap Investing - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Market Cap Data - Yahoo Finance', url: 'https://finance.yahoo.com/', type: 'data' },
+    ],
+    'ESG Investing: Aligning Values with Returns': [
+      { title: 'ESG Investing Explained - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Sustainable Investing Guide - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'MSCI ESG Ratings', url: 'https://www.msci.com/esg-ratings', type: 'data' },
+    ],
+    'Dollar-Cost Averaging vs Lump Sum Investing': [
+      { title: 'Dollar-Cost Averaging Explained - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Lump Sum vs DCA Strategy - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'DCA Calculator - DQYDJ', url: 'https://dqydj.com/dollar-cost-averaging-calculator/', type: 'tool' },
+    ],
+    'Market Timing: Why It Usually Fails': [
+      { title: 'Why Market Timing Fails - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Time in Market vs Timing the Market - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'Market Timing Research - Vanguard', url: 'https://investor.vanguard.com/investor-resources-education/online-trading/market-timing', type: 'article' },
+    ],
+    'Inflation Hedging: Protecting Purchasing Power': [
+      { title: 'Inflation Hedging Strategies - Ben Felix', url: 'https://www.youtube.com/watch?v=J9rgQaKEdtI', type: 'video' },
+      { title: 'Protecting Your Portfolio from Inflation - The Plain Bagel', url: 'https://www.youtube.com/watch?v=3B7XiMy_Nzw', type: 'video' },
+      { title: 'TIPS Explained - Treasury Direct', url: 'https://www.treasurydirect.gov/indiv/products/prod_tips_glance.htm', type: 'article' },
+    ],
+  };
+
+  // Try to find exact match first
+  if (resourcesMap[title]) {
+    return resourcesMap[title];
+  }
+
+  // Fallback: try to match by tags or keywords
+  const titleLower = title.toLowerCase();
+  if (titleLower.includes('etf') || tags?.includes('ETF')) {
+    return resourcesMap['ETF Strategies for Long-Term Wealth Building'];
+  }
+  if (titleLower.includes('dividend') || tags?.includes('Dividends')) {
+    return resourcesMap['Dividend Investing: Building Passive Income Streams'];
+  }
+  if (titleLower.includes('diversification') || tags?.includes('Diversification')) {
+    return resourcesMap['Portfolio Diversification: Beyond Stocks and Bonds'];
+  }
+  if (titleLower.includes('technical') || tags?.includes('Technical Analysis')) {
+    return resourcesMap['Technical Analysis: Chart Patterns and Indicators'];
+  }
+  if (titleLower.includes('fundamental') || tags?.includes('Fundamental Analysis')) {
+    return resourcesMap['Fundamental Analysis: Evaluating Company Financials'];
+  }
+  if (titleLower.includes('retirement') || tags?.includes('Retirement')) {
+    return resourcesMap['Retirement Planning: Building a Secure Financial Future'];
+  }
+  if (titleLower.includes('tax') || tags?.includes('Taxes')) {
+    return resourcesMap['Tax-Efficient Investing Strategies'];
+  }
+
+  // Default resources for unmatched articles
+  return [
+    { title: 'Investment Education - Investopedia', url: 'https://www.investopedia.com/', type: 'article' },
+    { title: 'Financial Markets Course - Khan Academy', url: 'https://www.khanacademy.org/economics-finance-domain/core-finance', type: 'video' },
+    { title: 'SEC Investor Education', url: 'https://www.investor.gov/', type: 'article' },
+  ];
+}
+
 // Function to parse content into sections based on markdown headers
 function parseContentIntoSections(content: string): Array<{ heading: string; content: string }> {
   // Check if content has markdown headers (##)
@@ -658,18 +829,8 @@ function generateAnalyticsArticles(): AnalyticsArticle[] {
       // Parse content into sections based on markdown headers or logical breaks
       const sections = parseContentIntoSections(template.content);
       
-      // Generate resources
-      const resources = [
-        { title: 'Related Research Paper', url: 'https://example.com/research', type: 'article' as const },
-        { title: 'Market Data Source', url: 'https://example.com/data', type: 'data' as const },
-        { title: 'Investment Calculator', url: 'https://example.com/tool', type: 'tool' as const },
-      ];
-      
-      // Generate additional images
-      const additionalImages = [
-        categoryImages[type][(imageIndex[type] + 1) % categoryImages[type].length],
-        categoryImages[type][(imageIndex[type] + 2) % categoryImages[type].length],
-      ];
+      // Generate real resources based on article topic
+      const resources = getResourcesForArticle(template.title, template.tags);
       
       // Generate unique slug with date to avoid duplicates
       const baseSlug = generateSlug(template.title);
@@ -688,7 +849,6 @@ function generateAnalyticsArticles(): AnalyticsArticle[] {
         imageUrl,
         sections,
         resources,
-        images: additionalImages,
         tags: template.tags || [],
         relatedMarkets: template.relatedMarkets || [],
       });

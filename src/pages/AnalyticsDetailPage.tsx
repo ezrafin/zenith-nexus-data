@@ -10,7 +10,7 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
 import { generateArticleSchema, generateOrganizationSchema } from '@/utils/structuredData';
-import { Calendar, Clock, User, Share2, ExternalLink, Tag, Building2, Image as ImageIcon } from 'lucide-react';
+import { Calendar, Clock, User, Share2, ExternalLink, Tag, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CompanyCard } from '@/components/CompanyCard';
@@ -229,27 +229,6 @@ export default function AnalyticsDetailPage() {
           ) : (
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-foreground leading-relaxed">{article.content}</p>
-            </div>
-          )}
-
-          {/* Image Gallery */}
-          {article.images && article.images.length > 0 && (
-            <div className="mb-12">
-              <h2 className="heading-sm mb-6 flex items-center gap-2">
-                <ImageIcon className="h-5 w-5" />
-                Image Gallery
-              </h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {article.images.map((image, index) => (
-                  <div key={index} className="rounded-xl overflow-hidden">
-                    <img
-                      src={image}
-                      alt={`${article.title} - Image ${index + 1}`}
-                      className="w-full h-64 object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
           )}
 
