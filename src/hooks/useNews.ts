@@ -32,19 +32,59 @@ export function useNews(market: string = 'all'): UseNewsResult {
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
 
-  const fetchNews = useCallback(async (forceRefresh = false) => {
-    setLoading(true);
-    setError(null);
-
+  // Fast: Load cached news directly from database
+  const loadCachedNews = useCallback(async () => {
     try {
-      // Call the edge function to fetch/refresh news
+      let query = supabase
+        .from('news_articles')
+        .select('*')
+        .order('published_at', { ascending: false })
+        .limit(50);
+
+      if (market !== 'all') {
+        query = query.eq('market', market);
+      }
+
+      const { data: articles, error: dbError } = await query;
+
+      if (dbError) {
+        console.error('Error loading cached news:', dbError);
+        return false;
+      }
+
+      if (articles && articles.length > 0) {
+        setNews(articles);
+        setLoading(false);
+        
+        // Get last fetch time
+        const { data: fetchLog } = await supabase
+          .from('news_fetch_log')
+          .select('last_fetched_at')
+          .order('last_fetched_at', { ascending: false })
+          .limit(1)
+          .maybeSingle();
+        
+        if (fetchLog) {
+          setLastUpdated(fetchLog.last_fetched_at);
+        }
+        return true;
+      }
+      return false;
+    } catch (err) {
+      console.error('Error in loadCachedNews:', err);
+      return false;
+    }
+  }, [market]);
+
+  // Slow: Refresh news from edge function (background)
+  const refreshFromAPI = useCallback(async (forceRefresh = false) => {
+    try {
       const { data, error: fnError } = await supabase.functions.invoke('fetch-news', {
         body: { market, forceRefresh }
       });
 
       if (fnError) {
         console.error('Error calling fetch-news:', fnError);
-        setError('Failed to fetch news');
         return;
       }
 
@@ -53,20 +93,49 @@ export function useNews(market: string = 'all'): UseNewsResult {
         setLastUpdated(data.lastUpdated);
       }
     } catch (err) {
-      console.error('Error fetching news:', err);
-      setError('Failed to fetch news');
-    } finally {
-      setLoading(false);
+      console.error('Error refreshing news:', err);
     }
   }, [market]);
 
   useEffect(() => {
-    fetchNews();
-  }, [fetchNews]);
+    const initNews = async () => {
+      setLoading(true);
+      setError(null);
+
+      // Step 1: Try to load cached news immediately
+      const hasCachedData = await loadCachedNews();
+
+      // Step 2: Refresh in background (don't await if we have cached data)
+      if (hasCachedData) {
+        // Refresh in background without blocking UI
+        refreshFromAPI(false);
+      } else {
+        // No cached data, must wait for API
+        setLoading(true);
+        try {
+          await refreshFromAPI(false);
+        } catch (err) {
+          setError('Failed to fetch news');
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    initNews();
+  }, [loadCachedNews, refreshFromAPI]);
 
   const refetch = useCallback(async () => {
-    await fetchNews(true);
-  }, [fetchNews]);
+    setLoading(true);
+    setError(null);
+    try {
+      await refreshFromAPI(true);
+    } catch (err) {
+      setError('Failed to fetch news');
+    } finally {
+      setLoading(false);
+    }
+  }, [refreshFromAPI]);
 
   return { news, loading, error, lastUpdated, refetch };
 }

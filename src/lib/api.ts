@@ -487,7 +487,6 @@ export async function fetchNewsById(id: string): Promise<NewsItem | null> {
 }
 
 export async function fetchAnalytics(type?: string): Promise<AnalyticsArticle[]> {
-  await delay(800);
   let result = [...mockAnalytics];
   
   if (type && type !== 'all') {
@@ -498,7 +497,6 @@ export async function fetchAnalytics(type?: string): Promise<AnalyticsArticle[]>
 }
 
 export async function fetchAnalyticsBySlug(slug: string): Promise<AnalyticsArticle | null> {
-  await delay(500);
   return mockAnalytics.find(item => item.slug === slug) || null;
 }
 
