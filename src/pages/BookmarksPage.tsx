@@ -71,6 +71,27 @@ export default function BookmarksPage() {
                 title = newsData.title;
                 subtitle = newsData.source_name;
               }
+            } else if (bookmark.content_type === 'analytics') {
+              // Analytics articles use slugs - extract title from slug
+              const slug = bookmark.content_id;
+              // Extract title from slug by removing date suffix and converting to readable format
+              const slugParts = slug.split('-');
+              // Remove the date parts at the end (e.g., "20241214-3")
+              const dateParts = slugParts.slice(-2);
+              const isDateFormat = /^\d{8}$/.test(dateParts[0]) && /^\d+$/.test(dateParts[1]);
+              const titleParts = isDateFormat ? slugParts.slice(0, -2) : slugParts;
+              title = titleParts
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+              subtitle = 'Analytics Article';
+            } else if (bookmark.content_type === 'video') {
+              // Videos use slugs - extract title from slug
+              const slug = bookmark.content_id;
+              title = slug
+                .split('-')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+              subtitle = 'Video';
             }
           } catch (error) {
             console.error(`Error loading ${bookmark.content_type} data:`, error);
