@@ -14,7 +14,7 @@ import { generateOrganizationSchema } from '@/utils/structuredData';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { ThumbsUp, ThumbsDown, MessageCircle, Calendar, Eye, Award, Star, Bookmark, Share2 } from 'lucide-react';
+import { MessageCircle, Calendar, Award, Star, Bookmark, Share2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -64,13 +64,26 @@ export default function ForumTopicPage() {
   }, [topicId, user]);
 
   const checkBookmarkStatus = async () => {
-    // Mock implementation - forum_bookmarks table not available
-    setIsBookmarked(false);
+    if (!user || !topicId) return;
+    const { data } = await supabase
+      .from('user_bookmarks')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('content_type', 'discussion')
+      .eq('content_id', topicId)
+      .maybeSingle();
+    setIsBookmarked(!!data);
   };
 
   const checkFollowStatus = async () => {
-    // Mock implementation - forum_follows table not available
-    setIsFollowing(false);
+    if (!user || !topicId) return;
+    const { data } = await (supabase as any)
+      .from('forum_follows')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('discussion_id', topicId)
+      .maybeSingle();
+    setIsFollowing(!!data);
   };
 
   const toggleBookmark = async () => {
@@ -78,9 +91,22 @@ export default function ForumTopicPage() {
       toast.error('Please sign in to bookmark discussions');
       return;
     }
-    // Mock implementation
-    setIsBookmarked(!isBookmarked);
-    toast.success(isBookmarked ? 'Removed from bookmarks' : 'Added to bookmarks');
+    if (isBookmarked) {
+      await supabase.from('user_bookmarks').delete()
+        .eq('user_id', user.id)
+        .eq('content_type', 'discussion')
+        .eq('content_id', topicId);
+      setIsBookmarked(false);
+      toast.success('Removed from bookmarks');
+    } else {
+      await supabase.from('user_bookmarks').insert({
+        user_id: user.id,
+        content_type: 'discussion',
+        content_id: topicId
+      });
+      setIsBookmarked(true);
+      toast.success('Added to bookmarks');
+    }
   };
 
   const toggleFollow = async () => {
@@ -88,9 +114,29 @@ export default function ForumTopicPage() {
       toast.error('Please sign in to follow discussions');
       return;
     }
-    // Mock implementation
-    setIsFollowing(!isFollowing);
-    toast.success(isFollowing ? 'Unfollowed discussion' : 'Following discussion');
+    if (isFollowing) {
+      await (supabase as any).from('forum_follows').delete()
+        .eq('user_id', user.id)
+        .eq('discussion_id', topicId);
+      setIsFollowing(false);
+      toast.success('Unfollowed discussion');
+    } else {
+      await (supabase as any).from('forum_follows').insert({
+        user_id: user.id,
+        discussion_id: topicId
+      });
+      setIsFollowing(true);
+      toast.success('Following discussion');
+    }
+  };
+
+  const handleShare = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      toast.success('Link copied to clipboard');
+    } catch {
+      toast.error('Failed to copy link');
+    }
   };
 
   const handleReplySubmit = async (content: string) => {
@@ -192,7 +238,7 @@ export default function ForumTopicPage() {
               >
                 {isFollowing ? 'Following' : 'Follow'}
               </Button>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="h-4 w-4 mr-2" />
                 Share
               </Button>
@@ -219,10 +265,6 @@ export default function ForumTopicPage() {
             <span className="flex items-center gap-1.5">
               <MessageCircle className="h-4 w-4" />
               {topic.replies} replies
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Eye className="h-4 w-4" />
-              {topic.views.toLocaleString()} views
             </span>
           </div>
         </div>
