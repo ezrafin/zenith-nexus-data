@@ -18,6 +18,7 @@ export default function CompaniesPage() {
   const [sortBy, setSortBy] = useState<SortOption>('combined');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const filteredOrganizations = useMemo(() => {
     let filtered = filterOrganizations(selectedType, selectedRegion);
