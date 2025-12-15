@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { fetchForumCategories, fetchForumTopics, ForumCategory, ForumTopic } from '@/lib/api';
+import { fetchForumCategories, fetchForumTopics, ForumCategory, ForumTopic } from '@/lib/api/index';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ForumFilters, SortOption, DateFilter } from '@/components/forum/ForumFilters';
 import { MessageSquare, Users, Clock, MessageCircle, TrendingUp, Briefcase, ArrowUpRight, Plus, HelpCircle, Newspaper, Coins, AlertCircle, RefreshCw, MoreHorizontal } from 'lucide-react';

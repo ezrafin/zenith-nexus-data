@@ -14,7 +14,7 @@ import { MarketOverview } from '@/components/charts/MarketOverview';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { LastUpdated } from '@/components/LastUpdated';
 import { useMarketData } from '@/hooks/useMarketData';
-import { fetchNews, fetchAnalytics, NewsItem, AnalyticsArticle } from '@/lib/api';
+import { fetchNews, fetchAnalytics, NewsItem, AnalyticsArticle } from '@/lib/api/index';
 import { ArrowRight, TrendingUp, BarChart3, Newspaper, Coins, Bitcoin, DollarSign } from 'lucide-react';
 import { useUser } from '@/context/UserContext';
 

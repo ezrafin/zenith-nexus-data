@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock } from 'lucide-react';
-import { AnalyticsArticle } from '@/lib/api';
+import { AnalyticsArticle } from '@/lib/api/types';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface AnalyticsCardProps {

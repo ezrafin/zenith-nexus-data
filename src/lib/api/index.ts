@@ -16,6 +16,7 @@ export { getAuthorAvatar, categoryImages, delay } from './utils';
 export { fetchNews, fetchNewsById } from './news';
 export { fetchMarketData } from './market';
 export { fetchCompanies, fetchCompanyBySlug } from './companies';
+export { fetchAnalytics, fetchAnalyticsBySlug } from './analytics';
 export { 
   fetchForumCategories, 
   fetchForumTopics, 

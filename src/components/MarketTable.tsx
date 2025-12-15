@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, ArrowUpDown, ChevronUp, ChevronDown } from 'lucide-react';
-import { MarketData } from '@/lib/api';
+import { MarketData } from '@/lib/api/types';
 import { SimpleChart } from './SimpleChart';
 import { WatchlistButton } from './markets/WatchlistButton';
 

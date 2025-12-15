@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { MarketData } from '@/lib/api';
+import { MarketData } from '@/lib/api/types';
 import { cn } from '@/lib/utils';
 
 interface AdvancedChartProps {

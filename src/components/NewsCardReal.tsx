@@ -3,7 +3,7 @@ import { Clock, ExternalLink } from 'lucide-react';
 import { NewsArticle } from '@/hooks/useNews';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { getAuthorAvatar } from '@/lib/api';
+import { getAuthorAvatar } from '@/lib/api/utils';
 
 interface NewsCardRealProps {
   article: NewsArticle;

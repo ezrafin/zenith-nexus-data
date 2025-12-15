@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock } from 'lucide-react';
-import { NewsItem } from '@/lib/api';
+import { NewsItem } from '@/lib/api/types';
 
 interface NewsCardProps {
   news: NewsItem;
