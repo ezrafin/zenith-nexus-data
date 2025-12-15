@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
 import { BookOpen, Clock, ArrowRight, CheckCircle } from 'lucide-react';
+import { getEducationAdvancedArticlesPath } from '@/lib/educationRoutes';
 
 const categories = [
   { name: 'Getting Started', count: 15 },
@@ -11,8 +13,18 @@ const categories = [
   { name: 'Account Types', count: 8 },
 ];
 
-const articles = [
+type BasicArticle = {
+  id: string;
+  title: string;
+  description: string;
+  readTime: string;
+  category: string;
+  difficulty: 'Beginner' | 'Intermediate';
+};
+
+const articles: BasicArticle[] = [
   {
+    id: 'what-is-stock-market',
     title: 'What is the Stock Market?',
     description: 'A comprehensive introduction to how stock markets work, their history, and why they matter for investors of all levels.',
     readTime: '8 min read',
@@ -20,6 +32,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'stocks-vs-bonds',
     title: 'Understanding Stocks vs Bonds',
     description: 'Learn the key differences between stocks and bonds, their risk profiles, and how to use both in your portfolio.',
     readTime: '10 min read',
@@ -27,6 +40,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'how-to-read-quote',
     title: 'How to Read a Stock Quote',
     description: 'Decode stock quotes and understand what bid, ask, volume, and other numbers mean for your investments.',
     readTime: '6 min read',
@@ -34,6 +48,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'market-indices-intro',
     title: 'Introduction to Market Indices',
     description: 'Understand what S&P 500, Dow Jones, NASDAQ, and other indices mean for tracking market performance.',
     readTime: '7 min read',
@@ -41,6 +56,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'what-is-diversification',
     title: 'What is Diversification?',
     description: 'Learn why spreading your investments across different assets is crucial for managing risk and building wealth.',
     readTime: '9 min read',
@@ -48,6 +64,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'pe-ratio',
     title: 'Understanding P/E Ratio',
     description: 'A beginner-friendly guide to one of the most common stock valuation metrics and how to use it.',
     readTime: '8 min read',
@@ -55,6 +72,7 @@ const articles = [
     difficulty: 'Intermediate',
   },
   {
+    id: 'investment-accounts-types',
     title: 'Types of Investment Accounts',
     description: 'Compare brokerage accounts, IRAs, 401(k)s, and HSAs to choose the right accounts for your goals.',
     readTime: '12 min read',
@@ -62,6 +80,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'how-dividends-work',
     title: 'How Dividends Work',
     description: 'Everything you need to know about dividend payments, yield, reinvestment, and dividend investing strategies.',
     readTime: '10 min read',
@@ -69,6 +88,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'bull-vs-bear',
     title: 'Bull vs Bear Markets Explained',
     description: 'Understand market cycles, what drives them, and how to navigate both up and down markets successfully.',
     readTime: '7 min read',
@@ -76,6 +96,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'what-is-mutual-fund',
     title: 'What is a Mutual Fund?',
     description: 'Discover how mutual funds pool investor money, their fee structures, and when they make sense for your portfolio.',
     readTime: '9 min read',
@@ -83,6 +104,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'etf-expense-ratios',
     title: 'Understanding ETF Expense Ratios',
     description: 'Learn why expense ratios matter, how they impact returns over time, and what to look for when choosing ETFs.',
     readTime: '8 min read',
@@ -90,6 +112,7 @@ const articles = [
     difficulty: 'Intermediate',
   },
   {
+    id: 'dollar-cost-averaging',
     title: 'Dollar-Cost Averaging Explained',
     description: 'Master this simple but powerful investment strategy that helps reduce timing risk and build wealth steadily.',
     readTime: '7 min read',
@@ -97,6 +120,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'how-to-set-goals',
     title: 'How to Set Investment Goals',
     description: 'Create clear, actionable investment goals based on your timeline, risk tolerance, and financial objectives.',
     readTime: '11 min read',
@@ -104,6 +128,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'market-orders-intro',
     title: 'Introduction to Market Orders',
     description: 'Learn the difference between market orders, limit orders, stop orders, and when to use each type.',
     readTime: '8 min read',
@@ -111,6 +136,7 @@ const articles = [
     difficulty: 'Beginner',
   },
   {
+    id: 'what-is-brokerage-account',
     title: 'What is a Brokerage Account?',
     description: 'Everything you need to know about opening and managing a brokerage account for investing.',
     readTime: '9 min read',
@@ -120,6 +146,38 @@ const articles = [
 ];
 
 export default function BasicArticlesPage() {
+  const [completedIds, setCompletedIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    try {
+      const stored = typeof window !== 'undefined' ? localStorage.getItem('education-basic-articles-read') : null;
+      if (stored) {
+        setCompletedIds(JSON.parse(stored));
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('education-basic-articles-read', JSON.stringify(completedIds));
+      }
+    } catch {
+      // ignore
+    }
+  }, [completedIds]);
+
+  const toggleCompleted = (id: string) => {
+    setCompletedIds(prev =>
+      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id],
+    );
+  };
+
+  const completedCount = completedIds.length;
+  const totalCount = articles.length;
+
   return (
     <Layout>
       <div className="pt-24 pb-16">
@@ -163,12 +221,17 @@ export default function BasicArticlesPage() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-border">
-                  <div className="flex items-center gap-2 text-sm text-primary mb-2">
-                    <CheckCircle className="h-4 w-4" />
-                    <span className="font-medium">Track Progress</span>
+                  <div className="flex items-center justify-between text-sm mb-2">
+                    <div className="flex items-center gap-2 text-primary">
+                      <CheckCircle className="h-4 w-4" />
+                      <span className="font-medium">Your Progress</span>
+                    </div>
+                    <span className="text-xs text-muted-foreground">
+                      {completedCount}/{totalCount} completed
+                    </span>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Sign up to save your reading progress and earn certificates.
+                    Mark articles as completed to track what you&apos;ve already learned.
                   </p>
                 </div>
               </div>
@@ -177,11 +240,15 @@ export default function BasicArticlesPage() {
             {/* Articles Grid */}
             <div className="lg:col-span-3">
               <div className="flex items-center justify-between mb-6">
-                <span className="text-sm text-muted-foreground">{articles.length} articles</span>
+                <span className="text-sm text-muted-foreground">
+                  {articles.length} articles • {completedCount} completed
+                </span>
               </div>
               <div className="grid sm:grid-cols-2 gap-6">
-                {articles.map((article) => (
-                  <article key={article.title} className="glass-card-hover p-6 group">
+                {articles.map((article) => {
+                  const isCompleted = completedIds.includes(article.id);
+                  return (
+                  <article key={article.id} className="glass-card-hover p-6 group flex flex-col justify-between">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="badge-secondary">{article.category}</span>
                       <span className={`text-xs px-2 py-0.5 rounded-full ${
@@ -191,20 +258,34 @@ export default function BasicArticlesPage() {
                       }`}>
                         {article.difficulty}
                       </span>
+                      {isCompleted && (
+                        <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 uppercase tracking-wide font-semibold">
+                          Completed
+                        </span>
+                      )}
                     </div>
                     <h3 className="heading-xs mb-2 group-hover:text-primary transition-colors">{article.title}</h3>
                     <p className="body-sm mb-4">{article.description}</p>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-auto">
                       <span className="flex items-center gap-1 text-xs text-muted-foreground">
                         <Clock className="h-3 w-3" />
                         {article.readTime}
                       </span>
-                      <Link to="#" className="inline-flex items-center text-sm text-primary hover:underline">
-                        Read Article <ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                      <div className="flex items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={() => toggleCompleted(article.id)}
+                          className="text-xs text-muted-foreground hover:text-foreground underline-offset-2 hover:underline"
+                        >
+                          {isCompleted ? 'Mark as unread' : 'Mark as completed'}
+                        </button>
+                        <Link to="#" className="inline-flex items-center text-sm text-primary hover:underline">
+                          Read Article <ArrowRight className="h-4 w-4 ml-1" />
+                        </Link>
+                      </div>
                     </div>
                   </article>
-                ))}
+                );})}
               </div>
             </div>
           </div>
@@ -216,7 +297,7 @@ export default function BasicArticlesPage() {
             <p className="body-md mb-6 max-w-xl mx-auto">
               Once you have mastered the basics, explore our advanced articles for deeper insights and sophisticated strategies.
             </p>
-            <Link to="/education/advanced" className="btn-primary">
+            <Link to={getEducationAdvancedArticlesPath()} className="btn-primary">
               View Advanced Articles
             </Link>
           </div>

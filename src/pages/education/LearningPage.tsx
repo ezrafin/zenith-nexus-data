@@ -2,22 +2,28 @@ import { useState, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
 import { BookOpen, Clock, ArrowRight, CheckCircle, Award, Calendar } from 'lucide-react';
+import {
+  getEducationBasicArticlesPath,
+  getEducationAdvancedArticlesPath,
+  getEducationCoursePath,
+  getEducationVideoPath,
+} from '@/lib/educationRoutes';
 
-// Combined categories from both basic and advanced
-const categories = [
-  { name: 'All', count: 0 }, // Will be calculated
-  { name: 'Getting Started', count: 15 },
-  { name: 'Stock Basics', count: 22 },
-  { name: 'Investment Terms', count: 28 },
-  { name: 'Risk Management', count: 26 }, // Combined from both
-  { name: 'Portfolio Basics', count: 14 },
-  { name: 'Account Types', count: 8 },
-  { name: 'Technical Analysis', count: 18 },
-  { name: 'Options Trading', count: 15 },
-  { name: 'Quantitative Strategies', count: 12 },
-  { name: 'Portfolio Theory', count: 16 },
-  { name: 'Derivatives', count: 9 },
-];
+// Category names used across basic and advanced articles
+const categoryNames = [
+  'All',
+  'Getting Started',
+  'Stock Basics',
+  'Investment Terms',
+  'Risk Management',
+  'Portfolio Basics',
+  'Account Types',
+  'Technical Analysis',
+  'Options Trading',
+  'Quantitative Strategies',
+  'Portfolio Theory',
+  'Derivatives',
+] as const;
 
 // Basic articles
 const basicArticles = [
@@ -259,25 +265,36 @@ const allArticles = [
 ];
 
 export default function LearningPage() {
+  const [levelFilter, setLevelFilter] = useState<'all' | 'basic' | 'advanced'>('all');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Calculate total count for "All" category
+  // Calculate category counts based on current level filter
   const categoriesWithCounts = useMemo(() => {
-    return categories.map(cat => {
-      if (cat.name === 'All') {
-        return { ...cat, count: allArticles.length };
-      }
-      return cat;
-    });
-  }, []);
+    const scopedArticles =
+      levelFilter === 'all' ? allArticles : allArticles.filter(article => article.type === levelFilter);
 
-  // Filter articles based on selected category
+    return categoryNames.map(name => {
+      if (name === 'All') {
+        return { name, count: scopedArticles.length };
+      }
+      const count = scopedArticles.filter(article => article.category === name).length;
+      return { name, count };
+    });
+  }, [levelFilter]);
+
+  // Filter articles based on level and selected category
   const filteredArticles = useMemo(() => {
-    if (!selectedCategory || selectedCategory === 'All') {
-      return allArticles;
+    let scoped = allArticles;
+    if (levelFilter !== 'all') {
+      scoped = scoped.filter(article => article.type === levelFilter);
     }
-    return allArticles.filter(article => article.category === selectedCategory);
-  }, [selectedCategory]);
+
+    if (selectedCategory && selectedCategory !== 'All') {
+      scoped = scoped.filter(article => article.category === selectedCategory);
+    }
+
+    return scoped;
+  }, [levelFilter, selectedCategory]);
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -300,10 +317,21 @@ export default function LearningPage() {
         <section className="container-wide section-spacing-sm">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <span className="badge-primary mb-4">Education</span>
-            <h1 className="heading-xl mb-6">Learning</h1>
+            <h1 className="heading-xl mb-4">Investment Learning Hub</h1>
             <p className="body-xl">
-              Comprehensive investment education from beginner fundamentals to advanced strategies. Learn at your own pace.
+              Structured investment education from first steps to advanced strategies. Choose your level and learn at your own pace.
             </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <Link to={getEducationBasicArticlesPath()} className="btn-primary">
+                Start with Basics
+              </Link>
+              <Link to={getEducationAdvancedArticlesPath()} className="btn-ghost">
+                Jump to Advanced
+              </Link>
+              <Link to={getEducationVideoPath()} className="btn-ghost">
+                Watch Videos
+              </Link>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-4 gap-8">
@@ -365,7 +393,43 @@ export default function LearningPage() {
 
             {/* Articles Grid */}
             <div className="lg:col-span-3">
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                <div className="inline-flex rounded-full border border-border bg-card p-1 text-xs sm:text-sm">
+                  <button
+                    type="button"
+                    onClick={() => setLevelFilter('all')}
+                    className={`px-3 sm:px-4 py-1.5 rounded-full transition-colors ${
+                      levelFilter === 'all'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary/40'
+                    }`}
+                  >
+                    All levels
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLevelFilter('basic')}
+                    className={`px-3 sm:px-4 py-1.5 rounded-full transition-colors ${
+                      levelFilter === 'basic'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary/40'
+                    }`}
+                  >
+                    Basics
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLevelFilter('advanced')}
+                    className={`px-3 sm:px-4 py-1.5 rounded-full transition-colors ${
+                      levelFilter === 'advanced'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary/40'
+                    }`}
+                  >
+                    Advanced
+                  </button>
+                </div>
+
                 <span className="text-sm text-muted-foreground">
                   {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
                   {selectedCategory && selectedCategory !== 'All' && ` in ${selectedCategory}`}
@@ -419,7 +483,7 @@ export default function LearningPage() {
             <p className="body-md mb-6 max-w-xl mx-auto">
               Enroll in our structured learning course for a comprehensive investment education with certification.
             </p>
-            <Link to="/education/course" className="btn-primary">
+            <Link to={getEducationCoursePath()} className="btn-primary">
               Explore Learning Course
             </Link>
           </div>

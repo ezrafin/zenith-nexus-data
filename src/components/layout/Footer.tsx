@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, Video, BookOpen, Award, Rocket, GraduationCap } from 'lucide-react';
+import { educationRoutes } from '@/lib/educationRoutes';
 const footerLinks = {
   markets: [{
     name: 'Indices',
@@ -24,15 +25,15 @@ const footerLinks = {
   }],
   education: [{
     name: 'Learning',
-    href: '/education/learning',
+    href: educationRoutes.learning,
     icon: BookOpen
   }, {
     name: 'Video Library',
-    href: '/education/video',
+    href: educationRoutes.video,
     icon: GraduationCap
   }, {
     name: 'Learning Course',
-    href: '/education/course',
+    href: educationRoutes.course,
     icon: Rocket
   }],
   content: [{

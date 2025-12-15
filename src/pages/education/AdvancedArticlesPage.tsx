@@ -1,6 +1,8 @@
+import { useEffect, useState } from '@/../node_modules/react';
 import { Layout } from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
-import { Award, Clock, ArrowRight, Calendar } from 'lucide-react';
+import { Award, Clock, ArrowRight, Calendar, CheckCircle } from 'lucide-react';
+import { getEducationCoursePath } from '@/lib/educationRoutes';
 
 const categories = [
   { name: 'Technical Analysis', count: 18 },
@@ -11,8 +13,21 @@ const categories = [
   { name: 'Derivatives', count: 9 },
 ];
 
-const articles = [
+type AdvancedArticle = {
+  id: string;
+  title: string;
+  description: string;
+  readTime: string;
+  category: string;
+  difficulty: 'Advanced' | 'Expert';
+  author: string;
+  credentials: string;
+  lastUpdated: string;
+};
+
+const articles: AdvancedArticle[] = [
   {
+    id: 'advanced-candlestick-patterns',
     title: 'Advanced Candlestick Patterns',
     description: 'Master complex candlestick formations including morning/evening stars, three white soldiers, and harami patterns.',
     readTime: '15 min read',
@@ -23,6 +38,7 @@ const articles = [
     lastUpdated: 'December 2024',
   },
   {
+    id: 'black-scholes-model',
     title: 'The Black-Scholes Model Explained',
     description: 'Understanding the mathematical foundation of options pricing, its assumptions, limitations, and practical applications.',
     readTime: '20 min read',
@@ -33,6 +49,7 @@ const articles = [
     lastUpdated: 'November 2024',
   },
   {
+    id: 'factor-investing-strategies',
     title: 'Factor Investing Strategies',
     description: 'Learn to build portfolios based on factors like value, momentum, quality, size, and low volatility for consistent alpha.',
     readTime: '18 min read',
@@ -43,6 +60,7 @@ const articles = [
     lastUpdated: 'December 2024',
   },
   {
+    id: 'var-calculations',
     title: 'Value at Risk (VaR) Calculations',
     description: 'Quantify potential portfolio losses using historical, parametric, and Monte Carlo VaR methodologies.',
     readTime: '16 min read',
@@ -53,6 +71,7 @@ const articles = [
     lastUpdated: 'October 2024',
   },
   {
+    id: 'modern-portfolio-theory',
     title: 'Modern Portfolio Theory Deep Dive',
     description: 'Explore the mathematics behind efficient frontier, capital allocation line, and optimal portfolio construction.',
     readTime: '22 min read',
@@ -63,6 +82,7 @@ const articles = [
     lastUpdated: 'November 2024',
   },
   {
+    id: 'iron-condor-spreads',
     title: 'Iron Condor and Advanced Spreads',
     description: 'Multi-leg options strategies for generating income in sideways markets with defined risk parameters.',
     readTime: '14 min read',
@@ -73,6 +93,7 @@ const articles = [
     lastUpdated: 'December 2024',
   },
   {
+    id: 'elliott-wave-theory',
     title: 'Elliott Wave Theory',
     description: 'Analyze market cycles and predict price movements using wave patterns, Fibonacci retracements, and extensions.',
     readTime: '17 min read',
@@ -83,6 +104,7 @@ const articles = [
     lastUpdated: 'November 2024',
   },
   {
+    id: 'monte-carlo-simulations',
     title: 'Monte Carlo Simulations in Finance',
     description: 'Apply probability modeling to forecast portfolio performance, retirement planning, and complex derivatives pricing.',
     readTime: '19 min read',
@@ -93,6 +115,7 @@ const articles = [
     lastUpdated: 'October 2024',
   },
   {
+    id: 'hedging-strategies-portfolio-protection',
     title: 'Hedging Strategies for Portfolio Protection',
     description: 'Advanced techniques including protective puts, collars, and tail-risk hedging to protect during downturns.',
     readTime: '13 min read',
@@ -103,6 +126,7 @@ const articles = [
     lastUpdated: 'December 2024',
   },
   {
+    id: 'covered-call-strategies',
     title: 'Covered Call Strategies for Income',
     description: 'Generate consistent income from your stock holdings using covered calls, including strike selection and roll techniques.',
     readTime: '12 min read',
@@ -113,6 +137,7 @@ const articles = [
     lastUpdated: 'November 2024',
   },
   {
+    id: 'understanding-greeks',
     title: 'Understanding Greeks in Options',
     description: 'Master delta, gamma, theta, vega, and rho to better manage options positions and predict price movements.',
     readTime: '18 min read',
@@ -123,6 +148,7 @@ const articles = [
     lastUpdated: 'December 2024',
   },
   {
+    id: 'pairs-trading-strategies',
     title: 'Pairs Trading Strategies',
     description: 'Implement statistical arbitrage using cointegration analysis, spread trading, and mean reversion techniques.',
     readTime: '16 min read',
@@ -135,6 +161,38 @@ const articles = [
 ];
 
 export default function AdvancedArticlesPage() {
+  const [completedIds, setCompletedIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    try {
+      const stored = typeof window !== 'undefined' ? localStorage.getItem('education-advanced-articles-read') : null;
+      if (stored) {
+        setCompletedIds(JSON.parse(stored));
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('education-advanced-articles-read', JSON.stringify(completedIds));
+      }
+    } catch {
+      // ignore
+    }
+  }, [completedIds]);
+
+  const toggleCompleted = (id: string) => {
+    setCompletedIds(prev =>
+      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id],
+    );
+  };
+
+  const completedCount = completedIds.length;
+  const totalCount = articles.length;
+
   return (
     <Layout>
       <div className="pt-24 pb-16">
@@ -177,11 +235,27 @@ export default function AdvancedArticlesPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-border">
-                  <h4 className="text-sm font-medium mb-3">Prerequisites</h4>
-                  <p className="text-xs text-muted-foreground">
-                    These articles assume familiarity with basic investing concepts. Complete our Basic Articles first if you are new to investing.
-                  </p>
+                <div className="mt-6 pt-6 border-t border-border space-y-4">
+                  <div>
+                    <h4 className="text-sm font-medium mb-3">Prerequisites</h4>
+                    <p className="text-xs text-muted-foreground">
+                      These articles assume familiarity with basic investing concepts. Complete our Basic Articles first if you are new to investing.
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-border">
+                    <div className="flex items-center justify-between text-sm mb-2">
+                      <div className="flex items-center gap-2 text-primary">
+                        <CheckCircle className="h-4 w-4" />
+                        <span className="font-medium">Your Progress</span>
+                      </div>
+                      <span className="text-xs text-muted-foreground">
+                        {completedCount}/{totalCount} completed
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Mark articles you&apos;ve mastered to track your expert‑level learning.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -189,11 +263,15 @@ export default function AdvancedArticlesPage() {
             {/* Articles Grid */}
             <div className="lg:col-span-3">
               <div className="flex items-center justify-between mb-6">
-                <span className="text-sm text-muted-foreground">{articles.length} articles</span>
+                <span className="text-sm text-muted-foreground">
+                  {articles.length} articles • {completedCount} completed
+                </span>
               </div>
               <div className="grid sm:grid-cols-2 gap-6">
-                {articles.map((article) => (
-                  <article key={article.title} className="glass-card-hover p-6 group">
+                {articles.map((article) => {
+                  const isCompleted = completedIds.includes(article.id);
+                  return (
+                  <article key={article.id} className="glass-card-hover p-6 group flex flex-col justify-between">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="badge-secondary">{article.category}</span>
                       <span className={`text-xs px-2 py-0.5 rounded-full ${
@@ -203,6 +281,11 @@ export default function AdvancedArticlesPage() {
                       }`}>
                         {article.difficulty}
                       </span>
+                      {isCompleted && (
+                        <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 uppercase tracking-wide font-semibold">
+                          Completed
+                        </span>
+                      )}
                     </div>
                     <h3 className="heading-xs mb-2 group-hover:text-primary transition-colors">{article.title}</h3>
                     <p className="body-sm mb-3">{article.description}</p>
@@ -211,7 +294,7 @@ export default function AdvancedArticlesPage() {
                       <span>•</span>
                       <span>{article.credentials}</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-3 text-xs text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Clock className="h-3 w-3" />
@@ -222,12 +305,21 @@ export default function AdvancedArticlesPage() {
                           {article.lastUpdated}
                         </span>
                       </div>
-                      <Link to="#" className="inline-flex items-center text-sm text-primary hover:underline">
-                        Read <ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                      <div className="flex items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={() => toggleCompleted(article.id)}
+                          className="text-xs text-muted-foreground hover:text-foreground underline-offset-2 hover:underline"
+                        >
+                          {isCompleted ? 'Mark as unread' : 'Mark as completed'}
+                        </button>
+                        <Link to="#" className="inline-flex items-center text-sm text-primary hover:underline">
+                          Read <ArrowRight className="h-4 w-4 ml-1" />
+                        </Link>
+                      </div>
                     </div>
                   </article>
-                ))}
+                );})}
               </div>
             </div>
           </div>
@@ -239,7 +331,7 @@ export default function AdvancedArticlesPage() {
             <p className="body-md mb-6 max-w-xl mx-auto">
               Enroll in our structured learning course for a comprehensive investment education with certification.
             </p>
-            <Link to="/education/course" className="btn-primary">
+            <Link to={getEducationCoursePath()} className="btn-primary">
               Explore Learning Course
             </Link>
           </div>

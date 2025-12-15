@@ -5,7 +5,7 @@ export interface BreadcrumbItem {
 
 export function generateBreadcrumbs(pathname: string, pageTitle?: string): BreadcrumbItem[] {
   const breadcrumbs: BreadcrumbItem[] = [
-    { name: 'Home', url: 'https://investopatronus.com/' },
+    { name: 'Home', url: '/' },
   ];
 
   const pathSegments = pathname.split('/').filter(Boolean);
@@ -51,7 +51,7 @@ export function generateBreadcrumbs(pathname: string, pageTitle?: string): Bread
     if (isLast && pageTitle) {
       breadcrumbs.push({
         name: pageTitle,
-        url: `https://investopatronus.com${currentPath}`,
+        url: currentPath || '/',
       });
       return;
     }
@@ -60,7 +60,7 @@ export function generateBreadcrumbs(pathname: string, pageTitle?: string): Bread
     if (pathSegments[0] === 'markets' && marketTypes[segment]) {
       breadcrumbs.push({
         name: marketTypes[segment],
-        url: `https://investopatronus.com${currentPath}`,
+        url: currentPath,
       });
       return;
     }
@@ -72,7 +72,7 @@ export function generateBreadcrumbs(pathname: string, pageTitle?: string): Bread
     if (!isLast || !/^\d+$/.test(segment) && !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(segment)) {
       breadcrumbs.push({
         name,
-        url: `https://investopatronus.com${currentPath}`,
+        url: currentPath || '/',
       });
     }
   });

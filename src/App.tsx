@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserProvider } from "@/context/UserContext";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
+import { educationRoutes } from "@/lib/educationRoutes";
 
 // Eager load critical pages
 import Index from "./pages/Index";
@@ -37,6 +38,8 @@ const VideoDetailPage = lazy(() => import("./pages/video/VideoDetailPage"));
 // Education Pages
 const LearningPage = lazy(() => import("./pages/education/LearningPage"));
 const LearningCoursePage = lazy(() => import("./pages/education/LearningCoursePage"));
+const BasicArticlesPage = lazy(() => import("./pages/education/BasicArticlesPage"));
+const AdvancedArticlesPage = lazy(() => import("./pages/education/AdvancedArticlesPage"));
 // Course Platform
 const CoursePlatformPage = lazy(() => import("./pages/course/CoursePlatformPage"));
 // Auth Pages
@@ -108,9 +111,11 @@ const App = () => {
                 {/* Video Pages */}
                 <Route path="/video/:videoId" element={<VideoDetailPage />} />
                 {/* Education Pages */}
-                <Route path="/education/learning" element={<LearningPage />} />
-                <Route path="/education/course" element={<LearningCoursePage />} />
-                <Route path="/education/video" element={<VideoLibraryPage />} />
+                <Route path={educationRoutes.learning} element={<LearningPage />} />
+                <Route path={educationRoutes.course} element={<LearningCoursePage />} />
+                <Route path={educationRoutes.video} element={<VideoLibraryPage />} />
+                <Route path={educationRoutes.basicArticles} element={<BasicArticlesPage />} />
+                <Route path={educationRoutes.advancedArticles} element={<AdvancedArticlesPage />} />
                 {/* Course Platform */}
                 <Route path="/course" element={<CoursePlatformPage />} />
                 {/* Auth Routes */}

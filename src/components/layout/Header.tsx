@@ -8,6 +8,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useUser } from '@/context/UserContext';
 import { UserAvatar } from '@/components/user/UserAvatar';
+import { EDUCATION_BASE_PATH, educationRoutes } from '@/lib/educationRoutes';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -53,15 +54,15 @@ const navigation = [{
   }]
 }, {
   name: 'Education',
-  href: '/education',
+  href: EDUCATION_BASE_PATH,
   children: [{
     name: 'Learning',
-    href: '/education/learning',
+    href: educationRoutes.learning,
     icon: BookOpen,
     description: 'Articles and guides'
   }, {
     name: 'Video Library',
-    href: '/education/video',
+    href: educationRoutes.video,
     icon: GraduationCap,
     description: 'Educational videos'
   }, {
