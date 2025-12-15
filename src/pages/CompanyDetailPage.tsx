@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { fetchCompanyBySlug, fetchCompanies, Company } from '@/lib/api';
+import { fetchCompanyBySlug, fetchCompanies, Company } from '@/lib/api/index';
 import { organizations, Organization } from '@/lib/organizations';
 import { getCompanyOverview } from '@/lib/companyOverviews';
 import { CompanyCard } from '@/components/CompanyCard';

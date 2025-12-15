@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, TrendingUp, TrendingDown, LucideIcon } from 'lucide-react';
-import { MarketData } from '@/lib/api';
+import { MarketData } from '@/lib/api/types';
 
 interface MarketMiniTableProps {
   title: string;

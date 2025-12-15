@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { fetchAnalyticsBySlug, AnalyticsArticle } from '@/lib/api';
+import { fetchAnalyticsBySlug, AnalyticsArticle } from '@/lib/api/index';
 import { BookmarkButton } from '@/components/content/BookmarkButton';
 import { RelatedContent } from '@/components/content/RelatedContent';
 import { MarkdownContent } from '@/components/content/MarkdownContent';
@@ -15,7 +15,7 @@ import { Calendar, Clock, User, Share2, ExternalLink, Tag, Building2 } from 'luc
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CompanyCard } from '@/components/CompanyCard';
-import { fetchCompanies } from '@/lib/api';
+import { fetchCompanies } from '@/lib/api/index';
 import { toast } from 'sonner';
 
 const typeLabels: Record<string, string> = {

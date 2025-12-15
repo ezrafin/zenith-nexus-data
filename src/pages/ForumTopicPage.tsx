@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { fetchTopicById, fetchForumComments, ForumTopic, ForumComment } from '@/lib/api';
+import { fetchTopicById, fetchForumComments, ForumTopic, ForumComment } from '@/lib/api/index';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ReplyEditor } from '@/components/forum/ReplyEditor';
 import { ReactionButton } from '@/components/forum/ReactionButton';

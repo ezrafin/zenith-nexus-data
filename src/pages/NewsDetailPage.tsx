@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
-import { fetchNewsById, fetchNews, NewsItem } from '@/lib/api';
+import { fetchNewsById, fetchNews, NewsItem } from '@/lib/api/index';
 import { BookmarkButton } from '@/components/content/BookmarkButton';
 import { RelatedContent } from '@/components/content/RelatedContent';
 import { useReadingHistory } from '@/hooks/useReadingHistory';

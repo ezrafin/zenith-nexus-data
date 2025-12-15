@@ -85,6 +85,14 @@ export function OrganizationCard({ organization, index = 0 }: OrganizationCardPr
     loadRatingData();
   }, [organization.id, user]);
   
+  const handleWebsiteClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (organization.website) {
+      window.open(organization.website, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <Link to={`/companies/${organization.id}`}>
       <motion.div
@@ -221,15 +229,12 @@ export function OrganizationCard({ organization, index = 0 }: OrganizationCardPr
           )}
         </div>
         {organization.website && (
-          <a 
-            href={organization.website} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button 
+            onClick={handleWebsiteClick}
             className="flex items-center gap-1 text-primary opacity-0 group-hover:opacity-100 transition-opacity"
-            onClick={(e) => e.stopPropagation()}
           >
             <ExternalLink className="h-3 w-3" />
-          </a>
+          </button>
         )}
       </div>
       </motion.div>

@@ -59,27 +59,17 @@ export default function MarketsPage() {
     refreshInterval: marketType === 'crypto' ? 120000 : 60000,
   });
 
-  // Load all market types for search (only when search is active)
-  const shouldLoadAll = searchQuery.trim().length > 0;
-  const { data: allIndices } = useMarketData({ type: 'indices', refreshInterval: shouldLoadAll ? 0 : 0 });
-  const { data: allStocks } = useMarketData({ type: 'stocks', refreshInterval: shouldLoadAll ? 0 : 0 });
-  const { data: allCrypto } = useMarketData({ type: 'crypto', refreshInterval: shouldLoadAll ? 0 : 0 });
-  const { data: allCommodities } = useMarketData({ type: 'commodities', refreshInterval: shouldLoadAll ? 0 : 0 });
-  const { data: allCurrencies } = useMarketData({ type: 'currencies', refreshInterval: shouldLoadAll ? 0 : 0 });
+  // Only load additional market data when search is active and has 2+ characters
+  const shouldLoadAll = searchQuery.trim().length >= 2;
 
   const info = marketInfo[marketType] || marketInfo.indices;
 
-  // Combine all assets for search
+  // Combine current market data with search results from other markets
   const allAssets = useMemo(() => {
     if (!shouldLoadAll) return [];
-    return [
-      ...allIndices.map(item => ({ ...item, marketType: 'indices' as const })),
-      ...allStocks.map(item => ({ ...item, marketType: 'stocks' as const })),
-      ...allCrypto.map(item => ({ ...item, marketType: 'crypto' as const })),
-      ...allCommodities.map(item => ({ ...item, marketType: 'commodities' as const })),
-      ...allCurrencies.map(item => ({ ...item, marketType: 'currencies' as const })),
-    ];
-  }, [shouldLoadAll, allIndices, allStocks, allCrypto, allCommodities, allCurrencies]);
+    // For search, we only use current market data - no extra API calls
+    return data.map(item => ({ ...item, marketType }));
+  }, [shouldLoadAll, data, marketType]);
 
   // Calculate market cap (price * volume if available, otherwise use price)
   const getMarketCap = (item: typeof data[0]) => {

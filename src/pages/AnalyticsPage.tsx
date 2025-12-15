@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { AnalyticsCard } from '@/components/AnalyticsCard';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { Pagination } from '@/components/Pagination';
-import { fetchAnalytics, AnalyticsArticle } from '@/lib/api';
+import { fetchAnalytics, AnalyticsArticle } from '@/lib/api/index';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 const ITEMS_PER_PAGE = 15;

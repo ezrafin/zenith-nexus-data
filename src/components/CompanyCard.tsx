@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Building2 } from 'lucide-react';
-import { Company } from '@/lib/api';
+import { Company } from '@/lib/api/types';
 
 interface CompanyCardProps {
   company: Company;

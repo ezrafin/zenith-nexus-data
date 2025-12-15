@@ -11,7 +11,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { fetchForumCategories, ForumCategory } from '@/lib/api';
+import { fetchForumCategories, ForumCategory } from '@/lib/api/index';
 
 export default function CreateDiscussionPage() {
   const { user, profile } = useUser();

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { MarketData } from '@/lib/api';
+import { MarketData } from '@/lib/api/types';
 
 interface UseMarketDataOptions {
   type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies';
