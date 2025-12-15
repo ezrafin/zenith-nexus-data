@@ -102,10 +102,12 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
         className="group block h-full premium-card overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-0.5 transition-all duration-300"
       >
         {/* Image */}
-        <div className={`relative ${featured ? 'h-52' : 'h-40'} w-full overflow-hidden`}>
+        <div className={`relative ${featured ? 'h-52' : 'h-40'} w-full overflow-hidden bg-muted`}>
           <img
             src={imageUrl}
             alt={article.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             onError={(e) => {
               (e.target as HTMLImageElement).src = getMarketImage(article.market, index);

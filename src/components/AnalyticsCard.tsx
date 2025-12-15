@@ -46,10 +46,12 @@ export function AnalyticsCard({ article, variant = 'default', index = 0 }: Analy
       >
         {/* Article Image */}
         {article.imageUrl && (
-          <div className="relative h-40 w-full overflow-hidden">
+          <div className="relative h-40 w-full overflow-hidden bg-muted">
             <img
               src={article.imageUrl}
               alt={article.title}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />

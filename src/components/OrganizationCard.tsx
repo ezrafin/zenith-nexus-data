@@ -102,6 +102,8 @@ export function OrganizationCard({ organization, index = 0 }: OrganizationCardPr
               src={organization.logo} 
               alt={`${organization.name} logo`}
               className="w-8 h-8 object-contain"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 e.currentTarget.nextElementSibling?.classList.remove('hidden');
