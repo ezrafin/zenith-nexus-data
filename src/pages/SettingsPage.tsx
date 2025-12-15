@@ -70,13 +70,28 @@ export default function SettingsPage() {
   const handleChangePassword = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!currentPassword) {
+      toast.error('Please enter your current password');
+      return;
+    }
+
     if (!newPassword || !confirmPassword) {
       toast.error('Please fill in all password fields');
       return;
     }
 
-    if (newPassword.length < 6) {
-      toast.error('New password must be at least 6 characters long');
+    if (newPassword.length < 8) {
+      toast.error('New password must be at least 8 characters long');
+      return;
+    }
+
+    if (!/\d/.test(newPassword)) {
+      toast.error('New password must contain at least one number');
+      return;
+    }
+
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(newPassword)) {
+      toast.error('New password must contain at least one special character');
       return;
     }
 
@@ -87,15 +102,26 @@ export default function SettingsPage() {
 
     setChangingPassword(true);
     try {
-      // Supabase requires re-authentication for password change
-      // We'll use updateUser which sends a confirmation email
+      // First verify current password by re-authenticating
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email: user?.email || '',
+        password: currentPassword,
+      });
+
+      if (signInError) {
+        toast.error('Current password is incorrect');
+        setChangingPassword(false);
+        return;
+      }
+
+      // Now update to new password
       const { error } = await supabase.auth.updateUser({
         password: newPassword
       });
 
       if (error) throw error;
 
-      toast.success('Password change request sent. Please check your email to confirm.');
+      toast.success('Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
@@ -251,6 +277,27 @@ export default function SettingsPage() {
 
               <form onSubmit={handleChangePassword} className="space-y-4">
                 <div className="space-y-2">
+                  <Label htmlFor="currentPassword">Current Password</Label>
+                  <div className="relative">
+                    <Input
+                      id="currentPassword"
+                      type={showCurrentPassword ? 'text' : 'password'}
+                      value={currentPassword}
+                      onChange={(e) => setCurrentPassword(e.target.value)}
+                      placeholder="Enter current password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    >
+                      {showCurrentPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                    </button>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
                   <Label htmlFor="newPassword">New Password</Label>
                   <div className="relative">
                     <Input
@@ -259,7 +306,7 @@ export default function SettingsPage() {
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
                       placeholder="Enter new password"
-                      minLength={6}
+                      minLength={8}
                       required
                     />
                     <button
@@ -271,7 +318,7 @@ export default function SettingsPage() {
                     </button>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Password must be at least 6 characters long
+                    Minimum 8 characters with at least one number and special character
                   </p>
                 </div>
 
@@ -284,7 +331,7 @@ export default function SettingsPage() {
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       placeholder="Confirm new password"
-                      minLength={6}
+                      minLength={8}
                       required
                     />
                     <button
@@ -299,11 +346,8 @@ export default function SettingsPage() {
 
                 <Button type="submit" disabled={changingPassword} className="w-full md:w-auto">
                   <Lock className="mr-2 h-4 w-4" />
-                  {changingPassword ? 'Changing Password...' : 'Change Password'}
+                  {changingPassword ? 'Verifying & Changing...' : 'Change Password'}
                 </Button>
-                <p className="text-xs text-muted-foreground">
-                  You will receive a confirmation email to verify the password change
-                </p>
               </form>
             </div>
 
