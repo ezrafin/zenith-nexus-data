@@ -2,3 +2,6 @@ project_id = "xyhrzgdpycmjqbbnvqdp"
 
 [functions.fetch-guardian-news]
 verify_jwt = false
+
+[functions.generate-forum-content]
+verify_jwt = false

@@ -1,15 +1,13 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchForumCategories, fetchForumTopics, ForumCategory, ForumTopic } from '@/lib/api';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ForumFilters, SortOption, DateFilter } from '@/components/forum/ForumFilters';
-import { ForumSorting } from '@/components/forum/ForumSorting';
 import { MessageSquare, Users, Clock, MessageCircle, TrendingUp, Briefcase, ArrowUpRight, Plus, HelpCircle, Newspaper, Coins, AlertCircle, RefreshCw, MoreHorizontal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useUser } from '@/context/UserContext';
-import { toast } from 'sonner';
 
 export default function ForumPage() {
   const [searchParams] = useSearchParams();
@@ -27,8 +25,13 @@ export default function ForumPage() {
   );
   const [dateFilter, setDateFilter] = useState<DateFilter>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Virtual scrolling state
+  const [visibleCount, setVisibleCount] = useState(20);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -38,14 +41,13 @@ export default function ForumPage() {
       ]);
       setCategories(categoriesData);
       setTopics(topicsData);
-    } catch (err: any) {
+    } catch (err) {
       console.error('Error loading forum data:', err);
       setError('Failed to load forum data. Please try again.');
-      toast.error('Failed to load forum data');
     } finally {
       setLoading(false);
     }
-  };
+  }, [categoryFilter]);
 
   // Sync categoryFilter with URL params when they change
   useEffect(() => {
@@ -57,7 +59,7 @@ export default function ForumPage() {
 
   useEffect(() => {
     loadData();
-  }, [categoryFilter]);
+  }, [loadData]);
 
   // Map category slugs to icons
   const categoryIcons: Record<string, typeof MessageSquare> = {
@@ -134,6 +136,36 @@ export default function ForumPage() {
 
     return filtered;
   }, [topics, sortBy, dateFilter, searchQuery]);
+
+  // Visible topics for infinite scroll
+  const visibleTopics = useMemo(() => 
+    filteredAndSortedTopics.slice(0, visibleCount),
+    [filteredAndSortedTopics, visibleCount]
+  );
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(20);
+  }, [categoryFilter, sortBy, dateFilter, searchQuery]);
+
+  // Infinite scroll observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleCount < filteredAndSortedTopics.length) {
+          setVisibleCount((prev) => Math.min(prev + 15, filteredAndSortedTopics.length));
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    observerRef.current = observer;
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, [visibleCount, filteredAndSortedTopics.length]);
 
   // Update URL when category filter changes
   const handleCategoryChange = (category: string | undefined) => {
@@ -296,55 +328,71 @@ export default function ForumPage() {
               )}
             </div>
           ) : (
-            <div className="rounded-xl border border-border/60 bg-card overflow-hidden">
-              {filteredAndSortedTopics.map((topic, index) => (
-                <Link
-                  key={topic.id}
-                  to={`/forum/${topic.id}`}
-                  className={cn(
-                    'flex items-center gap-4 p-4 md:p-6 hover:bg-secondary/50 transition-colors',
-                    index !== filteredAndSortedTopics.length - 1 && 'border-b border-border/60'
-                  )}
-                >
-                  {/* Avatar with level indicator */}
-                  <Link to={`/users/${topic.authorId || 'unknown'}`} className="relative flex-shrink-0">
-                    <img
-                      src={topic.authorAvatar}
-                      alt={topic.author}
-                      className="w-12 h-12 rounded-full bg-muted ring-2 ring-background"
-                    />
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center ring-2 ring-background">
-                      {Math.floor(Math.random() * 10) + 1}
+            <>
+              <div className="rounded-xl border border-border/60 bg-card overflow-hidden">
+                {visibleTopics.map((topic, index) => (
+                  <Link
+                    key={topic.id}
+                    to={`/forum/${topic.id}`}
+                    className={cn(
+                      'flex items-center gap-4 p-4 md:p-6 hover:bg-secondary/50 transition-colors',
+                      index !== visibleTopics.length - 1 && 'border-b border-border/60'
+                    )}
+                  >
+                    {/* Avatar with level indicator */}
+                    <div className="relative flex-shrink-0">
+                      <img
+                        src={topic.authorAvatar}
+                        alt={topic.author}
+                        className="w-12 h-12 rounded-full bg-muted ring-2 ring-background"
+                        loading="lazy"
+                      />
+                      <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center ring-2 ring-background">
+                        {Math.floor(Math.random() * 10) + 1}
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-medium text-base md:text-lg truncate hover:text-primary transition-colors">
+                        {topic.title}
+                      </h3>
+                      <div className="flex flex-wrap items-center gap-2 md:gap-3 text-xs text-muted-foreground mt-1.5">
+                        <span className="font-medium text-foreground/80">{topic.author}</span>
+                        <span className="hidden sm:inline">•</span>
+                        <span className="hidden sm:inline">{new Date(topic.date).toLocaleString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}</span>
+                        <span className="badge-secondary text-[10px] px-2 py-0.5">
+                          {categories.find(c => c.id === topic.categoryId)?.name || topic.categoryId}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground flex-shrink-0">
+                      <div className="flex items-center gap-1.5 min-w-[60px]">
+                        <MessageCircle className="h-4 w-4" />
+                        <span className="tabular-nums">{topic.replies}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 min-w-[140px] text-xs">
+                        <Clock className="h-3.5 w-3.5" />
+                        {new Date(topic.lastActivity).toLocaleString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}
+                      </div>
                     </div>
                   </Link>
-                  
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-medium text-base md:text-lg truncate hover:text-primary transition-colors">
-                      {topic.title}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-2 md:gap-3 text-xs text-muted-foreground mt-1.5">
-                      <span className="font-medium text-foreground/80">{topic.author}</span>
-                      <span className="hidden sm:inline">•</span>
-                      <span className="hidden sm:inline">{new Date(topic.date).toLocaleString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}</span>
-                      <span className="badge-secondary text-[10px] px-2 py-0.5">
-                        {categories.find(c => c.id === topic.categoryId)?.name || topic.categoryId}
-                      </span>
-                    </div>
+                ))}
+              </div>
+              
+              {/* Load more trigger */}
+              {visibleCount < filteredAndSortedTopics.length && (
+                <div ref={loadMoreRef} className="flex justify-center py-6">
+                  <div className="text-sm text-muted-foreground">
+                    Loading more discussions...
                   </div>
-                  
-                  <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground flex-shrink-0">
-                    <div className="flex items-center gap-1.5 min-w-[60px]">
-                      <MessageCircle className="h-4 w-4" />
-                      <span className="tabular-nums">{topic.replies}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5 min-w-[140px] text-xs">
-                      <Clock className="h-3.5 w-3.5" />
-                      {new Date(topic.lastActivity).toLocaleString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+              )}
+              
+              <div className="text-center py-4 text-xs text-muted-foreground">
+                Showing {visibleTopics.length} of {filteredAndSortedTopics.length} discussions
+              </div>
+            </>
           )}
         </div>
       </section>
