@@ -145,7 +145,7 @@ export default function ForumTopicPage() {
         <div className="container-narrow section-spacing text-center">
           <h1 className="heading-lg mb-4">Topic not found</h1>
           <Link to="/forum" className="text-primary hover:underline">
-            Return to forum
+            Back to forum
           </Link>
         </div>
       </Layout>

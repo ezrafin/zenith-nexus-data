@@ -157,7 +157,7 @@ export function ContentCollections({ className }: { className?: string }) {
       {collections.length === 0 ? (
         <div className="premium-card p-6 text-center">
           <FolderPlus className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-          <p className="text-muted-foreground mb-2">No collections yet</p>
+          <p className="text-muted-foreground mb-2">No collections yet.</p>
           {user && (
             <Button onClick={() => setShowCreateDialog(true)} size="sm" variant="outline">
               Create your first collection

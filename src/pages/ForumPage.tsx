@@ -288,7 +288,7 @@ export default function ForumPage() {
               <Link to="/forum/new">
                 <Button>
                   <Plus className="mr-2 h-4 w-4" />
-                  New Discussion
+                  New discussion
                 </Button>
               </Link>
             )}
@@ -306,7 +306,7 @@ export default function ForumPage() {
               <p className="text-muted-foreground mb-6">
                 {searchQuery || categoryFilter || dateFilter !== 'all'
                   ? 'Try adjusting your filters'
-                  : 'Be the first to start a discussion'}
+                  : 'Be the first to start a discussion.'}
               </p>
               {user && (
                 <Link to="/forum/new">

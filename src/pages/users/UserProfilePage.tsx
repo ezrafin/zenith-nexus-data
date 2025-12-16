@@ -159,7 +159,7 @@ export default function UserProfilePage() {
           <div className="container-wide max-w-4xl text-center">
             <h1 className="heading-lg mb-4">User not found</h1>
             <Link to="/forum" className="text-primary hover:underline">
-              Return to forum
+              Back to forum
             </Link>
           </div>
         </div>

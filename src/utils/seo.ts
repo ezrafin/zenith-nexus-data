@@ -16,7 +16,7 @@ export interface SEOData {
 const defaultSEO = {
   title: 'INVESTOPATRONUS — Your Guardian in Global Markets',
   description: 'Professional financial market analytics, real-time data, and expert insights for informed investment decisions.',
-  image: 'https://investopatronus.com/og-image.png',
+  image: 'https://investopatronus.com/investo.png',
   url: 'https://investopatronus.com',
   type: 'website',
 };

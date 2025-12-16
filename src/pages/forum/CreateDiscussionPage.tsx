@@ -135,7 +135,7 @@ export default function CreateDiscussionPage() {
       <div className="section-spacing">
         <div className="container-wide max-w-4xl">
 
-          <h1 className="heading-lg mb-8">Create New Discussion</h1>
+          <h1 className="heading-lg mb-8">Create new discussion</h1>
 
           <div className="premium-card p-6 md:p-8 space-y-6">
             <div className="space-y-2">

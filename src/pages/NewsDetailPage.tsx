@@ -86,7 +86,7 @@ export default function NewsDetailPage() {
   }
 
   const articleUrl = `${window.location.origin}/news/${id}`;
-  const articleImage = news.imageUrl || 'https://investopatronus.com/og-image.png';
+  const articleImage = news.imageUrl || 'https://investopatronus.com/investo.png';
   const articleAuthor = news.source || 'Unknown';
 
   const handleShare = async () => {

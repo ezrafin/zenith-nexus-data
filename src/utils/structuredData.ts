@@ -75,7 +75,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
     name: 'INVESTOPATRONUS',
     url: 'https://investopatronus.com',
     description: 'Professional financial market analytics, real-time data, and expert insights for informed investment decisions.',
-    logo: 'https://investopatronus.com/og-image.png',
+    logo: 'https://investopatronus.com/investo.png',
     sameAs: [
       'https://twitter.com/investopatronus',
     ],
@@ -113,7 +113,7 @@ export function generateArticleSchema(
       name: 'INVESTOPATRONUS',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://investopatronus.com/og-image.png',
+        url: 'https://investopatronus.com/investo.png',
       },
     },
     mainEntityOfPage: {

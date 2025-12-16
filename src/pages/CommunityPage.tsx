@@ -33,7 +33,7 @@ export default function CommunityPage() {
           <Tabs defaultValue="leaderboard" className="w-full">
             <TabsList className="mb-6">
               <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
-              <TabsTrigger value="activity">Activity Feed</TabsTrigger>
+              <TabsTrigger value="activity">Activity feed</TabsTrigger>
             </TabsList>
 
             <TabsContent value="leaderboard">
@@ -51,7 +51,7 @@ export default function CommunityPage() {
               <div className="grid lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
                   <div className="premium-card p-6">
-                    <h2 className="font-heading font-semibold text-lg mb-6">Activity Feed</h2>
+                    <h2 className="font-heading font-semibold text-lg mb-6">Activity feed</h2>
                     <ActivityFeed />
                   </div>
                 </div>

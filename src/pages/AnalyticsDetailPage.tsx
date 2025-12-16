@@ -92,7 +92,7 @@ export default function AnalyticsDetailPage() {
   }
 
   const articleUrl = `${window.location.origin}/analytics/${slug}`;
-  const articleImage = article.imageUrl || 'https://investopatronus.com/og-image.png';
+  const articleImage = article.imageUrl || 'https://investopatronus.com/investo.png';
 
   const handleShare = async () => {
     if (navigator.share) {

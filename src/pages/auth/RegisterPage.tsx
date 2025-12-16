@@ -151,7 +151,7 @@ export default function RegisterPage() {
                   <p>{error}</p>
                   {error.includes('already exists') && (
                     <Link to="/auth/login" className="underline hover:no-underline mt-1 block">
-                      Sign in instead →
+                      Sign in instead
                     </Link>
                   )}
                 </div>

@@ -81,7 +81,7 @@ export default function VideoDetailPage() {
                           <Play className="h-8 w-8 text-primary-foreground ml-1" />
                         </div>
                         <p className="text-sm text-muted-foreground">
-                          Video player is coming soon for this video
+                          Video player is coming soon.
                         </p>
                       </div>
                     </div>
