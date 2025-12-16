@@ -21,5 +21,6 @@ export {
   fetchForumCategories, 
   fetchForumTopics, 
   fetchForumComments, 
-  fetchTopicById 
+  fetchTopicById,
+  fetchDiscussionsForWatchlist 
 } from './forum';

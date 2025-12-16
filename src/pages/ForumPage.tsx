@@ -177,7 +177,6 @@ export default function ForumPage() {
       <SEOHead
         title="Forum — INVESTOPATRONUS Community Discussions"
         description="Browse investor discussions, ask questions, and share insights about global markets."
-        path="/forum"
       />
       {/* Hero */}
       <section className="border-b border-border">

@@ -96,7 +96,7 @@ export default function CreateDiscussionPage() {
 
     setSubmitting(true);
     try {
-      const tagsArray = validation.data.tags
+      const tagsArray = (validation.data.tags || '')
         .split(',')
         .map((tag) => tag.trim())
         .filter((tag) => tag.length > 0);

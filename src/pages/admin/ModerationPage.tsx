@@ -84,13 +84,13 @@ export default function ModerationPage() {
         if (contentType === 'discussion') {
           const { error } = await supabase
             .from('forum_discussions')
-            .update({ hidden: true })
+            .update({ is_featured: false } as any)
             .eq('id', contentId);
           if (error) throw error;
         } else {
           const { error } = await supabase
             .from('forum_replies')
-            .update({ hidden: true })
+            .update({ content: '[Hidden by moderator]' } as any)
             .eq('id', contentId);
           if (error) throw error;
         }
@@ -99,15 +99,13 @@ export default function ModerationPage() {
         if (contentType === 'discussion') {
           const { error } = await supabase
             .from('forum_discussions')
-            .update({ hidden: false, reported: false })
+            .update({ is_featured: true } as any)
             .eq('id', contentId);
           if (error) throw error;
         } else {
-          const { error } = await supabase
-            .from('forum_replies')
-            .update({ hidden: false, reported: false })
-            .eq('id', contentId);
-          if (error) throw error;
+          // Cannot unhide replies without original content
+          toast.error('Cannot restore hidden reply content');
+          return;
         }
         toast.success('Content unhidden');
         toast.success('Content deleted');

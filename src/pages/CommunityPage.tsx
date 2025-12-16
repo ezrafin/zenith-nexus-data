@@ -15,7 +15,6 @@ export default function CommunityPage() {
       <SEOHead
         title="Community Hub — INVESTOPATRONUS"
         description="Explore top contributors, community activity, and curated content collections for investors."
-        path="/community"
       />
       <div className="section-spacing">
         <div className="container-wide">

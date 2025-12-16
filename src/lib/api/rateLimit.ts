@@ -19,7 +19,7 @@ export async function checkRateLimit(
     // For now, we'll use a placeholder that will be handled server-side
     const ipAddress = '0.0.0.0'; // This should be set by server/edge function
 
-    const { data, error } = await supabase.rpc('check_rate_limit', {
+    const { data, error } = await (supabase.rpc as any)('check_rate_limit', {
       p_user_id: (await supabase.auth.getUser()).data.user?.id || null,
       p_ip_address: ipAddress,
       p_action_type: actionType,

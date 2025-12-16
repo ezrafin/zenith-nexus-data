@@ -18,7 +18,7 @@ interface Watchlist {
   id: string;
   name: string;
   description: string | null;
-  is_default: boolean;
+  is_default: boolean | null;
   items: WatchlistItem[];
 }
 
@@ -146,7 +146,6 @@ export default function WatchlistPage() {
         <SEOHead
           title="Watchlists — Sign in to track your assets"
           description="Create and manage personalized watchlists to monitor your favorite market instruments."
-          path="/watchlist"
         />
         <div className="min-h-[80vh] flex items-center justify-center">
           <div className="text-center">
@@ -167,7 +166,6 @@ export default function WatchlistPage() {
         <SEOHead
           title="Watchlists — INVESTOPATRONUS"
           description="Create and manage personalized watchlists to monitor your favorite market instruments."
-          path="/watchlist"
         />
         <div className="min-h-[80vh] flex items-center justify-center">
           <div className="text-center">
@@ -184,7 +182,6 @@ export default function WatchlistPage() {
       <SEOHead
         title="My Watchlists — INVESTOPATRONUS"
         description="Create and manage personalized watchlists to monitor your favorite market instruments."
-        path="/watchlist"
       />
       <div className="section-spacing">
         <div className="container-wide max-w-6xl">
