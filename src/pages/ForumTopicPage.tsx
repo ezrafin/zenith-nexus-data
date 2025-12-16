@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { fetchTopicById, fetchForumComments, ForumTopic, ForumComment } from '@/lib/api/index';
@@ -39,6 +39,7 @@ export default function ForumTopicPage() {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isFollowing, setIsFollowing] = useState(false);
   const [submittingReply, setSubmittingReply] = useState(false);
+  const replyEditorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     async function loadData() {
@@ -169,6 +170,10 @@ export default function ForumTopicPage() {
     }
   };
 
+  const handleScrollToReply = () => {
+    replyEditorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   if (loading) {
     return (
       <Layout>
@@ -248,6 +253,12 @@ export default function ForumTopicPage() {
               />
             </div>
           </div>
+
+          <div className="mt-2">
+            <Button size="sm" onClick={handleScrollToReply}>
+              Post reply
+            </Button>
+          </div>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <Link to={`/users/${topic.authorId || 'unknown'}`} className="flex items-center gap-3 hover:text-primary transition-colors">
@@ -303,13 +314,12 @@ export default function ForumTopicPage() {
         </section>
       )}
 
-      {/* Comments */}
+          {/* Comments */}
       <section className="section-spacing-sm">
         <div className="container-wide">
           <div className="space-y-4 md:space-y-6">
             {comments.map((comment, index) => {
               const level = getUserLevel(comment.rating);
-              const mockReputation = Math.floor(Math.random() * 500) + comment.rating;
               
               return (
                 <article
@@ -327,9 +337,6 @@ export default function ForumTopicPage() {
                             alt={comment.author}
                             className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-muted ring-2 ring-background"
                           />
-                          <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center ring-2 ring-background">
-                            {Math.floor(mockReputation / 100) + 1}
-                          </div>
                         </div>
                         <div className="md:mt-2 text-center md:text-left">
                           <Link to={`/users/${comment.authorId || 'unknown'}`} className="font-medium block hover:text-primary transition-colors">
@@ -340,10 +347,6 @@ export default function ForumTopicPage() {
                             {level.name === 'Expert' && <Award className="h-3 w-3" />}
                             {level.name}
                           </span>
-                          <div className="text-xs text-muted-foreground mt-2 hidden md:block">
-                            <div>Reputation: {mockReputation}</div>
-                            <div>Posts: {Math.floor(Math.random() * 200) + 10}</div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -391,7 +394,10 @@ export default function ForumTopicPage() {
 
           {/* Reply Form */}
           {user ? (
-            <div className="mt-8 md:mt-12 p-6 md:p-8 rounded-xl border border-border/60 bg-card">
+            <div
+              ref={replyEditorRef}
+              className="mt-8 md:mt-12 p-6 md:p-8 rounded-xl border border-border/60 bg-card"
+            >
               <h3 className="font-heading font-medium text-lg mb-4">Write a Reply</h3>
               <ReplyEditor
                 onSubmit={handleReplySubmit}

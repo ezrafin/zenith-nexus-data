@@ -339,17 +339,14 @@ export default function ForumPage() {
                       index !== visibleTopics.length - 1 && 'border-b border-border/60'
                     )}
                   >
-                    {/* Avatar with level indicator */}
-                    <div className="relative flex-shrink-0">
+                    {/* Author avatar */}
+                    <div className="flex-shrink-0">
                       <img
                         src={topic.authorAvatar}
                         alt={topic.author}
                         className="w-12 h-12 rounded-full bg-muted ring-2 ring-background"
                         loading="lazy"
                       />
-                      <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center ring-2 ring-background">
-                        {Math.floor(Math.random() * 10) + 1}
-                      </div>
                     </div>
                     
                     <div className="flex-1 min-w-0">
@@ -359,10 +356,24 @@ export default function ForumPage() {
                       <div className="flex flex-wrap items-center gap-2 md:gap-3 text-xs text-muted-foreground mt-1.5">
                         <span className="font-medium text-foreground/80">{topic.author}</span>
                         <span className="hidden sm:inline">•</span>
-                        <span className="hidden sm:inline">{new Date(topic.date).toLocaleString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}</span>
+                        <span className="hidden sm:inline">
+                          Last activity ·{' '}
+                          {new Date(topic.lastActivity).toLocaleString('en-US', {
+                            month: 'short',
+                            day: '2-digit',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          })}
+                        </span>
                         <span className="badge-secondary text-[10px] px-2 py-0.5">
                           {categories.find(c => c.id === topic.categoryId)?.name || topic.categoryId}
                         </span>
+                      </div>
+                      {/* Mobile replies hint */}
+                      <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-1 sm:hidden">
+                        <MessageCircle className="h-3.5 w-3.5" />
+                        <span className="tabular-nums">{topic.replies}</span>
+                        <span>replies</span>
                       </div>
                     </div>
                     
