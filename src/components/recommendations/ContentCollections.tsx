@@ -18,6 +18,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
+import { supabase } from '@/integrations/supabase/client';
 
 interface Collection {
   id: string;
@@ -31,43 +32,6 @@ interface Collection {
   user_id: string;
 }
 
-// Mock collections for demonstration
-const mockCollections: Collection[] = [
-  {
-    id: '1',
-    title: 'Crypto Trading Basics',
-    description: 'Essential resources for understanding cryptocurrency markets and trading fundamentals',
-    is_public: true,
-    cover_image_url: null,
-    created_at: new Date().toISOString(),
-    item_count: 12,
-    follower_count: 156,
-    user_id: 'mock',
-  },
-  {
-    id: '2',
-    title: 'Value Investing Masterclass',
-    description: 'Curated articles on Warren Buffett-style investing principles',
-    is_public: true,
-    cover_image_url: null,
-    created_at: new Date().toISOString(),
-    item_count: 8,
-    follower_count: 89,
-    user_id: 'mock',
-  },
-  {
-    id: '3',
-    title: 'Real Returns vs Bank Deposits',
-    description: 'Analysis comparing actual investment returns with traditional banking products after inflation',
-    is_public: true,
-    cover_image_url: null,
-    created_at: new Date().toISOString(),
-    item_count: 6,
-    follower_count: 234,
-    user_id: 'mock',
-  },
-];
-
 export function ContentCollections({ className }: { className?: string }) {
   const { user } = useUser();
   const [collections, setCollections] = useState<Collection[]>([]);
@@ -75,12 +39,45 @@ export function ContentCollections({ className }: { className?: string }) {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => {
-      setCollections(mockCollections);
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
+    let isMounted = true;
+
+    const loadCollections = async () => {
+      setLoading(true);
+      try {
+        let query = supabase
+          .from('content_collections' as any)
+          .select('*')
+          .order('created_at', { ascending: false });
+
+        if (user) {
+          query = query.eq('user_id', user.id);
+        } else {
+          query = query.eq('is_public', true);
+        }
+
+        const { data, error } = await query;
+        if (error) throw error;
+
+        if (isMounted) {
+          setCollections((data || []) as Collection[]);
+        }
+      } catch (error) {
+        console.error('Error loading collections:', error);
+        if (isMounted) {
+          setCollections([]);
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
+
+    loadCollections();
+
+    return () => {
+      isMounted = false;
+    };
   }, [user]);
 
   const handleCreateCollection = async (title: string, description: string, isPublic: boolean) => {
@@ -89,22 +86,31 @@ export function ContentCollections({ className }: { className?: string }) {
       return;
     }
 
-    // Mock create - in real implementation would use Supabase
-    const newCollection: Collection = {
-      id: Date.now().toString(),
-      title,
-      description,
-      is_public: isPublic,
-      cover_image_url: null,
-      created_at: new Date().toISOString(),
-      item_count: 0,
-      follower_count: 0,
-      user_id: user.id,
-    };
+    try {
+      const { data, error } = await supabase
+        .from('content_collections' as any)
+        .insert({
+          title,
+          description,
+          is_public: isPublic,
+          cover_image_url: null,
+          user_id: user.id,
+        })
+        .select()
+        .maybeSingle();
 
-    setCollections((prev) => [newCollection, ...prev]);
-    toast.success('Collection created');
-    setShowCreateDialog(false);
+      if (error) throw error;
+
+      if (data) {
+        setCollections((prev) => [data as Collection, ...prev]);
+      }
+
+      toast.success('Collection created');
+      setShowCreateDialog(false);
+    } catch (error: any) {
+      console.error('Error creating collection:', error);
+      toast.error(error.message || 'Failed to create collection');
+    }
   };
 
   if (loading) {
@@ -123,6 +129,9 @@ export function ContentCollections({ className }: { className?: string }) {
         <div className="flex items-center gap-2">
           <BookOpen className="h-5 w-5 text-primary" />
           <h3 className="font-semibold text-lg">Collections</h3>
+          <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400">
+            Beta
+          </span>
         </div>
         {user && (
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>

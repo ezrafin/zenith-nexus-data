@@ -56,25 +56,37 @@ export default function VideoDetailPage() {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Video Player Placeholder */}
+              {/* Video Player */}
               <div className="glass-card overflow-hidden">
-                <div className="aspect-video relative bg-secondary">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title}
-                    className="w-full h-full object-cover opacity-50"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition-transform">
-                        <Play className="h-8 w-8 text-primary-foreground ml-1" />
+                {video.videoUrl ? (
+                  <div className="aspect-video bg-black">
+                    <iframe
+                      src={video.videoUrl}
+                      title={video.title}
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-video relative bg-secondary">
+                    <img 
+                      src={video.thumbnail} 
+                      alt={video.title}
+                      className="w-full h-full object-cover opacity-50"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center mx-auto mb-4">
+                          <Play className="h-8 w-8 text-primary-foreground ml-1" />
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                          Video player is coming soon for this video
+                        </p>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Video player coming soon
-                      </p>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Video Info */}

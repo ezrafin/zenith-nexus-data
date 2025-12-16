@@ -13,6 +13,8 @@ export interface Video {
   thumbnail: string;
   relatedForumTopics: string[];
   publishedAt: string;
+  /** Optional URL to the video source (YouTube/Vimeo/MP4). When provided, the player will be shown. */
+  videoUrl?: string;
 }
 
 export const videoCategories = [

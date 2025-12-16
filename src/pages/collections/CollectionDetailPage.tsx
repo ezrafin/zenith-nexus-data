@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { toast } from 'sonner';
 import { UserAvatar } from '@/components/user/UserAvatar';
+import { supabase } from '@/integrations/supabase/client';
 
 interface Collection {
   id: string;
@@ -32,43 +33,6 @@ interface CollectionItem {
   title?: string;
 }
 
-// Mock data for collections (content_collections table not available)
-const mockCollections: Record<string, Collection> = {
-  '1': {
-    id: '1',
-    title: 'Investment Fundamentals',
-    description: 'Essential articles and discussions about investment basics',
-    is_public: true,
-    cover_image_url: null,
-    created_at: new Date().toISOString(),
-    user_id: 'mock-user',
-    user_profiles: {
-      display_name: 'Market Expert',
-      username: 'marketexpert',
-      avatar_url: null,
-    },
-  },
-};
-
-const mockItems: CollectionItem[] = [
-  {
-    id: '1',
-    content_type: 'article',
-    content_id: '1',
-    added_at: new Date().toISOString(),
-    notes: 'Great introduction to investing',
-    title: 'Understanding Market Basics',
-  },
-  {
-    id: '2',
-    content_type: 'forum',
-    content_id: '1',
-    added_at: new Date().toISOString(),
-    notes: null,
-    title: 'Discussion: Best strategies for beginners',
-  },
-];
-
 export default function CollectionDetailPage() {
   const { id } = useParams();
   const { user } = useUser();
@@ -87,13 +51,40 @@ export default function CollectionDetailPage() {
     if (!id) return;
 
     setLoading(true);
-    // Mock implementation - content_collections table not available
-    setTimeout(() => {
-      const mockCollection = mockCollections[id] || mockCollections['1'];
-      setCollection(mockCollection);
-      setItems(mockItems);
+    try {
+      const { data, error } = await supabase
+        .from('content_collections' as any)
+        .select('*, user_profiles:profiles(display_name, username, avatar_url)')
+        .eq('id', id)
+        .maybeSingle();
+
+      if (error) throw error;
+
+      if (!data) {
+        setCollection(null);
+        setItems([]);
+        return;
+      }
+
+      setCollection(data as Collection);
+
+      const { data: itemsData, error: itemsError } = await supabase
+        .from('content_collection_items' as any)
+        .select('*')
+        .eq('collection_id', id)
+        .order('position', { ascending: true });
+
+      if (itemsError) throw itemsError;
+
+      setItems((itemsData || []) as CollectionItem[]);
+    } catch (error) {
+      console.error('Error loading collection:', error);
+      toast.error('Failed to load collection');
+      setCollection(null);
+      setItems([]);
+    } finally {
       setLoading(false);
-    }, 500);
+    }
   };
 
   const toggleFollow = async () => {
@@ -108,9 +99,20 @@ export default function CollectionDetailPage() {
 
   const removeItem = async (itemId: string) => {
     if (!user || !collection || collection.user_id !== user.id) return;
-    // Mock implementation
-    setItems((prev) => prev.filter((item) => item.id !== itemId));
-    toast.success('Item removed');
+    try {
+      const { error } = await supabase
+        .from('content_collection_items' as any)
+        .delete()
+        .eq('id', itemId);
+
+      if (error) throw error;
+
+      setItems((prev) => prev.filter((item) => item.id !== itemId));
+      toast.success('Item removed');
+    } catch (error: any) {
+      console.error('Error removing item:', error);
+      toast.error(error.message || 'Failed to remove item');
+    }
   };
 
   const getItemLink = (item: CollectionItem) => {

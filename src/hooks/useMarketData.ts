@@ -14,6 +14,7 @@ interface UseMarketDataReturn {
   error: string | null;
   lastUpdated: Date | null;
   refresh: () => Promise<void>;
+  isDemo: boolean;
 }
 
 export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOptions): UseMarketDataReturn {
@@ -21,10 +22,12 @@ export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOp
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [isDemo, setIsDemo] = useState(false);
 
   const fetchData = useCallback(async () => {
     try {
       setError(null);
+      setIsDemo(false);
 
       // #region agent log: useMarketData fetch start
       fetch('http://127.0.0.1:7242/ingest/2b7bddaf-b9c1-43fe-9326-50f777bf1a54', {
@@ -69,6 +72,7 @@ export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOp
         if (responseData?.data && responseData.data.length > 0) {
           setData(responseData.data);
           setLastUpdated(new Date(responseData.timestamp));
+          setIsDemo(false);
         } else {
           // Fallback to local mock data so UI is not empty
           const fallback = await fetchMarketData('crypto');
@@ -91,6 +95,7 @@ export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOp
 
           setData(fallback);
           setLastUpdated(new Date());
+          setIsDemo(true);
         }
       } else {
         // For non-crypto types (indices, stocks, commodities, currencies), use fetch-stocks with type parameter
@@ -120,6 +125,7 @@ export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOp
         if (result?.data) {
           setData(result.data);
           setLastUpdated(new Date(result.timestamp));
+          setIsDemo(false);
         } else if (result?.error) {
           throw new Error(result.error);
         }
@@ -164,5 +170,6 @@ export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOp
     error,
     lastUpdated,
     refresh: fetchData,
+    isDemo,
   };
 }

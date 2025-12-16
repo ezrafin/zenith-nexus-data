@@ -259,7 +259,8 @@ export default function ForumTopicPage() {
         <div className="container-wide">
           <div className="space-y-4 md:space-y-6">
             {comments.map((comment, index) => {
-              const level = getUserLevel(comment.rating);
+              const reputation = comment.authorReputation ?? 0;
+              const level = reputation > 0 ? getUserLevel(reputation) : null;
               
               return (
                 <article
@@ -282,11 +283,13 @@ export default function ForumTopicPage() {
                           <Link to={`/users/${comment.authorId || 'unknown'}`} className="font-medium block hover:text-primary transition-colors">
                             {comment.author}
                           </Link>
-                          <span className={cn('inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mt-1', level.color)}>
-                            {level.name === 'Guru' && <Star className="h-3 w-3" />}
-                            {level.name === 'Expert' && <Award className="h-3 w-3" />}
-                            {level.name}
-                          </span>
+                          {level && (
+                            <span className={cn('inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mt-1', level.color)}>
+                              {level.name === 'Guru' && <Star className="h-3 w-3" />}
+                              {level.name === 'Expert' && <Award className="h-3 w-3" />}
+                              {level.name}
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>

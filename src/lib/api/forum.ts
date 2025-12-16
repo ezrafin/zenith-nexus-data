@@ -2,7 +2,8 @@ import { supabase } from '@/integrations/supabase/client';
 import type { ForumCategory, ForumTopic, ForumComment } from './types';
 import { getAuthorAvatar } from './utils';
 
-// Mock Forum Data
+// Dev-only mock forum data for local development. In production we rely on
+// real Supabase data and use mocks only in development builds.
 const mockForumCategories: ForumCategory[] = [
   { id: 'general', name: 'General Discussion', description: 'General topics about investing and markets', topicCount: 12, postCount: 150 },
   { id: 'stocks', name: 'Stock Analysis', description: 'Discuss individual stocks and equity analysis', topicCount: 8, postCount: 120 },
@@ -44,7 +45,10 @@ export async function fetchForumCategories(): Promise<ForumCategory[]> {
     }));
   } catch (error) {
     console.error('Error fetching forum categories:', error);
-    return mockForumCategories;
+    if (import.meta.env.DEV) {
+      return mockForumCategories;
+    }
+    return [];
   }
 }
 
@@ -64,24 +68,30 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
     
     if (error) throw error;
     
-    return (data || []).map(topic => ({
+    return (data || []).map((topic: any) => ({
       id: topic.id,
       categoryId: topic.category,
       title: topic.title,
       content: topic.content,
       author: topic.author_name,
+      authorId: topic.user_id,
       authorAvatar: getAuthorAvatar(topic.author_name),
       date: topic.created_at,
       replies: topic.reply_count || 0,
       views: topic.view_count || 0,
       lastActivity: topic.updated_at,
+      like_count: topic.like_count,
+      authorReputation: (topic as any).author_reputation ?? undefined,
     }));
   } catch (error) {
     console.error('Error fetching forum topics:', error);
-    if (categoryId) {
-      return mockForumTopics.filter(t => t.categoryId === categoryId);
+    if (import.meta.env.DEV) {
+      if (categoryId) {
+        return mockForumTopics.filter(t => t.categoryId === categoryId);
+      }
+      return mockForumTopics;
     }
-    return mockForumTopics;
+    return [];
   }
 }
 
@@ -95,18 +105,23 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
     
     if (error) throw error;
     
-    return (data || []).map(reply => ({
+    return (data || []).map((reply: any) => ({
       id: reply.id,
       topicId: reply.discussion_id,
       author: reply.author_name,
+      authorId: reply.user_id,
       authorAvatar: getAuthorAvatar(reply.author_name),
       content: reply.content,
       date: reply.created_at,
-      rating: 0,
+      rating: reply.reaction_count ?? 0,
+      authorReputation: (reply as any).author_reputation ?? undefined,
     }));
   } catch (error) {
     console.error('Error fetching forum comments:', error);
-    return mockForumComments.filter(c => c.topicId === topicId);
+    if (import.meta.env.DEV) {
+      return mockForumComments.filter(c => c.topicId === topicId);
+    }
+    return [];
   }
 }
 
@@ -136,6 +151,9 @@ export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
     };
   } catch (error) {
     console.error('Error fetching topic by id:', error);
-    return mockForumTopics.find(topic => topic.id === id) || null;
+    if (import.meta.env.DEV) {
+      return mockForumTopics.find(topic => topic.id === id) || null;
+    }
+    return null;
   }
 }

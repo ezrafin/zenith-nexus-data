@@ -1,6 +1,7 @@
 import type { NewsItem } from './types';
 
-// Mock News Data
+// Dev-only mock news data for local development. In production we prefer
+// to surface real API errors instead of showing synthetic content.
 const mockNews: NewsItem[] = [
   {
     id: '1',
@@ -35,11 +36,14 @@ export async function fetchNews(filters?: { market?: string; source?: string }):
     
     if (error) {
       console.error('Error fetching news:', error);
-      let result = [...mockNews];
-      if (filters?.market && filters.market !== 'all') {
-        result = result.filter(item => item.market === filters.market);
+      if (import.meta.env.DEV) {
+        let result = [...mockNews];
+        if (filters?.market && filters.market !== 'all') {
+          result = result.filter(item => item.market === filters.market);
+        }
+        return result;
       }
-      return result;
+      throw error;
     }
     
     return (data || []).map(article => ({
@@ -54,11 +58,14 @@ export async function fetchNews(filters?: { market?: string; source?: string }):
     }));
   } catch (error) {
     console.error('Error in fetchNews:', error);
-    let result = [...mockNews];
-    if (filters?.market && filters.market !== 'all') {
-      result = result.filter(item => item.market === filters.market);
+    if (import.meta.env.DEV) {
+      let result = [...mockNews];
+      if (filters?.market && filters.market !== 'all') {
+        result = result.filter(item => item.market === filters.market);
+      }
+      return result;
     }
-    return result;
+    throw error;
   }
 }
 
@@ -74,7 +81,10 @@ export async function fetchNewsById(id: string): Promise<NewsItem | null> {
     
     if (error || !data) {
       console.error('Error fetching news by id:', error);
-      return mockNews.find(item => item.id === id) || null;
+      if (import.meta.env.DEV) {
+        return mockNews.find(item => item.id === id) || null;
+      }
+      return null;
     }
     
     return {
@@ -89,6 +99,6 @@ export async function fetchNewsById(id: string): Promise<NewsItem | null> {
     };
   } catch (error) {
     console.error('Error in fetchNewsById:', error);
-    return mockNews.find(item => item.id === id) || null;
+    return null;
   }
 }

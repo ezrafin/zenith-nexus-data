@@ -75,6 +75,7 @@ export interface ForumTopic {
   views: number;
   lastActivity: string;
   like_count?: number;
+  authorReputation?: number;
 }
 
 export interface ForumComment {
@@ -86,4 +87,5 @@ export interface ForumComment {
   content: string;
   date: string;
   rating: number;
+   authorReputation?: number;
 }

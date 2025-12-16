@@ -1,7 +1,8 @@
 import type { MarketData } from './types';
 import { delay } from './utils';
 
-// Mock Market Data
+// Dev-only mock market data for local development and testing.
+// In production we avoid showing synthetic prices.
 const mockIndices: MarketData[] = [
   { symbol: 'SPX', name: 'S&P 500', price: 6012.50, change: 45.30, changePercent: 0.76, high: 6025.00, low: 5980.00 },
   { symbol: 'DJI', name: 'Dow Jones', price: 44650.00, change: 280.50, changePercent: 0.63, high: 44720.00, low: 44300.00 },
@@ -43,8 +44,14 @@ const mockCurrencies: MarketData[] = [
 ];
 
 export async function fetchMarketData(type: 'indices' | 'stocks' | 'crypto' | 'commodities' | 'currencies'): Promise<MarketData[]> {
+  // In development we return mock data for faster iteration.
   await delay(600);
-  
+
+  if (!import.meta.env.DEV) {
+    // In production we do not serve mocked market data.
+    return [];
+  }
+
   switch (type) {
     case 'indices':
       return mockIndices;

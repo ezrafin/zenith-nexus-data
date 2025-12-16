@@ -28,6 +28,22 @@ export default function UserProfilePage() {
     }
   }, [userId, currentUser, currentProfile]);
 
+  const loadFollowStats = async (targetUserId: string) => {
+    const [{ count: followers }, { count: following }] = await Promise.all([
+      supabase
+        .from('user_follows' as any)
+        .select('*', { count: 'exact', head: true })
+        .eq('followed_id', targetUserId),
+      supabase
+        .from('user_follows' as any)
+        .select('*', { count: 'exact', head: true })
+        .eq('follower_id', targetUserId),
+    ]);
+
+    setFollowerCount(followers || 0);
+    setFollowingCount(following || 0);
+  };
+
   const loadProfile = async () => {
     if (!userId) return;
 
@@ -53,8 +69,7 @@ export default function UserProfilePage() {
       if (profileData?.joined_at) {
         setJoinedAt(profileData.joined_at);
       }
-      setFollowerCount(Math.floor(Math.random() * 50));
-      setFollowingCount(Math.floor(Math.random() * 30));
+      await loadFollowStats(currentUser.id);
       setLoading(false);
       return;
     }
@@ -82,6 +97,7 @@ export default function UserProfilePage() {
           privacy_level: 'public',
         });
         setJoinedAt(data.joined_at || data.created_at);
+        await loadFollowStats(data.id);
       } else {
         // User not found in profiles
         setProfile({
@@ -96,8 +112,7 @@ export default function UserProfilePage() {
           privacy_level: 'public',
         });
       }
-      setFollowerCount(Math.floor(Math.random() * 50));
-      setFollowingCount(Math.floor(Math.random() * 30));
+      await loadFollowStats(userId);
     } catch (error) {
       console.error('Error loading profile:', error);
       setProfile({

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { UserPlus, UserCheck } from 'lucide-react';
 import { useUser } from '@/context/UserContext';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
+import { useUserFollow } from '@/hooks/useUserFollow';
 
 interface FollowButtonProps {
   userId: string;
@@ -14,27 +14,7 @@ interface FollowButtonProps {
 
 export function FollowButton({ userId, className, variant = 'outline', size = 'sm' }: FollowButtonProps) {
   const { user } = useUser();
-  const [isFollowing, setIsFollowing] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const toggleFollow = async () => {
-    if (!user) {
-      toast.error('Please sign in to follow users');
-      return;
-    }
-
-    if (user.id === userId) {
-      return;
-    }
-
-    setLoading(true);
-    // Mock toggle - would use Supabase in real implementation
-    setTimeout(() => {
-      setIsFollowing(!isFollowing);
-      toast.success(isFollowing ? 'Unfollowed' : 'Following');
-      setLoading(false);
-    }, 300);
-  };
+  const { isFollowing, loading, toggleFollow } = useUserFollow(userId);
 
   if (!user || user.id === userId) {
     return null;

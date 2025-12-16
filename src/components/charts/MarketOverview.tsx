@@ -18,7 +18,7 @@ const topByMarketCap = (list?: MarketData[], limit = 20): MarketData[] =>
 export function MarketOverview() {
   const { data: indices } = useMarketData({ type: 'indices', refreshInterval: 60000 });
   const { data: stocks } = useMarketData({ type: 'stocks', refreshInterval: 60000 });
-  const { data: crypto } = useMarketData({ type: 'crypto', refreshInterval: 120000 });
+  const { data: crypto, isDemo: isCryptoDemo } = useMarketData({ type: 'crypto', refreshInterval: 120000 });
 
   const topIndices = topByMarketCap(indices, 20);
   const topStocks = topByMarketCap(stocks, 20);
@@ -45,7 +45,14 @@ export function MarketOverview() {
 
   return (
     <div className="premium-card p-6">
-      <h2 className="font-heading font-semibold text-lg mb-6">Market Overview</h2>
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="font-heading font-semibold text-lg">Market Overview</h2>
+        {isCryptoDemo && (
+          <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400">
+            Demo data
+          </span>
+        )}
+      </div>
 
       {/* Summary Stats */}
       <div className="grid grid-cols-3 gap-4 mb-6">

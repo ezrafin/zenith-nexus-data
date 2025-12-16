@@ -1,7 +1,7 @@
 import type { Company } from './types';
 import { delay } from './utils';
 
-// Mock Companies Data
+// Dev-only mock companies data used before full backend integration.
 const mockCompanies: Company[] = [
   {
     slug: 'nvidia',
@@ -18,11 +18,19 @@ const mockCompanies: Company[] = [
 ];
 
 export async function fetchCompanies(): Promise<Company[]> {
-  await delay(800);
+  // In production we avoid serving mock company data; return empty array instead.
+  await delay(200);
+  if (!import.meta.env.DEV) {
+    return [];
+  }
   return mockCompanies;
 }
 
 export async function fetchCompanyBySlug(slug: string): Promise<Company | null> {
-  await delay(500);
+  // In production, prefer real data; this mock helper is dev-only.
+  await delay(200);
+  if (!import.meta.env.DEV) {
+    return null;
+  }
   return mockCompanies.find(c => c.slug === slug) || null;
 }
