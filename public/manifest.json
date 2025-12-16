@@ -9,12 +9,27 @@
   "icons": [
     {
       "src": "/favicon.png",
-      "sizes": "192x192",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon-48.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     },
     {
       "src": "/investo.png",
-      "sizes": "180x180",
+      "sizes": "463x539",
       "type": "image/png"
     }
   ]
