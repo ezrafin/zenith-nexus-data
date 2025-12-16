@@ -47,10 +47,10 @@ export function UserAvatar({ profile, size = 'md', showReputation = false, class
       <Avatar className={sizeClasses[size]}>
         <AvatarImage src={profile?.avatar_url || undefined} alt={profile?.display_name || 'User'} />
         <AvatarFallback className="bg-primary/10 text-primary">
-          {getInitials(profile?.display_name || profile?.username)}
+          {getInitials(profile?.display_name ?? profile?.username ?? null)}
         </AvatarFallback>
       </Avatar>
-      {showReputation && reputationInfo && (
+      {showReputation && reputationInfo && profile && (
         <div
           className={cn(
             'absolute -bottom-1 -right-1 rounded-full border-2 border-background flex items-center justify-center text-white text-xs font-bold',

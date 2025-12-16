@@ -7,8 +7,8 @@ interface SimpleChartProps {
 }
 
 // Generate realistic market-like data
-function generateChartData() {
-  const data = [];
+function generateChartData(): { day: number; value: number }[] {
+  const data: { day: number; value: number }[] = [];
   let value = 100 + Math.random() * 20;
   
   for (let i = 0; i < 30; i++) {

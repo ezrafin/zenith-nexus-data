@@ -145,13 +145,13 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
 
 export async function fetchDiscussionsForWatchlist(userId: string): Promise<ForumTopic[]> {
   try {
-    const { data, error } = await supabase.rpc('get_discussions_for_watchlist', {
+    const { data, error } = await (supabase.rpc as any)('get_discussions_for_watchlist', {
       p_user_id: userId,
     });
 
     if (error) throw error;
 
-    return (data || []).map((topic: any) => ({
+    return ((data || []) as any[]).map((topic: any) => ({
       id: topic.id,
       categoryId: topic.category,
       title: topic.title,
