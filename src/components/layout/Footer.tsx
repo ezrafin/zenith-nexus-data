@@ -43,11 +43,12 @@ const footerLinks = {
     name: 'Analytics',
     href: '/analytics'
   }, {
-    name: 'Companies',
-    href: '/companies'
-  }, {
     name: 'Forum',
     href: '/forum'
+  }],
+  companies: [{
+    name: 'Companies',
+    href: '/companies'
   }],
   community: [{
     name: 'About Us',
@@ -61,13 +62,6 @@ const footerLinks = {
   }, {
     name: 'Authors',
     href: '/authors'
-  }],
-  resources: [{
-    name: 'Browse Topics',
-    href: '/topics'
-  }, {
-    name: 'Events',
-    href: '/events'
   }],
   legal: [{
     name: 'Terms of Service',
@@ -98,6 +92,18 @@ export function Footer() {
             </p>
           </div>
 
+          {/* Content */}
+          <div>
+            <h3 className="text-sm font-semibold mb-4">Content</h3>
+            <ul className="space-y-2.5">
+              {footerLinks.content.map(link => <li key={link.href}>
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {link.name}
+                  </Link>
+                </li>)}
+            </ul>
+          </div>
+
           {/* Markets */}
           <div>
             <h3 className="text-sm font-semibold mb-4">Markets</h3>
@@ -124,18 +130,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Content */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Content</h3>
-            <ul className="space-y-2.5">
-              {footerLinks.content.map(link => <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {link.name}
-                  </Link>
-                </li>)}
-            </ul>
-          </div>
-
           {/* Community */}
           <div>
             <h3 className="text-sm font-semibold mb-4">Community</h3>
@@ -148,16 +142,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources & Legal */}
+          {/* Companies */}
           <div>
-            <h3 className="text-sm font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2.5 mb-6">
-              {footerLinks.resources.map(link => <li key={link.href}>
+            <h3 className="text-sm font-semibold mb-4">Companies</h3>
+            <ul className="space-y-2.5">
+              {footerLinks.companies.map(link => <li key={link.href}>
                   <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {link.name}
                   </Link>
                 </li>)}
             </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
             <h3 className="text-sm font-semibold mb-4">Legal</h3>
             <ul className="space-y-2.5">
               {footerLinks.legal.map(link => <li key={link.href}>

@@ -91,6 +91,59 @@
     --sidebar-border: 222 30% 15%;
     --sidebar-ring: 234 89% 67%;
   }
+
+  .desert {
+    --background: 35 25% 95%;
+    --foreground: 25 30% 15%;
+
+    --card: 35 20% 98%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 35 20% 98%;
+    --popover-foreground: 25 30% 15%;
+
+    --primary: 20 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 25 30% 15%;
+
+    --muted: 35 25% 88%;
+    --muted-foreground: 25 20% 40%;
+
+    --accent: 25 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 20 80% 55%;
+
+    --positive: 160 60% 40%;
+    --negative: 0 65% 55%;
+
+    --chart-1: 20 80% 55%;
+    --chart-2: 25 70% 60%;
+    --chart-3: 30 60% 50%;
+    --chart-4: 160 60% 40%;
+    --chart-5: 0 65% 55%;
+
+    --glow: 20 80% 55%;
+
+    --sidebar-background: 35 25% 92%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 20 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 30% 88%;
+    --sidebar-accent-foreground: 25 30% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 20 80% 55%;
+  }
 }
 
 @layer base {

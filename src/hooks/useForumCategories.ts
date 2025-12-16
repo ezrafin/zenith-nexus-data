@@ -5,8 +5,8 @@ export function useForumCategories() {
   return useQuery<ForumCategory[], Error>({
     queryKey: ['forumCategories'],
     queryFn: fetchForumCategories,
-    staleTime: 5 * 60 * 1000, // 5 minutes - categories rarely change
-    gcTime: 10 * 60 * 1000, // 10 minutes
+    staleTime: 15 * 60 * 1000, // 15 minutes - categories rarely change
+    gcTime: 30 * 60 * 1000, // 30 minutes
   });
 }
 

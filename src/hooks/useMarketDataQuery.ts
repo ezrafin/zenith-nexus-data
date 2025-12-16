@@ -80,7 +80,7 @@ async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'c
 
 export function useMarketDataQuery({ 
   type, 
-  refreshInterval = 60000,
+  refreshInterval = 120000,
   staleTime = 30000, // 30 seconds default, align with server cache
 }: UseMarketDataQueryOptions): UseMarketDataQueryReturn {
   const { data, isLoading, error, dataUpdatedAt, refetch } = useQuery({

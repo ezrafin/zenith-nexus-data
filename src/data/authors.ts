@@ -54,6 +54,72 @@ export const authors: AuthorProfile[] = [
     post_count: 134,
     comment_count: 410,
   },
+  {
+    id: 'elias-wolfenstein',
+    username: 'elias_wolfenstein',
+    display_name: 'Elias Wolfenstein',
+    avatar_url:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    bio: 'European markets strategist specializing in cross-border M&A analysis and regional economic trends across the EU.',
+    reputation: 2180,
+    post_count: 142,
+    comment_count: 678,
+  },
+  {
+    id: 'anastasia-petrova',
+    username: 'anastasia_petrova',
+    display_name: 'Anastasia Petrova',
+    avatar_url:
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
+    bio: 'Emerging markets expert with deep knowledge of Eastern European economies and energy sector dynamics.',
+    reputation: 1920,
+    post_count: 128,
+    comment_count: 534,
+  },
+  {
+    id: 'luca-montefiore',
+    username: 'luca_montefiore',
+    display_name: 'Luca Montefiore',
+    avatar_url:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
+    bio: 'Mediterranean markets analyst focusing on luxury goods, tourism sector investments, and Italian financial markets.',
+    reputation: 1750,
+    post_count: 98,
+    comment_count: 456,
+  },
+  {
+    id: 'isabelle-dubois',
+    username: 'isabelle_dubois',
+    display_name: 'Isabelle Dubois',
+    avatar_url:
+      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop&crop=face',
+    bio: 'Sustainable finance advisor and ESG investment specialist with expertise in green bonds and impact investing.',
+    reputation: 2010,
+    post_count: 167,
+    comment_count: 723,
+  },
+  {
+    id: 'magnus-thorvaldsen',
+    username: 'magnus_thorvaldsen',
+    display_name: 'Magnus Thorvaldsen',
+    avatar_url:
+      'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face',
+    bio: 'Nordic markets specialist covering Scandinavian equities, renewable energy investments, and sovereign wealth fund strategies.',
+    reputation: 1890,
+    post_count: 115,
+    comment_count: 612,
+  },
+  {
+    id: 'xu-meiling',
+    username: 'xu_meiling',
+    display_name: 'Xu Meiling',
+    avatar_url:
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face',
+    bio: 'Asia-Pacific markets analyst specializing in Chinese equities, technology sector trends, and cross-border investment flows.',
+    reputation: 2230,
+    post_count: 178,
+    comment_count: 845,
+  },
 ];
 
 

@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Layout } from '@/components/layout/Layout';
-import { fetchTopicById, fetchForumComments, ForumTopic, ForumComment } from '@/lib/api/index';
+import { fetchTopicById, ForumTopic, ForumComment } from '@/lib/api/index';
+import { useForumComments } from '@/hooks/useForumComments';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ReplyEditor } from '@/components/forum/ReplyEditor';
 import { ReactionButton } from '@/components/forum/ReactionButton';
@@ -36,9 +38,7 @@ function getUserLevel(rating: number) {
 export default function ForumTopicPage() {
   const { topicId } = useParams();
   const { user, profile } = useUser();
-  const [topic, setTopic] = useState<ForumTopic | null>(null);
-  const [comments, setComments] = useState<ForumComment[]>([]);
-  const [loading, setLoading] = useState(true);
+  const queryClient = useQueryClient();
   const [submittingReply, setSubmittingReply] = useState(false);
   const replyEditorRef = useRef<HTMLDivElement | null>(null);
   const {
@@ -50,26 +50,22 @@ export default function ForumTopicPage() {
     toggleFollow,
   } = useDiscussionActions(topicId);
 
-  useEffect(() => {
-    async function loadData() {
-      if (topicId) {
-        try {
-          const [topicData, commentsData] = await Promise.all([
-            fetchTopicById(topicId),
-            fetchForumComments(topicId),
-          ]);
-          setTopic(topicData);
-          setComments(commentsData);
-        } catch (error) {
-          console.error('Error loading topic:', error);
-        } finally {
-          setLoading(false);
-        }
-      }
-    }
+  // Load topic with React Query
+  const { data: topic, isLoading: topicLoading } = useQuery<ForumTopic | null, Error>({
+    queryKey: ['forumTopic', topicId],
+    queryFn: () => topicId ? fetchTopicById(topicId) : null,
+    enabled: !!topicId,
+    staleTime: 30 * 1000, // 30 seconds - topic details update frequently
+    gcTime: 5 * 60 * 1000, // 5 minutes
+  });
 
-    loadData();
-  }, [topicId]);
+  // Load comments with React Query
+  const { data: comments = [], isLoading: commentsLoading } = useForumComments({
+    topicId: topicId || '',
+    enabled: !!topicId,
+  });
+
+  const loading = topicLoading || commentsLoading;
 
   const handleShare = async () => {
     try {
@@ -106,9 +102,11 @@ export default function ForumTopicPage() {
 
       if (error) throw error;
 
-      // Refresh comments
-      const commentsData = await fetchForumComments(topicId);
-      setComments(commentsData);
+      // Invalidate cache to refresh comments and update reply count
+      queryClient.invalidateQueries({ queryKey: ['forumComments', topicId] });
+      queryClient.invalidateQueries({ queryKey: ['forumTopic', topicId] });
+      queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
+      
       toast.success('Reply posted');
     } catch (error: any) {
       toast.error(error.message || 'Failed to post reply');

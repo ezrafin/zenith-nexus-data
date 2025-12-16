@@ -1,11 +1,11 @@
 import { useMarketDataQuery } from './useMarketDataQuery';
 
 export function useAllMarkets() {
-  const indices = useMarketDataQuery({ type: 'indices', refreshInterval: 60000, staleTime: 30000 });
-  const stocks = useMarketDataQuery({ type: 'stocks', refreshInterval: 60000, staleTime: 30000 });
+  const indices = useMarketDataQuery({ type: 'indices', refreshInterval: 120000, staleTime: 30000 });
+  const stocks = useMarketDataQuery({ type: 'stocks', refreshInterval: 120000, staleTime: 30000 });
   const crypto = useMarketDataQuery({ type: 'crypto', refreshInterval: 120000, staleTime: 60000 });
-  const commodities = useMarketDataQuery({ type: 'commodities', refreshInterval: 60000, staleTime: 30000 });
-  const currencies = useMarketDataQuery({ type: 'currencies', refreshInterval: 60000, staleTime: 30000 });
+  const commodities = useMarketDataQuery({ type: 'commodities', refreshInterval: 120000, staleTime: 30000 });
+  const currencies = useMarketDataQuery({ type: 'currencies', refreshInterval: 120000, staleTime: 30000 });
 
   return {
     indices: {

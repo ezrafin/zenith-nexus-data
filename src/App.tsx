@@ -9,6 +9,7 @@ import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { educationRoutes } from "@/lib/educationRoutes";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { CookieConsentBanner } from "@/components/cookies/CookieConsentBanner";
 
 // Eager load critical pages
 import Index from "./pages/Index";
@@ -29,8 +30,6 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const CareersPage = lazy(() => import("./pages/CareersPage"));
 const AuthorsPage = lazy(() => import("./pages/AuthorsPage"));
-const TopicsPage = lazy(() => import("./pages/TopicsPage"));
-const EventsPage = lazy(() => import("./pages/EventsPage"));
 const DisclaimerPage = lazy(() => import("./pages/DisclaimerPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const TermsPage = lazy(() => import("./pages/TermsPage"));
@@ -105,8 +104,6 @@ const App = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/authors" element={<AuthorsPage />} />
-                <Route path="/topics" element={<TopicsPage />} />
-                <Route path="/events" element={<EventsPage />} />
                 <Route path="/disclaimer" element={<DisclaimerPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
@@ -146,6 +143,7 @@ const App = () => {
               </Routes>
             </Suspense>
           </BrowserRouter>
+          <CookieConsentBanner />
           <Analytics />
           <SpeedInsights />
         </TooltipProvider>

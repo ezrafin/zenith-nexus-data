@@ -164,23 +164,42 @@ export default function AdvancedArticlesPage() {
   const [completedIds, setCompletedIds] = useState<string[]>([]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     try {
-      const stored = typeof window !== 'undefined' ? localStorage.getItem('education-advanced-articles-read') : null;
+      const stored = localStorage.getItem('education-advanced-articles-read');
       if (stored) {
-        setCompletedIds(JSON.parse(stored));
+        const parsed = JSON.parse(stored);
+        // Validate it's an array of strings
+        if (Array.isArray(parsed) && parsed.every(id => typeof id === 'string')) {
+          setCompletedIds(parsed);
+        } else {
+          // Clear corrupted data
+          localStorage.removeItem('education-advanced-articles-read');
+        }
       }
-    } catch {
-      // ignore
+    } catch (e) {
+      console.error('Error loading completed articles:', e);
+      // Clear corrupted data
+      try {
+        localStorage.removeItem('education-advanced-articles-read');
+      } catch {
+        // Ignore cleanup errors
+      }
     }
   }, []);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     try {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('education-advanced-articles-read', JSON.stringify(completedIds));
+      localStorage.setItem('education-advanced-articles-read', JSON.stringify(completedIds));
+    } catch (e) {
+      console.error('Error saving completed articles:', e);
+      // Check if quota exceeded
+      if (e instanceof DOMException && e.name === 'QuotaExceededError') {
+        console.warn('localStorage quota exceeded');
       }
-    } catch {
-      // ignore
     }
   }, [completedIds]);
 

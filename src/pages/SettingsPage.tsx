@@ -9,7 +9,7 @@ import { useUserPreferences } from '@/hooks/useUserPreferences';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Save, Bell, Palette, Globe, RefreshCw, TrendingUp, Lock, Eye, EyeOff } from 'lucide-react';
+import { Save, Bell, Globe, Lock, Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function SettingsPage() {
@@ -139,65 +139,6 @@ export default function SettingsPage() {
           <h1 className="heading-lg mb-8">Settings</h1>
 
           <div className="space-y-6">
-            {/* Appearance */}
-            <div className="premium-card p-6">
-              <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-                <Palette className="h-5 w-5" />
-                Appearance
-              </h2>
-
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="theme">Theme</Label>
-                  <Select
-                    value={localPrefs.theme}
-                    onValueChange={(value: 'light' | 'dark' | 'auto') =>
-                      setLocalPrefs({ ...localPrefs, theme: value })
-                    }
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="light">Light</SelectItem>
-                      <SelectItem value="dark">Dark</SelectItem>
-                      <SelectItem value="auto">Auto (System)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-
-            {/* Market Data Preferences */}
-            <div className="premium-card p-6">
-              <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-                <TrendingUp className="h-5 w-5" />
-                Market Data
-              </h2>
-
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="refreshInterval">Auto-refresh Interval (seconds)</Label>
-                  <Select
-                    value={(localPrefs.refresh_interval / 1000).toString()}
-                    onValueChange={(value) =>
-                      setLocalPrefs({ ...localPrefs, refresh_interval: parseInt(value) * 1000 })
-                    }
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="30">30 seconds</SelectItem>
-                      <SelectItem value="60">1 minute</SelectItem>
-                      <SelectItem value="120">2 minutes</SelectItem>
-                      <SelectItem value="300">5 minutes</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-
             {/* Notifications */}
             <div className="premium-card p-6">
               <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">

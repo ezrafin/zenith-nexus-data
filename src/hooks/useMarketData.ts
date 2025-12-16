@@ -17,7 +17,7 @@ interface UseMarketDataReturn {
   isDemo: boolean;
 }
 
-export function useMarketData({ type, refreshInterval = 60000 }: UseMarketDataOptions): UseMarketDataReturn {
+export function useMarketData({ type, refreshInterval = 120000 }: UseMarketDataOptions): UseMarketDataReturn {
   const [data, setData] = useState<MarketData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

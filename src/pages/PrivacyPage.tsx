@@ -51,9 +51,65 @@ export default function PrivacyPage() {
 
             <div className="glass-card p-8">
               <h2 className="heading-sm mb-4">5. Cookies and Tracking</h2>
-              <p className="body-md">
-                We use cookies and similar tracking technologies to track activity on our platform and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+              <p className="body-md mb-4">
+                We use cookies and similar tracking technologies to track activity on our platform and hold certain information. 
+                You can manage your cookie preferences at any time through the cookie consent banner or by contacting us.
               </p>
+              
+              <h3 className="font-semibold text-base mb-3 mt-6">Types of Cookies We Use</h3>
+              
+              <div className="space-y-4 mb-4">
+                <div className="border-l-2 border-primary pl-4">
+                  <h4 className="font-semibold mb-2">Essential Cookies</h4>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    These cookies are necessary for the website to function properly and cannot be disabled. 
+                    They are usually set in response to actions made by you, such as setting your privacy preferences, 
+                    logging in, or filling in forms.
+                  </p>
+                  <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
+                    <li><strong>Purpose:</strong> Authentication, session management, security</li>
+                    <li><strong>Duration:</strong> Session or until logout</li>
+                    <li><strong>Examples:</strong> Authentication tokens, session identifiers</li>
+                  </ul>
+                </div>
+
+                <div className="border-l-2 border-secondary pl-4">
+                  <h4 className="font-semibold mb-2">Analytics Cookies</h4>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    These cookies help us understand how visitors interact with our website by collecting and reporting 
+                    information anonymously. We use Vercel Analytics for this purpose.
+                  </p>
+                  <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
+                    <li><strong>Purpose:</strong> Website analytics, performance monitoring, user behavior analysis</li>
+                    <li><strong>Duration:</strong> Up to 2 years</li>
+                    <li><strong>Examples:</strong> Vercel Analytics cookies</li>
+                    <li><strong>Opt-out:</strong> You can disable these cookies through the cookie consent banner</li>
+                  </ul>
+                </div>
+
+                <div className="border-l-2 border-accent pl-4">
+                  <h4 className="font-semibold mb-2">Preference Cookies</h4>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    These cookies allow our website to remember information that changes the way the website behaves 
+                    or looks, such as your preferred language or region, theme preferences, and UI settings.
+                  </p>
+                  <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
+                    <li><strong>Purpose:</strong> Remember user preferences and settings</li>
+                    <li><strong>Duration:</strong> Up to 1 year</li>
+                    <li><strong>Examples:</strong> Theme preferences (light/dark mode), sidebar state, language settings</li>
+                    <li><strong>Opt-out:</strong> You can disable these cookies through the cookie consent banner</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-muted rounded-lg">
+                <p className="text-sm">
+                  <strong>Managing Cookies:</strong> You can control and manage cookies in various ways. 
+                  Please keep in mind that removing or blocking cookies can impact your user experience and 
+                  parts of our website may no longer be fully accessible. Most browsers automatically accept 
+                  cookies, but you can modify your browser settings to decline cookies if you prefer.
+                </p>
+              </div>
             </div>
 
             <div className="glass-card p-8">

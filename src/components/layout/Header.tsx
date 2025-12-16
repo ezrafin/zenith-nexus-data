@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, GraduationCap, BookOpen, Award, Rocket, User, LogOut, Settings, Bookmark } from 'lucide-react';
 import { MarketAlerts } from '@/components/markets/MarketAlerts';
 import { AchievementSystem } from '@/components/forum/AchievementSystem';
+import { ThemeSwitcher } from '@/components/layout/ThemeSwitcher';
 import { Trophy } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,11 +19,24 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 const navigation = [{
-  name: 'News',
-  href: '/news'
-}, {
-  name: 'Analytics',
-  href: '/analytics'
+  name: 'Content',
+  href: '/news',
+  children: [{
+    name: 'News',
+    href: '/news',
+    icon: BookOpen,
+    description: 'Latest market news and updates'
+  }, {
+    name: 'Analytics',
+    href: '/analytics',
+    icon: BarChart3,
+    description: 'Market analysis and insights'
+  }, {
+    name: 'Forum',
+    href: '/forum',
+    icon: Award,
+    description: 'Community discussions'
+  }]
 }, {
   name: 'Markets',
   href: '/markets',
@@ -72,11 +86,32 @@ const navigation = [{
     description: 'Structured learning'
   }]
 }, {
+  name: 'Community',
+  href: '/about',
+  children: [{
+    name: 'About Us',
+    href: '/about',
+    icon: Award,
+    description: 'Learn about our mission'
+  }, {
+    name: 'Contact Us',
+    href: '/contact',
+    icon: BookOpen,
+    description: 'Get in touch'
+  }, {
+    name: 'Careers',
+    href: '/careers',
+    icon: Rocket,
+    description: 'Join our team'
+  }, {
+    name: 'Authors',
+    href: '/authors',
+    icon: Award,
+    description: 'Meet our experts'
+  }]
+}, {
   name: 'Companies',
   href: '/companies'
-}, {
-  name: 'Forum',
-  href: '/forum'
 }];
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -154,6 +189,7 @@ export function Header() {
             {user && (
               <MarketAlerts />
             )}
+            <ThemeSwitcher />
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

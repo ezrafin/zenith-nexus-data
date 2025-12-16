@@ -11,9 +11,10 @@ import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { setCookie, getCookie, hasCookieConsent } from "@/lib/cookies";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
-const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7; // 7 days in seconds
 const SIDEBAR_WIDTH = "16rem";
 const SIDEBAR_WIDTH_MOBILE = "18rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
@@ -51,10 +52,32 @@ const SidebarProvider = React.forwardRef<
   const isMobile = useIsMobile();
   const [openMobile, setOpenMobile] = React.useState(false);
 
+  // Load initial state from cookie if preferences are allowed
+  const getInitialState = React.useCallback(() => {
+    if (hasCookieConsent('preferences')) {
+      const saved = getCookie(SIDEBAR_COOKIE_NAME);
+      if (saved === 'true' || saved === 'false') {
+        return saved === 'true';
+      }
+    }
+    return defaultOpen;
+  }, [defaultOpen]);
+
   // This is the internal state of the sidebar.
   // We use openProp and setOpenProp for control from outside the component.
-  const [_open, _setOpen] = React.useState(defaultOpen);
+  const [_open, _setOpen] = React.useState(getInitialState);
   const open = openProp ?? _open;
+  
+  // Load state from cookie on mount
+  React.useEffect(() => {
+    if (!openProp && hasCookieConsent('preferences')) {
+      const saved = getCookie(SIDEBAR_COOKIE_NAME);
+      if (saved === 'true' || saved === 'false') {
+        _setOpen(saved === 'true');
+      }
+    }
+  }, []); // Only on mount
+
   const setOpen = React.useCallback(
     (value: boolean | ((value: boolean) => boolean)) => {
       const openState = typeof value === "function" ? value(open) : value;
@@ -64,8 +87,12 @@ const SidebarProvider = React.forwardRef<
         _setOpen(openState);
       }
 
-      // This sets the cookie to keep the sidebar state.
-      document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      // Save sidebar state to cookie if preferences are allowed
+      if (hasCookieConsent('preferences')) {
+        setCookie(SIDEBAR_COOKIE_NAME, String(openState), {
+          maxAge: SIDEBAR_COOKIE_MAX_AGE,
+        });
+      }
     },
     [setOpenProp, open],
   );

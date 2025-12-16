@@ -56,7 +56,7 @@ export default function MarketsPage() {
   // Load current market type data
   const { data, isLoading: loading, error, lastUpdated, refetch } = useMarketDataQuery({
     type: marketType,
-    refreshInterval: marketType === 'crypto' ? 120000 : 60000,
+    refreshInterval: 120000,
   });
   
   const refresh = async () => {
