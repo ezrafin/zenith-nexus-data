@@ -5,10 +5,10 @@ import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { Button } from '@/components/ui/button';
 import { Pagination } from '@/components/Pagination';
 import { useNews } from '@/hooks/useNews';
-import { RefreshCw, Clock, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+
 const ITEMS_PER_PAGE = 15;
 const marketFilters = [{
   value: 'all',
