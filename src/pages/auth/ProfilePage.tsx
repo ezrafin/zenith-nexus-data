@@ -250,6 +250,7 @@ export default function ProfilePage() {
         onOpenChange={setAvatarSelectorOpen}
         currentAvatar={avatarUrl}
         onSelect={handleAvatarSelect}
+        userId={user.id}
       />
     </Layout>
   );
