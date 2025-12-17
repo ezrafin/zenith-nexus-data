@@ -9,7 +9,7 @@ import { useUser } from '@/context/UserContext';
 import { toast } from 'sonner';
 import { Save, User, Shield, TrendingUp, MessageSquare, BookOpen, Trophy, Camera } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { AchievementSystem } from '@/components/forum/AchievementSystem';
+import { AchievementList } from '@/components/forum/AchievementList';
 import { ReputationBadge } from '@/components/forum/ReputationBadge';
 import { AvatarSelector } from '@/components/user/AvatarSelector';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -260,15 +260,17 @@ export default function ProfilePage() {
               </Button>
             </div>
 
-            {/* Achievements */}
-            <div className="premium-card p-6">
-              <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-                <Trophy className="h-5 w-5" />
-                Achievements
-              </h2>
-              <AchievementSystem />
-            </div>
           </div>
+
+          {/* Achievements - Full width at bottom */}
+          <div className="md:col-span-3 premium-card p-6">
+            <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
+              <Trophy className="h-5 w-5" />
+              Achievements
+            </h2>
+            <AchievementList />
+          </div>
+        </div>
         </div>
       </div>
 
