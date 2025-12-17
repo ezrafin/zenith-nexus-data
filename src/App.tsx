@@ -41,6 +41,7 @@ const LearningPage = lazy(() => import("./pages/education/LearningPage"));
 const LearningCoursePage = lazy(() => import("./pages/education/LearningCoursePage"));
 const BasicArticlesPage = lazy(() => import("./pages/education/BasicArticlesPage"));
 const AdvancedArticlesPage = lazy(() => import("./pages/education/AdvancedArticlesPage"));
+const ArticleDetailPage = lazy(() => import("./pages/education/ArticleDetailPage"));
 // Course Platform
 const CoursePlatformPage = lazy(() => import("./pages/course/CoursePlatformPage"));
 // Auth Pages
@@ -115,6 +116,7 @@ const App = () => {
                 <Route path={educationRoutes.video} element={<VideoLibraryPage />} />
                 <Route path={educationRoutes.basicArticles} element={<BasicArticlesPage />} />
                 <Route path={educationRoutes.advancedArticles} element={<AdvancedArticlesPage />} />
+                <Route path={educationRoutes.article} element={<ArticleDetailPage />} />
                 {/* Course Platform */}
                 <Route path="/course" element={<CoursePlatformPage />} />
                 {/* Auth Routes */}

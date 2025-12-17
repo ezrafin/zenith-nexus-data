@@ -7,6 +7,7 @@ export const educationRoutes = {
   video: `${EDUCATION_BASE_PATH}/video`,
   basicArticles: `${EDUCATION_BASE_PATH}/basic`,
   advancedArticles: `${EDUCATION_BASE_PATH}/advanced`,
+  article: `${EDUCATION_BASE_PATH}/article/:articleId`,
 } as const;
 
 export function getEducationRootPath() {
@@ -31,6 +32,10 @@ export function getEducationBasicArticlesPath() {
 
 export function getEducationAdvancedArticlesPath() {
   return educationRoutes.advancedArticles;
+}
+
+export function getEducationArticlePath(articleId: string) {
+  return `${EDUCATION_BASE_PATH}/article/${articleId}`;
 }
 
 
