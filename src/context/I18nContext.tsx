@@ -21,35 +21,9 @@ export function I18nProvider({ children }: I18nProviderProps) {
   const [translations, setTranslations] = useState<Record<string, Record<string, any>>>({});
   const [loading, setLoading] = useState(true);
 
-  // Initialize language on mount
-  useEffect(() => {
-    if (preferencesLoading) return;
-
-    let initialLanguage: SupportedLanguage = 'en';
-
-    // Priority: 1. User preference, 2. Browser language, 3. Default (en)
-    if (preferences.language && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
-      initialLanguage = preferences.language as SupportedLanguage;
-    } else {
-      // Check if user has ever set a language preference
-      const hasLanguagePreference = localStorage.getItem('userPreferences');
-      if (!hasLanguagePreference) {
-        // First visit - detect browser language
-        initialLanguage = detectBrowserLanguage();
-      } else {
-        // User has preferences but no language set - use browser language
-        initialLanguage = detectBrowserLanguage();
-      }
-    }
-
-    setLanguage(initialLanguage);
-    loadTranslationsForLanguage(initialLanguage);
-  }, [preferences.language, preferencesLoading, loadTranslationsForLanguage]);
-
   const loadTranslationsForLanguage = useCallback(async (lang: SupportedLanguage) => {
     setLoading(true);
     try {
-      // Load common translations first (most important)
       const [common, ui] = await Promise.all([
         loadTranslation(lang, 'common'),
         loadTranslation(lang, 'ui'),
@@ -65,6 +39,27 @@ export function I18nProvider({ children }: I18nProviderProps) {
       setLoading(false);
     }
   }, []);
+
+  // Initialize language on mount
+  useEffect(() => {
+    if (preferencesLoading) return;
+
+    let initialLanguage: SupportedLanguage = 'en';
+
+    if (preferences.language && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
+      initialLanguage = preferences.language as SupportedLanguage;
+    } else {
+      const hasLanguagePreference = localStorage.getItem('userPreferences');
+      if (!hasLanguagePreference) {
+        initialLanguage = detectBrowserLanguage();
+      } else {
+        initialLanguage = detectBrowserLanguage();
+      }
+    }
+
+    setLanguage(initialLanguage);
+    loadTranslationsForLanguage(initialLanguage);
+  }, [preferences.language, preferencesLoading, loadTranslationsForLanguage]);
 
   const changeLanguage = useCallback(async (lang: SupportedLanguage) => {
     if (lang === language) return;
