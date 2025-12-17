@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useUser } from '@/context/UserContext';
-<<<<<<< Updated upstream
-=======
-import { supabase } from '@/integrations/supabase/client';
-import { detectBrowserLanguage } from '@/lib/i18n';
->>>>>>> Stashed changes
 
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'desert';
@@ -48,49 +43,8 @@ export function useUserPreferences() {
 
   useEffect(() => {
     const loadPreferences = async () => {
-<<<<<<< Updated upstream
-      // Use localStorage for all preferences (both logged in and anonymous users)
       if (!isLocalStorageAvailable()) {
         setLoading(false);
-=======
-      if (!user) {
-        // For non-logged users, use localStorage only
-        if (!isLocalStorageAvailable()) {
-          setLoading(false);
-          return;
-        }
-
-        try {
-          const saved = localStorage.getItem('userPreferences');
-          if (saved) {
-            const parsed = JSON.parse(saved);
-            setPreferences({ ...defaultPreferences, ...parsed });
-          } else {
-            // First visit - detect browser language
-            const detectedLang = detectBrowserLanguage();
-            const initialPrefs = { ...defaultPreferences, language: detectedLang };
-            setPreferences(initialPrefs);
-            // Save detected language
-            try {
-              localStorage.setItem('userPreferences', JSON.stringify(initialPrefs));
-            } catch {
-              // Ignore save errors
-            }
-          }
-        } catch (e) {
-          console.error('Error loading preferences:', e);
-          try {
-            localStorage.removeItem('userPreferences');
-            // On error, use browser language detection
-            const detectedLang = detectBrowserLanguage();
-            setPreferences({ ...defaultPreferences, language: detectedLang });
-          } catch {
-            // Ignore cleanup errors
-          }
-        } finally {
-          setLoading(false);
-        }
->>>>>>> Stashed changes
         return;
       }
 
@@ -120,14 +74,12 @@ export function useUserPreferences() {
     const newPreferences = { ...preferences, ...updates };
     setPreferences(newPreferences);
 
-    // Save to localStorage
     if (isLocalStorageAvailable()) {
       try {
         const storageKey = user ? `userPreferences_${user.id}` : 'userPreferences';
         localStorage.setItem(storageKey, JSON.stringify(newPreferences));
       } catch (e) {
         console.error('Error saving preferences to localStorage:', e);
-        // Check if quota exceeded
         if (e instanceof DOMException && e.name === 'QuotaExceededError') {
           console.warn('localStorage quota exceeded, clearing old data');
           try {
