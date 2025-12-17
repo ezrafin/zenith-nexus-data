@@ -84,8 +84,41 @@
     "signInInstead": "Sign in instead",
     "passwordPlaceholder": "Enter your password",
     "emailPlaceholder": "Enter your email",
+    "emailPlaceholderExample": "you@example.com",
     "signingIn": "Signing in...",
-    "signingUp": "Signing up..."
+    "signingUp": "Signing up...",
+    "createAccount": "Create account",
+    "creatingAccount": "Creating account...",
+    "getStarted": "Get started with your free account",
+    "orSignUpWithEmail": "Or sign up with email",
+    "usernameOptional": "Username (optional)",
+    "usernamePlaceholder": "johndoe",
+    "passwordStrength": {
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong"
+    },
+    "passwordRequirements": {
+      "atLeast8Chars": "At least 8 characters",
+      "containsNumber": "Contains a number",
+      "containsSpecial": "Contains a special character (!@#$%^&*)"
+    },
+    "meetAllRequirements": "Please meet all password requirements",
+    "alreadyHaveAccount": "Already have an account?",
+    "checkEmail": "Check your email",
+    "verificationSent": "We've sent a verification link to:",
+    "whatsNext": "What's next?",
+    "openEmailInbox": "Open your email inbox",
+    "clickVerificationLink": "Click the verification link in the email",
+    "returnToSignIn": "Return here to sign in",
+    "cantFindEmail": "Can't find the email? Check your spam or junk folder.",
+    "goToSignIn": "Go to Sign In",
+    "useDifferentEmail": "Use a different email",
+    "accountAlreadyExists": "An account with this email already exists. Please sign in instead.",
+    "passwordTooShort": "Password must be at least 8 characters.",
+    "invalidEmail": "Please enter a valid email address.",
+    "signupDisabled": "Registration is currently disabled. Please try again later.",
+    "registrationError": "An error occurred during registration."
   },
   "settings": {
     "title": "Settings",

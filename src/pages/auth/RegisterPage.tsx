@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -8,6 +8,7 @@ import { useUser } from '@/context/UserContext';
 import { toast } from 'sonner';
 import { Mail, Eye, EyeOff, CheckCircle, AlertCircle, ArrowLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // Google icon component
 const GoogleIcon = () => (
@@ -36,21 +37,8 @@ interface PasswordRequirement {
   test: (password: string) => boolean;
 }
 
-const passwordRequirements: PasswordRequirement[] = [
-  { label: 'At least 8 characters', test: (p) => p.length >= 8 },
-  { label: 'Contains a number', test: (p) => /\d/.test(p) },
-  { label: 'Contains a special character (!@#$%^&*)', test: (p) => /[!@#$%^&*(),.?":{}|<>]/.test(p) },
-];
-
-const getPasswordStrength = (password: string): { level: number; label: string; color: string } => {
-  const metCount = passwordRequirements.filter((req) => req.test(password)).length;
-  if (metCount === 0) return { level: 0, label: '', color: '' };
-  if (metCount === 1) return { level: 1, label: 'Weak', color: 'bg-destructive' };
-  if (metCount === 2) return { level: 2, label: 'Medium', color: 'bg-yellow-500' };
-  return { level: 3, label: 'Strong', color: 'bg-green-500' };
-};
-
 export default function RegisterPage() {
+  const { t } = useTranslation({ namespace: 'ui' });
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
@@ -60,18 +48,32 @@ export default function RegisterPage() {
   const [emailSent, setEmailSent] = useState(false);
   const { signUp, signInWithOAuth } = useUser();
 
+  const passwordRequirements: PasswordRequirement[] = useMemo(() => [
+    { label: t('auth.passwordRequirements.atLeast8Chars'), test: (p) => p.length >= 8 },
+    { label: t('auth.passwordRequirements.containsNumber'), test: (p) => /\d/.test(p) },
+    { label: t('auth.passwordRequirements.containsSpecial'), test: (p) => /[!@#$%^&*(),.?":{}|<>]/.test(p) },
+  ], [t]);
+
+  const getPasswordStrength = (password: string): { level: number; label: string; color: string } => {
+    const metCount = passwordRequirements.filter((req) => req.test(password)).length;
+    if (metCount === 0) return { level: 0, label: '', color: '' };
+    if (metCount === 1) return { level: 1, label: t('auth.passwordStrength.weak'), color: 'bg-destructive' };
+    if (metCount === 2) return { level: 2, label: t('auth.passwordStrength.medium'), color: 'bg-yellow-500' };
+    return { level: 3, label: t('auth.passwordStrength.strong'), color: 'bg-green-500' };
+  };
+
   const allRequirementsMet = passwordRequirements.every((req) => req.test(password));
   const passwordStrength = getPasswordStrength(password);
 
   const getErrorMessage = (errorCode: string): string => {
     const errorMessages: Record<string, string> = {
-      'User already registered': 'An account with this email already exists. Please sign in instead.',
-      'Email already registered': 'An account with this email already exists. Please sign in instead.',
-      'Password should be at least 6 characters': 'Password must be at least 8 characters.',
-      'Invalid email': 'Please enter a valid email address.',
-      'Signup disabled': 'Registration is currently disabled. Please try again later.',
+      'User already registered': t('auth.accountAlreadyExists'),
+      'Email already registered': t('auth.accountAlreadyExists'),
+      'Password should be at least 6 characters': t('auth.passwordTooShort'),
+      'Invalid email': t('auth.invalidEmail'),
+      'Signup disabled': t('auth.signupDisabled'),
     };
-    return errorMessages[errorCode] || errorCode || 'An error occurred during registration.';
+    return errorMessages[errorCode] || errorCode || t('auth.registrationError');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -79,7 +81,7 @@ export default function RegisterPage() {
     setError(null);
 
     if (!allRequirementsMet) {
-      setError('Please meet all password requirements');
+      setError(t('auth.meetAllRequirements'));
       return;
     }
 
@@ -114,29 +116,29 @@ export default function RegisterPage() {
               </div>
               
               <div>
-                <h1 className="heading-md mb-2">Check your email</h1>
+                <h1 className="heading-md mb-2">{t('auth.checkEmail')}</h1>
                 <p className="text-muted-foreground">
-                  We've sent a verification link to:
+                  {t('auth.verificationSent')}
                 </p>
                 <p className="font-medium text-lg mt-2">{email}</p>
               </div>
 
               <div className="text-sm text-muted-foreground space-y-3 text-left bg-secondary/30 rounded-lg p-4">
-                <p className="font-medium text-foreground">What's next?</p>
+                <p className="font-medium text-foreground">{t('auth.whatsNext')}</p>
                 <ol className="list-decimal list-inside space-y-2">
-                  <li>Open your email inbox</li>
-                  <li>Click the verification link in the email</li>
-                  <li>Return here to sign in</li>
+                  <li>{t('auth.openEmailInbox')}</li>
+                  <li>{t('auth.clickVerificationLink')}</li>
+                  <li>{t('auth.returnToSignIn')}</li>
                 </ol>
                 <p className="text-xs mt-4">
-                  Can't find the email? Check your spam or junk folder.
+                  {t('auth.cantFindEmail')}
                 </p>
               </div>
 
               <div className="pt-4 space-y-3">
                 <Link to="/auth/login" className="block">
                   <Button className="w-full">
-                    Go to Sign In
+                    {t('auth.goToSignIn')}
                   </Button>
                 </Link>
                 <Button
@@ -145,7 +147,7 @@ export default function RegisterPage() {
                   onClick={() => setEmailSent(false)}
                 >
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Use a different email
+                  {t('auth.useDifferentEmail')}
                 </Button>
               </div>
             </div>
@@ -160,8 +162,8 @@ export default function RegisterPage() {
       <div className="min-h-[80vh] flex items-center justify-center py-12 px-4">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
-            <h1 className="heading-lg mb-2">Create an account</h1>
-            <p className="text-muted-foreground">Get started with your free account</p>
+            <h1 className="heading-lg mb-2">{t('auth.createAccount')}</h1>
+            <p className="text-muted-foreground">{t('auth.getStarted')}</p>
           </div>
 
           <div className="premium-card p-8 space-y-6">
@@ -173,7 +175,7 @@ export default function RegisterPage() {
                   <p>{error}</p>
                   {error.includes('already exists') && (
                     <Link to="/auth/login" className="underline hover:no-underline mt-1 block">
-                      Sign in instead
+                      {t('auth.signInInstead')}
                     </Link>
                   )}
                 </div>
@@ -189,25 +191,25 @@ export default function RegisterPage() {
               disabled={loading}
             >
               <GoogleIcon />
-              Continue with Google
+              {t('auth.continueWithGoogle')}
             </Button>
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <span className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">Or sign up with email</span>
+                <span className="bg-card px-2 text-muted-foreground">{t('auth.orSignUpWithEmail')}</span>
               </div>
             </div>
 
             {/* Email/Password Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="username">Username (optional)</Label>
+                <Label htmlFor="username">{t('auth.usernameOptional')}</Label>
                 <Input
                   id="username"
                   type="text"
-                  placeholder="johndoe"
+                  placeholder={t('auth.usernamePlaceholder')}
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   disabled={loading}
@@ -215,11 +217,11 @@ export default function RegisterPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">{t('labels.email')}</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="you@example.com"
+                  placeholder={t('auth.emailPlaceholderExample')}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -232,7 +234,7 @@ export default function RegisterPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">{t('labels.password')}</Label>
                 <div className="relative">
                   <Input
                     id="password"
@@ -307,14 +309,14 @@ export default function RegisterPage() {
                 className="w-full" 
                 disabled={loading || !allRequirementsMet}
               >
-                {loading ? 'Creating account...' : 'Create account'}
+                {loading ? t('auth.creatingAccount') : t('auth.createAccount')}
               </Button>
             </form>
 
             <p className="text-center text-sm text-muted-foreground">
-              Already have an account?{' '}
+              {t('auth.alreadyHaveAccount')}{' '}
               <Link to="/auth/login" className="text-primary hover:underline font-medium">
-                Sign in
+                {t('buttons.signIn')}
               </Link>
             </p>
           </div>
