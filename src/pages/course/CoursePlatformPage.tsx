@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DOMPurify from 'dompurify';
 import { Layout } from '@/components/layout/Layout';
 import { courseData, finalExamQuestions } from '@/data/courseData';
 import { 
@@ -150,8 +151,8 @@ export default function CoursePlatformPage() {
                     <BookOpen className="h-5 w-5 text-primary" />
                     Lesson Notes
                   </h2>
-                  <div className="prose prose-sm prose-invert max-w-none">
-                    <div dangerouslySetInnerHTML={{ __html: selectedLesson.notes.replace(/\n/g, '<br/>') }} />
+                <div className="prose prose-sm prose-invert max-w-none">
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(selectedLesson.notes.replace(/\n/g, '<br/>')) }} />
                   </div>
                 </div>
 
