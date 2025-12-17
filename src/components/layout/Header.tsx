@@ -193,7 +193,7 @@ export function Header() {
                   <button className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors">
                     <UserAvatar profile={profile} size="sm" />
                     <span className="text-sm font-medium">
-                      {profile?.display_name || profile?.username || user.email?.split('@')[0] || 'User'}
+                      {profile?.display_name || profile?.username || 'User'}
                     </span>
                     <ChevronDown className="h-4 w-4 text-muted-foreground" />
                   </button>
@@ -205,7 +205,7 @@ export function Header() {
                         <p className="text-sm font-medium">{profile?.display_name || profile?.username || 'User'}</p>
                         <AchievementBadge userId={user.id} />
                       </div>
-                      <p className="text-xs text-muted-foreground">Profile</p>
+                      <p className="text-xs text-muted-foreground truncate">{user.email}</p>
                     </div>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
