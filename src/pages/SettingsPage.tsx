@@ -61,22 +61,6 @@ export default function SettingsPage() {
     try {
       await updatePreferences(localPrefs);
       
-      // Also save notification preferences to database if user is logged in
-      if (user) {
-        const { error: dbError } = await supabase
-          .from('profiles')
-          .update({
-            email_notifications: localPrefs.email_notifications,
-            push_notifications: localPrefs.push_notifications,
-          })
-          .eq('id', user.id);
-
-        if (dbError) {
-          console.error('Error saving notification preferences to database:', dbError);
-          // Don't fail the whole save, just log the error
-        }
-      }
-      
       toast.success('Settings saved successfully');
     } catch (error) {
       toast.error('Failed to save settings');

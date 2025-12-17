@@ -263,14 +263,13 @@ export default function ProfilePage() {
           </div>
 
           {/* Achievements - Full width at bottom */}
-          <div className="md:col-span-3 premium-card p-6">
+          <div className="mt-8 premium-card p-6">
             <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
               <Trophy className="h-5 w-5" />
               Achievements
             </h2>
             <AchievementList />
           </div>
-        </div>
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useUser } from '@/context/UserContext';
-import { supabase } from '@/integrations/supabase/client';
 
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'desert';
@@ -44,88 +43,25 @@ export function useUserPreferences() {
 
   useEffect(() => {
     const loadPreferences = async () => {
-      if (!user) {
-        // For non-logged users, use localStorage only
-        if (!isLocalStorageAvailable()) {
-          setLoading(false);
-          return;
-        }
-
-        try {
-          const saved = localStorage.getItem('userPreferences');
-          if (saved) {
-            const parsed = JSON.parse(saved);
-            setPreferences({ ...defaultPreferences, ...parsed });
-          }
-        } catch (e) {
-          console.error('Error loading preferences:', e);
-          try {
-            localStorage.removeItem('userPreferences');
-          } catch {
-            // Ignore cleanup errors
-          }
-        } finally {
-          setLoading(false);
-        }
+      // Use localStorage for all preferences (both logged in and anonymous users)
+      if (!isLocalStorageAvailable()) {
+        setLoading(false);
         return;
       }
 
-      // For logged users, load from database first, then merge with localStorage
       try {
-        const { data: profile, error } = await supabase
-          .from('profiles')
-          .select('email_notifications, push_notifications')
-          .eq('id', user.id)
-          .single();
-
-        if (!error && profile) {
-          // Load notification preferences from DB
-          const dbPrefs: Partial<UserPreferences> = {
-            email_notifications: profile.email_notifications ?? defaultPreferences.email_notifications,
-            push_notifications: profile.push_notifications ?? defaultPreferences.push_notifications,
-          };
-
-          // Merge with localStorage preferences
-          let localPrefs: Partial<UserPreferences> = {};
-          if (isLocalStorageAvailable()) {
-            try {
-              const saved = localStorage.getItem('userPreferences');
-              if (saved) {
-                localPrefs = JSON.parse(saved);
-              }
-            } catch (e) {
-              console.error('Error loading local preferences:', e);
-            }
-          }
-
-          setPreferences({ ...defaultPreferences, ...localPrefs, ...dbPrefs });
-        } else {
-          // Fallback to localStorage if DB query fails
-          if (isLocalStorageAvailable()) {
-            try {
-              const saved = localStorage.getItem('userPreferences');
-              if (saved) {
-                const parsed = JSON.parse(saved);
-                setPreferences({ ...defaultPreferences, ...parsed });
-              }
-            } catch (e) {
-              console.error('Error loading preferences:', e);
-            }
-          }
+        const storageKey = user ? `userPreferences_${user.id}` : 'userPreferences';
+        const saved = localStorage.getItem(storageKey);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          setPreferences({ ...defaultPreferences, ...parsed });
         }
       } catch (e) {
-        console.error('Error loading preferences from DB:', e);
-        // Fallback to localStorage
-        if (isLocalStorageAvailable()) {
-          try {
-            const saved = localStorage.getItem('userPreferences');
-            if (saved) {
-              const parsed = JSON.parse(saved);
-              setPreferences({ ...defaultPreferences, ...parsed });
-            }
-          } catch {
-            // Ignore
-          }
+        console.error('Error loading preferences:', e);
+        try {
+          localStorage.removeItem('userPreferences');
+        } catch {
+          // Ignore cleanup errors
         }
       } finally {
         setLoading(false);
@@ -142,43 +78,21 @@ export function useUserPreferences() {
     // Save to localStorage
     if (isLocalStorageAvailable()) {
       try {
-        localStorage.setItem('userPreferences', JSON.stringify(newPreferences));
+        const storageKey = user ? `userPreferences_${user.id}` : 'userPreferences';
+        localStorage.setItem(storageKey, JSON.stringify(newPreferences));
       } catch (e) {
         console.error('Error saving preferences to localStorage:', e);
         // Check if quota exceeded
         if (e instanceof DOMException && e.name === 'QuotaExceededError') {
           console.warn('localStorage quota exceeded, clearing old data');
           try {
-            localStorage.removeItem('userPreferences');
-            localStorage.setItem('userPreferences', JSON.stringify(newPreferences));
+            const storageKey = user ? `userPreferences_${user.id}` : 'userPreferences';
+            localStorage.removeItem(storageKey);
+            localStorage.setItem(storageKey, JSON.stringify(newPreferences));
           } catch {
             // Give up if still failing
           }
         }
-      }
-    }
-
-    // If user is logged in, also save notification preferences to database
-    if (user && (updates.email_notifications !== undefined || updates.push_notifications !== undefined)) {
-      try {
-        const dbUpdates: { email_notifications?: boolean; push_notifications?: boolean } = {};
-        if (updates.email_notifications !== undefined) {
-          dbUpdates.email_notifications = updates.email_notifications;
-        }
-        if (updates.push_notifications !== undefined) {
-          dbUpdates.push_notifications = updates.push_notifications;
-        }
-
-        const { error } = await supabase
-          .from('profiles')
-          .update(dbUpdates)
-          .eq('id', user.id);
-
-        if (error) {
-          console.error('Error saving notification preferences to database:', error);
-        }
-      } catch (e) {
-        console.error('Error updating notification preferences:', e);
       }
     }
   };

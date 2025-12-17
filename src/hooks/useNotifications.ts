@@ -1,5 +1,4 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { supabase } from '@/integrations/supabase/client';
 import { useUser } from '@/context/UserContext';
 
 export interface Notification {
@@ -14,8 +13,27 @@ export interface Notification {
   created_at: string;
 }
 
+const STORAGE_KEY = 'user_notifications';
+
+function getStoredNotifications(userId: string): Notification[] {
+  try {
+    const stored = localStorage.getItem(`${STORAGE_KEY}_${userId}`);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+function setStoredNotifications(userId: string, notifications: Notification[]) {
+  try {
+    localStorage.setItem(`${STORAGE_KEY}_${userId}`, JSON.stringify(notifications));
+  } catch {
+    // Ignore storage errors
+  }
+}
+
 /**
- * Hook for fetching user notifications
+ * Hook for fetching user notifications (localStorage-based)
  */
 export function useNotifications() {
   const { user } = useUser();
@@ -24,20 +42,11 @@ export function useNotifications() {
     queryKey: ['notifications', user?.id],
     queryFn: async () => {
       if (!user) return [];
-
-      const { data, error } = await supabase
-        .from('notifications')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
-        .limit(50);
-
-      if (error) throw error;
-      return (data as Notification[]) || [];
+      return getStoredNotifications(user.id);
     },
     enabled: !!user,
-    staleTime: 30 * 1000, // 30 seconds
-    gcTime: 5 * 60 * 1000, // 5 minutes
+    staleTime: 30 * 1000,
+    gcTime: 5 * 60 * 1000,
   });
 }
 
@@ -52,13 +61,11 @@ export function useMarkNotificationRead() {
     mutationFn: async (notificationId: string) => {
       if (!user) throw new Error('Not authenticated');
 
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('id', notificationId)
-        .eq('user_id', user.id);
-
-      if (error) throw error;
+      const notifications = getStoredNotifications(user.id);
+      const updated = notifications.map(n => 
+        n.id === notificationId ? { ...n, read: true } : n
+      );
+      setStoredNotifications(user.id, updated);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notifications', user?.id] });
@@ -77,17 +84,12 @@ export function useMarkAllNotificationsRead() {
     mutationFn: async () => {
       if (!user) throw new Error('Not authenticated');
 
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('user_id', user.id)
-        .eq('read', false);
-
-      if (error) throw error;
+      const notifications = getStoredNotifications(user.id);
+      const updated = notifications.map(n => ({ ...n, read: true }));
+      setStoredNotifications(user.id, updated);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notifications', user?.id] });
     },
   });
 }
-
