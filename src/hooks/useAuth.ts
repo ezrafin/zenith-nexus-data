@@ -215,7 +215,9 @@ export function useAuth(): UseAuthReturn {
   };
 
   const signInWithOAuth = async (provider: 'google' | 'github') => {
-    const redirectUrl = `${window.location.origin}/auth/callback`;
+    // Use production domain for OAuth redirect
+    const productionDomain = 'https://investopatronus.com';
+    const redirectUrl = `${productionDomain}/auth/callback`;
     console.log('OAuth redirect URL:', redirectUrl);
     
     const { error } = await supabase.auth.signInWithOAuth({
