@@ -72,7 +72,6 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
     let query = supabase
       .from('forum_discussions')
       .select('*')
-      .eq('hidden', false) // Filter out hidden discussions
       .order('is_pinned', { ascending: false })
       .order('created_at', { ascending: false });
     
@@ -99,7 +98,7 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
         title: topic.title,
         content: topic.content,
         author: topic.author_name,
-        authorId: topic.user_id,
+        authorId: topic.user_id ?? undefined,
         authorAvatar: getAuthorAvatar(topic.author_name),
         date: topic.created_at,
         replies: topic.reply_count || 0,
@@ -108,7 +107,7 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
         like_count: topicWithExtras.like_count ?? 0,
         authorReputation: topicWithExtras.author_reputation ?? undefined,
         symbol: topicWithExtras.symbol ?? undefined,
-        asset_type: topicWithExtras.asset_type ?? undefined,
+        asset_type: (topicWithExtras.asset_type as ForumTopic['asset_type']) ?? undefined,
       };
     });
   } catch (error) {
@@ -129,7 +128,6 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
       .from('forum_replies')
       .select('*')
       .eq('discussion_id', topicId)
-      .eq('hidden', false) // Filter out hidden replies
       .order('created_at');
     
     if (error) throw error;
@@ -145,7 +143,7 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
         id: reply.id,
         topicId: reply.discussion_id,
         author: reply.author_name,
-        authorId: reply.user_id,
+        authorId: reply.user_id ?? undefined,
         authorAvatar: getAuthorAvatar(reply.author_name),
         content: reply.content,
         date: reply.created_at,
@@ -164,28 +162,50 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
 
 export async function fetchDiscussionsForWatchlist(userId: string): Promise<ForumTopic[]> {
   try {
-    // RPC functions may not be fully typed in Database types
-    const { data, error } = await supabase.rpc('get_discussions_for_watchlist', {
-      p_user_id: userId,
-    }) as { data: unknown[] | null; error: Error | null };
-
+    // RPC functions may not be fully typed in Database types - fallback to direct query
+    const { data: watchlistData } = await supabase
+      .from('watchlists')
+      .select('id')
+      .eq('user_id', userId);
+    
+    if (!watchlistData || watchlistData.length === 0) return [];
+    
+    const watchlistIds = watchlistData.map(w => w.id);
+    
+    const { data: itemsData } = await supabase
+      .from('watchlist_items')
+      .select('symbol')
+      .in('watchlist_id', watchlistIds);
+    
+    if (!itemsData || itemsData.length === 0) return [];
+    
+    const symbols = [...new Set(itemsData.map(i => i.symbol))];
+    
+    // Get discussions that mention these symbols in tags
+    const { data, error } = await supabase
+      .from('forum_discussions')
+      .select('*')
+      .overlaps('tags', symbols)
+      .order('created_at', { ascending: false })
+      .limit(20);
+    
     if (error) throw error;
 
-    return ((data || []) as Array<Record<string, unknown>>).map((topic) => ({
-      id: String(topic.id),
-      categoryId: String(topic.category),
-      title: String(topic.title),
-      content: String(topic.content || ''),
-      author: String(topic.author_name),
-      authorId: topic.user_id ? String(topic.user_id) : undefined,
-      authorAvatar: getAuthorAvatar(String(topic.author_name)),
-      date: String(topic.created_at),
-      replies: Number(topic.reply_count) || 0,
-      views: Number(topic.view_count) || 0,
-      lastActivity: String(topic.updated_at),
-      like_count: Number(topic.like_count) || 0,
-      symbol: topic.symbol ? String(topic.symbol) : undefined,
-      asset_type: topic.asset_type ? String(topic.asset_type) : undefined,
+    return (data || []).map((topic) => ({
+      id: topic.id,
+      categoryId: topic.category,
+      title: topic.title,
+      content: topic.content || '',
+      author: topic.author_name,
+      authorId: topic.user_id ?? undefined,
+      authorAvatar: getAuthorAvatar(topic.author_name),
+      date: topic.created_at,
+      replies: topic.reply_count || 0,
+      views: topic.view_count || 0,
+      lastActivity: topic.updated_at,
+      like_count: 0,
+      symbol: undefined,
+      asset_type: undefined,
     }));
   } catch (error) {
     logger.error('Error fetching discussions for watchlist:', error);
