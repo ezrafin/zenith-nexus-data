@@ -36,22 +36,25 @@ const marketIcons = {
 };
 
 export default function WatchlistPage() {
-  const { user } = useUser();
+  const { user, loading: authLoading } = useUser();
   const [watchlists, setWatchlists] = useState<Watchlist[]>([]);
   const [loading, setLoading] = useState(true);
   const [newWatchlistName, setNewWatchlistName] = useState('');
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [discussions, setDiscussions] = useState<ForumTopic[]>([]);
   const [discussionsLoading, setDiscussionsLoading] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Wait for auth to finish loading before deciding what to do
+    if (authLoading) return;
+    
     if (user) {
       loadWatchlists();
-      loadDiscussions();
     } else {
       setLoading(false);
     }
-  }, [user]);
+  }, [user, authLoading]);
 
   const loadDiscussions = async () => {
     if (!user) return;
@@ -67,7 +70,19 @@ export default function WatchlistPage() {
   };
 
   const loadWatchlists = async () => {
-    if (!user) return;
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    setLoadError(null);
+
+    // Add timeout to prevent infinite loading
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+      setLoadError('Request timed out. Please try again.');
+    }, 15000);
 
     try {
       const { data: watchlistsData, error: watchlistsError } = await supabase
@@ -93,11 +108,18 @@ export default function WatchlistPage() {
         })
       );
 
+      clearTimeout(timeoutId);
       setWatchlists(watchlistsWithItems as Watchlist[]);
-    } catch (error) {
+      
+      // Load discussions after watchlists are loaded
+      loadDiscussions();
+    } catch (error: any) {
+      clearTimeout(timeoutId);
       console.error('Error loading watchlists:', error);
+      setLoadError(error?.message || 'Failed to load watchlists');
       toast.error('Failed to load watchlists');
     } finally {
+      clearTimeout(timeoutId);
       setLoading(false);
     }
   };
@@ -159,7 +181,7 @@ export default function WatchlistPage() {
     );
   }
 
-  if (loading) {
+  if (loading || authLoading) {
     return (
       <Layout>
         <SEOHead
@@ -170,6 +192,27 @@ export default function WatchlistPage() {
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
             <p className="text-muted-foreground">Loading watchlists...</p>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <Layout>
+        <SEOHead
+          title="Watchlists — INVESTOPATRONUS"
+          description="Create and manage personalized watchlists to monitor your favorite market instruments."
+        />
+        <div className="min-h-[80vh] flex items-center justify-center">
+          <div className="text-center">
+            <AlertCircle className="h-12 w-12 text-destructive mx-auto mb-4" />
+            <h2 className="font-semibold text-lg mb-2">Failed to load watchlists</h2>
+            <p className="text-muted-foreground mb-6">{loadError}</p>
+            <Button onClick={() => loadWatchlists()}>
+              Try Again
+            </Button>
           </div>
         </div>
       </Layout>

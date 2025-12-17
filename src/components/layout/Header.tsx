@@ -192,7 +192,9 @@ export function Header() {
                 <DropdownMenuTrigger asChild>
                   <button className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors">
                     <UserAvatar profile={profile} size="sm" />
-                    <span className="text-sm font-medium">{profile?.display_name || user.email}</span>
+                    <span className="text-sm font-medium">
+                      {profile?.display_name || profile?.username || user.email?.split('@')[0] || 'User'}
+                    </span>
                     <ChevronDown className="h-4 w-4 text-muted-foreground" />
                   </button>
                 </DropdownMenuTrigger>
