@@ -198,11 +198,11 @@ export function Header() {
                     <ChevronDown className="h-4 w-4 text-muted-foreground" />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuContent align="end" className="w-64">
                   <DropdownMenuLabel>
-                    <div className="flex flex-col space-y-1">
-                      <div className="flex items-center justify-between">
-                        <p className="text-sm font-medium">{profile?.display_name || profile?.username || 'User'}</p>
+                    <div className="flex flex-col space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <p className="text-sm font-medium truncate flex-1">{profile?.display_name || profile?.username || 'User'}</p>
                         <AchievementBadge userId={user.id} />
                       </div>
                       <p className="text-xs text-muted-foreground truncate">{user.email}</p>
@@ -359,9 +359,16 @@ function AchievementBadge({ userId }: { userId: string }) {
 function AchievementMenuItem() {
   const [open, setOpen] = useState(false);
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    // Delay opening to allow dropdown to close first
+    setTimeout(() => setOpen(true), 100);
+  };
+
   return (
     <>
-      <DropdownMenuItem onClick={() => setOpen(true)}>
+      <DropdownMenuItem onSelect={(e) => e.preventDefault()} onClick={handleClick}>
         <Trophy className="mr-2 h-4 w-4" />
         Achievements
       </DropdownMenuItem>
