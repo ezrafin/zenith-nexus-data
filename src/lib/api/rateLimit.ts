@@ -1,4 +1,3 @@
-import { supabase } from '@/integrations/supabase/client';
 import { logger } from '@/lib/logger';
 
 export type RateLimitAction = 'create_discussion' | 'create_reply' | 'create_reaction' | 'create_bookmark';
@@ -16,32 +15,33 @@ export async function checkRateLimit(
   windowSeconds: number = 60
 ): Promise<{ allowed: boolean; message?: string }> {
   try {
-    // Get user IP (client-side approximation - real IP should come from server)
-    // For now, we'll use a placeholder that will be handled server-side
-    const ipAddress = '0.0.0.0'; // This should be set by server/edge function
-
-    // RPC functions may not be fully typed in Database types
-    const { data, error } = await supabase.rpc('check_rate_limit', {
-      p_user_id: (await supabase.auth.getUser()).data.user?.id || null,
-      p_ip_address: ipAddress,
-      p_action_type: actionType,
-      p_max_attempts: maxAttempts,
-      p_window_seconds: windowSeconds,
-    }) as { data: boolean | null; error: Error | null };
-
-    if (error) {
-      logger.error('Rate limit check error:', error);
-      // On error, allow the action (fail open) but log it
-      return { allowed: true };
+    // Simple client-side rate limiting using localStorage
+    const key = `rate_limit_${actionType}`;
+    const now = Date.now();
+    const storedData = localStorage.getItem(key);
+    
+    let attempts: number[] = [];
+    if (storedData) {
+      attempts = JSON.parse(storedData);
     }
-
-    if (data === false) {
+    
+    // Filter to only attempts within the window
+    const windowMs = windowSeconds * 1000;
+    attempts = attempts.filter(timestamp => now - timestamp < windowMs);
+    
+    if (attempts.length >= maxAttempts) {
+      const oldestAttempt = Math.min(...attempts);
+      const waitTime = Math.ceil((windowMs - (now - oldestAttempt)) / 1000);
       return {
         allowed: false,
-        message: `Rate limit exceeded. Please wait ${windowSeconds} seconds before trying again.`,
+        message: `Rate limit exceeded. Please wait ${waitTime} seconds before trying again.`,
       };
     }
-
+    
+    // Add current attempt
+    attempts.push(now);
+    localStorage.setItem(key, JSON.stringify(attempts));
+    
     return { allowed: true };
   } catch (error) {
     logger.error('Rate limit check failed:', error);
