@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
 
             <h2 className="heading-sm mb-4">Contact Us</h2>
             <p className="body-md">
-              If you have any questions about this disclaimer, please contact us at legal@investopatronus.com.
+              If you have any questions about this disclaimer, please contact us at support@investopatronus.com.
             </p>
           </div>
         </section>

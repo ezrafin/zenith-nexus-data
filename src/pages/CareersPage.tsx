@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Briefcase, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { JobApplicationForm } from '@/components/careers/JobApplicationForm';
 
 const positions = [
   {
@@ -14,6 +17,13 @@ const positions = [
 
 export default function CareersPage() {
   const { t } = useTranslation({ namespace: 'ui' });
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [selectedPosition, setSelectedPosition] = useState('');
+
+  const openApplicationForm = (position: string) => {
+    setSelectedPosition(position);
+    setIsFormOpen(true);
+  };
 
   return (
     <Layout>
@@ -28,7 +38,6 @@ export default function CareersPage() {
             </p>
           </div>
         </section>
-
 
         {/* Open Positions */}
         <section className="container-wide section-spacing-sm">
@@ -71,12 +80,24 @@ export default function CareersPage() {
           <div className="glass-card p-8 lg:p-12 text-center">
             <h2 className="heading-md mb-4">{t('careersPage.ctaTitle')}</h2>
             <p className="body-lg mb-6 max-w-2xl mx-auto">{t('careersPage.ctaSubtitle')}</p>
-            <Button size="lg">
+            <Button size="lg" onClick={() => openApplicationForm('General Application')}>
               {t('careersPage.ctaButton')}
             </Button>
           </div>
         </section>
       </div>
+
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle>{t('careersPage.form.title')}</DialogTitle>
+          </DialogHeader>
+          <JobApplicationForm 
+            position={selectedPosition} 
+            onClose={() => setIsFormOpen(false)} 
+          />
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 }

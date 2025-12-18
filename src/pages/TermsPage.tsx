@@ -69,7 +69,7 @@ export default function TermsPage() {
             <div className="glass-card p-8">
               <h2 className="heading-sm mb-4">8. Contact</h2>
               <p className="body-md">
-                If you have any questions about these Terms of Service, please contact us at legal@investopatronus.com.
+                If you have any questions about these Terms of Service, please contact us at support@investopatronus.com.
               </p>
             </div>
           </div>

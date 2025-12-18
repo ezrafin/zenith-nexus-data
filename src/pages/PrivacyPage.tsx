@@ -127,7 +127,7 @@ export default function PrivacyPage() {
             <div className="glass-card p-8">
               <h2 className="heading-sm mb-4">7. Contact Us</h2>
               <p className="body-md">
-                If you have any questions about this Privacy Policy, please contact us at privacy@investopatronus.com.
+                If you have any questions about this Privacy Policy, please contact us at support@investopatronus.com.
               </p>
             </div>
           </div>
