@@ -5,37 +5,8 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 const positions = [
   {
-    title: 'Senior Financial Analyst',
-    department: 'Research',
-    location: 'Remote / New York',
-    type: 'Full-time',
-    descriptionKey: 'careersPage.posAnalyst',
-  },
-  {
-    title: 'Full Stack Developer',
-    department: 'Engineering',
-    location: 'Remote',
-    type: 'Full-time',
-    descriptionKey: 'careersPage.posFullStack',
-  },
-  {
-    title: 'Data Scientist',
-    department: 'Data',
-    location: 'Remote / New York',
-    type: 'Full-time',
-    descriptionKey: 'careersPage.posDataSci',
-  },
-  {
-    title: 'Content Writer',
-    department: 'Content',
-    location: 'Remote',
-    type: 'Full-time / Part-time',
-    descriptionKey: 'careersPage.posWriter',
-  },
-  {
     title: 'Product Designer',
-    department: 'Design',
-    location: 'Remote',
+    location: 'Lugano',
     type: 'Full-time',
     descriptionKey: 'careersPage.posDesigner',
   },
@@ -43,17 +14,6 @@ const positions = [
 
 export default function CareersPage() {
   const { t } = useTranslation({ namespace: 'ui' });
-
-  const benefits = [
-    t('careersPage.benefitCompetitive'),
-    t('careersPage.benefitRemote'),
-    t('careersPage.benefitPto'),
-    t('careersPage.benefitHealth'),
-    t('careersPage.benefitLearning'),
-    t('careersPage.benefit401k'),
-    t('careersPage.benefitHome'),
-    t('careersPage.benefitWellness'),
-  ];
 
   return (
     <Layout>
@@ -69,17 +29,6 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="container-wide section-spacing-sm">
-          <h2 className="heading-lg mb-6">{t('careersPage.benefitsTitle')}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit) => (
-              <div key={benefit} className="glass-card p-4 text-sm font-medium">
-                {benefit}
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Open Positions */}
         <section className="container-wide section-spacing-sm">
@@ -92,7 +41,7 @@ export default function CareersPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="heading-sm">{role.title}</div>
-                    <div className="text-sm text-muted-foreground">{role.department}</div>
+                    <div className="text-sm text-muted-foreground">{role.location}</div>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground">
                     <div className="inline-flex items-center gap-1">

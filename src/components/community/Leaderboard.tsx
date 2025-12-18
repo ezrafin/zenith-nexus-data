@@ -121,7 +121,7 @@ export function Leaderboard() {
             </div>
           ) : (
             <div className="space-y-2">
-              {leaderboard.slice(0, 20).map((entry, index) => {
+              {leaderboard.slice(0, 10).map((entry, index) => {
                 const rank = index + 1;
                 const profile = {
                   id: entry.id,
