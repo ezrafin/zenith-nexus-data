@@ -185,6 +185,31 @@
     "careers": "Join our team",
     "authors": "Meet our experts"
   },
+  "notFound": {
+    "title": "404",
+    "message": "Page not found",
+    "backHome": "Return to homepage"
+  },
+  "marketsPage": {
+    "title": "Markets",
+    "indicesTitle": "Indices",
+    "indicesDescription": "Leading global stock indices in real-time",
+    "stocksTitle": "Stocks",
+    "stocksDescription": "Stock quotes from major companies",
+    "commoditiesTitle": "Commodities",
+    "commoditiesDescription": "Prices for gold, oil, silver, and other commodities",
+    "cryptoTitle": "Cryptocurrencies",
+    "cryptoDescription": "Leading cryptocurrency quotes",
+    "currenciesTitle": "Currencies",
+    "currenciesDescription": "Major currency pair rates",
+    "searchPlaceholder": "Search by symbol or name (e.g., AAPL, Bitcoin)...",
+    "searchResults": "Found {{count}} {{label}} matching \"{{query}}\"",
+    "searchNoResults": "No assets found matching \"{{query}}\"",
+    "searchResultOne": "asset",
+    "searchResultMany": "assets",
+    "showingTop": "Showing top 20 assets by market capitalization",
+    "loadErrorTitle": "Failed to load data"
+  },
   "cookieBanner": {
     "title": "We use cookies",
     "body": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking \"Accept All\", you consent to our use of cookies. You can customize your preferences or learn more in our Privacy Policy.",

@@ -1,2 +1,17 @@
-{}
+{
+  "page": {
+    "title": "Analysen",
+    "description": "Fundierte Marktanalysen und Expertenprognosen führender Analysten"
+  },
+  "filters": {
+    "all": "Alle",
+    "expert": "Expertenmeinung",
+    "markets": "Märkte",
+    "longterm": "Langfristige Analyse",
+    "technical": "Technische Analyse"
+  },
+  "empty": {
+    "noArticles": "Keine Artikel gefunden"
+  }
+}
 

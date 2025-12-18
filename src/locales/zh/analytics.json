@@ -1,2 +1,17 @@
-{}
+{
+  "page": {
+    "title": "分析",
+    "description": "来自顶尖分析师的深度市场分析和专家预测"
+  },
+  "filters": {
+    "all": "全部",
+    "expert": "专家观点",
+    "markets": "市场",
+    "longterm": "长期分析",
+    "technical": "技术分析"
+  },
+  "empty": {
+    "noArticles": "未找到文章"
+  }
+}
 

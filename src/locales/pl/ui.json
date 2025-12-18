@@ -71,6 +71,11 @@
     "noData": "Brak dostępnych danych",
     "notFound": "Nie znaleziono"
   },
+  "time": {
+    "justNow": "Przed chwilą",
+    "minutesAgo": "{{count}} min temu",
+    "hoursAgo": "{{count}} godzin temu"
+  },
   "auth": {
     "welcomeBack": "Witaj ponownie",
     "signInToContinue": "Zaloguj się, aby kontynuować",
@@ -147,7 +152,12 @@
     "filterCrypto": "Kryptowaluty",
     "filterCommodities": "Surowce",
     "filterPolitical": "Polityka",
-    "noNews": "Nie znaleziono wiadomości"
+    "noNews": "Nie znaleziono wiadomości",
+    "historicalFetchStarting": "Rozpoczynam pobieranie archiwalnych wiadomości... To może potrwać kilka minut.",
+    "historicalBatchError": "Błąd podczas pobierania partii {{batch}}: {{message}}",
+    "historicalBatchSuccess": "Partia {{batch}}/7: dodano {{count}} artykułów",
+    "historicalComplete": "Pobieranie archiwum zakończone! Dodano łącznie {{total}} artykułów.",
+    "historicalFailed": "Nie udało się pobrać archiwalnych wiadomości"
   },
   "descriptions": {
     "news": "Najnowsze wiadomości rynkowe",
@@ -165,5 +175,68 @@
     "contactUs": "Skontaktuj się z nami",
     "careers": "Dołącz do zespołu",
     "authors": "Poznaj naszych ekspertów"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Strona nie została znaleziona",
+    "backHome": "Powrót na stronę główną"
+  },
+  "marketsPage": {
+    "title": "Rynki",
+    "indicesTitle": "Indeksy",
+    "indicesDescription": "Wiodące globalne indeksy giełdowe w czasie rzeczywistym",
+    "stocksTitle": "Akcje",
+    "stocksDescription": "Notowania największych spółek",
+    "commoditiesTitle": "Surowce",
+    "commoditiesDescription": "Ceny złota, ropy, srebra i innych surowców",
+    "cryptoTitle": "Kryptowaluty",
+    "cryptoDescription": "Notowania głównych kryptowalut",
+    "currenciesTitle": "Waluty",
+    "currenciesDescription": "Główne pary walutowe",
+    "searchPlaceholder": "Szukaj po symbolu lub nazwie (np. AAPL, Bitcoin)...",
+    "searchResults": "Znaleziono {{count}} {{label}} pasujących do \"{{query}}\"",
+    "searchNoResults": "Nie znaleziono aktywów dla \"{{query}}\"",
+    "searchResultOne": "aktywo",
+    "searchResultMany": "aktywa",
+    "showingTop": "Top 20 aktywów według kapitalizacji rynkowej",
+    "loadErrorTitle": "Nie udało się załadować danych"
+  },
+  "home": {
+    "heroTitleLine1": "Twój strażnik na",
+    "heroTitleLine2": "globalnych rynkach",
+    "heroSubtitle": "Profesjonalne analizy i dane w czasie rzeczywistym dla świadomych decyzji inwestycyjnych",
+    "heroPrimaryCta": "Zobacz rynki",
+    "heroSecondaryCta": "Czytaj analizy"
+  },
+  "cookieBanner": {
+    "title": "Używamy plików cookie",
+    "body": "Używamy plików cookie, aby poprawić Twoje doświadczenie, analizować ruch na stronie i personalizować treści. Klikając „Akceptuj wszystko”, wyrażasz zgodę na ich użycie. Możesz dostosować preferencje lub dowiedzieć się więcej w naszej Polityce prywatności.",
+    "customize": "Dostosuj",
+    "rejectAll": "Odrzuć wszystkie",
+    "acceptAll": "Akceptuj wszystkie",
+    "dialogTitle": "Preferencje plików cookie",
+    "dialogDescription": "Zarządzaj preferencjami plików cookie. Poniżej możesz włączyć lub wyłączyć różne typy plików.",
+    "essentialTitle": "Niezbędne pliki cookie",
+    "essentialDescription": "Wymagane do prawidłowego działania strony. Nie można ich wyłączyć.",
+    "essentialAlwaysActive": "Zawsze aktywne",
+    "essentialUsesIntro": "Te pliki są używane do:",
+    "essentialUseAuth": "Uwierzytelnianie i zarządzanie sesją",
+    "essentialUseSecurity": "Bezpieczeństwo i zapobieganie oszustwom",
+    "essentialUseBasic": "Podstawowe funkcje strony",
+    "analyticsTitle": "Pliki cookie analityczne",
+    "analyticsDescription": "Pomagają zrozumieć, jak odwiedzający korzystają ze strony.",
+    "analyticsUsesIntro": "Te pliki są używane do:",
+    "analyticsUseTraffic": "Analiza ruchu (Vercel Analytics)",
+    "analyticsUsePerformance": "Monitorowanie wydajności",
+    "analyticsUseBehavior": "Zrozumienie zachowań użytkowników",
+    "preferencesTitle": "Pliki cookie preferencji",
+    "preferencesDescription": "Zapamiętują Twoje ustawienia i preferencje dla lepszego doświadczenia.",
+    "preferencesUsesIntro": "Te pliki są używane do:",
+    "preferencesUseTheme": "Preferencje motywu (jasny/ciemny)",
+    "preferencesUseUi": "Preferencje UI (panel boczny, układ)",
+    "preferencesUseLanguage": "Język i ustawienia regionalne",
+    "cancel": "Anuluj",
+    "save": "Zapisz preferencje",
+    "privacyLinkText": "Polityka prywatności"
   }
 }

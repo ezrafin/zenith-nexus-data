@@ -1,2 +1,17 @@
-{}
+{
+  "page": {
+    "title": "Analyses",
+    "description": "Analyses de marché approfondies et prévisions d'experts par des analystes de premier plan"
+  },
+  "filters": {
+    "all": "Tous",
+    "expert": "Avis d'expert",
+    "markets": "Marchés",
+    "longterm": "Analyse à long terme",
+    "technical": "Analyse technique"
+  },
+  "empty": {
+    "noArticles": "Aucun article trouvé"
+  }
+}
 

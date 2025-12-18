@@ -25,6 +25,13 @@
     "privacyPolicy": "Política de privacidad",
     "disclaimer": "Descargo de responsabilidad"
   },
+  "home": {
+    "heroTitleLine1": "Tu guardián en",
+    "heroTitleLine2": "los mercados globales",
+    "heroSubtitle": "Analítica profesional y datos en tiempo real para decisiones informadas",
+    "heroPrimaryCta": "Ver mercados",
+    "heroSecondaryCta": "Leer análisis"
+  },
   "buttons": {
     "save": "Guardar",
     "cancel": "Cancelar",
@@ -70,6 +77,11 @@
     "success": "Operación completada con éxito",
     "noData": "No hay datos disponibles",
     "notFound": "No encontrado"
+  },
+  "time": {
+    "justNow": "Justo ahora",
+    "minutesAgo": "hace {{count}} min",
+    "hoursAgo": "hace {{count}} horas"
   },
   "auth": {
     "welcomeBack": "Bienvenido de nuevo",
@@ -147,7 +159,12 @@
     "filterCrypto": "Criptomonedas",
     "filterCommodities": "Materias primas",
     "filterPolitical": "Política",
-    "noNews": "No se encontraron noticias"
+    "noNews": "No se encontraron noticias",
+    "historicalFetchStarting": "Iniciando obtención histórica de noticias... Esto puede tardar unos minutos.",
+    "historicalBatchError": "Error al obtener el lote {{batch}}: {{message}}",
+    "historicalBatchSuccess": "Lote {{batch}}/7: se agregaron {{count}} artículos",
+    "historicalComplete": "Obtención histórica completa. Se agregaron {{total}} artículos.",
+    "historicalFailed": "Error al obtener noticias históricas"
   },
   "descriptions": {
     "news": "Últimas noticias del mercado",
@@ -165,5 +182,61 @@
     "contactUs": "Contáctanos",
     "careers": "Únete a nuestro equipo",
     "authors": "Conoce a nuestros expertos"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Página no encontrada",
+    "backHome": "Volver al inicio"
+  },
+  "marketsPage": {
+    "title": "Mercados",
+    "indicesTitle": "Índices",
+    "indicesDescription": "Índices bursátiles globales en tiempo real",
+    "stocksTitle": "Acciones",
+    "stocksDescription": "Cotizaciones de las principales empresas",
+    "commoditiesTitle": "Materias primas",
+    "commoditiesDescription": "Precios de oro, petróleo, plata y otras materias primas",
+    "cryptoTitle": "Criptomonedas",
+    "cryptoDescription": "Principales cotizaciones cripto",
+    "currenciesTitle": "Divisas",
+    "currenciesDescription": "Principales pares de divisas",
+    "searchPlaceholder": "Buscar por símbolo o nombre (ej.: AAPL, Bitcoin)...",
+    "searchResults": "Se encontraron {{count}} {{label}} para \"{{query}}\"",
+    "searchNoResults": "No se encontraron activos para \"{{query}}\"",
+    "searchResultOne": "activo",
+    "searchResultMany": "activos",
+    "showingTop": "Mostrando los 20 principales activos por capitalización",
+    "loadErrorTitle": "No se pudieron cargar los datos"
+  },
+  "cookieBanner": {
+    "title": "Usamos cookies",
+    "body": "Usamos cookies para mejorar tu experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en \"Aceptar todo\", aceptas su uso. Puedes personalizar tus preferencias o saber más en nuestra Política de privacidad.",
+    "customize": "Personalizar",
+    "rejectAll": "Rechazar todo",
+    "acceptAll": "Aceptar todo",
+    "dialogTitle": "Preferencias de cookies",
+    "dialogDescription": "Administra tus preferencias de cookies. Puedes habilitar o deshabilitar tipos de cookies abajo.",
+    "essentialTitle": "Cookies esenciales",
+    "essentialDescription": "Necesarias para que el sitio funcione correctamente. No se pueden desactivar.",
+    "essentialAlwaysActive": "Siempre activas",
+    "essentialUsesIntro": "Estas cookies se usan para:",
+    "essentialUseAuth": "Autenticación y gestión de sesión",
+    "essentialUseSecurity": "Seguridad y prevención de fraude",
+    "essentialUseBasic": "Funcionalidad básica del sitio",
+    "analyticsTitle": "Cookies de análisis",
+    "analyticsDescription": "Nos ayudan a entender cómo interactúan los visitantes con el sitio.",
+    "analyticsUsesIntro": "Estas cookies se usan para:",
+    "analyticsUseTraffic": "Análisis de tráfico del sitio (Vercel Analytics)",
+    "analyticsUsePerformance": "Monitoreo de rendimiento",
+    "analyticsUseBehavior": "Comprender el comportamiento del usuario",
+    "preferencesTitle": "Cookies de preferencias",
+    "preferencesDescription": "Recuerdan tus ajustes y preferencias para una mejor experiencia.",
+    "preferencesUsesIntro": "Estas cookies se usan para:",
+    "preferencesUseTheme": "Preferencias de tema (claro/oscuro)",
+    "preferencesUseUi": "Preferencias de UI (sidebar, diseño)",
+    "preferencesUseLanguage": "Idioma y configuración regional",
+    "cancel": "Cancelar",
+    "save": "Guardar preferencias",
+    "privacyLinkText": "Política de privacidad"
   }
 }

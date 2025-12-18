@@ -1,2 +1,17 @@
-{}
+{
+  "page": {
+    "title": "Análisis",
+    "description": "Análisis de mercado en profundidad y pronósticos de expertos de analistas líderes"
+  },
+  "filters": {
+    "all": "Todos",
+    "expert": "Opinión de experto",
+    "markets": "Mercados",
+    "longterm": "Análisis a largo plazo",
+    "technical": "Análisis técnico"
+  },
+  "empty": {
+    "noArticles": "No se encontraron artículos"
+  }
+}
 

@@ -1,2 +1,17 @@
-{}
+{
+  "page": {
+    "title": "Analizy",
+    "description": "Dogłębne analizy rynku i prognozy ekspertów od czołowych analityków"
+  },
+  "filters": {
+    "all": "Wszystkie",
+    "expert": "Opinia eksperta",
+    "markets": "Rynki",
+    "longterm": "Analiza długoterminowa",
+    "technical": "Analiza techniczna"
+  },
+  "empty": {
+    "noArticles": "Nie znaleziono artykułów"
+  }
+}
 

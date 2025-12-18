@@ -9,50 +9,58 @@ import { useMarketDataQuery } from '@/hooks/useMarketDataQuery';
 import { cn } from '@/lib/utils';
 import { AlertCircle, Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { useTranslation } from '@/hooks/useTranslation';
 
 type MarketType = 'indices' | 'stocks' | 'commodities' | 'crypto' | 'currencies';
-
-const marketInfo: Record<MarketType, { title: string; description: string; showVolume: boolean }> = {
-  indices: {
-    title: 'Indices',
-    description: 'Leading global stock indices in real-time',
-    showVolume: false,
-  },
-  stocks: {
-    title: 'Stocks',
-    description: 'Stock quotes from major companies',
-    showVolume: true,
-  },
-  commodities: {
-    title: 'Commodities',
-    description: 'Prices for gold, oil, silver, and other commodities',
-    showVolume: false,
-  },
-  crypto: {
-    title: 'Cryptocurrencies',
-    description: 'Leading cryptocurrency quotes',
-    showVolume: true,
-  },
-  currencies: {
-    title: 'Currencies',
-    description: 'Major currency pair rates',
-    showVolume: false,
-  },
-};
-
-const marketTabs: { type: MarketType; label: string }[] = [
-  { type: 'indices', label: 'Indices' },
-  { type: 'stocks', label: 'Stocks' },
-  { type: 'commodities', label: 'Commodities' },
-  { type: 'crypto', label: 'Crypto' },
-  { type: 'currencies', label: 'Currencies' },
-];
 
 export default function MarketsPage() {
   const { type } = useParams<{ type: MarketType }>();
   const marketType = (type as MarketType) || 'indices';
   const [searchQuery, setSearchQuery] = useState('');
+  const { t } = useTranslation({ namespace: 'ui' });
   
+  const marketInfo: Record<MarketType, { title: string; description: string; showVolume: boolean }> = useMemo(
+    () => ({
+      indices: {
+        title: t('marketsPage.indicesTitle'),
+        description: t('marketsPage.indicesDescription'),
+        showVolume: false,
+      },
+      stocks: {
+        title: t('marketsPage.stocksTitle'),
+        description: t('marketsPage.stocksDescription'),
+        showVolume: true,
+      },
+      commodities: {
+        title: t('marketsPage.commoditiesTitle'),
+        description: t('marketsPage.commoditiesDescription'),
+        showVolume: false,
+      },
+      crypto: {
+        title: t('marketsPage.cryptoTitle'),
+        description: t('marketsPage.cryptoDescription'),
+        showVolume: true,
+      },
+      currencies: {
+        title: t('marketsPage.currenciesTitle'),
+        description: t('marketsPage.currenciesDescription'),
+        showVolume: false,
+      },
+    }),
+    [t]
+  );
+
+  const marketTabs: { type: MarketType; label: string }[] = useMemo(
+    () => [
+      { type: 'indices', label: t('marketsPage.indicesTitle') },
+      { type: 'stocks', label: t('marketsPage.stocksTitle') },
+      { type: 'commodities', label: t('marketsPage.commoditiesTitle') },
+      { type: 'crypto', label: t('marketsPage.cryptoTitle') },
+      { type: 'currencies', label: t('marketsPage.currenciesTitle') },
+    ],
+    [t]
+  );
+
   // Load current market type data
   const { data, isLoading: loading, error, lastUpdated, refetch } = useMarketDataQuery({
     type: marketType,
@@ -124,10 +132,10 @@ export default function MarketsPage() {
         <div className="container-wide">
           <div className="mb-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-              <h1 className="heading-lg">{info.title}</h1>
+            <h1 className="heading-lg">{info.title}</h1>
               <LastUpdated timestamp={lastUpdated} onRefresh={refresh} loading={loading} />
             </div>
-            <p className="body-md max-w-2xl">{info.description}</p>
+          <p className="body-md max-w-2xl">{info.description}</p>
           </div>
 
           {/* Market Tabs */}
@@ -156,7 +164,7 @@ export default function MarketsPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search by symbol or name (e.g., AAPL, Bitcoin)..."
+                placeholder={t('marketsPage.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 pr-10"
@@ -173,24 +181,28 @@ export default function MarketsPage() {
             {searchQuery && (
               <p className="mt-2 text-sm text-muted-foreground">
                 {filteredData.length > 0 
-                  ? `Found ${filteredData.length} ${filteredData.length === 1 ? 'asset' : 'assets'} matching "${searchQuery}"`
-                  : `No assets found matching "${searchQuery}"`
+                  ? t('marketsPage.searchResults', {
+                      count: filteredData.length,
+                      label: filteredData.length === 1 ? t('marketsPage.searchResultOne') : t('marketsPage.searchResultMany'),
+                      query: searchQuery,
+                    })
+                  : t('marketsPage.searchNoResults', { query: searchQuery })
                 }
               </p>
             )}
             {!searchQuery && (
               <p className="mt-2 text-sm text-muted-foreground">
-                Showing top 20 assets by market capitalization
+                {t('marketsPage.showingTop')}
               </p>
             )}
           </div>
 
           {/* Error State */}
           {error && (
-            <div className="mb-6 p-4 rounded-lg border border-destructive/50 bg-destructive/10 flex items-center gap-3">
+              <div className="mb-6 p-4 rounded-lg border border-destructive/50 bg-destructive/10 flex items-center gap-3">
               <AlertCircle className="h-5 w-5 text-destructive" />
               <div>
-                <p className="text-sm font-medium text-destructive">Failed to load data</p>
+                  <p className="text-sm font-medium text-destructive">{t('marketsPage.loadErrorTitle')}</p>
                 <p className="text-xs text-muted-foreground">{error?.message || String(error)}</p>
               </div>
             </div>

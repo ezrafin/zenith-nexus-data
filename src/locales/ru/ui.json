@@ -71,6 +71,11 @@
     "noData": "Нет доступных данных",
     "notFound": "Не найдено"
   },
+  "time": {
+    "justNow": "Только что",
+    "minutesAgo": "{{count}} мин назад",
+    "hoursAgo": "{{count}} часов назад"
+  },
   "auth": {
     "welcomeBack": "С возвращением",
     "signInToContinue": "Войдите в аккаунт, чтобы продолжить",
@@ -147,7 +152,12 @@
     "filterCrypto": "Криптовалюты",
     "filterCommodities": "Сырьё",
     "filterPolitical": "Политика",
-    "noNews": "Новости не найдены"
+    "noNews": "Новости не найдены",
+    "historicalFetchStarting": "Начинаем загрузку исторических новостей... Это может занять несколько минут.",
+    "historicalBatchError": "Ошибка при загрузке пакета {{batch}}: {{message}}",
+    "historicalBatchSuccess": "Пакет {{batch}}/7: добавлено {{count}} статей",
+    "historicalComplete": "Историческая загрузка завершена! Добавлено всего {{total}} статей.",
+    "historicalFailed": "Не удалось загрузить исторические новости"
   },
   "descriptions": {
     "news": "Последние новости рынков",
@@ -165,5 +175,68 @@
     "contactUs": "Свяжитесь с нами",
     "careers": "Присоединяйтесь к команде",
     "authors": "Познакомьтесь с экспертами"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Страница не найдена",
+    "backHome": "Вернуться на главную"
+  },
+  "marketsPage": {
+    "title": "Рынки",
+    "indicesTitle": "Индексы",
+    "indicesDescription": "Ключевые мировые фондовые индексы в реальном времени",
+    "stocksTitle": "Акции",
+    "stocksDescription": "Котировки крупнейших компаний",
+    "commoditiesTitle": "Сырьё",
+    "commoditiesDescription": "Цены на золото, нефть, серебро и другие товары",
+    "cryptoTitle": "Криптовалюты",
+    "cryptoDescription": "Котировки ведущих криптовалют",
+    "currenciesTitle": "Валюты",
+    "currenciesDescription": "Основные валютные пары",
+    "searchPlaceholder": "Поиск по тикеру или названию (например, AAPL, Bitcoin)...",
+    "searchResults": "Найдено {{count}} {{label}} по запросу \"{{query}}\"",
+    "searchNoResults": "Активы по запросу \"{{query}}\" не найдены",
+    "searchResultOne": "актив",
+    "searchResultMany": "активов",
+    "showingTop": "Топ-20 активов по рыночной капитализации",
+    "loadErrorTitle": "Не удалось загрузить данные"
+  },
+  "home": {
+    "heroTitleLine1": "Ваш защитник на",
+    "heroTitleLine2": "глобальных рынках",
+    "heroSubtitle": "Профессиональная аналитика и данные в реальном времени для взвешенных решений",
+    "heroPrimaryCta": "Смотреть рынки",
+    "heroSecondaryCta": "Читать аналитику"
+  },
+  "cookieBanner": {
+    "title": "Мы используем файлы cookie",
+    "body": "Мы используем cookie, чтобы улучшить ваш опыт, анализировать трафик и персонализировать контент. Нажимая «Принять все», вы соглашаетесь на их использование. Вы можете настроить предпочтения или узнать больше в нашей Политике конфиденциальности.",
+    "customize": "Настроить",
+    "rejectAll": "Отклонить все",
+    "acceptAll": "Принять все",
+    "dialogTitle": "Настройки cookie",
+    "dialogDescription": "Управляйте своими настройками cookie. Ниже можно включать или отключать разные типы.",
+    "essentialTitle": "Необходимые cookie",
+    "essentialDescription": "Нужны для корректной работы сайта. Их нельзя отключить.",
+    "essentialAlwaysActive": "Всегда активны",
+    "essentialUsesIntro": "Эти cookie используются для:",
+    "essentialUseAuth": "Аутентификация и управление сессией",
+    "essentialUseSecurity": "Безопасность и предотвращение мошенничества",
+    "essentialUseBasic": "Базовая функциональность сайта",
+    "analyticsTitle": "Аналитические cookie",
+    "analyticsDescription": "Помогают понять, как пользователи взаимодействуют с сайтом.",
+    "analyticsUsesIntro": "Эти cookie используются для:",
+    "analyticsUseTraffic": "Анализ трафика (Vercel Analytics)",
+    "analyticsUsePerformance": "Мониторинг производительности",
+    "analyticsUseBehavior": "Понимание поведения пользователей",
+    "preferencesTitle": "Cookie предпочтений",
+    "preferencesDescription": "Запоминают ваши настройки и предпочтения для лучшего опыта.",
+    "preferencesUsesIntro": "Эти cookie используются для:",
+    "preferencesUseTheme": "Настройки темы (светлая/тёмная)",
+    "preferencesUseUi": "Настройки интерфейса (сайдбар, макет)",
+    "preferencesUseLanguage": "Язык и региональные настройки",
+    "cancel": "Отмена",
+    "save": "Сохранить настройки",
+    "privacyLinkText": "Политика конфиденциальности"
   }
 }

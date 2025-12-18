@@ -71,6 +71,11 @@
     "noData": "Aucune donnée disponible",
     "notFound": "Non trouvé"
   },
+  "time": {
+    "justNow": "À l'instant",
+    "minutesAgo": "il y a {{count}} min",
+    "hoursAgo": "il y a {{count}} heures"
+  },
   "auth": {
     "welcomeBack": "Bon retour",
     "signInToContinue": "Connectez-vous pour continuer",
@@ -147,7 +152,12 @@
     "filterCrypto": "Crypto",
     "filterCommodities": "Matières premières",
     "filterPolitical": "Politique",
-    "noNews": "Aucune actualité trouvée"
+    "noNews": "Aucune actualité trouvée",
+    "historicalFetchStarting": "Démarrage de la récupération historique... Cela peut prendre quelques minutes.",
+    "historicalBatchError": "Erreur lors du lot {{batch}} : {{message}}",
+    "historicalBatchSuccess": "Lot {{batch}}/7 : {{count}} articles ajoutés",
+    "historicalComplete": "Récupération historique terminée ! {{total}} articles ajoutés.",
+    "historicalFailed": "Échec de la récupération des actualités historiques"
   },
   "descriptions": {
     "news": "Dernières actualités des marchés",
@@ -165,5 +175,68 @@
     "contactUs": "Contactez-nous",
     "careers": "Rejoignez notre équipe",
     "authors": "Rencontrez nos experts"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Page introuvable",
+    "backHome": "Retour à l'accueil"
+  },
+  "marketsPage": {
+    "title": "Marchés",
+    "indicesTitle": "Indices",
+    "indicesDescription": "Principaux indices boursiers mondiaux en temps réel",
+    "stocksTitle": "Actions",
+    "stocksDescription": "Cours des principales entreprises",
+    "commoditiesTitle": "Matières premières",
+    "commoditiesDescription": "Prix de l'or, du pétrole, de l'argent et d'autres matières premières",
+    "cryptoTitle": "Cryptomonnaies",
+    "cryptoDescription": "Principales cotations crypto",
+    "currenciesTitle": "Devises",
+    "currenciesDescription": "Principales paires de devises",
+    "searchPlaceholder": "Rechercher par symbole ou nom (ex.: AAPL, Bitcoin)...",
+    "searchResults": "Trouvé {{count}} {{label}} correspondant à \"{{query}}\"",
+    "searchNoResults": "Aucun actif trouvé pour \"{{query}}\"",
+    "searchResultOne": "actif",
+    "searchResultMany": "actifs",
+    "showingTop": "Top 20 des actifs par capitalisation boursière",
+    "loadErrorTitle": "Impossible de charger les données"
+  },
+  "home": {
+    "heroTitleLine1": "Votre gardien sur",
+    "heroTitleLine2": "les marchés mondiaux",
+    "heroSubtitle": "Analyses professionnelles et données en temps réel pour des décisions éclairées",
+    "heroPrimaryCta": "Voir les marchés",
+    "heroSecondaryCta": "Lire les analyses"
+  },
+  "cookieBanner": {
+    "title": "Nous utilisons des cookies",
+    "body": "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En cliquant sur « Tout accepter », vous acceptez notre utilisation des cookies. Vous pouvez personnaliser vos préférences ou en savoir plus dans notre Politique de confidentialité.",
+    "customize": "Personnaliser",
+    "rejectAll": "Tout refuser",
+    "acceptAll": "Tout accepter",
+    "dialogTitle": "Préférences de cookies",
+    "dialogDescription": "Gérez vos préférences de cookies. Vous pouvez activer ou désactiver différents types de cookies ci-dessous.",
+    "essentialTitle": "Cookies essentiels",
+    "essentialDescription": "Nécessaires au bon fonctionnement du site. Ils ne peuvent pas être désactivés.",
+    "essentialAlwaysActive": "Toujours actifs",
+    "essentialUsesIntro": "Ces cookies sont utilisés pour :",
+    "essentialUseAuth": "Authentification et gestion de session",
+    "essentialUseSecurity": "Sécurité et prévention de la fraude",
+    "essentialUseBasic": "Fonctionnalités de base du site",
+    "analyticsTitle": "Cookies d'analyse",
+    "analyticsDescription": "Aident à comprendre comment les visiteurs interagissent avec le site.",
+    "analyticsUsesIntro": "Ces cookies sont utilisés pour :",
+    "analyticsUseTraffic": "Analyse du trafic du site (Vercel Analytics)",
+    "analyticsUsePerformance": "Suivi des performances",
+    "analyticsUseBehavior": "Compréhension du comportement utilisateur",
+    "preferencesTitle": "Cookies de préférences",
+    "preferencesDescription": "Mémorisent vos paramètres et préférences pour une meilleure expérience.",
+    "preferencesUsesIntro": "Ces cookies sont utilisés pour :",
+    "preferencesUseTheme": "Préférences de thème (clair/sombre)",
+    "preferencesUseUi": "Préférences d'interface (barre latérale, mise en page)",
+    "preferencesUseLanguage": "Langue et paramètres régionaux",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "privacyLinkText": "Politique de confidentialité"
   }
 }

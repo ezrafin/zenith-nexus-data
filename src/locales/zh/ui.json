@@ -71,6 +71,11 @@
     "noData": "无可用数据",
     "notFound": "未找到"
   },
+  "time": {
+    "justNow": "刚刚",
+    "minutesAgo": "{{count}} 分钟前",
+    "hoursAgo": "{{count}} 小时前"
+  },
   "auth": {
     "welcomeBack": "欢迎回来",
     "signInToContinue": "登录以继续",
@@ -147,7 +152,12 @@
     "filterCrypto": "加密货币",
     "filterCommodities": "大宗商品",
     "filterPolitical": "政治",
-    "noNews": "未找到新闻"
+    "noNews": "未找到新闻",
+    "historicalFetchStarting": "开始获取历史新闻... 这可能需要几分钟。",
+    "historicalBatchError": "获取批次 {{batch}} 时出错：{{message}}",
+    "historicalBatchSuccess": "批次 {{batch}}/7：已添加 {{count}} 篇文章",
+    "historicalComplete": "历史获取完成！共添加 {{total}} 篇文章。",
+    "historicalFailed": "获取历史新闻失败"
   },
   "descriptions": {
     "news": "最新市场新闻",
@@ -165,5 +175,68 @@
     "contactUs": "联系我们",
     "careers": "加入我们的团队",
     "authors": "认识我们的专家"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "页面未找到",
+    "backHome": "返回主页"
+  },
+  "marketsPage": {
+    "title": "市场",
+    "indicesTitle": "指数",
+    "indicesDescription": "全球主要股票指数实时数据",
+    "stocksTitle": "股票",
+    "stocksDescription": "大型公司的股票报价",
+    "commoditiesTitle": "大宗商品",
+    "commoditiesDescription": "黄金、石油、白银等价格",
+    "cryptoTitle": "加密货币",
+    "cryptoDescription": "主流加密货币报价",
+    "currenciesTitle": "货币",
+    "currenciesDescription": "主要货币对汇率",
+    "searchPlaceholder": "按代码或名称搜索（如 AAPL、Bitcoin）...",
+    "searchResults": "找到 {{count}} 个{{label}}，匹配 \"{{query}}\"",
+    "searchNoResults": "未找到与 \"{{query}}\" 匹配的资产",
+    "searchResultOne": "资产",
+    "searchResultMany": "资产",
+    "showingTop": "显示市值排名前20的资产",
+    "loadErrorTitle": "数据加载失败"
+  },
+  "home": {
+    "heroTitleLine1": "守护您在",
+    "heroTitleLine2": "全球市场中的位置",
+    "heroSubtitle": "专业分析与实时数据，助力明智投资决策",
+    "heroPrimaryCta": "查看市场",
+    "heroSecondaryCta": "阅读分析"
+  },
+  "cookieBanner": {
+    "title": "我们使用 Cookie",
+    "body": "我们使用 Cookie 来提升浏览体验、分析网站流量并个性化内容。点击“全部接受”即表示同意使用。您可以自定义偏好或在隐私政策中了解更多。",
+    "customize": "自定义",
+    "rejectAll": "全部拒绝",
+    "acceptAll": "全部接受",
+    "dialogTitle": "Cookie 偏好",
+    "dialogDescription": "管理您的 Cookie 偏好。您可以在下方启用或禁用不同类型的 Cookie。",
+    "essentialTitle": "必要的 Cookie",
+    "essentialDescription": "网站正常运行所必需，无法禁用。",
+    "essentialAlwaysActive": "始终启用",
+    "essentialUsesIntro": "这些 Cookie 用于：",
+    "essentialUseAuth": "身份验证和会话管理",
+    "essentialUseSecurity": "安全与防欺诈",
+    "essentialUseBasic": "基础网站功能",
+    "analyticsTitle": "分析类 Cookie",
+    "analyticsDescription": "帮助我们了解访客如何使用网站。",
+    "analyticsUsesIntro": "这些 Cookie 用于：",
+    "analyticsUseTraffic": "网站流量分析（Vercel Analytics）",
+    "analyticsUsePerformance": "性能监控",
+    "analyticsUseBehavior": "理解用户行为",
+    "preferencesTitle": "偏好 Cookie",
+    "preferencesDescription": "记住您的设置和偏好，提供更佳体验。",
+    "preferencesUsesIntro": "这些 Cookie 用于：",
+    "preferencesUseTheme": "主题偏好（明/暗）",
+    "preferencesUseUi": "界面偏好（侧边栏、布局）",
+    "preferencesUseLanguage": "语言和区域设置",
+    "cancel": "取消",
+    "save": "保存偏好",
+    "privacyLinkText": "隐私政策"
   }
 }
