@@ -6,52 +6,24 @@ import { Check, Upload, Loader2 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 
-// Pre-defined avatar options using DiceBear API with different styles
-const AVATAR_OPTIONS = [
-  // Adventurer style avatars
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Felix',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Aneka',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Bailey',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Charlie',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Diana',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Eden',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=Fiona',
-  'https://api.dicebear.com/7.x/adventurer/svg?seed=George',
-  // Avataaars style
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Leo',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Maria',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Oscar',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Sophie',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Trader',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Investor',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Analyst',
-  'https://api.dicebear.com/7.x/avataaars/svg?seed=Broker',
-  // Bottts style (robot avatars)
-  'https://api.dicebear.com/7.x/bottts/svg?seed=Bot1',
-  'https://api.dicebear.com/7.x/bottts/svg?seed=Bot2',
-  'https://api.dicebear.com/7.x/bottts/svg?seed=Bot3',
-  'https://api.dicebear.com/7.x/bottts/svg?seed=Bot4',
-  // Lorelei style
-  'https://api.dicebear.com/7.x/lorelei/svg?seed=Luna',
-  'https://api.dicebear.com/7.x/lorelei/svg?seed=Nova',
-  'https://api.dicebear.com/7.x/lorelei/svg?seed=Aria',
-  'https://api.dicebear.com/7.x/lorelei/svg?seed=Stella',
-  // Fun emoji style
-  'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Happy',
-  'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Cool',
-  'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Smart',
-  'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Rich',
-  // Notionists style
-  'https://api.dicebear.com/7.x/notionists/svg?seed=Pro',
-  'https://api.dicebear.com/7.x/notionists/svg?seed=Expert',
-  'https://api.dicebear.com/7.x/notionists/svg?seed=Master',
-  'https://api.dicebear.com/7.x/notionists/svg?seed=Guru',
-  // Personas style
-  'https://api.dicebear.com/7.x/personas/svg?seed=Alex',
-  'https://api.dicebear.com/7.x/personas/svg?seed=Sam',
-  'https://api.dicebear.com/7.x/personas/svg?seed=Jordan',
-  'https://api.dicebear.com/7.x/personas/svg?seed=Taylor',
+// DiceBear Notionists background colors
+const AVATAR_BACKGROUND_COLORS = ['b6e3f4', 'c0aede', 'd1d4f9', 'ffd5dc', 'ffdfbf'];
+
+// Avatar seeds for variety
+const AVATAR_SEEDS = [
+  'Felix', 'Aneka', 'Bailey', 'Charlie', 'Diana', 'Eden', 'Fiona', 'George',
+  'Leo', 'Maria', 'Oscar', 'Sophie', 'Trader', 'Investor', 'Analyst', 'Broker',
+  'Luna', 'Nova', 'Aria', 'Stella', 'Pro', 'Expert', 'Master', 'Guru',
+  'Alex', 'Sam', 'Jordan', 'Taylor', 'Mason', 'Harper', 'Quinn', 'Riley'
 ];
+
+// Generate Notionists avatars with gradient backgrounds
+const AVATAR_OPTIONS = AVATAR_SEEDS.flatMap((seed) =>
+  AVATAR_BACKGROUND_COLORS.map(
+    (color) =>
+      `https://api.dicebear.com/9.x/notionists/svg?seed=${seed}&backgroundColor=${color}&backgroundType=gradientLinear`
+  )
+);
 
 interface AvatarSelectorProps {
   open: boolean;

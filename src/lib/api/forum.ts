@@ -1,6 +1,6 @@
 import { supabase } from '@/integrations/supabase/client';
 import type { ForumCategory, ForumTopic, ForumComment } from './types';
-import { getAuthorAvatar } from './utils';
+import { getAuthorAvatar, generateDiceBearAvatar } from './utils';
 import { logger } from '@/lib/logger';
 
 /**
@@ -26,11 +26,11 @@ const mockForumCategories: ForumCategory[] = [
  * @fallback-only Used only when Supabase API fails in DEV mode.
  */
 const mockForumTopics: ForumTopic[] = [
-  { id: '1', categoryId: 'etfs', title: 'Best ETFs for Long-Term Investing in 2025', author: 'InvestorPro', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=investor', date: '2024-12-04', replies: 45, views: 1250, lastActivity: '2 hours ago' },
-  { id: '2', categoryId: 'crypto', title: "Bitcoin $100K - What's Next?", author: 'CryptoKing', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=crypto', date: '2024-12-03', replies: 128, views: 4500, lastActivity: '15 minutes ago' },
-  { id: '3', categoryId: 'stocks', title: 'NVIDIA Q3 2024 Earnings Analysis', author: 'TechAnalyst', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=tech', date: '2024-12-02', replies: 67, views: 2100, lastActivity: '1 hour ago' },
-  { id: '4', categoryId: 'news', title: 'S&P 500 Year-End Forecast', author: 'MarketWatcher', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=market', date: '2024-12-01', replies: 89, views: 3200, lastActivity: '30 minutes ago' },
-  { id: '5', categoryId: 'beginners', title: 'Dividend Strategies for Passive Income', author: 'DividendHunter', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=dividend', date: '2024-11-30', replies: 156, views: 5600, lastActivity: '4 hours ago' },
+  { id: '1', categoryId: 'etfs', title: 'Best ETFs for Long-Term Investing in 2025', author: 'InvestorPro', authorAvatar: generateDiceBearAvatar('investor'), date: '2024-12-04', replies: 45, views: 1250, lastActivity: '2 hours ago' },
+  { id: '2', categoryId: 'crypto', title: "Bitcoin $100K - What's Next?", author: 'CryptoKing', authorAvatar: generateDiceBearAvatar('crypto'), date: '2024-12-03', replies: 128, views: 4500, lastActivity: '15 minutes ago' },
+  { id: '3', categoryId: 'stocks', title: 'NVIDIA Q3 2024 Earnings Analysis', author: 'TechAnalyst', authorAvatar: generateDiceBearAvatar('tech'), date: '2024-12-02', replies: 67, views: 2100, lastActivity: '1 hour ago' },
+  { id: '4', categoryId: 'news', title: 'S&P 500 Year-End Forecast', author: 'MarketWatcher', authorAvatar: generateDiceBearAvatar('market'), date: '2024-12-01', replies: 89, views: 3200, lastActivity: '30 minutes ago' },
+  { id: '5', categoryId: 'beginners', title: 'Dividend Strategies for Passive Income', author: 'DividendHunter', authorAvatar: generateDiceBearAvatar('dividend'), date: '2024-11-30', replies: 156, views: 5600, lastActivity: '4 hours ago' },
 ];
 
 /**
@@ -38,8 +38,8 @@ const mockForumTopics: ForumTopic[] = [
  * @fallback-only Used only when Supabase API fails in DEV mode.
  */
 const mockForumComments: ForumComment[] = [
-  { id: '1', topicId: '1', author: 'ValueInvestor', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=value', content: 'VOO and VTI remain the best choice for most investors. Low fees and broad diversification.', date: '2024-12-04 10:30', rating: 45 },
-  { id: '2', topicId: '1', author: 'GrowthSeeker', authorAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=growth', content: "Don't forget about QQQ for tech sector exposure. Excellent returns over the past years.", date: '2024-12-04 11:15', rating: 32 },
+  { id: '1', topicId: '1', author: 'ValueInvestor', authorAvatar: generateDiceBearAvatar('value'), content: 'VOO and VTI remain the best choice for most investors. Low fees and broad diversification.', date: '2024-12-04 10:30', rating: 45 },
+  { id: '2', topicId: '1', author: 'GrowthSeeker', authorAvatar: generateDiceBearAvatar('growth'), content: "Don't forget about QQQ for tech sector exposure. Excellent returns over the past years.", date: '2024-12-04 11:15', rating: 32 },
 ];
 
 export async function fetchForumCategories(): Promise<ForumCategory[]> {

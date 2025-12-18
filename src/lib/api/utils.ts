@@ -2,6 +2,29 @@
 
 export const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
+// DiceBear Notionists background colors
+const AVATAR_BACKGROUND_COLORS = ['b6e3f4', 'c0aede', 'd1d4f9', 'ffd5dc', 'ffdfbf'];
+
+// Generate a consistent background color based on seed string
+function getBackgroundColorForSeed(seed: string): string {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const index = Math.abs(hash) % AVATAR_BACKGROUND_COLORS.length;
+  return AVATAR_BACKGROUND_COLORS[index];
+}
+
+// Generate DiceBear Notionists avatar URL with gradient background
+export function generateDiceBearAvatar(seed: string, withBackground = true): string {
+  const encodedSeed = encodeURIComponent(seed);
+  if (!withBackground) {
+    return `https://api.dicebear.com/9.x/notionists/svg?seed=${encodedSeed}`;
+  }
+  const bgColor = getBackgroundColorForSeed(seed);
+  return `https://api.dicebear.com/9.x/notionists/svg?seed=${encodedSeed}&backgroundColor=${bgColor}&backgroundType=gradientLinear`;
+}
+
 // Author avatars mapping - includes authors from src/data/authors.ts
 const authorAvatars: Record<string, string> = {
   // Site authors from authors.ts
@@ -37,7 +60,7 @@ const authorAvatars: Record<string, string> = {
 };
 
 export function getAuthorAvatar(authorName: string): string {
-  return authorAvatars[authorName] || `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(authorName)}`;
+  return authorAvatars[authorName] || generateDiceBearAvatar(authorName);
 }
 
 // Category image mapping for analytics articles
