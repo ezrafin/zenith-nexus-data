@@ -2,8 +2,19 @@
 
 export const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-// Author avatars mapping
+// Author avatars mapping - includes authors from src/data/authors.ts
 const authorAvatars: Record<string, string> = {
+  // Site authors from authors.ts
+  'Christina Summerbell': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+  'Assunta Novak': 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
+  'Lysander Truog': 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face',
+  'Elias Wolfenstein': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+  'Anastasia Petrova': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+  'Luca Montefiore': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+  'Isabelle Dubois': 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face',
+  'Xu Meiling': 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face',
+  
+  // Legacy/additional authors
   'Sarah Chen, CFA': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
   'Michael Torres': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
   'David Park': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
