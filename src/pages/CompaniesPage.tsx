@@ -163,7 +163,7 @@ export default function CompaniesPage() {
                     <SelectTrigger className="w-[160px] sm:w-[180px]">
                       <SelectValue placeholder="Region" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent align="end">
                       {regions.map((region) => (
                         <SelectItem key={region.value} value={region.value}>
                           {region.label}
@@ -180,7 +180,7 @@ export default function CompaniesPage() {
                     <SelectTrigger className="w-[160px] sm:w-[180px]">
                       <SelectValue placeholder="Sort by" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent align="end">
                       <SelectItem value="combined">Combined Trust</SelectItem>
                       <SelectItem value="community">Community Trust</SelectItem>
                       <SelectItem value="expert">Expert Trust</SelectItem>
