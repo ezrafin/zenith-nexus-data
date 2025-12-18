@@ -32,7 +32,7 @@
     "yourProgressTitle": "Your Progress",
     "yourProgressSummary": "{{completed}}/{{total}} completed",
     "yourProgressDescription": "Mark articles as completed to track what you've already learned.",
-    "summary": "{{total}} articles \u2022 {{completed}} completed",
+    "summary": "{{total}} articles • {{completed}} completed",
     "ctaTitle": "Ready for More Advanced Content?",
     "ctaDescription": "Once you have mastered the basics, explore our advanced articles for deeper insights and sophisticated strategies.",
     "ctaButton": "View Advanced Articles"
@@ -50,7 +50,7 @@
     "yourProgressTitle": "Your Progress",
     "yourProgressSummary": "{{completed}}/{{total}} completed",
     "yourProgressDescription": "Mark articles you've mastered to track your expert-level learning.",
-    "summary": "{{total}} articles \u2022 {{completed}} completed",
+    "summary": "{{total}} articles • {{completed}} completed",
     "ctaTitle": "Take Your Skills to the Next Level",
     "ctaDescription": "Enroll in our structured learning course for a comprehensive investment education with certification.",
     "ctaButton": "Explore Learning Course"
@@ -84,6 +84,3 @@
     "continueLearningAdvanced": "Advanced Articles"
   }
 }
-
-{}
-
