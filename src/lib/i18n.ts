@@ -141,3 +141,27 @@ export function clearTranslationCache(): void {
   });
 }
 
+/**
+ * Map app language code to browser locale string
+ */
+export function getLocaleForLanguage(lang: SupportedLanguage): string {
+  switch (lang) {
+    case 'en':
+      return 'en-US';
+    case 'de':
+      return 'de-DE';
+    case 'fr':
+      return 'fr-FR';
+    case 'es':
+      return 'es-ES';
+    case 'pl':
+      return 'pl-PL';
+    case 'ru':
+      return 'ru-RU';
+    case 'zh':
+      return 'zh-CN';
+    default:
+      return 'en-US';
+  }
+}
+

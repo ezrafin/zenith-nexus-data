@@ -9,10 +9,11 @@ import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { useTranslation } from '@/hooks/useTranslation';
+import { getLocaleForLanguage } from '@/lib/i18n';
 
 const ITEMS_PER_PAGE = 15;
 export default function NewsPage() {
-  const { t } = useTranslation({ namespace: 'ui' });
+  const { t, language } = useTranslation({ namespace: 'ui' });
   const [activeFilter, setActiveFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const {
@@ -52,7 +53,7 @@ export default function NewsPage() {
 
   const handleFetchHistorical = async () => {
     setIsFetchingHistorical(true);
-    toast.info('Starting historical news fetch... This may take a few minutes.');
+    toast.info(t('newsPage.historicalFetchStarting'));
     try {
       // Fetch 14 months of data in batches (2 months at a time to avoid timeouts)
       const now = new Date();
@@ -74,20 +75,30 @@ export default function NewsPage() {
         });
         if (error) {
           console.error('Batch error:', error);
-          toast.error(`Error fetching batch ${i + 1}: ${error.message}`);
+          toast.error(
+            t('newsPage.historicalBatchError')
+              .replace('{{batch}}', String(i + 1))
+              .replace('{{message}}', error.message)
+          );
         } else if (data) {
           totalInserted += data.totalInserted || 0;
-          toast.success(`Batch ${i + 1}/7: Added ${data.totalInserted} articles`);
+          toast.success(
+            t('newsPage.historicalBatchSuccess')
+              .replace('{{batch}}', String(i + 1))
+              .replace('{{count}}', String(data.totalInserted))
+          );
         }
 
         // Small delay between batches
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
-      toast.success(`Historical fetch complete! Added ${totalInserted} total articles.`);
+      toast.success(
+        t('newsPage.historicalComplete').replace('{{total}}', String(totalInserted))
+      );
       refetch();
     } catch (error) {
       console.error('Historical fetch error:', error);
-      toast.error('Failed to fetch historical news');
+      toast.error(t('newsPage.historicalFailed'));
     } finally {
       setIsFetchingHistorical(false);
     }
@@ -101,10 +112,14 @@ export default function NewsPage() {
     const date = new Date(dateStr);
     const now = new Date();
     const diffMinutes = Math.floor((now.getTime() - date.getTime()) / 60000);
-    if (diffMinutes < 1) return 'Just now';
-    if (diffMinutes < 60) return `${diffMinutes} min ago`;
-    if (diffMinutes < 1440) return `${Math.floor(diffMinutes / 60)} hours ago`;
-    return date.toLocaleDateString('en-US', {
+    if (diffMinutes < 1) return t('time.justNow');
+    if (diffMinutes < 60)
+      return t('time.minutesAgo').replace('{{count}}', String(diffMinutes));
+    if (diffMinutes < 1440)
+      return t('time.hoursAgo').replace('{{count}}', String(Math.floor(diffMinutes / 60)));
+
+    const locale = getLocaleForLanguage(language);
+    return date.toLocaleDateString(locale, {
       month: 'short',
       day: 'numeric'
     });

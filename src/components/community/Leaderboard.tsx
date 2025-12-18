@@ -5,6 +5,7 @@ import { UserAvatar } from '@/components/user/UserAvatar';
 import { ReputationBadge } from '@/components/forum/ReputationBadge';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface LeaderboardEntry {
   id: string;
@@ -21,6 +22,7 @@ export function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [type, setType] = useState<LeaderboardType>('reputation');
+  const { t } = useTranslation({ namespace: 'forum' });
 
   useEffect(() => {
     loadLeaderboard();
@@ -75,9 +77,9 @@ export function Leaderboard() {
   const getLabel = () => {
     switch (type) {
       case 'reputation':
-        return 'Reputation';
+        return t('leaderboard.labelReputation');
       case 'posts':
-        return 'Posts';
+        return t('leaderboard.labelPosts');
       default:
         return '';
     }
@@ -88,14 +90,14 @@ export function Leaderboard() {
       <div className="flex items-center justify-between mb-6">
         <h2 className="font-heading font-semibold text-lg flex items-center gap-2">
           <TrendingUp className="h-5 w-5 text-primary" />
-          Leaderboard
+          {t('leaderboard.title')}
         </h2>
       </div>
 
       <Tabs value={type} onValueChange={(value) => setType(value as LeaderboardType)}>
         <TabsList className="grid w-full grid-cols-2 mb-6">
-          <TabsTrigger value="reputation">Reputation</TabsTrigger>
-          <TabsTrigger value="posts">Posts</TabsTrigger>
+          <TabsTrigger value="reputation">{t('leaderboard.tabReputation')}</TabsTrigger>
+          <TabsTrigger value="posts">{t('leaderboard.tabPosts')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value={type}>
@@ -108,9 +110,11 @@ export function Leaderboard() {
           ) : leaderboard.length === 0 ? (
             <div className="text-center py-12 text-muted-foreground">
               <Trophy className="h-12 w-12 mx-auto mb-4 opacity-50" />
-              <p className="font-medium mb-2">No leaderboard data yet</p>
+              <p className="font-medium mb-2">
+                {t('leaderboard.emptyTitle')}
+              </p>
               <p className="text-sm">
-                Be the first to participate and earn reputation points!
+                {t('leaderboard.emptyDescription')}
               </p>
             </div>
           ) : (
@@ -140,7 +144,7 @@ export function Leaderboard() {
                     <UserAvatar profile={profile} size="sm" showReputation />
                     <div className="flex-1 min-w-0">
                       <div className="font-medium text-sm sm:text-base truncate">
-                        {entry.display_name || entry.username || 'Anonymous'}
+                        {entry.display_name || entry.username || t('leaderboard.anonymous')}
                       </div>
                       <ReputationBadge profile={profile} size="sm" showLevel={false} />
                     </div>

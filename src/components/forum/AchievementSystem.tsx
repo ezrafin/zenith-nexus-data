@@ -6,6 +6,7 @@ import { Trophy, Lock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useTranslation } from '@/hooks/useTranslation';
 interface AchievementSystemProps {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
@@ -16,6 +17,7 @@ export function AchievementSystem({
   onOpenChange,
   trigger
 }: AchievementSystemProps = {}) {
+  const { t } = useTranslation({ namespace: 'forum' });
   const {
     user
   } = useUser();
@@ -69,22 +71,24 @@ export function AchievementSystem({
         </DialogTrigger>}
       <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Achievements</DialogTitle>
+          <DialogTitle>{t('achievements.dialogTitle')}</DialogTitle>
           <DialogDescription>
-            Unlock achievements by participating in the community
+            {t('achievements.dialogDescription')}
           </DialogDescription>
         </DialogHeader>
 
         {loading ? <div className="text-center py-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-            <p className="text-muted-foreground">Loading achievements...</p>
+            <p className="text-muted-foreground">
+              {t('achievements.loading')}
+            </p>
           </div> : <Tabs defaultValue="all" className="w-full">
             <TabsList className="grid w-full grid-cols-5">
-              <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="forum">Forum</TabsTrigger>
-              <TabsTrigger value="content">Content</TabsTrigger>
-              <TabsTrigger value="social">Social</TabsTrigger>
-              <TabsTrigger value="milestone">Milestone</TabsTrigger>
+              <TabsTrigger value="all">{t('achievements.tabsAll')}</TabsTrigger>
+              <TabsTrigger value="forum">{t('achievements.tabsForum')}</TabsTrigger>
+              <TabsTrigger value="content">{t('achievements.tabsContent')}</TabsTrigger>
+              <TabsTrigger value="social">{t('achievements.tabsSocial')}</TabsTrigger>
+              <TabsTrigger value="milestone">{t('achievements.tabsMilestone')}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="all" className="mt-4">
@@ -105,11 +109,14 @@ function AchievementGrid({
   achievements: Achievement[];
   unlocked: string[];
 }) {
+  const { t } = useTranslation({ namespace: 'forum' });
   if (achievements.length === 0) {
     return (
       <div className="text-center py-12 text-muted-foreground">
         <Trophy className="h-12 w-12 mx-auto mb-4 opacity-50" />
-        <p className="font-medium mb-2">No achievements in this category</p>
+        <p className="font-medium mb-2">
+          {t('achievements.emptyCategory')}
+        </p>
       </div>
     );
   }
@@ -121,9 +128,11 @@ function AchievementGrid({
       {!hasUnlocked && unlocked.length === 0 && (
         <div className="text-center py-8 mb-4 text-muted-foreground border border-border/50 rounded-lg bg-muted/30">
           <Lock className="h-10 w-10 mx-auto mb-3 opacity-50" />
-          <p className="font-medium mb-1">No achievements unlocked yet</p>
+          <p className="font-medium mb-1">
+            {t('achievements.noneUnlockedTitle')}
+          </p>
           <p className="text-sm">
-            Start participating in discussions and creating content to unlock achievements!
+            {t('achievements.noneUnlockedDescription')}
           </p>
         </div>
       )}
@@ -148,7 +157,9 @@ function AchievementGrid({
                     {achievement.rarity.toUpperCase()}
                   </span>
                   <span className="text-xs text-muted-foreground">•</span>
-                  <span className="text-xs text-muted-foreground">{achievement.points} pts</span>
+                  <span className="text-xs text-muted-foreground">
+                    {achievement.points} {t('achievements.pointsSuffix')}
+                  </span>
                 </div>
               </div>
             </div>

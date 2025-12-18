@@ -60,8 +60,8 @@ export default function CreateDiscussionPage() {
     e.preventDefault();
 
     const createDiscussionSchema = z.object({
-      title: z.string().min(10, 'Title must be at least 10 characters'),
-      content: z.string().min(50, 'Content should be at least 50 characters'),
+      title: z.string().min(10, t('validation.titleMin')),
+      content: z.string().min(50, t('validation.contentMin')),
       category: z.string(),
       tags: z.string().optional(),
       symbol: z.string().optional(),
@@ -141,28 +141,34 @@ export default function CreateDiscussionPage() {
 
           <div className="premium-card p-6 md:p-8 space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="title">Title *</Label>
+              <Label htmlFor="title">{t('form.titleLabel')}</Label>
               <Input
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Enter a clear, descriptive title..."
+                placeholder={t('form.titlePlaceholder')}
                 required
               />
               {errors.title ? (
                 <p className="text-xs text-destructive">{errors.title}</p>
               ) : (
                 <p className="text-xs text-muted-foreground">
-                  Title should be at least 10 characters.
+                  {t('form.titleHelp')}
                 </p>
               )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="category">Category *</Label>
+              <Label htmlFor="category">{t('form.categoryLabel')}</Label>
               <Select value={category} onValueChange={setCategory} disabled={loadingCategories}>
                 <SelectTrigger id="category">
-                  <SelectValue placeholder={loadingCategories ? "Loading..." : "Select category"} />
+                  <SelectValue
+                    placeholder={
+                      loadingCategories
+                        ? t('form.categoryLoading')
+                        : t('form.categoryPlaceholder')
+                    }
+                  />
                 </SelectTrigger>
                 <SelectContent>
                   {categories.map((cat) => (
@@ -175,45 +181,45 @@ export default function CreateDiscussionPage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="tags">Tags (comma-separated)</Label>
+              <Label htmlFor="tags">{t('form.tagsLabel')}</Label>
               <Input
                 id="tags"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                placeholder="e.g., stocks, analysis, long-term"
+                placeholder={t('form.tagsPlaceholder')}
               />
               <p className="text-xs text-muted-foreground">
-                Add tags to help others find your discussion
+                {t('form.tagsHelp')}
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="symbol">Asset Symbol (optional)</Label>
+                <Label htmlFor="symbol">{t('form.symbolLabel')}</Label>
                 <Input
                   id="symbol"
                   value={symbol}
                   onChange={(e) => setSymbol(e.target.value.toUpperCase())}
-                  placeholder="e.g., AAPL, BTC, SPX"
+                  placeholder={t('form.symbolPlaceholder')}
                   maxLength={10}
                 />
                 <p className="text-xs text-muted-foreground">
-                  Link this discussion to a specific asset
+                  {t('form.symbolHelp')}
                 </p>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="asset_type">Asset Type (optional)</Label>
+                <Label htmlFor="asset_type">{t('form.assetTypeLabel')}</Label>
                 <Select value={assetType} onValueChange={(value) => setAssetType(value as typeof assetType)}>
                   <SelectTrigger id="asset_type">
-                    <SelectValue placeholder="Select type" />
+                    <SelectValue placeholder={t('form.assetTypePlaceholder')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="stock">Stock</SelectItem>
-                    <SelectItem value="crypto">Crypto</SelectItem>
-                    <SelectItem value="index">Index</SelectItem>
-                    <SelectItem value="commodity">Commodity</SelectItem>
-                    <SelectItem value="currency">Currency</SelectItem>
-                    <SelectItem value="etf">ETF</SelectItem>
+                    <SelectItem value="stock">{t('form.assetTypeStock')}</SelectItem>
+                    <SelectItem value="crypto">{t('form.assetTypeCrypto')}</SelectItem>
+                    <SelectItem value="index">{t('form.assetTypeIndex')}</SelectItem>
+                    <SelectItem value="commodity">{t('form.assetTypeCommodity')}</SelectItem>
+                    <SelectItem value="currency">{t('form.assetTypeCurrency')}</SelectItem>
+                    <SelectItem value="etf">{t('form.assetTypeEtf')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -221,12 +227,12 @@ export default function CreateDiscussionPage() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="content">Content *</Label>
+                <Label htmlFor="content">{t('form.contentLabel')}</Label>
                 <Textarea
                   id="content"
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
-                  placeholder="Write your discussion here... (Markdown supported)"
+                  placeholder={t('form.contentPlaceholder')}
                   rows={12}
                   className="font-mono text-sm"
                   required
@@ -235,7 +241,7 @@ export default function CreateDiscussionPage() {
                 <p className="text-xs text-destructive mb-1">{errors.content}</p>
               )}
               <p className="text-xs text-muted-foreground">
-                Content should be at least 50 characters. Markdown is supported: use **bold**, *italic*, `code`, and more.
+                {t('form.contentHelp')}
               </p>
               </div>
 

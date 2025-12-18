@@ -13,9 +13,10 @@ import { useForumTopics } from '@/hooks/useForumTopics';
 import { AssetBadge } from '@/components/forum/AssetBadge';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { useTranslation } from '@/hooks/useTranslation';
+import { getLocaleForLanguage } from '@/lib/i18n';
 
 export default function ForumPage() {
-  const { t } = useTranslation({ namespace: 'forum' });
+  const { t, language } = useTranslation({ namespace: 'forum' });
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { user } = useUser();
@@ -349,12 +350,15 @@ export default function ForumPage() {
                         <span className="hidden sm:inline">•</span>
                         <span className="hidden sm:inline">
                           {t('lastActivity')} ·{' '}
-                          {new Date(topic.lastActivity).toLocaleString('en-US', {
-                            month: 'short',
-                            day: '2-digit',
-                            hour: '2-digit',
-                            minute: '2-digit',
-                          })}
+                          {new Date(topic.lastActivity).toLocaleString(
+                            getLocaleForLanguage(language),
+                            {
+                              month: 'short',
+                              day: '2-digit',
+                              hour: '2-digit',
+                              minute: '2-digit',
+                            }
+                          )}
                         </span>
                         <span className="badge-secondary text-[10px] px-2 py-0.5">
                           {categories.find(c => c.id === topic.categoryId)?.name || topic.categoryId}
@@ -378,7 +382,16 @@ export default function ForumPage() {
                       </div>
                       <div className="flex items-center gap-1.5 min-w-[140px] text-xs">
                         <Clock className="h-3.5 w-3.5" />
-                        {new Date(topic.lastActivity).toLocaleString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}
+                        {new Date(topic.lastActivity).toLocaleString(
+                          getLocaleForLanguage(language),
+                          {
+                            year: 'numeric',
+                            month: '2-digit',
+                            day: '2-digit',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          }
+                        )}
                       </div>
                     </div>
                   </Link>

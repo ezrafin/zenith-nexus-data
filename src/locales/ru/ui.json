@@ -66,6 +66,11 @@
     "noData": "Нет доступных данных",
     "notFound": "Не найдено"
   },
+  "time": {
+    "justNow": "Только что",
+    "minutesAgo": "{{count}} мин назад",
+    "hoursAgo": "{{count}} ч назад"
+  },
   "auth": {
     "welcomeBack": "С возвращением",
     "signInToContinue": "Войдите в аккаунт, чтобы продолжить",
@@ -142,7 +147,12 @@
     "filterCrypto": "Криптовалюта",
     "filterCommodities": "Товары",
     "filterPolitical": "Политика",
-    "noNews": "Новости не найдены"
+    "noNews": "Новости не найдены",
+    "historicalFetchStarting": "Запускаем загрузку исторических новостей... Это может занять несколько минут.",
+    "historicalBatchError": "Ошибка в пакете {{batch}}: {{message}}",
+    "historicalBatchSuccess": "Пакет {{batch}}/7: добавлено {{count}} статей",
+    "historicalComplete": "Загрузка завершена! Добавлено всего {{total}} статей.",
+    "historicalFailed": "Не удалось загрузить исторические новости"
   },
   "descriptions": {
     "news": "Последние новости рынка и обновления",

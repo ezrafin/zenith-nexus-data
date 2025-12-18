@@ -55,5 +55,69 @@
   "needSignInToCreate": "You need to be signed in to create a discussion.",
   "rateLimitCreateExceeded": "Rate limit exceeded. Please wait before creating another discussion.",
   "discussionCreatedSuccess": "Discussion created successfully",
-  "discussionCreatedError": "Failed to create discussion"
+  "discussionCreatedError": "Failed to create discussion",
+  "form": {
+    "titleLabel": "Title *",
+    "titlePlaceholder": "Enter a clear, descriptive title...",
+    "titleHelp": "Title should be at least 10 characters.",
+    "categoryLabel": "Category *",
+    "categoryPlaceholder": "Select category",
+    "categoryLoading": "Loading...",
+    "tagsLabel": "Tags (comma-separated)",
+    "tagsPlaceholder": "e.g., stocks, analysis, long-term",
+    "tagsHelp": "Add tags to help others find your discussion",
+    "symbolLabel": "Asset Symbol (optional)",
+    "symbolPlaceholder": "e.g., AAPL, BTC, SPX",
+    "symbolHelp": "Link this discussion to a specific asset",
+    "assetTypeLabel": "Asset Type (optional)",
+    "assetTypePlaceholder": "Select type",
+    "assetTypeStock": "Stock",
+    "assetTypeCrypto": "Crypto",
+    "assetTypeIndex": "Index",
+    "assetTypeCommodity": "Commodity",
+    "assetTypeCurrency": "Currency",
+    "assetTypeEtf": "ETF",
+    "contentLabel": "Content *",
+    "contentPlaceholder": "Write your discussion here... (Markdown supported)",
+    "contentHelp": "Content should be at least 50 characters. Markdown is supported: use **bold**, *italic*, `code`, and more."
+  },
+  "validation": {
+    "titleMin": "Title must be at least 10 characters",
+    "contentMin": "Content should be at least 50 characters"
+  },
+  "achievements": {
+    "dialogTitle": "Achievements",
+    "dialogDescription": "Unlock achievements by participating in the community",
+    "loading": "Loading achievements...",
+    "tabsAll": "All",
+    "tabsForum": "Forum",
+    "tabsContent": "Content",
+    "tabsSocial": "Social",
+    "tabsMilestone": "Milestone",
+    "emptyCategory": "No achievements in this category",
+    "noneUnlockedTitle": "No achievements unlocked yet",
+    "noneUnlockedDescription": "Start participating in discussions and creating content to unlock achievements!",
+    "pointsSuffix": "pts"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "tabReputation": "Reputation",
+    "tabPosts": "Posts",
+    "emptyTitle": "No leaderboard data yet",
+    "emptyDescription": "Be the first to participate and earn reputation points!",
+    "labelReputation": "Reputation",
+    "labelPosts": "Posts",
+    "anonymous": "Anonymous"
+  },
+  "notifications": {
+    "replyTitle": "New reply to your discussion",
+    "replyBody": "{{author}} replied to \"{{discussion}}\"",
+    "reactionTitle": "New reaction",
+    "reactionPostBody": "{{author}} {{reaction}} your post",
+    "reactionReplyBody": "{{author}} {{reaction}} your reply",
+    "newFollowerTitle": "New follower",
+    "newFollowerBody": "{{author}} started following you",
+    "genericTitle": "New notification",
+    "genericBody": "You have a new notification"
+  }
 }
