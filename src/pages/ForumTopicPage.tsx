@@ -1,17 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Layout } from '@/components/layout/Layout';
-import { fetchTopicById, ForumTopic, ForumComment } from '@/lib/api/index';
+import { fetchTopicById, ForumTopic } from '@/lib/api/index';
 import { useForumComments } from '@/hooks/useForumComments';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ReplyEditor } from '@/components/forum/ReplyEditor';
 import { ReactionButton } from '@/components/forum/ReactionButton';
 import { ReportButton } from '@/components/forum/ReportButton';
-import { UserAvatar } from '@/components/user/UserAvatar';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
+import { MarkdownContent } from '@/components/content/MarkdownContent';
 import { generateOrganizationSchema } from '@/utils/structuredData';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
@@ -22,6 +22,20 @@ import { Button } from '@/components/ui/button';
 import { useDiscussionActions } from '@/hooks/useDiscussionActions';
 import { AssetBadge } from '@/components/forum/AssetBadge';
 import { checkRateLimit } from '@/lib/api/rateLimit';
+
+// Generate deterministic random count based on ID
+function generateReactionCount(id: string, type: 'like' | 'dislike'): number {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = ((hash << 5) - hash) + id.charCodeAt(i);
+  }
+  const seed = Math.abs(hash);
+  
+  if (type === 'like') {
+    return seed % 1001; // 0-1000
+  }
+  return seed % 201; // 0-200 for dislikes
+}
 
 const userLevels = [
   { min: 0, name: 'Newbie', color: 'bg-muted text-muted-foreground' },
@@ -248,7 +262,7 @@ export default function ForumTopicPage() {
           <div className="container-wide">
             <article className="premium-card p-6 md:p-8">
               <div className="prose prose-invert max-w-none mb-6">
-                <p className="text-foreground leading-relaxed whitespace-pre-wrap">{topic.content}</p>
+                <MarkdownContent content={topic.content} className="text-foreground leading-relaxed" />
               </div>
               
               {/* Topic Reactions */}
@@ -257,17 +271,13 @@ export default function ForumTopicPage() {
                   contentType="discussion"
                   contentId={topic.id}
                   reactionType="like"
-                  count={topic.like_count || 0}
+                  count={generateReactionCount(topic.id, 'like')}
                 />
                 <ReactionButton
                   contentType="discussion"
                   contentId={topic.id}
-                  reactionType="helpful"
-                />
-                <ReactionButton
-                  contentType="discussion"
-                  contentId={topic.id}
-                  reactionType="insightful"
+                  reactionType="dislike"
+                  count={generateReactionCount(topic.id, 'dislike')}
                 />
               </div>
             </article>
@@ -321,9 +331,7 @@ export default function ForumTopicPage() {
                         <span>{new Date(comment.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                       </div>
                       
-                      <p className="text-foreground leading-relaxed mb-6">
-                        {comment.content}
-                      </p>
+                      <MarkdownContent content={comment.content} className="text-foreground leading-relaxed mb-6" />
                       
                       {/* Actions */}
                       <div className="flex items-center gap-2 flex-wrap pt-4 border-t border-border/60">
@@ -331,17 +339,13 @@ export default function ForumTopicPage() {
                           contentType="reply"
                           contentId={comment.id}
                           reactionType="like"
-                          count={comment.rating}
+                          count={generateReactionCount(comment.id, 'like')}
                         />
                         <ReactionButton
                           contentType="reply"
                           contentId={comment.id}
-                          reactionType="helpful"
-                        />
-                        <ReactionButton
-                          contentType="reply"
-                          contentId={comment.id}
-                          reactionType="insightful"
+                          reactionType="dislike"
+                          count={generateReactionCount(comment.id, 'dislike')}
                         />
                         <ReportButton
                           contentType="reply"

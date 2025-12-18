@@ -4,13 +4,13 @@ import { Button } from '@/components/ui/button';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { ThumbsUp, ThumbsDown, Lightbulb, Heart, CheckCircle, XCircle } from 'lucide-react';
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ReactionButtonProps {
   contentType: 'discussion' | 'reply';
   contentId: string;
-  reactionType: 'like' | 'dislike' | 'helpful' | 'insightful' | 'agree' | 'disagree';
+  reactionType: 'like' | 'dislike';
   count?: number;
   className?: string;
 }
@@ -18,19 +18,11 @@ interface ReactionButtonProps {
 const reactionIcons = {
   like: ThumbsUp,
   dislike: ThumbsDown,
-  helpful: CheckCircle,
-  insightful: Lightbulb,
-  agree: Heart,
-  disagree: XCircle,
 };
 
 const reactionColors = {
   like: 'text-positive hover:text-positive',
   dislike: 'text-negative hover:text-negative',
-  helpful: 'text-blue-500 hover:text-blue-600',
-  insightful: 'text-purple-500 hover:text-purple-600',
-  agree: 'text-green-500 hover:text-green-600',
-  disagree: 'text-red-500 hover:text-red-600',
 };
 
 export function ReactionButton({
