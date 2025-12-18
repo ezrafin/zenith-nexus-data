@@ -242,6 +242,7 @@ export type Database = {
       }
       forum_discussions: {
         Row: {
+          asset_type: string | null
           author_name: string
           category: string
           content: string
@@ -250,6 +251,7 @@ export type Database = {
           is_featured: boolean
           is_pinned: boolean
           reply_count: number
+          symbol: string | null
           tags: string[] | null
           title: string
           updated_at: string
@@ -257,6 +259,7 @@ export type Database = {
           view_count: number
         }
         Insert: {
+          asset_type?: string | null
           author_name?: string
           category?: string
           content: string
@@ -265,6 +268,7 @@ export type Database = {
           is_featured?: boolean
           is_pinned?: boolean
           reply_count?: number
+          symbol?: string | null
           tags?: string[] | null
           title: string
           updated_at?: string
@@ -272,6 +276,7 @@ export type Database = {
           view_count?: number
         }
         Update: {
+          asset_type?: string | null
           author_name?: string
           category?: string
           content?: string
@@ -280,6 +285,7 @@ export type Database = {
           is_featured?: boolean
           is_pinned?: boolean
           reply_count?: number
+          symbol?: string | null
           tags?: string[] | null
           title?: string
           updated_at?: string
@@ -533,6 +539,7 @@ export type Database = {
           id: string
           joined_at: string | null
           posts_count: number | null
+          privacy_level: string
           reputation_score: number | null
           updated_at: string | null
           username: string | null
@@ -545,6 +552,7 @@ export type Database = {
           id: string
           joined_at?: string | null
           posts_count?: number | null
+          privacy_level?: string
           reputation_score?: number | null
           updated_at?: string | null
           username?: string | null
@@ -557,6 +565,7 @@ export type Database = {
           id?: string
           joined_at?: string | null
           posts_count?: number | null
+          privacy_level?: string
           reputation_score?: number | null
           updated_at?: string | null
           username?: string | null

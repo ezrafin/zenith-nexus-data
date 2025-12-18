@@ -7,12 +7,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useUser } from '@/context/UserContext';
 import { toast } from 'sonner';
-import { Save, User, Shield, TrendingUp, MessageSquare, BookOpen, Trophy, Camera } from 'lucide-react';
+import { Save, User, Shield, TrendingUp, MessageSquare, BookOpen, Trophy, Camera, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AchievementList } from '@/components/forum/AchievementList';
 import { ReputationBadge } from '@/components/forum/ReputationBadge';
 import { AvatarSelector } from '@/components/user/AvatarSelector';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { supabase } from '@/integrations/supabase/client';
 
 export default function ProfilePage() {
   const { user, profile, loading: authLoading, updateProfile } = useUser();
@@ -23,6 +24,10 @@ export default function ProfilePage() {
   const [avatarSelectorOpen, setAvatarSelectorOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [loadingTimeout, setLoadingTimeout] = useState(false);
+  
+  // Email change state
+  const [newEmail, setNewEmail] = useState('');
+  const [changingEmail, setChangingEmail] = useState(false);
 
   // Timeout to prevent infinite loading
   useEffect(() => {
@@ -124,6 +129,36 @@ export default function ProfilePage() {
     setSaving(false);
   };
 
+  const handleEmailChange = async () => {
+    if (!newEmail || newEmail === user.email) {
+      toast.error('Please enter a different email address');
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(newEmail)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setChangingEmail(true);
+    try {
+      const { error } = await supabase.auth.updateUser({ email: newEmail });
+      
+      if (error) {
+        toast.error(error.message || 'Failed to update email');
+      } else {
+        toast.success('Confirmation email sent! Please check both your old and new email addresses to confirm the change.');
+        setNewEmail('');
+      }
+    } catch (error) {
+      toast.error('An unexpected error occurred');
+    } finally {
+      setChangingEmail(false);
+    }
+  };
+
   return (
     <Layout>
       <div className="section-spacing">
@@ -195,18 +230,6 @@ export default function ProfilePage() {
 
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={user.email || ''}
-                      disabled
-                      className="bg-muted"
-                    />
-                    <p className="text-xs text-muted-foreground">Email cannot be changed</p>
-                  </div>
-
-                  <div className="space-y-2">
                     <Label htmlFor="displayName">Display Name</Label>
                     <Input
                       id="displayName"
@@ -227,6 +250,49 @@ export default function ProfilePage() {
                       rows={4}
                     />
                   </div>
+                </div>
+              </div>
+
+              {/* Email Settings */}
+              <div className="premium-card p-6">
+                <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
+                  <Mail className="h-5 w-5" />
+                  Email Settings
+                </h2>
+
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="currentEmail">Current Email</Label>
+                    <Input
+                      id="currentEmail"
+                      type="email"
+                      value={user.email || ''}
+                      disabled
+                      className="bg-muted"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="newEmail">New Email Address</Label>
+                    <Input
+                      id="newEmail"
+                      type="email"
+                      value={newEmail}
+                      onChange={(e) => setNewEmail(e.target.value)}
+                      placeholder="Enter new email address"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      You'll need to confirm the change from both your old and new email addresses.
+                    </p>
+                  </div>
+
+                  <Button 
+                    onClick={handleEmailChange} 
+                    disabled={changingEmail || !newEmail}
+                    variant="outline"
+                  >
+                    {changingEmail ? 'Sending confirmation...' : 'Change Email'}
+                  </Button>
                 </div>
               </div>
 

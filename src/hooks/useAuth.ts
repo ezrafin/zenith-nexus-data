@@ -143,7 +143,7 @@ export function useAuth(): UseAuthReturn {
           reputation: data.reputation_score || 0,
           post_count: data.posts_count || 0,
           comment_count: 0,
-          privacy_level: 'public',
+          privacy_level: data.privacy_level || 'public',
         });
         console.log('Profile loaded successfully');
       } else {
