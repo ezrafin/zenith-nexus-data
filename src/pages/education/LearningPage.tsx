@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Award } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 import {
   getEducationBasicArticlesPath,
   getEducationAdvancedArticlesPath,
@@ -28,6 +29,7 @@ const categoryNames = [
 ] as const;
 
 export default function LearningPage() {
+  const { t } = useTranslation({ namespace: 'education' });
   const [levelFilter, setLevelFilter] = useState<'all' | 'basic' | 'advanced'>('all');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -64,20 +66,24 @@ export default function LearningPage() {
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="badge-primary mb-4">Education</span>
-            <h1 className="heading-xl mb-4">Investment Learning Hub</h1>
+            <span className="badge-primary mb-4">
+              {t('learningHub.badge')}
+            </span>
+            <h1 className="heading-xl mb-4">
+              {t('learningHub.title')}
+            </h1>
             <p className="body-xl">
-              Structured investment education from first steps to advanced strategies. Choose your level and learn at your own pace.
+              {t('learningHub.subtitle')}
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Link to={getEducationBasicArticlesPath()} className="btn-primary">
-                Start with Basics
+                {t('learningHub.ctaBasics')}
               </Link>
               <Link to={getEducationAdvancedArticlesPath()} className="btn-ghost">
-                Jump to Advanced
+                {t('learningHub.ctaAdvanced')}
               </Link>
               <Link to={getEducationVideoPath()} className="btn-ghost">
-                Watch Videos
+                {t('learningHub.ctaVideos')}
               </Link>
             </div>
           </div>
@@ -86,7 +92,9 @@ export default function LearningPage() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="glass-card p-6 sticky top-24">
-                <h3 className="font-semibold mb-4">Categories</h3>
+                <h3 className="font-semibold mb-4">
+                  {t('learningHub.sidebarCategoriesTitle')}
+                </h3>
                 <ul className="space-y-2">
                   {categoriesWithCounts.map((category) => (
                     <li key={category.name}>
@@ -98,7 +106,11 @@ export default function LearningPage() {
                             : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'
                         }`}
                       >
-                        <span>{category.name}</span>
+                        <span>
+                          {category.name === 'All'
+                            ? t('learningHub.filterAllLevels')
+                            : category.name}
+                        </span>
                         <span className="bg-secondary px-2 py-0.5 rounded-full text-xs">{category.count}</span>
                       </button>
                     </li>
@@ -106,23 +118,33 @@ export default function LearningPage() {
                 </ul>
 
                 <div className="mt-6 pt-6 border-t border-border">
-                  <h4 className="text-sm font-medium mb-3">Difficulty Levels</h4>
+                  <h4 className="text-sm font-medium mb-3">
+                    {t('learningHub.sidebarDifficultyTitle')}
+                  </h4>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm">
                       <span className="w-2 h-2 rounded-full bg-green-500" />
-                      <span className="text-muted-foreground">Beginner</span>
+                      <span className="text-muted-foreground">
+                        {t('learningHub.difficultyBeginner')}
+                      </span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <span className="w-2 h-2 rounded-full bg-yellow-500" />
-                      <span className="text-muted-foreground">Intermediate</span>
+                      <span className="text-muted-foreground">
+                        {t('learningHub.difficultyIntermediate')}
+                      </span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <span className="w-2 h-2 rounded-full bg-yellow-500" />
-                      <span className="text-muted-foreground">Advanced</span>
+                      <span className="text-muted-foreground">
+                        {t('learningHub.difficultyAdvanced')}
+                      </span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <span className="w-2 h-2 rounded-full bg-red-500" />
-                      <span className="text-muted-foreground">Expert</span>
+                      <span className="text-muted-foreground">
+                        {t('learningHub.difficultyExpert')}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -130,10 +152,12 @@ export default function LearningPage() {
                 <div className="mt-6 pt-6 border-t border-border">
                   <div className="flex items-center gap-2 text-sm text-primary mb-2">
                     <CheckCircle className="h-4 w-4" />
-                    <span className="font-medium">Track Progress</span>
+                    <span className="font-medium">
+                      {t('learningHub.trackProgressTitle')}
+                    </span>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Sign up to save your reading progress and earn certificates.
+                    {t('learningHub.trackProgressDescription')}
                   </p>
                 </div>
               </div>
@@ -152,7 +176,7 @@ export default function LearningPage() {
                         : 'text-muted-foreground hover:text-foreground hover:bg-secondary/40'
                     }`}
                   >
-                    All levels
+                    {t('learningHub.filterAllLevels')}
                   </button>
                   <button
                     type="button"
@@ -163,7 +187,7 @@ export default function LearningPage() {
                         : 'text-muted-foreground hover:text-foreground hover:bg-secondary/40'
                     }`}
                   >
-                    Basics
+                    {t('learningHub.filterBasics')}
                   </button>
                   <button
                     type="button"
@@ -174,13 +198,17 @@ export default function LearningPage() {
                         : 'text-muted-foreground hover:text-foreground hover:bg-secondary/40'
                     }`}
                   >
-                    Advanced
+                    {t('learningHub.filterAdvanced')}
                   </button>
                 </div>
 
                 <span className="text-sm text-muted-foreground">
-                  {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
-                  {selectedCategory && selectedCategory !== 'All' && ` in ${selectedCategory}`}
+                  {filteredArticles.length}{' '}
+                  {filteredArticles.length === 1
+                    ? t('learningHub.articlesCountSingle', { count: filteredArticles.length })
+                    : t('learningHub.articlesCount', { count: filteredArticles.length })}
+                  {selectedCategory && selectedCategory !== 'All' &&
+                    ` ${t('learningHub.articlesInCategory', { category: selectedCategory })}`}
                 </span>
               </div>
               <div className="grid sm:grid-cols-2 gap-6">
@@ -194,12 +222,14 @@ export default function LearningPage() {
           {/* CTA */}
           <div className="mt-12 glass-card p-8 text-center">
             <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h2 className="heading-sm mb-4">Take Your Skills to the Next Level</h2>
+            <h2 className="heading-sm mb-4">
+              {t('advanced.ctaTitle')}
+            </h2>
             <p className="body-md mb-6 max-w-xl mx-auto">
-              Enroll in our structured learning course for a comprehensive investment education with certification.
+              {t('advanced.ctaDescription')}
             </p>
             <Link to={getEducationCoursePath()} className="btn-primary">
-              Explore Learning Course
+              {t('advanced.ctaButton')}
             </Link>
           </div>
         </section>

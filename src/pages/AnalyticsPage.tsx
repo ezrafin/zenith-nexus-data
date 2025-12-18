@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { AnalyticsCard } from '@/components/AnalyticsCard';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
@@ -6,26 +6,12 @@ import { Pagination } from '@/components/Pagination';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const ITEMS_PER_PAGE = 15;
-const typeFilters = [{
-  value: 'all',
-  label: 'All'
-}, {
-  value: 'expert',
-  label: 'Expert Opinion'
-}, {
-  value: 'markets',
-  label: 'Markets'
-}, {
-  value: 'longterm',
-  label: 'Long-term Analysis'
-}, {
-  value: 'technical',
-  label: 'Technical Analysis'
-}];
 
 export default function AnalyticsPage() {
+  const { t } = useTranslation({ namespace: 'analytics' });
   const [activeFilter, setActiveFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const sectionRef = useRef<HTMLElement>(null);
@@ -33,6 +19,17 @@ export default function AnalyticsPage() {
   const { data: articles = [], isLoading: loading } = useAnalytics({ 
     type: activeFilter === 'all' ? undefined : activeFilter 
   });
+
+  const typeFilters = useMemo(
+    () => [
+      { value: 'all', label: t('filters.all') },
+      { value: 'expert', label: t('filters.expert') },
+      { value: 'markets', label: t('filters.markets') },
+      { value: 'longterm', label: t('filters.longterm') },
+      { value: 'technical', label: t('filters.technical') },
+    ],
+    [t]
+  );
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
     setCurrentPage(1);
@@ -57,9 +54,9 @@ export default function AnalyticsPage() {
       <section ref={sectionRef} className="section-spacing">
         <div className="container-wide">
           <div className="mb-10">
-            <h1 className="heading-lg mb-4">Analytics</h1>
+            <h1 className="heading-lg mb-4">{t('page.title')}</h1>
             <p className="body-md max-w-2xl text-muted-foreground">
-              In-depth market analysis and expert forecasts from leading analysts
+              {t('page.description')}
             </p>
             
           </div>
@@ -95,7 +92,7 @@ export default function AnalyticsPage() {
               </div>
               <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
             </> : <div className="text-center py-20">
-              <p className="text-muted-foreground">No articles found</p>
+              <p className="text-muted-foreground">{t('empty.noArticles')}</p>
             </div>}
         </div>
       </section>

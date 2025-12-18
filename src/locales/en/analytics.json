@@ -1,2 +1,19 @@
+{
+  "page": {
+    "title": "Analytics",
+    "description": "In-depth market analysis and expert forecasts from leading analysts"
+  },
+  "filters": {
+    "all": "All",
+    "expert": "Expert Opinion",
+    "markets": "Markets",
+    "longterm": "Long-term Analysis",
+    "technical": "Technical Analysis"
+  },
+  "empty": {
+    "noArticles": "No articles found"
+  }
+}
+
 {}
 

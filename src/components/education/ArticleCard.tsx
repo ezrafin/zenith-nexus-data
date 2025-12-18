@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
 import { Article, getArticleUrl } from '@/data/educationArticles';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface ArticleCardProps {
   article: Article;
@@ -9,6 +10,7 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ article, isCompleted = false, onToggleCompleted }: ArticleCardProps) {
+  const { t } = useTranslation({ namespace: 'education' });
   const isAdvanced = article.type === 'advanced';
   
   const getDifficultyColor = (difficulty: string) => {
@@ -79,14 +81,16 @@ export function ArticleCard({ article, isCompleted = false, onToggleCompleted }:
               onClick={() => onToggleCompleted(article.id)}
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
-              {isCompleted ? 'Unmark' : 'Mark as completed'}
+              {isCompleted
+                ? t('articleCard.unmark')
+                : t('articleCard.markAsCompleted')}
             </button>
           )}
           <Link
             to={getArticleUrl(article)}
             className="inline-flex items-center gap-1 text-sm text-primary font-medium hover:underline"
           >
-            Read <ArrowRight className="h-4 w-4" />
+            {t('articleCard.read')} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

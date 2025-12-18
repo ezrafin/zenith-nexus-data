@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export function HeroSection() {
+  const { t } = useTranslation({ namespace: 'ui' });
+
   return (
     <section className="min-h-[80vh] flex items-center relative overflow-hidden">
       <div className="absolute inset-0 hero-gradient" />
@@ -19,19 +22,21 @@ export function HeroSection() {
           className="max-w-4xl"
         >
           <h1 className="heading-hero mb-6">
-            Your Guardian in
-            <span className="block text-muted-foreground">Global Markets</span>
+            {t('home.heroTitleLine1')}
+            <span className="block text-muted-foreground">
+              {t('home.heroTitleLine2')}
+            </span>
           </h1>
           <p className="body-xl max-w-2xl mb-10">
-            Professional analytics and real-time data for informed investment decisions
+            {t('home.heroSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/markets/indices" className="btn-primary">
-              View Markets
+              {t('home.heroPrimaryCta')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link to="/analytics" className="btn-outline">
-              Read Analytics
+              {t('home.heroSecondaryCta')}
             </Link>
           </div>
         </motion.div>

@@ -25,6 +25,13 @@
     "privacyPolicy": "Privacy Policy",
     "disclaimer": "Disclaimer"
   },
+  "home": {
+    "heroTitleLine1": "Your Guardian in",
+    "heroTitleLine2": "Global Markets",
+    "heroSubtitle": "Professional analytics and real-time data for informed investment decisions",
+    "heroPrimaryCta": "View Markets",
+    "heroSecondaryCta": "Read Analytics"
+  },
   "buttons": {
     "save": "Save",
     "cancel": "Cancel",
@@ -167,6 +174,37 @@
     "contactUs": "Get in touch",
     "careers": "Join our team",
     "authors": "Meet our experts"
+  },
+  "cookieBanner": {
+    "title": "We use cookies",
+    "body": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking \"Accept All\", you consent to our use of cookies. You can customize your preferences or learn more in our Privacy Policy.",
+    "customize": "Customize",
+    "rejectAll": "Reject All",
+    "acceptAll": "Accept All",
+    "dialogTitle": "Cookie Preferences",
+    "dialogDescription": "Manage your cookie preferences. You can enable or disable different types of cookies below.",
+    "essentialTitle": "Essential Cookies",
+    "essentialDescription": "Required for the website to function properly. These cannot be disabled.",
+    "essentialAlwaysActive": "Always Active",
+    "essentialUsesIntro": "These cookies are used for:",
+    "essentialUseAuth": "Authentication and session management",
+    "essentialUseSecurity": "Security and fraud prevention",
+    "essentialUseBasic": "Basic website functionality",
+    "analyticsTitle": "Analytics Cookies",
+    "analyticsDescription": "Help us understand how visitors interact with our website.",
+    "analyticsUsesIntro": "These cookies are used for:",
+    "analyticsUseTraffic": "Website traffic analysis (Vercel Analytics)",
+    "analyticsUsePerformance": "Performance monitoring",
+    "analyticsUseBehavior": "Understanding user behavior",
+    "preferencesTitle": "Preferences Cookies",
+    "preferencesDescription": "Remember your settings and preferences for a better experience.",
+    "preferencesUsesIntro": "These cookies are used for:",
+    "preferencesUseTheme": "Theme preferences (light/dark mode)",
+    "preferencesUseUi": "UI preferences (sidebar state, layout)",
+    "preferencesUseLanguage": "Language and regional settings",
+    "cancel": "Cancel",
+    "save": "Save Preferences",
+    "privacyLinkText": "Privacy Policy"
   }
 }
 

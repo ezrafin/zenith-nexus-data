@@ -3,8 +3,10 @@ import { Layout } from '@/components/layout/Layout';
 import { ArrowLeft, Clock, Calendar, User, Award } from 'lucide-react';
 import { getArticleById } from '@/data/educationArticles';
 import { getEducationLearningPath, getEducationBasicArticlesPath, getEducationAdvancedArticlesPath } from '@/lib/educationRoutes';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function ArticleDetailPage() {
+  const { t } = useTranslation({ namespace: 'education' });
   const { articleId } = useParams<{ articleId: string }>();
   const article = articleId ? getArticleById(articleId) : undefined;
 
@@ -14,12 +16,14 @@ export default function ArticleDetailPage() {
         <div className="pt-24 pb-16">
           <section className="container-wide section-spacing-sm">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="heading-xl mb-4">Article Not Found</h1>
+              <h1 className="heading-xl mb-4">
+                {t('articleDetail.notFoundTitle')}
+              </h1>
               <p className="body-lg text-muted-foreground mb-6">
-                The article you're looking for doesn't exist or has been moved.
+                {t('articleDetail.notFoundDescription')}
               </p>
               <Link to={getEducationLearningPath()} className="btn-primary">
-                Back to Learning Hub
+                {t('articleDetail.notFoundBack')}
               </Link>
             </div>
           </section>
@@ -30,7 +34,9 @@ export default function ArticleDetailPage() {
 
   const isAdvanced = article.type === 'advanced';
   const backLink = isAdvanced ? getEducationAdvancedArticlesPath() : getEducationBasicArticlesPath();
-  const backLabel = isAdvanced ? 'Advanced Articles' : 'Basic Articles';
+  const backLabel = isAdvanced
+    ? t('articleDetail.backToAdvanced')
+    : t('articleDetail.backToBasic');
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -57,7 +63,7 @@ export default function ArticleDetailPage() {
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to {backLabel}
+            {backLabel}
           </Link>
 
           <article className="max-w-4xl">
@@ -99,25 +105,37 @@ export default function ArticleDetailPage() {
             <div className="glass-card p-8 mb-8">
               <div className="prose prose-invert max-w-none">
                 <p className="text-muted-foreground">
-                  This is a placeholder for the full article content. In a production environment, 
-                  this would contain the complete educational material with sections, examples, 
-                  charts, and interactive elements.
+                  {t('articleDetail.placeholderIntro')}
                 </p>
                 
-                <h2 className="text-xl font-semibold mt-6 mb-4">Key Takeaways</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-4">
+                  {t('articleDetail.keyTakeawaysTitle')}
+                </h2>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Comprehensive coverage of {article.title.toLowerCase()}</li>
-                  <li>• Practical examples and real-world applications</li>
-                  <li>• Step-by-step guidance for implementation</li>
-                  <li>• Common pitfalls to avoid</li>
+                  <li>
+                    • {t('articleDetail.keyTakeawaysItem1', {
+                      topic: article.title.toLowerCase(),
+                    })}
+                  </li>
+                  <li>• {t('articleDetail.keyTakeawaysItem2')}</li>
+                  <li>• {t('articleDetail.keyTakeawaysItem3')}</li>
+                  <li>• {t('articleDetail.keyTakeawaysItem4')}</li>
                 </ul>
 
-                <h2 className="text-xl font-semibold mt-6 mb-4">What You'll Learn</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-4">
+                  {t('articleDetail.whatYoullLearnTitle')}
+                </h2>
                 <p className="text-muted-foreground">
-                  {article.description} This article provides in-depth coverage suitable for 
-                  {article.difficulty === 'Beginner' ? ' those new to investing' : 
-                   article.difficulty === 'Intermediate' ? ' investors with some experience' :
-                   article.difficulty === 'Advanced' ? ' experienced investors' : ' expert-level practitioners'}.
+                  {article.description}{' '}
+                  {t('articleDetail.whatYoullLearnDescriptionPrefix')}{' '}
+                  {article.difficulty === 'Beginner'
+                    ? t('articleDetail.audienceBeginner')
+                    : article.difficulty === 'Intermediate'
+                    ? t('articleDetail.audienceIntermediate')
+                    : article.difficulty === 'Advanced'
+                    ? t('articleDetail.audienceAdvanced')
+                    : t('articleDetail.audienceExpert')}
+                  .
                 </p>
               </div>
             </div>
@@ -125,16 +143,18 @@ export default function ArticleDetailPage() {
             {/* CTA */}
             <div className="glass-card p-6 text-center">
               <Award className="h-10 w-10 text-primary mx-auto mb-3" />
-              <h3 className="heading-sm mb-2">Continue Learning</h3>
+              <h3 className="heading-sm mb-2">
+                {t('articleDetail.continueLearningTitle')}
+              </h3>
               <p className="body-sm text-muted-foreground mb-4">
-                Explore more articles to build your investment knowledge.
+                {t('articleDetail.continueLearningDescription')}
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Link to={getEducationBasicArticlesPath()} className="btn-ghost">
-                  Basic Articles
+                  {t('articleDetail.continueLearningBasic')}
                 </Link>
                 <Link to={getEducationAdvancedArticlesPath()} className="btn-primary">
-                  Advanced Articles
+                  {t('articleDetail.continueLearningAdvanced')}
                 </Link>
               </div>
             </div>
