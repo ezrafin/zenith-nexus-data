@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Layout } from '@/components/layout/Layout';
 import { fetchTopicById, ForumTopic } from '@/lib/api/index';
 import { useForumComments } from '@/hooks/useForumComments';
+import { useReactionCounts } from '@/hooks/useReactionCounts';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { ReplyEditor } from '@/components/forum/ReplyEditor';
 import { ReactionButton } from '@/components/forum/ReactionButton';
@@ -22,20 +23,6 @@ import { Button } from '@/components/ui/button';
 import { useDiscussionActions } from '@/hooks/useDiscussionActions';
 import { AssetBadge } from '@/components/forum/AssetBadge';
 import { checkRateLimit } from '@/lib/api/rateLimit';
-
-// Generate deterministic random count based on ID
-function generateReactionCount(id: string, type: 'like' | 'dislike'): number {
-  let hash = 0;
-  for (let i = 0; i < id.length; i++) {
-    hash = ((hash << 5) - hash) + id.charCodeAt(i);
-  }
-  const seed = Math.abs(hash);
-  
-  if (type === 'like') {
-    return seed % 1001; // 0-1000
-  }
-  return seed % 201; // 0-200 for dislikes
-}
 
 const userLevels = [
   { min: 0, name: 'Newbie', color: 'bg-muted text-muted-foreground' },
@@ -78,6 +65,16 @@ export default function ForumTopicPage() {
     topicId: topicId || '',
     enabled: !!topicId,
   });
+
+  // Get comment IDs for reaction counts
+  const commentIds = useMemo(() => comments.map(c => c.id), [comments]);
+  
+  // Load reaction counts for topic and comments
+  const { data: topicReactions = {} } = useReactionCounts(
+    topicId ? [topicId] : [], 
+    'discussion'
+  );
+  const { data: commentReactions = {} } = useReactionCounts(commentIds, 'reply');
 
   const loading = topicLoading || commentsLoading;
 
@@ -271,13 +268,13 @@ export default function ForumTopicPage() {
                   contentType="discussion"
                   contentId={topic.id}
                   reactionType="like"
-                  count={generateReactionCount(topic.id, 'like')}
+                  count={topicReactions[topic.id]?.like ?? 0}
                 />
                 <ReactionButton
                   contentType="discussion"
                   contentId={topic.id}
                   reactionType="dislike"
-                  count={generateReactionCount(topic.id, 'dislike')}
+                  count={topicReactions[topic.id]?.dislike ?? 0}
                 />
               </div>
             </article>
@@ -339,13 +336,13 @@ export default function ForumTopicPage() {
                           contentType="reply"
                           contentId={comment.id}
                           reactionType="like"
-                          count={generateReactionCount(comment.id, 'like')}
+                          count={commentReactions[comment.id]?.like ?? 0}
                         />
                         <ReactionButton
                           contentType="reply"
                           contentId={comment.id}
                           reactionType="dislike"
-                          count={generateReactionCount(comment.id, 'dislike')}
+                          count={commentReactions[comment.id]?.dislike ?? 0}
                         />
                         <ReportButton
                           contentType="reply"

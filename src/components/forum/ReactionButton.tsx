@@ -37,6 +37,11 @@ export function ReactionButton({
   const [isReacted, setIsReacted] = useState(false);
   const [reactionCount, setReactionCount] = useState(count);
 
+  // Sync count from props when it changes
+  useEffect(() => {
+    setReactionCount(count);
+  }, [count]);
+
   useEffect(() => {
     if (user) {
       checkReaction();
@@ -122,7 +127,10 @@ export function ReactionButton({
       toast.error(error instanceof Error ? error.message : 'Failed to update reaction');
     },
     onSuccess: () => {
-      // Invalidate cache to refresh content with updated reaction counts
+      // Invalidate reaction counts cache
+      queryClient.invalidateQueries({ queryKey: ['reactionCounts', contentType] });
+      
+      // Also invalidate related content queries
       if (contentType === 'discussion') {
         queryClient.invalidateQueries({ queryKey: ['forumTopic', contentId] });
         queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
