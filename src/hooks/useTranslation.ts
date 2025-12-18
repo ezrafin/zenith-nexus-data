@@ -54,7 +54,11 @@ export function useTranslation(options?: UseTranslationOptions) {
     return fallback;
   }, [language, translations, namespace, namespaceTranslations]);
 
-  const t = (key: string, namespaceOverride?: string): string => {
+  const t = (key: string, params?: string | Record<string, string | number>): string => {
+    // If params is a string, treat it as namespace override (backward compatibility)
+    const namespaceOverride = typeof params === 'string' ? params : undefined;
+    const interpolationParams = typeof params === 'object' ? params : undefined;
+    
     const targetNamespace = namespaceOverride || namespace || 'common';
     
     // Try to get from namespace translations first
@@ -82,21 +86,29 @@ export function useTranslation(options?: UseTranslationOptions) {
         const uiKey = targetNamespace.replace('ui.', '');
         targetTranslations = translations.ui;
         fallback = fallbackTranslations?.ui;
-        return getTranslation(targetTranslations, uiKey, fallback);
+        return interpolate(getTranslation(targetTranslations, uiKey, fallback), interpolationParams);
       } else if (targetNamespace.startsWith('common.')) {
         const commonKey = targetNamespace.replace('common.', '');
         targetTranslations = translations.common;
         fallback = fallbackTranslations?.common;
-        return getTranslation(targetTranslations, commonKey, fallback);
+        return interpolate(getTranslation(targetTranslations, commonKey, fallback), interpolationParams);
       }
     }
 
     if (!targetTranslations) {
       // If namespace not loaded yet, return key
-      return key;
+      return interpolate(key, interpolationParams);
     }
 
-    return getTranslation(targetTranslations, key, fallback);
+    return interpolate(getTranslation(targetTranslations, key, fallback), interpolationParams);
+  };
+
+  // Helper function to interpolate {{variable}} placeholders
+  const interpolate = (text: string, params?: Record<string, string | number>): string => {
+    if (!params) return text;
+    return text.replace(/\{\{(\w+)\}\}/g, (_, key) => {
+      return params[key] !== undefined ? String(params[key]) : `{{${key}}}`;
+    });
   };
 
   return {
