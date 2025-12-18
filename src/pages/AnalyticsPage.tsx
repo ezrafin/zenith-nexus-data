@@ -29,6 +29,15 @@ export default function AnalyticsPage() {
     return articles.filter((article) => article.author === activeAuthor);
   }, [articles, activeAuthor]);
 
+  // Calculate article counts per author dynamically
+  const authorCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    articles.forEach((article) => {
+      counts[article.author] = (counts[article.author] || 0) + 1;
+    });
+    return counts;
+  }, [articles]);
+
   const typeFilters = useMemo(
     () => [
       { value: 'all', label: t('filters.all') },
@@ -141,7 +150,7 @@ export default function AnalyticsPage() {
                     </AvatarFallback>
                   </Avatar>
                   {author.display_name}
-                  <span className="text-xs opacity-70">({author.post_count})</span>
+                  <span className="text-xs opacity-70">({authorCounts[author.display_name] || 0})</span>
                 </Button>
               ))}
             </div>
