@@ -1,2 +1,15 @@
+{
+  "notifications": {
+    "replyTitle": "Nowa odpowiedź w Twojej dyskusji",
+    "replyBody": "{{author}} odpowiedział(a) w „{{discussion}}”",
+    "reactionTitle": "Nowa reakcja",
+    "reactionPostBody": "{{author}} {{reaction}} Twój post",
+    "reactionReplyBody": "{{author}} {{reaction}} Twoją odpowiedź",
+    "newFollowerTitle": "Nowy obserwujący",
+    "newFollowerBody": "{{author}} zaczął(a) Cię obserwować",
+    "genericTitle": "Nowe powiadomienie",
+    "genericBody": "Masz nowe powiadomienie"
+  }
+}
 {}
 

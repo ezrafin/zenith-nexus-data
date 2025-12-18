@@ -19,6 +19,9 @@ export interface NotificationPayload {
   data?: Record<string, any>;
 }
 
+type Translator = (key: string) => string;
+type TemplateTranslator = (key: string) => string;
+
 /**
  * Request push notification permission
  */
@@ -82,33 +85,52 @@ export function formatNotificationMessage(
     discussionTitle?: string;
     replyPreview?: string;
     reactionType?: string;
-  }
+  },
+  t?: Translator
 ): { title: string; body: string } {
+  const author = data.authorName || 'Someone';
+  const discussion = data.discussionTitle || 'your discussion';
+  const reaction = data.reactionType || 'liked';
+
   switch (type) {
     case 'reply_to_discussion':
       return {
-        title: 'New reply to your discussion',
-        body: `${data.authorName || 'Someone'} replied to "${data.discussionTitle || 'your discussion'}"`,
+        title: t ? t('notifications.replyTitle') : 'New reply to your discussion',
+        body: t
+          ? t('notifications.replyBody')
+              .replace('{{author}}', author)
+              .replace('{{discussion}}', discussion)
+          : `${author} replied to "${discussion}"`,
       };
     case 'reaction_to_post':
       return {
-        title: 'New reaction',
-        body: `${data.authorName || 'Someone'} ${data.reactionType || 'liked'} your post`,
+        title: t ? t('notifications.reactionTitle') : 'New reaction',
+        body: t
+          ? t('notifications.reactionPostBody')
+              .replace('{{author}}', author)
+              .replace('{{reaction}}', reaction)
+          : `${author} ${reaction} your post`,
       };
     case 'reaction_to_reply':
       return {
-        title: 'New reaction',
-        body: `${data.authorName || 'Someone'} ${data.reactionType || 'liked'} your reply`,
+        title: t ? t('notifications.reactionTitle') : 'New reaction',
+        body: t
+          ? t('notifications.reactionReplyBody')
+              .replace('{{author}}', author)
+              .replace('{{reaction}}', reaction)
+          : `${author} ${reaction} your reply`,
       };
     case 'new_follower':
       return {
-        title: 'New follower',
-        body: `${data.authorName || 'Someone'} started following you`,
+        title: t ? t('notifications.newFollowerTitle') : 'New follower',
+        body: t
+          ? t('notifications.newFollowerBody').replace('{{author}}', author)
+          : `${author} started following you`,
       };
     default:
       return {
-        title: 'New notification',
-        body: 'You have a new notification',
+        title: t ? t('notifications.genericTitle') : 'New notification',
+        body: t ? t('notifications.genericBody') : 'You have a new notification',
       };
   }
 }

@@ -4,6 +4,7 @@ import { useUserPreferences } from '@/hooks/useUserPreferences';
 import { requestNotificationPermission, showNotification, formatNotificationMessage } from '@/lib/notifications';
 import { supabase } from '@/integrations/supabase/client';
 import type { RealtimeChannel } from '@supabase/supabase-js';
+import { useTranslation } from '@/hooks/useTranslation';
 
 /**
  * NotificationManager component
@@ -12,6 +13,7 @@ import type { RealtimeChannel } from '@supabase/supabase-js';
 export function NotificationManager() {
   const { user } = useUser();
   const { preferences } = useUserPreferences();
+  const { t } = useTranslation({ namespace: 'forum' });
 
   useEffect(() => {
     if (!user || !preferences.push_notifications) {
@@ -51,11 +53,21 @@ export function NotificationManager() {
             data?: Record<string, any>;
           };
 
+          const formatted = formatNotificationMessage(
+            notification.type as any,
+            {
+              authorName: notification.data?.authorName,
+              discussionTitle: notification.data?.discussionTitle,
+              reactionType: notification.data?.reactionType,
+            },
+            t
+          );
+
           // Show browser notification
           showNotification({
             type: notification.type as any,
-            title: notification.title,
-            body: notification.body,
+            title: formatted.title || notification.title,
+            body: formatted.body || notification.body,
             url: notification.url,
             icon: '/favicon.png',
             data: notification.data,

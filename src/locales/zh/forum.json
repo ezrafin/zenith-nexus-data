@@ -1,2 +1,15 @@
+{
+  "notifications": {
+    "replyTitle": "你的讨论有新回复",
+    "replyBody": "{{author}} 回复了「{{discussion}}」",
+    "reactionTitle": "新的互动",
+    "reactionPostBody": "{{author}}{{reaction}}了你的帖子",
+    "reactionReplyBody": "{{author}}{{reaction}}了你的回复",
+    "newFollowerTitle": "新的关注者",
+    "newFollowerBody": "{{author}} 开始关注你",
+    "genericTitle": "新通知",
+    "genericBody": "你有一条新通知"
+  }
+}
 {}
 

@@ -6,6 +6,7 @@ import { ReputationBadge } from '@/components/forum/ReputationBadge';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useTranslation } from '@/hooks/useTranslation';
+import { getLocaleForLanguage } from '@/lib/i18n';
 
 interface LeaderboardEntry {
   id: string;
@@ -22,7 +23,8 @@ export function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [type, setType] = useState<LeaderboardType>('reputation');
-  const { t } = useTranslation({ namespace: 'forum' });
+  const { t, language } = useTranslation({ namespace: 'forum' });
+  const locale = getLocaleForLanguage(language);
 
   useEffect(() => {
     loadLeaderboard();
@@ -149,7 +151,9 @@ export function Leaderboard() {
                       <ReputationBadge profile={profile} size="sm" showLevel={false} />
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <div className="font-semibold text-sm sm:text-base tabular-nums">{getValue(entry).toLocaleString()}</div>
+                      <div className="font-semibold text-sm sm:text-base tabular-nums">
+                        {getValue(entry).toLocaleString(locale)}
+                      </div>
                       <div className="text-xs text-muted-foreground">{getLabel()}</div>
                     </div>
                   </div>

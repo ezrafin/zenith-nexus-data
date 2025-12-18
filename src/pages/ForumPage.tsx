@@ -17,6 +17,7 @@ import { getLocaleForLanguage } from '@/lib/i18n';
 
 export default function ForumPage() {
   const { t, language } = useTranslation({ namespace: 'forum' });
+  const locale = getLocaleForLanguage(language);
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { user } = useUser();
@@ -240,11 +241,11 @@ export default function ForumPage() {
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                           <span className="flex items-center gap-1.5">
                             <MessageCircle className="h-3.5 w-3.5" />
-                            {category.topicCount.toLocaleString()} {t('topics')}
+                            {category.topicCount.toLocaleString(locale)} {t('topics')}
                           </span>
                           <span className="flex items-center gap-1.5">
                             <Users className="h-3.5 w-3.5" />
-                            {category.postCount.toLocaleString()} {t('posts')}
+                            {category.postCount.toLocaleString(locale)} {t('posts')}
                           </span>
                         </div>
                       </div>
