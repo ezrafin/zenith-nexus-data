@@ -69,9 +69,17 @@ export async function fetchForumCategories(): Promise<ForumCategory[]> {
 
 export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[]> {
   try {
+    // Join with profiles to get real avatar_url and display_name
     let query = supabase
       .from('forum_discussions')
-      .select('*')
+      .select(`
+        *,
+        profile:profiles!forum_discussions_user_id_fkey(
+          display_name,
+          avatar_url,
+          reputation_score
+        )
+      `)
       .order('is_pinned', { ascending: false })
       .order('created_at', { ascending: false });
     
@@ -84,28 +92,37 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
     if (error) throw error;
     
     return (data || []).map((topic) => {
-      // Type-safe access to fields that may come from JOINs
+      // Type-safe access to profile and other fields
       const topicWithExtras = topic as typeof topic & {
-        author_reputation?: number;
+        profile?: {
+          display_name?: string;
+          avatar_url?: string;
+          reputation_score?: number;
+        } | null;
         symbol?: string;
         asset_type?: string;
         like_count?: number;
       };
+      
+      // Use profile data if available, fallback to stored author_name
+      const authorName = topicWithExtras.profile?.display_name || topic.author_name;
+      const authorAvatar = topicWithExtras.profile?.avatar_url || getAuthorAvatar(topic.author_name);
+      const authorReputation = topicWithExtras.profile?.reputation_score;
       
       return {
         id: topic.id,
         categoryId: topic.category,
         title: topic.title,
         content: topic.content,
-        author: topic.author_name,
+        author: authorName,
         authorId: topic.user_id ?? undefined,
-        authorAvatar: getAuthorAvatar(topic.author_name),
+        authorAvatar: authorAvatar,
         date: topic.created_at,
         replies: topic.reply_count || 0,
         views: topic.view_count || 0,
         lastActivity: topic.updated_at,
         like_count: topicWithExtras.like_count ?? 0,
-        authorReputation: topicWithExtras.author_reputation ?? undefined,
+        authorReputation: authorReputation ?? undefined,
         symbol: topicWithExtras.symbol ?? undefined,
         asset_type: (topicWithExtras.asset_type as ForumTopic['asset_type']) ?? undefined,
       };
@@ -124,31 +141,48 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
 
 export async function fetchForumComments(topicId: string): Promise<ForumComment[]> {
   try {
+    // Join with profiles to get real avatar_url and display_name
     const { data, error } = await supabase
       .from('forum_replies')
-      .select('*')
+      .select(`
+        *,
+        profile:profiles!forum_replies_user_id_fkey(
+          display_name,
+          avatar_url,
+          reputation_score
+        )
+      `)
       .eq('discussion_id', topicId)
       .order('created_at');
     
     if (error) throw error;
     
     return (data || []).map((reply) => {
-      // Type-safe access to fields that may come from JOINs
+      // Type-safe access to profile and other fields
       const replyWithExtras = reply as typeof reply & {
-        author_reputation?: number;
+        profile?: {
+          display_name?: string;
+          avatar_url?: string;
+          reputation_score?: number;
+        } | null;
         reaction_count?: number;
       };
+      
+      // Use profile data if available, fallback to stored author_name
+      const authorName = replyWithExtras.profile?.display_name || reply.author_name;
+      const authorAvatar = replyWithExtras.profile?.avatar_url || getAuthorAvatar(reply.author_name);
+      const authorReputation = replyWithExtras.profile?.reputation_score;
       
       return {
         id: reply.id,
         topicId: reply.discussion_id,
-        author: reply.author_name,
+        author: authorName,
         authorId: reply.user_id ?? undefined,
-        authorAvatar: getAuthorAvatar(reply.author_name),
+        authorAvatar: authorAvatar,
         content: reply.content,
         date: reply.created_at,
         rating: replyWithExtras.reaction_count ?? 0,
-        authorReputation: replyWithExtras.author_reputation ?? undefined,
+        authorReputation: authorReputation ?? undefined,
       };
     });
   } catch (error) {
@@ -181,32 +215,53 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
     
     const symbols = [...new Set(itemsData.map(i => i.symbol))];
     
-    // Get discussions that mention these symbols in tags
+    // Get discussions that mention these symbols in tags, with profile join
     const { data, error } = await supabase
       .from('forum_discussions')
-      .select('*')
+      .select(`
+        *,
+        profile:profiles!forum_discussions_user_id_fkey(
+          display_name,
+          avatar_url,
+          reputation_score
+        )
+      `)
       .overlaps('tags', symbols)
       .order('created_at', { ascending: false })
       .limit(20);
     
     if (error) throw error;
 
-    return (data || []).map((topic) => ({
-      id: topic.id,
-      categoryId: topic.category,
-      title: topic.title,
-      content: topic.content || '',
-      author: topic.author_name,
-      authorId: topic.user_id ?? undefined,
-      authorAvatar: getAuthorAvatar(topic.author_name),
-      date: topic.created_at,
-      replies: topic.reply_count || 0,
-      views: topic.view_count || 0,
-      lastActivity: topic.updated_at,
-      like_count: 0,
-      symbol: undefined,
-      asset_type: undefined,
-    }));
+    return (data || []).map((topic) => {
+      const topicWithProfile = topic as typeof topic & {
+        profile?: {
+          display_name?: string;
+          avatar_url?: string;
+          reputation_score?: number;
+        } | null;
+      };
+      
+      const authorName = topicWithProfile.profile?.display_name || topic.author_name;
+      const authorAvatar = topicWithProfile.profile?.avatar_url || getAuthorAvatar(topic.author_name);
+      
+      return {
+        id: topic.id,
+        categoryId: topic.category,
+        title: topic.title,
+        content: topic.content || '',
+        author: authorName,
+        authorId: topic.user_id ?? undefined,
+        authorAvatar: authorAvatar,
+        date: topic.created_at,
+        replies: topic.reply_count || 0,
+        views: topic.view_count || 0,
+        lastActivity: topic.updated_at,
+        like_count: 0,
+        authorReputation: topicWithProfile.profile?.reputation_score ?? undefined,
+        symbol: undefined,
+        asset_type: undefined,
+      };
+    });
   } catch (error) {
     logger.error('Error fetching discussions for watchlist:', error);
     return [];
@@ -215,9 +270,17 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
 
 export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
   try {
+    // Join with profiles to get real avatar_url and display_name
     const { data, error } = await supabase
       .from('forum_discussions')
-      .select('*')
+      .select(`
+        *,
+        profile:profiles!forum_discussions_user_id_fkey(
+          display_name,
+          avatar_url,
+          reputation_score
+        )
+      `)
       .eq('id', id)
       .single();
     
@@ -225,17 +288,33 @@ export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
     
     if (!data) return null;
     
+    // Type-safe access to profile
+    const dataWithProfile = data as typeof data & {
+      profile?: {
+        display_name?: string;
+        avatar_url?: string;
+        reputation_score?: number;
+      } | null;
+    };
+    
+    // Use profile data if available, fallback to stored author_name
+    const authorName = dataWithProfile.profile?.display_name || data.author_name;
+    const authorAvatar = dataWithProfile.profile?.avatar_url || getAuthorAvatar(data.author_name);
+    const authorReputation = dataWithProfile.profile?.reputation_score;
+    
     return {
       id: data.id,
       categoryId: data.category,
       title: data.title,
       content: data.content,
-      author: data.author_name,
-      authorAvatar: getAuthorAvatar(data.author_name),
+      author: authorName,
+      authorId: data.user_id ?? undefined,
+      authorAvatar: authorAvatar,
       date: data.created_at,
       replies: data.reply_count || 0,
       views: data.view_count || 0,
       lastActivity: data.updated_at,
+      authorReputation: authorReputation ?? undefined,
     };
   } catch (error) {
     console.error('Error fetching topic by id:', error);
