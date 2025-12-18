@@ -608,6 +608,48 @@ export type Database = {
         }
         Relationships: []
       }
+      user_preferences: {
+        Row: {
+          created_at: string
+          default_markets: string[]
+          email_notifications: boolean
+          id: string
+          language: string
+          preferred_topics: string[]
+          push_notifications: boolean
+          refresh_interval: number
+          theme: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          default_markets?: string[]
+          email_notifications?: boolean
+          id?: string
+          language?: string
+          preferred_topics?: string[]
+          push_notifications?: boolean
+          refresh_interval?: number
+          theme?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          default_markets?: string[]
+          email_notifications?: boolean
+          id?: string
+          language?: string
+          preferred_topics?: string[]
+          push_notifications?: boolean
+          refresh_interval?: number
+          theme?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       watchlist_items: {
         Row: {
           added_at: string | null
