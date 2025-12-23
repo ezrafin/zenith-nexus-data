@@ -363,24 +363,7 @@ export default function WatchlistPage() {
 }
 
 function WatchlistCard({ watchlist, onDelete }: { watchlist: Watchlist; onDelete: (id: string) => void }) {
-  const [itemsData, setItemsData] = useState<Record<string, MarketData[]>>({});
   const { t } = useTranslation({ namespace: 'ui' });
-
-  useEffect(() => {
-    // Group items by market type and fetch data
-    const grouped = watchlist.items.reduce((acc, item) => {
-      if (!acc[item.market_type]) {
-        acc[item.market_type] = [];
-      }
-      return acc;
-    }, {} as Record<string, any>);
-
-    // Fetch data for each market type
-    Object.keys(grouped).forEach(async (marketType) => {
-      // This would need to be implemented to fetch specific symbols
-      // For now, we'll just show the structure
-    });
-  }, [watchlist.items]);
 
   return (
     <div className="premium-card p-6">
@@ -418,33 +401,84 @@ function WatchlistCard({ watchlist, onDelete }: { watchlist: Watchlist; onDelete
         </div>
       ) : (
         <div className="space-y-2">
-          {watchlist.items.map((item) => {
-            const Icon = marketIcons[item.market_type as keyof typeof marketIcons] || TrendingUp;
-            return (
-              <div
-                key={item.id}
-                className="flex items-center justify-between p-3 rounded-lg border border-border/50 hover:bg-secondary/50"
-              >
-                <div className="flex items-center gap-3">
-                  <Icon className="h-5 w-5 text-primary" />
-                  <div>
-                    <span className="font-mono font-medium">{item.symbol}</span>
-                    <span className="text-xs text-muted-foreground ml-2 capitalize">
-                      {t(`watchlistPage.marketType.${item.market_type as keyof typeof marketIcons}`) || item.market_type}
-                    </span>
-                  </div>
-                </div>
-                <Link to={`/markets/${item.market_type}`}>
-                  <Button variant="ghost" size="sm">
-                    {t('buttons.view', { defaultValue: 'View' })}
-                  </Button>
-                </Link>
-              </div>
-            );
-          })}
+          {watchlist.items.map((item) => (
+            <WatchlistItemRow key={item.id} item={item} />
+          ))}
         </div>
       )}
     </div>
+  );
+}
+
+function WatchlistItemRow({ item }: { item: WatchlistItem }) {
+  const [price, setPrice] = useState<{ price: number; changePercent: number } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const { t } = useTranslation({ namespace: 'ui' });
+  const Icon = marketIcons[item.market_type as keyof typeof marketIcons] || TrendingUp;
+
+  useEffect(() => {
+    const fetchPrice = async () => {
+      try {
+        const { data, error } = await supabase.functions.invoke('fetch-asset-price', {
+          body: { symbol: item.symbol, marketType: item.market_type }
+        });
+        
+        if (!error && data?.price) {
+          setPrice({ price: data.price, changePercent: data.changePercent || 0 });
+        }
+      } catch (err) {
+        console.error('Error fetching price:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPrice();
+  }, [item.symbol, item.market_type]);
+
+  const formatPrice = (value: number) => {
+    if (value >= 1000) {
+      return `$${value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+    if (value >= 1) {
+      return `$${value.toFixed(2)}`;
+    }
+    return `$${value.toFixed(4)}`;
+  };
+
+  return (
+    <Link
+      to={`/markets/${item.market_type}`}
+      className="flex items-center justify-between p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-colors"
+    >
+      <div className="flex items-center gap-3">
+        <Icon className="h-5 w-5 text-primary" />
+        <div>
+          <span className="font-mono font-medium">{item.symbol}</span>
+          <span className="text-xs text-muted-foreground ml-2 capitalize">
+            {t(`watchlistPage.marketType.${item.market_type as keyof typeof marketIcons}`) || item.market_type}
+          </span>
+        </div>
+      </div>
+      <div className="text-right">
+        {loading ? (
+          <div className="h-5 w-16 bg-muted animate-pulse rounded"></div>
+        ) : price ? (
+          <div className="flex flex-col items-end">
+            <span className="font-mono font-semibold">{formatPrice(price.price)}</span>
+            {price.changePercent !== 0 && (
+              <span className={`text-xs ${price.changePercent >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                {price.changePercent >= 0 ? '+' : ''}{price.changePercent.toFixed(2)}%
+              </span>
+            )}
+          </div>
+        ) : (
+          <Button variant="ghost" size="sm">
+            {t('buttons.view', { defaultValue: 'View' })}
+          </Button>
+        )}
+      </div>
+    </Link>
   );
 }
 

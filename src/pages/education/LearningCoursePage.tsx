@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
-import { Rocket, CheckCircle, Clock, Users, Star, Bell, Play, Quote } from 'lucide-react';
+import { Rocket, CheckCircle, Clock, Users, Star, Bell, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
@@ -75,12 +75,6 @@ const testimonials = [
   },
 ];
 
-const sampleLesson = {
-  title: 'Understanding Market Orders vs Limit Orders',
-  duration: '12 min',
-  module: 'Module 1: Introduction to Financial Markets',
-  thumbnail: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop',
-};
 
 export default function LearningCoursePage() {
   const [email, setEmail] = useState('');
@@ -148,32 +142,6 @@ export default function LearningCoursePage() {
             </div>
           </div>
 
-          {/* Sample Lesson Preview */}
-          <div className="mb-16">
-            <h2 className="heading-lg text-center mb-8">Preview a Sample Lesson</h2>
-            <div className="glass-card overflow-hidden max-w-3xl mx-auto">
-              <div className="aspect-video relative group cursor-pointer">
-                <img 
-                  src={sampleLesson.thumbnail} 
-                  alt={sampleLesson.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-background/60 flex items-center justify-center group-hover:bg-background/40 transition-colors">
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Play className="h-8 w-8 text-primary-foreground ml-1" />
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-xs text-muted-foreground mb-1">{sampleLesson.module}</p>
-                  <h3 className="font-semibold text-foreground">{sampleLesson.title}</h3>
-                  <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3" />
-                    <span>{sampleLesson.duration}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Course Modules & Features */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
