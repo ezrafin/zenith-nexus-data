@@ -137,25 +137,23 @@ export default function CompaniesPage() {
               />
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <div className="flex flex-col gap-4">
               {/* Type Filter Buttons */}
-              <div className="mb-2 md:mb-0">
-                <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 md:flex-wrap md:overflow-visible">
-                  {organizationTypes.map((type) => (
-                    <Button
-                      key={type.value}
-                      variant={selectedType === type.value ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => handleTypeChange(type.value)}
-                      className="text-sm whitespace-nowrap"
-                    >
-                      {type.label}
-                    </Button>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-2">
+                {organizationTypes.map((type) => (
+                  <Button
+                    key={type.value}
+                    variant={selectedType === type.value ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => handleTypeChange(type.value)}
+                    className="text-sm whitespace-nowrap"
+                  >
+                    {type.label}
+                  </Button>
+                ))}
               </div>
 
-              <div className="flex flex-wrap items-center gap-2 md:ml-auto">
+              <div className="flex flex-wrap items-center gap-3">
                 {/* Region Filter */}
                 <div className="flex items-center gap-2">
                   <Globe className="h-4 w-4 text-muted-foreground" />

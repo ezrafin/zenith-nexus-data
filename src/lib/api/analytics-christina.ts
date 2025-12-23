@@ -328,7 +328,6 @@ Artificial intelligence has moved from a niche capability to a core driver of bu
     tags: ['AI', 'Software', 'Productivity', 'Technology', 'Investment'],
   },
   {
-  {
     slug: 'higher-rates-tech-valuations-and-equity-risk-premia',
     title: 'Higher Rates, Tech Valuations, and the Equity Risk Premium',
     excerpt:

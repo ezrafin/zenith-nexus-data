@@ -1,129 +1,137 @@
 import { useAllMarkets } from '@/hooks/useAllMarkets';
-import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { TrendingUp, TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { MarketData } from '@/lib/api/types';
 
-const getMarketCap = (item: MarketData) => {
-  if (item.volume) {
-    const volumeNum = parseFloat(String(item.volume).replace(/[^0-9.]/g, ''));
-    return item.price * (isNaN(volumeNum) ? 1 : volumeNum);
-  }
-  return item.price;
+// Get the top gainer from a market dataset
+const getTopGainer = (data: MarketData[] | undefined): MarketData | null => {
+  if (!data || data.length === 0) return null;
+  const gainers = data.filter(item => item.changePercent > 0);
+  if (gainers.length === 0) return null;
+  return gainers.sort((a, b) => b.changePercent - a.changePercent)[0];
 };
 
-const topByMarketCap = (list?: MarketData[], limit = 20): MarketData[] =>
-  (list ? [...list] : []).sort((a, b) => getMarketCap(b) - getMarketCap(a)).slice(0, limit);
+// Get the top loser from a market dataset
+const getTopLoser = (data: MarketData[] | undefined): MarketData | null => {
+  if (!data || data.length === 0) return null;
+  const losers = data.filter(item => item.changePercent < 0);
+  if (losers.length === 0) return null;
+  return losers.sort((a, b) => a.changePercent - b.changePercent)[0];
+};
+
+// Map market type to URL segment
+const getMarketUrl = (item: MarketData, marketType: string): string => {
+  return `/markets/${marketType}`;
+};
+
+interface MarketItemProps {
+  item: MarketData;
+  marketType: string;
+  isGainer: boolean;
+}
+
+function MarketItem({ item, marketType, isGainer }: MarketItemProps) {
+  return (
+    <Link
+      to={getMarketUrl(item, marketType)}
+      className="flex items-center justify-between p-2 rounded-lg hover:bg-secondary/50 transition-colors"
+    >
+      <div className="flex items-center gap-2">
+        <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-secondary/50 text-muted-foreground">
+          {marketType}
+        </span>
+        <div>
+          <div className="font-medium text-sm">{item.symbol}</div>
+          <div className="text-xs text-muted-foreground truncate max-w-[120px]">{item.name}</div>
+        </div>
+      </div>
+      <div className="text-right">
+        <div className={`font-semibold text-sm ${isGainer ? 'text-green-500' : 'text-red-500'}`}>
+          {isGainer ? '+' : ''}{item.changePercent.toFixed(2)}%
+        </div>
+        <div className="text-xs text-muted-foreground">${item.price.toFixed(2)}</div>
+      </div>
+    </Link>
+  );
+}
 
 export function MarketOverview() {
-  const { indices, stocks, crypto } = useAllMarkets();
+  const { indices, stocks, crypto, commodities, currencies } = useAllMarkets();
 
-  const topIndices = topByMarketCap(indices.data, 20);
-  const topStocks = topByMarketCap(stocks.data, 20);
-  const topCrypto = topByMarketCap(crypto.data, 20);
+  // Get top gainer from each market type
+  const topGainers = [
+    { item: getTopGainer(indices.data), type: 'indices' },
+    { item: getTopGainer(stocks.data), type: 'stocks' },
+    { item: getTopGainer(crypto.data), type: 'crypto' },
+    { item: getTopGainer(commodities.data), type: 'commodities' },
+    { item: getTopGainer(currencies.data), type: 'currencies' },
+  ].filter((entry): entry is { item: MarketData; type: string } => entry.item !== null);
 
-  const topGainers = [...topStocks, ...topCrypto]
-    .filter((item) => item.changePercent > 0)
-    .sort((a, b) => b.changePercent - a.changePercent)
-    .slice(0, 5);
+  // Get top loser from each market type
+  const topLosers = [
+    { item: getTopLoser(indices.data), type: 'indices' },
+    { item: getTopLoser(stocks.data), type: 'stocks' },
+    { item: getTopLoser(crypto.data), type: 'crypto' },
+    { item: getTopLoser(commodities.data), type: 'commodities' },
+    { item: getTopLoser(currencies.data), type: 'currencies' },
+  ].filter((entry): entry is { item: MarketData; type: string } => entry.item !== null);
 
-  const topLosers = [...topStocks, ...topCrypto]
-    .filter((item) => item.changePercent < 0)
-    .sort((a, b) => a.changePercent - b.changePercent)
-    .slice(0, 5);
-
-  const marketSummary = {
-    totalMarkets: topIndices.length + topStocks.length + topCrypto.length,
-    gainers: topGainers.length,
-    losers: topLosers.length,
-      avgChange: indices.data && indices.data.length > 0
-        ? indices.data.reduce((sum, item) => sum + item.changePercent, 0) / indices.data.length
-        : 0,
-  };
+  const isDemo = indices.isDemo || stocks.isDemo || crypto.isDemo || commodities.isDemo || currencies.isDemo;
 
   return (
     <div className="premium-card p-6">
       <div className="flex items-center justify-between mb-6">
         <h2 className="font-heading font-semibold text-lg">Market Overview</h2>
-        {crypto.isDemo && (
+        {isDemo && (
           <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400">
             Demo data
           </span>
         )}
       </div>
 
-      {/* Summary Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="text-center p-4 rounded-lg bg-secondary/30">
-          <div className="text-2xl font-bold">{marketSummary.totalMarkets}</div>
-          <div className="text-xs text-muted-foreground">Markets</div>
-        </div>
+      {/* Summary Stats - Only Gainers and Losers */}
+      <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="text-center p-4 rounded-lg bg-green-500/10">
-          <div className="text-2xl font-bold text-green-500">{marketSummary.gainers}</div>
+          <div className="text-2xl font-bold text-green-500">{topGainers.length}</div>
           <div className="text-xs text-muted-foreground">Gainers</div>
         </div>
         <div className="text-center p-4 rounded-lg bg-red-500/10">
-          <div className="text-2xl font-bold text-red-500">{marketSummary.losers}</div>
+          <div className="text-2xl font-bold text-red-500">{topLosers.length}</div>
           <div className="text-xs text-muted-foreground">Losers</div>
         </div>
       </div>
 
-      {/* Top Gainers */}
+      {/* Top Gainers - 1 from each market */}
       <div className="mb-6">
         <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
           <TrendingUp className="h-4 w-4 text-green-500" />
           Top Gainers
         </h3>
         <div className="space-y-2">
-          {topGainers.map((item) => (
-            <Link
-              key={item.symbol}
-              to={`/markets/${item.symbol}`}
-              className="flex items-center justify-between p-2 rounded-lg hover:bg-secondary/50 transition-colors"
-            >
-              <div>
-                <div className="font-medium text-sm">{item.symbol}</div>
-                <div className="text-xs text-muted-foreground">{item.name}</div>
-              </div>
-              <div className="text-right">
-                <div className="font-semibold text-sm text-green-500">
-                  +{item.changePercent.toFixed(2)}%
-                </div>
-                <div className="text-xs text-muted-foreground">${item.price.toFixed(2)}</div>
-              </div>
-            </Link>
+          {topGainers.map(({ item, type }) => (
+            <MarketItem key={`${type}-${item.symbol}`} item={item} marketType={type} isGainer={true} />
           ))}
+          {topGainers.length === 0 && (
+            <div className="text-sm text-muted-foreground text-center py-2">No gainers today</div>
+          )}
         </div>
       </div>
 
-      {/* Top Losers */}
+      {/* Top Losers - 1 from each market */}
       <div>
         <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
           <TrendingDown className="h-4 w-4 text-red-500" />
           Top Losers
         </h3>
         <div className="space-y-2">
-          {topLosers.map((item) => (
-            <Link
-              key={item.symbol}
-              to={`/markets/${item.symbol}`}
-              className="flex items-center justify-between p-2 rounded-lg hover:bg-secondary/50 transition-colors"
-            >
-              <div>
-                <div className="font-medium text-sm">{item.symbol}</div>
-                <div className="text-xs text-muted-foreground">{item.name}</div>
-              </div>
-              <div className="text-right">
-                <div className="font-semibold text-sm text-red-500">
-                  {item.changePercent.toFixed(2)}%
-                </div>
-                <div className="text-xs text-muted-foreground">${item.price.toFixed(2)}</div>
-              </div>
-            </Link>
+          {topLosers.map(({ item, type }) => (
+            <MarketItem key={`${type}-${item.symbol}`} item={item} marketType={type} isGainer={false} />
           ))}
+          {topLosers.length === 0 && (
+            <div className="text-sm text-muted-foreground text-center py-2">No losers today</div>
+          )}
         </div>
       </div>
     </div>
   );
 }
-

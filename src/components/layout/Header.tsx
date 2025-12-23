@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, GraduationCap, BookOpen, Award, Rocket, User, LogOut, Settings, Bookmark } from 'lucide-react';
+import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, GraduationCap, BookOpen, Award, Rocket, User, LogOut, Settings, Bookmark, Users } from 'lucide-react';
 import { logger } from '@/lib/logger';
 import { AchievementSystem } from '@/components/forum/AchievementSystem';
 import { ThemeSwitcher } from '@/components/layout/ThemeSwitcher';
@@ -191,7 +191,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <ThemeSwitcher />
             {user ? (
-              <DropdownMenu>
+              <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
                   <button className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors">
                     <UserAvatar profile={profile} size="sm" />
@@ -222,7 +222,7 @@ export function Header() {
                     {t('buttons.bookmarks')}
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => navigate('/community')}>
-                    <TrendingUp className="mr-2 h-4 w-4" />
+                    <Users className="mr-2 h-4 w-4" />
                     {t('navigation.community')}
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => navigate('/settings')}>

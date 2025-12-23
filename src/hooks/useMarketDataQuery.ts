@@ -18,6 +18,52 @@ interface UseMarketDataQueryReturn {
   refetch: () => void;
 }
 
+interface CachedMarketData {
+  data: MarketData[];
+  timestamp: string;
+  isDemo: boolean;
+  cachedAt: number;
+}
+
+const CACHE_KEY_PREFIX = 'market_data_cache_';
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
+// Get cached data from localStorage
+function getCachedData(type: string): CachedMarketData | null {
+  try {
+    const cached = localStorage.getItem(CACHE_KEY_PREFIX + type);
+    if (!cached) return null;
+    
+    const parsed: CachedMarketData = JSON.parse(cached);
+    const now = Date.now();
+    
+    // Return cached data if it's still fresh
+    if (now - parsed.cachedAt < CACHE_DURATION) {
+      return parsed;
+    }
+    
+    // Return stale data (will be used as placeholder while fetching fresh data)
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+// Save data to localStorage cache
+function setCachedData(type: string, data: MarketData[], timestamp: string, isDemo: boolean): void {
+  try {
+    const cacheEntry: CachedMarketData = {
+      data,
+      timestamp,
+      isDemo,
+      cachedAt: Date.now(),
+    };
+    localStorage.setItem(CACHE_KEY_PREFIX + type, JSON.stringify(cacheEntry));
+  } catch {
+    // Ignore localStorage errors (e.g., quota exceeded)
+  }
+}
+
 async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies'): Promise<{ data: MarketData[]; timestamp: string; isDemo: boolean }> {
   if (type === 'crypto') {
     const { data: responseData, error: fetchError } = await supabase.functions.invoke('fetch-crypto');
@@ -25,19 +71,23 @@ async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'c
     if (fetchError) throw fetchError;
 
     if (responseData?.data && responseData.data.length > 0) {
-      return {
+      const result = {
         data: responseData.data,
         timestamp: responseData.timestamp,
         isDemo: false,
       };
+      setCachedData(type, result.data, result.timestamp, result.isDemo);
+      return result;
     } else {
       // Fallback to local mock data
       const fallback = await fetchMarketData('crypto');
-      return {
+      const result = {
         data: fallback,
         timestamp: new Date().toISOString(),
         isDemo: true,
       };
+      setCachedData(type, result.data, result.timestamp, result.isDemo);
+      return result;
     }
   } else {
     // For non-crypto types, use fetch-stocks with type parameter
@@ -65,11 +115,13 @@ async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'c
     
     const result = await response.json();
     if (result?.data) {
-      return {
+      const data = {
         data: result.data,
         timestamp: result.timestamp,
         isDemo: false,
       };
+      setCachedData(type, data.data, data.timestamp, data.isDemo);
+      return data;
     } else if (result?.error) {
       throw new Error(result.error);
     }
@@ -83,7 +135,10 @@ export function useMarketDataQuery({
   refreshInterval = 120000,
   staleTime = 30000, // 30 seconds default, align with server cache
 }: UseMarketDataQueryOptions): UseMarketDataQueryReturn {
-  const { data, isLoading, error, dataUpdatedAt, refetch } = useQuery({
+  // Get initial cached data for immediate display
+  const cachedData = getCachedData(type);
+  
+  const { data, isLoading, error, refetch } = useQuery({
     queryKey: ['marketData', type],
     queryFn: async () => {
       const result = await fetchMarketDataFromAPI(type);
@@ -93,11 +148,23 @@ export function useMarketDataQuery({
     gcTime: 5 * 60 * 1000, // 5 minutes
     refetchInterval: refreshInterval,
     refetchIntervalInBackground: true,
+    // Use cached data as initial data for instant display
+    initialData: cachedData ? {
+      data: cachedData.data,
+      timestamp: cachedData.timestamp,
+      isDemo: cachedData.isDemo,
+    } : undefined,
+    // Don't show loading state if we have cached data
+    placeholderData: cachedData ? {
+      data: cachedData.data,
+      timestamp: cachedData.timestamp,
+      isDemo: cachedData.isDemo,
+    } : undefined,
   });
 
   return {
     data: data?.data || [],
-    isLoading,
+    isLoading: isLoading && !cachedData, // Only show loading if no cached data
     error: error as Error | null,
     lastUpdated: data ? new Date(data.timestamp) : null,
     isDemo: data?.isDemo || false,
@@ -106,4 +173,3 @@ export function useMarketDataQuery({
     },
   };
 }
-
