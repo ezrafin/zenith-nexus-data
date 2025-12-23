@@ -42,17 +42,27 @@ export const videos: Video[] = [
     level: 'beginner',
     format: 'lecture',
     duration: '28 min',
-    description: 'We break down how inflation erodes your savings in deposits. Compare nominal and real returns of various instruments.',
+    description: 'We break down how inflation and compound interest interact, and how much of your deposit return remains after rising prices. Using simple examples and a compound‑interest framework, we compare nominal and real returns of different instruments.',
     keyTakeaways: [
-      'A deposit rate of 8% with 6% inflation = only 2% real return',
-      'Over 10 years, a deposit with a "good" rate can lose 30-40% of purchasing power',
-      'Alternative instruments (stock ETFs, bonds) historically outpace inflation',
-      'Banks profit from the spread between deposit rates and loan rates (margin 5-15%)'
+      'Real return = nominal return minus inflation, adjusted over time through compound interest.',
+      'Even with a seemingly good nominal rate, long periods of moderate inflation can erode 30–40% of your purchasing power.',
+      'Compounding works both ways: low real returns compounded over many years are dramatically weaker than they look in nominal terms.',
+      'Historically, diversified instruments (stock index ETFs, quality bonds) have a better chance to beat inflation than simple bank deposits.',
+      'Banks earn the spread between what they pay on deposits and what they charge on loans; your true return is what is left after inflation and fees.'
     ],
     selfCheckQuestions: [
-      { question: 'If a deposit offers 7% annually and inflation is 5%, what is the real return?', hint: 'Simple subtraction: 7% - 5% = 2%' },
-      { question: 'Why can banks offer "guaranteed" returns?', hint: 'Think about how the bank uses your money' },
-      { question: 'Which instruments historically show returns above inflation?', hint: 'Stocks, ETFs, real estate' }
+      { 
+        question: 'If your deposit earns 7% per year while inflation is 5%, what is the approximate real return for one year?', 
+        hint: 'Start with nominal – inflation (7% – 5%), then remember this is only an approximation.' 
+      },
+      { 
+        question: 'Why can a deposit with 6–8% nominal return still lose purchasing power over 10–15 years?', 
+        hint: 'Think about how inflation compounds every year, just like interest.' 
+      },
+      { 
+        question: 'Name at least two asset classes that historically have a better chance to outpace inflation than a simple bank deposit.', 
+        hint: 'Look at long‑term returns of stock index ETFs and high‑quality bonds.' 
+      }
     ],
     resources: [
       { title: 'Real Return Calculator', url: '/tools/real-return-calculator' },
@@ -60,7 +70,10 @@ export const videos: Video[] = [
     ],
     thumbnail: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop',
     relatedForumTopics: ['deposits-vs-investments', 'inflation-protection'],
-    publishedAt: '2024-12-01'
+    publishedAt: '2024-12-01',
+    // Khan Academy: Introduction to compound interest
+    // https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial/compound-interest-tutorial/v/introduction-to-compound-interest
+    videoUrl: 'https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial/compound-interest-tutorial/v/introduction-to-compound-interest'
   },
   {
     id: 'hidden-bank-fees',
@@ -96,7 +109,7 @@ export const videos: Video[] = [
     level: 'beginner',
     format: 'lecture',
     duration: '45 min',
-    description: 'Complete guide to ETFs: what they are, how to choose, what returns to expect. Comparison with traditional banking instruments.',
+    description: 'Introductory guide to ETFs: what exchange‑traded funds are, how they are structured, how to choose broad market funds, and what risks and returns to expect. The video compares ETFs with traditional banking instruments and actively managed products.',
     keyTakeaways: [
       'Index ETFs historically yield 7-10% annually in the long term',
       'Diversification through a single ETF reduces risks compared to individual stocks',
@@ -113,7 +126,10 @@ export const videos: Video[] = [
     ],
     thumbnail: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop',
     relatedForumTopics: ['etf-discussion', 'passive-investing'],
-    publishedAt: '2024-11-25'
+    publishedAt: '2024-11-25',
+    // YouTube: ETF basics (educational video)
+    // https://www.youtube.com/watch?v=DPsUntwGIAg&t=255s&pp=ygUKRVRGIGJhc2ljcw%3D%3D
+    videoUrl: 'https://www.youtube.com/embed/DPsUntwGIAg?start=255'
   },
   {
     id: 'technical-analysis-intro',
