@@ -270,4 +270,160 @@ China tech will continue evolving with regulations, competition, and global dyna
     imageUrl: getImage('markets', 371),
     tags: ['China Tech', 'Asia-Pacific', 'Technology', 'Investment', 'Market Analysis'],
   },
+
+  {
+    slug: 'asean-growth-and-supply-chain-diversification',
+    title: 'ASEAN Growth and Supply-Chain Diversification: Positioning in a Fragmenting World',
+    excerpt:
+      'How supply-chain diversification away from China is reshaping growth prospects across ASEAN, and what that means for equities, FX, and local bonds in key markets such as Vietnam, Indonesia, and Malaysia.',
+    content: `# ASEAN Growth and Supply-Chain Diversification: Positioning in a Fragmenting World
+
+## Introduction
+
+As global manufacturers reassess supply‑chain concentration risk, Southeast Asia has emerged as a critical beneficiary of diversification away from China. Policy initiatives, cost advantages, and demographic tailwinds are positioning ASEAN economies as complementary rather than purely substitute production hubs.
+
+For investors, this shift is more than a trade story. It affects medium‑term growth trajectories, FDI flows, current‑account dynamics, and sectoral earnings across the region. Understanding which ASEAN markets and industries are best placed to capture “China+1” strategies is essential for building resilient Asia‑Pacific portfolios.
+
+This article offers a structured view of ASEAN’s role in the evolving global supply chain and provides a framework for cross‑country and cross‑asset positioning.
+
+## Mapping the China+1 Opportunity
+
+The drivers behind supply‑chain diversification include:
+
+- Rising labor costs and regulatory complexity in China.
+- Geopolitical tensions and export‑control regimes.
+- The desire of multinational corporations to build **redundant capacity** and reduce single‑country dependence.
+
+ASEAN offers:
+
+- Competitive labor costs and young populations in markets such as Vietnam and Indonesia.
+- Strategic geographic location with access to major shipping routes.
+- A web of trade agreements and investment incentives.
+
+However, not all ASEAN countries are equally positioned. Investors should differentiate along three dimensions:
+
+1. **Manufacturing ecosystem depth**.
+2. **Infrastructure and logistics quality**.
+3. **Policy stability and investment climate**.
+
+## Country Snapshots
+
+### Vietnam: Electronics and Assembly Hub
+
+Vietnam has become a leading destination for electronics and smartphone assembly, benefiting from:
+
+- Competitive labor costs.
+- Pro‑investment policies and special economic zones.
+- Proximity to China’s supplier base.
+
+Key sectors:
+
+- Electronics and components.
+- Textiles and garments.
+- Logistics and industrial real estate.
+
+Risks include infrastructure bottlenecks, energy constraints, and the need for continued institutional strengthening. For investors, industrial‑park developers, logistics companies, and select banks with SME exposure are direct beneficiaries of FDI inflows.
+
+### Indonesia: Resources, EVs, and Downstream Processing
+
+Indonesia’s opportunity lies not only in manufacturing, but also in **resource‑based industrialization**. Its large nickel reserves underpin ambitions to build a full EV battery value chain, from extraction to processing and potentially cell manufacturing.
+
+Key sectors:
+
+- Nickel and metals processing.
+- Power and infrastructure.
+- Domestic banking and consumption.
+
+Investors must balance long‑term potential with ESG considerations around mining practices, as well as policy unpredictability. Currency volatility and external‑balance dynamics also require attention.
+
+### Malaysia and Thailand: Upgrading Existing Ecosystems
+
+Malaysia and Thailand host established manufacturing bases in:
+
+- Semiconductors and electronics (Malaysia).
+- Autos and auto parts (Thailand).
+
+Their challenge is to **move up the value chain** and adapt to EV, automation, and digitalization trends. Well‑positioned companies can leverage existing supplier networks and skilled labor to capture incremental investment.
+
+## Macro and Market Implications
+
+### Growth and FDI Flows
+
+Sustained supply‑chain diversification can:
+
+- Lift potential growth through higher investment and productivity.
+- Support current‑account positions via export expansion.
+- Deepen local capital markets as corporates issue debt and equity to fund expansion.
+
+However, FDI cycles can be lumpy. Investors should monitor project pipelines, approval processes, and the execution pace of announced investments.
+
+### FX and Local Bonds
+
+Improved growth and FDI can support currencies over the medium term, but near‑term volatility is driven by:
+
+- Global risk sentiment.
+- US dollar cycles.
+- Local policy responses to inflation and capital flows.
+
+Local‑currency bonds may benefit from:
+
+- Strengthening policy frameworks.
+- Gradual disinflation after commodity shocks.
+- Inclusion in global bond indices over time.
+
+Investors should pay attention to real yields, fiscal trajectories, and central‑bank credibility in each market.
+
+## Sector and Thematic Opportunities
+
+### Industrial Real Estate and Logistics
+
+Developers of industrial parks, warehouses, and logistics facilities are direct beneficiaries of manufacturing relocation. Key metrics include:
+
+- Occupancy rates and pre‑leasing activity.
+- Land banks in strategic corridors.
+- Tenant diversification and lease structures.
+
+### Banks and Financial Services
+
+As FDI and domestic investment accelerate, local banks gain from:
+
+- Higher demand for working‑capital and capex financing.
+- Transaction banking linked to trade and supply chains.
+
+Balance‑sheet quality, capital strength, and risk management remain crucial differentiators.
+
+### Technology and Services
+
+Beyond manufacturing, ASEAN’s digital economies—e‑commerce, payments, cloud services—stand to benefit from broader economic formalization and rising incomes. Investors should, however, maintain valuation discipline after prior boom‑and‑bust cycles in regional tech.
+
+## Risk Checklist
+
+Key risks to the ASEAN supply‑chain story include:
+
+- Global recession reducing external demand.
+- Policy reversals or protectionism in host countries.
+- Infrastructure and energy constraints delaying project execution.
+- Geopolitical escalation impacting trade routes.
+
+Scenario analysis—mapping how portfolios behave under both positive and adverse outcomes—is essential.
+
+## Conclusion
+
+ASEAN is not replacing China as the world’s factory, but it is becoming a critical complementary hub in a more diversified global production network. For investors, this creates multi‑year opportunities across industrial real estate, manufacturing champions, banks, and local‑currency assets.
+
+Success requires going beyond generic “Asia growth” narratives and building country‑specific views grounded in supply‑chain realities, policy frameworks, and sector fundamentals. In a fragmenting world, such nuance is the key to capturing the upside of diversification while managing the new set of risks it creates.`,
+    date: formatDate(372),
+    author: 'Xu Meiling',
+    authorAvatar: getAuthorAvatar('Xu Meiling'),
+    type: 'longterm',
+    readTime: calculateReadTime(
+      countWords(`# ASEAN Growth and Supply-Chain Diversification: Positioning in a Fragmenting World
+
+## Introduction
+
+As global manufacturers reassess supply‑chain concentration risk, Southeast Asia has emerged as a critical beneficiary of diversification away from China.`),
+    ),
+    imageUrl: getImage('longterm', 372),
+    tags: ['ASEAN', 'Supply Chains', 'Emerging Markets', 'Asia-Pacific', 'Investment Themes'],
+  },
 ];

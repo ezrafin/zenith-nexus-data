@@ -338,4 +338,152 @@ European markets will continue evolving with economic conditions, regulatory cha
     imageUrl: getImage('markets', 219),
     tags: ['EU Equities', 'European Markets', 'Investment', 'Market Analysis', 'Stocks'],
   },
+
+  {
+    slug: 'european-banks-in-a-higher-rate-regime',
+    title: 'European Banks in a Higher-Rate Regime: Risks, Repricing, and Opportunities',
+    excerpt:
+      'How structurally higher interest rates reshape profitability, capital, and valuations for European banks. A framework for separating structurally improved franchises from value traps in the sector.',
+    content: `# European Banks in a Higher-Rate Regime: Risks, Repricing, and Opportunities
+
+## Introduction
+
+After more than a decade of ultra‑low and negative interest rates, European banks are operating in a profoundly different environment. Policy rates have risen sharply, yield curves have shifted, and the economics of deposit gathering and lending have changed. For the first time in years, net interest margins are expanding instead of compressing.
+
+Yet higher rates do not automatically translate into higher and sustainable returns on equity. Asset‑quality risks, funding competition, regulatory expectations, and market skepticism remain powerful counterforces. The result is a sector where headline earnings improvements coexist with deeply discounted valuations and investor caution.
+
+This article offers a structured way to analyze European banks in a higher‑rate regime. Rather than treating the sector as a monolith, we focus on the drivers that differentiate winners from value traps: balance‑sheet mix, funding structure, asset quality, capital, and strategic positioning.
+
+## Net Interest Income: Beyond the First Derivative
+
+Net interest income (NII) is the primary beneficiary of higher policy rates. However, the magnitude and sustainability of NII improvements vary widely across banks.
+
+### Deposit Betas and Funding Mix
+
+The **deposit beta**—the percentage of rate hikes passed on to depositors—is a key variable. Banks with:
+
+- Large, granular retail deposit franchises.
+- Strong current account and savings balances.
+- Limited reliance on wholesale funding.
+
+are better positioned to translate rate hikes into margin expansion. Conversely, banks that depend heavily on corporate deposits or market funding may see deposit costs rise quickly, eroding incremental NII.
+
+Investors should analyze:
+
+- The share of non‑interest‑bearing and low‑beta deposits.
+- Competitive dynamics in each country’s deposit market.
+- Trends in deposit migration toward term deposits or money‑market funds.
+
+### Asset Repricing Speed
+
+On the asset side, the sensitivity of loan books to higher rates depends on:
+
+- Share of **variable‑rate loans** versus fixed‑rate mortgages and term loans.
+- Maturity profile and repricing frequency.
+- Regulatory or contractual caps on rate pass‑through.
+
+Banks in markets with predominantly variable‑rate mortgages (e.g., parts of Southern and Eastern Europe) may see faster NII uplift than those with long‑dated fixed‑rate books. However, this also increases borrower stress and potential credit risk.
+
+## Asset Quality: The Other Side of the Coin
+
+Higher rates can pressure borrowers, particularly in segments with high leverage or short interest‑rate fixation periods.
+
+Key areas to monitor include:
+
+- **SME and corporate exposure** in cyclical sectors.
+- **Household leverage** in markets with high mortgage debt relative to income.
+- **Commercial real estate** portfolios, especially offices in markets facing structural demand shifts.
+
+Investors should track early‑warning indicators:
+
+- Stage 2 loan migrations under IFRS 9.
+- Trends in non‑performing loans (NPLs) and coverage ratios.
+- Management commentary on payment behavior and restructuring activity.
+
+Banks that used the low‑rate era to clean up legacy NPLs and strengthen underwriting are better positioned than those that merely benefited from benign credit conditions.
+
+## Capital, Regulation, and Payout Capacity
+
+Capital strength and regulatory headroom determine how much of the higher‑rate windfall can be returned to shareholders via dividends and buybacks.
+
+### Capital Ratios and Buffers
+
+Important questions include:
+
+- How far is the bank’s CET1 ratio above its **regulatory minimum plus management buffer**?
+- How sensitive is capital to credit shocks, interest‑rate risk in the banking book (IRRBB), and model changes?
+
+Banks with robust buffers and low model risk can deploy excess capital more confidently. Those operating close to minimums may need to retain earnings, limiting equity rerating potential.
+
+### Regulatory Direction of Travel
+
+European regulators continue to refine capital and liquidity rules. Investors should monitor:
+
+- Implementation of **Basel 3 finalization** (“Basel IV”) and its impact on risk‑weighted assets.
+- Evolving expectations around counter‑cyclical buffers and systemic surcharges.
+- Supervisory focus areas (e.g., climate risk, cyber resilience, IRRBB).
+
+Banks with simpler business models and conservative risk profiles often benefit from more predictable regulatory trajectories.
+
+## Valuation: Dispersion and Opportunity
+
+Despite improved profitability, many European banks still trade at discounts to book value. This reflects skepticism about the durability of earnings, structural challenges, and memories of prior cycles.
+
+Investors can create a simple valuation framework by mapping banks along two axes:
+
+1. **Sustainable ROE versus cost of equity**.
+2. **Balance‑sheet and regulatory resilience**.
+
+Banks capable of delivering ROEs comfortably above their cost of equity, with strong capital and risk controls, should theoretically trade at or above book value over time. Persistent discounts may signal either mis‑pricing or unrecognized structural risks.
+
+## Differentiating Structural Winners from Value Traps
+
+Characteristics of potential **structural winners** include:
+
+- Diversified income with meaningful fee and commission streams.
+- Strong digital capabilities that lower cost‑to‑serve.
+- Conservative underwriting and high coverage ratios.
+- Clear capital return policies backed by regulator dialogue.
+
+By contrast, **value traps** often feature:
+
+- Repeated restructuring programs with unclear end‑state.
+- Concentrated exposures to legacy problem assets or challenged geographies.
+- Thin capital buffers and frequent capital‑raising history.
+
+In a higher‑rate regime, the gap between these two groups is likely to widen rather than narrow.
+
+## Portfolio Implications
+
+For diversified equity or financials portfolios, European banks can play several roles:
+
+- **Cyclical exposure** to rate and growth dynamics.
+- **Income generators** via dividends and buybacks, where capital permits.
+- **Relative‑value opportunities** between core and peripheral markets, or between universal and specialist banks.
+
+Given lingering uncertainties, many investors choose a **basket approach**, combining:
+
+- High‑quality national champions.
+- Select regional banks with strong franchises.
+- Limited exposure to more challenged names for optionality.
+
+## Conclusion
+
+The higher‑rate regime has opened a window for European banks to rebuild profitability and investor trust. But the sector remains differentiated: some institutions are converting the environment into sustainably higher returns and capital distributions, while others continue to grapple with structural challenges.
+
+By focusing on funding mix, asset‑quality resilience, capital strength, and regulatory trajectories, investors can move beyond simplistic “cheap on P/B” narratives and identify banks truly positioned to create value in a world where rates are no longer anchored at zero.`,
+    date: formatDate(220),
+    author: 'Elias Wolfenstein',
+    authorAvatar: getAuthorAvatar('Elias Wolfenstein'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# European Banks in a Higher-Rate Regime: Risks, Repricing, and Opportunities
+
+## Introduction
+
+After more than a decade of ultra‑low and negative interest rates, European banks are operating in a profoundly different environment. Policy rates have risen sharply, yield curves have shifted, and the economics of deposit gathering and lending have changed.`),
+    ),
+    imageUrl: getImage('expert', 220),
+    tags: ['European Banks', 'Interest Rates', 'Financials', 'Valuation', 'Risk'],
+  },
 ];

@@ -346,7 +346,171 @@ The robotics and automation market will continue growing and evolving. Investors
     imageUrl: getImage('technical', 9),
     tags: ['Robotics', 'Automation', 'Technology', 'Manufacturing', 'Investment'],
   },
-  
-  // Progress: 1/94 articles in this module
+
+  {
+    slug: 'ai-infrastructure-capex-strategy-for-long-term-investors',
+    title: 'AI Infrastructure Capex: Strategy for Long-Term Technology Investors',
+    excerpt:
+      'Strategic view on the capital expenditure cycle behind the AI infrastructure boom. How hyperscalers, chipmakers, and data center operators deploy capital, manage risk, and create durable value across AI investment waves.',
+    content: `# AI Infrastructure Capex: Strategy for Long-Term Technology Investors
+
+## Introduction
+
+The current wave of artificial intelligence adoption is being built on an unprecedented capital expenditure cycle. Hyperscale cloud providers, semiconductor leaders, and data center operators are committing tens of billions of dollars per year to build the computational backbone required to train and serve increasingly large AI models.
+
+For technology-focused investors, this capex cycle presents both extraordinary opportunity and meaningful risk. On one hand, sustained investment can support multi‑year revenue visibility for the companies providing AI hardware, infrastructure software, and data center capacity. On the other hand, history shows that aggressive build‑outs can overshoot demand, compress returns, and create periods of painful digestion.
+
+This article develops a practical framework for analyzing AI infrastructure capex through the lens of a long‑term equity investor. Rather than trying to guess short‑term quarterly demand for GPUs or servers, we focus on how capital flows through the stack, where economic moats are strongest, and how different players manage the trade‑off between growth and returns on invested capital (ROIC).
+
+## Mapping the AI Infrastructure Stack
+
+Before assessing capex behavior, it is useful to anchor on a simplified view of the stack:
+
+- **Layer 0 – Energy and real estate**: Power generation, grid connections, and the land on which large‑scale data centers sit.
+- **Layer 1 – Physical data centers**: Buildings, cooling systems, racks, and physical security.
+- **Layer 2 – Compute and networking**: GPUs, custom AI accelerators, CPUs, high‑speed interconnects, and networking switches.
+- **Layer 3 – Infrastructure software**: Virtualization, orchestration, observability, and workload scheduling that keep clusters utilized.
+- **Layer 4 – AI platforms and services**: Model training platforms, inference services, and higher‑level AI APIs.
+
+Capital intensity is highest in Layers 0–2. However, economic differentiation and pricing power can be strongest in Layers 2–4. Long‑term investors therefore need to evaluate not only “who spends the capex”, but also “who captures the value created by that capex”.
+
+## Hyperscalers: Balancing Growth and Utilization
+
+Hyperscale cloud providers sit at the center of the AI infrastructure capex cycle. They deploy capital across nearly every layer of the stack, from land and power to custom AI accelerators and high‑level AI services.
+
+### Investment Motives
+
+Hyperscalers have three core motives for accelerating capex in AI:
+
+1. **Defensive position in cloud** – Existing cloud customers increasingly view AI capabilities as table stakes. Failing to provide competitive AI infrastructure risks churn and slower new logo growth.
+2. **Offensive platform opportunity** – By building proprietary models and AI services, hyperscalers can increase wallet share with existing customers and attract new workloads that may not have moved to the cloud otherwise.
+3. **Ecosystem lock‑in** – Owning the AI toolchain (data ingestion, training, inference, monitoring) deepens integration with customers and strengthens switching costs.
+
+### Key Investor Questions
+
+When evaluating hyperscaler AI capex, long‑term investors should focus on three questions:
+
+1. **Utilization discipline** – Does management demonstrate a track record of matching capacity additions to demand, or are they prone to long periods of underutilized capacity?
+2. **Unit economics of AI services** – Are AI platform revenues growing in line with, faster than, or slower than capex? What evidence exists that AI services will carry higher margins than base compute?
+3. **Allocation between custom and merchant silicon** – To what degree is capex being directed toward in‑house accelerators versus merchant GPUs? Custom silicon can improve long‑term economics but requires high upfront investment and execution risk.
+
+Hyperscalers with strong internal forecasting, experience in previous capex cycles (e.g., video streaming, mobile), and clear disclosure on AI unit economics are better positioned to create durable value from AI infrastructure investment.
+
+## Semiconductor Leaders: Navigating Demand Cycles
+
+Semiconductor companies supplying AI accelerators and related components are immediate beneficiaries of the AI capex boom. However, they are also exposed to the classic cyclicality of semiconductor demand.
+
+### Structural Versus Cyclical Drivers
+
+Investors should separate:
+
+- **Structural demand**: Long‑term shift toward accelerated computing, larger models, and broader deployment of AI in enterprise workflows.
+- **Cyclical demand**: Inventory digestion, timing of new GPU generations, and short‑term over‑ordering by cloud providers and enterprises.
+
+While structural demand for AI compute appears robust for many years, the path will not be linear. Long‑term investors should be prepared for periods during which hyperscalers pause orders to digest prior deployments or wait for the next architecture.
+
+### Assessing Moats and Pricing Power
+
+For GPU and accelerator vendors, moats arise from:
+
+- Software ecosystems and developer tooling.
+- Deep relationships with hyperscalers and OEMs.
+- Architectural leadership and performance‑per‑watt advantages.
+
+Companies that combine hardware leadership with sticky software stacks are better positioned to sustain margins even as competition intensifies and customers pursue custom alternatives.
+
+## Data Center and REIT Investors: Underwriting Power and Tenancy
+
+Data center operators and REITs are another crucial link in the AI infrastructure capex chain. Their economics are driven by:
+
+- Long‑term lease structures.
+- Access to low‑cost, reliable power.
+- Ability to deliver high‑density, AI‑ready capacity.
+
+### Power as the New Scarcity
+
+In AI‑optimized data centers, **power rather than floor space** is often the binding constraint. Clusters of high‑power GPUs require significantly more electricity and advanced cooling per rack than traditional enterprise workloads.
+
+For investors, this shifts underwriting focus from “dollars per square meter” to “revenue and margin per megawatt”. Data center operators that control power‑rich campuses near major connectivity hubs can command premium economics.
+
+### Tenant Concentration and Contract Quality
+
+AI capex is currently concentrated in a handful of hyperscale tenants. While this can support high utilization, it also introduces counterparty concentration risk. Investors should examine:
+
+- Lease terms and escalation mechanisms.
+- Tenant diversification and credit quality.
+- Renewal history and stickiness of AI workloads.
+
+## A Framework for Long-Term AI Capex Analysis
+
+To evaluate AI infrastructure investments over a 5‑10‑year horizon, investors can use a simple, repeatable framework:
+
+1. **Capex‑to‑Revenue Trajectory**
+   - Is the company structurally moving to a lower or higher capex‑to‑sales ratio over time?
+   - How does AI investment change this trajectory?
+2. **Return on Incremental Invested Capital**
+   - For each marginal dollar of AI capex, what evidence exists that it generates attractive incremental ROIC?
+   - Are there clear monetization vectors (higher pricing, new services, increased utilization)?
+3. **Balance Sheet Resilience**
+   - Can the company fund AI investment through internal cash generation, or is it reliant on leverage and equity issuance?
+   - How sensitive is the investment plan to a temporary downturn in AI demand?
+4. **Scenario Analysis**
+   - What happens if AI demand grows faster than expected?
+   - What if demand temporarily stalls due to macro, regulation, or technology transitions?
+
+Companies that can sustain high incremental ROIC on AI capex across multiple scenarios are better positioned to compound value.
+
+## Practical Portfolio Implications
+
+From a portfolio construction perspective, AI infrastructure capex suggests several practical guidelines:
+
+- **Diversify across the stack**: Rather than concentrating solely in GPU vendors or a single hyperscaler, consider a basket spanning semis, cloud platforms, and data center operators with complementary risk/return profiles.
+- **Favor balance sheet strength**: In capital‑intensive cycles, companies with strong balance sheets and free‑cash‑flow generation can continue investing through downturns, reinforcing competitive advantages.
+- **Be patient with timing**: AI capex cycles will exhibit periods of exuberance and digestion. Long‑term investors should be prepared to add exposure when sentiment is weak but structural drivers remain intact.
+- **Monitor regulatory and geopolitical factors**: Export controls, national security concerns, and data‑sovereignty rules can redirect or delay AI infrastructure spending across regions.
+
+## Conclusion
+
+The AI infrastructure boom is reshaping the technology landscape and launching one of the most significant capex cycles in recent history. For long‑term investors, the goal is not to forecast every quarterly order for GPUs or servers, but to understand **how capital flows through the stack, where moats are deepest, and which companies can convert sustained investment into durable shareholder value**.
+
+By focusing on utilization discipline at hyperscalers, competitive moats in semiconductors, power‑constrained economics in data centers, and robust balance sheets across the ecosystem, investors can build AI‑exposed portfolios that participate in growth while respecting risk.
+
+AI infrastructure capex will continue to evolve as models, workloads, and regulations change. A disciplined, framework‑driven approach allows investors to navigate this complexity and stay positioned for the next decade of AI‑driven technology transformation.`,
+    date: formatDate(10),
+    author: 'Christina Summerbell',
+    authorAvatar: getAuthorAvatar('Christina Summerbell'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# AI Infrastructure Capex: Strategy for Long-Term Technology Investors
+
+## Introduction
+
+The current wave of artificial intelligence adoption is being built on an unprecedented capital expenditure cycle. Hyperscale cloud providers, semiconductor leaders, and data center operators are committing tens of billions of dollars per year to build the computational backbone required to train and serve increasingly large AI models.
+
+For technology-focused investors, this capex cycle presents both extraordinary opportunity and meaningful risk. On one hand, sustained investment can support multi‑year revenue visibility for the companies providing AI hardware, infrastructure software, and data center capacity. On the other hand, history shows that aggressive build‑outs can overshoot demand, compress returns, and create periods of painful digestion.
+
+This article develops a practical framework for analyzing AI infrastructure capex through the lens of a long‑term equity investor. Rather than trying to guess short‑term quarterly demand for GPUs or servers, we focus on how capital flows through the stack, where economic moats are strongest, and how different players manage the trade‑off between growth and returns on invested capital (ROIC).
+
+## Mapping the AI Infrastructure Stack
+
+Before assessing capex behavior, it is useful to anchor on a simplified view of the stack:
+
+- **Layer 0 – Energy and real estate**: Power generation, grid connections, and the land on which large‑scale data centers sit.
+- **Layer 1 – Physical data centers**: Buildings, cooling systems, racks, and physical security.
+- **Layer 2 – Compute and networking**: GPUs, custom AI accelerators, CPUs, high‑speed interconnects, and networking switches.
+- **Layer 3 – Infrastructure software**: Virtualization, orchestration, observability, and workload scheduling that keep clusters utilized.
+- **Layer 4 – AI platforms and services**: Model training platforms, inference services, and higher‑level AI APIs.
+
+Capital intensity is highest in Layers 0–2. However, economic differentiation and pricing power can be strongest in Layers 2–4. Long‑term investors therefore need to evaluate not only “who spends the capex”, but also “who captures the value created by that capex”.
+
+## Hyperscalers: Balancing Growth and Utilization
+
+Hyperscale cloud providers sit at the center of the AI infrastructure capex cycle. They deploy capital across nearly every layer of the stack, from land and power to custom AI accelerators and high‑level AI services.`),
+    ),
+    imageUrl: getImage('expert', 10),
+    tags: ['AI Infrastructure', 'Capex', 'Cloud', 'Semiconductors', 'Long-Term Investing'],
+  },
+
+  // Progress: 2/94 articles in this module
   // Note: Existing articles are temporarily in analytics.ts and will be migrated here
 ];

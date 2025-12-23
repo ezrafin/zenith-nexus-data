@@ -302,4 +302,144 @@ The yield curve will continue evolving with economic conditions. Investors who u
     imageUrl: getImage('technical', 158),
     tags: ['Yield Curve', 'Fixed Income', 'Bonds', 'Investment Strategy', 'Interest Rates'],
   },
+
+  {
+    slug: 'duration-strategy-in-volatile-rate-environments',
+    title: 'Duration Strategy in Volatile Rate Environments: Tools for Long-Horizon Bond Investors',
+    excerpt:
+      'How to think about duration, convexity, and scenario analysis when rates are volatile and central-bank guidance is uncertain. A pragmatic playbook for positioning core bond portfolios across the cycle.',
+    content: `# Duration Strategy in Volatile Rate Environments: Tools for Long-Horizon Bond Investors
+
+## Introduction
+
+Duration is one of the most powerful—and misunderstood—concepts in fixed income investing. In quiet markets, it can be treated as a simple statistic: a number that approximates how much a bond price will change for a 1% move in yields. In volatile rate environments, however, duration becomes a more dynamic tool: a lever investors can pull to express macro views, manage risk, and stabilize portfolio returns.
+
+Over the past decade, bond investors have navigated an unusually wide range of environments: zero rates and quantitative easing, sharp hiking cycles, inflation surprises, and episodes of flight‑to‑quality. Each regime has rewarded different duration stances. The challenge for long‑horizon investors is not to guess every rate move correctly, but to build portfolios that can survive and compound across multiple regimes.
+
+This article develops a practical framework for duration strategy when central‑bank guidance is uncertain and volatility is elevated. We focus on tools that translate macro views into portfolio positioning while respecting risk limits and client objectives.
+
+## Duration, Convexity, and the Limits of Linearity
+
+Duration measures the price sensitivity of a bond (or portfolio) to small changes in interest rates. Modified duration approximates the percentage price change for a 100‑basis‑point move in yield. However, this linear approximation breaks down for larger moves.
+
+### Why Convexity Matters
+
+Convexity captures the curvature of the price‑yield relationship. Portfolios with higher positive convexity:
+
+- Lose less than expected when yields rise sharply.
+- Gain more than expected when yields fall sharply.
+
+In volatile environments, convexity can be as important as duration. Two portfolios with the same duration but different convexity will behave very differently when rates move by 150–200 basis points.
+
+High‑convexity assets—such as long‑dated government bonds or high‑quality mortgage securities—can provide valuable shock absorption, but at the cost of greater mark‑to‑market volatility. The art of duration strategy is balancing these trade‑offs against investor risk tolerance.
+
+## Building Scenario-Driven Duration Views
+
+Rather than treating duration as a static target (e.g., “benchmark plus or minus one year”), long‑horizon investors benefit from a **scenario‑driven** approach. The process involves:
+
+1. **Defining macro scenarios** – For example: soft landing, sticky inflation with higher‑for‑longer rates, or recession with aggressive cuts.
+2. **Assigning probabilities** – Not with false precision, but with explicit qualitative views.
+3. **Estimating yield‑curve outcomes** – Where could 2‑, 5‑, and 10‑year yields trade in each scenario?
+4. **Mapping portfolio outcomes** – How would current and alternative portfolios perform across scenarios?
+
+The goal is not to forecast the exact path of rates, but to construct portfolios that:
+
+- Avoid catastrophic outcomes in adverse scenarios.
+- Retain upside if central scenarios materialize.
+
+This framework also helps anchor conversations with clients and committees, translating abstract macro debates into concrete risk/return trade‑offs.
+
+## Core Duration Positioning: Underweight, Neutral, or Overweight?
+
+In volatile environments, duration views often crystallize into three broad stances:
+
+1. **Underweight duration** – Expectation that yields will move higher or remain elevated; focus on limiting mark‑to‑market losses.
+2. **Neutral duration** – Recognition that the distribution of outcomes is wide, making bold active bets unattractive.
+3. **Overweight duration** – Expectation that growth will slow and central banks will eventually cut rates, making longer duration attractive.
+
+### When Underweight Duration Makes Sense
+
+Underweighting duration can be appropriate when:
+
+- Inflation surprises are consistently to the upside.
+- Central banks are behind the curve and signaling further hikes.
+- Term premia are low relative to historical levels.
+
+However, underweighting duration late in a hiking cycle can be dangerous. Historically, some of the best returns for long bonds have occurred **after** the final few hikes, when the market begins to price eventual cuts.
+
+### When Overweight Duration Is Attractive
+
+Overweighting duration becomes more compelling when:
+
+- Real policy rates are deeply positive and growth indicators are slowing.
+- The yield curve is steepening from inverted levels as markets price future cuts.
+- Valuations on long‑dated government bonds already embed a meaningful risk premium.
+
+In these environments, adding duration can provide both diversification and positive carry, particularly if inflation expectations are anchored.
+
+## Implementation Tools: Barbell, Bullet, and Curve Trades
+
+Once a duration stance is chosen, investors must decide **where on the curve** to express it. Three classic structures are:
+
+- **Bullet portfolios** – Concentrated exposure at a single maturity bucket (e.g., all 5‑year bonds).
+- **Barbell portfolios** – Mix of short‑ and long‑term bonds with little exposure in the middle.
+- **Laddered portfolios** – Even distribution of maturities across the curve.
+
+### Barbell Versus Bullet in Volatile Markets
+
+Barbell structures typically offer:
+
+- Higher convexity for the same average duration.
+- More flexibility to rebalance as the curve moves.
+
+However, they can underperform in environments where the belly of the curve (e.g., 5–7‑year maturities) delivers the best roll‑down and carry.
+
+Bullet structures provide:
+
+- More concentrated exposure to a specific part of the curve.
+- Potentially higher carry if that segment is richly compensated.
+
+In uncertain environments, many investors prefer **mild barbell tilts** around a core laddered or benchmark‑like structure, rather than extreme concentration.
+
+## Integrating Credit and Duration
+
+Duration decisions cannot be fully separated from credit risk. In risk‑off scenarios, long‑duration government bonds may rally while credit spreads widen, partially offsetting total‑return benefits.
+
+Key considerations include:
+
+- Balancing **spread duration** (sensitivity to credit spreads) with **interest‑rate duration**.
+- Using high‑quality, long‑duration government bonds as hedges against risk‑asset drawdowns.
+- Avoiding excessive concentration in long‑duration high‑yield or illiquid credit during late‑cycle phases.
+
+An effective approach is to view government bonds as “insurance assets” whose duration can offset equity and credit risk elsewhere in the portfolio.
+
+## Risk Management and Governance
+
+In volatile rate environments, governance and risk limits play a critical role:
+
+- Establish **duration bands** relative to benchmarks (e.g., ±1.5 years) to prevent extreme positioning.
+-,Use **stress tests** to understand P&L impact of large parallel shifts and curve twists.
+-,Clarify decision‑making cadence: how often will duration views be revisited, and what catalysts trigger changes?
+
+Clear governance reduces the temptation to make frequent, reactive changes that add turnover without improving outcomes.
+
+## Conclusion
+
+Duration is not a static number to be matched mechanically; it is a strategic lever that can be used thoughtfully to navigate uncertain interest‑rate environments. By combining scenario analysis, yield‑curve positioning tools, and disciplined risk management, long‑horizon bond investors can build portfolios that are resilient to volatility while still participating in the powerful diversification benefits that high‑quality duration provides.
+
+Volatile rate regimes will likely persist as central banks balance inflation risks, fiscal dynamics, and structural shifts in growth. A robust framework for duration strategy is therefore not a tactical luxury—it is a core component of modern fixed income investing.`,
+    date: formatDate(159),
+    author: 'Lysander Truog',
+    authorAvatar: getAuthorAvatar('Lysander Truog'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Duration Strategy in Volatile Rate Environments: Tools for Long-Horizon Bond Investors
+
+## Introduction
+
+Duration is one of the most powerful—and misunderstood—concepts in fixed income investing. In quiet markets, it can be treated as a simple statistic: a number that approximates how much a bond price will change for a 1% move in yields. In volatile rate environments, however, duration becomes a more dynamic tool: a lever investors can pull to express macro views, manage risk, and stabilize portfolio returns.`),
+    ),
+    imageUrl: getImage('expert', 159),
+    tags: ['Duration', 'Fixed Income', 'Risk Management', 'Interest Rates', 'Portfolio Strategy'],
+  },
 ];

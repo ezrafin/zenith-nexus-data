@@ -298,4 +298,125 @@ ESG integration will continue evolving with data, methodologies, and stakeholder
     imageUrl: getImage('longterm', 324),
     tags: ['ESG', 'Sustainable Finance', 'Investment', 'Sustainability', 'Governance'],
   },
+
+  {
+    slug: 'transition-finance-and-the-path-to-net-zero',
+    title: 'Transition Finance: Funding the Hard-to-Abate Path to Net Zero',
+    excerpt:
+      'Why decarbonizing heavy industry requires a different toolkit than pure green finance, and how investors can evaluate transition plans, instruments, and issuers in carbon-intensive sectors.',
+    content: `# Transition Finance: Funding the Hard-to-Abate Path to Net Zero
+
+## Introduction
+
+Green finance has traditionally focused on pure‑play climate solutions: wind farms, solar parks, green buildings, and low‑carbon transport. These assets are essential, but they represent only part of the climate challenge. The harder question is how to **decarbonize heavy industry**—steel, cement, chemicals, shipping, aviation—while maintaining economic resilience and social stability.
+
+This is where **transition finance** enters the picture. Rather than financing only assets that are already green, transition finance aims to support credible pathways for carbon‑intensive companies to reduce emissions in line with science‑based trajectories.
+
+For investors, transition finance is both an opportunity and a minefield. Done well, it mobilizes capital where it is most needed and enables diversified portfolios to support real‑economy decarbonization. Done poorly, it risks greenwashing and misallocated capital. This article provides a practical framework for evaluating transition finance instruments and issuers.
+
+## From Green to Transition: Expanding the Toolkit
+
+### The Limits of Pure Green Labels
+
+Traditional green bonds and sustainability loans typically:
+
+- Finance clearly defined green projects.
+- Exclude high‑emitting activities from eligibility.
+- Focus on use‑of‑proceeds rather than issuer‑level trajectories.
+
+This approach works well for utilities building renewables or property companies upgrading building efficiency. It is less suited to companies whose **core business is still emissions‑intensive** but must change over time.
+
+### What Makes Finance “Transition”?
+
+Transition finance shifts the focus from individual projects to **company‑wide transformation**. Characteristics include:
+
+- Financing of **emissions‑reducing investments** in high‑emitting sectors (e.g., low‑carbon steelmaking, carbon‑capture retrofits, fleet modernization).
+- Linkage to **issuer‑level transition plans** with clear interim targets.
+- Governance structures and covenants that create accountability over time.
+
+The key test is whether the financing helps move the issuer along a **credible, Paris‑aligned pathway**, not whether every asset involved is already low‑carbon.
+
+## Evaluating Issuer Transition Plans
+
+Investors considering transition finance exposures should evaluate:
+
+1. **Ambition** – Are the issuer’s targets aligned with 1.5–2°C pathways and sectoral benchmarks?
+2. **Credibility** – Are there detailed capex plans, technology roadmaps, and clear timelines?
+3. **Governance** – Is executive compensation linked to climate milestones? How is oversight structured?
+4. **Transparency** – Are emissions reported comprehensively across scopes, with third‑party verification?
+
+Sector‑specific guidance from initiatives such as the **Transition Pathway Initiative (TPI)** and **sectoral decarbonization pathways** can help investors benchmark ambition and feasibility.
+
+## Instruments: From Sustainability-Linked Bonds to Transition Loans
+
+### Sustainability-Linked Bonds (SLBs)
+
+SLBs tie financing costs to the achievement of predefined sustainability performance targets (SPTs)—for example, a step‑up in coupon if emissions targets are missed.
+
+Key diligence questions:
+
+- Are SPTs **material and ambitious**, or easily achievable?
+- Is the penalty (coupon step‑up) **financially meaningful**?
+- How robust is the verification and disclosure around target performance?
+
+Weakly structured SLBs can entrench greenwashing by offering optics without real accountability. Strong SLBs, by contrast, can align issuer incentives with investor expectations.
+
+### Transition Bonds and Loans
+
+Transition bonds and loans earmark proceeds for specific transition projects in high‑emitting sectors. For these instruments, investors should:
+
+- Scrutinize the **eligibility criteria** for financed activities.
+- Assess whether projects are consistent with **science‑based sector pathways**.
+- Evaluate the **share of total capex** represented by transition investments—a small token project may not be sufficient.
+
+Banks arranging transition loans also need robust internal taxonomies to avoid reputational and regulatory risk.
+
+## Managing Risk: Avoiding Greenwashing While Embracing Complexity
+
+Transition finance inherently lives in the “grey zone” between today’s carbon‑intensive reality and tomorrow’s decarbonized economy. Investors must balance:
+
+- The **need for impact** in hard‑to‑abate sectors.
+- The **risk of locking in** high‑carbon assets or enabling incrementalism.
+
+Practical safeguards include:
+
+- Requiring **time‑bound, science‑aligned targets** as a condition for investment.
+- Preferring issuers with **independent climate‑transition assessments**.
+- Integrating **scenario analysis** to test resilience under tightening climate policy.
+
+## Portfolio Integration and Engagement
+
+Transition finance should not be a marginal sleeve; it can be integrated into mainstream credit and equity portfolios.
+
+Steps for investors:
+
+1. Define a **house view** on eligible transition activities by sector.
+2. Map current portfolios to identify **high‑emitting holdings** with and without credible plans.
+3. Prioritize **engagement** with material issuers, focusing on:
+   - Transition‑plan quality.
+   - Capital‑allocation alignment.
+   - Incentive structures.
+4. Use transition instruments **selectively** to support companies demonstrating real progress.
+
+Transparency with clients and beneficiaries about how transition finance fits into ESG and financial objectives is essential.
+
+## Conclusion
+
+Reaching net zero will not be achieved by financing only technologies that are already green. It requires transforming the industrial backbone of the global economy. Transition finance is a bridge between these realities—if structured with rigor and discipline.
+
+By focusing on issuer‑level transition plans, robust instrument design, and active engagement, investors can deploy capital to hard‑to‑abate sectors in ways that are both financially and environmentally sound. The goal is not perfection at the starting point, but credible, measurable progress along a well‑defined path to a lower‑carbon future.`,
+    date: formatDate(325),
+    author: 'Isabelle Dubois',
+    authorAvatar: getAuthorAvatar('Isabelle Dubois'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Transition Finance: Funding the Hard-to-Abate Path to Net Zero
+
+## Introduction
+
+Green finance has traditionally focused on pure‑play climate solutions: wind farms, solar parks, green buildings, and low‑carbon transport.`),
+    ),
+    imageUrl: getImage('expert', 325),
+    tags: ['Transition Finance', 'Net Zero', 'ESG', 'Fixed Income', 'Sustainable Investing'],
+  },
 ];

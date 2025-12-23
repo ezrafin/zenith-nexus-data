@@ -290,4 +290,158 @@ Eastern European markets will continue evolving with economic conditions, EU int
     imageUrl: getImage('markets', 259),
     tags: ['Eastern Europe', 'Emerging Markets', 'Macro Economics', 'Investment', 'Market Analysis'],
   },
+
+  {
+    slug: 'energy-exports-and-terms-of-trade-shocks-in-cee',
+    title: 'Energy Exports and Terms-of-Trade Shocks in Central & Eastern Europe',
+    excerpt:
+      'How shifts in energy prices and trade flows reshape growth, inflation, and currency dynamics across Central & Eastern Europe—and what that means for equity and fixed income investors.',
+    content: `# Energy Exports and Terms-of-Trade Shocks in Central & Eastern Europe
+
+## Introduction
+
+Central and Eastern Europe (CEE) sits at the intersection of energy markets, geopolitical tensions, and European Union integration. For many countries in the region, energy imports and exports dominate the external account and heavily influence growth, inflation, and currency dynamics. The past few years have delivered a series of powerful terms‑of‑trade shocks—first from pandemic disruptions, then from the surge in commodity prices following Russia’s invasion of Ukraine, and more recently from the adjustment to new energy routes.
+
+For investors, these shocks are not abstract macro headlines. They feed directly into company earnings, sovereign credit metrics, banking‑sector asset quality, and local‑currency bond performance. Understanding how energy price swings and trade re‑routing affect each CEE economy is essential for building robust emerging‑Europe portfolios.
+
+This article provides a pragmatic framework for analyzing energy‑driven terms‑of‑trade shocks in CEE and translating them into cross‑asset views.
+
+## Mapping Energy Exposure Across the Region
+
+CEE is not homogeneous. Countries differ markedly in:
+
+- Their dependence on imported gas and oil.
+- The share of energy‑intensive industry in GDP.
+- Access to alternative supply routes and LNG capacity.
+- The pace of renewable‑energy deployment.
+
+Broadly, we can distinguish three groups:
+
+1. **Energy‑import‑dependent manufacturing hubs** – e.g., Poland, Czech Republic, Slovakia, Hungary.
+2. **Mixed exporters with some domestic production** – e.g., Romania with gas and oil output, plus hydro and nuclear capacity.
+3. **Transit and storage hubs** – countries that play key roles in moving energy to the rest of Europe.
+
+Each group reacts differently to terms‑of‑trade shocks. Investors should build country‑level scorecards capturing:
+
+- Net energy import/export position.
+- Industrial structure and energy intensity.
+- Fiscal capacity to cushion price shocks.
+- EU support mechanisms and cohesion‑fund inflows.
+
+## Growth and Inflation Channels
+
+### Growth Effects
+
+For energy‑import‑dependent economies, higher global energy prices act like a tax on domestic demand:
+
+- Corporate margins are squeezed, especially in heavy industry and chemicals.
+- Household real incomes fall as utility and fuel bills rise.
+- Investment decisions are delayed amid uncertainty about future energy costs.
+
+Conversely, when prices decline or supply risks ease, these headwinds can rapidly turn into tailwinds, supporting rebounds in manufacturing output and consumer spending.
+
+### Inflation and Monetary Policy
+
+Energy shocks pass through to inflation via:
+
+- Direct effects on fuel and utility prices.
+- Indirect effects via production and transport costs.
+
+Central banks in the region—often more orthodox and inflation‑averse than some Western peers—have historically reacted with swift rate hikes to avoid de‑anchoring expectations. This creates:
+
+- Periods of **elevated nominal yields** and attractive real rates.
+- Tighter financial conditions that weigh on growth.
+
+Investors should track how quickly headline inflation converges back toward targets once energy shocks fade, as this often sets the stage for cutting cycles and local‑currency bond rallies.
+
+## Currency Dynamics and External Balances
+
+Terms‑of‑trade shocks manifest clearly in:
+
+- **Current‑account balances** – widening deficits for importers during price spikes.
+- **Exchange rates** – pressure on currencies of energy‑dependent economies.
+
+Central banks may respond with:
+
+- Higher policy rates to support currencies.
+- FX interventions drawn from reserves.
+
+For investors, key questions include:
+
+- Does the country have sufficient **FX reserves** to manage volatility?
+- Are external imbalances financed by stable FDI and EU funds, or by more fragile portfolio flows?
+
+Countries with credible policy frameworks, ample reserves, and EU support tend to weather energy‑driven currency shocks better than those with weaker fundamentals.
+
+## Sector-Level Implications
+
+### Utilities and Energy Infrastructure
+
+Policy and regulation largely determine how energy‑price shocks are shared between governments, utilities, and households. Investors need to understand:
+
+- Price‑cap regimes and compensation mechanisms.
+- Investment frameworks for renewables, grid upgrades, and storage.
+- Ownership structures (state versus private).
+
+Well‑regulated utilities with clear frameworks for cost recovery can be long‑term beneficiaries of the transition away from imported fossil fuels.
+
+### Industrials and Exporters
+
+Energy‑intensive industries—chemicals, metals, heavy manufacturing—are particularly sensitive to energy costs. However, global supply‑chain realignment can also present opportunities for CEE exporters as Western Europe diversifies suppliers.
+
+Investors should differentiate between:
+
+- Companies with **high energy intensity and limited pricing power**.
+- Firms that have invested in efficiency, on‑site generation, or long‑term supply contracts.
+
+### Financials
+
+For banks, terms‑of‑trade shocks influence:
+
+- Borrower creditworthiness in energy‑sensitive sectors.
+- Household debt‑servicing capacity amid higher utility bills and interest rates.
+- Demand for credit as investment plans adjust.
+
+Banks with diversified loan books, conservative underwriting, and strong capital buffers are better placed to navigate these cycles.
+
+## Investment Framework: From Macro Shocks to Portfolio Views
+
+Investors can structure their analysis in four steps:
+
+1. **Country Diagnostics**
+   - Map each country’s net energy position, industrial structure, and policy capacity.
+   - Assess how recent price shocks have affected current accounts and fiscal positions.
+2. **Macro Scenarios**
+   - Build base, upside, and downside paths for global energy prices and European demand.
+   - Overlay likely policy responses (monetary and fiscal) in each country.
+3. **Cross‑Asset Implications**
+   - For each scenario, estimate impacts on:
+     - Local‑currency bonds (yields, term premia).
+     - FX (relative to peers and the euro).
+     - Equities (by sector and factor exposure).
+4. **Security Selection**
+   - Within favored countries and sectors, focus on companies with:
+     - Strong balance sheets and access to diversified energy sources.
+     - Pricing power to pass on higher costs.
+     - Clear capex plans aligned with the energy transition.
+
+## Conclusion
+
+Energy‑driven terms‑of‑trade shocks are a defining feature of the CEE investment landscape. They can rapidly change growth trajectories, inflation paths, and policy reactions. Rather than treating these shocks as unpredictable exogenous risks, investors can systematically analyze how each economy and sector is exposed, and which assets are best positioned to benefit when conditions normalize.
+
+For long‑horizon investors, the transition away from concentrated fossil‑fuel dependence and toward more diversified energy systems creates both near‑term volatility and long‑term opportunity. A disciplined, country‑by‑country approach—grounded in external‑balance analysis, policy credibility, and sector fundamentals—offers the best path to navigating this evolving landscape.`,
+    date: formatDate(260),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Energy Exports and Terms-of-Trade Shocks in Central & Eastern Europe
+
+## Introduction
+
+Central and Eastern Europe (CEE) sits at the intersection of energy markets, geopolitical tensions, and European Union integration.`),
+    ),
+    imageUrl: getImage('expert', 260),
+    tags: ['Energy', 'CEE', 'Macro', 'Emerging Markets', 'FX'],
+  },
 ];

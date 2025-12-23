@@ -334,4 +334,153 @@ The Bitcoin market will continue evolving. Cycles will continue, creating opport
     imageUrl: getImage('expert', 94),
     tags: ['Bitcoin', 'Cryptocurrency', 'Cycles', 'Investment', 'Blockchain'],
   },
+
+  {
+    slug: 'stablecoins-liquidity-and-on-chain-risk',
+    title: 'Stablecoins, Liquidity, and On‑Chain Risk: A Practitioner’s Guide',
+    excerpt:
+      'How stablecoins power crypto market liquidity, what really backs them, and how investors can analyze reserves, counterparty risk, and stress scenarios across different stablecoin models.',
+    content: `# Stablecoins, Liquidity, and On‑Chain Risk: A Practitioner’s Guide
+
+## Introduction
+
+Stablecoins sit at the center of modern crypto market structure. They are the primary quote asset on many exchanges, the base collateral in DeFi money markets, and the bridge between traditional banking rails and on‑chain liquidity. Yet despite their seemingly simple promise—“one token ≈ one dollar”—the mechanics, risks, and incentives behind different stablecoin designs are anything but simple.
+
+For investors and risk managers, understanding how stablecoins really work is no longer optional. Whether you hold them directly, interact with DeFi protocols, or own tokens of exchanges and issuers, your exposure to stablecoin risk is likely larger than it appears.
+
+This article provides a practitioner’s framework for analyzing stablecoins. Rather than debating ideology, we focus on balance sheets, redemption mechanics, liquidity behavior in stress, and practical risk‑management tools.
+
+## Stablecoin Taxonomy: What Actually Backs the Peg
+
+Stablecoins can be grouped into three broad categories based on how they maintain their value:
+
+1. **Fiat‑backed custodial stablecoins**
+   - Fully (or mostly) backed by fiat reserves and high‑quality liquid assets.
+   - Issued by centralized entities with banking and capital‑markets relationships.
+   - Examples: USDC, USDT, various regulated tokenized deposits.
+
+2. **Crypto‑collateralized stablecoins**
+   - Over‑collateralized with on‑chain crypto assets locked in smart contracts.
+   - Collateral is typically more volatile than the stablecoin itself.
+   - Examples: DAI (in its original design), LUSD, other CDP‑style systems.
+
+3. **Algorithmic or partially collateralized stablecoins**
+   - Rely on reflexive market incentives, seigniorage, or partially backed reserve models.
+   - Tend to offer higher yields but carry structural fragility.
+   - Examples: historic experiments such as UST, basis‑style designs.
+
+In practice, the market has moved away from fully algorithmic pegs toward either custodial fiat‑backed or conservative crypto‑collateralized designs. Long‑term investors should treat purely algorithmic stables as speculative experiments rather than core liquidity instruments.
+
+## Balance Sheet Analysis for Fiat‑Backed Stablecoins
+
+For fiat‑backed stablecoins, the key question is straightforward: **“If everyone redeemed at once, could the issuer honor those redemptions at par, and how quickly?”**
+
+### Reserve Composition
+
+Reserve quality is the first line of defense. Investors should look for:
+
+- High allocation to **short‑dated US Treasuries** and **cash at regulated banks or custodians**.
+- Limited exposure to longer‑dated bonds, credit risk, or repo structures that could seize in stress.
+-,Where present, **commercial paper or corporate exposure** should be scrutinized for issuer quality and transparency.
+
+The shorter the duration and the higher the credit quality, the more robust the stablecoin in a shock. A one‑to‑one backing with T‑bills behaves very differently from a reserve pool that includes risk assets or long‑duration bonds.
+
+### Liquidity and Settlement Plumbing
+
+Even when reserves are high‑quality, liquidity and operational frictions matter. Key questions include:
+
+- How quickly can reserves be liquidated in a large redemption event?
+- Which banks and custodians are involved, and what are their risk profiles?
+- Are there same‑day or T+1 wires, or are redemptions operationally constrained?
+
+Events in 2023 showed that banking‑system disruptions—rather than on‑chain issues—can temporarily distort stablecoin pegs. Issuers that diversify banking relationships and hold a portion of reserves directly in Treasuries are better positioned.
+
+### Governance, Regulation, and Audit Practices
+
+Governance quality often determines how a crisis is handled. Investors should evaluate:
+
+- Frequency and quality of **reserve attestations or audits**.
+- Clarity of **redemption rights** in legal terms, not just marketing.
+- Jurisdiction and regulatory perimeter: Are tokens treated as e‑money, securities, or something else?
+
+Stablecoins moving toward regulated frameworks (e.g., e‑money or MiCA‑style regimes) may trade at a premium, reflecting lower perceived legal and reserve risk.
+
+## Crypto‑Collateralized Stablecoins: On‑Chain Transparency, Off‑Chain Complexity
+
+Crypto‑collateralized stablecoins have the advantage of transparent on‑chain collateral, but they introduce market‑risk and liquidation dynamics.
+
+### Over‑Collateralization and Liquidation Thresholds
+
+In CDP‑style systems, users lock volatile collateral (e.g., ETH) and mint a stablecoin against it. Risk is controlled via:
+
+- **Minimum collateralization ratios** (e.g., 150% or higher).
+- **Liquidation penalties** that incentivize maintaining healthy positions.
+- Automated auctions or Dutch mechanisms that sell collateral in stress.
+
+When evaluating these systems, key factors include:
+
+- Historical performance during sharp drawdowns.
+- Concentration of collateral types (e.g., heavy dependence on a single asset).
+- Depth of on‑chain liquidity for collateral to absorb forced selling.
+
+### Collateral Composition Drift
+
+Over time, some projects have drifted from “pure crypto collateral” to include fiat‑backed stablecoins as collateral. This can improve stability but re‑introduces custodial risk.
+
+Investors should map what ultimately backs the stablecoin:
+
+- Is it really diversified crypto collateral?
+- Or is a large portion effectively a wrapper around another centralized stablecoin?
+
+## Stress Scenarios: How Stablecoins Behave Under Pressure
+
+The true test of any stablecoin is not during calm markets, but during stress. Three recurring stress scenarios are particularly relevant:
+
+1. **Exchange or protocol failure** – Where a major venue or DeFi protocol is hacked, insolvent, or shut down.
+2. **Banking system disruption** – Where an issuer’s banks are impaired, frozen, or subject to regulatory action.
+3. **Regulatory shock** – Where new rules constrain issuance, redemptions, or usage in a major jurisdiction.
+
+Analyzing past episodes—depegs, bank failures, regulatory headlines—helps investors understand:
+
+- How quickly secondary‑market prices recovered.
+- Whether redemptions continued at par for institutional customers.
+- How transparent and proactive issuer communication was.
+
+Stablecoins that have navigated multiple stress events while maintaining redemptions at par build credibility over time.
+
+## Portfolio Construction and Risk Management
+
+For professional investors, stablecoins are tools rather than end goals. They serve as:
+
+- Base collateral in trading and DeFi strategies.
+- “Dry powder” for rapid deployment into risk assets.
+- Operational working capital for exchanges and market‑makers.
+
+Practical risk‑management guidelines include:
+
+- Diversifying across **at least two high‑quality fiat‑backed stablecoins** with independent banking relationships.
+- Limiting exposure to experimental algorithmic designs to **speculative capital only**.
+- Actively monitoring reserve disclosures, regulatory developments, and on‑chain liquidity.
+
+## Conclusion
+
+Stablecoins have evolved from a niche bridging instrument to critical financial plumbing for the entire digital‑asset ecosystem. Their stability, however, is not guaranteed by code alone. It depends on reserve quality, governance, banking partners, and the behavior of users under stress.
+
+By analyzing balance sheets, understanding redemption mechanics, and modeling realistic stress scenarios, investors can treat stablecoins as managed credit and liquidity exposures rather than magic internet dollars. This perspective enables more informed portfolio construction and better risk‑adjusted use of on‑chain liquidity in a rapidly evolving market.`,
+    date: formatDate(95),
+    author: 'Assunta Novak',
+    authorAvatar: getAuthorAvatar('Assunta Novak'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Stablecoins, Liquidity, and On‑Chain Risk: A Practitioner’s Guide
+
+## Introduction
+
+Stablecoins sit at the center of modern crypto market structure. They are the primary quote asset on many exchanges, the base collateral in DeFi money markets, and the bridge between traditional banking rails and on‑chain liquidity. Yet despite their seemingly simple promise—“one token ≈ one dollar”—the mechanics, risks, and incentives behind different stablecoin designs are anything but simple.
+
+For investors and risk managers, understanding how stablecoins really work is no longer optional. Whether you hold them directly, interact with DeFi protocols, or own tokens of exchanges and issuers, your exposure to stablecoin risk is likely larger than it appears.`),
+    ),
+    imageUrl: getImage('markets', 95),
+    tags: ['Stablecoins', 'Liquidity', 'Crypto Market Structure', 'Risk Management', 'Blockchain'],
+  },
 ];
