@@ -26,6 +26,357 @@ const countWords = (text: string): number => {
 // Luca Montefiore - Italian & Mediterranean Markets (25 articles)
 export const lucaArticles: AnalyticsArticle[] = [
   {
+    slug: 'ai-and-digital-transformation-in-italian-smbs-and-services',
+    title: 'AI and Digital Transformation in Italian SMBs and Services',
+    excerpt:
+      'Assessment of how AI and digital tools are changing Italian small and mid-sized businesses in services, retail, and hospitality, and what this means for productivity, margins, and local equity stories.',
+    content: `# AI and Digital Transformation in Italian SMBs and Services
+
+## Introduction
+
+Italy’s economic fabric is woven from small and mid‑sized businesses—family‑owned firms in services, retail, manufacturing, and hospitality that collectively drive employment and regional identity. Historically, many of these firms lagged larger peers in digital adoption, constrained by limited resources, risk aversion, and fragmented markets.
+
+The rapid diffusion of cloud services, software‑as‑a‑service (SaaS), and now AI tools is beginning to narrow this gap. From automated bookings and dynamic pricing in hospitality to inventory optimization and customer analytics in retail, Italian SMBs are discovering that digital transformation is less about grand IT projects and more about targeted, practical tools that improve everyday decisions.
+
+This article explores how AI and digitalization are reshaping Italian SMBs, the implications for productivity and profitability, and how investors can capture these trends through listed equities and private markets.
+
+## The Starting Point: Fragmentation and Underinvestment
+
+### Structure of Italian SMBs
+
+Italian SMBs typically feature:
+
+- High prevalence of family ownership and local roots;
+- Limited in‑house IT and data capabilities;
+- Strong emphasis on relationships and craftsmanship.
+
+These strengths come with trade‑offs:
+
+- Slower adoption of enterprise‑grade systems;
+- Reliance on manual processes and intuition;
+- Vulnerability to shocks in tourism, supply chains, or local demand.
+
+### Barriers to Digital Adoption
+
+Common barriers include:
+
+- Perceived complexity and cost of digital tools;
+- Uncertainty about return on investment;
+- Lack of skilled staff to implement and maintain solutions.
+
+Cloud and SaaS models have lowered some of these barriers by:
+
+- Reducing upfront capex in favor of subscriptions;
+- Offering simpler, modular solutions tailored to specific functions;
+- Providing vendor‑managed updates and security.
+
+AI extends this trajectory, embedding intelligence into user‑friendly interfaces that do not require data‑science teams.
+
+## Practical AI Use-Cases in Italian Services and Hospitality
+
+### Hospitality and Tourism
+
+In hotels, B&Bs, and restaurants, AI‑enabled tools can:
+
+- Optimize pricing based on seasonality, events, and booking patterns;
+- Automate review analysis and sentiment tracking;
+- Streamline staff scheduling and inventory management.
+
+For example, dynamic‑pricing engines used by mid‑sized hotels in Rome or Florence can:
+
+- Increase average daily rates without sacrificing occupancy;
+- Respond in real time to changes in demand;
+- Integrate with online travel agencies and direct‑booking channels.
+
+These tools turn data that already exist—bookings, cancellations, reviews—into actionable insights.
+
+### Retail and Local Services
+
+In retail and local services, AI and analytics help:
+
+- Forecast demand for products with seasonal or event‑driven spikes;
+- Optimize assortment and stock levels across locations;
+- Personalize offers via loyalty programs and digital channels.
+
+Even simple recommendation engines and targeted campaigns can:
+
+- Lift basket sizes;
+- Reduce markdowns and stockouts;
+- Strengthen customer loyalty.
+
+Vendors offering “AI‑inside” point‑of‑sale and CRM systems are positioning themselves as growth partners for these businesses.
+
+## Investment Implications
+
+### Listed Italian and European Equities
+
+For public‑market investors, the AI and digital transformation of Italian SMBs is often accessed indirectly through:
+
+- Payment and POS providers with strong Italian footprints;
+- Vertical‑software vendors focused on hospitality, retail, and services;
+- Telecom and cloud providers enabling connectivity and computing.
+
+Key questions include:
+
+- How much revenue exposure comes from SMB segments?
+- Are products designed and priced for smaller clients, or primarily for large enterprises?
+- What is the trajectory of ARPU and churn in these customer cohorts?
+
+Companies that demonstrate scalable go‑to‑market strategies into SMBs, with manageable customer‑acquisition costs and strong retention, may enjoy long growth runways as digital penetration deepens.
+
+### Private Markets and Local Champions
+
+In private markets, opportunities include:
+
+- Regional IT integrators and consultancies specializing in SMB digitalization;
+- Niche SaaS players built around specific verticals (e.g., restaurant management, boutique hotel software);
+- Service platforms that aggregate fragmented providers via digital marketplaces.
+
+These businesses can benefit from:
+
+- High customer stickiness once embedded;
+- Opportunities to roll up smaller competitors;
+- Potential exits to larger European or global platforms.
+
+Investors must balance growth potential with execution risk, particularly in founder‑led organizations transitioning to more scalable operating models.
+
+## Risks and Constraints
+
+### Execution and Change Management
+
+Digital projects often fail not due to technology but due to:
+
+- Insufficient training and change management;
+- Misalignment between tools and real‑world workflows;
+- Underestimation of ongoing support needs.
+
+Vendors that invest in onboarding, education, and local support networks are more likely to succeed than those that simply sell software licenses.
+
+### Macro and Policy Environment
+
+Macro conditions—interest rates, tourism flows, consumer confidence—affect SMB investment appetite. Policy initiatives, such as incentives for digitalization and skills development, can:
+
+- Accelerate adoption by lowering cost and risk;
+- Create clusters of expertise in certain regions or sectors.
+
+Monitoring these frameworks is important for assessing both upside and downside scenarios.
+
+## Conclusion
+
+AI and digital transformation are gradually reshaping Italian SMBs in services, retail, and hospitality. The change is incremental rather than overnight, but cumulative effects on productivity, margins, and resilience can be substantial over time.
+
+For investors, the opportunity lies in identifying the enabling platforms—payments, vertical SaaS, connectivity, and service providers—that are best positioned to scale with this transformation. As more Italian businesses move from intuition‑driven to data‑augmented decision‑making, those platforms can become essential infrastructure for the country’s economic backbone.`,
+    date: formatDate(1),
+    author: 'Luca Montefiore',
+    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# AI and Digital Transformation in Italian SMBs and Services
+
+## Introduction
+
+Italy’s economic fabric is woven from small and mid‑sized businesses—family‑owned firms in services, retail, manufacturing, and hospitality that collectively drive employment and regional identity. Historically, many of these firms lagged larger peers in digital adoption, constrained by limited resources, risk aversion, and fragmented markets.`)
+    ),
+    imageUrl: getImage('markets', 1),
+    tags: ['Italy', 'SMB', 'AI', 'Digital Transformation', 'Services'],
+  },
+  {
+    slug: 'mediterranean-consumer-luxury-and-tourism-under-higher-rates',
+    title: 'Mediterranean Consumer, Luxury, and Tourism Under Higher Rates',
+    excerpt:
+      'Examination of how sustained higher interest rates and tighter financial conditions affect Mediterranean consumer spending, luxury demand, and tourism-driven economies, with a focus on Italy and Southern Europe.',
+    content: `# Mediterranean Consumer, Luxury, and Tourism Under Higher Rates
+
+## Introduction
+
+Mediterranean economies, and Italy in particular, are deeply shaped by consumer behavior, tourism flows, and the performance of luxury and premium brands. For years, ultra‑low interest rates and abundant liquidity supported asset prices, credit growth, and consumer confidence across the region. Today, higher policy rates, tighter financial conditions, and persistent inflation are testing that equilibrium.
+
+A higher‑for‑longer rate regime influences Mediterranean markets through several channels:
+
+- Higher borrowing costs for households and small businesses;
+- Changing patterns of discretionary spending and travel;
+- Shifts in valuation and financing conditions for luxury and hospitality companies.
+
+This article explores how these dynamics interact and how investors can position across Mediterranean consumer, luxury, and tourism exposures.
+
+## Household Balance Sheets and Credit Conditions
+
+### From Cheap Credit to Selective Borrowing
+
+Italian and Southern European households benefited from years of low mortgage and consumer‑credit rates. As central banks tighten policy:
+
+- New borrowing becomes more expensive;
+- Variable‑rate loans adjust upward, reducing disposable income;
+- Banks tighten lending standards for riskier borrowers.
+
+The impact is uneven:
+
+- Higher‑income households with low leverage can absorb higher rates and maintain discretionary spending, including on travel and luxury goods.
+- More leveraged or lower‑income households may adjust by cutting back on non‑essential purchases, delaying big‑ticket items, or trading down.
+
+For investors, this suggests a **polarization of demand**—resilience at the top end of the market, more pressure in mass‑market segments.
+
+### Savings, Inflation, and Confidence
+
+Inflation episodes erode real savings and purchasing power, particularly where wage growth lags price increases. Higher deposit rates partially offset this effect but often with a lag and uneven pass‑through.
+
+Consumer confidence surveys across Italy, Spain, Greece, and Portugal provide early signals on:
+
+- Willingness to spend on travel and leisure;
+- Intentions to purchase durable goods;
+- Perceptions of future financial conditions.
+
+In a higher‑rate world, confidence tends to be more fragile, amplifying the sensitivity of discretionary sectors to macro headlines.
+
+## Tourism and Hospitality: Demand Resilience vs. Cost Pressures
+
+### Tourism as a Structural Pillar
+
+Tourism is a structural pillar for many Mediterranean economies. Post‑pandemic, pent‑up demand drove powerful rebounds in arrivals and spending, even as inflation pushed up prices for flights, hotels, and services.
+
+Higher interest rates can affect tourism through:
+
+- Slower growth in source markets as households face higher debt service;
+- Currency moves that change relative attractiveness (e.g., weaker euro vs. dollar or pound);
+- Investment decisions in hospitality infrastructure and capacity expansion.
+
+So far, tourist demand for core Mediterranean destinations has proved resilient, supported by:
+
+- Strong labor markets in Northern Europe and the U.S.;
+- A desire to prioritize experiences over goods;
+- Increased flexibility from remote and hybrid work.
+
+However, a prolonged high‑rate environment raises questions about the sustainability of this resilience if growth slows more meaningfully in key origin countries.
+
+### Margin Dynamics in Hospitality
+
+Hotels, resorts, and tourism services face their own cost pressures:
+
+- Higher financing costs for property acquisition, renovation, and expansion;
+- Rising labor costs in tight labor markets;
+- Higher energy and input prices, especially in energy‑importing economies.
+
+Operators with:
+
+- Strong brands and prime locations;
+- Dynamic pricing capabilities;
+- Efficient cost structures,
+
+are better positioned to maintain margins. Others may face a squeeze between rising costs and more cautious consumers.
+
+## Luxury and Premium Brands: Pricing Power in a High-Rate World
+
+### Global vs. Local Demand
+
+Mediterranean luxury brands—particularly in Italy—operate globally. Their performance depends not only on domestic consumers but also on:
+
+- Tourists shopping in key European cities;
+- Demand from the U.S., China, and other high‑growth markets;
+- Wholesale and retail channels spanning continents.
+
+Higher global rates can:
+
+- Temper growth in some markets;
+- Shift demand between regions and channels;
+- Influence wealth effects via equity and real‑estate prices.
+
+Yet, **true luxury** tends to prove more resilient than mid‑market segments when higher‑income consumers prioritize quality and brand heritage over volume.
+
+### Financing, Inventories, and Investment
+
+For listed luxury companies, capital structure and investment plans matter:
+
+- Higher rates increase the cost of debt and raise the bar for store openings, acquisitions, and vertical‑integration projects;
+- Inventory management becomes more critical to avoid discounting that can damage brand equity;
+- Investments in digital, clienteling, and sustainability initiatives must clear higher hurdle rates.
+
+Companies with strong free cash flow generation, conservative leverage, and disciplined capital allocation can turn a higher‑rate world into an opportunity to consolidate market share against weaker competitors.
+
+## Equity and Valuation Implications
+
+### Consumer and Tourism Equities
+
+For Mediterranean consumer and tourism equities, investors should focus on:
+
+- Balance sheet resilience—leverage, interest coverage, and maturity profiles;
+- Sensitivity of earnings to discretionary spending and occupancy rates;
+- Ability to pass on cost increases through pricing or mix.
+
+Valuations must be recalibrated:
+
+- Discount rates rise with higher risk‑free yields and potentially higher equity risk premia;
+- Terminal growth assumptions should reflect more conservative consumer and macro trajectories;
+- Peer comparisons must account for global opportunities, not just domestic cycles.
+
+### Luxury Equities
+
+In luxury, the key questions are:
+
+- Can brands maintain or increase pricing in real terms without sacrificing volumes?
+- How diversified are revenue streams across geographies and channels?
+- What is the trajectory of margins and cash conversion in a higher‑rate environment?
+
+Investors may be willing to sustain premium multiples for houses that:
+
+- Demonstrate consistent double‑digit EBIT margins and strong brand momentum;
+- Maintain net cash or modest leverage;
+- Allocate capital prudently between dividends, buybacks, and reinvestment.
+
+## Fixed Income and Credit Angles
+
+### Corporate Credit in Consumer and Tourism
+
+From a credit perspective, higher rates:
+
+- Increase interest burdens, especially for leveraged private operators in hospitality and retail;
+- Tighten covenants and financing conditions for new issuances;
+- Elevate the importance of asset quality and collateral values.
+
+Selective exposure to stronger credits—backed by prime assets, strong sponsors, and conservative leverage—can still be attractive, particularly where spreads compensate for cyclical risk.
+
+### Sovereign and Quasi-Sovereign Exposures
+
+At the sovereign level, countries with high debt loads must manage:
+
+- Higher interest bills over time as legacy debt rolls into higher coupons;
+- Interaction between fiscal consolidation, growth, and political cycles.
+
+Tourism‑dependent economies benefit from sustained visitor inflows and tax revenues but remain exposed to shocks in global travel and energy prices. Higher rates raise the importance of credible fiscal frameworks to maintain market confidence.
+
+## Conclusion
+
+The Mediterranean consumer, luxury, and tourism complex is entering a new phase. Higher interest rates and tighter financial conditions introduce headwinds, but they also sharpen the distinction between resilient, high‑quality franchises and more fragile, leverage‑dependent models.
+
+For investors, the focus should shift from chasing cyclicality to owning businesses and assets that can:
+
+- Withstand higher borrowing costs;
+- Maintain pricing power and brand equity;
+- Adapt operations and capital allocation to a more demanding macro backdrop.
+
+In doing so, portfolios can continue to benefit from the enduring appeal of Mediterranean destinations and Italian craftsmanship—while respecting the new constraints imposed by a world where money once again has a meaningful cost.`,
+    date: formatDate(0),
+    author: 'Luca Montefiore',
+    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Mediterranean Consumer, Luxury, and Tourism Under Higher Rates
+
+## Introduction
+
+Mediterranean economies, and Italy in particular, are deeply shaped by consumer behavior, tourism flows, and the performance of luxury and premium brands. For years, ultra‑low interest rates and abundant liquidity supported asset prices, credit growth, and consumer confidence across the region. Today, higher policy rates, tighter financial conditions, and persistent inflation are testing that equilibrium.
+
+A higher‑for‑longer rate regime influences Mediterranean markets through several channels:
+
+- Higher borrowing costs for households and small businesses;
+- Changing patterns of discretionary spending and travel;
+- Shifts in valuation and financing conditions for luxury and hospitality companies.
+
+This article explores how these dynamics interact and how investors can position across Mediterranean consumer, luxury, and tourism exposures.`)
+    ),
+    imageUrl: getImage('markets', 0),
+    tags: ['Italy', 'Mediterranean', 'Consumer', 'Luxury', 'Tourism'],
+  },
+  {
     slug: 'italian-markets-luxury-goods-investment',
     title: 'Italian Markets: Luxury Goods and Investment Opportunities',
     excerpt: 'Analysis of Italian luxury goods sector, examining market leaders, brand strength, and investment opportunities. Assessment of competitive positioning, growth drivers, and long-term value creation in Italian luxury brands.',
@@ -1162,5 +1513,275 @@ While my focus is often Italy and the broader Mediterranean, Iberia—Spain and 
     ),
     imageUrl: getImage('markets', 303),
     tags: ['Spain', 'Portugal', 'Tourism', 'Banks', 'Infrastructure'],
+  },
+  {
+    slug: 'greek-equities-tourism-banks-and-privatization',
+    title: 'Greek Equities: Tourism, Banks, and Privatization in a Post-Crisis Market',
+    excerpt:
+      'How Greece’s tourism rebound, banking-sector repair, and privatization agenda are reshaping its small but dynamic equity market, and how investors can balance upside with liquidity and political risk.',
+    content: `# Greek Equities: Tourism, Banks, and Privatization in a Post-Crisis Market
+
+## Introduction
+
+Greece has traveled a long road from the depths of the euro‑area sovereign crisis. For years, Greek equities were viewed almost exclusively through the lens of:
+
+- Fiscal stress and default risk.
+- Banking‑sector recapitalizations.
+- Political volatility and EU conditionality.
+
+Today, while risks remain, the landscape has changed:
+
+- Tourism has rebounded strongly.
+- Banks have made significant progress on non‑performing loans.
+- Privatization and investment programs are reshaping key sectors.
+
+For investors focused on Mediterranean and European markets, Greece offers a small but increasingly relevant set of opportunities—provided that liquidity, governance, and political risk are carefully managed.
+
+## Macro and Policy Context
+
+### From Crisis to Gradual Normalization
+
+During the sovereign‑debt crisis, Greece experienced:
+
+- Deep recessions.
+- Sharp fiscal tightening.
+- Bank recapitalizations and capital controls.
+
+Since then:
+
+- The fiscal position has improved, with:
+  - Primary balances moving toward or into surplus at times.
+- The banking system has:
+  - Reduced non‑performing exposures through:
+    - Securitizations.
+    - Sales to investors.
+- Greece has gradually:
+  - Rebuilt market access.
+  - Benefited from lower funding costs in the euro‑area environment.
+
+However, public debt remains high and:
+
+- Policy discipline and reform momentum are key to sustaining confidence.
+
+### EU Funds and Investment Agenda
+
+Greece is a:
+
+- Significant beneficiary of EU structural and recovery funds.
+
+These funds are being directed toward:
+
+- Infrastructure and energy projects.
+- Digitalization and modernization of public services.
+- Green transition and climate‑resilience investments.
+
+For equities, this creates:
+
+- Tailwinds for:
+  - Construction and engineering.
+  - Energy and utilities.
+  - Industrials and selected service providers.
+
+Execution, absorption capacity, and governance remain important variables.
+
+## Sector Focus: Tourism and Hospitality
+
+### Tourism as a Structural Pillar
+
+Tourism is one of Greece’s most important economic engines:
+
+- Contributing significantly to:
+  - GDP.
+  - Employment.
+  - External balances.
+
+Greek tourism benefits from:
+
+- Natural and cultural assets:
+  - Islands and beaches.
+  - Historical sites.
+- Strong brand recognition in:
+  - European markets.
+  - Increasingly, global demand.
+
+Equity‑market exposures include:
+
+- Hotel groups.
+- Travel and transport providers.
+- Ancillary services and real estate.
+
+### Investment Considerations
+
+Investors should differentiate between:
+
+- High‑quality, well‑located assets with:
+  - Strong brands.
+  - Diversified demand across seasons and geographies.
+- More cyclical or leveraged plays reliant on:
+  - Low‑cost mass tourism.
+  - Aggressive development assumptions.
+
+Key questions:
+
+- How resilient are earnings under:
+  - Weaker European demand.
+  - Shifts in travel patterns.
+- Are balance sheets robust enough to:
+  - Withstand shocks.
+  - Fund necessary capex and upgrades?
+
+## Sector Focus: Banks and Financials
+
+### Cleaning Up Legacy Issues
+
+Greek banks were at the center of the crisis. Since then, they have:
+
+- Reduced NPL ratios significantly.
+- Strengthened capital positions.
+- Improved funding profiles as:
+  - Deposits returned.
+  - Reliance on emergency liquidity declined.
+
+They now operate in:
+
+- A higher‑rate euro‑area environment that:
+  - Supports net interest margins.
+  - Must be balanced against borrower resilience.
+
+### Key Risk and Return Drivers
+
+Investors evaluating Greek banks should examine:
+
+- Asset quality and remaining NPL stock.
+- Coverage ratios and provisioning policies.
+- Capital buffers versus regulatory minima.
+- Sensitivity to:
+  - Domestic macro conditions.
+  - Real estate and SME exposures.
+
+Potential positives:
+
+- Improved profitability from:
+  - Higher rates.
+  - Lower credit‑cost normalization.
+- Prospects for:
+  - Dividends.
+  - Capital returns, if regulators permit.
+
+Risks:
+
+- Renewed macro volatility.
+- Political or regulatory interventions.
+
+## Sector Focus: Privatization and Infrastructure
+
+### Privatization Agenda
+
+Greece’s privatization program includes:
+
+- Stakes in:
+  - Infrastructure assets (ports, airports, utilities).
+  - Real estate portfolios.
+- Concession agreements for:
+  - Transport.
+  - Energy projects.
+
+Privatizations can:
+
+- Improve efficiency and governance.
+- Attract:
+  - Strategic investors.
+  - Long‑term capital.
+
+For listed equities, this creates:
+
+- Opportunities in:
+  - Newly listed entities.
+  - Existing companies that acquire or operate privatized assets.
+
+### Infrastructure and Energy Transition
+
+Greece is investing in:
+
+- Renewable energy (solar, wind).
+- Grid modernization and interconnections.
+- Transport and logistics infrastructure.
+
+Investment theses may center on:
+
+- Regulated utilities with:
+  - Transparent frameworks.
+  - Capex linked to transition.
+- Logistics and transport operators leveraged to:
+  - Trade and tourism flows.
+
+## Portfolio Construction: Greece Within a Mediterranean Allocation
+
+### Role and Sizing
+
+Given its size and volatility, Greece is typically:
+
+- A **satellite allocation** within:
+  - European.
+  - Mediterranean.
+  - EM EMEA portfolios.
+
+Position sizing should reflect:
+
+- Liquidity in key names.
+- Correlation with other Southern European exposures (Italy, Spain, Portugal).
+- Risk budget for:
+  - Political shocks.
+  - Macro volatility.
+
+### Stock Selection and Governance
+
+Governance standards have improved but remain:
+
+- Uneven across companies and sectors.
+
+Investors should focus on:
+
+- Companies with:
+  - Clear strategies.
+  - Transparent financials.
+  - Alignment with minority shareholders.
+- Track records of:
+  - Sensible capital allocation.
+  - Risk management through past cycles.
+
+## Conclusion
+
+Greek equities have moved from being:
+
+- Purely crisis‑driven trades
+
+to:
+
+- A more nuanced opportunity set combining:
+  - Tourism and services.
+  - Repaired banks.
+  - Privatizations and infrastructure plays.
+
+Risks remain elevated compared with core Europe, but for investors willing to:
+
+- Manage liquidity and position sizes carefully.
+- Prioritize quality balance sheets and governance.
+- Integrate macro and EU‑policy views into their process.
+
+Greece can provide differentiated exposure within a broader Mediterranean equity strategy—adding both return potential and thematic breadth around tourism and European recovery.`,
+    date: formatDate(304),
+    author: 'Luca Montefiore',
+    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Greek Equities: Tourism, Banks, and Privatization in a Post-Crisis Market
+
+## Introduction
+
+Greece has traveled a long road from the depths of the euro‑area sovereign crisis, and its equity market is gradually normalizing.`),
+    ),
+    imageUrl: getImage('markets', 304),
+    tags: ['Greece', 'Equities', 'Tourism', 'Banks', 'Privatization'],
   },
 ];

@@ -26,6 +26,359 @@ const countWords = (text: string): number => {
 // Lysander Truog - Fixed Income & Bonds (61 articles)
 export const lysanderArticles: AnalyticsArticle[] = [
   {
+    slug: 'building-a-resilient-multi-sector-bond-portfolio-with-ai-and-analytics',
+    title: 'Building a Resilient Multi-Sector Bond Portfolio with AI and Advanced Analytics',
+    excerpt:
+      'Framework for constructing multi-sector fixed income portfolios using modern analytics and AI tools, balancing income, diversification, and drawdown risk across cycles.',
+    content: `# Building a Resilient Multi-Sector Bond Portfolio with AI and Advanced Analytics
+
+## Introduction
+
+Multi‑sector bond portfolios—combining government, investment‑grade, high yield, securitized, and emerging market debt—offer investors a powerful toolkit to balance income and risk across cycles. Historically, portfolio construction relied on macro judgment, fundamental credit work, and relatively coarse risk metrics. Today, advances in data availability, computing power, and AI‑driven analytics allow fixed income investors to:
+
+- Analyze risk exposures at a more granular level;
+- Simulate scenario outcomes more robustly;
+- Optimize allocations dynamically as conditions evolve.
+
+This article explores how investors can use modern analytics and AI tools to build resilient multi‑sector bond portfolios in a higher‑rate environment.
+
+## The Case for Multi-Sector Bond Portfolios
+
+### Diversification Across Risk Drivers
+
+Different fixed income sectors respond differently to:
+
+- Interest‑rate moves;
+- Credit cycles;
+- Liquidity conditions;
+- Policy and regulatory changes.
+
+By combining sectors with distinct risk drivers, investors can:
+
+- Smooth return profiles across macro regimes;
+- Reduce reliance on any single spread or duration bet;
+- Capture relative value opportunities as sectors cheapen or richen versus each other.
+
+### Income Enhancement with Risk Control
+
+Multi‑sector strategies often:
+
+- Increase portfolio yield relative to pure government or IG mandates;
+- Rely on diversification and active management to keep drawdowns within acceptable bounds.
+
+The challenge is to ensure that incremental yield does not come at the cost of excessive correlation in stress periods—where defaults, downgrades, and liquidity shocks can cluster.
+
+## Role of Data, Models, and AI in Fixed Income
+
+### Expanding the Data Set
+
+Modern fixed income analysis leverages:
+
+- Tick‑level and order‑book data where available;
+- Detailed holdings and flows data from funds and ETFs;
+- Corporate fundamentals, alternative data, and ESG metrics;
+- Macro time series and market‑implied expectations.
+
+AI and machine learning techniques can help:
+
+- Classify issuers and instruments by risk profile;
+- Detect latent factors driving co‑movements across sectors;
+- Identify anomalies or regime shifts earlier than traditional models.
+
+### Scenario Analysis and Stress Testing
+
+Investors can use advanced analytics to simulate:
+
+- Parallel and non‑parallel yield‑curve shifts;
+- Changes in credit spreads by rating, sector, or region;
+- Combined shocks (e.g., rate spike plus spread widening plus liquidity deterioration).
+
+AI‑assisted tools can:
+
+- Generate scenario distributions rather than single “what‑if” events;
+- Rank portfolio vulnerabilities under multiple joint shocks;
+- Propose allocation changes that reduce tail risks while preserving income.
+
+## Portfolio Construction: Practical Framework
+
+### Defining Objectives and Constraints
+
+Before deploying AI tools, investors must define:
+
+- Target income and real return objectives;
+- Maximum acceptable drawdown and volatility;
+- Liquidity needs and investment horizon;
+- Regulatory and mandate constraints (e.g., rating floors, sector limits, ESG guidelines).
+
+These parameters anchor the optimization process and prevent overfitting to short‑term market conditions.
+
+### Sector and Rating Buckets
+
+A practical starting framework may segment the universe into buckets:
+
+- **Government and agencies** – Core duration and liquidity;
+- **Investment‑grade credit** – Income with lower default risk;
+- **High yield and leveraged loans** – Higher income with elevated credit risk;
+- **Securitized assets** – Mortgages, ABS, CLOs with structural and collateral nuances;
+- **Emerging markets** – Additional yield and diversification with higher macro risk.
+
+AI‑driven models can estimate:
+
+- Factor exposures (rates, spreads, volatility, liquidity);
+- Expected shortfall and drawdown contributions by bucket;
+- Marginal contribution to portfolio risk and return from incremental allocations.
+
+## Risk Management and Monitoring
+
+### Dynamic Rebalancing Signals
+
+Once a baseline allocation is set, ongoing monitoring is critical. AI and analytics can:
+
+- Track deviations from target risk exposures (e.g., duration, spread beta, sector weights);
+- Flag concentrations in specific issuers, sectors, or factors;
+- Suggest incremental shifts when risk/reward skews become unattractive.
+
+Signals should be:
+
+- Interpretable—so that portfolio managers understand why a shift is recommended;
+- Robust—avoiding high turnover due to noise;
+- Integrated with fundamental judgment, not replacing it.
+
+### Drawdown and Liquidity Management
+
+Stress periods reveal the true resilience of multi‑sector portfolios. Risk frameworks should:
+
+- Include liquidity metrics—days to liquidate, bid‑ask spreads, market depth assumptions;
+- Pre‑define playbooks for de‑risking, e.g., reducing HY or EM exposure, increasing cash buffers;
+- Consider the sequencing of shocks—how funding pressures or redemptions might interact with market moves.
+
+AI tools can simulate:
+
+- Redemption scenarios for funds and vehicles;
+- Price impact and transaction costs for rebalancing;
+- Alternative de‑risking paths with different trade‑offs.
+
+## Implementation Considerations
+
+### Data Quality and Model Governance
+
+AI is only as good as the data and governance surrounding it. Fixed income investors must:
+
+- Validate data sources and ensure continuity over time;
+- Avoid survivorship and look‑ahead biases in model training;
+- Regularly review model performance and recalibrate as regimes change.
+
+Model governance frameworks—clear ownership, documentation, and oversight—are especially important when AI outputs influence capital allocation.
+
+### Human Judgment and Organizational Design
+
+AI should augment, not replace, experienced fixed income investors. Organizationally, that means:
+
+- Embedding data scientists and quant analysts within investment teams;
+- Training portfolio managers to interpret and challenge model outputs;
+- Creating feedback loops where investment insights refine models and vice versa.
+
+Firms that treat AI as a black box risk misusing tools; those that invest in human+machine collaboration can build durable advantages.
+
+## Conclusion
+
+Multi‑sector bond portfolios remain a powerful vehicle for generating income and managing risk across market cycles. The combination of higher global rates and advances in AI and analytics gives investors new tools to construct these portfolios with greater precision and resilience.
+
+By grounding portfolio construction in clear objectives, robust data, transparent models, and disciplined risk management, investors can harness AI not as a gimmick but as a genuine edge—enhancing their ability to navigate complex fixed income markets while keeping portfolios aligned with long‑term goals.`,
+    date: formatDate(1),
+    author: 'Lysander Truog',
+    authorAvatar: getAuthorAvatar('Lysander Truog'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Building a Resilient Multi-Sector Bond Portfolio with AI and Advanced Analytics
+
+## Introduction
+
+Multi‑sector bond portfolios—combining government, investment‑grade, high yield, securitized, and emerging market debt—offer investors a powerful toolkit to balance income and risk across cycles. Historically, portfolio construction relied on macro judgment, fundamental credit work, and relatively coarse risk metrics. Today, advances in data availability, computing power, and AI‑driven analytics allow fixed income investors to analyze risk and optimize allocations more effectively.`)
+    ),
+    imageUrl: getImage('expert', 1),
+    tags: ['Fixed Income', 'Multi-Sector', 'AI', 'Risk Management', 'Portfolio Construction'],
+  },
+  {
+    slug: 'fixed-income-strategy-in-a-higher-for-longer-rate-regime',
+    title: 'Fixed Income Strategy in a Higher-for-Longer Rate Regime',
+    excerpt:
+      'Framework for positioning bond portfolios when policy rates and real yields remain structurally higher. Analysis of curve shape, term premia, and sector allocation across government, investment-grade, and high yield markets.',
+    content: `# Fixed Income Strategy in a Higher-for-Longer Rate Regime
+
+## Introduction
+
+After more than a decade of extraordinary monetary accommodation, fixed income investors are navigating a markedly different landscape. Policy rates are no longer anchored near zero, real yields have turned positive across many maturities, and central banks signal a willingness to keep rates “higher for longer” to ensure inflation is durably contained.
+
+This environment reshapes the opportunity set across the yield curve and credit spectrum. It rewards investors who can harvest elevated income while managing duration, curve, and credit risks with discipline. It also challenges long‑standing habits formed during the era of “there is no alternative” (TINA) to equities.
+
+This article outlines a practical framework for fixed income strategy under a higher‑for‑longer regime: how to think about term premia, curve shape, sector allocation, and portfolio construction for long‑term investors.
+
+## Understanding the New Rate Regime
+
+### From Suppressed Yields to Positive Real Returns
+
+In the pre‑inflation shock world, nominal yields in developed markets often failed to compensate for inflation. Today, real yields in many sovereign curves are positive, offering bond investors:
+
+- More attractive starting yields and expected returns;
+- Greater diversification potential versus equities if policy credibility is restored;
+- A higher hurdle rate for risk assets that must justify spreads and volatility.
+
+However, higher real yields also imply greater sensitivity of valuations—across all asset classes—to further rate shocks and policy surprises. Duration risk has re‑entered the foreground.
+
+### Higher-for-Longer vs. “Forever High”
+
+“Higher for longer” does not mean rates will remain at cycle peaks indefinitely. Instead, it suggests:
+
+- Policy rates may settle above the pre‑2010s norm;
+- Real neutral rates (r*) may have risen due to structural changes—demographics, fiscal dynamics, and investment needs (e.g., energy transition, reshoring);
+- Central banks may be less willing to cut aggressively at the first sign of volatility.
+
+For fixed income investors, this implies a distribution of potential rate paths skewed away from a quick return to zero and toward a plateau with modest cyclical swings around a higher mean.
+
+## Yield Curve, Term Premia, and Duration Choices
+
+### Assessing Term Premia in a Repriced Curve
+
+A central question is whether investors are adequately compensated for extending duration. Term premia—the extra yield for holding longer maturities—were compressed for years by quantitative easing and demand from liability‑driven investors. As central banks unwind balance sheets and private demand absorbs more duration, term premia can normalize or even overshoot.
+
+Key indicators include:
+
+- The slope between 2‑year and 10‑year maturities;
+- The level of real yields on long‑dated inflation‑linked bonds;
+- Market pricing of rate cuts versus central bank guidance.
+
+When curves are deeply inverted, extending duration may be unattractive in the short term but rewarding over a multi‑year horizon if rate cuts eventually materialize. When curves steepen with elevated long‑end yields, carefully adding duration can lock in attractive real income—provided investors can tolerate near‑term volatility.
+
+### Barbell vs. Bullet in a Higher-Rate Environment
+
+Portfolio structure across maturities becomes more important. Two classic strategies:
+
+- **Barbell** – Concentrating exposure in short and long maturities while underweighting the belly.
+- **Bullet** – Concentrating around intermediate maturities.
+
+In a higher‑for‑longer regime:
+
+- A **barbell** can combine attractive front‑end yields (with reinvestment optionality) and long‑end convexity if inflation risk is credibly managed.
+- A **bullet** can reduce reinvestment risk but may be less flexible if the cycle turns faster than expected.
+
+Investors should align structure with their view on:
+
+- How quickly inflation trends back to target;
+- Whether term premia are already compensating for duration risk;
+- The role of fixed income in their broader portfolio (income, diversification, or both).
+
+## Sector Allocation: Government, Investment Grade, and High Yield
+
+### Government Bonds: The New Defensive Anchor?
+
+If central banks regain inflation credibility, government bonds can once again serve as a more reliable defensive anchor. Positive real yields mean:
+
+- Investors are paid to hold duration rather than subsidizing borrowers;
+- Diversification benefits versus equities can re‑emerge, especially if future shocks are growth‑rather than inflation‑driven.
+
+However, elevated debt levels and fiscal uncertainty argue for selectivity:
+
+- Favoring jurisdictions with credible fiscal frameworks and independent central banks;
+- Using inflation‑linked bonds where inflation uncertainty remains high.
+
+### Investment-Grade Credit: Income with Resilience
+
+Investment‑grade (IG) corporates sit at the heart of many higher‑for‑longer strategies. Spreads over government bonds may not be historically wide, but the **all‑in yield**—government yield plus spread—is often compelling versus the past decade.
+
+Key considerations:
+
+- Balance sheet strength and refinancing profiles in a higher‑rate environment;
+- Sectoral differences: regulated utilities and quality financials vs. more cyclical industries;
+- The trade‑off between single‑name selection and diversified IG indices or ETFs.
+
+For long‑term investors, IG offers a way to lock in real income while limiting default risk—especially when combined with active risk management around sectors exposed to structural headwinds.
+
+### High Yield and Leveraged Credit: Selective, Not Systemic
+
+In a world where high‑quality bonds already deliver mid‑single‑digit yields, the bar for high yield (HY) rises. Investors should demand clearly justified compensation for:
+
+- Higher default risk as refinancing costs reset upward;
+- Greater sensitivity to economic slowdowns in a higher‑rate backdrop;
+- Liquidity risk in segments of the market that depend on continuous inflows.
+
+Rather than using HY as a generic yield enhancer, a more surgical approach is warranted:
+
+- Focusing on shorter‑duration, higher‑quality segments (BBs and robust Bs);
+- Avoiding issuers with concentrated maturities in the near term and weak free cash flow coverage;
+- Considering structured solutions or active strategies that can manage defaults and recoveries.
+
+## Inflation, Real Yields, and Scenario Analysis
+
+### Inflation Paths and Real Return Targets
+
+Real return outcomes depend critically on the path of inflation relative to nominal yields. Three stylized scenarios help frame strategy:
+
+1. **Orderly disinflation** – Inflation trends back toward target; real yields remain moderately positive. Government and IG bonds deliver solid real returns; HY depends on default cycle.
+2. **Sticky inflation** – Inflation remains above target; central banks keep nominal rates elevated; real yields stay high or rise further. Duration risk increases; inflation‑linked bonds and floating‑rate instruments gain appeal.
+3. **Growth scare / policy reversal** – Growth deteriorates sharply, forcing earlier or deeper cuts; curves steepen from inversion. Long duration outperforms, but credit spreads may widen if recession risk rises.
+
+Investors should align portfolio construction with the scenario set they consider most plausible, recognizing that reality may blend elements of each.
+
+### Role of Inflation-Linked Bonds
+
+In a higher‑rate world with residual inflation uncertainty, inflation‑linked bonds (ILBs/TIPS) deserve a more central role. They:
+
+- Provide explicit protection against realized inflation shocks;
+- Allow investors to separate views on real yields from views on inflation;
+- Can be combined with nominal bonds and credit to construct robust real‑return portfolios.
+
+Allocation sizing should reflect valuation—breakeven inflation levels vs. central bank targets—and investors’ own inflation risk tolerance.
+
+## Portfolio Construction for Long-Term Investors
+
+### From TINA to TARA: There Are Reasonable Alternatives
+
+Higher‑for‑longer rates shift the narrative from TINA to “there are reasonable alternatives” (TARA). Multi‑asset portfolios can:
+
+- Allocate more capital to fixed income without sacrificing return targets;
+- Use bonds more explicitly as a source of stable income rather than just a volatility dampener;
+- Demand stricter justification for equity and alternative allocations.
+
+Within fixed income, this argues for:
+
+- A **core** of high‑quality government and IG credit capturing elevated all‑in yields;
+- **Satellite** exposures in HY, EM debt, or structured credit where risk‑adjusted returns are compelling.
+
+### Risk Management and Implementation
+
+Risk management in a higher‑rate world focuses on:
+
+- **Duration risk** – Using scenario analysis and stress testing rather than relying solely on historical correlations;
+- **Credit risk** – Monitoring fundamentals and refinancing walls as higher coupons filter through capital structures;
+- **Liquidity risk** – Ensuring that the vehicle (fund, ETF, SMAs) matches the liquidity profile of underlying assets.
+
+Implementation tools—active strategies, factor‑tilted indices, liability‑aware portfolios—should be chosen based on governance capacity and desired flexibility.
+
+## Conclusion
+
+The shift to a higher‑for‑longer interest‑rate regime represents a structural break for fixed income, but it is a welcome one for long‑term investors seeking real income and diversification. Rather than fearing higher rates, investors can embrace the renewed opportunity set—provided they manage duration, curve, and credit exposures with discipline.
+
+By focusing on term premia, scenario‑based allocation across government, IG, and HY, and a clear understanding of the role of fixed income within the broader portfolio, investors can build bond strategies that are robust to the new macro environment. In many respects, fixed income is returning to its traditional role as a core engine of income and stability—only this time, with the lessons of the zero‑rate era still fresh in mind.`,
+    date: formatDate(0),
+    author: 'Lysander Truog',
+    authorAvatar: getAuthorAvatar('Lysander Truog'),
+    type: 'longterm',
+    readTime: calculateReadTime(
+      countWords(`# Fixed Income Strategy in a Higher-for-Longer Rate Regime
+
+## Introduction
+
+After more than a decade of extraordinary monetary accommodation, fixed income investors are navigating a markedly different landscape. Policy rates are no longer anchored near zero, real yields have turned positive across many maturities, and central banks signal a willingness to keep rates “higher for longer” to ensure inflation is durably contained.
+
+This environment reshapes the opportunity set across the yield curve and credit spectrum. It rewards investors who can harvest elevated income while managing duration, curve, and credit risks with discipline. It also challenges long‑standing habits formed during the era of “there is no alternative” (TINA) to equities.
+
+This article outlines a practical framework for fixed income strategy under a higher‑for‑longer regime: how to think about term premia, curve shape, sector allocation, and portfolio construction for long‑term investors.`)
+    ),
+    imageUrl: getImage('longterm', 0),
+    tags: ['Fixed Income', 'Interest Rates', 'Yield Curve', 'Investment Grade', 'High Yield'],
+  },
+  {
     slug: 'yield-curve-analysis-investment-implications',
     title: 'Yield Curve Analysis: Investment Implications for Fixed Income Portfolios',
     excerpt: 'Comprehensive guide to understanding yield curves, their shapes, and investment implications. Analysis of curve dynamics, duration strategies, and portfolio positioning across different yield curve environments.',
@@ -1079,5 +1432,279 @@ In an era of higher interest rates and episodic market stress, liquidity managem
     ),
     imageUrl: getImage('expert', 162),
     tags: ['Liquidity Management', 'Cash Segmentation', 'Fixed Income', 'Risk Management', 'Institutional Investing'],
+  },
+  {
+    slug: 'em-sovereign-debt-local-vs-hard-currency',
+    title: 'EM Sovereign Debt: Local vs. Hard Currency Across Cycles',
+    excerpt:
+      'How to think about emerging-market sovereign risk premia in local and hard-currency bonds, balance currency, rates, and credit risk, and build a robust allocation framework across cycles.',
+    content: `# EM Sovereign Debt: Local vs. Hard Currency Across Cycles
+
+## Introduction
+
+Emerging-market (EM) sovereign debt offers investors three intertwined sources of risk and return:
+
+- **Currency** – local FX moves versus hard currencies such as the USD or EUR.
+- **Rates** – local nominal and real yield curves driven by domestic policy.
+- **Credit** – sovereign solvency, liquidity, and restructuring risk.
+
+These dimensions express themselves differently in **local‑currency bonds** and **hard‑currency debt** (typically USD or EUR). For long‑horizon fixed income allocators, the goal is not to time every macro swing, but to build a framework that:
+
+- Distinguishes between structural and cyclical risk premia.
+- Balances diversification benefits with drawdown tolerance.
+- Uses local and hard‑currency sleeves deliberately, not opportunistically.
+
+This article outlines such a framework, focusing on how EM local and hard‑currency sovereign debt behave across cycles and how to combine them in institutional portfolios.
+
+## Local vs. Hard Currency: What Are You Being Paid For?
+
+### Hard-Currency Sovereigns
+
+Hard‑currency EM sovereigns are:
+
+- Issued in a foreign currency (most often USD, sometimes EUR).
+- Held primarily by global investors.
+
+Investors are compensated for:
+
+- **Credit risk** – probability of default and recovery values.
+- **Liquidity risk** – depth of secondary markets, dealer balance sheets.
+- **Risk premia** – compensation for macro and political uncertainty.
+
+They are *not* directly exposed to:
+
+- Local‑currency depreciation against the investor’s base currency (the bond is in USD or EUR).
+
+However, currency dynamics still matter indirectly:
+
+- A weaker local currency increases the domestic burden of hard‑currency debt.
+- This can worsen debt‑to‑GDP and debt‑service ratios, raising default risk over time.
+
+### Local-Currency Sovereigns
+
+Local‑currency EM sovereigns are:
+
+- Issued in domestic currency.
+- Typically purchased by:
+  - Local banks and institutions.
+  - Foreign investors via dedicated LCY funds and global EM mandates.
+
+Investors here are compensated for:
+
+- **Currency risk** – FX volatility versus their home currency.
+- **Rates risk** – local nominal and real‑yield volatility.
+- **Credit and policy risk** – though default risk on local‑currency debt is often lower than on hard‑currency debt, especially where:
+  - Central banks are credible.
+  - Domestic investor bases are deep.
+
+Local‑currency bonds can deliver attractive real returns when:
+
+- Real yields are high.
+- Tighter policy successfully brings inflation under control.
+- FX is stable or appreciates.
+
+But they can be painful when:
+
+- Inflation surprises on the upside.
+- Policy credibility is questioned.
+- FX sells off sharply.
+
+## Regime Analysis: How the Two Behave Across Cycles
+
+### Global Risk-On vs. Risk-Off
+
+In **risk‑on** environments with:
+
+- Strong global growth.
+- Benign financial conditions.
+- Stable or weakening USD.
+
+we often see:
+
+- Compression in hard‑currency credit spreads.
+- Stronger EM FX and local bonds benefiting from inflows.
+
+In **risk‑off** episodes:
+
+- The USD tends to strengthen.
+- EM FX and local bonds sell off.
+- Hard‑currency spreads widen, but:
+  - Investment‑grade EM and stronger BB names may hold up better.
+  - Distressed or frontier names can gap out significantly.
+
+Local‑currency allocations are usually more sensitive to:
+
+- Global dollar liquidity.
+- Risk sentiment.
+
+Hard‑currency exposures can:
+
+- Provide more stable beta to EM credit.
+- Still be hit hard when global spreads re‑price.
+
+### Domestic Policy and Inflation Regimes
+
+When domestic policy is **credible** and inflation is:
+
+- Converging toward targets.
+- Well‑anchored.
+
+local‑currency bonds can be powerful:
+
+- Real‑return assets.
+- Diversifiers, particularly when local cycles differ from developed‑market cycles.
+
+When policy is **unorthodox** or inflation is:
+
+- Persistently high and volatile.
+- Poorly anchored.
+
+local‑currency bonds can:
+
+- Exhibit large real losses.
+- Require very high nominal yields to compensate for risk.
+
+In such regimes:
+
+- Hard‑currency bonds may still be investable if:
+  - Debt stocks and external balances are manageable.
+  - The sovereign can access international capital markets.
+- Or may require avoidance or very small tactical exposures if default risk is elevated.
+
+## Building an Allocation Framework
+
+### Step 1: Country Classification
+
+Classify EM sovereigns along three axes:
+
+1. **Macro and policy quality**
+   - Inflation track record and central‑bank credibility.
+   - Fiscal position and debt dynamics.
+2. **External resilience**
+   - Current‑account position.
+   - FX‑reserve adequacy.
+   - Composition and maturity profile of external debt.
+3. **Market structure**
+   - Depth and liquidity of local bond markets.
+   - Share of local‑currency debt held by:
+     - Domestic banks and institutions.
+     - Foreign investors.
+
+Countries with:
+
+- Strong policy frameworks.
+- Deep local markets.
+- Adequate reserves.
+
+are candidates for **strategic local‑currency exposure**. Others may be better accessed—if at all—via hard‑currency bonds.
+
+### Step 2: Role of EM in the Total Portfolio
+
+Decide what role EM debt plays overall:
+
+- Yield enhancement vs. diversification.
+- Tactical beta vs. structural allocation.
+- Risk‑budget tolerance for drawdowns.
+
+This determines:
+
+- Aggregate EM risk budget.
+- Split between:
+  - Local‑currency strategies.
+  - Hard‑currency sovereigns.
+  - EM corporates (if included).
+
+### Step 3: Combining Local and Hard Currency
+
+In practice, many institutional portfolios blend:
+
+- **Hard‑currency EM** as:
+  - A credit spread allocation.
+  - Easier to benchmark and risk‑manage versus global credit.
+- **Local‑currency EM** as:
+  - A source of real yield and FX diversification.
+  - A more tactical sleeve, sized conservatively.
+
+Guidelines might include:
+
+- Strategic hard‑currency allocation with:
+  - Quality tilts (IG and strong BB).
+  - Controlled exposure to distressed names.
+- Local‑currency allocation concentrated in:
+  - Countries with credible monetary policy.
+  - Markets with sufficient liquidity and access.
+
+## Risk Management: What Can Go Wrong?
+
+### Contagion and Correlations
+
+EM debt can experience:
+
+- Episodes of contagion where:
+  - A crisis in one or two countries triggers a broad sell‑off.
+- Higher cross‑country correlations in stress, reducing diversification.
+
+Mitigants:
+
+- Country and regional diversification.
+- Avoid excessive concentration in:
+  - High‑beta frontier names.
+  - Single risk factors (e.g., oil exporters only).
+
+### Liquidity and Market Access
+
+Local‑currency markets may:
+
+- Become difficult to access in extremes (capital‑flow controls, local regulations).
+- Exhibit sharp gaps in pricing and wide bid‑ask spreads.
+
+Hard‑currency markets:
+
+- Can also see liquidity dry up in distressed names.
+- But benchmark issues often remain tradeable through most cycles.
+
+Liquidity management:
+
+- Position sizing relative to trading capacity.
+- Use of funds or ETFs for smaller or frontier exposures.
+
+### Event and Restructuring Risk
+
+Hard‑currency sovereigns are more prone to:
+
+- Formal restructuring processes when external debt becomes unsustainable.
+
+Local‑currency holders face:
+
+- More subtle forms of loss:
+  - High inflation.
+  - “Financial repression” via regulations and below‑market yields.
+
+Investors should:
+
+- Monitor early‑warning indicators:
+  - Reserve depletion.
+  - IMF program negotiations.
+  - Political shifts.
+- Treat yield spikes in fragile names with caution—high yields may be compensation for default, not a bargain.
+
+## Conclusion
+
+EM sovereign debt can be a valuable component of diversified fixed income portfolios, but only when currency, rates, and credit risks are explicitly understood and sized. Local‑currency and hard‑currency bonds are not interchangeable—they expose investors to different combinations of those risks and behave differently across global and domestic cycles.
+
+For long‑horizon allocators, a disciplined framework—built on country classification, clear portfolio roles, and thoughtful combinations of local and hard‑currency exposures—offers a more robust path than reactive, yield‑chasing behavior. In a world where EM policy and external environments will likely remain volatile, such structure is essential to turning EM sovereign risk premia into sustainable returns rather than occasional, painful surprises.`,
+    date: formatDate(163),
+    author: 'Lysander Truog',
+    authorAvatar: getAuthorAvatar('Lysander Truog'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# EM Sovereign Debt: Local vs. Hard Currency Across Cycles
+
+## Introduction
+
+Emerging-market (EM) sovereign debt offers investors three intertwined sources of risk and return: currency, rates, and credit.`),
+    ),
+    imageUrl: getImage('markets', 163),
+    tags: ['EM Sovereign Debt', 'Local Currency', 'Hard Currency', 'Fixed Income', 'Emerging Markets'],
   },
 ];

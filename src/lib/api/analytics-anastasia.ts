@@ -26,6 +26,365 @@ const countWords = (text: string): number => {
 // Anastasia Petrova - Eastern Europe & Emerging Markets (40 articles)
 export const anastasiaArticles: AnalyticsArticle[] = [
   {
+    slug: 'ai-and-data-infrastructure-in-emerging-markets-opportunity-and-friction',
+    title: 'AI and Data Infrastructure in Emerging Markets: Opportunity and Friction',
+    excerpt:
+      'Overview of how emerging markets are building AI and data infrastructure, the investment opportunities this creates, and the frictions around capital, regulation, and geopolitics.',
+    content: `# AI and Data Infrastructure in Emerging Markets: Opportunity and Friction
+
+## Introduction
+
+Artificial intelligence depends on three pillars: compute, data, and talent. Emerging markets are increasingly active in all three. From data‑center build‑outs and fiber networks to fintech, e‑commerce, and digital public infrastructure, many EM economies are investing in the foundations of an AI‑enabled future.
+
+Yet these efforts unfold in a complex environment:
+
+- Limited fiscal space and higher cost of capital;
+- Regulatory and data‑sovereignty debates;
+- Geopolitical competition over critical technologies and cloud providers.
+
+This article explores how AI and data infrastructure are evolving in emerging markets, the opportunities this creates for investors, and the frictions that must be managed along the way.
+
+## Building Blocks of AI-Ready Infrastructure
+
+### Connectivity and Cloud
+
+Before AI workloads can scale, basic digital infrastructure must be in place:
+
+- High‑quality mobile and fixed broadband networks;
+- Regional and local data centers with adequate power and cooling;
+- Cloud platforms that support modern development and deployment models.
+
+Emerging markets vary widely:
+
+- Some, particularly in Eastern Europe and parts of Asia, already have robust connectivity and growing cloud adoption;
+- Others are still addressing coverage gaps, last‑mile connectivity, and affordability.
+
+Investments in tower companies, fiber networks, and regional data centers are critical enablers and represent attractive opportunities where regulatory frameworks are supportive and demand is clear.
+
+### Data Generation and Digital Public Infrastructure
+
+Digital public infrastructure—such as e‑ID systems, payment rails, and public data platforms—plays a growing role in enabling AI use‑cases. When designed well, these systems:
+
+- Generate high‑quality, standardized data;
+- Reduce transaction frictions for citizens and businesses;
+- Enable private innovation on top of shared rails.
+
+Examples range from digital identity schemes to instant‑payment systems and open‑banking frameworks. Emerging markets that invest early and thoughtfully in these layers may leapfrog legacy models.
+
+## Sector Opportunities in EM AI Adoption
+
+### Financial Services and Fintech
+
+Emerging markets often feature:
+
+- Large unbanked or underbanked populations;
+- Fragmented credit information;
+- High reliance on cash and informal channels.
+
+AI‑enabled fintech can:
+
+- Improve credit scoring using alternative data;
+- Automate risk monitoring and fraud detection;
+- Personalize product offerings at scale.
+
+Banks and fintechs that build robust data and model‑governance capabilities can gain durable advantages—but must navigate consumer‑protection and privacy concerns.
+
+### Commerce, Logistics, and Agriculture
+
+In commerce and logistics, AI helps:
+
+- Optimize inventory and pricing;
+- Improve routing and fleet management;
+- Enhance demand forecasting in volatile environments.
+
+In agriculture, AI and remote‑sensing data can:
+
+- Improve yield forecasts;
+- Optimize input use (water, fertilizer);
+- Support crop‑insurance and risk‑sharing mechanisms.
+
+These applications depend on both connectivity and context‑specific data, often requiring partnerships between private firms, governments, and development institutions.
+
+## Frictions: Capital, Regulation, and Geopolitics
+
+### Higher Cost of Capital and Project Economics
+
+In a higher‑rate global environment, AI and data‑infrastructure projects in EM must clear higher hurdle rates. This can:
+
+- Slow deployment where business models are unproven;
+- Increase reliance on concessional finance or blended‑finance structures;
+- Favor projects with clear, near‑term cash‑flow visibility (e.g., co‑location data centers) over more speculative plays.
+
+Investors should scrutinize:
+
+- Counterparty risks and long‑term contracts;
+- Currency mismatches between funding and revenue;
+- Regulatory stability affecting tariffs and pricing.
+
+### Data Sovereignty and Regulatory Complexity
+
+Governments are increasingly concerned about:
+
+- Where data is stored and processed;
+- Who controls critical infrastructure and algorithms;
+- How to protect privacy and national security.
+
+This can lead to:
+
+- Data‑localization requirements;
+- Restrictions on foreign ownership of critical infrastructure;
+- Complex licensing regimes for cloud and AI providers.
+
+While these measures aim to protect citizens and sovereignty, they can also increase costs and fragment markets. Investors must factor regulatory risk into valuations and structure deals with flexibility.
+
+### Geopolitical Competition and Technology Choices
+
+Emerging markets are often arenas for geopolitical competition over technology standards and vendors. Choices about:
+
+- Cloud providers and hardware vendors;
+- Telecom and equipment suppliers;
+- Cybersecurity partnerships,
+
+can carry strategic implications. Alignments may influence access to financing, technology transfers, and market access.
+
+For investors, this adds a layer of political‑risk analysis to what might otherwise appear as purely commercial infrastructure projects.
+
+## Investment Framework
+
+### Differentiating by Country and Sector
+
+EM AI and data‑infrastructure opportunities are not homogeneous. A structured approach considers:
+
+- **Country factors** – governance quality, macro stability, regulatory frameworks, geopolitical alignment;
+- **Sector dynamics** – competitive intensity, pricing power, barriers to entry;
+- **Project quality** – counterparties, contractual terms, technical robustness.
+
+Blended portfolios may combine listed equities, local‑currency bonds, and private infrastructure exposures, depending on investor mandate and liquidity needs.
+
+### Role of Development Finance and Partnerships
+
+Multilateral development banks and DFIs play a meaningful role by:
+
+- Providing anchor capital and risk‑sharing mechanisms;
+- Supporting regulatory and capacity‑building efforts;
+- Crowding in private capital through guarantees and co‑investment.
+
+Partnerships between commercial investors and development institutions can align risk/return expectations with broader developmental goals, especially in lower‑income or frontier markets.
+
+## Conclusion
+
+AI and data infrastructure in emerging markets represent a long‑term structural theme with meaningful upside—but also significant complexity. The winners will likely be:
+
+- Countries that combine sound macro frameworks with forward‑looking digital and data policies;
+- Companies that balance innovation with robust governance and risk management;
+- Investors who approach the space with patience, diversification, and a realistic view of frictions.
+
+As AI capabilities diffuse globally, emerging markets have the opportunity not merely to import technology but to shape and localize it. For investors in Eastern Europe and broader EM, understanding this trajectory is increasingly central to assessing growth, productivity, and resilience over the coming decade.`,
+    date: formatDate(1),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'longterm',
+    readTime: calculateReadTime(
+      countWords(`# AI and Data Infrastructure in Emerging Markets: Opportunity and Friction
+
+## Introduction
+
+Artificial intelligence depends on three pillars: compute, data, and talent. Emerging markets are increasingly active in all three. From data‑center build‑outs and fiber networks to fintech, e‑commerce, and digital public infrastructure, many EM economies are investing in the foundations of an AI‑enabled future.`)
+    ),
+    imageUrl: getImage('longterm', 1),
+    tags: ['Emerging Markets', 'AI', 'Infrastructure', 'Data', 'Investment'],
+  },
+  {
+    slug: 'emerging-markets-debt-and-fx-in-a-higher-rate-global-cycle',
+    title: 'Emerging Markets Debt and FX in a Higher-Rate Global Cycle',
+    excerpt:
+      'Analysis of how a sustained period of higher global interest rates reshapes risks and opportunities across emerging markets debt and currencies, with a focus on Eastern Europe and frontier markets.',
+    content: `# Emerging Markets Debt and FX in a Higher-Rate Global Cycle
+
+## Introduction
+
+Emerging markets (EM) owe much of their recent history to global liquidity cycles. Periods of abundant capital, low developed‑market yields, and compressed risk premia have supported EM borrowing, currency appreciation, and asset price gains. Conversely, tightening cycles, stronger dollars, and higher real yields have exposed vulnerabilities, particularly where external imbalances and policy credibility were weak.
+
+The current transition toward a higher‑for‑longer global rate regime raises critical questions for EM debt and FX. Eastern European and frontier markets, many of which rely on external financing and face complex geopolitical backdrops, must adapt to:
+
+- Higher global risk‑free rates and term premia;
+- Tighter dollar liquidity and more volatile capital flows;
+- Domestic policy trade‑offs between inflation control and growth.
+
+This article examines how the new rate environment reshapes EM debt and FX dynamics, with a particular focus on Eastern Europe and adjacent regions.
+
+## Global Rate Regime and EM Transmission Channels
+
+### Higher U.S. and European Yields as a Global Benchmark
+
+When U.S. Treasuries and core European government bonds offer low or negative real yields, EM sovereigns can attract capital with relatively modest spreads. As developed‑market real yields normalize:
+
+- The **relative yield advantage** of EM narrows unless spreads widen;
+- Global allocators face a higher hurdle rate to justify EM risk;
+- Funding costs for EM sovereigns and corporates rise.
+
+The key question becomes whether EM fundamentals—growth, demographics, reform momentum—justify spreads that keep all‑in yields attractive versus safer alternatives.
+
+### Dollar Liquidity and Risk Sentiment
+
+Higher global rates often coincide with:
+
+- Stronger dollars, particularly if the Federal Reserve tightens more aggressively than peers;
+- Tighter global liquidity conditions;
+- Higher risk aversion in periods of stress.
+
+For EM, this translates into:
+
+- More expensive external funding in hard currency;
+- Greater pressure on FX reserves and currency stability;
+- Increased importance of credible domestic policy to anchor expectations.
+
+Eastern European markets, many of which are integrated with the EU but maintain their own currencies and monetary frameworks, sit at a sensitive intersection of these forces.
+
+## Eastern Europe: Differentiation Within a Complex Region
+
+### Balance Sheets, External Positions, and Policy Credibility
+
+Emerging Europe is far from homogeneous. Countries differ in:
+
+- Public‑debt levels and currency composition;
+- Current‑account balances and reliance on external funding;
+- Quality and independence of monetary and fiscal institutions.
+
+Countries with:
+
+- Moderate debt levels,
+- Predominantly local‑currency obligations,
+- Flexible exchange rates,
+- Credible inflation‑targeting regimes,
+
+are better positioned to navigate higher global rates than those with heavy FX debt burdens and fragile policy credibility.
+
+### EU Integration, Structural Funds, and Safety Nets
+
+For EU members in Eastern Europe, access to structural funds and EU policy frameworks provides an important buffer. Even in a higher‑rate world:
+
+- EU transfers support investment and growth;
+- EU institutions reinforce reform momentum and governance standards;
+- Market perceptions of tail risk can be more benign than for non‑EU peers.
+
+However, political noise and rule‑of‑law disputes can still affect spreads and capital flows, particularly when global risk appetite is fragile.
+
+## Local-Currency vs. Hard-Currency EM Debt
+
+### Local-Currency Debt: Real Rates and FX Dynamics
+
+In a higher‑rate world, EM local‑currency debt offers:
+
+- Potentially attractive real yields where central banks have tightened aggressively;
+- Exposure to FX moves that can either amplify or erode returns;
+- A more diversified investor base in some markets, including local institutions.
+
+Key considerations for investors include:
+
+- Are **real policy rates** positive and sufficient to anchor inflation expectations?
+- Is the **FX regime** credible, with adequate reserves and flexible responses to shocks?
+- How sensitive is the currency to global risk sentiment and terms‑of‑trade moves?
+
+Eastern European central banks that moved early and forcefully against inflation may now offer high real yields with prospects for gradual easing—creating a potential sweet spot for local‑currency debt if global conditions cooperate.
+
+### Hard-Currency Debt: Spreads vs. Default Risk
+
+Hard‑currency sovereign and corporate debt remains a core EM asset class. In a higher global rate environment:
+
+- **Base yields** rise with Treasuries and Bunds;
+- **Spreads** may need to widen to compensate for increased funding costs and macro uncertainty;
+- **Debt sustainability metrics** become more binding as interest expenses climb.
+
+Investors must examine:
+
+- Debt‑to‑GDP trajectories under realistic growth and rate scenarios;
+- FX mismatch between revenues and liabilities;
+- Access to multilateral support in stress scenarios.
+
+For more fragile frontier markets, even moderate additional tightening can push financing needs beyond market tolerance, increasing restructuring risk.
+
+## FX Markets: Real Rates, Terms of Trade, and Risk Premia
+
+### Real Rate Differentials and Carry
+
+Carry strategies—funding in low‑yielding currencies and investing in higher‑yielding EM FX—have historically performed well when:
+
+- Volatility is low;
+- Real rate differentials are wide and stable;
+- Capital flows are supportive.
+
+In a higher‑for‑longer world:
+
+- Developed‑market rates compete more directly with EM carry;
+- Episodes of volatility can quickly unwind crowded positions;
+- Real rate differentials may compress as EM central banks eventually cut.
+
+Investors should focus less on raw carry and more on **real rate credibility**—markets where central banks can sustain positive real rates without undermining growth excessively.
+
+### Terms of Trade and Energy Transition
+
+Terms‑of‑trade shifts also interact with higher global rates. Energy exporters in EM may benefit from:
+
+- Elevated commodity prices supporting fiscal and external balances;
+- Stronger currencies during favorable phases of the cycle.
+
+Importers, especially in Eastern Europe’s energy‑intensive economies, face:
+
+- Higher import bills tightening fiscal and external positions;
+- More complex trade‑offs between inflation, growth, and FX stability.
+
+The ongoing energy transition adds another layer, creating winners and losers based on resource endowments, policy frameworks, and investment capacity.
+
+## Positioning and Risk Management
+
+### Differentiation Over Generalization
+
+In a higher‑rate world, the case for **differentiation** within EM strengthens:
+
+- Strong balance sheets, credible policy, and reform momentum should command a premium.
+- Weak governance, high external debt, and limited buffers should trade at meaningful discounts—if at all.
+
+Regional and thematic baskets remain useful tools, but bottom‑up country selection and credit analysis become more important than in liquidity‑driven rallies.
+
+### Building Robust EM Exposures
+
+Investors can build more resilient EM allocations by:
+
+- Combining **local‑currency and hard‑currency** exposures to balance FX and credit risk;
+- Favoring **shorter‑duration, higher‑quality** issues where refinancing risk is manageable;
+- Using **hedging tools** (FX forwards, options) to shape risk profiles.
+
+Position sizing should reflect both volatility and liquidity—allocations that look small in calm markets can feel much larger in stress scenarios when bid‑ask spreads widen and capital takes longer to return.
+
+## Conclusion
+
+A higher‑for‑longer global rate regime does not close the door on emerging markets, but it raises the bar for capital allocation. Governments and corporates that built resilience—through prudent debt management, credible policy, and integration into stable institutional frameworks—are better placed to navigate the new environment. Others may face a more abrupt and costly adjustment.
+
+For investors, the task is to move beyond simple yield comparisons and focus on real rates, balance sheets, policy credibility, and currency dynamics. In doing so, they can still find compelling opportunities in emerging markets debt and FX—particularly in parts of Eastern Europe and adjacent regions that combine attractive yields with improving fundamentals—even as the era of easy money recedes into the past.`,
+    date: formatDate(0),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Emerging Markets Debt and FX in a Higher-Rate Global Cycle
+
+## Introduction
+
+Emerging markets (EM) owe much of their recent history to global liquidity cycles. Periods of abundant capital, low developed‑market yields, and compressed risk premia have supported EM borrowing, currency appreciation, and asset price gains. Conversely, tightening cycles, stronger dollars, and higher real yields have exposed vulnerabilities, particularly where external imbalances and policy credibility were weak.
+
+The current transition toward a higher‑for‑longer global rate regime raises critical questions for EM debt and FX. Eastern European and frontier markets, many of which rely on external financing and face complex geopolitical backdrops, must adapt to:
+
+- Higher global risk‑free rates and term premia;
+- Tighter dollar liquidity and more volatile capital flows;
+- Domestic policy trade‑offs between inflation control and growth.
+
+This article examines how the new rate environment reshapes EM debt and FX dynamics, with a particular focus on Eastern Europe and adjacent regions.`)
+    ),
+    imageUrl: getImage('markets', 0),
+    tags: ['Emerging Markets', 'Debt', 'FX', 'Interest Rates', 'Eastern Europe'],
+  },
+  {
     slug: 'eastern-europe-macro-economic-outlook',
     title: 'Eastern Europe Macro: Economic Outlook and Investment Implications',
     excerpt: 'Analysis of Eastern European economies, examining growth drivers, policy dynamics, and investment opportunities. Assessment of key markets, sector trends, and risks in the region.',
@@ -1167,5 +1526,272 @@ Central & Eastern Europe (CEE) offers exposure to converging economies, open tra
     ),
     imageUrl: getImage('markets', 263),
     tags: ['CEE', 'Equities', 'Privatization', 'Emerging Europe', 'Liquidity'],
+  },
+  {
+    slug: 'turkey-equities-and-lira-risk-new-policy-mix',
+    title: 'Turkey Equities and Lira Risk: Navigating the New Policy Mix',
+    excerpt:
+      'How Turkey’s evolving monetary and fiscal policy mix, FX dynamics, and corporate balance sheets shape equity risk/return—and what that means for sector selection and position sizing.',
+    content: `# Turkey Equities and Lira Risk: Navigating the New Policy Mix
+
+## Introduction
+
+Turkey has long attracted—and tested—emerging‑market investors. Its equity market offers:
+
+- Large, liquid banks and industrials.
+- Consumer and logistics names geared to a young, urbanizing population.
+- Exporters linked to European and Middle Eastern demand.
+
+At the same time, investors must contend with:
+
+- Episodes of unorthodox monetary policy.
+- High and volatile inflation.
+- Sharp moves in the Turkish lira (TRY).
+
+Recent shifts toward a more orthodox policy mix have re‑ignited debate about whether Turkey is entering a new, more investable phase or simply another tactical window. This article outlines a framework for analyzing Turkey’s equity market in the context of macro policy, FX, and sector dynamics.
+
+## Macro Backdrop and Policy Regimes
+
+### From Unorthodox to Gradually More Orthodox
+
+Over the past decade, Turkey has experienced:
+
+- Periods of **unconventional monetary policy**:
+  - Reluctance to keep policy rates high despite inflation.
+  - Use of regulatory and macroprudential tools to steer credit.
+- Episodes of:
+  - Sharp TRY depreciation.
+  - High and volatile inflation.
+
+More recently, authorities have signaled:
+
+- A shift toward higher nominal policy rates.
+- Efforts to simplify the policy framework.
+- A desire to rebuild credibility with investors.
+
+For equities, this transition phase is critical:
+
+- It can:
+  - Improve macro stability if sustained.
+  - Support banks’ margins and reduce tail risk.
+- But policy **reversals** or partial implementation remain key risks.
+
+### Inflation, Growth, and External Balances
+
+Turkey’s economy is:
+
+- Relatively large and diversified.
+- Driven by:
+  - Domestic consumption.
+  - Construction and real estate.
+  - Export‑oriented manufacturing and tourism.
+
+However:
+
+- Persistent inflation has eroded real incomes.
+- The current account has been:
+  - Sensitive to energy prices.
+  - Influenced by domestic demand cycles and tourism revenues.
+
+Equity investors must keep a close eye on:
+
+- The trajectory of inflation under the new policy mix.
+- The balance between:
+  - Growth support.
+  - External‑balance and inflation control.
+
+## Key Sectors: Banks, Exporters, and Domestic Demand
+
+### Banks: Leverage to Policy and Lira Dynamics
+
+Turkish banks play a central role in:
+
+- Financing the economy.
+- Transmitting monetary policy to households and firms.
+
+They are exposed to:
+
+- **Interest‑rate risk**:
+  - Changes in policy and bond yields affect asset and liability pricing.
+- **FX risk**:
+  - Borrowers with FX debt but TRY cash flows.
+  - Regulatory limits and hedging requirements partially mitigate this.
+
+Recent policy shifts toward higher rates have:
+
+- The potential to:
+  - Normalize margins over time.
+  - Strengthen the lira if sustained.
+- Short‑term pressure on:
+  - Funding costs.
+  - Borrower repayment capacity.
+
+Investors should evaluate:
+
+- Capital adequacy and provisioning policies.
+- Asset‑quality trends in:
+  - Corporate loans.
+  - Household and SME segments.
+- Regulatory changes affecting:
+  - Securities portfolios.
+  - FX exposure management.
+
+### Exporters and Industrial Names
+
+Export‑oriented companies can:
+
+- Benefit from:
+  - Competitive cost structures.
+  - A weaker TRY improving price competitiveness.
+- Suffer from:
+  - Input‑cost volatility.
+  - Trade and geopolitical tensions.
+
+Key industries include:
+
+- Autos and components.
+- White goods and appliances.
+- Textiles and apparel.
+
+Investors should distinguish between:
+
+- Firms with:
+  - Strong brands and distribution networks abroad.
+  - Robust balance sheets and risk management.
+- More commoditized producers with:
+  - Thin margins.
+  - High leverage.
+
+### Domestic Demand and Consumer Names
+
+Consumer, retail, and logistics companies are:
+
+- Levered to:
+  - Real‑income trends.
+  - Employment and wage dynamics.
+  - Credit availability.
+
+In high‑inflation environments:
+
+- Inventory and pricing management become critical.
+- Companies that:
+  - Adjust prices quickly.
+  - Manage working capital tightly.
+  may defend margins better.
+
+However, elevated rates and inflation can:
+
+- Weigh on discretionary spending.
+- Increase credit risk in retail portfolios.
+
+## FX and Equity Risk: Thinking About the Lira
+
+### TRY as a Central Risk Channel
+
+For foreign investors, TRY performance is often:
+
+- The dominant driver of **total returns** in unhedged equity allocations.
+
+TRY can:
+
+- Rallies under:
+  - Credible policy tightening.
+  - Improved external balances.
+  - Positive surprises on reform.
+- Weaken sharply when:
+  - Policy appears unsustainable.
+  - Geopolitical risks flare.
+  - Global risk appetite turns.
+
+### Hedging Considerations
+
+Hedging TRY exposure:
+
+- Can reduce FX volatility.
+- May be:
+  - Expensive or capacity‑constrained, depending on instruments and tenors.
+
+Investors must decide:
+
+- Whether Turkey is:
+  - A **tactical bet** sized small enough to tolerate FX swings.
+  - Or a more **strategic allocation** where partial hedging could make sense.
+
+## Portfolio Construction and Risk Management
+
+### Sizing and Time Horizon
+
+Given macro and FX volatility, Turkey is best approached as:
+
+- A **small satellite allocation** within EM or EMEA portfolios.
+
+Position sizes should:
+
+- Reflect:
+  - Risk tolerance for:
+    - Double‑digit drawdowns.
+    - Policy surprises.
+  - Liquidity of key names.
+
+Short‑term traders may focus on:
+
+- Cycles in policy communication and inflows.
+
+Long‑horizon investors should:
+
+- Require a:
+  - Clear narrative on policy normalization.
+  - Buffer against reversals.
+
+### Stock Selection and Governance
+
+Corporate governance and shareholder treatment vary:
+
+- Some Turkish companies:
+  - Have improved disclosures.
+  - Follow international standards.
+- Others:
+  - Remain more opaque.
+  - Exhibit cyclical or politically influenced decision‑making.
+
+Investors should:
+
+- Focus on:
+  - Governance quality.
+  - Capital‑allocation discipline.
+  - Balance‑sheet resilience.
+
+## Conclusion
+
+Turkey offers a combination of:
+
+- Deep equity liquidity.
+- Exposure to:
+  - Banks.
+  - Exporters.
+  - Domestic demand.
+- Elevated macro and FX volatility.
+
+The recent shift toward a more orthodox policy mix may **improve the risk‑reward balance**, but credibility must be earned over time, not assumed. For investors, Turkey is best treated as:
+
+- A targeted, risk‑budgeted exposure.
+- Built on:
+  - Careful bank and corporate selection.
+  - Explicit views on the lira and policy path.
+
+With such a framework, Turkey can complement broader emerging‑Europe allocations, offering upside in reform and normalization scenarios without overwhelming portfolio risk.`,
+    date: formatDate(264),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Turkey Equities and Lira Risk: Navigating the New Policy Mix
+
+## Introduction
+
+Turkey has long attracted—and tested—emerging‑market investors, combining deep equity liquidity with macro and FX volatility.`),
+    ),
+    imageUrl: getImage('markets', 264),
+    tags: ['Turkey', 'Emerging Markets', 'Equities', 'FX', 'Macro'],
   },
 ];

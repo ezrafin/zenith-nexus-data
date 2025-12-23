@@ -26,6 +26,370 @@ const countWords = (text: string): number => {
 // Isabelle Dubois - ESG & Sustainable Finance (113 articles)
 export const isabelleArticles: AnalyticsArticle[] = [
   {
+    slug: 'ai-climate-data-and-the-next-generation-of-esg-analytics',
+    title: 'AI, Climate Data, and the Next Generation of ESG Analytics',
+    excerpt:
+      'Exploration of how AI and improved climate data are transforming ESG analytics, from physical-risk assessment to portfolio alignment and engagement strategies.',
+    content: `# AI, Climate Data, and the Next Generation of ESG Analytics
+
+## Introduction
+
+Environmental, Social, and Governance (ESG) investing has evolved from exclusion lists to more sophisticated integration of sustainability factors into risk and return analysis. Yet practitioners continue to grapple with data gaps, inconsistent metrics, and the complexity of modeling long‑horizon climate and social risks.
+
+The rise of AI and the rapid expansion of climate‑related and alternative data are changing this landscape. New tools allow investors to:
+
+- Map physical climate risks at asset level;
+- Analyze corporate disclosures and controversies at scale;
+- Model transition pathways and portfolio alignment with climate goals.
+
+This article examines how AI and climate data are reshaping ESG analytics and what this means for sustainable investment practices.
+
+## The Data Challenge in ESG
+
+### Incomplete, Inconsistent, and Lagged Data
+
+ESG data has long been characterized by:
+
+- Patchy company reporting, especially outside large caps and developed markets;
+- Divergent methodologies and scores across providers;
+- Time lags between real‑world events and reflected metrics.
+
+These issues complicate:
+
+- Cross‑issuer comparisons;
+- Trend analysis;
+- Integration into quantitative models.
+
+AI does not solve these challenges entirely, but it can:
+
+- Extract additional insights from unstructured sources;
+- Harmonize and cross‑validate disparate data sets;
+- Highlight inconsistencies or anomalies more efficiently.
+
+### The Rise of Climate and Physical-Risk Data
+
+Climate analytics bring new dimensions:
+
+- Asset‑level exposure to heat, floods, storms, and sea‑level rise;
+- Scenario‑based projections of hazard frequency and intensity;
+- Estimates of potential damage, downtime, or stranded‑asset risk.
+
+Combining these with traditional financial and ESG metrics allows for a more holistic view of climate risk.
+
+## AI Techniques in ESG and Climate Analytics
+
+### Natural Language Processing (NLP)
+
+NLP models can process:
+
+- Corporate reports and regulatory filings;
+- News and NGO reports;
+- Proxy statements and shareholder resolutions.
+
+They help:
+
+- Identify relevant ESG topics and controversies;
+- Assess the tone and specificity of climate and sustainability commitments;
+- Compare corporate narratives with actual performance and events.
+
+Large language models can assist analysts in summarizing complex disclosures and generating structured data from text, while human oversight remains critical to avoid hallucinations and misinterpretation.
+
+### Computer Vision and Geospatial Analytics
+
+Computer vision and geospatial tools, combined with satellite imagery, can:
+
+- Monitor land‑use changes and deforestation;
+- Track emissions proxies from industrial sites;
+- Assess exposure of assets to physical hazards.
+
+These techniques can validate or challenge self‑reported data and extend coverage to privately held or less transparent entities.
+
+### Scenario Modeling and Portfolio Analytics
+
+AI‑assisted models can:
+
+- Generate probabilistic views of future climate and policy pathways;
+- Estimate potential impacts on sectors and business models;
+- Simulate portfolio performance under different transition and physical‑risk scenarios.
+
+The goal is not to predict a single future, but to understand the range of plausible outcomes and identify robust positions across them.
+
+## From Data to Investment Decisions
+
+### Integrating AI-Enhanced ESG Insights
+
+Enhanced ESG and climate data should feed into:
+
+- **Security selection** – Identifying issuers with strong or improving sustainability profiles relative to peers;
+- **Risk management** – Flagging concentrations in high‑risk sectors or geographies;
+- **Thematic and impact strategies** – Targeting solutions providers in climate adaptation, mitigation, and social inclusion.
+
+AI‑driven analytics can surface patterns that might be difficult to detect manually, but they must be contextualized within sector knowledge and fundamental analysis.
+
+### Engagement and Stewardship
+
+Better data also strengthens engagement:
+
+- Investors can set more concrete expectations and KPIs;
+- Progress (or lack thereof) can be tracked more objectively;
+- Engagement priorities can be targeted where risk and influence are greatest.
+
+AI tools can help teams:
+
+- Prioritize issuers for engagement based on risk and opportunity;
+- Track engagements over time and link them to voting and investment decisions;
+- Communicate outcomes to stakeholders in a transparent way.
+
+## Governance, Ethics, and Model Risk
+
+### Transparency and Explainability
+
+As AI models inform investment decisions, questions arise:
+
+- How transparent are the inputs and assumptions?
+- Can portfolio managers and clients understand why a model flags a risk or opportunity?
+- How are biases identified and mitigated?
+
+Investors should:
+
+- Favor models and tools with interpretable outputs;
+- Establish clear governance around model development, validation, and use;
+- Combine AI‑based insights with human judgment and accountability.
+
+### Data Privacy and Responsible Use
+
+The use of alternative and geospatial data raises privacy and ethical questions. Responsible use requires:
+
+- Compliance with data‑protection regulations;
+- Respect for community rights and consent where relevant;
+- Careful consideration of unintended consequences.
+
+Sustainable investing should model responsible data practices as well as environmental and social outcomes.
+
+## Practical Steps for Investors
+
+### Building Capabilities
+
+Investors seeking to harness AI and climate data should:
+
+- Invest in data infrastructure and quality controls;
+- Build cross‑functional teams spanning sustainability, investment, and data science;
+- Start with pilot projects that address concrete use‑cases (e.g., physical‑risk mapping, controversy monitoring).
+
+### Measuring Impact
+
+Success should be measured not just by model sophistication but by:
+
+- Improved risk detection and mitigation;
+- Better alignment with climate and sustainability objectives;
+- Clearer, more decision‑useful reporting to clients and beneficiaries.
+
+## Conclusion
+
+AI and climate data are transforming ESG analytics from a reactive, score‑based exercise into a more forward‑looking, granular, and decision‑relevant discipline. They enable investors to see beyond static ratings and better understand how environmental and social factors shape financial risk and opportunity.
+
+Used thoughtfully—within robust governance frameworks and alongside fundamental analysis—these tools can enhance both sustainability and financial outcomes. They are not a substitute for judgment, but a powerful complement for investors navigating a world where climate and ESG considerations are increasingly central to long‑term value creation.`,
+    date: formatDate(1),
+    author: 'Isabelle Dubois',
+    authorAvatar: getAuthorAvatar('Isabelle Dubois'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# AI, Climate Data, and the Next Generation of ESG Analytics
+
+## Introduction
+
+Environmental, Social, and Governance (ESG) investing has evolved from exclusion lists to more sophisticated integration of sustainability factors into risk and return analysis. Yet practitioners continue to grapple with data gaps, inconsistent metrics, and the complexity of modeling long‑horizon climate and social risks.`)
+    ),
+    imageUrl: getImage('expert', 1),
+    tags: ['ESG', 'AI', 'Climate Data', 'Sustainable Investing', 'Analytics'],
+  },
+  {
+    slug: 'esg-and-green-bonds-in-a-higher-cost-of-capital-world',
+    title: 'ESG and Green Bonds in a Higher Cost of Capital World',
+    excerpt:
+      'Examination of how a structurally higher cost of capital reshapes sustainable finance, from green bond issuance and pricing to project selection, additionality, and impact measurement.',
+    content: `# ESG and Green Bonds in a Higher Cost of Capital World
+
+## Introduction
+
+Sustainable finance matured in an era of low interest rates, quantitative easing, and abundant liquidity. Green, social, and sustainability bonds proliferated as issuers sought to diversify their investor base and signal alignment with environmental and social objectives. Investors, in turn, were often willing to accept modest yield concessions—the so‑called “greenium”—in exchange for transparency and impact.
+
+The shift toward a higher‑for‑longer rate regime changes the calculus for both sides of the market. Higher risk‑free yields and tighter financial conditions force:
+
+- Issuers to reassess which projects clear higher hurdle rates;
+- Investors to scrutinize whether green bonds still warrant yield concessions;
+- Policymakers to consider how to mobilize private capital for the energy transition amid more expensive funding.
+
+This article analyzes how sustainable finance—and green bonds in particular—must adapt to a world where capital has a higher explicit cost.
+
+## The Cost of Capital and Sustainable Investment Decisions
+
+### Higher Hurdle Rates and Project Selection
+
+For corporates, utilities, and sovereigns, higher discount rates affect which sustainability projects are economically viable. Capital‑intensive investments in:
+
+- Renewable generation;
+- Grid modernization and storage;
+- Energy efficiency retrofits;
+- Low‑carbon industrial processes,
+
+must now yield returns that exceed higher weighted average cost of capital (WACC). Projects that looked attractive at a 5–6% discount rate may struggle at 8–10% unless:
+
+- Technology costs continue to fall;
+- Policy frameworks offer stable, credible support (subsidies, contracts‑for‑difference, carbon pricing);
+- Co‑benefits (e.g., resilience, regulatory compliance, customer retention) are properly valued.
+
+The immediate risk is a slowdown in marginal projects. The opportunity is a more disciplined allocation of capital toward high‑impact, economically robust decarbonization pathways.
+
+### Sectoral Differences
+
+Impacts vary by sector:
+
+- **Regulated utilities** may be able to pass through higher financing costs to tariffs, subject to regulatory oversight and political constraints.
+- **Non‑regulated corporates** face greater pressure to demonstrate that green capex generates competitive advantages—cost savings, brand value, or market access.
+- **Sovereigns and supranationals** must balance fiscal constraints with long‑term climate commitments, leveraging MDBs and blended‑finance structures where appropriate.
+
+Investors should expect greater scrutiny of use‑of‑proceeds frameworks and more granular disclosure around project economics.
+
+## Green Bond Market Dynamics Under Higher Rates
+
+### The Evolution of the “Greenium”
+
+Empirical evidence on the greenium—yield differentials between green and conventional bonds of the same issuer—has been mixed and modest in scale. In a higher‑rate world:
+
+- The absolute level of yields rises across the curve;
+- The relative importance of a few basis points of greenium may shrink in investors’ decision‑making;
+- Price discovery may become more sensitive to liquidity and credit concerns than ESG labels alone.
+
+Investors should ask:
+
+- Does the green label correspond to robust frameworks and transparent reporting?
+- Is the bond structurally identical to conventional peers (pari passu, same seniority)?
+- Are there liquidity constraints that could offset any theoretical pricing benefit?
+
+The greenium, where it exists, is likely to be earned—not granted—based on quality and credibility rather than branding.
+
+### Supply, Demand, and Market Depth
+
+On the supply side:
+
+- Some issuers may delay or scale back green issuance if overall funding needs decrease or if projects are reprioritized.
+- Others may accelerate issuance to lock in funding for strategic transition plans before spreads widen further.
+
+On the demand side:
+
+- Dedicated ESG mandates and Article 8/9 funds continue to support structural demand.
+- Generalist investors, facing attractive yields across conventional bonds, may be more selective—favoring green issues that combine sound credit, reasonable valuations, and genuine impact.
+
+Overall, sustainable bond markets are likely to continue growing, but with more emphasis on quality, additionality, and integration into broader portfolio construction.
+
+## Integrating ESG in a Higher-Rate Fixed Income Portfolio
+
+### From Label-Based to Outcome-Focused Approaches
+
+Higher rates encourage investors to move beyond label‑based allocations and toward more holistic ESG integration:
+
+- Assessing how ESG factors influence credit risk and spread behavior;
+- Evaluating whether green and sustainability bonds contribute to portfolio objectives beyond signaling;
+- Integrating climate and transition risk into sector and duration positioning.
+
+In this context, green bonds can play several roles:
+
+- As **instruments** that finance specific, impactful projects;
+- As **signals** of issuer strategy and governance quality;
+- As **data sources** that enhance investors’ understanding of climate and ESG risks.
+
+### Climate and Transition Risk in Spread Pricing
+
+Higher‑for‑longer rates do not eliminate climate risk; they change how it is priced. Investors must consider:
+
+- Physical risks (e.g., acute weather events, chronic climate shifts) that can affect assets, collateral, and cash flows;
+- Transition risks (e.g., policy changes, technology disruption, demand shifts) that may alter credit trajectories.
+
+Issuers that proactively manage these risks—through credible transition plans, scenario analysis, and governance—may deserve tighter spreads relative to peers, even when base yields rise.
+
+## Policy, Regulation, and Market Infrastructure
+
+### Taxonomies, Disclosure, and Data
+
+In Europe and beyond, sustainable finance taxonomies, disclosure requirements (such as SFDR and CSRD), and climate‑related reporting frameworks are strengthening the foundations of ESG investing. In a higher‑rate world, these tools become even more important:
+
+- Clear definitions help prevent greenwashing and direct capital toward genuinely sustainable activities;
+- Enhanced data allows investors to differentiate issuers based on real progress, not marketing;
+- Comparable metrics support better risk and impact assessment.
+
+As compliance costs rise, smaller issuers may rely more on standardized frameworks and third‑party verification to access sustainable debt markets efficiently.
+
+### Public-Private Blended Finance
+
+Given the scale of investment needed for the energy transition and climate adaptation, public balance sheets alone cannot carry the burden—especially when higher rates raise fiscal pressures. Blended‑finance structures, involving:
+
+- Multilateral development banks (MDBs);
+- Development finance institutions (DFIs);
+- Guarantees, subordinated tranches, and first‑loss capital,
+
+can crowd in private investors by adjusting risk/return profiles without distorting markets excessively.
+
+Green, social, and sustainability bonds issued by MDBs and DFIs remain key building blocks in such architectures, particularly in emerging markets where country risk is higher.
+
+## Practical Considerations for Investors
+
+### Due Diligence on Green Bond Frameworks
+
+Investors should rigorously evaluate green bond frameworks, focusing on:
+
+- Alignment with recognized standards (ICMA, EU Green Bond Standard, etc.);
+- Governance of project selection and management of proceeds;
+- Quality, frequency, and granularity of impact reporting.
+
+In a higher‑rate environment, **quality differentiation** within the green bond universe becomes more important than simply increasing allocation to the label.
+
+### Portfolio Construction and Reporting
+
+Integrating green and sustainable bonds into portfolios involves:
+
+- Setting clear objectives (risk, return, and impact);
+- Defining constraints (e.g., minimum percentage of green assets, sector exclusions, climate alignment targets);
+- Establishing reporting practices that communicate both financial and sustainability outcomes.
+
+Investors can use:
+
+- Climate metrics (e.g., financed emissions, temperature alignment);
+- Use‑of‑proceeds allocation data;
+- Project‑level impact indicators (e.g., renewable capacity installed, emissions avoided).
+
+These tools help demonstrate that sustainable fixed income allocations remain consistent with fiduciary duties even in a higher‑rate world.
+
+## Conclusion
+
+The rise in global interest rates and the end of the ultra‑accommodative monetary era are forcing a re‑pricing of assets across the board. For ESG and green bonds, this environment is a stress test—but also an opportunity.
+
+Issuers must prioritize high‑quality, economically robust projects that can justify higher hurdle rates and deliver measurable impact. Investors must sharpen their focus on credibility, additionality, and integration of ESG factors into core risk and return analysis. Policymakers and public institutions must design frameworks that mobilize private capital without distorting markets or compromising standards.
+
+If these actors succeed, sustainable finance can emerge from the higher‑rate adjustment not as a niche or marketing exercise, but as a disciplined, mainstream channel for financing the transition to a more resilient and sustainable economy—even when capital is no longer cheap.`,
+    date: formatDate(0),
+    author: 'Isabelle Dubois',
+    authorAvatar: getAuthorAvatar('Isabelle Dubois'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# ESG and Green Bonds in a Higher Cost of Capital World
+
+## Introduction
+
+Sustainable finance matured in an era of low interest rates, quantitative easing, and abundant liquidity. Green, social, and sustainability bonds proliferated as issuers sought to diversify their investor base and signal alignment with environmental and social objectives. Investors, in turn, were often willing to accept modest yield concessions—the so‑called “greenium”—in exchange for transparency and impact.
+
+The shift toward a higher‑for‑longer rate regime changes the calculus for both sides of the market. Higher risk‑free yields and tighter financial conditions force:
+
+- Issuers to reassess which projects clear higher hurdle rates;
+- Investors to scrutinize whether green bonds still warrant yield concessions;
+- Policymakers to consider how to mobilize private capital for the energy transition amid more expensive funding.
+
+This article analyzes how sustainable finance—and green bonds in particular—must adapt to a world where capital has a higher explicit cost.`)
+    ),
+    imageUrl: getImage('expert', 0),
+    tags: ['ESG', 'Green Bonds', 'Sustainable Finance', 'Interest Rates', 'Energy Transition'],
+  },
+  {
     slug: 'esg-integration-investment-framework',
     title: 'ESG Integration: An Investment Framework for Sustainable Returns',
     excerpt: 'Comprehensive guide to integrating Environmental, Social, and Governance factors into investment decisions. Analysis of ESG frameworks, data quality, and the relationship between ESG performance and financial returns.',
@@ -1121,5 +1485,226 @@ Within ESG, environmental and climate topics have dominated investor attention, 
     ),
     imageUrl: getImage('expert', 328),
     tags: ['Social', 'Labor Rights', 'Human Capital', 'ESG', 'Sustainable Investing'],
+  },
+  {
+    slug: 'impact-investing-and-additionality-in-public-markets',
+    title: 'Impact Investing and Additionality in Public Markets: What Really Counts?',
+    excerpt:
+      'How investors can define and assess impact in listed equities and bonds, distinguish real additionality from narrative, and align impact ambitions with fiduciary and portfolio constraints.',
+    content: `# Impact Investing and Additionality in Public Markets: What Really Counts?
+
+## Introduction
+
+Impact investing has moved from niche to mainstream vocabulary, but much of the original concept—deploying capital with the **intent to generate measurable environmental or social outcomes alongside financial returns**—was rooted in private markets. In listed equities and public bonds, the question of **additionality** is more complex:
+
+- Does buying or holding a share in the secondary market create impact?
+- How can investors credibly claim to have influenced real‑world outcomes?
+
+This article explores practical ways to think about impact and additionality in public markets, and how to design strategies that are ambitious but honest about what they can and cannot achieve.
+
+## What Is Impact and Why Additionality Matters
+
+### Impact vs. ESG Integration
+
+ESG integration:
+
+- Focuses on how **environmental, social, and governance factors** affect risk and return.
+- Does not necessarily seek to change real‑world outcomes.
+
+Impact investing adds:
+
+- **Intentionality** – a clear objective to contribute to specific environmental or social goals.
+- **Measurability** – tracking and reporting of outcomes.
+
+In private markets, additionality often comes from:
+
+- Providing growth capital where it is scarce.
+- Engaging directly with management on strategy.
+- Supporting new business models or technologies.
+
+In public markets, capital is:
+
+- More fungible.
+- Marginal trades move prices and cost of capital incrementally.
+
+Understanding where and how public‑market investors can still be additional is crucial.
+
+## Channels of Impact in Public Markets
+
+### 1. Primary Issuances: New Capital
+
+Impact is most direct when:
+
+- Investors participate in:
+  - **Green, social, sustainability, or sustainability‑linked bonds** that finance specific projects.
+  - **Equity offerings** (IPOs, rights issues) where proceeds fund:
+    - Renewable energy.
+    - Affordable housing.
+    - Healthcare access.
+
+In these cases:
+
+- Capital is **new** to the issuer.
+- Use‑of‑proceeds and KPI frameworks can be tied to:
+  - Defined impact outcomes.
+
+Additionality depends on:
+
+- Whether investor participation:
+  - Enables a transaction that would not otherwise occur.
+  - Improves terms for impactful projects compared with conventional financing.
+
+### 2. Engagement and Stewardship
+
+Active ownership can create impact by:
+
+- Influencing:
+  - Corporate strategy.
+  - Capital allocation (e.g., more capex into low‑carbon or inclusive products).
+  - Governance and risk‑management practices.
+
+Examples:
+
+- Pushing for:
+  - Science‑based climate targets.
+  - Stronger safety and labor‑rights policies.
+  - Enhanced product‑safety standards.
+
+Additionality here comes from:
+
+- The **quality and persistence** of engagement.
+- Coordination across investors to:
+  - Amplify messages.
+  - Avoid fragmented or contradictory signals.
+
+### 3. Signaling and Cost of Capital
+
+Even in secondary markets, investor preferences can:
+
+- Affect **valuations and spreads**:
+  - Higher demand for sustainability leaders can:
+    - Lower their cost of capital over time.
+  - Persistent discounts for laggards may:
+    - Pressure boards and management to adapt.
+
+This channel is:
+
+- Diffuse and difficult to measure.
+- More likely to be impactful when:
+  - There is broad investor alignment.
+  - Policy and regulatory frameworks reinforce market signals.
+
+## Designing Public-Market Impact Strategies
+
+### Clarifying Ambition and Constraints
+
+Investors must first define:
+
+- **Impact objectives** – climate, biodiversity, health, inclusion, etc.
+- **Asset classes and tools** – equities, corporate and sovereign bonds, labelled instruments.
+- **Fiduciary and risk constraints**:
+  - Return targets and risk budgets.
+  - Liquidity needs.
+  - Regulatory and client‑mandate boundaries.
+
+This clarity avoids:
+
+- Over‑promising on impact where tools are limited.
+- Under‑utilizing available levers (e.g., stewardship) where constraints are manageable.
+
+### Building an Impact Thesis per Holding
+
+For each high‑conviction impact holding, investors should articulate:
+
+- **What is the company or issuer’s contribution?**
+  - Products and services (e.g., renewable energy, health technologies).
+  - Operational improvements (e.g., decarbonization of a heavy emitter).
+- **What is our theory of change as investors?**
+  - Are we:
+    - Supporting growth via capital?
+    - Driving change via engagement?
+    - Sending a valuation signal alongside other investors?
+- **How will we measure progress?**
+  - Quantitative KPIs where feasible.
+  - Qualitative milestones in governance or strategy.
+
+This ensures that:
+
+- Impact claims are linked to a concrete investor role.
+- Portfolios are not simply “holding good companies” without a clear additionality story.
+
+## Avoiding Overclaiming and Impact-Washing
+
+### Honest Attribution
+
+Public‑market investors should avoid:
+
+- Taking full credit for outcomes:
+  - Driven primarily by regulation, consumer behavior, or technology trends.
+- Equating:
+  - Any ownership in a “green” company with meaningful incremental impact.
+
+More credible practice:
+
+- Acknowledge:
+  - Multi‑factor drivers of change.
+  - The incremental nature of public‑market influence.
+- Highlight:
+  - Cases where engagement or capital clearly affected:
+    - Timing.
+    - Ambition.
+    - Scope of corporate actions.
+
+### Transparency on Trade-Offs
+
+Impact strategies can involve:
+
+- Sector or factor tilts versus standard benchmarks.
+- Constraints on:
+  - Holding certain high‑emitting business models.
+  - Investing in issuers without credible transition plans.
+
+Investors should be transparent about:
+
+- Expected impacts on:
+  - Risk.
+  - Return.
+  - Tracking error.
+- The rationale for any deviations.
+
+This supports:
+
+- Better client understanding.
+- More robust internal governance.
+
+## Conclusion
+
+Impact investing in public markets is not impossible, but it is different from private‑market impact. Additionality is often:
+
+- **Incremental and collective**, rather than binary and attributable to a single investor.
+
+For listed equities and bonds, the most robust paths to impact combine:
+
+- Thoughtful participation in **primary issuance** where proceeds fund real‑world projects.
+- High‑quality, persistent **stewardship and engagement**.
+- Transparent reporting on:
+  - Impact theses.
+  - Activities.
+  - Outcomes and limitations.
+
+By being clear about what really counts—and honest about what it cannot yet measure or claim—public‑market impact investing can move beyond marketing language and become a disciplined, credible component of sustainable finance.`,
+    date: formatDate(329),
+    author: 'Isabelle Dubois',
+    authorAvatar: getAuthorAvatar('Isabelle Dubois'),
+    type: 'longterm',
+    readTime: calculateReadTime(
+      countWords(`# Impact Investing and Additionality in Public Markets: What Really Counts?
+
+## Introduction
+
+Impact investing in public markets raises hard questions about what investors can genuinely influence and how additionality should be defined.`),
+    ),
+    imageUrl: getImage('longterm', 329),
+    tags: ['Impact Investing', 'Additionality', 'ESG', 'Public Markets', 'Sustainable Finance'],
   },
 ];

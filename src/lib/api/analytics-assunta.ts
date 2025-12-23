@@ -26,6 +26,383 @@ const countWords = (text: string): number => {
 // Assunta Novak - Cryptocurrency & Blockchain (24 articles)
 export const assuntaArticles: AnalyticsArticle[] = [
   {
+    slug: 'tokenized-real-world-assets-and-on-chain-yield-structures',
+    title: 'Tokenized Real-World Assets and the Future of On-Chain Yield',
+    excerpt:
+      'Deep dive into tokenized real-world assets (RWA) as a bridge between traditional fixed income and DeFi, analyzing yield structures, risks, and institutional adoption pathways.',
+    content: `# Tokenized Real-World Assets and the Future of On-Chain Yield
+
+## Introduction
+
+As crypto matures beyond purely endogenous yield mechanisms, tokenized real‑world assets (RWA) have emerged as a critical bridge between traditional finance and on‑chain markets. In a higher‑for‑longer rate environment, the prospect of bringing Treasury bills, credit exposures, and other income‑producing assets on‑chain is especially compelling: it aligns real economic activity with crypto infrastructure and offers new avenues for yield and collateral.
+
+However, RWA tokenization is not simply a technical exercise. It raises fundamental questions about:
+
+- Legal structure and enforceability of claims;
+- Counterparty and custody risk;
+- Regulatory classification and investor protections;
+- The resilience of on‑chain protocols that intermediate RWA flows.
+
+This article examines how tokenized RWAs are reshaping the on‑chain yield landscape and what investors should look for when assessing these opportunities.
+
+## What Are Tokenized Real-World Assets?
+
+### From Concept to Implementation
+
+Tokenized RWAs represent claims on off‑chain assets—such as:
+
+- Short‑duration government bills and notes;
+- Investment‑grade corporate credit;
+- Trade finance and receivables;
+- Real estate or infrastructure exposures,
+
+that are issued, traded, or used as collateral on public or permissioned blockchains. The token itself is typically:
+
+- An ERC‑20 or similar standard;
+- Backed 1:1 (or via structured tranching) by off‑chain assets held in custody;
+- Subject to legal documentation that ties token holders to the underlying cash flows.
+
+The promise is to combine:
+
+- **Programmability** – automated interest distribution, composability in DeFi;
+- **Transparency** – on‑chain visibility into positions and flows;
+- **Efficiency** – reduced frictions in issuance, settlement, and collateral management.
+
+### Why RWAs Matter in a Higher-Rate World
+
+In a zero‑rate world, on‑chain yields often relied on:
+
+- Token emissions;
+- Leveraged trading activity;
+- Circular liquidity incentives.
+
+As global risk‑free rates have risen, there is greater demand for **sustainable, externally anchored yields**. Tokenized RWAs allow:
+
+- On‑chain access to T‑bill‑like returns;
+- New collateral types for lending, derivatives, and structured products;
+- A path for institutional capital to experiment with blockchain rails without taking pure crypto‑asset risk.
+
+## Yield Structures and Risk Dimensions
+
+### Understanding the Yield Stack
+
+RWA token yields typically reflect:
+
+- **Base asset yield** – e.g., the yield on underlying Treasuries or credit instruments;
+- **Fees** – charged by the issuer, servicer, or protocol;
+- **Risk premia** – compensation for credit, liquidity, and structural risks.
+
+Investors must parse each component:
+
+- How much of the base yield is passed through?
+- Are fees transparent and competitive?
+- What additional yield reflects genuine risk versus market segmentation or inefficiencies?
+
+In some cases, “on‑chain premium” yields may be justified by lower liquidity or early‑adopter risk; in others, they may signal underappreciated structural vulnerabilities.
+
+### Legal, Credit, and Operational Risks
+
+Key risk dimensions include:
+
+- **Legal structure** – Is the token a direct claim, a fund share, or a note? How are rights enforced in default or insolvency scenarios?
+- **Custody and segregation** – How and where are underlying assets held? Are they segregated from operator balance sheets?
+- **Regulatory status** – Are tokens offered under securities exemptions, to qualified investors only, or in unregulated grey zones?
+- **Operational risk** – Smart‑contract quality, oracles, and governance.
+
+Institutional participation will depend heavily on clear answers to these questions, not just headline yields.
+
+## Interaction with DeFi Protocols
+
+### Collateral and Leverage
+
+As RWA tokens integrate into DeFi:
+
+- They can be used as **collateral** in lending protocols, enabling leverage on real‑world exposures;
+- They can back **stablecoins** or structured products that blend on‑chain and off‑chain risk.
+
+The design of risk parameters—loan‑to‑value ratios, liquidation thresholds, haircuts—must reflect:
+
+- The liquidity and price discovery of underlying assets;
+- Potential delays or frictions in converting RWAs back into cash during stress;
+- Jurisdictional and legal enforcement timelines.
+
+Misalignment between on‑chain assumptions and off‑chain realities can create fragility in stress scenarios.
+
+### Yield Aggregation and Composability
+
+RWA yields can also be aggregated into:
+
+- On‑chain money‑market funds;
+- Multi‑strategy vaults combining RWAs with crypto‑native yields;
+- Structured notes targeting specific risk/return profiles.
+
+While composability is a strength, it also introduces complexity: investors may not always see through multiple layers of wrappers and protocols to the ultimate risk and collateral backing their positions.
+
+## Institutional Adoption Pathways
+
+### From Pilot Projects to Scaled Platforms
+
+Institutional adoption of tokenized RWAs is likely to proceed in stages:
+
+1. **Pilot transactions** with limited size and select investors, often on permissioned or consortium chains.
+2. **Hybrid structures** where RWAs are tokenized but trading and settlement remain partly within traditional infrastructure.
+3. **Scaled platforms** with broader market access, secondary liquidity, and integration into risk and reporting systems.
+
+Throughout this evolution, institutions will weigh:
+
+- Operational efficiencies versus integration costs;
+- Regulatory clarity versus innovation speed;
+- Control and privacy versus openness and interoperability.
+
+### Regulatory and Policy Considerations
+
+Regulators are increasingly interested in tokenized securities and RWAs:
+
+- Clarifying how existing securities, banking, and fund regulations apply;
+- Ensuring investor protections and guarding against regulatory arbitrage;
+- Exploring central bank digital currency (CBDC) and wholesale settlement layers that can interact with tokenized assets.
+
+The direction of policy will influence which jurisdictions emerge as hubs for RWA innovation and which use‑cases gain traction first.
+
+## Investor Framework for Assessing RWA Opportunities
+
+### Due Diligence Checklist
+
+Investors evaluating RWA tokens should consider:
+
+- **Underlying assets** – Quality, duration, credit risk, and diversification.
+- **Structure** – Legal documentation, rights, and recourse mechanisms.
+- **Operator track record** – Governance, transparency, and operational history.
+- **On‑chain design** – Smart‑contract audits, oracle robustness, and upgrade processes.
+- **Alignment of incentives** – How issuers, servicers, and protocols share economics and risk.
+
+### Portfolio Role and Risk Management
+
+RWA exposures can play different roles:
+
+- As **yield anchors** in stablecoin or cash‑equivalent strategies;
+- As **collateral** enhancing capital efficiency in DeFi;
+- As **credit exposures** with specific sector, duration, or geographic tilts.
+
+Position sizing and diversification should reflect the combined on‑chain and off‑chain risks, including tail scenarios where both markets are under stress.
+
+## Conclusion
+
+Tokenized real‑world assets represent one of the most promising avenues for connecting crypto infrastructure to mainstream finance, especially in a higher‑rate environment where real‑world yields are attractive. But realizing this promise requires more than technical innovation; it demands robust legal structures, transparent risk management, and regulatory engagement.
+
+Investors who approach RWA opportunities with disciplined due diligence and a clear view of where yield comes from—and what risks underpin it—can harness this emerging asset class as a sustainable component of on‑chain portfolios, rather than a fleeting yield anomaly.`,
+    date: formatDate(1),
+    author: 'Assunta Novak',
+    authorAvatar: getAuthorAvatar('Assunta Novak'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Tokenized Real-World Assets and the Future of On-Chain Yield
+
+## Introduction
+
+As crypto matures beyond purely endogenous yield mechanisms, tokenized real‑world assets (RWA) have emerged as a critical bridge between traditional finance and on‑chain markets. In a higher‑for‑longer rate environment, the prospect of bringing Treasury bills, credit exposures, and other income‑producing assets on‑chain is especially compelling: it aligns real economic activity with crypto infrastructure and offers new avenues for yield and collateral.`)
+    ),
+    imageUrl: getImage('expert', 1),
+    tags: ['Crypto', 'DeFi', 'Real-World Assets', 'Yield', 'Tokenization'],
+  },
+  {
+    slug: 'crypto-in-a-higher-rate-world-liquidity-cycles-and-market-structure',
+    title: 'Crypto in a Higher-Rate World: Liquidity Cycles and Market Structure',
+    excerpt:
+      'Analysis of how a structurally higher interest-rate regime reshapes crypto market cycles, liquidity, and the role of stablecoins. Framework for positioning across Bitcoin, Ethereum, and DeFi under tighter global financial conditions.',
+    content: `# Crypto in a Higher-Rate World: Liquidity Cycles and Market Structure
+
+## Introduction
+
+For most of its history, the crypto asset class grew up in an environment of falling or suppressed interest rates, abundant dollar liquidity, and cheap leverage. Bitcoin’s early cycles, the ICO boom, and the first waves of DeFi adoption were all fuelled, directly or indirectly, by an era in which capital chased yield and speculative narratives far beyond traditional markets.
+
+The shift toward a “higher-for-longer” interest-rate regime is therefore more than a macro curiosity for digital assets. It directly impacts:
+
+- The cost and availability of leverage;
+- The opportunity cost of holding non-yielding assets like Bitcoin;
+- The economics of stablecoins and on-chain money markets;
+- The risk appetite of both retail and institutional allocators.
+
+This article examines how higher real yields, tighter liquidity, and evolving market structure are likely to shape crypto cycles going forward, and how investors can adapt their frameworks for Bitcoin, Ethereum, and DeFi in this new environment.
+
+## How Higher Rates Transmit into Crypto Markets
+
+### The Opportunity Cost of Capital
+
+In a zero-rate world, holding Bitcoin or other non-yielding assets carried little explicit opportunity cost—cash and government bonds offered near‑zero real returns. As real yields rise, the bar for owning volatile, non‑cash‑flowing assets increases. Investors now compare Bitcoin not only to gold or tech equities but also to:
+
+- Short‑term Treasury bills yielding 4–5%;
+- Investment‑grade credit with positive real yields;
+- On‑chain and off‑chain money-market instruments.
+
+This dynamic does not eliminate the case for Bitcoin as a long‑term store of value or digital macro hedge, but it compresses the valuation “excuse” that any risky asset is preferable to cash.
+
+### Leverage, Funding, and Basis Trades
+
+Crypto market structure is heavily influenced by leverage:
+
+- Futures and perpetual swaps funding;
+- Borrowing against collateral on centralized exchanges;
+- On‑chain lending on protocols like Aave, Compound, and others.
+
+Higher base rates push up the cost of leverage across the system. Basis trades—borrowing dollars to buy spot crypto and short futures—become less attractive when funding costs eat into carry. Deleveraging episodes can become more frequent as marginal participants find trades less profitable.
+
+At the same time, higher off‑chain yields encourage capital to sit in money-market instruments rather than perpetually recycling into crypto leverage, reducing the reflexive feedback loops that previously amplified bull markets.
+
+### Stablecoins and On-Chain Money Markets
+
+Stablecoins sit at the core of crypto liquidity. In a higher‑rate world:
+
+- **Reserve yields increase** – Issuers of fiat‑backed stablecoins earn more on their reserves, strengthening their economics but also raising policy and competition questions.
+- **On‑chain rates must compete with off‑chain cash** – DeFi protocols offering low single‑digit nominal yields look less compelling when T‑bills offer similar or better risk‑adjusted returns.
+
+Sustainable DeFi yields will increasingly need to come from real economic activity (trading fees, credit intermediation, tokenized real‑world assets) rather than pure token incentives or circular leverage.
+
+## Bitcoin Under Higher-for-Longer
+
+### From Pure Speculation to Macro Asset
+
+Bitcoin’s investment narrative has evolved from purely speculative “internet money” to a potential macro asset with properties of digital gold. Higher real yields test this thesis in two ways:
+
+- **As a non-yielding asset**, Bitcoin competes more directly with safe assets that now offer an income stream.
+- **As an inflation hedge**, its performance must be evaluated across episodes of elevated inflation and tightening cycles, not just in reflationary rallies.
+
+Historically, Bitcoin has tended to suffer during acute tightening phases—when dollar liquidity is withdrawn—and perform better when the policy path shifts toward easing or when liquidity expectations improve. In a higher‑for‑longer scenario, those easing inflection points may be fewer and less dramatic.
+
+### Halving Cycles and Liquidity Regimes
+
+Halving events remain an important structural feature, but their impact must be viewed through the lens of macro liquidity. A simple heuristic:
+
+- Halving in an **accommodative or easing** environment can catalyze powerful bull cycles.
+- Halving in a **tight or tightening** environment may still be supportive over the medium term but may have more muted or delayed price effects.
+
+For investors, the key is not to abandon cycle analysis but to embed it into a broader framework that explicitly tracks real yields, dollar liquidity proxies, and risk appetite across asset classes.
+
+## Ethereum, DeFi, and the Cost of Capital
+
+### Staking Yields vs. Real Yields
+
+One consequence of higher base rates is that on‑chain “risk‑free” yields must be evaluated against off‑chain alternatives. Ethereum’s staking yield, for example, combines:
+
+- Base issuance rewards;
+- Priority fees from blockspace demand;
+- MEV extraction dynamics.
+
+When global real yields are near zero, a 4–6% ETH staking yield looks extremely attractive despite underlying volatility. When investors can earn similar yields in relatively safe fixed income, the hurdle for viewing staking as a core yield instrument rises. The role of staking shifts more toward securing the network and aligning incentives for long‑term participants rather than simply offering “free yield.”
+
+### DeFi Lending and Credit Spreads
+
+Higher global rates should, in principle, steepen risk curves: genuinely risky on‑chain credit should trade at a meaningful spread over base rates, not at or below them. This has several implications:
+
+- Protocols that relied on underpriced leverage to drive volumes may see activity normalize or decline.
+- More sophisticated credit underwriting—whether on‑chain or via tokenized real‑world assets—becomes necessary to justify spreads above off‑chain alternatives.
+- Governance must balance the desire for growth with risk management, especially around collateral quality and liquidation regimes in volatile markets.
+
+In a healthier, higher‑rate DeFi ecosystem, yields ought to be more explicitly tied to genuine credit or liquidity provision risks rather than opaque emissions.
+
+## Stablecoins, Market Plumbing, and Policy Risk
+
+### Economics of Stablecoin Issuers
+
+As rates rise, reserve portfolios backing fiat‑pegged stablecoins generate significantly more income. This:
+
+- Strengthens issuer profitability and cushions against operational risks.
+- Attracts new entrants and regulatory attention, as stablecoins increasingly resemble money‑market funds.
+
+For investors, the key questions are:
+
+- How conservative is the reserve management strategy?
+- How transparent are holdings and risk controls?
+- How exposed is the issuer to policy changes that could restrict or reclassify stablecoins?
+
+Stablecoins will likely remain critical liquidity instruments for crypto, but their regulatory and competitive landscape in a higher‑rate world may look very different from the 2017–2021 period.
+
+### On-Chain Dollars vs. Off-Chain Dollars
+
+Another structural shift is the competition between:
+
+- **On‑chain dollars** (stablecoins and tokenized deposits);
+- **Off‑chain dollars** in bank accounts, money‑market funds, and T‑bills.
+
+Flows between these pools will increasingly depend on:
+
+- Relative yield after fees and frictions;
+- Convenience and composability of on‑chain capital;
+- Perceived regulatory and custodial risk.
+
+For sophisticated allocators, the decision to hold dollars on‑chain will be less about chasing yield and more about maintaining optionality to deploy into crypto risk assets quickly when conditions improve.
+
+## Market Structure: Institutionalization and Vol Regimes
+
+### Institutional Flows and Risk Budgets
+
+Higher rates reshape institutional risk budgets. When fixed income desks can earn high single‑digit returns in credit, the pressure to add high‑volatility satellite exposures like crypto declines. However, dedicated digital asset funds and multi‑strategy firms will still seek convex opportunities around structural themes such as:
+
+- Bitcoin as a macro asset;
+- Ethereum as settlement and yield infrastructure;
+- Tokenization of real‑world assets and on‑chain credit.
+
+The challenge is that entry and exit points become more sensitive to macro signals. Crypto volatility remains an attractive trading asset, but long‑only institutional allocations may be more selective and episodic.
+
+### Volatility Clusters and Liquidity Pockets
+
+In a higher‑rate world, we should expect:
+
+- Shorter, sharper risk‑off episodes when global liquidity tightens or when policy surprises occur;
+- More differentiation across tokens and sectors as purely speculative flows recede.
+
+Protocols and assets with real usage, sustainable economics, and transparent governance should, over time, command a premium relative to thin‑liquidity, narrative‑only projects that depended on easy money.
+
+## Positioning Framework for Investors
+
+### Segmentation by Role in the Portfolio
+
+Investors should clarify the role of each crypto exposure:
+
+- **Core macro exposure** – e.g., Bitcoin as a long‑term, capped‑supply asset with halving cycles.
+- **Growth infrastructure** – e.g., Ethereum and high‑quality L2s as settlement and yield infrastructure.
+- **Risk and innovation sleeve** – select DeFi, infra, and application‑layer tokens with asymmetric upside but higher risk.
+
+Position sizes, holding periods, and risk controls should differ across these buckets, particularly when macro headwinds tighten liquidity.
+
+### Monitoring Macro and On-Chain Indicators
+
+In a higher‑for‑longer regime, crypto investors must watch both macro and on‑chain metrics:
+
+- Macro: real yields, dollar liquidity indicators, credit spreads, implied policy paths.
+- On‑chain: stablecoin supply growth or contraction, leverage in futures/perps, realized and implied volatility, DeFi TVL composition.
+
+Combining these signals helps identify when risk‑adjusted returns in crypto are improving versus when capital is better preserved in safer assets.
+
+## Conclusion
+
+Crypto is moving from adolescence in a world of cheap money into adulthood under a higher‑rate, more discriminating regime. This transition does not negate the long‑term potential of Bitcoin, Ethereum, and decentralized financial infrastructure, but it does change the rules of the game.
+
+Investors who anchor their frameworks in liquidity regimes, opportunity cost, and sustainable on‑chain economics—rather than purely in speculative momentum—will be better positioned to navigate future cycles. In a higher‑for‑longer world, capital will demand greater discipline from crypto projects and investors alike. Those who adapt their strategies accordingly can still find compelling opportunities amid a more mature, and ultimately healthier, digital asset ecosystem.`,
+    date: formatDate(0),
+    author: 'Assunta Novak',
+    authorAvatar: getAuthorAvatar('Assunta Novak'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Crypto in a Higher-Rate World: Liquidity Cycles and Market Structure
+
+## Introduction
+
+For most of its history, the crypto asset class grew up in an environment of falling or suppressed interest rates, abundant dollar liquidity, and cheap leverage. Bitcoin’s early cycles, the ICO boom, and the first waves of DeFi adoption were all fuelled, directly or indirectly, by an era in which capital chased yield and speculative narratives far beyond traditional markets.
+
+The shift toward a “higher-for-longer” interest-rate regime is therefore more than a macro curiosity for digital assets. It directly impacts:
+
+- The cost and availability of leverage;
+- The opportunity cost of holding non-yielding assets like Bitcoin;
+- The economics of stablecoins and on-chain money markets;
+- The risk appetite of both retail and institutional allocators.
+
+This article examines how higher real yields, tighter liquidity, and evolving market structure are likely to shape crypto cycles going forward, and how investors can adapt their frameworks for Bitcoin, Ethereum, and DeFi in this new environment.`)
+    ),
+    imageUrl: getImage('markets', 0),
+    tags: ['Crypto', 'Interest Rates', 'Liquidity', 'Stablecoins', 'DeFi'],
+  },
+  {
     slug: 'bitcoin-cycles-investment-framework',
     title: 'Bitcoin Cycles: An Investment Framework for Understanding Market Dynamics',
     excerpt: 'Deep analysis of Bitcoin market cycles, examining historical patterns, halving events, and investment strategies. Assessment of cycle phases, valuation metrics, and long-term outlook for Bitcoin as a digital asset.',
@@ -1166,5 +1543,440 @@ Leverage is central to modern crypto markets. Perpetual futures, margin borrowin
     ),
     imageUrl: getImage('expert', 98),
     tags: ['Margin', 'Collateral', 'Crypto Risk', 'Derivatives', 'DeFi'],
+  },
+  {
+    slug: 'layer2-rollups-liquidity-and-bridge-risk',
+    title: 'Layer-2 Rollups, Liquidity, and Bridge Risk: Building a Multi-Chain Crypto Strategy',
+    excerpt:
+      'How the rise of L2 rollups, canonical and third-party bridges, and fragmented liquidity reshapes execution, custody, and risk management for institutional crypto portfolios.',
+    content: `# Layer-2 Rollups, Liquidity, and Bridge Risk: Building a Multi-Chain Crypto Strategy
+
+## Introduction
+
+As blockchains scale, execution and liquidity are no longer confined to a single chain. **Layer‑2 rollups**, sidechains, and application‑specific chains now host significant trading, DeFi, and NFT activity. Assets move across ecosystems via:
+
+- Canonical bridges.
+- Third‑party bridge protocols.
+- Wrapped tokens and liquidity networks.
+
+For professional investors, this multi‑chain environment creates:
+
+- New opportunities in fees, yield, and early‑stage ecosystems.
+- Additional layers of **smart‑contract, bridge, and liquidity risk**.
+
+This article provides a structured framework for analyzing layer‑2 (L2) rollups, bridge mechanisms, and liquidity fragmentation—and for designing a multi‑chain crypto strategy that acknowledges both upside and risk.
+
+## L2 Rollups: Execution vs. Settlement
+
+### What Are Rollups?
+
+Layer‑2 rollups:
+
+- Execute transactions off the main chain (e.g., Ethereum L1).
+- Periodically post:
+  - Compressed transaction data.
+  - State commitments.
+to L1 for security and finality.
+
+Two main types:
+
+- **Optimistic rollups**
+  - Assume transactions are valid unless challenged.
+  - Rely on fraud‑proof mechanisms and challenge periods.
+- **ZK rollups**
+  - Use zero‑knowledge proofs to verify correctness of state transitions.
+  - Offer faster finality at the cost of more complex proving systems.
+
+For investors, the key is to understand:
+
+- Security assumptions and:
+  - Who can challenge or prove fraud?
+  - How decentralized is the sequencer set?
+- Operational risks:
+  - Upgrade processes.
+  - Governance and emergency controls.
+
+### Liquidity on L2
+
+As rollups gain adoption, significant liquidity migrates to L2:
+
+- DEXs, lending markets, and derivatives protocols launch L2 instances.
+- Users seek:
+  - Lower fees.
+  - Faster confirmations.
+
+This changes:
+
+- Where price discovery happens.
+- How market makers and arbitrageurs operate across L1 and L2.
+
+## Bridges: Moving Value Across Chains
+
+### Canonical vs. Third-Party Bridges
+
+Assets move between L1 and L2, and across L2s, via:
+
+- **Canonical bridges**
+  - Often maintained by core protocol teams.
+  - Tightly coupled to the underlying L2 design.
+- **Third‑party bridges**
+  - Platform‑agnostic bridges connecting multiple chains and rollups.
+  - May use:
+    - Lock‑and‑mint.
+    - Liquidity networks.
+    - More complex messaging schemes.
+
+Bridge risks include:
+
+- Smart‑contract vulnerabilities.
+- Operational failures or mis‑configurations.
+- Economic exploits:
+  - Manipulated pricing.
+  - Liquidity imbalance attacks.
+
+Historically, some of the largest DeFi losses have come from:
+
+- Bridge hacks.
+- Cross‑chain protocol exploits.
+
+### Liquidity Fragmentation
+
+As liquidity spreads across:
+
+- Multiple L2s.
+- Bridges and wrapped assets.
+
+investors face:
+
+- More complex routing for:
+  - Execution.
+  - Hedging.
+  - Risk management.
+- Basis and pricing differences between:
+  - Native assets.
+  - Wrapped or bridged versions.
+
+Slippage and implicit costs can rise if:
+
+- Bridge and L2 liquidity is shallow or one‑sided.
+
+## Building a Multi-Chain Strategy
+
+### Mapping the Risk Stack
+
+A robust approach maps risks across:
+
+1. **Base chains and rollups**
+   - Security models and decentralization.
+   - Upgrade and governance processes.
+2. **Bridges**
+   - Code audits and track record.
+   - Collateralization and reserve transparency.
+3. **Applications**
+   - Protocol design and oracle dependencies.
+   - Composability with other DeFi primitives.
+
+Investors should:
+
+- Cap exposure to any single:
+  - Bridge.
+  - L2.
+  - Collateral type.
+- Treat each layer as a **potential point of failure**, not just a routing detail.
+
+### Execution and Liquidity Management
+
+Key operational considerations:
+
+- Routing:
+  - Which L2s and bridges provide:
+    - Best depth.
+    - Tightest spreads.
+    - Reasonable security assumptions.
+- Latency and finality:
+  - How long until funds are truly final and withdrawable?
+- Contingency plans:
+  - What happens if:
+    - A bridge is halted.
+    - A rollup sequencer pauses?
+
+Professional allocators may:
+
+- Maintain:
+  - “Hub” venues where most liquidity sits.
+  - Smaller tactical allocations to emerging L2s.
+- Use:
+  - Institutional custodians and specialized infrastructure providers.
+
+## Conclusion
+
+Layer‑2 rollups and cross‑chain bridges are central to the next phase of crypto‑market structure. They:
+
+- Unlock:
+  - Lower fees.
+  - New user experiences.
+  - Broader geographic participation.
+- Introduce:
+  - Additional layers of technical and economic risk.
+
+For investors, the goal is not to avoid multi‑chain exposure entirely, but to:
+
+- Understand:
+  - How and where value moves.
+  - Which bridges and rollups you are implicitly trusting.
+- Size and structure positions so that:
+  - No single failure can destabilize the broader portfolio.
+
+With a clear view of the L2 and bridge risk stack, multi‑chain strategies can be built that capture upside while respecting the still‑evolving nature of blockchain infrastructure.`,
+    date: formatDate(99),
+    author: 'Assunta Novak',
+    authorAvatar: getAuthorAvatar('Assunta Novak'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Layer-2 Rollups, Liquidity, and Bridge Risk: Building a Multi-Chain Crypto Strategy
+
+## Introduction
+
+As blockchains scale, execution and liquidity are no longer confined to a single chain.`),
+    ),
+    imageUrl: getImage('markets', 99),
+    tags: ['Layer 2', 'Rollups', 'Bridges', 'Crypto Markets', 'Risk Management'],
+  },
+  {
+    slug: 'institutional-crypto-custody-and-counterparty-risk',
+    title: 'Institutional Crypto Custody and Counterparty Risk: A Practical Playbook',
+    excerpt:
+      'How institutional investors should think about on- and off-chain custody models, rehypothecation, exchange risk, and operational controls when allocating to digital assets.',
+    content: `# Institutional Crypto Custody and Counterparty Risk: A Practical Playbook
+
+## Introduction
+
+For institutional investors, getting crypto **price exposure** is the easy part. The harder questions are:
+
+- Where are the assets actually held?
+- Who controls the private keys?
+- What happens if a custodian, exchange, or lending platform fails?
+
+The industry has already seen:
+
+- Exchange collapses.
+- Lending‑platform insolvencies.
+- Custody and key‑management failures.
+
+These events turned what many perceived as “market risk” into **counterparty and operational failures**. This article provides a practical framework for institutional allocators to evaluate crypto custody arrangements and manage counterparty risk.
+
+## Custody Models: On-Exchange, Third-Party, and Self-Custody
+
+### 1. On-Exchange Custody
+
+Many investors initially:
+
+- Leave assets on centralized exchanges (CEXs) used for trading.
+
+Advantages:
+
+- Convenience for:
+  - Execution.
+  - Margining.
+  - Access to derivatives.
+
+Risks:
+
+- Exchange insolvency or fraud.
+- Commingling of client and house assets.
+- Rehypothecation into:
+  - Proprietary trading.
+  - Lending programs.
+
+For institutions, on‑exchange balances should generally be treated as:
+
+- **Trading balances**, not long‑term custody.
+- Sized according to:
+  - Short‑term execution needs.
+  - Risk tolerance for exchange failure.
+
+### 2. Third-Party Qualified Custodians
+
+Specialized custodians offer:
+
+- Segregated accounts for institutional clients.
+- Legal frameworks clarifying:
+  - Asset ownership.
+  - Insolvency treatment.
+- Insurance and SOC/ISO‑type controls.
+
+Models include:
+
+- Cold and warm storage with:
+  - Hardware security modules (HSMs).
+  - Multi‑party computation (MPC) for key shares.
+
+Key diligence questions:
+
+- Legal structure:
+  - Are assets held off the custodian’s balance sheet?
+  - What is the treatment in bankruptcy?
+- Operational controls:
+  - Multi‑signature or MPC policies.
+  - Change‑management and access‑control processes.
+  - Incident‑response plans.
+
+### 3. Self-Custody and Internal Solutions
+
+Some institutions:
+
+- Build internal custody stacks using:
+  - HSMs.
+  - MPC solutions.
+  - In‑house key‑management procedures.
+
+Potential benefits:
+
+- Direct control over keys.
+- Reduced reliance on third‑party solvency.
+
+But also:
+
+- High operational complexity.
+- Need for:
+  - Specialized staff.
+  - Robust process and audit trails.
+
+## Counterparty Risk: Exchanges, Lenders, and Protocols
+
+### Centralized Counterparties
+
+Centralized venues and lenders introduce:
+
+- **Credit risk** – will they remain solvent?
+- **Operational risk** – can they:
+  - Manage collateral and liquidations?
+  - Withstand market stress?
+
+Due diligence should cover:
+
+- Balance‑sheet transparency.
+- Use (or non‑use) of rehypothecation.
+- Legal documentation for:
+  - Prime‑brokerage or lending relationships.
+  - Collateral arrangements and netting.
+
+### On-Chain Protocols
+
+On‑chain protocols shift risk into:
+
+- Smart‑contract code.
+- Oracle design.
+- Governance and parameter changes.
+
+Institutional users should:
+
+- Assess:
+  - Audit history and bug‑bounty programs.
+  - Dependency chains (bridges, oracles, composability).
+  - Liquidity depth for collateral and liquidations.
+
+## Practical Risk Controls for Allocators
+
+Recommended practices include:
+
+- Segmentation of:
+  - Trading balances.
+  - Long‑term custody.
+- Limits by:
+  - Custodian.
+  - Exchange.
+  - Lending platform.
+- Clear approval processes for:
+  - New venues and protocols.
+  - Collateral types and rehypothecation terms.
+
+## Conclusion
+
+Institutional crypto investing is as much about **where and how you hold assets** as about which tokens you buy. Robust custody and counterparty‑risk frameworks:
+
+- Reduce the likelihood that operational failures erase investment theses.
+- Enable more confident sizing of strategies across centralized and on‑chain venues.
+
+For professional allocators, treating crypto custody and counterparty risk with the same rigor applied to traditional prime brokerage and collateral management is not optional—it is the foundation for any scalable digital‑asset program.`,
+    date: formatDate(100),
+    author: 'Assunta Novak',
+    authorAvatar: getAuthorAvatar('Assunta Novak'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Institutional Crypto Custody and Counterparty Risk: A Practical Playbook
+
+## Introduction
+
+For institutional investors, getting crypto price exposure is the easy part. The harder questions are where the assets are actually held and who controls the private keys.`),
+    ),
+    imageUrl: getImage('expert', 100),
+    tags: ['Crypto Custody', 'Counterparty Risk', 'Institutions', 'Exchanges', 'DeFi'],
+  },
+  {
+    slug: 'crypto-options-market-structure-centralized-vs-onchain',
+    title: 'Crypto Options Market Structure: Centralized Venues vs. On-Chain Protocols',
+    excerpt:
+      'Why crypto options markets have evolved so differently on centralized exchanges and on-chain protocols, and how investors should think about liquidity, margin, and counterparty risk across venues.',
+    content: `# Crypto Options Market Structure: Centralized Venues vs. On-Chain Protocols
+
+## Introduction
+
+In traditional finance, listed options markets grew up around a fairly stable set of conventions. Exchanges standardized contracts, clearing houses sat in the middle of every trade, and market makers quoted in well‑understood products with predictable margin rules. Crypto has taken a much more fragmented and experimental path. Options on bitcoin and ether trade on a handful of specialized centralized venues, while on-chain protocols are still searching for product shapes that can fit the constraints of automated market makers and smart contracts.
+
+For investors and traders who use options to express views or hedge risk, this divergence matters. The choice between a centralized exchange account and an on-chain protocol is not simply a question of user interface or ideology. It is a choice between very different models of liquidity provision, collateral management, and counterparty exposure. Understanding how those models work in practice is a prerequisite for sizing positions, comparing pricing, and deciding where to tolerate risk.
+
+This article looks at crypto options through a structural lens. It compares how centralized venues and on-chain protocols match buyers and sellers, how they handle margin and liquidations, and what can go wrong when markets are stressed. The goal is not to crown a winner, but to give allocators a framework for deciding where each type of venue fits in a broader strategy.
+
+## Centralized Options Venues: Concentrated Liquidity, Concentrated Trust
+
+Most of the open interest in vanilla bitcoin and ether options still sits on a small number of centralized exchanges. These venues tend to look, at first glance, like their traditional counterparts. They list standardized contracts, offer series across strikes and maturities, and provide familiar greeks and risk views. Liquidity in the front expiries and near‑the‑money strikes can be deep, and institutional users appreciate the operational simplicity of a single venue, a single set of APIs, and a single risk engine.
+
+The trade‑off is that this entire structure rests on the solvency and risk management of the exchange itself. Users post collateral into an omnibus system. They may see a detailed margin calculation, but they do not see the full distribution of positions across all participants, the stress scenarios the exchange uses, or the decisions taken in fast markets. When liquidations occur, they are orchestrated centrally. If they fail, losses can be socialized across other market participants, or in the worst case absorbed by the exchange’s own balance sheet – if it has one strong enough to carry them.
+
+In calm markets, this model delivers tight spreads and high capital efficiency. Cross‑margining between options, futures, and spot collateral allows users to put on large structures with relatively modest initial margin. In volatile regimes, that same efficiency can become fragility. If the venue’s risk engine underestimates gap risk or correlation breaks, large, highly leveraged books can turn into forced unwinds that overwhelm the order book.
+
+For investors, the key is to treat centralized options venues as a form of concentrated counterparty and operational exposure. They can be extremely effective tools, but they are not neutral pipes. Limits by venue, regular reviews of margin models, and skepticism toward opaque cross‑product collateral schemes are all part of a sensible risk framework.
+
+## On-Chain Options Protocols: Transparency With Design Constraints
+
+On-chain options protocols start from a different set of assumptions. Smart contracts cannot rely on discretionary human risk managers, they must encode rules explicitly. They also face gas costs, latency, and oracle limitations that make traditional order‑book models expensive to operate on general‑purpose blockchains. As a result, many protocols have gravitated toward various flavors of pooled or automated market making.
+
+In a typical design, liquidity providers contribute capital to a vault or pool that takes the other side of options buyers in some structured way. Premiums and, in some cases, funding fees accrue to the pool, while losses are socialized across its LPs. Parameters such as strike ladders, expiries, and implied volatility curves are either set by governance, adjusted by algorithms, or inferred from external feeds. This architecture is flexible in theory, but it introduces a different category of risk: the risk that the model embedded in the pool diverges from realized market conditions.
+
+When volatility behaves roughly as expected and flows are balanced, LPs can earn returns that look attractive on paper. But when markets move abruptly, or when flows become one‑sided, a vault can end up writing underpriced optionality or warehousing too much directional exposure. Because most protocols today still operate at a fraction of centralized venues’ volumes, secondary liquidity is thinner. Adjusting risk in the middle of a stress episode is often slower and more expensive on-chain than on a centralized book.
+
+That said, on-chain options have genuine advantages. Collateral is visible; positions and pool exposures can be inspected in real time. Margin and liquidation logic is deterministic. There is no hidden credit between participants, no internalization of flow in a dark pool. For some allocators, this transparency is worth a trade‑off in flexibility, especially when used in modest size alongside off-chain positions.
+
+## Comparing Margin, Liquidity, and Failure Modes
+
+The contrast between centralized and on-chain options markets becomes sharpest when looking at how they handle three core questions: where margin comes from, how liquidity forms, and what happens when things break.
+
+On centralized venues, margin is a promise backed by a mix of collateral, a risk engine, and the exchange’s own capital. Cross‑margining and portfolio margin can make books appear lighter from the user’s perspective, but someone is implicitly writing a guarantee that losses will be covered. In DeFi, margin is more literal: collateral sits in contracts, and the rules for its use and seizure are visible. This reduces ambiguity, but does not eliminate model risk; if parameters are wrong, the wrong users will lose money, even if the system as a whole behaves as coded.
+
+Liquidity, too, has different shapes. An options market maker on a centralized book can update quotes dozens of times a second, use internal models for skew and term structure, and lean on integrated futures and spot markets for hedging. On-chain, gas costs and block times make that level of dynamism difficult. Protocols compensate with batch auctions, discrete re‑pricing, or semi‑static pools. This produces more step‑wise price adjustment and can make it harder for large traders to move in and out without leaving obvious footprints.
+
+Failure modes follow from these choices. Centralized venues are vulnerable to the “unknown unknowns” of operational failure: bugs in matching engines, misconfigured risk systems, or governance failures that lead to misuse of customer assets. On-chain protocols are vulnerable to more mechanical but equally dangerous problems: oracle manipulation, smart‑contract exploits, or governance attacks that redirect collateral. Investors choosing between them are, in effect, choosing which class of risk they feel more able to understand, monitor, and size.
+
+## Portfolio Implications for Professional Allocators
+
+For professional allocators who use options as part of a broader crypto strategy, the right answer is rarely “all centralized” or “all on-chain”. Instead, it is usually a deliberate mix. Centralized venues may remain the primary home for large, time‑sensitive trades in liquid underlyings. On-chain protocols may serve as complementary sources of convexity, yield, or basis opportunities, sized in line with their liquidity and technical maturity.
+
+What matters is that these choices are made consciously. A portfolio that accumulates exposure to multiple centralized venues, each with its own risk engine and balance sheet, is taking a correlated bet on a particular model of trust, even if every ticket is fully collateralized. A portfolio that leans into experimental on-chain designs is betting on open infrastructure but also on the robustness of smart‑contract code and oracle design under stress.
+
+Over the next cycle, crypto options markets are likely to look more, not less, diverse. Some protocols will blur the line between centralized and on-chain through hybrid models. Some exchanges will experiment with clearer segregation of collateral or partial on-chain settlement. For now, the most robust approach is to map exposures venue by venue, understand how each handles margin, liquidity, and failure, and size positions with those mechanics in mind rather than assuming that “an option is an option” regardless of where it trades.`,
+    date: formatDate(101),
+    author: 'Assunta Novak',
+    authorAvatar: getAuthorAvatar('Assunta Novak'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Crypto Options Market Structure: Centralized Venues vs. On-Chain Protocols
+
+## Introduction
+
+In traditional finance, listed options markets grew up around a fairly stable set of conventions.`),
+    ),
+    imageUrl: getImage('expert', 101),
+    tags: ['Crypto Options', 'Derivatives', 'Market Structure', 'DeFi', 'Risk'],
   },
 ];

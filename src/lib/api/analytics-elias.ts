@@ -26,6 +26,368 @@ const countWords = (text: string): number => {
 // Elias Wolfenstein - European Markets (16 articles)
 export const eliasArticles: AnalyticsArticle[] = [
   {
+    slug: 'ai-automation-and-europes-industrial-competitiveness',
+    title: 'AI, Automation, and Europe’s Industrial Competitiveness',
+    excerpt:
+      'Analysis of how AI and automation are reshaping Europe’s industrial base, capital spending cycles, and long-term competitiveness, with implications for equity and credit investors.',
+    content: `# AI, Automation, and Europe’s Industrial Competitiveness
+
+## Introduction
+
+Europe’s industrial base has long been a source of economic strength, export capability, and high‑quality employment. From advanced manufacturing and machinery to autos, chemicals, and capital goods, European companies occupy critical positions in global supply chains. Today, these sectors face simultaneous pressures and opportunities:
+
+- The need to invest in AI, automation, and digitalization to remain competitive;
+- The imperatives of decarbonization and energy transition;
+- Heightened geopolitical and supply‑chain risks.
+
+This article examines how AI and automation are influencing Europe’s industrial competitiveness and what this means for investors in European equities and credit.
+
+## Structural Challenges and Opportunities
+
+### Cost Pressures and Productivity Imperatives
+
+European manufacturers face:
+
+- Higher energy costs than some global peers;
+- Tight labor markets and demographic headwinds;
+- Heightened regulatory and compliance burdens.
+
+In this context, AI and automation are not optional—they are critical levers to:
+
+- Improve productivity and unit economics;
+- Enhance quality and reduce defect rates;
+- Increase flexibility and resilience in production.
+
+Companies that invest effectively in these technologies can offset structural cost disadvantages and maintain or gain share in global markets.
+
+### Supply Chain Resilience and Regionalization
+
+Geopolitical tensions, pandemic disruptions, and shifting trade policies are accelerating moves toward:
+
+- Near‑shoring and friend‑shoring of critical supply chains;
+- Greater localization of production for strategic sectors (e.g., semiconductors, batteries, defense).
+
+AI and automation can make regional production more cost‑competitive, especially when:
+
+- Labor cost differentials narrow;
+- Automation reduces sensitivity to local wage levels;
+- Proximity to end markets reduces logistics and inventory costs.
+
+For Europe, this creates both opportunities—to attract new investment—and challenges—requiring substantial capex and policy coordination.
+
+## AI and Automation Across Key European Sectors
+
+### Autos and Mobility
+
+Europe’s auto industry is undergoing profound change:
+
+- Electrification and the shift to EVs;
+- Software‑defined vehicles and over‑the‑air updates;
+- Autonomous and assisted‑driving technologies.
+
+AI plays a central role in:
+
+- Manufacturing automation and quality control;
+- Supply chain optimization and inventory management;
+- In‑vehicle software and driver‑assistance systems.
+
+Investors must assess which OEMs and suppliers:
+
+- Have credible software and AI roadmaps;
+- Can manage capex intensity without eroding returns;
+- Are positioned to capture value rather than cede it to new entrants or tech platforms.
+
+### Capital Goods and Industrial Automation
+
+European capital‑goods manufacturers are at the heart of global automation:
+
+- Robotics, motion control, sensors, and industrial software;
+- Process automation for sectors like chemicals, pharmaceuticals, and energy;
+- Factory‑automation solutions for discrete manufacturing.
+
+AI enhances these offerings by:
+
+- Enabling predictive maintenance and asset‑health monitoring;
+- Optimizing process parameters in real time;
+- Integrating data across plants, supply chains, and enterprise systems.
+
+Well‑positioned firms can benefit from secular demand as customers invest in smarter, more efficient factories.
+
+### Infrastructure, Energy, and Utilities
+
+The energy transition requires:
+
+- Modernized grids with advanced monitoring and control;
+- Integration of distributed generation and storage;
+- Optimized balancing of supply and demand in real time.
+
+AI and automation are critical to:
+
+- Managing variable renewable inputs;
+- Detecting faults and preventing outages;
+- Enhancing energy efficiency across systems.
+
+European companies specializing in grid technology, power electronics, and energy‑management software stand to benefit from these trends.
+
+## Investment Implications: Equities and Credit
+
+### Identifying Structural Winners
+
+Equity investors should look for:
+
+- Clear AI and automation strategies tied to economic outcomes (productivity, margins, returns on capital);
+- Evidence of execution—reference customers, case studies, and measurable KPIs;
+- Balance sheets capable of funding necessary investments without over‑leveraging.
+
+Valuations should reflect:
+
+- The durability of competitive advantages;
+- Exposure to secular vs. cyclical demand drivers;
+- Sensitivity to capex cycles and policy frameworks.
+
+### Credit Considerations
+
+For credit investors, key questions include:
+
+- How are companies funding automation and digitalization capex—through internal cash flow, debt, or equity?
+- Are balance sheets resilient to potential missteps or delays in realizing productivity gains?
+- How exposed are issuers to legacy assets that may face obsolescence risk?
+
+Issuers that manage the transition proactively may see credit profiles improve over time, while laggards could face margin compression and stranded‑asset risk.
+
+## Policy, Regulation, and Skills
+
+### Industrial Policy and Incentives
+
+European policymakers are increasingly focused on:
+
+- Supporting strategic sectors through incentives and coordinated investment;
+- Ensuring that AI and automation deployments align with broader social and environmental goals;
+- Balancing competitiveness with regulation in areas such as data privacy and AI governance.
+
+Effective industrial policy can amplify private investment and accelerate adoption, but fragmentation and policy uncertainty can slow progress.
+
+### Workforce and Skills
+
+AI and automation reshape labor demand:
+
+- Routine tasks are increasingly automated;
+- Demand grows for higher‑skilled roles in engineering, data, and system integration.
+
+Successful transitions will rely on:
+
+- Reskilling and upskilling initiatives;
+- Partnerships between industry, education, and government;
+- Thoughtful approaches to labor relations and social dialogue.
+
+These factors influence execution risk for companies and, ultimately, the sustainability of their competitive positions.
+
+## Conclusion
+
+AI and automation are central to Europe’s quest to maintain and enhance its industrial competitiveness in a more demanding global environment. They offer tools to offset structural cost pressures, enable supply‑chain reconfiguration, and support the energy transition—but only if companies and policymakers execute effectively.
+
+For investors, the focus should be on identifying those European industrials that treat AI and automation as core strategic capabilities rather than peripheral IT projects. These firms are better placed to sustain attractive returns on capital and navigate the intersection of technology, policy, and global competition over the coming decade.`,
+    date: formatDate(1),
+    author: 'Elias Wolfenstein',
+    authorAvatar: getAuthorAvatar('Elias Wolfenstein'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# AI, Automation, and Europe’s Industrial Competitiveness
+
+## Introduction
+
+Europe’s industrial base has long been a source of economic strength, export capability, and high‑quality employment. From advanced manufacturing and machinery to autos, chemicals, and capital goods, European companies occupy critical positions in global supply chains. Today, these sectors face simultaneous pressures and opportunities driven by AI, automation, decarbonization, and geopolitics.`)
+    ),
+    imageUrl: getImage('expert', 1),
+    tags: ['Europe', 'Industrials', 'AI', 'Automation', 'Competitiveness'],
+  },
+  {
+    slug: 'european-banks-real-estate-and-cross-border-flows-in-a-high-rate-cycle',
+    title: 'European Banks, Real Estate, and Cross-Border Flows in a High-Rate Cycle',
+    excerpt:
+      'Assessment of how sustained higher interest rates reshape profitability, risk, and valuations across European banks and real estate, and how capital flows adjust within and into the region.',
+    content: `# European Banks, Real Estate, and Cross-Border Flows in a High-Rate Cycle
+
+## Introduction
+
+Europe’s financial system is deeply intertwined with its banking sector and real estate markets. Years of negative policy rates, compressed net interest margins, and unconventional monetary policy created a unique equilibrium: banks struggled to generate returns above their cost of equity, while real estate and long‑duration assets benefited from declining discount rates and abundant liquidity.
+
+The pivot to a higher‑for‑longer interest‑rate environment represents a structural break. On the surface, higher rates are positive for bank margins and deposit beta; beneath the surface, they test asset quality, funding stability, and real estate valuations. At the same time, cross‑border capital flows within Europe and from global investors must adapt to new relative value and risk dynamics.
+
+This article examines how a sustained high‑rate cycle reshapes European banks and real estate, and how cross‑border flows are likely to respond.
+
+## Net Interest Income Tailwind vs. Credit Risk Headwind
+
+### Margin Recovery After a Lost Decade
+
+European banks enter this cycle with improved capital ratios, leaner cost bases, and more disciplined business models than before the global financial crisis. Higher policy rates and steeper front ends of the curve have:
+
+- Expanded net interest margins (NIMs) as asset yields reset faster than deposit costs;
+- Reduced the drag of negative‑rate policies on core banking profitability;
+- Created room for higher returns on equity in core franchises.
+
+In the early phase of tightening, earnings surprises reflected this positive NII impulse. Many banks reported double‑digit ROE for the first time in years, supported by:
+
+- Retail and SME loan books repricing upward;
+- Sticky deposit bases with low initial beta;
+- Higher yields on excess liquidity and securities portfolios.
+
+### Normalizing Deposit Beta and Funding Competition
+
+As the cycle matures, depositors become more rate‑sensitive. Retail and corporate clients gradually demand higher remuneration or shift balances toward higher‑yielding alternatives, including:
+
+- Term deposits;
+- Money‑market funds;
+- Direct government bond holdings.
+
+This **normalization of deposit beta** narrows NIM expansion. Banks with strong franchises, granular deposit bases, and low reliance on wholesale funding should maintain more resilient margins than peers with concentrated or rate‑sensitive funding.
+
+### Credit Quality Under Higher Rates
+
+Higher borrowing costs inevitably test asset quality. Key pockets of vulnerability include:
+
+- Leveraged households in markets with variable‑rate mortgages;
+- Commercial real estate (CRE) with high loan‑to‑value ratios and cyclical tenants;
+- SMEs in energy‑intensive or structurally challenged sectors.
+
+So far, credit deterioration has been modest, helped by robust labor markets and fiscal buffers. However, a prolonged high‑rate environment could:
+
+- Increase non‑performing loan (NPL) formation;
+- Pressure coverage ratios if provisions lag;
+- Expose pockets of mis‑priced risk taken during the low‑rate era.
+
+Investors must differentiate between banks with conservative underwriting and strong provision buffers versus those that stretched risk appetite to chase yield.
+
+## European Real Estate: Valuations, Leverage, and Liquidity
+
+### Repricing Long-Duration Cash Flows
+
+Real estate is inherently a long‑duration asset class. Higher discount rates and higher financing costs translate into:
+
+- Lower theoretical valuations for a given rental income stream;
+- Tighter debt service coverage ratios;
+- Reduced loan proceeds at refinancing.
+
+Segments most exposed include:
+
+- Office properties facing both higher rates and structural demand shifts (remote work, ESG requirements);
+- Highly leveraged CRE vehicles reliant on rolling short‑term funding;
+- Residential markets with stretched price‑to‑income ratios and high household leverage.
+
+By contrast, segments with strong structural demand (logistics, prime residential in supply‑constrained cities, quality retail in dominant locations) can sustain valuations better, provided that rents can adjust and occupancy remains high.
+
+### Bank Exposure and Feedback Loops
+
+European banks are major lenders to real estate. A synchronized repricing of CRE and residential assets raises concerns about:
+
+- Collateral values falling below loan balances at refinance;
+- Need for higher provisions and capital charges;
+- Potential regulatory responses to emerging vulnerabilities.
+
+However, the starting point differs from pre‑2008:
+
+- Loan‑to‑value ratios are generally lower;
+- Underwriting standards have tightened;
+- Supervisory frameworks are more proactive.
+
+The risk is not a systemic replay of the global financial crisis, but a more gradual recognition of losses and capital drag for exposed lenders, especially in markets where valuations and leverage ran ahead of fundamentals.
+
+## Cross-Border Capital Flows: Within and Into Europe
+
+### Intra-European Re-Allocation
+
+Within Europe, higher rates and divergent national dynamics are likely to drive capital flows across:
+
+- **Core vs. periphery sovereigns** – where spreads reflect both fiscal trajectories and growth prospects;
+- **Northern vs. Southern Europe real estate** – with different regulatory regimes and supply constraints;
+- **Banking systems** with stronger vs. weaker profitability and asset quality.
+
+Investors may increasingly favor:
+
+- Banks with diversified pan‑European platforms, strong fee businesses, and high CET1 ratios;
+- Real estate markets with transparent regulation, stable tenancy frameworks, and limited overbuilding.
+
+Capital will be less forgiving of opaque structures or jurisdictions with policy unpredictability.
+
+### Global Investors and Relative Value
+
+From a global perspective, European financials and real estate must compete with:
+
+- U.S. banks benefiting from scale but facing their own regulatory and rate challenges;
+- Asia‑Pacific markets with different growth and demographic profiles;
+- Bond markets now offering attractive yields without equity volatility.
+
+For global allocators, the case for Europe rests on:
+
+- Improved bank profitability versus the pre‑negative‑rate era;
+- Compelling valuations in select listed real estate vehicles;
+- Currency and diversification considerations relative to home markets.
+
+Yet, episodes of volatility—driven by policy surprises, geopolitical events, or idiosyncratic bank headlines—can easily trigger outflows from more fragile segments.
+
+## Investment Implications
+
+### Banks: Focusing on Quality, Capital, and Payouts
+
+In a high‑rate cycle, European banks can be approached through three lenses:
+
+- **Earnings quality** – Sustainable NII, diversified fee income, disciplined cost management;
+- **Resilience** – Strong capital buffers, conservative risk profiles, robust liquidity;
+- **Shareholder returns** – Clear capital‑return frameworks (dividends, buybacks) that do not compromise resilience.
+
+Banks that can translate higher rates into structurally higher ROE, while managing credit risk, may justify multiple re‑rating from crisis‑era troughs. Others may remain value traps.
+
+### Real Estate: Discerning Value from Value Traps
+
+Listed European real estate has already repriced in many markets, but value is uneven:
+
+- Quality platforms with strong balance sheets and prime assets may offer attractive long‑term entry points once yields stabilize.
+- Highly leveraged vehicles reliant on continuous refinancing may face prolonged pressure or dilutive recapitalizations.
+
+Investors should scrutinize:
+
+- Debt maturity ladders and covenants;
+- Interest‑coverage ratios under stress scenarios;
+- Asset quality and tenant diversification.
+
+### Cross-Asset Perspective
+
+Finally, European banks and real estate must be considered within a broader cross‑asset context. In a world where:
+
+- Sovereign and IG credit offer positive real yields;
+- Equities must justify higher risk premia;
+- Private markets compete for capital with public exposures;
+
+allocators can be more selective. The best opportunities are likely to lie in:
+
+- Banks and platforms that emerge as regional consolidators;
+- Real estate segments with strong structural tailwinds and disciplined leverage;
+- Instruments and structures that align investor protections with upside participation.
+
+## Conclusion
+
+A sustained high‑rate cycle is re‑wiring Europe’s financial and real estate ecosystems. It offers a long‑awaited profitability tailwind for well‑run banks, while simultaneously imposing discipline on leveraged real estate structures and less resilient lenders.
+
+For investors, the task is not to make a binary call on “European banks” or “European real estate,” but to differentiate ruthlessly within and across countries, balance sheets, and business models. In doing so, they can position portfolios to benefit from a more normal, if more demanding, rate regime—one in which capital once again has a meaningful cost and is allocated accordingly.`,
+    date: formatDate(0),
+    author: 'Elias Wolfenstein',
+    authorAvatar: getAuthorAvatar('Elias Wolfenstein'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# European Banks, Real Estate, and Cross-Border Flows in a High-Rate Cycle
+
+## Introduction
+
+Europe’s financial system is deeply intertwined with its banking sector and real estate markets. Years of negative policy rates, compressed net interest margins, and unconventional monetary policy created a unique equilibrium: banks struggled to generate returns above their cost of equity, while real estate and long‑duration assets benefited from declining discount rates and abundant liquidity.
+
+The pivot to a higher‑for‑longer interest‑rate environment represents a structural break. On the surface, higher rates are positive for bank margins and deposit beta; beneath the surface, they test asset quality, funding stability, and real estate valuations. At the same time, cross‑border capital flows within Europe and from global investors must adapt to new relative value and risk dynamics.
+
+This article examines how a sustained high‑rate cycle reshapes European banks and real estate, and how cross‑border flows are likely to respond.`)
+    ),
+    imageUrl: getImage('markets', 0),
+    tags: ['Europe', 'Banks', 'Real Estate', 'Interest Rates', 'Capital Flows'],
+  },
+  {
     slug: 'eu-equities-market-outlook-2024',
     title: 'EU Equities Market Outlook: Navigating European Market Dynamics',
     excerpt: 'Comprehensive analysis of European equity markets, examining sector opportunities, economic drivers, and investment themes. Assessment of key markets, competitive positioning, and long-term value creation in European equities.',
@@ -1158,5 +1520,205 @@ Southern European markets—Italy, Spain, Portugal, and Greece—have long carri
     ),
     imageUrl: getImage('markets', 223),
     tags: ['Southern Europe', 'Equities', 'Reforms', 'Tourism', 'Banks'],
+  },
+  {
+    slug: 'swiss-equities-defensives-currency-and-valuation',
+    title: 'Swiss Equities: Defensives, Currency Strength, and Valuation Discipline',
+    excerpt:
+      'How Switzerland’s unique mix of global defensives, strong currency, and conservative balance sheets shapes equity risk/return—and how investors should think about sector tilts and valuation premia.',
+    content: `# Swiss Equities: Defensives, Currency Strength, and Valuation Discipline
+
+## Introduction
+
+Switzerland occupies a distinctive place in European and global equity allocations. Its market is dominated by:
+
+- **Global defensives** in pharmaceuticals, consumer staples, and healthcare.
+- High‑quality industrials and niche technology names.
+- A financial system anchored by strong regulation and a safe‑haven currency.
+
+For investors, Swiss equities offer:
+
+- Exposure to resilient, globally diversified franchises.
+- A long record of shareholder‑friendly capital allocation.
+- The complexity of navigating **CHF strength**, concentrated index weights, and elevated valuations.
+
+This article examines how to think about Swiss equities in a European context and how to position across sectors and styles.
+
+## Market Structure and Sector Composition
+
+### Concentrated Index, Global Revenue
+
+The Swiss equity market is:
+
+- Highly **concentrated** at the index level:
+  - A small number of mega‑caps account for a large share of market capitalization.
+- But **diversified by revenue**:
+  - Many large Swiss companies derive the majority of their sales and earnings outside Switzerland.
+
+Key sectors include:
+
+- **Healthcare and pharmaceuticals** – global leaders with deep R&D pipelines.
+- **Consumer staples** – food, beverages, and personal care brands with strong pricing power.
+- **Industrials** – precision engineering, automation, and specialty manufacturing.
+- **Financials** – wealth management, insurance, and niche banking.
+
+This structure means:
+
+- Macro exposure is more global than local.
+- Currency (CHF) plays a large role in reported earnings and investor returns.
+
+### The Role of the Swiss Franc
+
+The Swiss franc is:
+
+- Often perceived as a **safe‑haven currency**.
+- Supported by:
+  - Strong external balances.
+  - Credible monetary policy.
+  - Political and institutional stability.
+
+For foreign investors:
+
+- CHF strength can:
+  - Enhance returns in periods of global stress.
+  - Act as a hedge against risk‑off episodes.
+- But can also:
+  - Weigh on exporters’ competitiveness.
+  - Compress margins when local costs are in CHF and revenues are in weaker currencies.
+
+Deciding whether to **hedge CHF exposure** is therefore a critical part of constructing Swiss equity allocations.
+
+## Defensive Quality and Earnings Resilience
+
+### Healthcare and Consumer Staples
+
+Swiss healthcare and consumer‑staples companies often exhibit:
+
+- High margins and stable cash flows.
+- Strong brands and pricing power.
+- Large, diversified global footprints.
+
+These characteristics:
+
+- Provide resilience in downturns.
+- Support attractive dividend and buyback policies.
+
+However, investors must also consider:
+
+- **Regulatory risk** in pharmaceuticals (pricing, reimbursement, competition).
+- **Consumer trends** affecting brand strength and product mix.
+
+### Industrials and Niche Technology
+
+Swiss industrials are:
+
+- Focused on high‑value‑added niches:
+  - Precision tools.
+  - Automation and robotics components.
+  - Specialty machinery and engineering services.
+
+They benefit from:
+
+- Demand for productivity and automation globally.
+- Reputation for quality and reliability.
+
+But they are also:
+
+- Cyclical, exposed to global capex cycles and industrial production.
+- Sensitive to CHF strength, especially when competing with euro‑ or dollar‑based peers.
+
+## Valuation, Currency, and the “Quality Premium”
+
+### Structural Premiums
+
+Swiss equities often trade at:
+
+- Higher valuation multiples than many European peers, reflecting:
+  - Quality of earnings.
+  - Balance‑sheet strength.
+  - Defensive characteristics.
+
+The key question for investors:
+
+- When is the **quality and defensiveness premium** justified?
+- When has it stretched beyond reasonable expectations, limiting forward returns?
+
+### Adjusting for Currency
+
+When assessing valuation:
+
+- Consider **CHF strength** as part of the equation:
+  - A strong CHF can depress reported earnings, making multiples appear higher.
+  - Conversely, FX headwinds may already be priced in.
+
+Investors should:
+
+- Analyze earnings in constant‑currency terms.
+- Stress‑test assumptions under:
+  - Different CHF scenarios.
+  - Global demand regimes.
+
+## Portfolio Construction: Role of Swiss Equities
+
+### As a Defensive Core Holding
+
+In multi‑asset or regional portfolios, Swiss equities can:
+
+- Serve as **defensive core holdings**:
+  - Lower volatility than many cyclical European markets.
+  - Strong balance sheets and cash‑flow generation.
+- Provide exposure to:
+  - Global healthcare and consumer‑staples franchises.
+  - Niche industrial and technology leaders.
+
+However, over‑concentration in a few mega‑caps can:
+
+- Increase idiosyncratic risk (e.g., pipeline setbacks in a single pharma name).
+- Reduce diversification benefits.
+
+### Diversification and Constraints
+
+Investors should:
+
+- Combine Swiss exposures with:
+  - More cyclical European markets.
+  - Other regions and sectors.
+- Manage:
+  - Single‑name concentration.
+  - Sector balance (healthcare vs. staples vs. industrials).
+
+For strategies constrained by benchmarks:
+
+- Swiss weights may already be significant via global or European indices.
+- Additional allocations should be justified by:
+  - Clear views on quality, valuation, and currency.
+
+## Conclusion
+
+Swiss equities offer a mix of:
+
+- High‑quality defensive franchises.
+- Strong balance sheets and shareholder‑friendly policies.
+- A safe‑haven currency that can both protect and challenge returns.
+
+For investors, the key is to approach Switzerland as:
+
+- A **strategic source of quality and defensiveness**, not just a narrow pharma bet.
+- A market where currency, valuation, and concentration risks must be explicitly managed.
+
+By combining sector analysis, currency strategy, and disciplined valuation work, Swiss equities can play a valuable role in European and global portfolios—providing stability and income while still participating in long‑term global growth themes.`,
+    date: formatDate(224),
+    author: 'Elias Wolfenstein',
+    authorAvatar: getAuthorAvatar('Elias Wolfenstein'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Swiss Equities: Defensives, Currency Strength, and Valuation Discipline
+
+## Introduction
+
+Switzerland occupies a distinctive place in European and global equity allocations, with a market dominated by global defensives and a strong currency.`),
+    ),
+    imageUrl: getImage('markets', 224),
+    tags: ['Switzerland', 'European Equities', 'Defensives', 'Currency', 'Valuation'],
   },
 ];

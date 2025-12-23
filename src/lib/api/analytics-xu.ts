@@ -26,6 +26,343 @@ const countWords = (text: string): number => {
 // Xu Meiling - Asia-Pacific Markets (47 articles)
 export const xuArticles: AnalyticsArticle[] = [
   {
+    slug: 'ai-and-supply-chain-reconfiguration-in-asia-pacific',
+    title: 'AI and Supply Chain Reconfiguration in Asia-Pacific',
+    excerpt:
+      'Analysis of how AI, automation, and geopolitics are reshaping Asia-Pacific supply chains, manufacturing hubs, and investment opportunities across equities and credit.',
+    content: `# AI and Supply Chain Reconfiguration in Asia-Pacific
+
+## Introduction
+
+Asia-Pacific has been the backbone of global manufacturing and trade for decades, with China at the center of many supply chains. Today, AI and automation are intersecting with geopolitics, trade policy, and corporate risk management to reconfigure how and where goods are produced.
+
+Companies increasingly seek to:
+
+- Diversify production footprints beyond single‑country dependencies;
+- Increase visibility and resilience across complex supplier networks;
+- Leverage AI and automation to balance cost, quality, and flexibility.
+
+This article examines how these forces are reshaping Asia-Pacific supply chains and what this means for regional equity and credit investors.
+
+## Drivers of Supply Chain Reconfiguration
+
+### Geopolitics and Trade Policy
+
+Strategic competition between major powers has led to:
+
+- Tariffs, export controls, and investment restrictions in sensitive sectors;
+- Greater scrutiny of dependencies in semiconductors, telecom, and critical materials;
+- Incentive schemes to localize or regionalize production.
+
+For Asia-Pacific, this translates into both headwinds and opportunities as companies:
+
+- Rebalance away from single‑country concentration;
+- Build “China+1” or broader “Asia+” strategies;
+- Reassess the role of regional trade agreements and economic corridors.
+
+### Technology, Automation, and AI
+
+AI and automation enable:
+
+- More flexible, data‑driven production lines;
+- Predictive maintenance and quality control;
+- Real‑time optimization of inventory and logistics.
+
+These capabilities can:
+
+- Reduce sensitivity to labor‑cost differentials;
+- Make higher‑cost locations more competitive when combined with proximity and reliability;
+- Support more modular and distributed production networks.
+
+## Shifting Roles Within Asia-Pacific
+
+### China: From Factory of the World to Dual-Circulation Strategy
+
+China remains a central manufacturing hub but is:
+
+- Moving up the value chain into advanced manufacturing, EVs, and high‑tech components;
+- Pursuing a “dual‑circulation” strategy that emphasizes domestic demand alongside exports;
+- Investing heavily in AI, robotics, and industrial digitalization.
+
+While some lower‑value production shifts to other countries, China’s role in regional supply chains remains significant, particularly in:
+
+- Components and capital goods;
+-
+ AI‑enabled manufacturing platforms;
+- Logistics and infrastructure.
+
+### ASEAN and South Asia: Beneficiaries of Diversification
+
+Countries such as Vietnam, Thailand, Indonesia, and India are attracting:
+
+- New manufacturing capacity in electronics, autos, and consumer goods;
+- Investments in industrial parks, ports, and logistics;
+- Digital infrastructure to support e‑commerce and services.
+
+AI and automation can help these economies:
+
+- Climb the value chain faster;
+- Manage rising wages and urbanization pressures;
+- Improve reliability and transparency for global clients.
+
+However, success depends on:
+
+- Regulatory stability and ease of doing business;
+- Skills development and education systems;
+- Quality of physical and digital infrastructure.
+
+## AI in Supply Chain Management and Logistics
+
+### Visibility and Risk Management
+
+AI‑driven tools can:
+
+- Map supplier networks beyond Tier 1;
+- Monitor disruptions (weather, politics, pandemics) in real time;
+- Optimize routing and mode choices in logistics.
+
+Companies that invest in these capabilities can:
+
+- Reduce downtime and stockouts;
+- Respond faster to shocks and demand shifts;
+- Reduce working‑capital needs through better inventory management.
+
+### Sustainability and ESG Considerations
+
+AI and data analytics also support:
+
+- Tracking emissions and environmental impacts across supply chains;
+- Identifying social‑risk hotspots (labor practices, community conflicts);
+- Supporting compliance with emerging supply‑chain due‑diligence regulations.
+
+Asia-Pacific suppliers that can demonstrate robust ESG performance may gain share as global buyers align procurement with sustainability goals.
+
+## Investment Implications
+
+### Equities
+
+Equity investors should watch:
+
+- Beneficiaries of capex in automation, robotics, and industrial software;
+- Logistics and infrastructure operators in emerging hubs;
+- Component and equipment makers supplying AI‑enabled manufacturing systems.
+
+At the same time, they must assess:
+
+- Exposure to policy risk and export controls;
+- Customer concentration and pricing power;
+- Ability to sustain margins through investment cycles.
+
+### Credit
+
+Credit investors should consider:
+
+- Balance‑sheet strength of companies funding large capex programs;
+- Refinancing risk in sectors exposed to rapid technological change;
+- Sovereign and quasi‑sovereign risk in countries relying on external financing for infrastructure builds.
+
+Projects with clear demand visibility and robust contractual structures may offer attractive risk‑adjusted returns; more speculative or politically driven ventures require caution.
+
+## Conclusion
+
+AI and supply‑chain reconfiguration are reshaping Asia-Pacific’s economic landscape. The region is not de‑globalizing but **re‑globalizing** along new lines—more distributed, more digital, and more focused on resilience as well as cost.
+
+For investors, the task is to identify which countries, sectors, and companies are positioned to benefit from this transition. Those that combine technological adoption with sound governance and financial discipline can emerge as the next generation of Asia-Pacific leaders in a world where supply chains are smarter, more diversified, and more strategically contested.`,
+    date: formatDate(1),
+    author: 'Xu Meiling',
+    authorAvatar: getAuthorAvatar('Xu Meiling'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# AI and Supply Chain Reconfiguration in Asia-Pacific
+
+## Introduction
+
+Asia-Pacific has been the backbone of global manufacturing and trade for decades, with China at the center of many supply chains. Today, AI and automation are intersecting with geopolitics, trade policy, and corporate risk management to reconfigure how and where goods are produced.`)
+    ),
+    imageUrl: getImage('markets', 1),
+    tags: ['Asia-Pacific', 'Supply Chains', 'AI', 'Manufacturing', 'Geopolitics'],
+  },
+  {
+    slug: 'asia-pacific-equity-and-credit-markets-in-a-higher-rate-regime',
+    title: 'Asia-Pacific Equity and Credit Markets in a Higher-Rate Regime',
+    excerpt:
+      'Overview of how a sustained period of higher global and regional interest rates affects Asia-Pacific equity and credit markets, with emphasis on China, North Asia, and local-currency bond markets.',
+    content: `# Asia-Pacific Equity and Credit Markets in a Higher-Rate Regime
+
+## Introduction
+
+Asia-Pacific markets sit at the intersection of global capital flows, regional growth dynamics, and evolving monetary regimes. For much of the last decade, the region benefited from a combination of benign global rates, steady Chinese growth, and strong demand for yield and structural growth stories across North Asia and ASEAN.
+
+The emergence of a higher‑for‑longer global rate environment introduces a new set of challenges and opportunities. Higher U.S. and European yields influence capital flows into and out of the region. Domestic inflation dynamics and policy responses vary widely—from Japan’s gradual shift away from ultra‑easy policy to more conventional tightening cycles in other economies. China’s own cycle is increasingly asynchronous, with growth concerns leading to more accommodative stances even as global policy remains tight.
+
+This article examines how a sustained higher‑rate regime reshapes Asia-Pacific equity and credit markets, with a focus on China, North Asia, and local‑currency bond markets.
+
+## Global Rates, Dollar Dynamics, and Regional Transmission
+
+### The U.S. Dollar and Asia-Pacific Risk Premia
+
+Higher U.S. rates and a stronger dollar historically create headwinds for Asia:
+
+- Tighter global financial conditions raise the cost of external funding;
+- Risk appetite for emerging Asia can weaken when investors can earn appealing yields in developed markets;
+- Currencies that rely on carry inflows or current‑account surpluses may face greater volatility.
+
+Yet the transmission is not uniform. Economies with:
+
+- Strong external positions and reserves;
+- Deep local investor bases;
+- Credible monetary frameworks,
+
+can weather higher global rates more comfortably than those with larger external imbalances or weaker policy credibility.
+
+### Diverging Domestic Policy Cycles
+
+Within Asia-Pacific, monetary cycles are diverging:
+
+- Some central banks continue to normalize rates from ultra‑low levels, particularly where inflation is sticky or expectations need anchoring.
+- Others, especially where growth has slowed significantly and inflation has moderated, are debating or implementing rate cuts even as global policy remains restrictive.
+
+China is a prime example of the latter dynamic, easing policy to support growth while the rest of the world remains relatively tight. This divergence affects:
+
+- Relative currency moves and their impact on competitiveness and capital flows;
+- Equity valuation frameworks that must balance slower growth with lower domestic discount rates;
+- Credit conditions across banks, corporates, and local governments.
+
+## China: Growth, Policy, and Market Re-pricing
+
+### Equity Markets: Balancing Growth Concerns and Valuation
+
+Chinese equities have been re‑rated lower over recent years amid concerns about:
+
+- Slower structural growth and demographic headwinds;
+- Property‑sector deleveraging and local‑government finances;
+- Regulatory interventions in key sectors (internet platforms, education, data‑intensive industries);
+- Geopolitical tensions affecting technology transfer and global supply chains.
+
+In a higher‑rate global environment, risk premia for China remain elevated. However, domestic easing—via lower policy rates, targeted credit measures, and fiscal support—provides a counterbalance. From an investor’s perspective, the key questions are:
+
+- Are current valuations sufficiently discounting structural and policy risks?
+- Where can earnings resilience be found despite macro headwinds (e.g., advanced manufacturing, select consumer upgrading segments, green technologies)?
+- How should exposure be sized and diversified given persistent geopolitical uncertainty?
+
+### Credit Markets: Local-Currency vs. Offshore Debt
+
+China’s onshore bond market is one of the largest in the world, dominated by:
+
+- Government and policy bank bonds;
+- Financials;
+- Large state‑owned and high‑quality corporates.
+
+Domestic easing and targeted support can stabilize onshore credit conditions, but stress remains in:
+
+- Property developers and related supply chains;
+- Some local government financing vehicles (LGFVs);
+- Smaller, highly leveraged issuers.
+
+Offshore dollar bonds, particularly in the property sector, have already undergone significant repricing and, in many cases, restructuring. In a higher global rate environment, investors must be selective and realistic about recovery values and timelines.
+
+## North Asia: Japan, Korea, and Taiwan
+
+### Japan: From Ultra-Low Rates to Gradual Normalization
+
+Japan is a unique case. For decades, ultra‑low or negative rates and yield‑curve control suppressed domestic yields and contributed to persistent outflows into global assets. As the Bank of Japan cautiously normalizes policy:
+
+- Domestic yields have begun to rise from extremely low levels, altering relative value within Asia and globally;
+- Equity markets are supported by corporate‑governance reforms, improving shareholder returns, and modest reflationary dynamics;
+- The yen’s trajectory remains a key macro variable, balancing interest‑rate differentials and terms‑of‑trade factors.
+
+For global investors, higher domestic yields and improving corporate behavior create new combinations of income and equity exposure, but careful currency and duration management are essential.
+
+### Korea and Taiwan: Tech Cycles and Global Demand
+
+Korea and Taiwan are deeply integrated into global technology and semiconductor supply chains. Higher global rates influence:
+
+- End‑demand for electronics and capital goods;
+- Investment cycles in data centers, AI infrastructure, and consumer devices;
+- Equity valuations for export‑oriented champions.
+
+At the same time, structural demand for computing power and connectivity can support long‑term earnings growth, even through cyclical downturns. Credit markets in these economies benefit from:
+
+- Strong external positions;
+- Deep local investor bases;
+- Conservative financial systems.
+
+Investors can seek opportunities where cyclical weakness and higher global rates have compressed valuations in otherwise structurally strong franchises.
+
+## Local-Currency Bond Markets Across Asia-Pacific
+
+### Real Yields, Domestic Savings, and Institutional Demand
+
+Many Asia-Pacific economies now offer positive real yields in local‑currency bonds, supported by:
+
+- Domestic savings pools (pension funds, insurers, banks);
+- Improving monetary frameworks and inflation‑targeting regimes;
+- Gradual index inclusion that broadens the foreign investor base.
+
+In a higher‑rate global environment, local bond markets can provide:
+
+- Attractive income with diversification benefits;
+- Reduced currency mismatch for domestic investors;
+- Opportunities for global investors comfortable with FX risk.
+
+### FX and Rate Interactions
+
+Investors must consider the interaction between:
+
+- Local policy rates and global rate differentials;
+- FX dynamics and hedging costs;
+- Market liquidity and depth.
+
+Where central banks have tightened aggressively and inflation is moderating, there may be scope for gradual easing—supporting bond prices even if global rates remain elevated. Conversely, where inflation pressures linger or external imbalances persist, further tightening or sustained high rates may be necessary, lengthening the adjustment period.
+
+## Equity and Credit Positioning Framework
+
+### Segmentation by Market Type
+
+Within Asia-Pacific, investors can segment exposure into:
+
+- **Developed Asia** – Japan, Australia, and others with strong institutions and deep markets;
+- **Emerging Asia** – China, India, ASEAN economies with higher growth but more volatile cycles;
+- **Frontier and smaller markets** – with idiosyncratic risks and less liquid markets.
+
+Higher global rates argue for:
+
+- Greater emphasis on balance‑sheet strength and free cash flow in equities;
+- Preference for higher‑quality credits with manageable refinancing needs;
+- More selective use of leverage and derivatives in portfolios.
+
+### The Role of China in Regional Allocations
+
+Given China’s size, every Asia-Pacific portfolio implicitly makes a call on Chinese exposure. In a higher‑rate world with asynchronous Chinese easing, investors must determine:
+
+- Whether to treat China as a distinct macro and policy regime within EM allocations;
+- How to balance direct exposure (equities, onshore bonds) with indirect exposure via regional supply chains and trade partners;
+- What level of risk premium is appropriate relative to other EM and DM markets.
+
+## Conclusion
+
+Asia-Pacific equity and credit markets are adapting to a world in which global risk‑free rates are no longer anchored near zero. The new regime compresses some relative advantages while highlighting others: strong balance sheets, deep local markets, prudent policy frameworks, and exposure to secular growth themes remain key differentiators.
+
+For investors, the task is to navigate this complexity with a structured framework—integrating global rate dynamics, domestic policy cycles, and sector‑specific drivers—to build diversified, resilient Asia-Pacific allocations in a higher‑for‑longer world.`,
+    date: formatDate(0),
+    author: 'Xu Meiling',
+    authorAvatar: getAuthorAvatar('Xu Meiling'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Asia-Pacific Equity and Credit Markets in a Higher-Rate Regime
+
+## Introduction
+
+Asia-Pacific markets sit at the intersection of global capital flows, regional growth dynamics, and evolving monetary regimes. For much of the last decade, the region benefited from a combination of benign global rates, steady Chinese growth, and strong demand for yield and structural growth stories across North Asia and ASEAN.
+
+The emergence of a higher‑for‑longer global rate environment introduces a new set of challenges and opportunities. Higher U.S. and European yields influence capital flows into and out of the region. Domestic inflation dynamics and policy responses vary widely—from Japan’s gradual shift away from ultra‑easy policy to more conventional tightening cycles in other economies. China’s own cycle is increasingly asynchronous, with growth concerns leading to more accommodative stances even as global policy remains tight.
+
+This article examines how a sustained higher‑rate regime reshapes Asia-Pacific equity and credit markets, with a focus on China, North Asia, and local‑currency bond markets.`)
+    ),
+    imageUrl: getImage('markets', 0),
+    tags: ['Asia-Pacific', 'China', 'Equities', 'Credit', 'Interest Rates'],
+  },
+  {
     slug: 'china-tech-investment-landscape-2024',
     title: 'China Tech Investment Landscape: Navigating Opportunities and Risks',
     excerpt: 'Comprehensive analysis of China\'s technology sector, examining market dynamics, regulatory environment, and investment opportunities. Assessment of key players, competitive positioning, and long-term outlook for Chinese tech companies.',
@@ -1175,5 +1512,229 @@ South Korea is a core market in Asia‑Pacific equity portfolios.`),
     ),
     imageUrl: getImage('markets', 375),
     tags: ['Korea', 'Equities', 'Chaebol', 'Governance', 'Semiconductors'],
+  },
+  {
+    slug: 'australia-equities-commodities-banks-and-dividends',
+    title: 'Australia Equities: Commodities, Banks, and Dividends in a Concentrated Market',
+    excerpt:
+      'How Australia’s commodity exposure, concentrated banking sector, and high dividend culture shape equity risk/return—and how investors can balance income, cyclicality, and China sensitivity.',
+    content: `# Australia Equities: Commodities, Banks, and Dividends in a Concentrated Market
+
+## Introduction
+
+Australia is a key component of Asia‑Pacific equity portfolios, despite being geographically and institutionally closer to the developed markets club. Its equity market is characterized by:
+
+- Significant exposure to **commodities and resource companies**.
+- A concentrated **banking sector** with large domestic franchises.
+- A strong culture of **dividends and franking credits** for local investors.
+
+At the same time, Australia sits at the intersection of:
+
+- Chinese demand for raw materials.
+- Global commodity cycles.
+- Domestic housing and credit dynamics.
+
+This article offers a structured view of Australia’s equity market and how to think about sector allocation and style tilts in a world of shifting commodity and rate regimes.
+
+## Market Structure and Sector Exposures
+
+### Concentrated Index, Diversified Drivers
+
+The Australian equity index is:
+
+- Concentrated in:
+  - **Financials** (major banks and insurers).
+  - **Materials** (miners and resource companies).
+- Under‑represented in:
+  - Certain technology and healthcare segments compared with global indices.
+
+This structure results in:
+
+- High sensitivity to:
+  - Commodity prices (iron ore, coal, base metals).
+  - Domestic credit and housing cycles.
+- Factor tilts toward:
+  - Value.
+  - Income.
+  - Cyclical exposures.
+
+For Asia‑Pacific investors, Australia can:
+
+- Complement:
+  - North‑East Asian tech and manufacturing exposure.
+- But requires careful integration with:
+  - China and commodity‑linked positions.
+
+## Commodities and Resource Companies
+
+### China Linkages and Global Demand
+
+Australia’s resource sector is:
+
+- Closely tied to:
+  - Chinese demand for:
+    - Iron ore.
+    - Coal (thermal and metallurgical).
+    - LNG and other commodities.
+- Exposed to:
+  - Global investment and industrial cycles.
+
+Key considerations:
+
+- **Iron ore**:
+  - Dominant contribution to earnings for some majors.
+  - Sensitive to:
+    - Chinese property and infrastructure cycles.
+    - Steel demand and environmental policies.
+- **Energy and diversified miners**:
+  - Impacted by:
+    - Global energy transitions.
+    - ESG‑driven capital‑allocation decisions.
+
+Investors should:
+
+- Assess:
+  - Balance‑sheet strength.
+  - Capital‑discipline track records.
+  - Dividend and buyback policies across cycles.
+
+### ESG and Transition Dynamics
+
+Resource companies face:
+
+- Increasing scrutiny over:
+  - Emissions.
+  - Land and water use.
+  - Indigenous and community rights.
+
+Transition strategies include:
+
+- Shifting portfolios toward:
+  - “Future‑facing” metals.
+  - Lower‑carbon energy resources.
+
+For investors, integrating:
+
+- Long‑term demand for metals in:
+  - Electrification.
+  - Renewables.
+  - Batteries.
+- With:
+  - Policy and social pressures on high‑carbon fuels.
+
+is key to valuing Australian resource names.
+
+## Banks, Housing, and Domestic Demand
+
+### Major Banks and the Housing Cycle
+
+Australia’s major banks:
+
+- Dominate:
+  - Domestic lending.
+  - Retail and SME banking.
+  - Mortgage markets.
+- Are heavily exposed to:
+  - Housing and real‑estate dynamics.
+
+Higher rates and macroprudential policies:
+
+- Influence:
+  - Mortgage growth.
+  - Asset quality.
+  - Net interest margins.
+
+Important metrics:
+
+- Loan‑to‑value ratios (LTVs).
+- Arrears and non‑performing loans.
+- Capital and liquidity buffers.
+
+### Dividends and Income Culture
+
+Australian banks and many blue‑chip companies:
+
+- Have a:
+  - Strong dividend culture.
+  - Practice of returning a significant share of earnings to shareholders.
+
+For local investors:
+
+- **Franking credits**:
+  - Enhance after‑tax returns on fully franked dividends.
+
+For international investors:
+
+- The income profile can be attractive.
+- But requires:
+  - Understanding of:
+    - Tax treatment.
+    - Sustainability of payout ratios through cycles.
+
+## Portfolio Construction: Australia in Asia-Pacific Context
+
+### Role in Regional Portfolios
+
+Within broader Asia‑Pacific or EM allocations, Australia can:
+
+- Provide:
+  - Exposure to developed‑market institutions and governance.
+  - Commodity and financials beta.
+- Reduce reliance on:
+  - Single‑country or sector exposures (e.g., China tech).
+
+However, overlaps must be managed:
+
+- Avoid over‑concentration in:
+  - Global miners.
+  - Bank‑dominated financials.
+
+### Style and Factor Tilts
+
+Australian equities can tilt portfolios toward:
+
+- Value and income factors.
+- Cyclical exposures tied to:
+  - Commodities.
+  - Domestic demand.
+
+Balancing:
+
+- Australia’s defensives (e.g., select healthcare, infrastructure, and staples).
+- With:
+  - More cyclical resource and financial names.
+
+helps smooth returns across cycles.
+
+## Conclusion
+
+Australia’s equity market offers a distinct mix of:
+
+- Commodity exposure.
+- Concentrated banking franchises.
+- Strong dividend culture.
+
+For Asia‑Pacific investors, it is best used as:
+
+- A building block within a diversified regional strategy.
+- With explicit views on:
+  - China demand.
+  - Commodity cycles.
+  - Domestic housing and rate dynamics.
+
+By treating Australia as a **thematic and factor allocation**—rather than a monolithic bet—investors can better harness its strengths while managing the inherent cyclicality and concentration risks of this unique market.`,
+    date: formatDate(376),
+    author: 'Xu Meiling',
+    authorAvatar: getAuthorAvatar('Xu Meiling'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Australia Equities: Commodities, Banks, and Dividends in a Concentrated Market
+
+## Introduction
+
+Australia is a key component of Asia‑Pacific equity portfolios, with a market dominated by resources, banks, and a strong dividend culture.`),
+    ),
+    imageUrl: getImage('markets', 376),
+    tags: ['Australia', 'Equities', 'Commodities', 'Banks', 'Asia-Pacific'],
   },
 ];
