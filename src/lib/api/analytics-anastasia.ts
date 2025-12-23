@@ -936,4 +936,236 @@ Central & Eastern Europe (CEE) is not a single macro bloc. Countries differ mate
     imageUrl: getImage('markets', 262),
     tags: ['FX', 'Monetary Policy', 'CEE', 'Local Currency Bonds', 'Macro'],
   },
+  {
+    slug: 'cee-equity-markets-and-privatization-themes',
+    title: 'CEE Equity Markets and Privatization Themes: Sizing Opportunities in a Shallow but Evolving Landscape',
+    excerpt:
+      'Why Central & Eastern European equity markets remain shallow, how privatizations and listings may change the opportunity set, and how investors can approach liquidity, governance, and country risk.',
+    content: `# CEE Equity Markets and Privatization Themes: Sizing Opportunities in a Shallow but Evolving Landscape
+
+## Introduction
+
+Central & Eastern Europe (CEE) offers exposure to:
+
+- Converging economies.
+- Open trade regimes.
+- Integration with EU value chains.
+
+Yet its **equity markets** remain comparatively shallow:
+
+- Limited free float in some flagship names.
+- Concentration in a few sectors (banks, energy, utilities, telecoms).
+- A relatively small universe of liquid, index‑eligible stocks.
+
+At the same time, privatization plans, new listings, and cross‑border M&A are gradually reshaping the opportunity set. This article explores how investors can approach CEE equity markets, with a focus on:
+
+- Market structure and liquidity.
+- Privatization and listing pipelines.
+- Governance and country‑risk considerations.
+
+## Structure of CEE Equity Markets
+
+### Market Depth and Free Float
+
+CEE equity indices often feature:
+
+- A small number of large caps with:
+  - Significant state ownership.
+  - Concentrated domestic shareholder bases.
+- A long tail of:
+  - Small and mid caps with thin trading volumes.
+  - Limited analyst coverage.
+
+Challenges for investors:
+
+- Difficulty building or exiting positions without moving prices.
+- Concentration risk in a handful of liquid names.
+
+Opportunities:
+
+- Mis‑pricings where:
+  - Fundamentals improve faster than liquidity.
+  - Governance reforms unlock value.
+
+### Sector Concentration
+
+Common sector tilts include:
+
+- **Banks and financials**
+  - Large weights reflecting bank‑centric financial systems.
+- **Energy and utilities**
+  - Legacy national champions.
+  - Increasing exposure to transition investments.
+- **Telecoms and infrastructure**
+  - Stable cash flows.
+  - Regulated pricing frameworks.
+
+Less representation in:
+
+- High‑growth technology.
+- Diversified consumer names.
+
+Investors must recognize that CEE equity allocations often:
+
+- Imply specific sector and factor exposures.
+- Behave differently from broader EM or European benchmarks.
+
+## Privatizations, IPOs, and Market Development
+
+### Privatization Waves and State Ownership
+
+CEE countries have gone through multiple waves of privatization:
+
+- Early post‑transition privatizations.
+- Subsequent sales of residual state stakes.
+
+In some cases:
+
+- States retain:
+  - Golden shares.
+  - Blocking minorities.
+  - Informal influence over strategy.
+
+For investors:
+
+- Clarity about:
+  - Future privatization plans.
+  - Governance arrangements in partially privatized entities.
+is critical to pricing:
+
+- Political interference risk.
+- Dividend policy stability.
+
+### New Listings and Capital-Market Agendas
+
+Some governments and exchanges in the region have explicit goals to:
+
+- Deepen local capital markets.
+- Attract:
+  - Regional champions.
+  - New economy firms.
+
+Developments include:
+
+- IPOs of:
+  - Infrastructure assets.
+  - Energy and utility spin‑offs.
+- Listings of:
+  - Regional banks.
+  - Consumer‑facing companies.
+
+However:
+
+- Pipelines can be uneven.
+- Macroeconomic volatility and global risk appetite heavily influence timing.
+
+Investors should:
+
+- Track national capital‑market strategies.
+- Engage with exchanges and regulators to understand:
+  - Pipeline quality.
+  - Investor‑protection frameworks.
+
+## Governance, Minority Rights, and ESG Considerations
+
+### State Influence and Corporate Governance
+
+State involvement can:
+
+- Provide:
+  - Implicit support in crises.
+  - Policy alignment in strategic sectors.
+- Also create:
+  - Conflicts between political and commercial objectives.
+  - Uncertainty around capital allocation and payout policies.
+
+Investors should:
+
+- Assess:
+  - Board independence.
+  - Minority shareholder protections.
+  - Track record of:
+    - Related‑party transactions.
+    - Policy‑driven decisions that affect equity value.
+
+### ESG and Transition Risks
+
+CEE companies face:
+
+- Legacy assets in:
+  - High‑emitting energy sectors.
+  - Industrial and mining activities.
+- Increasing EU‑level climate and environmental regulation.
+
+For equity investors, key issues include:
+
+- Transition plans and capex commitments.
+- Environmental liabilities and remediation obligations.
+- Disclosure quality and ESG‑risk management.
+
+## Portfolio Construction and Risk Management
+
+### Liquidity-Aware Position Sizing
+
+Given market depth constraints:
+
+- Position sizes should be:
+  - Calibrated to average daily volumes.
+  - Structured to allow exits under stress scenarios.
+
+Tools to manage liquidity risk:
+
+- Combining:
+  - Direct holdings in larger names.
+  - Regional funds or ETFs for smaller markets.
+- Staggered execution strategies to limit market impact.
+
+### Country and Political Risk
+
+CEE equity returns are influenced by:
+
+- Domestic political cycles.
+- EU funding flows and conditionality.
+- Relations with neighboring countries and broader geopolitical blocs.
+
+Country‑level diagnostics:
+
+- Stability and predictability of:
+  - Policy and regulation.
+  - Tax and fiscal regimes.
+  - Treatment of foreign investors.
+
+Investors can:
+
+- Diversify across multiple CEE markets.
+- Adjust exposure as:
+  - Political risk premia widen or narrow.
+
+## Conclusion
+
+CEE equity markets remain relatively shallow and concentrated, but they are not static. Privatizations, new listings, and the integration of regional champions into broader European supply chains are gradually expanding the opportunity set.
+
+For investors, the key is to:
+
+- Treat CEE equities as a **targeted, liquidity‑aware allocation** within a broader EM or European portfolio.
+- Focus on:
+  - Governance and minority‑rights protections.
+  - Sector and country balance.
+  - Sensible position sizes relative to market depth.
+
+With this framework, CEE can provide differentiated exposure to convergence, reform, and regional growth without unduly compromising liquidity or governance standards.`,
+    date: formatDate(263),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# CEE Equity Markets and Privatization Themes: Sizing Opportunities in a Shallow but Evolving Landscape
+
+## Introduction
+
+Central & Eastern Europe (CEE) offers exposure to converging economies, open trade regimes, and integration with EU value chains.`),
+    ),
+    imageUrl: getImage('markets', 263),
+    tags: ['CEE', 'Equities', 'Privatization', 'Emerging Europe', 'Liquidity'],
+  },
 ];

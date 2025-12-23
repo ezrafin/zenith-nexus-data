@@ -894,4 +894,273 @@ Italian government bonds (BTPs) are a cornerstone of the euro‑area fixed incom
     imageUrl: getImage('markets', 302),
     tags: ['Italy', 'BTP', 'Government Bonds', 'Spreads', 'Euro Area'],
   },
+  {
+    slug: 'spanish-and-portuguese-equities-tourism-banks-and-infrastructure',
+    title: 'Spanish and Portuguese Equities: Tourism, Banks, and Infrastructure in Iberia’s Recovery Cycle',
+    excerpt:
+      'How Spain and Portugal’s tourism, banking, and infrastructure sectors are positioned in the current cycle, and where investors can find resilient cash flows versus higher-beta cyclical exposure.',
+    content: `# Spanish and Portuguese Equities: Tourism, Banks, and Infrastructure in Iberia’s Recovery Cycle
+
+## Introduction
+
+While my focus is often Italy and the broader Mediterranean, Iberia—**Spain and Portugal**—shares many structural features with Italy: tourism‑driven economies, banking sectors shaped by past crises, and significant exposure to European energy and fiscal policy. At the same time, Spain and Portugal have followed distinct reform paths and exhibit different sector dynamics.
+
+For investors, Spanish and Portuguese equities offer:
+
+- Exposure to tourism recovery and services.
+- Banks that have navigated restructuring and now operate in a higher‑rate environment.
+- Infrastructure and utilities central to energy transition and EU investment plans.
+
+This article explores how to think about Iberian equities, with an emphasis on tourism, banks, and infrastructure.
+
+## Macro Context and Reform Backdrop
+
+### Post-Crisis Reforms and Labor Markets
+
+Spain and Portugal:
+
+- Implemented significant labor‑market and fiscal reforms after the euro‑area crisis.
+- Improved:
+  - Unit labor costs.
+  - Export competitiveness.
+  - Structural primary balances (with cyclical variation).
+
+These adjustments have:
+
+- Supported stronger performance in:
+  - Goods and services exports.
+  - Employment and labor‑force participation (from weak starting points).
+
+Challenges remain:
+
+- High youth unemployment in Spain.
+- Productivity gaps.
+- Dependence on EU funds and policy support for investment.
+
+### Tourism and External Balances
+
+Tourism is a central pillar:
+
+- Spain is one of the world’s top tourist destinations.
+- Portugal’s tourism sector has grown rapidly, with a strong brand in:
+  - City breaks.
+  - Surf and nature tourism.
+
+Tourism recovery has:
+
+- Supported current‑account improvements.
+- Boosted fiscal revenues.
+
+However, both countries must manage:
+
+- Capacity and crowding in key destinations.
+- Housing pressures in tourism‑heavy cities.
+
+For equities, the key is to distinguish:
+
+- Companies with sustainable, differentiated offerings.
+- Those heavily exposed to low‑margin, volume‑driven segments.
+
+## Sector Focus: Banks
+
+### Balance Sheets and Profitability
+
+Spanish and Portuguese banks have:
+
+- Strengthened capital ratios since the crisis.
+- Reduced NPLs through:
+  - Sales to bad banks and investors.
+  - Improved underwriting and provisioning.
+
+The higher‑rate environment has:
+
+- Expanded net interest margins, particularly where:
+  - Retail deposit franchises are strong.
+  - Variable‑rate lending is prevalent.
+
+Investors should analyze:
+
+- Deposit betas and competition for savings.
+- Asset‑quality trends in:
+  - SMEs.
+  - Real estate and consumer loans.
+- Sensitivity to:
+  - Domestic macro conditions.
+  - Latin American exposures in some Spanish banks.
+
+### Valuation and Capital Returns
+
+Many Iberian banks:
+
+- Trade at discounts to book value, albeit narrower than at the depths of past crises.
+- Offer:
+  - Attractive dividend yields.
+  - Share‑buyback programs where regulators permit.
+
+Key differentiators:
+
+- Quality of fee‑income franchises.
+- Geographic diversification and risk management.
+- Track records of capital allocation and shareholder treatment.
+
+## Sector Focus: Tourism, Consumer, and Real Estate
+
+### Travel and Leisure
+
+Equities tied to tourism include:
+
+- Airlines, tour operators, and online travel intermediaries.
+- Hotel groups and hospitality REITs.
+- Leisure and theme‑park operators.
+
+Investors should:
+
+- Assess:
+  - Balance‑sheet leverage.
+  - Exposure to:
+    - Business versus leisure travel.
+    - Domestic versus international demand.
+- Consider:
+  - Pricing power in peak and shoulder seasons.
+  - Structural trends toward:
+    - Longer stays.
+    - Remote‑work‑enabled travel.
+
+### Real Estate and Urban Dynamics
+
+Tourism and housing dynamics affect:
+
+- Residential and commercial real estate markets.
+- Listed developers and REITs in:
+  - Major cities and resort areas.
+
+Regulatory developments—such as:
+
+- Controls on short‑term rentals.
+- Zoning and construction permitting.
+
+can materially influence:
+
+- Rental yields.
+- Capital‑growth prospects.
+
+Investors should:
+
+- Map exposure to:
+  - Geographies with tightening regulation.
+  - Segments facing oversupply risk.
+
+## Sector Focus: Infrastructure and Energy Transition
+
+### Utilities, Renewables, and Grids
+
+Spain and Portugal are:
+
+- Leaders in:
+  - Renewable‑energy penetration.
+  - Integration of wind and solar into grids.
+
+Key players include:
+
+- Integrated utilities with:
+  - Generation.
+  - Distribution.
+  - Retail businesses.
+- Pure‑play renewable developers and operators.
+
+Investment cases hinge on:
+
+- Regulatory frameworks and allowed returns.
+- Project pipelines and execution track records.
+- Balance‑sheet capacity to fund capex.
+
+### Transport Infrastructure
+
+Iberia hosts:
+
+- Airports and toll‑road operators.
+- Logistics and port‑related companies.
+
+These assets benefit from:
+
+- Tourism and trade flows.
+- EU and national infrastructure plans.
+
+Risks:
+
+- Concession renegotiations.
+- Traffic and volume sensitivity to macro conditions.
+
+## Portfolio Construction: Iberia in a Mediterranean Context
+
+### Diversification Within Southern Europe
+
+For investors already exposed to:
+
+- Italian and Greek tourism and banks.
+
+Spain and Portugal can provide:
+
+- Additional diversification across:
+  - Policy frameworks.
+  - Economic structures.
+  - Corporate governance regimes.
+
+Sector tilts may differ:
+
+- Greater representation of:
+  - Global industrials and infrastructure players.
+  - Telecoms and utilities.
+
+### Balancing Cyclicality and Quality
+
+An Iberian allocation can blend:
+
+- **Cyclical exposure** to:
+  - Tourism.
+  - Domestic banks.
+  - Construction and real estate.
+- **Quality and defensive exposure** via:
+  - Regulated utilities.
+  - Infrastructure assets.
+  - Select consumer franchises.
+
+Position sizing should reflect:
+
+- Correlations with existing European and EM holdings.
+- Country and sector concentration limits.
+
+## Conclusion
+
+Spanish and Portuguese equities sit at an interesting intersection of:
+
+- Tourism‑driven recovery.
+- Post‑crisis banking‑sector normalization.
+- Infrastructure and energy‑transition investment.
+
+For Mediterranean and broader European portfolios, Iberia offers:
+
+- Both higher‑beta cyclicality and pockets of structural, dividend‑paying quality.
+
+The most compelling opportunities lie in:
+
+- Well‑capitalized banks with credible capital‑return policies.
+- Infrastructure and utilities with transparent regulatory frameworks.
+- Tourism and consumer names capable of translating strong demand into durable cash flows, not just transient rebounds.
+
+Approached through this lens, Spanish and Portuguese equities can complement Italian and broader Mediterranean exposures in a thoughtfully diversified regional strategy.`,
+    date: formatDate(303),
+    author: 'Luca Montefiore',
+    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Spanish and Portuguese Equities: Tourism, Banks, and Infrastructure in Iberia’s Recovery Cycle
+
+## Introduction
+
+While my focus is often Italy and the broader Mediterranean, Iberia—Spain and Portugal—shares many structural features with Italy.`),
+    ),
+    imageUrl: getImage('markets', 303),
+    tags: ['Spain', 'Portugal', 'Tourism', 'Banks', 'Infrastructure'],
+  },
 ];

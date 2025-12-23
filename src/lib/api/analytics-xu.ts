@@ -900,4 +900,280 @@ For years, Japan was viewed as the archetype of a value trap: low growth, low in
     imageUrl: getImage('markets', 374),
     tags: ['Japan', 'Equities', 'Governance Reform', 'Asia-Pacific', 'Macro'],
   },
+  {
+    slug: 'korea-equities-and-the-chaebol-reform-debate',
+    title: 'Korea Equities and the Chaebol Reform Debate: Discount, Governance, and Global Cycles',
+    excerpt:
+      'How governance reforms, export cyclicality, and shareholder-return policies shape Korea’s persistent valuation discount—and what that means for sector allocation across semiconductors, autos, and internet.',
+    content: `# Korea Equities and the Chaebol Reform Debate: Discount, Governance, and Global Cycles
+
+## Introduction
+
+South Korea is a core market in Asia‑Pacific equity portfolios. It combines:
+
+- World‑class positions in semiconductors, autos, and electronics.
+- Deep integration into global trade and technology supply chains.
+- A long‑standing debate around the **“Korea discount”**—why valuations remain lower than many developed‑market peers.
+
+At the center of this debate are:
+
+- Corporate governance and chaebol ownership structures.
+- Export cyclicality and earnings volatility.
+- Evolving shareholder‑return policies.
+
+This article offers a framework for thinking about Korea equities, with a focus on how governance reforms intersect with sector cycles in semis, autos, and internet.
+
+## Market Structure and the “Korea Discount”
+
+### Sector Composition
+
+Korea’s equity indices are heavily weighted toward:
+
+- **Semiconductors and technology hardware**
+  - Memory chips.
+  - Display panels.
+- **Autos and auto components**
+  - Global OEMs and suppliers.
+- **Internet and e‑commerce platforms**
+  - Domestic champions with strong local scale.
+
+This composition means:
+
+- High sensitivity to global electronics and auto cycles.
+- Meaningful exposure to:
+  - Capex trends in data centers and devices.
+  - Consumer demand for vehicles and digital services.
+
+### Governance and Ownership Structures
+
+Chaebols—family‑controlled conglomerates—remain central:
+
+- Complex cross‑shareholdings.
+- Controlling families with:
+  - Significant influence over strategy.
+  - Limited economic ownership in some cases.
+
+Historically, concerns have included:
+
+- Related‑party transactions and tunneling.
+- Unequal treatment of minority shareholders in restructurings.
+
+These factors have contributed to:
+
+- Lower valuation multiples relative to:
+  - Underlying asset quality.
+  - Earnings power.
+
+## Governance Reforms and Shareholder Returns
+
+### Policy and Regulatory Initiatives
+
+Recent years have seen:
+
+- Reforms aimed at:
+  - Improving transparency.
+  - Simplifying ownership structures.
+  - Strengthening shareholder rights.
+- Discussion of initiatives akin to:
+  - Corporate‑value enhancement programs.
+
+Effects include:
+
+- Increased:
+  - Focus on capital efficiency.
+  - Scrutiny of persistently low valuations.
+
+However, implementation is uneven and:
+
+- Some reforms remain voluntary or subject to interpretation.
+
+### Dividends, Buybacks, and Capital Allocation
+
+Many Korean companies have:
+
+- Raised dividend payouts.
+- Initiated:
+  - Share‑buyback programs.
+  - Cancellations of treasury stock.
+
+Key questions for investors:
+
+- Are these actions:
+  - Tactical responses to pressure?
+  - Or signs of deeper cultural and governance change?
+- How consistent are:
+  - Payout and buyback policies through cycles?
+
+Companies that:
+
+- Combine strong core businesses with:
+  - Clear capital‑return frameworks.
+  - Improving governance practices.
+
+are better candidates for a sustained re‑rating.
+
+## Semiconductors: Cycles and Structural Drivers
+
+### Memory-Centric Exposure
+
+Korea’s semiconductor sector is:
+
+- Dominated by memory (DRAM, NAND).
+- Highly cyclical, driven by:
+  - Capacity additions.
+  - Demand for PCs, smartphones, and servers.
+
+Structural trends:
+
+- Growing memory content per device.
+- AI and data‑center workloads increasing memory demand.
+
+But investors must navigate:
+
+- Investment booms and supply gluts.
+- Pricing waves that can rapidly swing margins.
+
+### Capital Discipline and Consolidation
+
+Key considerations:
+
+- Capacity plans and capex discipline.
+- Balance between:
+  - Defending market share.
+  - Prioritizing profitability.
+
+For long‑term investors:
+
+- Evaluating whether leading players are:
+  - Shifting toward more rational industry structures.
+  - Using cycles to strengthen competitive positions.
+
+is central to assessing return potential beyond short‑term pricing moves.
+
+## Autos and Mobility
+
+### Global Competitiveness
+
+Korean auto OEMs and suppliers have:
+
+- Improved brand perceptions.
+- Expanded:
+  - EV offerings.
+  - Presence in key export markets.
+
+Opportunities:
+
+- Electrification and:
+  - Growth in EV exports.
+  - Demand for value‑oriented vehicles in emerging markets.
+
+Risks:
+
+- Competition from:
+  - Global incumbents.
+  - Chinese EV manufacturers.
+- Trade policy and tariffs.
+
+Investors should:
+
+- Evaluate:
+  - Product mix and technological capabilities.
+  - Geographic diversification.
+  - Margin resilience under pricing pressure.
+
+## Internet and Domestic Demand
+
+### Platform Economics and Regulation
+
+Korea’s internet and e‑commerce companies:
+
+- Operate in a:
+  - Highly digitalized consumer market.
+  - Competitive ecosystem with both:
+    - Domestic players.
+    - Global platforms.
+
+Regulatory focus areas:
+
+- Platform dominance and competition.
+- Consumer protection and data privacy.
+
+For investors:
+
+- Key issues include:
+  - Monetization strategies.
+  - Investment in logistics and ecosystem services.
+  - Balance between growth and profitability.
+
+## Portfolio Construction: Korea in Asia-Pacific Context
+
+### Role in Regional Portfolios
+
+Within Asia‑Pacific and EM allocations, Korea can provide:
+
+- Leveraged exposure to:
+  - Global tech and auto cycles.
+  - AI and data‑center capex (through semis).
+- A governance‑reform story with:
+  - Potential for multiple expansion.
+
+Positioning should:
+
+- Balance:
+  - Cyclical sensitivities (semis, autos).
+  - Structural growth and reform themes.
+
+### Key Risks
+
+Risks to monitor:
+
+- Global macro conditions:
+  - Demand for electronics and autos.
+- US‑China tech tensions and export controls.
+- Domestic policy shifts on:
+  - Corporate governance.
+  - Labor and social issues.
+
+Scenario analysis can help:
+
+- Map equity outcomes under:
+  - Different global‑cycle and policy paths.
+
+## Conclusion
+
+Korea’s equity market reflects a tension between:
+
+- Global leadership in key industries.
+- Domestic governance and policy challenges.
+
+The **Korea discount** is not immutable. As:
+
+- Governance practices evolve.
+- Shareholder returns become more consistent.
+- Sector leaders adapt to new global cycles.
+
+there is scope for both:
+
+- Earnings growth.
+- Valuation normalization in select names.
+
+For Asia‑Pacific investors, Korea remains a high‑beta but potentially rewarding component of regional portfolios, provided that:
+
+- Governance progress is monitored closely.
+- Sector exposures are aligned with macro and cycle views.
+- Position sizes respect the market’s volatility profile.`,
+    date: formatDate(375),
+    author: 'Xu Meiling',
+    authorAvatar: getAuthorAvatar('Xu Meiling'),
+    type: 'markets',
+    readTime: calculateReadTime(
+      countWords(`# Korea Equities and the Chaebol Reform Debate: Discount, Governance, and Global Cycles
+
+## Introduction
+
+South Korea is a core market in Asia‑Pacific equity portfolios.`),
+    ),
+    imageUrl: getImage('markets', 375),
+    tags: ['Korea', 'Equities', 'Chaebol', 'Governance', 'Semiconductors'],
+  },
 ];

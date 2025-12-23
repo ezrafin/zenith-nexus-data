@@ -858,4 +858,226 @@ After a decade in which inflation seemed structurally subdued, the post‑pandem
     imageUrl: getImage('longterm', 161),
     tags: ['Inflation-Linked Bonds', 'Real Yields', 'Breakevens', 'Fixed Income', 'Real Return'],
   },
+  {
+    slug: 'liquidity-management-and-cash-segmentation-for-institutional-investors',
+    title: 'Liquidity Management and Cash Segmentation: Building Resilient Fixed Income Liquidity Buckets',
+    excerpt:
+      'How institutional investors can segment cash and short-duration assets into liquidity buckets, balance yield and safety, and avoid hidden credit and liquidity risks in the search for incremental return.',
+    content: `# Liquidity Management and Cash Segmentation: Building Resilient Fixed Income Liquidity Buckets
+
+## Introduction
+
+In an era of higher interest rates and episodic market stress, **liquidity management** has returned to the center of institutional fixed income strategy. Treasury teams, insurance portfolios, pension funds, and asset managers all face the same core challenge: how to deploy cash and short‑duration assets in a way that:
+
+- Meets operational and regulatory liquidity needs.
+- Earns a reasonable yield.
+- Avoids hidden tail risks that only become visible in stress.
+
+This article focuses on **cash segmentation and liquidity buckets**—a practical framework for allocating across money‑market instruments, short‑duration credit, and other liquid assets within an institutional portfolio.
+
+## The Liquidity Spectrum in Fixed Income
+
+### From Operational Cash to Strategic Reserves
+
+Institutional investors typically hold:
+
+- **Operational cash**
+  - For daily payments, margin, and collateral.
+  - Requires same‑day or T+1 availability.
+- **Tactical liquidity**
+  - To meet redemptions, collateral calls, or opportunistic deployment.
+  - Horizon measured in weeks to months.
+- **Strategic reserves**
+  - Buffer capital and long‑term risk‑budget overlays.
+  - Horizon measured in years.
+
+Each layer can support different instruments, risk levels, and return expectations.
+
+### Instrument Types and Risk Dimensions
+
+Common instruments across the liquidity spectrum include:
+
+- Government bills and short‑dated notes.
+- Money‑market funds (MMFs).
+- Commercial paper and certificates of deposit.
+- Short‑duration corporate bonds and securitized assets.
+
+Key risk dimensions:
+
+- **Credit risk** – default and downgrade risk.
+- **Liquidity risk** – ability to sell quickly without material price impact.
+- **Interest‑rate risk** – duration and sensitivity to yield moves.
+- **Structural and legal risk** – fund structures, redemption gates, and support mechanisms.
+
+## Cash Segmentation: Defining Liquidity Buckets
+
+### Bucket 1: Immediate Liquidity
+
+Characteristics:
+
+- Objective: **capital preservation and immediate access**.
+- Horizon: days.
+- Tolerance for loss: near zero.
+
+Typical instruments:
+
+- Overnight deposits with strong counterparties.
+- Government‑only MMFs or T‑bill ladders.
+- Central‑bank reserves (where accessible).
+
+Key considerations:
+
+- Counterparty diversification.
+- Regulatory and policy constraints.
+- Operational readiness to mobilize funds swiftly.
+
+### Bucket 2: Near-Term Liquidity
+
+Characteristics:
+
+- Objective: **stable value with incremental yield**.
+- Horizon: weeks to a few months.
+- Tolerance for **modest mark‑to‑market volatility**.
+
+Typical instruments:
+
+- High‑quality, short‑dated government and agency bills.
+- Prime or low‑risk MMFs, subject to structural analysis.
+- Short‑dated IG credit with strong liquidity.
+
+Key considerations:
+
+- Issuer and sector diversification.
+- Sensitivity to spread and rate moves.
+- Exit scenarios in stress markets.
+
+### Bucket 3: Intermediate Liquidity / Short-Duration Plus
+
+Characteristics:
+
+- Objective: **higher carry** while retaining reasonable liquidity.
+- Horizon: 6–24 months.
+- Tolerance for:
+  - Mark‑to‑market moves.
+  - Some credit‑spread risk.
+
+Typical instruments:
+
+- Short‑duration IG credit funds.
+- Select securitized assets (e.g., ABS, covered bonds) with robust structures.
+- Ultra‑short bond strategies with tight risk controls.
+
+Key considerations:
+
+- Clear guidelines on:
+  - Maximum duration.
+  - Minimum credit quality.
+  - Sector and structural exposures.
+- Capacity to **hold through periods of spread widening** without forced selling.
+
+## Avoiding Hidden Risks in the Search for Yield
+
+### Money-Market Funds and Structural Risk
+
+Money‑market funds can appear homogeneous but differ substantially in:
+
+- Asset‑quality profiles.
+- Maturity and WAM (weighted‑average maturity) targets.
+- Use of repo, ABCP, or lower‑quality instruments.
+
+Investors should:
+
+- Review **prospectuses and holdings**, not just ratings.
+- Understand:
+  - Sponsor support policies.
+  - Redemption gates and fee mechanisms.
+  - Regulatory regimes (e.g., CNAV vs. VNAV structures).
+
+### Credit and Concentration Risk
+
+Short‑dated credit is not risk‑free:
+
+- Downgrades and idiosyncratic events can quickly impair instruments previously perceived as safe.
+- Concentration in a small set of issuers, sectors, or countries can magnify shocks.
+
+Best practices:
+
+- Position limits at:
+  - Issuer level.
+  - Sector and region levels.
+- Counterparty and collateral diversification in repo and deposit programs.
+
+### Liquidity Illusions
+
+Assets that are liquid in normal conditions may become:
+
+- Hard to sell without steep discounts in stress.
+- Trapped in structures with gates or extended settlement.
+
+Investors should stress‑test assumptions:
+
+- Use historical stress periods to gauge:
+  - Bid‑ask spreads.
+  - Market depth.
+  - Fund‑flow behavior.
+
+## Integrating Liquidity Buckets into Portfolio Governance
+
+### Policy Design and Limits
+
+Effective liquidity frameworks include:
+
+- **Clear definitions** of each bucket’s:
+  - Purpose.
+  - Eligible instruments.
+  - Risk metrics (duration, credit, liquidity).
+- **Hard limits** and guidelines for:
+  - Minimum holdings in the safest buckets.
+  - Maximum risk exposures in yield‑seeking segments.
+
+These policies should be reviewed and adjusted:
+
+- When market regimes change.
+- After lived stress events (e.g., 2020, 2022 episodes).
+
+### Monitoring and Reporting
+
+Ongoing monitoring should track:
+
+- Maturity profiles and rollover risks.
+- Counterparty exposures and credit developments.
+- Bucket‑level performance and drawdowns.
+
+In periods of stress:
+
+- Stress‑testing frequency may need to increase.
+- Governance committees should:
+  - Review liquidity positions.
+  - Clarify triggers for de‑risking or opportunistic deployment.
+
+## Conclusion
+
+Liquidity management is not simply about “keeping some cash on the side.” It is about **deliberately structuring and managing a spectrum of liquid assets** to balance safety, access, and return—and doing so under explicit governance and risk‑management frameworks.
+
+For institutional investors, robust cash segmentation and liquidity buckets can:
+
+- Reduce the risk of forced selling.
+- Provide dry powder for opportunities when spreads widen.
+- Anchor overall portfolio resilience across rate and credit cycles.
+
+In a world where volatility and policy uncertainty are likely to remain elevated, treating liquidity as a strategic asset class in its own right—not an afterthought—will be a key differentiator of fixed income outcomes over the coming decade.`,
+    date: formatDate(162),
+    author: 'Lysander Truog',
+    authorAvatar: getAuthorAvatar('Lysander Truog'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Liquidity Management and Cash Segmentation: Building Resilient Fixed Income Liquidity Buckets
+
+## Introduction
+
+In an era of higher interest rates and episodic market stress, liquidity management has returned to the center of institutional fixed income strategy.`),
+    ),
+    imageUrl: getImage('expert', 162),
+    tags: ['Liquidity Management', 'Cash Segmentation', 'Fixed Income', 'Risk Management', 'Institutional Investing'],
+  },
 ];

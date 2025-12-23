@@ -964,6 +964,224 @@ As enterprises migrate from monolithic applications to microservices and cloud-n
     tags: ['Observability', 'Cloud-Native', 'DevOps', 'SRE', 'Technology Investing'],
   },
 
-  // Progress: 4/94 articles in this module
+  {
+    slug: 'data-infrastructure-modernization-and-analytics-platforms',
+    title: 'Data Infrastructure Modernization: Investing in Analytics Platforms for the Next Decade',
+    excerpt:
+      'How enterprises are rebuilding their data stacks around cloud warehouses, lakehouses, and real-time streaming—and what that means for the competitive landscape and economics of data-platform vendors.',
+    content: `# Data Infrastructure Modernization: Investing in Analytics Platforms for the Next Decade
+
+## Introduction
+
+Data has long been described as the “new oil,” but for many enterprises it has behaved more like an underutilized asset—expensive to store, difficult to refine, and challenging to integrate into day‑to‑day decisions. Over the past decade, a new generation of **cloud data warehouses, lakehouses, and streaming platforms** has emerged to address these problems.
+
+For technology investors, this modernization of the data stack is not just a technical evolution; it is a long‑running capital‑allocation theme. Organizations are:
+
+- Consolidating legacy databases and data marts.
+- Standardizing on cloud‑native analytics platforms.
+- Building real‑time data pipelines to power AI and advanced analytics.
+
+This article provides a framework for understanding the data‑infrastructure modernization cycle and evaluating investment opportunities across analytics platforms, integration vendors, and surrounding ecosystems.
+
+## The Legacy Data Stack and Its Limitations
+
+### Siloed Systems and Batch Processing
+
+Traditional data architectures often featured:
+
+- Multiple on‑premises databases and data marts.
+- Batch ETL (extract, transform, load) processes.
+- Limited self‑service analytics for business users.
+
+Consequences included:
+
+- Long lead times for new data projects.
+- Duplicated and inconsistent definitions across teams.
+- Difficulty supporting real‑time or near‑real‑time use cases.
+
+In this world, analytics projects were:
+
+- Expensive and slow.
+- Concentrated in specialized teams.
+- Vulnerable to “data drift” as operational systems evolved.
+
+### Rising Demands on Data Infrastructure
+
+Today, enterprises face:
+
+- Explosion of data sources:
+  - SaaS applications.
+  - IoT devices.
+  - Clickstreams and mobile interactions.
+- Need for:
+  - Real‑time monitoring and personalization.
+  - Regulatory and ESG reporting.
+  - AI and machine‑learning workloads.
+
+As a result, legacy stacks are increasingly a bottleneck. Modernization is not optional; it is a prerequisite for remaining competitive.
+
+## The Modern Analytics Platform Landscape
+
+### Cloud Data Warehouses and Lakehouses
+
+Modern platforms combine:
+
+- **Cloud data warehouses**
+  - Columnar storage optimized for analytical queries.
+  - Separation of compute and storage.
+  - Elastic scalability and consumption‑based pricing.
+- **Data lakes and lakehouses**
+  - Storage of raw, semi‑structured, and unstructured data.
+  - Open formats and table layers enabling ACID transactions and governance.
+
+Vendors compete on:
+
+- Query performance and concurrency.
+- Ecosystem integrations and ease of use.
+- Governance, security, and multi‑cloud capabilities.
+
+Investors should focus on:
+
+- Sustainable differentiation beyond headline benchmarks.
+- Expansion into adjacent workloads (e.g., data sharing, application hosting).
+
+### Data Integration and Transformation
+
+Around the core platform sit:
+
+- **Ingestion and integration tools**
+  - Connectors to SaaS applications and databases.
+  - Streaming pipelines from event sources.
+- **Transformation and modeling tools**
+  - ELT workflows executed inside the warehouse or lake.
+  - Semantic layers and metrics definitions.
+
+These layers are critical for:
+
+- Data quality and reliability.
+- Enabling self‑service analytics and governed experimentation.
+
+Integration vendors can:
+
+- Build sticky positions via deep connector libraries.
+- Face pricing pressure as core platforms expand natively.
+
+## Economics and Moats in Data-Platform Vendors
+
+### Land, Expand, and Workload Gravity
+
+Data platforms often follow a **land‑and‑expand** motion:
+
+- Initial deployments with a limited set of workloads.
+- Gradual migration of additional data and teams.
+- Expansion into:
+  - BI and dashboarding.
+  - Data science and ML.
+  - Operational analytics and reverse ETL.
+
+Moats arise from:
+
+- **Workload gravity**
+  - Once critical data and models live on a platform, moving them is expensive.
+- **Ecosystem integration**
+  - Tight coupling with tools across ingestion, transformation, and visualization.
+- **Governance and trust**
+  - Role‑based access control, lineage, and audit trails.
+
+Investors should track:
+
+- Net revenue retention (NRR) by cohort.
+- Mix of storage versus compute revenue.
+- Pace of new workload and product adoption.
+
+### Cost, Performance, and Competitive Dynamics
+
+Competition in analytics platforms is intense:
+
+- Multiple global hyperscalers with their own offerings.
+- Independent providers with specialized architectures.
+- Open‑source projects enabling self‑managed alternatives.
+
+Key questions include:
+
+- Can a vendor maintain performance and cost advantages as data volumes scale?
+- How effective is their go‑to‑market motion in:
+  - Mid‑market vs. large enterprise.
+  - Industry verticals with specific compliance needs?
+- Are they capturing **higher‑value workloads**, or primarily serving as commoditized storage and compute?
+
+## Real-Time Analytics and Streaming
+
+### From Batch to Streaming Architectures
+
+Real‑time use cases require:
+
+- Continuous ingestion of events and telemetry.
+- Stream processing for:
+  - Fraud detection.
+  - Real‑time personalization.
+  - Operational monitoring.
+
+Streaming platforms integrate with:
+
+- Application event buses.
+- Data warehouses and lakes for historical context.
+
+Investors should identify:
+
+- Vendors with strong positions in **event streaming and real‑time analytics**.
+- How they interoperate with core data platforms.
+
+### Edge Cases and Complexity
+
+Real‑time architectures increase complexity:
+
+- More moving parts in pipelines.
+- Higher operational demands on reliability and latency.
+
+Companies that can:
+
+- Simplify this complexity for customers.
+- Offer managed services and opinionated architectures.
+
+can build strong franchises at the intersection of data and operations.
+
+## Practical Checklist for Investors
+
+When evaluating data‑infrastructure and analytics‑platform vendors, investors can use a checklist:
+
+1. **Platform centrality**
+   - Is the vendor at the core of the data stack, or a peripheral tool?
+2. **Workload and ecosystem depth**
+   - Range and criticality of workloads.
+   - Integrations with key data and application tools.
+3. **Unit economics and margins**
+   - Gross‑margin trajectory given storage and compute costs.
+   - Balance between consumption‑based revenue and predictability.
+4. **Moats and switching costs**
+   - Data gravity, governance, and developer mindshare.
+   - Evidence of durable customer relationships.
+
+## Conclusion
+
+Data‑infrastructure modernization is a multi‑year, multi‑wave investment theme. As enterprises standardize on modern analytics platforms and build more data‑intensive applications, vendors at the core of this transformation can generate compelling growth and, over time, strong free‑cash‑flow profiles.
+
+For technology investors, the opportunity lies in understanding **where economic value accumulates**—not just in selling storage and compute, but in enabling reliable, governed, and intelligent use of data across the organization. Platforms that combine technical excellence with ecosystem depth and disciplined unit economics are best positioned to lead the next decade of data‑infrastructure investing.`,
+    date: formatDate(13),
+    author: 'Christina Summerbell',
+    authorAvatar: getAuthorAvatar('Christina Summerbell'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Data Infrastructure Modernization: Investing in Analytics Platforms for the Next Decade
+
+## Introduction
+
+Data has long been described as the “new oil,” but for many enterprises it has behaved more like an underutilized asset—expensive to store, difficult to refine, and challenging to integrate into day‑to‑day decisions.`),
+    ),
+    imageUrl: getImage('expert', 13),
+    tags: ['Data Infrastructure', 'Analytics Platforms', 'Cloud', 'Technology Investing', 'Enterprise Software'],
+  },
+
+  // Progress: 5/94 articles in this module
   // Note: Existing articles are temporarily in analytics.ts and will be migrated here
 ];
