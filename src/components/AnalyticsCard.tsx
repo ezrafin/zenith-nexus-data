@@ -81,7 +81,7 @@ export function AnalyticsCard({ article, variant = 'default', index = 0 }: Analy
           </h3>
 
           {/* Excerpt */}
-          <p className="text-xs sm:text-sm text-muted-foreground flex-1 leading-relaxed line-clamp-2">
+          <p className="text-xs sm:text-sm text-muted-foreground flex-1 leading-relaxed line-clamp-4">
             {article.excerpt}
           </p>
 
