@@ -4,23 +4,29 @@ import { cn } from '@/lib/utils';
 
 interface AssetBadgeProps {
   symbol: string;
-  assetType?: 'stock' | 'crypto' | 'index' | 'commodity' | 'currency' | 'etf';
+  assetType?: string | null;
   className?: string;
 }
 
 const assetTypeConfig: Record<string, { icon: typeof TrendingUp; label: string; route: string }> = {
   stock: { icon: TrendingUp, label: 'Stock', route: '/markets/stocks' },
+  stocks: { icon: TrendingUp, label: 'Stock', route: '/markets/stocks' },
   crypto: { icon: Coins, label: 'Crypto', route: '/markets/crypto' },
   index: { icon: BarChart3, label: 'Index', route: '/markets/indices' },
+  indices: { icon: BarChart3, label: 'Index', route: '/markets/indices' },
   commodity: { icon: Coins, label: 'Commodity', route: '/markets/commodities' },
+  commodities: { icon: Coins, label: 'Commodity', route: '/markets/commodities' },
   currency: { icon: DollarSign, label: 'Currency', route: '/markets/currencies' },
+  currencies: { icon: DollarSign, label: 'Currency', route: '/markets/currencies' },
   etf: { icon: Briefcase, label: 'ETF', route: '/markets/indices' },
 };
+
+const defaultConfig = { icon: TrendingUp, label: 'Asset', route: '/markets' };
 
 export function AssetBadge({ symbol, assetType, className }: AssetBadgeProps) {
   if (!symbol) return null;
 
-  const config = assetType ? assetTypeConfig[assetType] : { icon: TrendingUp, label: 'Asset', route: '/markets' };
+  const config = (assetType && assetTypeConfig[assetType]) ? assetTypeConfig[assetType] : defaultConfig;
   const Icon = config.icon;
 
   return (
