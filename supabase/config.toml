@@ -3,5 +3,20 @@ project_id = "xyhrzgdpycmjqbbnvqdp"
 [functions.fetch-guardian-news]
 verify_jwt = false
 
+[functions.fetch-news]
+verify_jwt = false
+
+[functions.fetch-crypto]
+verify_jwt = false
+
+[functions.fetch-stocks]
+verify_jwt = false
+
 [functions.generate-forum-content]
+verify_jwt = false
+
+[functions.send-form-email]
+verify_jwt = false
+
+[functions.send-notification]
 verify_jwt = false
