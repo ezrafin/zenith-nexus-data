@@ -38,9 +38,9 @@ export function ForumFilters({
   const hasActiveFilters = categoryFilter || dateFilter !== 'all' || searchQuery;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 md:space-y-2">
       {/* Search */}
-      <div className="space-y-2">
+      <div className="space-y-1.5">
         <Label htmlFor="forum-search">{t('searchDiscussions')}</Label>
         <div className="relative">
           <Input
@@ -62,9 +62,9 @@ export function ForumFilters({
       </div>
 
       {/* Filters Row */}
-      <div className="flex flex-wrap gap-4 items-end">
+      <div className="flex flex-wrap gap-3 items-end">
         {/* Sort */}
-        <div className="space-y-2 flex-1 min-w-[200px]">
+        <div className="space-y-1.5 flex-1 min-w-[200px]">
           <Label htmlFor="sort">{t('sortBy')}</Label>
           <Select value={sortBy} onValueChange={(value: SortOption) => onSortChange(value)}>
             <SelectTrigger id="sort">
@@ -83,7 +83,7 @@ export function ForumFilters({
 
         {/* Category Filter */}
         {categories.length > 0 && (
-          <div className="space-y-2 flex-1 min-w-[200px]">
+          <div className="space-y-1.5 flex-1 min-w-[200px]">
             <Label htmlFor="category">{t('category')}</Label>
             <Select
               value={categoryFilter || 'all'}
@@ -105,7 +105,7 @@ export function ForumFilters({
         )}
 
         {/* Date Filter */}
-        <div className="space-y-2 flex-1 min-w-[200px]">
+        <div className="space-y-1.5 flex-1 min-w-[200px]">
           <Label htmlFor="date">{t('date')}</Label>
           <Select value={dateFilter} onValueChange={(value: DateFilter) => onDateFilterChange(value)}>
             <SelectTrigger id="date">

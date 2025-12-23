@@ -194,9 +194,9 @@ export default function ForumPage() {
       </section>
 
       {/* Categories */}
-      <section className="section-spacing-sm">
+      <section className="section-spacing-sm pt-8 md:pt-10 pb-6 md:pb-8">
         <div className="container-wide">
-          <h2 className="heading-sm mb-8">{t('categories')}</h2>
+          <h2 className="heading-sm mb-4 md:mb-6">{t('categories')}</h2>
           {error ? (
             <div className="premium-card p-12 text-center">
               <AlertCircle className="h-12 w-12 text-destructive mx-auto mb-4" />
@@ -208,34 +208,34 @@ export default function ForumPage() {
               </Button>
             </div>
           ) : loading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
               {Array.from({ length: 4 }).map((_, i) => (
                 <SkeletonCard key={i} lines={3} />
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
               {categories.map((category, index) => {
                 const Icon = categoryIcons[category.id] || MessageSquare;
                 return (
                   <Link
                     key={category.id}
                     to={`/forum?category=${category.id}`}
-                    className="group p-6 md:p-8 rounded-xl border border-border/60 bg-card hover:border-border hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+                    className="group p-4 md:p-5 rounded-xl border border-border/60 bg-card hover:border-border hover:shadow-lg transition-all duration-300 animate-fade-in-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-6 w-6 text-primary" />
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-5 w-5 text-primary" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className="font-heading font-medium text-lg group-hover:text-primary transition-colors">
+                          <h3 className="font-heading font-medium text-base md:text-lg group-hover:text-primary transition-colors">
                             {category.name}
                           </h3>
                           <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
-                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                        <p className="text-sm text-muted-foreground mb-2 line-clamp-2">
                           {category.description}
                         </p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
@@ -259,9 +259,9 @@ export default function ForumPage() {
       </section>
 
       {/* Filters and Sorting */}
-      <section className="section-spacing-sm">
+      <section className="section-spacing-sm pt-4 md:pt-6 pb-4 md:pb-6">
         <div className="container-wide">
-          <div className="premium-card p-6 mb-6">
+          <div className="premium-card p-4 md:p-5 mb-4 md:mb-5">
             <ForumFilters
               sortBy={sortBy}
               onSortChange={setSortBy}
