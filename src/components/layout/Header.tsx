@@ -267,6 +267,10 @@ export function Header() {
                     onMouseLeave={() => setLanguageMenuOpen(false)}
                   >
                     <DropdownMenuItem 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setLanguageMenuOpen(!languageMenuOpen);
+                      }}
                       onMouseEnter={(e) => e.preventDefault()}
                       className="cursor-pointer"
                     >

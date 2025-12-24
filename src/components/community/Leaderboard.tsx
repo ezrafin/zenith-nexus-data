@@ -140,17 +140,21 @@ export function Leaderboard() {
                     key={entry.id}
                     className="flex items-center gap-2 sm:gap-4 p-2 sm:p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-colors"
                   >
-                    <div className="flex items-center justify-center w-6 sm:w-8 flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
                       {getRankIcon(rank)}
                     </div>
-                    <UserAvatar profile={profile} size="sm" showReputation />
-                    <div className="flex-1 min-w-0">
-                      <div className="font-medium text-sm sm:text-base truncate">
-                        {entry.display_name || entry.username || t('leaderboard.anonymous')}
-                      </div>
-                      <ReputationBadge profile={profile} size="sm" showLevel={false} />
+                    <div className="flex items-center flex-shrink-0">
+                      <UserAvatar profile={profile} size="sm" showReputation />
                     </div>
-                    <div className="text-right flex-shrink-0">
+                    <div className="flex-1 min-w-0 flex items-center">
+                      <div>
+                        <div className="font-medium text-sm sm:text-base truncate">
+                          {entry.display_name || entry.username || t('leaderboard.anonymous')}
+                        </div>
+                        <ReputationBadge profile={profile} size="sm" showLevel={false} />
+                      </div>
+                    </div>
+                    <div className="text-right flex-shrink-0 flex flex-col justify-center">
                       <div className="font-semibold text-sm sm:text-base tabular-nums">
                         {getValue(entry).toLocaleString(locale)}
                       </div>

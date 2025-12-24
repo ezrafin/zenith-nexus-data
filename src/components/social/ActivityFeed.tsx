@@ -135,7 +135,7 @@ export function ActivityFeed() {
             to={activity.link}
             className="block p-2 sm:p-3 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-secondary/50 transition-all"
           >
-            <div className="flex items-start gap-2 sm:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
               </div>

@@ -123,8 +123,8 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
               key={author.id}
               className="p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-all"
             >
-              <div className="flex items-start gap-3">
-                <Link to={`/users/${author.id}`}>
+              <div className="flex items-center gap-3">
+                <Link to={`/users/${author.id}`} className="flex-shrink-0">
                   <UserAvatar profile={profile} size="md" showReputation />
                 </Link>
                 <div className="flex-1 min-w-0">
@@ -153,7 +153,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
                   variant={author.is_following ? 'outline' : 'default'}
                   size="sm"
                   onClick={() => toggleFollow(author.id, author.is_following)}
-                  className="flex-shrink-0"
+                  className="flex-shrink-0 self-center"
                 >
                   {author.is_following ? (
                     <>
