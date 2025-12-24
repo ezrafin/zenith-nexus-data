@@ -4,6 +4,8 @@ import { useUser } from '@/context/UserContext';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { useUserFollow } from '@/hooks/useUserFollow';
+import { motion, AnimatePresence } from 'framer-motion';
+import { checkmarkAnimation, prefersReducedMotion, transitions } from '@/lib/animations';
 
 interface FollowButtonProps {
   userId: string;
@@ -26,19 +28,53 @@ export function FollowButton({ userId, className, variant = 'outline', size = 's
       size={size}
       onClick={toggleFollow}
       disabled={loading}
+      loading={loading}
       aria-label={isFollowing ? 'Unfollow user' : 'Follow user'}
-      className={cn(isFollowing && 'bg-primary/10', className)}
+      className={cn('relative overflow-visible', isFollowing && 'bg-primary/10', className)}
     >
-      {isFollowing ? (
-        <>
-          <UserCheck className="mr-2 h-4 w-4" />
-          Following
-        </>
-      ) : (
-        <>
-          <UserPlus className="mr-2 h-4 w-4" />
-          Follow
-        </>
+      <AnimatePresence mode="wait">
+        {isFollowing ? (
+          <motion.div
+            key="following"
+            initial={prefersReducedMotion() ? {} : { opacity: 0, scale: 0.8 }}
+            animate={prefersReducedMotion() ? {} : { opacity: 1, scale: 1 }}
+            exit={prefersReducedMotion() ? {} : { opacity: 0, scale: 0.8 }}
+            transition={transitions.fast}
+            className="flex items-center"
+          >
+            <motion.div
+              animate={!prefersReducedMotion() ? {
+                scale: [1, 1.2, 1],
+              } : {}}
+              transition={transitions.fast}
+            >
+              <UserCheck className="mr-2 h-4 w-4" />
+            </motion.div>
+            Following
+          </motion.div>
+        ) : (
+          <motion.div
+            key="follow"
+            initial={prefersReducedMotion() ? {} : { opacity: 0, scale: 0.8 }}
+            animate={prefersReducedMotion() ? {} : { opacity: 1, scale: 1 }}
+            exit={prefersReducedMotion() ? {} : { opacity: 0, scale: 0.8 }}
+            transition={transitions.fast}
+            className="flex items-center"
+          >
+            <UserPlus className="mr-2 h-4 w-4" />
+            Follow
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {isFollowing && !prefersReducedMotion() && (
+        <motion.div
+          className="absolute -top-1 -right-1"
+          initial={checkmarkAnimation.initial}
+          animate={checkmarkAnimation.animate}
+          transition={checkmarkAnimation.transition}
+        >
+          <div className="w-2 h-2 bg-primary rounded-full" />
+        </motion.div>
       )}
     </Button>
   );

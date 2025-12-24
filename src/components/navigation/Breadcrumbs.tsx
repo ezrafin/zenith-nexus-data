@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,6 +11,7 @@ import {
 import { generateBreadcrumbs, BreadcrumbItem as BreadcrumbItemType } from '@/utils/breadcrumbs';
 import { StructuredData } from '@/components/seo/StructuredData';
 import { generateBreadcrumbListSchema } from '@/utils/structuredData';
+import { getMotionVariant, transitions, STAGGER, prefersReducedMotion } from '@/lib/animations';
 
 interface BreadcrumbsProps {
   pageTitle?: string;
@@ -53,10 +55,20 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
     return null;
   }
 
+  const fadeInVariant = getMotionVariant('fadeInLeft');
+
   return (
     <>
       {structuredData && <StructuredData data={structuredData} />}
-      <div className="mb-6 md:mb-8">
+      <motion.div 
+        className="mb-6 md:mb-8"
+        initial={fadeInVariant.initial}
+        animate={fadeInVariant.animate}
+        transition={{
+          ...transitions.fast,
+          staggerChildren: prefersReducedMotion() ? 0 : STAGGER.fast / 1000,
+        }}
+      >
         <Breadcrumb>
           <BreadcrumbList className={className}>
             {breadcrumbItems.map((item, index) => {
@@ -64,25 +76,34 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
               const path = item.url.replace('https://investopatronus.com', '');
 
               return (
-                <div key={item.url} className="flex items-center">
+                <motion.div 
+                  key={item.url} 
+                  className="flex items-center"
+                  initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                  animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                  transition={{
+                    ...transitions.fast,
+                    delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
+                  }}
+                >
                   {isLast ? (
                     <BreadcrumbPage>{item.name}</BreadcrumbPage>
                   ) : (
                     <>
                       <BreadcrumbItem>
                         <BreadcrumbLink asChild>
-                          <Link to={path}>{item.name}</Link>
+                          <Link to={path} className="transition-colors hover:text-primary">{item.name}</Link>
                         </BreadcrumbLink>
                       </BreadcrumbItem>
                       <BreadcrumbSeparator />
                     </>
                   )}
-                </div>
+                </motion.div>
               );
             })}
           </BreadcrumbList>
         </Breadcrumb>
-      </div>
+      </motion.div>
     </>
   );
 }

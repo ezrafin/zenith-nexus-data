@@ -3,7 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { UserProvider } from "@/context/UserContext";
 import { I18nProvider } from "@/context/I18nContext";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
@@ -12,6 +13,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { CookieConsentBanner } from "@/components/cookies/CookieConsentBanner";
 import { NotificationManager } from "@/components/notifications/NotificationManager";
+import { AnimatedRoutesWrapper } from "@/components/navigation/AnimatedRoutesWrapper";
+import { ErrorBoundary } from "@/components/error/ErrorBoundary";
 
 // Eager load critical pages
 import Index from "./pages/Index";
@@ -74,21 +77,47 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: 5 * 60 * 1000, // 5 minutes
       gcTime: 10 * 60 * 1000, // 10 minutes (formerly cacheTime)
+      retry: (failureCount, error) => {
+        // Don't retry on 4xx errors (client errors)
+        if (error && typeof error === 'object' && 'status' in error) {
+          const status = error.status as number;
+          if (status >= 400 && status < 500) {
+            return false;
+          }
+        }
+        // Retry up to 2 times for other errors
+        return failureCount < 2;
+      },
+      retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000), // Exponential backoff
+      refetchOnWindowFocus: true, // Refetch when window regains focus
+      refetchOnReconnect: true, // Refetch when network reconnects
+      refetchOnMount: true, // Always refetch on mount for fresh data
+      networkMode: 'online', // Only run queries when online
+    },
+    mutations: {
+      retry: 1, // Retry mutations once on failure
+      networkMode: 'online',
     },
   },
 });
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <UserProvider>
-        <I18nProvider>
-          <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Suspense fallback={<LoadingScreen />}>
-              <Routes>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <UserProvider>
+          <I18nProvider>
+            <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              {/* Skip to main content link for accessibility */}
+              <a href="#main-content" className="skip-to-main">
+                Skip to main content
+              </a>
+              <Suspense fallback={<LoadingScreen />}>
+                <ErrorBoundary>
+                  <AnimatedRoutesWrapper>
                 <Route path="/" element={<Index />} />
                 <Route path="/news" element={<NewsPage />} />
                 <Route path="/news/:id" element={<NewsDetailPage />} />
@@ -141,17 +170,19 @@ const App = () => {
                 {/* Admin */}
                 <Route path="/admin/moderation" element={<ModerationPage />} />
                 <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </BrowserRouter>
-          <NotificationManager />
-          <CookieConsentBanner />
-          <Analytics />
-          <SpeedInsights />
-        </TooltipProvider>
-        </I18nProvider>
-      </UserProvider>
-    </QueryClientProvider>
+                  </AnimatedRoutesWrapper>
+                </ErrorBoundary>
+              </Suspense>
+            </BrowserRouter>
+            <NotificationManager />
+            <CookieConsentBanner />
+            <Analytics />
+            <SpeedInsights />
+          </TooltipProvider>
+          </I18nProvider>
+        </UserProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 };
 

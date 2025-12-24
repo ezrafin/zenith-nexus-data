@@ -35,10 +35,17 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     
-    <!-- Premium Fonts -->
+    <!-- Premium Fonts with font-display: swap for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/favicon.png" as="image" type="image/png" />
+    
+    <!-- Prefetch likely next pages -->
+    <link rel="prefetch" href="/news" />
+    <link rel="prefetch" href="/markets" />
   </head>
 
   <body>

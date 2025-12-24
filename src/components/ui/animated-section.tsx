@@ -1,19 +1,31 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import { getMotionVariant, transitions, hoverLift, STAGGER, prefersReducedMotion } from '@/lib/animations';
 
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  variant?: 'fadeIn' | 'fadeInUp' | 'fadeInDown' | 'fadeInLeft' | 'fadeInRight';
 }
 
-export function AnimatedSection({ children, className = '', delay = 0 }: AnimatedSectionProps) {
+export function AnimatedSection({ 
+  children, 
+  className = '', 
+  delay = 0,
+  variant = 'fadeInUp'
+}: AnimatedSectionProps) {
+  const motionVariant = getMotionVariant(variant);
+  
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={motionVariant.initial}
+      whileInView={motionVariant.animate}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{
+        ...transitions.normal,
+        delay: prefersReducedMotion() ? 0 : delay,
+      }}
       className={className}
     >
       {children}
@@ -25,16 +37,58 @@ interface AnimatedCardProps {
   children: ReactNode;
   className?: string;
   index?: number;
+  enableHover?: boolean;
 }
 
-export function AnimatedCard({ children, className = '', index = 0 }: AnimatedCardProps) {
+export function AnimatedCard({ 
+  children, 
+  className = '', 
+  index = 0,
+  enableHover = true
+}: AnimatedCardProps) {
+  const motionVariant = getMotionVariant('fadeInUp');
+  const staggerDelay = (index * STAGGER.normal) / 1000;
+  
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={motionVariant.initial}
+      whileInView={motionVariant.animate}
       viewport={{ once: true, margin: '-30px' }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-      whileHover={{ y: -4, transition: { duration: 0.2 } }}
+      transition={{
+        ...transitions.normal,
+        delay: prefersReducedMotion() ? 0 : staggerDelay,
+      }}
+      whileHover={enableHover && !prefersReducedMotion() ? hoverLift : undefined}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+interface StaggerContainerProps {
+  children: ReactNode;
+  className?: string;
+  staggerDelay?: number;
+}
+
+export function StaggerContainer({ 
+  children, 
+  className = '',
+  staggerDelay = STAGGER.normal 
+}: StaggerContainerProps) {
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={{
+        initial: {},
+        animate: {
+          transition: {
+            staggerChildren: prefersReducedMotion() ? 0 : staggerDelay / 1000,
+          },
+        },
+      }}
       className={className}
     >
       {children}

@@ -7,6 +7,8 @@ import { toast } from 'sonner';
 import { ThumbsUp, ThumbsDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
+import { motion, AnimatePresence } from 'framer-motion';
+import { checkmarkAnimation, shakeAnimation, prefersReducedMotion, transitions } from '@/lib/animations';
 
 interface ReactionButtonProps {
   contentType: 'discussion' | 'reply';
@@ -165,19 +167,54 @@ export function ReactionButton({
   const colorClass = reactionColors[reactionType];
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={handleReaction}
-      disabled={reactionMutation.isPending}
-      className={cn(
-        'flex items-center gap-1.5 text-sm transition-colors',
-        isReacted ? colorClass : 'text-muted-foreground hover:text-foreground',
-        className
-      )}
+    <motion.div
+      animate={reactionMutation.isError && !prefersReducedMotion() ? shakeAnimation : {}}
+      className="inline-block"
     >
-      <Icon className={cn('h-4 w-4', isReacted && 'fill-current')} />
-      <span className="tabular-nums">{reactionCount}</span>
-    </Button>
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={handleReaction}
+        disabled={reactionMutation.isPending}
+        loading={reactionMutation.isPending}
+        className={cn(
+          'flex items-center gap-1.5 text-sm transition-colors relative',
+          isReacted ? colorClass : 'text-muted-foreground hover:text-foreground',
+          className
+        )}
+      >
+        <motion.div
+          animate={isReacted && !prefersReducedMotion() ? {
+            scale: [1, 1.2, 1],
+            rotate: [0, 10, -10, 0],
+          } : {}}
+          transition={transitions.fast}
+        >
+          <Icon className={cn('h-4 w-4', isReacted && 'fill-current')} />
+        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={reactionCount}
+            initial={prefersReducedMotion() ? {} : { scale: 1.3, opacity: 0.5 }}
+            animate={prefersReducedMotion() ? {} : { scale: 1, opacity: 1 }}
+            exit={prefersReducedMotion() ? {} : { scale: 0.8, opacity: 0 }}
+            transition={transitions.fast}
+            className="tabular-nums"
+          >
+            {reactionCount}
+          </motion.span>
+        </AnimatePresence>
+        {isReacted && !prefersReducedMotion() && (
+          <motion.div
+            className="absolute -top-1 -right-1"
+            initial={checkmarkAnimation.initial}
+            animate={checkmarkAnimation.animate}
+            transition={checkmarkAnimation.transition}
+          >
+            <div className="w-2 h-2 bg-current rounded-full" />
+          </motion.div>
+        )}
+      </Button>
+    </motion.div>
   );
 }

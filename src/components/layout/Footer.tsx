@@ -3,6 +3,8 @@ import { TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, Video, BookOpen, Awa
 import { educationRoutes } from '@/lib/educationRoutes';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { getMotionVariant, transitions, STAGGER, prefersReducedMotion } from '@/lib/animations';
 export function Footer() {
   const { t } = useTranslation({ namespace: 'ui' });
 
@@ -78,8 +80,19 @@ export function Footer() {
       href: '/disclaimer'
     }]
   }), [t]);
+  const fadeInVariant = getMotionVariant('fadeInUp');
+
   return <footer role="contentinfo" className="border-t border-border bg-card/30">
-      <div className="container-wide py-16 md:py-20">
+      <motion.div 
+        className="container-wide py-16 md:py-20"
+        initial={fadeInVariant.initial}
+        whileInView={fadeInVariant.animate}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{
+          ...transitions.normal,
+          staggerChildren: prefersReducedMotion() ? 0 : STAGGER.normal / 1000,
+        }}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-10 items-start">
           {/* Brand */}
           <div className="lg:col-span-1 flex flex-col items-center">
@@ -99,16 +112,31 @@ export function Footer() {
           <div className="lg:col-span-3">
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center lg:justify-items-start">
               {/* Content */}
-              <div className="text-center lg:text-left">
+              <motion.div 
+                className="text-center lg:text-left"
+                initial={prefersReducedMotion() ? {} : { opacity: 0, y: 20 }}
+                whileInView={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={transitions.normal}
+              >
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.content')}</h3>
                 <ul className="space-y-2.5">
-                  {footerLinks.content.map(link => <li key={link.href}>
+                  {footerLinks.content.map((link, index) => <motion.li 
+                    key={link.href}
+                    initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                    whileInView={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      ...transitions.fast,
+                      delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
+                    }}
+                  >
                       <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                         {link.name}
                       </Link>
-                    </li>)}
+                    </motion.li>)}
                 </ul>
-              </div>
+              </motion.div>
 
               {/* Markets */}
               <div className="text-center lg:text-left">
@@ -164,11 +192,17 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-border flex items-center justify-center">
+        <motion.div 
+          className="mt-12 pt-8 border-t border-border flex items-center justify-center"
+          initial={prefersReducedMotion() ? {} : { opacity: 0 }}
+          whileInView={prefersReducedMotion() ? {} : { opacity: 1 }}
+          viewport={{ once: true }}
+          transition={transitions.normal}
+        >
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} INVESTOPATRONUS. All rights reserved.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>;
 }

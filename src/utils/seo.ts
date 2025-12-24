@@ -1,3 +1,5 @@
+import type { SupportedLanguage } from '@/lib/i18n';
+
 export interface SEOData {
   title?: string;
   description?: string;
@@ -11,6 +13,12 @@ export interface SEOData {
   noindex?: boolean;
   nofollow?: boolean;
   canonical?: string;
+  locale?: string;
+  alternateLanguages?: Record<SupportedLanguage, string>;
+  siteName?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterSite?: string;
+  twitterCreator?: string;
 }
 
 const defaultSEO = {
@@ -19,6 +27,9 @@ const defaultSEO = {
   image: 'https://investopatronus.com/investo.png',
   url: 'https://investopatronus.com',
   type: 'website',
+  siteName: 'INVESTOPATRONUS',
+  locale: 'en_US',
+  twitterCard: 'summary_large_image' as const,
 };
 
 export function generateSEOTags(data: SEOData = {}) {
@@ -31,6 +42,9 @@ export function generateSEOTags(data: SEOData = {}) {
   const url = data.url || defaultSEO.url;
   const type = data.type || defaultSEO.type;
   const canonical = data.canonical || url;
+  const locale = data.locale || defaultSEO.locale;
+  const siteName = data.siteName || defaultSEO.siteName;
+  const twitterCard = data.twitterCard || defaultSEO.twitterCard;
 
   const robots = [
     data.noindex ? 'noindex' : 'index',
@@ -49,6 +63,12 @@ export function generateSEOTags(data: SEOData = {}) {
     modifiedTime: data.modifiedTime,
     robots,
     canonical,
+    locale,
+    siteName,
+    twitterCard,
+    alternateLanguages: data.alternateLanguages,
+    twitterSite: data.twitterSite,
+    twitterCreator: data.twitterCreator,
   };
 }
 
@@ -89,6 +109,9 @@ export function updateDocumentHead(seoData: SEOData) {
     updateMetaTag('og:image', tags.image, 'property');
     updateMetaTag('og:url', tags.url, 'property');
     updateMetaTag('og:type', tags.type, 'property');
+    updateMetaTag('og:locale', tags.locale, 'property');
+    updateMetaTag('og:site_name', tags.siteName, 'property');
+    
     if (tags.type === 'article') {
       if (tags.author) {
         updateMetaTag('article:author', tags.author, 'property');
@@ -102,10 +125,34 @@ export function updateDocumentHead(seoData: SEOData) {
     }
 
     // Twitter Card tags
-    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:card', tags.twitterCard);
     updateMetaTag('twitter:title', tags.title);
     updateMetaTag('twitter:description', tags.description);
     updateMetaTag('twitter:image', tags.image);
+    if (tags.twitterSite) {
+      updateMetaTag('twitter:site', tags.twitterSite);
+    }
+    if (tags.twitterCreator) {
+      updateMetaTag('twitter:creator', tags.twitterCreator);
+    }
+
+    // Hreflang tags for alternate languages
+    if (tags.alternateLanguages) {
+      Object.entries(tags.alternateLanguages).forEach(([lang, langUrl]) => {
+        try {
+          let hreflangLink = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
+          if (!hreflangLink) {
+            hreflangLink = document.createElement('link');
+            hreflangLink.setAttribute('rel', 'alternate');
+            hreflangLink.setAttribute('hreflang', lang);
+            document.head.appendChild(hreflangLink);
+          }
+          hreflangLink.setAttribute('href', langUrl);
+        } catch (error) {
+          console.error(`Error updating hreflang for ${lang}:`, error);
+        }
+      });
+    }
 
     // Canonical URL
     try {

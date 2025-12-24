@@ -5,6 +5,7 @@ import { logger } from '@/lib/logger';
 import { useUserPreferences } from '@/hooks/useUserPreferences';
 import { supabase } from '@/integrations/supabase/client';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getMotionVariant, transitions, prefersReducedMotion, STAGGER } from '@/lib/animations';
 import { useUser } from '@/context/UserContext';
 import { UserAvatar } from '@/components/user/UserAvatar';
 import { EDUCATION_BASE_PATH, educationRoutes } from '@/lib/educationRoutes';
@@ -201,18 +202,12 @@ export function Header() {
                   </button>
 
                   <AnimatePresence>
-                    {activeDropdown === item.name && <motion.div initial={{
-                opacity: 0,
-                y: 10
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} exit={{
-                opacity: 0,
-                y: 10
-              }} transition={{
-                duration: 0.2
-              }} className="absolute top-full left-0 mt-2 w-72 py-3 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl">
+                    {activeDropdown === item.name && <motion.div 
+                      initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 10, scale: 0.95 }}
+                      animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+                      exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 10, scale: 0.95 }}
+                      transition={transitions.fast}
+                      className="absolute top-full left-0 mt-2 w-72 py-3 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl">
                         {item.children.map(child => <Link key={child.href} to={child.href} className="flex items-start gap-3 px-4 py-3 hover:bg-secondary/50 transition-colors">
                             <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                               <child.icon className="h-4 w-4 text-primary" />
@@ -283,10 +278,10 @@ export function Header() {
                     <AnimatePresence>
                       {languageMenuOpen && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
+                          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 10, scale: 0.95 }}
+                          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+                          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 10, scale: 0.95 }}
+                          transition={transitions.fast}
                           className="absolute left-full top-0 ml-2 w-48 py-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl z-50"
                         >
                           {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
@@ -358,7 +353,14 @@ export function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <button type="button" className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button 
+            type="button" 
+            className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+          >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -366,18 +368,16 @@ export function Header() {
 
       {/* Mobile Navigation */}
       <AnimatePresence>
-        {mobileMenuOpen && <motion.div initial={{
-        opacity: 0,
-        height: 0
-      }} animate={{
-        opacity: 1,
-        height: 'auto'
-      }} exit={{
-        opacity: 0,
-        height: 0
-      }} transition={{
-        duration: 0.3
-      }} className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border max-h-[80vh] overflow-y-auto">
+        {mobileMenuOpen && (
+          <motion.nav 
+          id="mobile-navigation"
+          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, height: 0, y: -20 }}
+          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, height: 'auto', y: 0 }}
+          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, height: 0, y: -20 }}
+          transition={transitions.normal}
+          className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border max-h-[80vh] overflow-y-auto overflow-hidden"
+          role="navigation"
+          aria-label="Mobile navigation">
             <div className="container-wide py-4 space-y-1">
               {/* Mobile Search */}
               <div className="px-4 mb-4">
@@ -487,7 +487,8 @@ export function Header() {
                 )}
               </div>
             </div>
-          </motion.div>}
+          </motion.nav>
+        )}
       </AnimatePresence>
     </header>;
 }

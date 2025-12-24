@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Bookmark } from 'lucide-react';
+import { Bookmark, Check } from 'lucide-react';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
+import { motion, AnimatePresence } from 'framer-motion';
+import { checkmarkAnimation, prefersReducedMotion, transitions } from '@/lib/animations';
 
 interface BookmarkButtonProps {
   contentType: 'article' | 'forum' | 'video' | 'analytics';
@@ -105,14 +107,43 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
       size="sm"
       onClick={toggleBookmark}
       disabled={loading}
+      loading={loading}
       className={cn(
-        'flex items-center gap-2',
+        'flex items-center gap-2 relative overflow-visible',
         isBookmarked && 'bg-primary/10 border-primary/30',
         className
       )}
     >
-      <Bookmark className={cn('h-4 w-4', isBookmarked && 'fill-current')} />
-      {isBookmarked ? 'Bookmarked' : 'Bookmark'}
+      <motion.div
+        animate={isBookmarked && !prefersReducedMotion() ? {
+          scale: [1, 1.2, 1],
+          rotate: [0, 10, -10, 0],
+        } : {}}
+        transition={transitions.fast}
+      >
+        <Bookmark className={cn('h-4 w-4', isBookmarked && 'fill-current')} />
+      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={isBookmarked ? 'bookmarked' : 'bookmark'}
+          initial={prefersReducedMotion() ? {} : { opacity: 0, x: -5 }}
+          animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+          exit={prefersReducedMotion() ? {} : { opacity: 0, x: 5 }}
+          transition={transitions.fast}
+        >
+          {isBookmarked ? 'Bookmarked' : 'Bookmark'}
+        </motion.span>
+      </AnimatePresence>
+      {isBookmarked && !prefersReducedMotion() && (
+        <motion.div
+          className="absolute -top-1 -right-1"
+          initial={checkmarkAnimation.initial}
+          animate={checkmarkAnimation.animate}
+          transition={checkmarkAnimation.transition}
+        >
+          <Check className="h-3 w-3 text-primary" />
+        </motion.div>
+      )}
     </Button>
   );
 }

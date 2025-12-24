@@ -9,8 +9,11 @@ interface ReactionCounts {
 }
 
 export function useReactionCounts(targetIds: string[], targetType: 'discussion' | 'reply') {
+  // Sort and deduplicate targetIds to ensure consistent query keys
+  const sortedIds = [...new Set(targetIds)].sort();
+  
   return useQuery({
-    queryKey: ['reactionCounts', targetType, targetIds],
+    queryKey: ['reactionCounts', targetType, sortedIds],
     queryFn: async (): Promise<ReactionCounts> => {
       if (targetIds.length === 0) return {};
 
@@ -29,7 +32,7 @@ export function useReactionCounts(targetIds: string[], targetType: 'discussion' 
       const counts: ReactionCounts = {};
       
       // Initialize all target IDs with zero counts
-      targetIds.forEach(id => {
+      sortedIds.forEach(id => {
         counts[id] = { like: 0, dislike: 0 };
       });
 
@@ -46,7 +49,12 @@ export function useReactionCounts(targetIds: string[], targetType: 'discussion' 
 
       return counts;
     },
-    enabled: targetIds.length > 0,
+    enabled: sortedIds.length > 0,
     staleTime: 30 * 1000, // 30 seconds
+    // Deduplicate queries with same parameters
+    queryKeyHashFn: (queryKey) => {
+      // Create a stable hash for query key to ensure deduplication
+      return JSON.stringify(queryKey);
+    },
   });
 }

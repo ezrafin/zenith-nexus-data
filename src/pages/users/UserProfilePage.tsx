@@ -92,10 +92,11 @@ export default function UserProfilePage() {
 
       if (data) {
         console.log('Profile data loaded:', data);
+        const displayName = data.display_name || data.username || null;
         setProfile({
           id: data.id,
           username: data.username || null,
-          display_name: data.display_name || data.username || 'User',
+          display_name: displayName,
           bio: data.bio || null,
           avatar_url: data.avatar_url || null,
           reputation: data.reputation_score || 0,
@@ -106,23 +107,62 @@ export default function UserProfilePage() {
         // Use joined_at if available, otherwise fallback to created_at
         const joinDate = data.joined_at || data.created_at;
         console.log('Join date:', joinDate);
-        setJoinedAt(joinDate);
+        if (joinDate) {
+          setJoinedAt(joinDate);
+        } else {
+          console.warn('No join date found, setting to null');
+          setJoinedAt(null);
+        }
         await loadFollowStats(data.id);
       } else {
         console.warn('Profile not found for userId:', userId);
-        // User not found in profiles
-        setProfile({
-          id: userId,
-          username: null,
-          display_name: 'Unknown User',
-          bio: 'This user profile is not available',
-          avatar_url: null,
-          reputation: 0,
-          post_count: 0,
-          comment_count: 0,
-          privacy_level: 'public',
-        });
-        setJoinedAt(null);
+        // Try to get basic user info from auth.users if profile doesn't exist
+        try {
+          const { data: authData } = await supabase.auth.admin.getUserById(userId);
+          if (authData?.user) {
+            setProfile({
+              id: userId,
+              username: authData.user.user_metadata?.username || null,
+              display_name: authData.user.user_metadata?.display_name || authData.user.user_metadata?.full_name || authData.user.email?.split('@')[0] || 'User',
+              bio: null,
+              avatar_url: authData.user.user_metadata?.avatar_url || null,
+              reputation: 0,
+              post_count: 0,
+              comment_count: 0,
+              privacy_level: 'public',
+            });
+            setJoinedAt(authData.user.created_at || null);
+          } else {
+            // User not found in profiles or auth
+            setProfile({
+              id: userId,
+              username: null,
+              display_name: 'User',
+              bio: null,
+              avatar_url: null,
+              reputation: 0,
+              post_count: 0,
+              comment_count: 0,
+              privacy_level: 'public',
+            });
+            setJoinedAt(null);
+          }
+        } catch (authError) {
+          // If admin API is not available, fallback to basic profile
+          console.warn('Could not fetch user from auth:', authError);
+          setProfile({
+            id: userId,
+            username: null,
+            display_name: 'User',
+            bio: null,
+            avatar_url: null,
+            reputation: 0,
+            post_count: 0,
+            comment_count: 0,
+            privacy_level: 'public',
+          });
+          setJoinedAt(null);
+        }
       }
       await loadFollowStats(userId);
     } catch (error) {

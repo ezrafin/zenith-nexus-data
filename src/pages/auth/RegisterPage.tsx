@@ -9,6 +9,8 @@ import { toast } from 'sonner';
 import { Mail, Eye, EyeOff, CheckCircle, AlertCircle, ArrowLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { getMotionVariant, transitions, prefersReducedMotion, STAGGER } from '@/lib/animations';
 
 // Google icon component
 const GoogleIcon = () => (
@@ -166,21 +168,37 @@ export default function RegisterPage() {
             <p className="text-muted-foreground">{t('auth.getStarted')}</p>
           </div>
 
-          <div className="premium-card p-8 space-y-6">
+          <motion.div 
+            className="premium-card p-8 space-y-6"
+            initial={getMotionVariant('fadeInUp').initial}
+            animate={getMotionVariant('fadeInUp').animate}
+            transition={transitions.normal}
+          >
             {/* Error Alert */}
-            {error && (
-              <div className="flex items-start gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive">
-                <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
-                <div className="text-sm">
-                  <p>{error}</p>
-                  {error.includes('already exists') && (
-                    <Link to="/auth/login" className="underline hover:no-underline mt-1 block">
-                      {t('auth.signInInstead')}
-                    </Link>
+            <AnimatePresence>
+              {error && (
+                <motion.div
+                  initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
+                  animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+                  exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
+                  transition={transitions.fast}
+                  className={cn(
+                    "flex items-start gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive",
+                    !prefersReducedMotion() && "animate-shake"
                   )}
-                </div>
-              </div>
-            )}
+                >
+                  <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
+                  <div className="text-sm">
+                    <p>{error}</p>
+                    {error.includes('already exists') && (
+                      <Link to="/auth/login" className="underline hover:no-underline mt-1 block transition-colors">
+                        {t('auth.signInInstead')}
+                      </Link>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Google OAuth Button */}
             <Button
@@ -203,8 +221,19 @@ export default function RegisterPage() {
             </div>
 
             {/* Email/Password Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="space-y-2">
+            <motion.form 
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+              initial={prefersReducedMotion() ? {} : { opacity: 0, y: 20 }}
+              animate={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+              transition={{ ...transitions.normal, delay: 0.1 }}
+            >
+              <motion.div 
+                className="space-y-2"
+                initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                transition={{ ...transitions.fast, delay: 0.2 }}
+              >
                 <Label htmlFor="username">{t('auth.usernameOptional')}</Label>
                 <Input
                   id="username"
@@ -214,9 +243,14 @@ export default function RegisterPage() {
                   onChange={(e) => setUsername(e.target.value)}
                   disabled={loading}
                 />
-              </div>
+              </motion.div>
 
-              <div className="space-y-2">
+              <motion.div 
+                className="space-y-2"
+                initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                transition={{ ...transitions.fast, delay: 0.3 }}
+              >
                 <Label htmlFor="email">{t('labels.email')}</Label>
                 <Input
                   id="email"
@@ -229,11 +263,16 @@ export default function RegisterPage() {
                   }}
                   required
                   disabled={loading}
-                  className={cn(error && 'border-destructive')}
+                  error={!!error}
                 />
-              </div>
+              </motion.div>
 
-              <div className="space-y-2">
+              <motion.div 
+                className="space-y-2"
+                initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                transition={{ ...transitions.fast, delay: 0.4 }}
+              >
                 <Label htmlFor="password">{t('labels.password')}</Label>
                 <div className="relative">
                   <Input
@@ -247,79 +286,120 @@ export default function RegisterPage() {
                     }}
                     required
                     disabled={loading}
+                    error={!!error}
                     className="pr-10"
                   />
-                  <button
+                  <motion.button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    whileHover={!prefersReducedMotion() ? { scale: 1.1 } : undefined}
+                    whileTap={!prefersReducedMotion() ? { scale: 0.95 } : undefined}
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                  </button>
+                  </motion.button>
                 </div>
 
                 {/* Password strength indicator */}
-                {password && (
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <div className="flex-1 h-1.5 bg-secondary rounded-full overflow-hidden flex gap-0.5">
-                        {[1, 2, 3].map((level) => (
-                          <div
-                            key={level}
+                <AnimatePresence>
+                  {password && (
+                    <motion.div 
+                      className="space-y-2"
+                      initial={prefersReducedMotion() ? {} : { opacity: 0, height: 0 }}
+                      animate={prefersReducedMotion() ? {} : { opacity: 1, height: 'auto' }}
+                      exit={prefersReducedMotion() ? {} : { opacity: 0, height: 0 }}
+                      transition={transitions.fast}
+                    >
+                      <div className="flex items-center gap-2">
+                        <div className="flex-1 h-1.5 bg-secondary rounded-full overflow-hidden flex gap-0.5">
+                          {[1, 2, 3].map((level) => (
+                            <motion.div
+                              key={level}
+                              className={cn(
+                                'flex-1 h-full rounded-full transition-colors',
+                                passwordStrength.level >= level ? passwordStrength.color : 'bg-secondary'
+                              )}
+                              initial={prefersReducedMotion() ? {} : { scaleX: 0 }}
+                              animate={prefersReducedMotion() ? {} : { scaleX: passwordStrength.level >= level ? 1 : 0 }}
+                              transition={{ ...transitions.fast, delay: level * 0.1 }}
+                            />
+                          ))}
+                        </div>
+                        {passwordStrength.label && (
+                          <motion.span 
                             className={cn(
-                              'flex-1 h-full rounded-full transition-colors',
-                              passwordStrength.level >= level ? passwordStrength.color : 'bg-secondary'
+                              'text-xs font-medium',
+                              passwordStrength.level === 1 && 'text-destructive',
+                              passwordStrength.level === 2 && 'text-yellow-500',
+                              passwordStrength.level === 3 && 'text-green-500'
                             )}
-                          />
+                            initial={prefersReducedMotion() ? {} : { opacity: 0 }}
+                            animate={prefersReducedMotion() ? {} : { opacity: 1 }}
+                            transition={transitions.fast}
+                          >
+                            {passwordStrength.label}
+                          </motion.span>
+                        )}
+                      </div>
+
+                      {/* Password requirements */}
+                      <div className="space-y-1.5">
+                        {passwordRequirements.map((req, index) => (
+                          <motion.div
+                            key={index}
+                            className={cn(
+                              'flex items-center gap-2 text-xs transition-colors',
+                              req.test(password) ? 'text-green-500' : 'text-muted-foreground'
+                            )}
+                            initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                            animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                            transition={{ ...transitions.fast, delay: index * 0.05 }}
+                          >
+                            <motion.div
+                              animate={req.test(password) && !prefersReducedMotion() ? {
+                                scale: [1, 1.2, 1],
+                              } : {}}
+                              transition={transitions.fast}
+                            >
+                              <CheckCircle className={cn('h-3 w-3', req.test(password) ? 'opacity-100' : 'opacity-40')} />
+                            </motion.div>
+                            {req.label}
+                          </motion.div>
                         ))}
                       </div>
-                      {passwordStrength.label && (
-                        <span className={cn(
-                          'text-xs font-medium',
-                          passwordStrength.level === 1 && 'text-destructive',
-                          passwordStrength.level === 2 && 'text-yellow-500',
-                          passwordStrength.level === 3 && 'text-green-500'
-                        )}>
-                          {passwordStrength.label}
-                        </span>
-                      )}
-                    </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
 
-                    {/* Password requirements */}
-                    <div className="space-y-1.5">
-                      {passwordRequirements.map((req, index) => (
-                        <div
-                          key={index}
-                          className={cn(
-                            'flex items-center gap-2 text-xs transition-colors',
-                            req.test(password) ? 'text-green-500' : 'text-muted-foreground'
-                          )}
-                        >
-                          <CheckCircle className={cn('h-3 w-3', req.test(password) ? 'opacity-100' : 'opacity-40')} />
-                          {req.label}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <Button 
-                type="submit" 
-                className="w-full" 
-                disabled={loading || !allRequirementsMet}
+              <motion.div
+                initial={prefersReducedMotion() ? {} : { opacity: 0, y: 10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+                transition={{ ...transitions.fast, delay: 0.5 }}
               >
-                {loading ? t('auth.creatingAccount') : t('auth.createAccount')}
-              </Button>
-            </form>
+                <Button 
+                  type="submit" 
+                  className="w-full" 
+                  disabled={loading || !allRequirementsMet}
+                  loading={loading}
+                >
+                  {loading ? t('auth.creatingAccount') : t('auth.createAccount')}
+                </Button>
+              </motion.div>
+            </motion.form>
 
-            <p className="text-center text-sm text-muted-foreground">
+            <motion.p 
+              className="text-center text-sm text-muted-foreground"
+              initial={prefersReducedMotion() ? {} : { opacity: 0 }}
+              animate={prefersReducedMotion() ? {} : { opacity: 1 }}
+              transition={{ ...transitions.fast, delay: 0.6 }}
+            >
               {t('auth.alreadyHaveAccount')}{' '}
-              <Link to="/auth/login" className="text-primary hover:underline font-medium">
+              <Link to="/auth/login" className="text-primary hover:underline font-medium transition-colors">
                 {t('buttons.signIn')}
               </Link>
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </div>
     </Layout>

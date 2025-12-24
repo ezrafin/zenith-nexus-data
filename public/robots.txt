@@ -1,3 +1,6 @@
+# Robots.txt for INVESTOPATRONUS
+# https://investopatronus.com/robots.txt
+
 # Allow all search engines
 User-agent: *
 Allow: /
@@ -10,6 +13,21 @@ Disallow: /settings
 Disallow: /watchlists
 Disallow: /bookmarks
 Disallow: /users/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /news
+Allow: /analytics
+Allow: /markets
+Allow: /companies
+Allow: /forum
+Allow: /community
+Allow: /learning
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
 # Allow specific bots
 User-agent: Googlebot

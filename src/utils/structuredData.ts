@@ -156,3 +156,181 @@ export function generateWebSiteSchema(): WebSiteSchema {
   };
 }
 
+export interface PersonSchema {
+  '@context': string;
+  '@type': 'Person';
+  name: string;
+  url?: string;
+  image?: string;
+  description?: string;
+  jobTitle?: string;
+  worksFor?: {
+    '@type': 'Organization';
+    name: string;
+  };
+  sameAs?: string[];
+}
+
+export interface ForumPostingSchema {
+  '@context': string;
+  '@type': 'ForumPosting';
+  headline: string;
+  description?: string;
+  datePublished: string;
+  dateModified?: string;
+  author: {
+    '@type': 'Person';
+    name: string;
+    url?: string;
+  };
+  publisher: {
+    '@type': 'Organization';
+    name: string;
+    logo?: {
+      '@type': 'ImageObject';
+      url: string;
+    };
+  };
+  mainEntityOfPage?: {
+    '@type': 'WebPage';
+    '@id': string;
+  };
+  articleSection?: string;
+  keywords?: string;
+}
+
+export interface CourseSchema {
+  '@context': string;
+  '@type': 'Course';
+  name: string;
+  description?: string;
+  provider: {
+    '@type': 'Organization';
+    name: string;
+    url?: string;
+  };
+  courseCode?: string;
+  educationalCredentialAwarded?: string;
+  hasCourseInstance?: {
+    '@type': 'CourseInstance';
+    courseMode?: string;
+    instructor?: {
+      '@type': 'Person';
+      name: string;
+    };
+  };
+  url?: string;
+  image?: string;
+}
+
+export function generatePersonSchema(
+  name: string,
+  url?: string,
+  image?: string,
+  description?: string,
+  jobTitle?: string,
+  organizationName?: string,
+  sameAs?: string[]
+): PersonSchema {
+  const schema: PersonSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name,
+  };
+
+  if (url) schema.url = url;
+  if (image) schema.image = image;
+  if (description) schema.description = description;
+  if (jobTitle) schema.jobTitle = jobTitle;
+  if (organizationName) {
+    schema.worksFor = {
+      '@type': 'Organization',
+      name: organizationName,
+    };
+  }
+  if (sameAs && sameAs.length > 0) schema.sameAs = sameAs;
+
+  return schema;
+}
+
+export function generateForumPostingSchema(
+  headline: string,
+  description: string,
+  datePublished: string,
+  authorName: string,
+  url: string,
+  dateModified?: string,
+  authorUrl?: string,
+  articleSection?: string,
+  keywords?: string
+): ForumPostingSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ForumPosting',
+    headline,
+    description,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      '@type': 'Person',
+      name: authorName,
+      ...(authorUrl && { url: authorUrl }),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'INVESTOPATRONUS',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://investopatronus.com/investo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    ...(articleSection && { articleSection }),
+    ...(keywords && { keywords }),
+  };
+}
+
+export function generateCourseSchema(
+  name: string,
+  description?: string,
+  providerName?: string,
+  providerUrl?: string,
+  courseCode?: string,
+  educationalCredentialAwarded?: string,
+  courseMode?: string,
+  instructorName?: string,
+  url?: string,
+  image?: string
+): CourseSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name,
+    ...(description && { description }),
+    provider: {
+      '@type': 'Organization',
+      name: providerName || 'INVESTOPATRONUS',
+      ...(providerUrl && { url: providerUrl }),
+    },
+    ...(courseCode && { courseCode }),
+    ...(educationalCredentialAwarded && { educationalCredentialAwarded }),
+    ...(courseMode || instructorName ? {
+      hasCourseInstance: {
+        '@type': 'CourseInstance',
+        ...(courseMode && { courseMode }),
+        ...(instructorName && {
+          instructor: {
+            '@type': 'Person',
+            name: instructorName,
+          },
+        }),
+      },
+    } : {}),
+    ...(url && { url }),
+    ...(image && { image }),
+  };
+}
+

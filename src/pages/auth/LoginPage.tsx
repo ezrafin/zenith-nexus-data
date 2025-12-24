@@ -86,14 +86,30 @@ export default function LoginPage() {
             <p className="text-muted-foreground">{t('auth.signInToContinue')}</p>
           </div>
 
-          <div className="premium-card p-8 space-y-6">
+          <motion.div 
+            className="premium-card p-8 space-y-6"
+            initial={getMotionVariant('fadeInUp').initial}
+            animate={getMotionVariant('fadeInUp').animate}
+            transition={transitions.normal}
+          >
             {/* Error Alert */}
-            {error && (
-              <div className="flex items-start gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive">
-                <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
-                <p className="text-sm">{error}</p>
-              </div>
-            )}
+            <AnimatePresence>
+              {error && (
+                <motion.div
+                  initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
+                  animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+                  exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
+                  transition={transitions.fast}
+                  className={cn(
+                    "flex items-start gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive",
+                    !prefersReducedMotion() && "animate-shake"
+                  )}
+                >
+                  <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
+                  <p className="text-sm">{error}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Google OAuth Button */}
             <Button
@@ -116,8 +132,19 @@ export default function LoginPage() {
             </div>
 
             {/* Email/Password Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="space-y-2">
+            <motion.form 
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+              initial={prefersReducedMotion() ? {} : { opacity: 0, y: 20 }}
+              animate={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+              transition={{ ...transitions.normal, delay: 0.1 }}
+            >
+              <motion.div 
+                className="space-y-2"
+                initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                transition={{ ...transitions.fast, delay: 0.2 }}
+              >
                 <Label htmlFor="email">{t('labels.email')}</Label>
                 <Input
                   id="email"
@@ -130,16 +157,21 @@ export default function LoginPage() {
                   }}
                   required
                   disabled={loading}
-                  className={cn(error && 'border-destructive')}
+                  error={!!error}
                 />
-              </div>
+              </motion.div>
 
-              <div className="space-y-2">
+              <motion.div 
+                className="space-y-2"
+                initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                transition={{ ...transitions.fast, delay: 0.3 }}
+              >
                 <div className="flex items-center justify-between">
                   <Label htmlFor="password">{t('labels.password')}</Label>
                   <Link
                     to="/auth/forgot-password"
-                    className="text-xs text-primary hover:underline"
+                    className="text-xs text-primary hover:underline transition-colors"
                   >
                     {t('auth.forgotPassword')}
                   </Link>
@@ -156,30 +188,44 @@ export default function LoginPage() {
                     }}
                     required
                     disabled={loading}
-                    className={cn('pr-10', error && 'border-destructive')}
+                    error={!!error}
+                    className="pr-10"
                   />
-                  <button
+                  <motion.button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    whileHover={!prefersReducedMotion() ? { scale: 1.1 } : undefined}
+                    whileTap={!prefersReducedMotion() ? { scale: 0.95 } : undefined}
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
 
-              <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? t('auth.signingIn') : t('buttons.signIn')}
-              </Button>
-            </form>
+              <motion.div
+                initial={prefersReducedMotion() ? {} : { opacity: 0, y: 10 }}
+                animate={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+                transition={{ ...transitions.fast, delay: 0.4 }}
+              >
+                <Button type="submit" className="w-full" disabled={loading} loading={loading}>
+                  {loading ? t('auth.signingIn') : t('buttons.signIn')}
+                </Button>
+              </motion.div>
+            </motion.form>
 
-            <p className="text-center text-sm text-muted-foreground">
+            <motion.p 
+              className="text-center text-sm text-muted-foreground"
+              initial={prefersReducedMotion() ? {} : { opacity: 0 }}
+              animate={prefersReducedMotion() ? {} : { opacity: 1 }}
+              transition={{ ...transitions.fast, delay: 0.5 }}
+            >
               {t('auth.dontHaveAccount')}{' '}
-              <Link to="/auth/register" className="text-primary hover:underline font-medium">
+              <Link to="/auth/register" className="text-primary hover:underline font-medium transition-colors">
                 {t('auth.signUp')}
               </Link>
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </div>
     </Layout>

@@ -10,6 +10,8 @@ import { organizations } from '@/lib/organizations';
 import { supabase } from '@/integrations/supabase/client';
 import type { MarketData } from '@/lib/api/types';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
+import { motion, AnimatePresence } from 'framer-motion';
+import { getMotionVariant, transitions, STAGGER, prefersReducedMotion } from '@/lib/animations';
 
 interface SearchResult {
   type: 'company' | 'news' | 'forum' | 'analytics' | 'ticker' | 'author';
@@ -273,7 +275,14 @@ export function GlobalSearch() {
     }
   }, [contentType, dateFilter, collectBill, isCollected]);
 
+  // Debounce search with useMemo to prevent unnecessary re-renders
   useEffect(() => {
+    if (!query.trim()) {
+      setResults([]);
+      setLoading(false);
+      return;
+    }
+    
     const timeoutId = setTimeout(() => {
       searchAll(query);
     }, 300);
@@ -342,7 +351,9 @@ export function GlobalSearch() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground bg-secondary/50 border border-border/50 rounded-lg hover:bg-secondary hover:border-border transition-colors w-full lg:w-auto justify-center lg:justify-start"
+        className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground bg-secondary/50 border border-border/50 rounded-lg hover:bg-secondary hover:border-border transition-colors w-full lg:w-auto justify-center lg:justify-start min-h-[44px] touch-manipulation"
+        aria-label="Open global search (Cmd+K or Ctrl+K)"
+        aria-haspopup="dialog"
       >
         <Search className="h-4 w-4" />
         <span className="hidden sm:inline">Search...</span>
@@ -352,18 +363,35 @@ export function GlobalSearch() {
       </button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[80vh] flex flex-col">
-          <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
+        <DialogContent 
+          className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[80vh] flex flex-col"
+          aria-label="Global search dialog"
+          aria-describedby="search-description"
+        >
+          <Command 
+            className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5"
+            role="search"
+          >
             <div className="flex items-center border-b px-3">
-              <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+              <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
               <input
-                className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 min-h-[44px] touch-manipulation"
                 placeholder="Search companies, news, forum, tickers, authors..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                aria-label="Search input"
+                aria-describedby="search-description"
+                autoFocus
               />
+              <span id="search-description" className="sr-only">
+                Search across companies, news articles, forum discussions, market tickers, and authors. Use filters to narrow results.
+              </span>
               {query && (
-                <button onClick={() => setQuery('')} className="p-1 hover:bg-secondary rounded">
+                <button 
+                  onClick={() => setQuery('')} 
+                  className="p-1 hover:bg-secondary rounded min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation"
+                  aria-label="Clear search"
+                >
                   <X className="h-4 w-4 text-muted-foreground" />
                 </button>
               )}
@@ -420,41 +448,65 @@ export function GlobalSearch() {
 
               {!loading && groupedResults.company.length > 0 && (
                 <CommandGroup heading="Companies">
-                  {groupedResults.company.map((result) => (
-                    <CommandItem
-                      key={`company-${result.id}`}
-                      onSelect={() => handleSelect(result)}
-                      className="flex items-center gap-3 cursor-pointer"
-                    >
-                      {getIcon(result.type)}
-                      <div className="flex flex-col">
-                        <span className="font-medium">{result.title}</span>
-                        {result.subtitle && (
-                          <span className="text-xs text-muted-foreground capitalize">{result.subtitle}</span>
-                        )}
-                      </div>
-                    </CommandItem>
-                  ))}
+                  <AnimatePresence>
+                    {groupedResults.company.map((result, index) => (
+                      <motion.div
+                        key={`company-${result.id}`}
+                        initial={prefersReducedMotion() ? {} : { opacity: 0, y: 10 }}
+                        animate={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+                        exit={prefersReducedMotion() ? {} : { opacity: 0, y: -10 }}
+                        transition={{
+                          ...transitions.fast,
+                          delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
+                        }}
+                      >
+                        <CommandItem
+                          onSelect={() => handleSelect(result)}
+                          className="flex items-center gap-3 cursor-pointer"
+                        >
+                          {getIcon(result.type)}
+                          <div className="flex flex-col">
+                            <span className="font-medium">{result.title}</span>
+                            {result.subtitle && (
+                              <span className="text-xs text-muted-foreground capitalize">{result.subtitle}</span>
+                            )}
+                          </div>
+                        </CommandItem>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
                 </CommandGroup>
               )}
 
               {!loading && groupedResults.news.length > 0 && (
                 <CommandGroup heading="News">
-                  {groupedResults.news.map((result) => (
-                    <CommandItem
-                      key={`news-${result.id}`}
-                      onSelect={() => handleSelect(result)}
-                      className="flex items-center gap-3 cursor-pointer"
-                    >
-                      {getIcon(result.type)}
-                      <div className="flex flex-col">
-                        <span className="font-medium line-clamp-1">{result.title}</span>
-                        {result.subtitle && (
-                          <span className="text-xs text-muted-foreground">{result.subtitle}</span>
-                        )}
-                      </div>
-                    </CommandItem>
-                  ))}
+                  <AnimatePresence>
+                    {groupedResults.news.map((result, index) => (
+                      <motion.div
+                        key={`news-${result.id}`}
+                        initial={prefersReducedMotion() ? {} : { opacity: 0, y: 10 }}
+                        animate={prefersReducedMotion() ? {} : { opacity: 1, y: 0 }}
+                        exit={prefersReducedMotion() ? {} : { opacity: 0, y: -10 }}
+                        transition={{
+                          ...transitions.fast,
+                          delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
+                        }}
+                      >
+                        <CommandItem
+                          onSelect={() => handleSelect(result)}
+                          className="flex items-center gap-3 cursor-pointer"
+                        >
+                          {getIcon(result.type)}
+                          <div className="flex flex-col">
+                            <span className="font-medium line-clamp-1">{result.title}</span>
+                            {result.subtitle && (
+                              <span className="text-xs text-muted-foreground">{result.subtitle}</span>
+                            )}
+                          </div>
+                        </CommandItem>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
                 </CommandGroup>
               )}
 
