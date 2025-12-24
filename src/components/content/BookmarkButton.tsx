@@ -137,8 +137,8 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
       {isBookmarked && !prefersReducedMotion() && (
         <motion.div
           className="absolute -top-1 -right-1"
-          initial={checkmarkAnimation.initial}
-          animate={checkmarkAnimation.animate}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={checkmarkAnimation.transition}
         >
           <Check className="h-3 w-3 text-primary" />

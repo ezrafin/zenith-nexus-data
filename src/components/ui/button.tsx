@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion, MotionProps } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { prefersReducedMotion, hoverScale, tapScale } from "@/lib/animations";
 
 import { cn } from "@/lib/utils";
@@ -33,16 +33,16 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">,
-    Omit<MotionProps, "children">,
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children" | "onAnimationStart" | "onDrag" | "onDragEnd" | "onDragStart" | "style">,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   loading?: boolean;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, loading, disabled, onClick, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, loading, disabled, onClick, style, ...props }, ref) => {
     const isDisabled = disabled || loading;
     
     // Ripple effect handler
@@ -78,8 +78,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <Slot
           ref={ref}
           className={cn(buttonVariants({ variant, size, className }))}
-          disabled={isDisabled}
-          onClick={handleClick}
           {...props}
         >
           {loading && (
@@ -116,10 +114,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={cn(buttonVariants({ variant, size, className }))}
         disabled={isDisabled}
+        style={style}
         whileHover={!isDisabled && !prefersReducedMotion() ? hoverScale : undefined}
         whileTap={!isDisabled && !prefersReducedMotion() ? tapScale : undefined}
         onClick={handleClick}
-        {...props}
+        {...(props as Omit<HTMLMotionProps<"button">, "ref">)}
       >
         {loading && (
           <motion.svg

@@ -13,26 +13,26 @@ export const ANIMATION_DURATION = {
   slowest: 700,
 } as const;
 
-// Easing functions (CSS cubic-bezier equivalents)
+// Easing functions as arrays for Framer Motion compatibility
 export const EASING = {
-  // Standard easing
-  linear: 'linear',
-  ease: 'ease',
-  easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
-  easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
-  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  // Standard easing (arrays for Framer Motion)
+  linear: [0, 0, 1, 1] as [number, number, number, number],
+  ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
+  easeIn: [0.4, 0, 1, 1] as [number, number, number, number],
+  easeOut: [0, 0, 0.2, 1] as [number, number, number, number],
+  easeInOut: [0.4, 0, 0.2, 1] as [number, number, number, number],
   
   // Material Design easing
-  standard: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  decelerate: 'cubic-bezier(0, 0, 0.2, 1)',
-  accelerate: 'cubic-bezier(0.4, 0, 1, 1)',
+  standard: [0.4, 0, 0.2, 1] as [number, number, number, number],
+  decelerate: [0, 0, 0.2, 1] as [number, number, number, number],
+  accelerate: [0.4, 0, 1, 1] as [number, number, number, number],
   
   // Apple HIG easing
-  apple: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+  apple: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
   
   // Spring-like easing
-  spring: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-  bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+  spring: [0.68, -0.55, 0.265, 1.55] as [number, number, number, number],
+  bounce: [0.68, -0.55, 0.265, 1.55] as [number, number, number, number],
 } as const;
 
 // Stagger delays (for list animations)
@@ -138,16 +138,16 @@ export const transitions = {
     ease: EASING.standard,
   },
   spring: {
-    type: 'spring',
+    type: 'spring' as const,
     stiffness: 300,
     damping: 30,
   },
   bounce: {
-    type: 'spring',
+    type: 'spring' as const,
     stiffness: 400,
     damping: 10,
   },
-} as const;
+};
 
 // Utility function to check if user prefers reduced motion
 export const prefersReducedMotion = (): boolean => {
@@ -160,7 +160,7 @@ export const getTransition = (defaultTransition: typeof transitions.normal) => {
   if (prefersReducedMotion()) {
     return {
       duration: 0,
-      ease: 'linear',
+      ease: EASING.linear,
     };
   }
   return defaultTransition;
@@ -226,7 +226,7 @@ export const spinnerAnimation = {
   transition: {
     duration: 1,
     repeat: Infinity,
-    ease: 'linear',
+    ease: EASING.linear,
   },
 };
 
@@ -251,11 +251,10 @@ export const pulseAnimation = {
 
 // Success checkmark animation
 export const checkmarkAnimation = {
-  scale: [0, 1.2, 1],
-  opacity: [0, 1, 1],
+  initial: { scale: 0, opacity: 0 },
+  animate: { scale: 1, opacity: 1 },
   transition: {
     duration: 0.4,
     ease: EASING.spring,
   },
 };
-

@@ -207,8 +207,8 @@ export function ReactionButton({
         {isReacted && !prefersReducedMotion() && (
           <motion.div
             className="absolute -top-1 -right-1"
-            initial={checkmarkAnimation.initial}
-            animate={checkmarkAnimation.animate}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={checkmarkAnimation.transition}
           >
             <div className="w-2 h-2 bg-current rounded-full" />

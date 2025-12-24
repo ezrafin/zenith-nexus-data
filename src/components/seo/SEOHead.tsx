@@ -72,8 +72,11 @@ export function SEOHead({
       const fullUrl = `${baseUrl}${pathname}`;
       
       // Generate alternate language URLs if not provided
-      const generatedAlternateLanguages: Record<SupportedLanguage, string> = alternateLanguages || {};
-      if (!alternateLanguages) {
+      let generatedAlternateLanguages: Record<SupportedLanguage, string>;
+      if (alternateLanguages) {
+        generatedAlternateLanguages = alternateLanguages;
+      } else {
+        generatedAlternateLanguages = {} as Record<SupportedLanguage, string>;
         SUPPORTED_LANGUAGES.forEach((lang) => {
           // For now, we'll use the same URL for all languages
           // In a real implementation, you might want to add language prefixes like /en/, /ru/, etc.
