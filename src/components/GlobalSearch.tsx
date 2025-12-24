@@ -247,8 +247,8 @@ export function GlobalSearch() {
           allResults.push(...profiles.map(profile => ({
             type: 'author' as const,
             id: profile.id,
-            title: profile.display_name || profile.username,
-            subtitle: `@${profile.username}`,
+            title: profile.display_name || profile.username || 'Unknown User',
+            subtitle: `@${profile.username || 'unknown'}`,
             authorId: profile.id,
           })));
         }

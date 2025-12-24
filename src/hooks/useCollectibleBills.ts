@@ -96,7 +96,7 @@ export function useCollectibleBills() {
 
         setLegendarySpawn({
           articleId: spawnData.article_id,
-          articleType: spawnData.article_type,
+          articleType: spawnData.article_type as 'news' | 'analytics' | 'basic_article' | 'advanced_article',
           articleUrl,
         });
       } else {

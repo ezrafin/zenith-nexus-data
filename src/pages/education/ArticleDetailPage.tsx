@@ -11,12 +11,6 @@ export default function ArticleDetailPage() {
   const { t } = useTranslation({ namespace: 'education' });
   const { articleId } = useParams<{ articleId: string }>();
   const article = articleId ? getArticleById(articleId) : undefined;
-  
-  // Bill collection: basic_article_read or advanced_article_read
-  const isAdvanced = article?.type === 'advanced';
-  usePageBillCollection({ 
-    billId: isAdvanced ? 'advanced_article_read' : 'basic_article_read' 
-  });
 
   if (!article) {
     return (

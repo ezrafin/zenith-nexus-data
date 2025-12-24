@@ -18,15 +18,6 @@ import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 export default function UserProfilePage() {
   const { userId } = useParams();
-  const { user: currentUser } = useUser();
-  
-  // Bill collection: profile_own_visit or profile_other_visit
-  const isOwnProfile = currentUser?.id === userId;
-  const { collectBill } = useCollectibleBills();
-  usePageBillCollection({ 
-    billId: isOwnProfile ? 'profile_own_visit' : 'profile_other_visit' 
-  });
-  const { userId } = useParams();
   const { user: currentUser, profile: currentProfile } = useUser();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);

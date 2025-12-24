@@ -18,20 +18,6 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 export default function ForumPage() {
-  // Bill collection: forum_first_visit
-  const { collectBill } = useCollectibleBills();
-  usePageBillCollection({ billId: 'forum_first_visit' });
-  
-  // Bill collection: forum_search (when search is used)
-  useEffect(() => {
-    if (searchQuery.trim().length >= 2) {
-      collectBill('forum_search', {
-        page: '/forum',
-        action: 'forum_search',
-        metadata: { query: searchQuery },
-      });
-    }
-  }, [searchQuery, collectBill]);
   const {
     t,
     language

@@ -64,6 +64,33 @@ export type Database = {
         }
         Relationships: []
       }
+      collectible_bills: {
+        Row: {
+          bill_id: string
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+          rarity: string
+        }
+        Insert: {
+          bill_id: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+          rarity: string
+        }
+        Update: {
+          bill_id?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+          rarity?: string
+        }
+        Relationships: []
+      }
       company_evaluations: {
         Row: {
           comment: string | null
@@ -627,6 +654,57 @@ export type Database = {
           content_id?: string
           content_type?: string
           created_at?: string | null
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_collected_bills: {
+        Row: {
+          bill_id: string
+          collected_at: string
+          context: Json | null
+          id: string
+          user_id: string
+        }
+        Insert: {
+          bill_id: string
+          collected_at?: string
+          context?: Json | null
+          id?: string
+          user_id: string
+        }
+        Update: {
+          bill_id?: string
+          collected_at?: string
+          context?: Json | null
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_legendary_spawns: {
+        Row: {
+          article_id: string
+          article_type: string
+          collected_at: string | null
+          created_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          article_id: string
+          article_type: string
+          collected_at?: string | null
+          created_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          article_id?: string
+          article_type?: string
+          collected_at?: string | null
+          created_at?: string
           id?: string
           user_id?: string
         }

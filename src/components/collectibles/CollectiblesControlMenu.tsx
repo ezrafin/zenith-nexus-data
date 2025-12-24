@@ -23,7 +23,7 @@ export function CollectiblesControlMenu() {
         .order('bill_id', { ascending: true });
 
       if (!error && data) {
-        setAllBills(data);
+        setAllBills(data as Array<{ bill_id: string; name: string; rarity: 'regular' | 'legendary' }>);
       }
     };
 

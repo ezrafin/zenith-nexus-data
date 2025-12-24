@@ -71,7 +71,7 @@ export function ReactionButton({
 
   // Optimistic mutation for reactions
   const reactionMutation = useMutation({
-    mutationFn: async (action: 'add' | 'remove') => {
+    mutationFn: async (action: 'add' | 'remove'): Promise<'add' | 'remove'> => {
       if (!user) throw new Error('Please sign in to react');
 
       if (action === 'remove') {
@@ -103,6 +103,7 @@ export function ReactionButton({
           });
         if (error) throw error;
       }
+      return action;
     },
     onMutate: async (action) => {
       // Optimistically update UI
