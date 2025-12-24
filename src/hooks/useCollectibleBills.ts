@@ -37,7 +37,7 @@ interface CollectBillResponse {
 export function useCollectibleBills() {
   const { user } = useUser();
   const [collectedBills, setCollectedBills] = useState<string[]>([]);
-  const [progress, setProgress] = useState<CollectionProgress>({ collected: 0, total: 31 });
+  const [progress, setProgress] = useState<CollectionProgress>({ collected: 0, total: 42 });
   const [legendarySpawn, setLegendarySpawn] = useState<LegendarySpawn | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -67,7 +67,7 @@ export function useCollectibleBills() {
       const collectedCount = billIds.length;
       setProgress({
         collected: collectedCount,
-        total: 31, // 30 regular + 1 legendary
+        total: 42, // 41 regular + 1 legendary
       });
 
       // Load legendary spawn if exists
@@ -194,7 +194,7 @@ export function useCollectibleBills() {
   const hasAllRegularBills = useCallback((): boolean => {
     // Count regular bills collected (excluding legendary)
     const regularBillsCollected = collectedBills.filter(billId => billId !== 'legendary_hidden_treasure').length;
-    return regularBillsCollected >= 30;
+    return regularBillsCollected >= 41;
   }, [collectedBills]);
 
   // Check if legendary bill should appear on current article

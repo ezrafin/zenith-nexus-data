@@ -162,14 +162,14 @@ serve(async (req) => {
 
     // Special handling for legendary bill
     if (bill.rarity === 'legendary') {
-      // Check if user has all 30 regular bills
+      // Check if user has all 41 regular bills
       const { data: progressData } = await supabaseAdmin.rpc('get_user_collection_progress', {
         p_user_id: user.id,
       });
 
       if (!progressData || !progressData[0] || !progressData[0].has_all_regular) {
         return new Response(
-          JSON.stringify({ success: false, error: 'You must collect all 30 regular bills first' } as CollectBillResponse),
+          JSON.stringify({ success: false, error: 'You must collect all 41 regular bills first' } as CollectBillResponse),
           {
             status: 403,
             headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -230,8 +230,8 @@ serve(async (req) => {
       }
     }
 
-    // For regular bills, check if this is the 30th one (to trigger legendary spawn)
-    let is30thRegular = false;
+    // For regular bills, check if this is the 41st one (to trigger legendary spawn)
+    let is41stRegular = false;
     if (bill.rarity === 'regular') {
       const { data: progressData } = await supabaseAdmin.rpc('get_user_collection_progress', {
         p_user_id: user.id,
@@ -239,8 +239,8 @@ serve(async (req) => {
 
       if (progressData && progressData[0]) {
         const collectedCount = Number(progressData[0].collected_count);
-        // This will be the 30th if currently at 29
-        is30thRegular = collectedCount === 29;
+        // This will be the 41st if currently at 40
+        is41stRegular = collectedCount === 40;
       }
     }
 
@@ -272,9 +272,9 @@ serve(async (req) => {
         .eq('user_id', user.id);
     }
 
-    // If this is the 30th regular bill, create legendary spawn
+    // If this is the 41st regular bill, create legendary spawn
     let legendarySpawn: CollectBillResponse['legendarySpawn'] = undefined;
-    if (is30thRegular) {
+    if (is41stRegular) {
       // Query news articles from database to get a random one
       const { data: newsArticles, error: newsError } = await supabaseAdmin
         .from('news_articles')

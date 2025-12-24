@@ -819,6 +819,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_user_collection_progress: {
+        Args: { p_user_id: string }
+        Returns: {
+          collected_count: number
+          has_all_regular: boolean
+          total_count: number
+        }[]
+      }
       grant_achievement_if_not_exists: {
         Args: { p_achievement_id: string; p_user_id: string }
         Returns: undefined
