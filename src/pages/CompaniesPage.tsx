@@ -8,11 +8,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Input } from '@/components/ui/input';
 import { motion } from 'framer-motion';
 import { Building2, TrendingUp, Users, Award, ArrowUpDown, Globe, Search } from 'lucide-react';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 type SortOption = 'combined' | 'community' | 'expert';
 const ITEMS_PER_PAGE = 15;
 
 export default function CompaniesPage() {
+  // Bill collection: companies_page_visit
+  usePageBillCollection({ billId: 'companies_page_visit' });
   const [selectedType, setSelectedType] = useState<OrganizationType | 'all'>('all');
   const [selectedRegion, setSelectedRegion] = useState<Region | 'all'>('all');
   const [sortBy, setSortBy] = useState<SortOption>('combined');

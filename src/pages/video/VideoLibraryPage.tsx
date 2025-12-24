@@ -5,8 +5,11 @@ import { VideoFilters } from '@/components/video/VideoFilters';
 import { videos, videoCategories } from '@/data/videoLibrary';
 import { Video, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function VideoLibraryPage() {
+  // Bill collection: video_library_visit
+  usePageBillCollection({ billId: 'video_library_visit' });
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);

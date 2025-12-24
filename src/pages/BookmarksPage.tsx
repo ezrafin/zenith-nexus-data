@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useTranslation } from '@/hooks/useTranslation';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 interface BookmarkItem {
   id: string;
@@ -25,6 +27,10 @@ export default function BookmarksPage() {
   const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<string>('all');
+  
+  // Bill collection: bookmarks_page_visit
+  const { collectBill } = useCollectibleBills();
+  usePageBillCollection({ billId: 'bookmarks_page_visit' });
 
   useEffect(() => {
     if (user) {

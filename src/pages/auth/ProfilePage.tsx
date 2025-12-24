@@ -14,8 +14,11 @@ import { ReputationBadge } from '@/components/forum/ReputationBadge';
 import { AvatarSelector } from '@/components/user/AvatarSelector';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { supabase } from '@/integrations/supabase/client';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function ProfilePage() {
+  // Bill collection: profile_own_visit
+  usePageBillCollection({ billId: 'profile_own_visit' });
   const { user, profile, loading: authLoading, updateProfile } = useUser();
   const [displayName, setDisplayName] = useState('');
   const [bio, setBio] = useState('');

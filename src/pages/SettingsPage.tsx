@@ -14,8 +14,15 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useI18n } from '@/context/I18nContext';
 import { LANGUAGE_NAMES, type SupportedLanguage } from '@/lib/i18n';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function SettingsPage() {
+  // Bill collection: settings_page_visit
+  const { triggerActionCollection } = usePageBillCollection({ 
+    billId: 'settings_page_visit',
+    triggerOnAction: true,
+    actionName: 'change_language'
+  });
   const { user } = useUser();
   const { preferences, loading, updatePreferences } = useUserPreferences();
   const { t } = useTranslation({ namespace: 'ui' });
@@ -204,6 +211,8 @@ export default function SettingsPage() {
                       setLocalPrefs({ ...localPrefs, language: lang });
                       // Change language immediately without waiting for save
                       await changeLanguage(lang);
+                      // Trigger bill collection for language change
+                      await triggerActionCollection({ language: lang });
                     }}
                   >
                     <SelectTrigger>

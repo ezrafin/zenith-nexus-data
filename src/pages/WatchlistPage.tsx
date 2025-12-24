@@ -13,6 +13,8 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { fetchDiscussionsForWatchlist, ForumTopic } from '@/lib/api/index';
 import { AssetBadge } from '@/components/forum/AssetBadge';
 import { useTranslation } from '@/hooks/useTranslation';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 interface Watchlist {
   id: string;
@@ -46,6 +48,10 @@ export default function WatchlistPage() {
   const [discussions, setDiscussions] = useState<ForumTopic[]>([]);
   const [discussionsLoading, setDiscussionsLoading] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
+  
+  // Bill collection: watchlists_page_visit
+  const { collectBill } = useCollectibleBills();
+  usePageBillCollection({ billId: 'watchlists_page_visit' });
 
   useEffect(() => {
     // Wait for auth to finish loading before deciding what to do

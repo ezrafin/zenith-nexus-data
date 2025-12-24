@@ -16,8 +16,10 @@ import { useForumCategories } from '@/hooks/useForumCategories';
 import { checkRateLimit } from '@/lib/api/rateLimit';
 import { z } from 'zod';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 export default function CreateDiscussionPage() {
+  const { collectBill } = useCollectibleBills();
   const { t } = useTranslation({ namespace: 'forum' });
   const { user, profile } = useUser();
   const navigate = useNavigate();
@@ -123,6 +125,13 @@ export default function CreateDiscussionPage() {
       // Invalidate forum topics queries to refresh the list
       queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
 
+      // Trigger bill collection for creating discussion
+      await collectBill('forum_create_discussion', {
+        page: '/forum/new',
+        action: 'create_discussion',
+        metadata: { discussionId: data.id },
+      });
+      
       toast.success(t('discussionCreatedSuccess'));
       navigate(`/forum/${data.id}`);
     } catch (error: any) {

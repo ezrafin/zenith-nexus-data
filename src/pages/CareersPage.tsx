@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { JobApplicationForm } from '@/components/careers/JobApplicationForm';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 const positions = [
   {
@@ -18,6 +19,9 @@ const positions = [
 export default function CareersPage() {
   const { t } = useTranslation({ namespace: 'ui' });
   const [isFormOpen, setIsFormOpen] = useState(false);
+  
+  // Bill collection: info_page_visit
+  usePageBillCollection({ billId: 'info_page_visit' });
   const [selectedPosition, setSelectedPosition] = useState('');
 
   const openApplicationForm = (position: string) => {

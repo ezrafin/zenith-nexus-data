@@ -10,9 +10,12 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getLocaleForLanguage } from '@/lib/i18n';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 const ITEMS_PER_PAGE = 15;
 export default function NewsPage() {
+  // Bill collection: news_page_visit
+  usePageBillCollection({ billId: 'news_page_visit' });
   const { t, language } = useTranslation({ namespace: 'ui' });
   const [activeFilter, setActiveFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);

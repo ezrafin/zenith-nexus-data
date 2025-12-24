@@ -6,6 +6,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { ThumbsUp, ThumbsDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 interface ReactionButtonProps {
   contentType: 'discussion' | 'reply';
@@ -36,6 +37,7 @@ export function ReactionButton({
   const queryClient = useQueryClient();
   const [isReacted, setIsReacted] = useState(false);
   const [reactionCount, setReactionCount] = useState(count);
+  const { collectBill } = useCollectibleBills();
 
   // Sync count from props when it changes
   useEffect(() => {
@@ -126,7 +128,7 @@ export function ReactionButton({
       }
       toast.error(error instanceof Error ? error.message : 'Failed to update reaction');
     },
-    onSuccess: () => {
+    onSuccess: async (action) => {
       // Invalidate reaction counts cache
       queryClient.invalidateQueries({ queryKey: ['reactionCounts', contentType] });
       
@@ -136,6 +138,15 @@ export function ReactionButton({
         queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
       } else if (contentType === 'reply') {
         queryClient.invalidateQueries({ queryKey: ['forumComments'] });
+      }
+      
+      // Trigger bill collection for reacting (only when adding, not removing)
+      if (action === 'add' && contentType === 'discussion') {
+        await collectBill('forum_react', {
+          page: `/forum/${contentId}`,
+          action: 'react_discussion',
+          metadata: { reactionType },
+        });
       }
     },
   });

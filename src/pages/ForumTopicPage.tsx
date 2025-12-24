@@ -23,6 +23,8 @@ import { Button } from '@/components/ui/button';
 import { useDiscussionActions } from '@/hooks/useDiscussionActions';
 import { AssetBadge } from '@/components/forum/AssetBadge';
 import { checkRateLimit } from '@/lib/api/rateLimit';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 const userLevels = [
   { min: 0, name: 'Newbie', color: 'bg-muted text-muted-foreground' },
@@ -50,6 +52,28 @@ export default function ForumTopicPage() {
     toggleBookmark,
     toggleFollow,
   } = useDiscussionActions(topicId);
+  
+  // Bill collection: forum_topic_visit
+  const { collectBill } = useCollectibleBills();
+  usePageBillCollection({ billId: 'forum_topic_visit' });
+  
+  // Wrapper for bookmark to trigger bill collection
+  const handleBookmark = async () => {
+    await toggleBookmark();
+    await collectBill('forum_bookmark', {
+      page: `/forum/${topicId}`,
+      action: 'bookmark_discussion',
+    });
+  };
+  
+  // Wrapper for follow to trigger bill collection
+  const handleFollow = async () => {
+    await toggleFollow();
+    await collectBill('forum_follow', {
+      page: `/forum/${topicId}`,
+      action: 'follow_discussion',
+    });
+  };
 
   // Load topic with React Query
   const { data: topic, isLoading: topicLoading } = useQuery<ForumTopic | null, Error>({
@@ -117,6 +141,12 @@ export default function ForumTopicPage() {
       queryClient.invalidateQueries({ queryKey: ['forumComments', topicId] });
       queryClient.invalidateQueries({ queryKey: ['forumTopic', topicId] });
       queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
+      
+      // Trigger bill collection for posting reply
+      await collectBill('forum_post_reply', {
+        page: `/forum/${topicId}`,
+        action: 'post_reply',
+      });
       
       toast.success('Reply posted');
     } catch (error: any) {
@@ -192,7 +222,7 @@ export default function ForumTopicPage() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={toggleBookmark}
+                onClick={handleBookmark}
                 disabled={bookmarkLoading}
                 aria-label={isBookmarked ? 'Remove bookmark from discussion' : 'Bookmark this discussion'}
                 className={cn(isBookmarked && 'bg-primary/10')}
@@ -203,7 +233,7 @@ export default function ForumTopicPage() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={toggleFollow}
+                onClick={handleFollow}
                 disabled={followLoading}
                 aria-label={isFollowing ? 'Unfollow discussion' : 'Follow discussion'}
                 className={cn(isFollowing && 'bg-primary/10')}

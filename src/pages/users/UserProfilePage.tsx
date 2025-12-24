@@ -13,8 +13,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 export default function UserProfilePage() {
+  const { userId } = useParams();
+  const { user: currentUser } = useUser();
+  
+  // Bill collection: profile_own_visit or profile_other_visit
+  const isOwnProfile = currentUser?.id === userId;
+  const { collectBill } = useCollectibleBills();
+  usePageBillCollection({ 
+    billId: isOwnProfile ? 'profile_own_visit' : 'profile_other_visit' 
+  });
   const { userId } = useParams();
   const { user: currentUser, profile: currentProfile } = useUser();
   const [profile, setProfile] = useState<UserProfile | null>(null);

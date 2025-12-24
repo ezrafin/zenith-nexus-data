@@ -4,11 +4,19 @@ import { ArrowLeft, Clock, Calendar, User, Award } from 'lucide-react';
 import { getArticleById } from '@/data/educationArticles';
 import { getEducationLearningPath, getEducationBasicArticlesPath, getEducationAdvancedArticlesPath } from '@/lib/educationRoutes';
 import { useTranslation } from '@/hooks/useTranslation';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { LegendaryBillSpawn } from '@/components/collectibles/LegendaryBillSpawn';
 
 export default function ArticleDetailPage() {
   const { t } = useTranslation({ namespace: 'education' });
   const { articleId } = useParams<{ articleId: string }>();
   const article = articleId ? getArticleById(articleId) : undefined;
+  
+  // Bill collection: basic_article_read or advanced_article_read
+  const isAdvanced = article?.type === 'advanced';
+  usePageBillCollection({ 
+    billId: isAdvanced ? 'advanced_article_read' : 'basic_article_read' 
+  });
 
   if (!article) {
     return (
@@ -159,6 +167,12 @@ export default function ArticleDetailPage() {
               </div>
             </div>
           </article>
+          {articleId && (
+            <LegendaryBillSpawn 
+              articleId={articleId} 
+              articleType={isAdvanced ? 'advanced_article' : 'basic_article'} 
+            />
+          )}
         </section>
       </div>
     </Layout>

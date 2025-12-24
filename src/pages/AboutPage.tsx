@@ -1,8 +1,11 @@
 import { Layout } from '@/components/layout/Layout';
 import { Users, Target, Award, Globe } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function AboutPage() {
+  // Bill collection: info_page_visit
+  usePageBillCollection({ billId: 'info_page_visit' });
   const { t } = useTranslation({ namespace: 'ui' });
 
   const values = [

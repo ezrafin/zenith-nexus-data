@@ -2,11 +2,13 @@ import { useEffect, useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useUser } from '@/context/UserContext';
 import { toast } from 'sonner';
+import { useCollectibleBills } from './useCollectibleBills';
 
 export function useUserFollow(targetUserId?: string) {
   const { user } = useUser();
   const [isFollowing, setIsFollowing] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { collectBill } = useCollectibleBills();
 
   useEffect(() => {
     const loadStatus = async () => {
@@ -52,6 +54,12 @@ export function useUserFollow(targetUserId?: string) {
         });
         if (error) throw error;
         toast.success('Following user');
+        
+        // Trigger bill collection for following user
+        await collectBill('user_follow', {
+          action: 'follow_user',
+          metadata: { targetUserId },
+        });
       } else {
         const { error } = await supabase
           .from('user_follows' as any)

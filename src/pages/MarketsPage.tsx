@@ -10,10 +10,18 @@ import { cn } from '@/lib/utils';
 import { AlertCircle, Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useTranslation } from '@/hooks/useTranslation';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 type MarketType = 'indices' | 'stocks' | 'commodities' | 'crypto' | 'currencies';
 
 export default function MarketsPage() {
+  const { type } = useParams<{ type: MarketType }>();
+  const marketType = (type as MarketType) || 'indices';
+  
+  // Bill collection: markets_page_visit or markets_type_visit
+  usePageBillCollection({ 
+    billId: type ? 'markets_type_visit' : 'markets_page_visit' 
+  });
   const { type } = useParams<{ type: MarketType }>();
   const marketType = (type as MarketType) || 'indices';
   const [searchQuery, setSearchQuery] = useState('');

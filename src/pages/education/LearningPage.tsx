@@ -11,6 +11,7 @@ import {
 } from '@/lib/educationRoutes';
 import { basicArticles, advancedArticles, allArticles } from '@/data/educationArticles';
 import { ArticleCard } from '@/components/education/ArticleCard';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 // Category names used across basic and advanced articles
 const categoryNames = [
@@ -32,6 +33,9 @@ export default function LearningPage() {
   const { t } = useTranslation({ namespace: 'education' });
   const [levelFilter, setLevelFilter] = useState<'all' | 'basic' | 'advanced'>('all');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  
+  // Bill collection: learning_page_visit
+  usePageBillCollection({ billId: 'learning_page_visit' });
 
   // Calculate category counts based on current level filter
   const categoriesWithCounts = useMemo(() => {

@@ -5,6 +5,7 @@ import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 interface BookmarkButtonProps {
   contentType: 'article' | 'forum' | 'video' | 'analytics';
@@ -16,6 +17,7 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
   const { user } = useUser();
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { collectBill } = useCollectibleBills();
 
   useEffect(() => {
     if (user) {
@@ -74,6 +76,12 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
 
         setIsBookmarked(true);
         toast.success('Added to bookmarks');
+        
+        // Trigger bill collection for creating bookmark
+        await collectBill('bookmark_create', {
+          action: 'create_bookmark',
+          metadata: { contentType, contentId },
+        });
       }
     } catch (error: any) {
       if (error.code === '23505') {

@@ -12,6 +12,8 @@ import { generateArticleSchema, generateOrganizationSchema } from '@/utils/struc
 import { Calendar, ExternalLink, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { LegendaryBillSpawn } from '@/components/collectibles/LegendaryBillSpawn';
 
 const marketLabels: Record<string, string> = {
   indices: 'Indices',
@@ -28,6 +30,9 @@ export default function NewsDetailPage() {
   const [relatedNews, setRelatedNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const { addToHistory } = useReadingHistory();
+  
+  // Bill collection: news_article_read
+  usePageBillCollection({ billId: 'news_article_read' });
 
   useEffect(() => {
     async function loadNews() {
@@ -195,6 +200,7 @@ export default function NewsDetailPage() {
           )}
         </div>
       </article>
+      {id && <LegendaryBillSpawn articleId={id} articleType="news" />}
     </Layout>
   );
 }

@@ -17,6 +17,8 @@ import { Badge } from '@/components/ui/badge';
 import { CompanyCard } from '@/components/CompanyCard';
 import { fetchCompanies } from '@/lib/api/index';
 import { toast } from 'sonner';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { LegendaryBillSpawn } from '@/components/collectibles/LegendaryBillSpawn';
 
 const typeLabels: Record<string, string> = {
   expert: 'Expert Opinion',
@@ -31,6 +33,9 @@ export default function AnalyticsDetailPage() {
   const [loading, setLoading] = useState(true);
   const [relatedCompanies, setRelatedCompanies] = useState<any[]>([]);
   const { addToHistory } = useReadingHistory();
+  
+  // Bill collection: analytics_article_read
+  usePageBillCollection({ billId: 'analytics_article_read' });
   
   // Fetch related content based on article type/category
   const { relatedItems } = useRelatedContent({
@@ -285,6 +290,7 @@ export default function AnalyticsDetailPage() {
           )}
         </div>
       </article>
+      {slug && <LegendaryBillSpawn articleId={slug} articleType="analytics" />}
     </Layout>
   );
 }

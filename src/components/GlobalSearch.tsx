@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Building2, Newspaper, MessageSquare, X, FileText, Filter, TrendingUp, User } from 'lucide-react';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { organizations } from '@/lib/organizations';
 import { supabase } from '@/integrations/supabase/client';
 import type { MarketData } from '@/lib/api/types';
+import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 
 interface SearchResult {
   type: 'company' | 'news' | 'forum' | 'analytics' | 'ticker' | 'author';
@@ -29,6 +30,8 @@ export function GlobalSearch() {
   const [contentType, setContentType] = useState<'all' | 'company' | 'news' | 'forum' | 'analytics' | 'ticker' | 'author'>('all');
   const [dateFilter, setDateFilter] = useState<'all' | 'today' | 'week' | 'month' | 'year'>('all');
   const navigate = useNavigate();
+  const { collectBill, isCollected } = useCollectibleBills();
+  const hasCollectedSearchBill = useRef(false);
 
   // Keyboard shortcut
   useEffect(() => {
@@ -259,7 +262,16 @@ export function GlobalSearch() {
 
     setResults(allResults);
     setLoading(false);
-  }, [contentType, dateFilter]);
+    
+    // Trigger bill collection for using global search (only once per session)
+    if (searchQuery.trim().length >= 2 && !hasCollectedSearchBill.current && !isCollected('global_search_use')) {
+      hasCollectedSearchBill.current = true;
+      collectBill('global_search_use', {
+        action: 'global_search',
+        metadata: { query: searchQuery },
+      });
+    }
+  }, [contentType, dateFilter, collectBill, isCollected]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {

@@ -9,10 +9,13 @@ import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
 import { authors } from '@/data/authors';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 const ITEMS_PER_PAGE = 15;
 
 export default function AnalyticsPage() {
+  // Bill collection: analytics_page_visit
+  usePageBillCollection({ billId: 'analytics_page_visit' });
   const { t } = useTranslation({ namespace: 'analytics' });
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeAuthor, setActiveAuthor] = useState<string | null>(null);
