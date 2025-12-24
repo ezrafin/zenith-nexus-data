@@ -25,6 +25,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const location = useLocation();
   const { user, profile, signOut } = useUser();
   const navigate = useNavigate();
@@ -263,21 +264,31 @@ export function Header() {
                     {t('buttons.bookmarks')}
                   </DropdownMenuItem>
                   
-                  {/* Language Selector */}
+                  {/* Language Toggle */}
                   <DropdownMenuSeparator />
-                  <DropdownMenuLabel className="text-xs text-muted-foreground">
+                  <DropdownMenuItem 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setLanguageMenuOpen(!languageMenuOpen);
+                    }}
+                    className="cursor-pointer"
+                  >
+                    <Globe className="mr-2 h-4 w-4" />
                     Language
-                  </DropdownMenuLabel>
-                  {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
+                    <span className="ml-auto">{languageMenuOpen ? '▼' : '▶'}</span>
+                  </DropdownMenuItem>
+                  
+                  {languageMenuOpen && Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
                     <DropdownMenuItem
                       key={code}
-                      onClick={async () => {
+                      onClick={async (e) => {
+                        e.preventDefault();
                         await changeLanguage(code as SupportedLanguage);
                         await updatePreferences({ language: code as SupportedLanguage });
+                        setLanguageMenuOpen(false);
                       }}
-                      className={language === code ? 'bg-secondary' : ''}
+                      className={`pl-8 ${language === code ? 'bg-secondary' : ''}`}
                     >
-                      <Globe className="mr-2 h-4 w-4" />
                       {name}
                       {language === code && <span className="ml-auto">✓</span>}
                     </DropdownMenuItem>
@@ -377,16 +388,25 @@ export function Header() {
                       {t('buttons.bookmarks')}
                     </Link>
                     
-                    {/* Language Selector */}
-                    <div className="px-4 py-2">
-                      <div className="text-xs text-muted-foreground mb-2">Language</div>
-                      <div className="space-y-1">
+                    {/* Language Toggle */}
+                    <button
+                      onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+                      className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium border border-border rounded-lg"
+                    >
+                      <Globe className="h-4 w-4" />
+                      Language
+                      <span className="ml-auto">{languageMenuOpen ? '▼' : '▶'}</span>
+                    </button>
+                    
+                    {languageMenuOpen && (
+                      <div className="pl-4 space-y-1">
                         {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
                           <button
                             key={code}
                             onClick={async () => {
                               await changeLanguage(code as SupportedLanguage);
                               await updatePreferences({ language: code as SupportedLanguage });
+                              setLanguageMenuOpen(false);
                               setMobileMenuOpen(false);
                             }}
                             className={`flex items-center gap-2 w-full px-4 py-2 text-sm rounded-lg border transition-colors ${
@@ -395,13 +415,12 @@ export function Header() {
                                 : 'border-border hover:bg-secondary/30'
                             }`}
                           >
-                            <Globe className="h-4 w-4" />
                             {name}
                             {language === code && <span className="ml-auto">✓</span>}
                           </button>
                         ))}
                       </div>
-                    </div>
+                    )}
                     
                     <button
                       onClick={() => {

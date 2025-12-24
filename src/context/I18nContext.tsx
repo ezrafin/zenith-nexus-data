@@ -46,20 +46,22 @@ export function I18nProvider({ children }: I18nProviderProps) {
 
     let initialLanguage: SupportedLanguage = 'en';
 
+    // Если есть сохраненный язык в preferences - используем его
     if (preferences.language && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
       initialLanguage = preferences.language as SupportedLanguage;
     } else {
-      const hasLanguagePreference = localStorage.getItem('userPreferences');
-      if (!hasLanguagePreference) {
-        initialLanguage = detectBrowserLanguage();
-      } else {
-        initialLanguage = detectBrowserLanguage();
+      // Если нет сохраненного языка - определяем по браузеру
+      initialLanguage = detectBrowserLanguage();
+      // Сохраняем определенный язык в preferences (только если пользователь не авторизован или нет сохраненных настроек)
+      const hasStoredPreferences = localStorage.getItem('userPreferences');
+      if (!hasStoredPreferences) {
+        updatePreferences({ language: initialLanguage }).catch(console.error);
       }
     }
 
     setLanguage(initialLanguage);
     loadTranslationsForLanguage(initialLanguage);
-  }, [preferences.language, preferencesLoading, loadTranslationsForLanguage]);
+  }, [preferences.language, preferencesLoading, loadTranslationsForLanguage, updatePreferences]);
 
   const changeLanguage = useCallback(async (lang: SupportedLanguage) => {
     if (lang === language) return;
