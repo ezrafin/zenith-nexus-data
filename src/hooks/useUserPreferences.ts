@@ -2,8 +2,10 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 
+export type Theme = 'dark' | 'glacier' | 'harvest' | 'lavender' | 'brutalist' | 'obsidian' | 'orchid' | 'solar' | 'tide' | 'verdant';
+
 export interface UserPreferences {
-  theme: 'light' | 'dark' | 'desert';
+  theme: Theme;
   default_markets: string[];
   refresh_interval: number;
   email_notifications: boolean;

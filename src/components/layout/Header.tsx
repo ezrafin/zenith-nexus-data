@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, GraduationCap, BookOpen, Award, Rocket, User, LogOut, Settings, Bookmark, Users, Moon, Trophy, Sun, Circle, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign, GraduationCap, BookOpen, Award, Rocket, User, LogOut, Settings, Bookmark, Users, Trophy, Globe } from 'lucide-react';
 import { logger } from '@/lib/logger';
-import { useUserPreferences } from '@/hooks/useUserPreferences';
+import { useUserPreferences, type Theme } from '@/hooks/useUserPreferences';
 import { supabase } from '@/integrations/supabase/client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getMotionVariant, transitions, prefersReducedMotion, STAGGER } from '@/lib/animations';
@@ -13,6 +13,8 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { GlobalSearch } from '@/components/GlobalSearch';
 import { useI18n } from '@/context/I18nContext';
 import { LANGUAGE_NAMES, type SupportedLanguage } from '@/lib/i18n';
+import { themes, ALL_THEME_CLASSES } from '@/components/layout/ThemeSwitcher';
+import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,6 +29,7 @@ export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
   const location = useLocation();
   const { user, profile, signOut } = useUser();
   const navigate = useNavigate();
@@ -145,7 +148,7 @@ export function Header() {
     // Sync theme when preferences change
     const html = document.documentElement;
     const currentTheme = preferences.theme || 'dark';
-    html.classList.remove('light', 'dark', 'desert');
+    ALL_THEME_CLASSES.forEach(cls => html.classList.remove(cls));
     html.classList.add(currentTheme);
   }, [preferences.theme]);
 
@@ -154,27 +157,13 @@ export function Header() {
     return location.pathname.startsWith(href);
   };
 
-  const cycleTheme = async () => {
-    const themes: Array<'light' | 'dark' | 'desert'> = ['light', 'dark', 'desert'];
-    const currentIndex = themes.indexOf(preferences.theme || 'dark');
-    const nextIndex = (currentIndex + 1) % themes.length;
-    const nextTheme = themes[nextIndex];
-    
-    await updatePreferences({ theme: nextTheme });
+  const handleThemeChange = async (theme: Theme) => {
+    await updatePreferences({ theme });
+    setThemeMenuOpen(false);
   };
 
-  const getThemeIcon = () => {
-    const currentTheme = preferences.theme || 'dark';
-    switch (currentTheme) {
-      case 'light':
-        return Sun;
-      case 'dark':
-        return Moon;
-      case 'desert':
-        return Circle;
-      default:
-        return Moon;
-    }
+  const getCurrentThemeData = () => {
+    return themes.find(t => t.value === preferences.theme) || themes[0];
   };
 
   return <header role="banner" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-border/50' : 'bg-transparent'}`}>
@@ -318,13 +307,74 @@ export function Header() {
                   </div>
                   
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={cycleTheme}>
-                    {(() => {
-                      const ThemeIcon = getThemeIcon();
-                      return <ThemeIcon className="mr-2 h-4 w-4" />;
-                    })()}
-                    Theme
-                  </DropdownMenuItem>
+                  {/* Theme Toggle Submenu */}
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setThemeMenuOpen(true)}
+                    onMouseLeave={() => setThemeMenuOpen(false)}
+                  >
+                    <DropdownMenuItem 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setThemeMenuOpen(!themeMenuOpen);
+                      }}
+                      onMouseEnter={(e) => e.preventDefault()}
+                      className="cursor-pointer"
+                    >
+                      {(() => {
+                        const currentThemeData = getCurrentThemeData();
+                        const ThemeIcon = currentThemeData.icon;
+                        return (
+                          <>
+                            <div className={cn('w-3 h-3 rounded-full mr-2', currentThemeData.color)} />
+                            <ThemeIcon className="mr-2 h-4 w-4" />
+                          </>
+                        );
+                      })()}
+                      Theme
+                      <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-200 ${themeMenuOpen ? 'rotate-180' : ''}`} />
+                    </DropdownMenuItem>
+                    
+                    <AnimatePresence>
+                      {themeMenuOpen && (
+                        <motion.div
+                          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 10, scale: 0.95 }}
+                          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+                          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 10, scale: 0.95 }}
+                          transition={transitions.fast}
+                          className="absolute left-full top-0 ml-2 w-52 py-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl z-50 max-h-80 overflow-y-auto"
+                        >
+                          {themes.map((theme) => {
+                            const Icon = theme.icon;
+                            const isActive = preferences.theme === theme.value;
+                            return (
+                              <button
+                                key={theme.value}
+                                onClick={async (e) => {
+                                  e.preventDefault();
+                                  await handleThemeChange(theme.value);
+                                }}
+                                className={`w-full flex items-center gap-3 px-4 py-2.5 hover:bg-secondary/50 transition-colors text-left ${
+                                  isActive ? 'bg-secondary/30' : ''
+                                }`}
+                              >
+                                <div className={cn('w-3 h-3 rounded-full flex-shrink-0', theme.color)} />
+                                <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                  <Icon className="h-3.5 w-3.5 text-primary" />
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-sm font-medium text-foreground">{theme.label}</div>
+                                </div>
+                                {isActive && (
+                                  <span className="text-primary text-sm">✓</span>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                   <DropdownMenuItem onClick={() => navigate('/settings')}>
                     <Settings className="mr-2 h-4 w-4" />
                     {t('buttons.settings')}
@@ -450,19 +500,52 @@ export function Header() {
                       </div>
                     )}
                     
+                    {/* Mobile Theme Toggle */}
                     <button
-                      onClick={() => {
-                        cycleTheme();
-                        setMobileMenuOpen(false);
-                      }}
+                      onClick={() => setThemeMenuOpen(!themeMenuOpen)}
                       className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium border border-border rounded-lg"
                     >
                       {(() => {
-                        const ThemeIcon = getThemeIcon();
-                        return <ThemeIcon className="h-4 w-4" />;
+                        const currentThemeData = getCurrentThemeData();
+                        const ThemeIcon = currentThemeData.icon;
+                        return (
+                          <>
+                            <div className={cn('w-3 h-3 rounded-full', currentThemeData.color)} />
+                            <ThemeIcon className="h-4 w-4" />
+                          </>
+                        );
                       })()}
                       Theme
+                      <span className="ml-auto">{themeMenuOpen ? '▼' : '▶'}</span>
                     </button>
+                    
+                    {themeMenuOpen && (
+                      <div className="pl-4 space-y-1">
+                        {themes.map((theme) => {
+                          const Icon = theme.icon;
+                          const isActive = preferences.theme === theme.value;
+                          return (
+                            <button
+                              key={theme.value}
+                              onClick={async () => {
+                                await handleThemeChange(theme.value);
+                                setMobileMenuOpen(false);
+                              }}
+                              className={`flex items-center gap-2 w-full px-4 py-2 text-sm rounded-lg border transition-colors ${
+                                isActive
+                                  ? 'bg-secondary border-border'
+                                  : 'border-border hover:bg-secondary/30'
+                              }`}
+                            >
+                              <div className={cn('w-3 h-3 rounded-full', theme.color)} />
+                              <Icon className="h-4 w-4" />
+                              {theme.label}
+                              {isActive && <span className="ml-auto">✓</span>}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
                     <Link to="/settings" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 px-4 py-3 text-sm font-medium border border-border rounded-lg">
                       <Settings className="h-4 w-4" />
                       {t('buttons.settings')}
