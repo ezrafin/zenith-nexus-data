@@ -52,14 +52,21 @@ export function CollectiblesControlMenu() {
           <SheetTrigger asChild>
             <motion.button
               className={cn(
-                'relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full border-2 shadow-lg',
+                'relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full border-2 shadow-lg overflow-hidden',
                 'bg-gradient-to-br from-green-50 to-green-100 border-green-400 text-green-900',
                 'dark:from-green-900/30 dark:to-green-800/30 dark:border-green-500 dark:text-green-200',
-                'hover:scale-110 transition-transform cursor-pointer',
-                'focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2'
+                'hover:scale-110 transition-all duration-300 cursor-pointer',
+                'focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2',
+                'active:scale-95'
               )}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ 
+                scale: 1.15,
+                rotate: [0, -5, 5, -5, 0],
+              }}
+              whileTap={{ 
+                scale: 0.9,
+                rotate: 0,
+              }}
               animate={{
                 boxShadow: [
                   '0 0 20px -5px rgba(34, 197, 94, 0.3)',
@@ -73,20 +80,42 @@ export function CollectiblesControlMenu() {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 },
+                rotate: {
+                  duration: 0.5,
+                  ease: 'easeInOut',
+                },
               }}
             >
+              {/* Ripple effect on click */}
+              <motion.div
+                className="absolute inset-0 rounded-full bg-green-400/30"
+                initial={{ scale: 0, opacity: 0.8 }}
+                whileTap={{
+                  scale: 2,
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease: 'easeOut',
+                }}
+              />
+
               {/* Bill Icon */}
-              <div className="text-center font-bold text-lg md:text-xl">
+              <motion.div 
+                className="text-center font-bold text-lg md:text-xl relative z-10"
+                whileTap={{ scale: 0.9 }}
+              >
                 <div className="text-[0.6em]">$</div>
                 <div className="text-[0.8em]">100</div>
-              </div>
+              </motion.div>
 
               {/* Progress Badge */}
               <motion.div
-                className="absolute -top-1 -right-1 flex items-center justify-center min-w-[24px] h-6 px-1.5 rounded-full text-xs font-bold bg-primary text-primary-foreground border-2 border-background"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: 'spring' }}
+                className="absolute -top-1 -right-1 flex items-center justify-center min-w-[24px] h-6 px-1.5 rounded-full text-xs font-bold bg-primary text-primary-foreground border-2 border-background z-20"
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+                whileHover={{ scale: 1.1 }}
               >
                 {collectedCount}/{totalCount}
               </motion.div>
@@ -94,10 +123,10 @@ export function CollectiblesControlMenu() {
               {/* Pulse indicator for new bills */}
               {collectedCount > 0 && (
                 <motion.div
-                  className="absolute inset-0 rounded-full bg-green-400/20"
+                  className="absolute inset-0 rounded-full bg-green-400/20 z-0"
                   animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0, 0.5],
+                    scale: [1, 1.3, 1],
+                    opacity: [0.4, 0, 0.4],
                   }}
                   transition={{
                     duration: 2,
@@ -106,6 +135,20 @@ export function CollectiblesControlMenu() {
                   }}
                 />
               )}
+
+              {/* Shine effect */}
+              <motion.div
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/20 to-transparent -z-0"
+                animate={{
+                  x: ['-100%', '200%'],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatDelay: 2,
+                  ease: 'linear',
+                }}
+              />
             </motion.button>
           </SheetTrigger>
 

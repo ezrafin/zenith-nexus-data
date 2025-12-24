@@ -2,7 +2,6 @@ import { memo } from 'react';
 import { RecommendedContent } from '@/components/recommendations/RecommendedContent';
 import { TrendingContent } from '@/components/recommendations/TrendingContent';
 import { FollowAuthors } from '@/components/recommendations/FollowAuthors';
-import { ContentCollections } from '@/components/recommendations/ContentCollections';
 import { MarketOverview } from '@/components/charts/MarketOverview';
 
 export const PersonalizedContent = memo(function PersonalizedContent() {
@@ -17,7 +16,6 @@ export const PersonalizedContent = memo(function PersonalizedContent() {
           <div className="lg:col-span-2 space-y-8">
             <MarketOverview />
             <FollowAuthors limit={5} />
-            <ContentCollections />
           </div>
         </div>
       </div>

@@ -266,33 +266,57 @@ export function Header() {
                   
                   {/* Language Toggle */}
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setLanguageMenuOpen(!languageMenuOpen);
-                    }}
-                    className="cursor-pointer"
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setLanguageMenuOpen(true)}
+                    onMouseLeave={() => setLanguageMenuOpen(false)}
                   >
-                    <Globe className="mr-2 h-4 w-4" />
-                    Language
-                    <span className="ml-auto">{languageMenuOpen ? '▼' : '▶'}</span>
-                  </DropdownMenuItem>
-                  
-                  {languageMenuOpen && Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
-                    <DropdownMenuItem
-                      key={code}
-                      onClick={async (e) => {
-                        e.preventDefault();
-                        await changeLanguage(code as SupportedLanguage);
-                        await updatePreferences({ language: code as SupportedLanguage });
-                        setLanguageMenuOpen(false);
-                      }}
-                      className={`pl-8 ${language === code ? 'bg-secondary' : ''}`}
+                    <DropdownMenuItem 
+                      onMouseEnter={(e) => e.preventDefault()}
+                      className="cursor-pointer"
                     >
-                      {name}
-                      {language === code && <span className="ml-auto">✓</span>}
+                      <Globe className="mr-2 h-4 w-4" />
+                      Language
+                      <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-200 ${languageMenuOpen ? 'rotate-180' : ''}`} />
                     </DropdownMenuItem>
-                  ))}
+                    
+                    <AnimatePresence>
+                      {languageMenuOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute left-full top-0 ml-2 w-48 py-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl z-50"
+                        >
+                          {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
+                            <button
+                              key={code}
+                              onClick={async (e) => {
+                                e.preventDefault();
+                                await changeLanguage(code as SupportedLanguage);
+                                await updatePreferences({ language: code as SupportedLanguage });
+                                setLanguageMenuOpen(false);
+                              }}
+                              className={`w-full flex items-center gap-3 px-4 py-2.5 hover:bg-secondary/50 transition-colors text-left ${
+                                language === code ? 'bg-secondary/30' : ''
+                              }`}
+                            >
+                              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                <Globe className="h-4 w-4 text-primary" />
+                              </div>
+                              <div className="flex-1">
+                                <div className="text-sm font-medium text-foreground">{name}</div>
+                              </div>
+                              {language === code && (
+                                <span className="text-primary text-sm">✓</span>
+                              )}
+                            </button>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                   
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={cycleTheme}>

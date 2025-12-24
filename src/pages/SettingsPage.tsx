@@ -9,24 +9,17 @@ import { useUserPreferences } from '@/hooks/useUserPreferences';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Save, Bell, Globe, Lock, Eye, EyeOff } from 'lucide-react';
+import { Save, Bell, Lock, Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
-import { useI18n } from '@/context/I18nContext';
-import { LANGUAGE_NAMES, type SupportedLanguage } from '@/lib/i18n';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function SettingsPage() {
   // Bill collection: settings_page_visit
-  const { triggerActionCollection } = usePageBillCollection({ 
-    billId: 'settings_page_visit',
-    triggerOnAction: true,
-    actionName: 'change_language'
-  });
+  usePageBillCollection({ billId: 'settings_page_visit' });
   const { user } = useUser();
   const { preferences, loading, updatePreferences } = useUserPreferences();
   const { t } = useTranslation({ namespace: 'ui' });
-  const { changeLanguage } = useI18n();
   const [saving, setSaving] = useState(false);
   const [localPrefs, setLocalPrefs] = useState(preferences);
   
@@ -190,44 +183,6 @@ export default function SettingsPage() {
                       setLocalPrefs({ ...localPrefs, push_notifications: checked })
                     }
                   />
-                </div>
-              </div>
-            </div>
-
-            {/* Language */}
-            <div className="premium-card p-6">
-              <h2 className="font-heading font-semibold text-lg mb-6 flex items-center gap-2">
-                <Globe className="h-5 w-5" />
-                {t('settings.language')}
-              </h2>
-
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="language">{t('settings.language')}</Label>
-                  <Select
-                    value={localPrefs.language}
-                    onValueChange={async (value) => {
-                      const lang = value as SupportedLanguage;
-                      setLocalPrefs({ ...localPrefs, language: lang });
-                      // Change language immediately without waiting for save
-                      await changeLanguage(lang);
-                      // Trigger bill collection for language change
-                      await triggerActionCollection({ language: lang });
-                    }}
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="en">English</SelectItem>
-                      <SelectItem value="zh">中文</SelectItem>
-                      <SelectItem value="es">Español</SelectItem>
-                      <SelectItem value="ru">Русский</SelectItem>
-                      <SelectItem value="de">Deutsch</SelectItem>
-                      <SelectItem value="fr">Français</SelectItem>
-                      <SelectItem value="pl">Polski</SelectItem>
-                    </SelectContent>
-                  </Select>
                 </div>
               </div>
             </div>

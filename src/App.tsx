@@ -68,8 +68,6 @@ const UserProfilePage = lazy(() => import("./pages/users/UserProfilePage"));
 const CommunityPage = lazy(() => import("./pages/CommunityPage"));
 // Admin
 const ModerationPage = lazy(() => import("./pages/admin/ModerationPage"));
-// Collections
-const CollectionDetailPage = lazy(() => import("./pages/collections/CollectionDetailPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -142,8 +140,6 @@ const App = () => {
                 <Route path="/community" element={<CommunityPage />} />
                 {/* Admin */}
                 <Route path="/admin/moderation" element={<ModerationPage />} />
-                {/* Collections */}
-                <Route path="/collections/:id" element={<CollectionDetailPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

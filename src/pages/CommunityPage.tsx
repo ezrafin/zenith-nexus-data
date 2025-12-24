@@ -4,7 +4,6 @@ import { Leaderboard } from '@/components/community/Leaderboard';
 import { RecommendedContent } from '@/components/recommendations/RecommendedContent';
 import { TrendingContent } from '@/components/recommendations/TrendingContent';
 import { FollowAuthors } from '@/components/recommendations/FollowAuthors';
-import { ContentCollections } from '@/components/recommendations/ContentCollections';
 import { ActivityFeed } from '@/components/social/ActivityFeed';
 import { TrendingUp, Users, Calendar, Award } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -17,7 +16,7 @@ export default function CommunityPage() {
     <Layout>
       <SEOHead
         title="Community Hub — INVESTOPATRONUS"
-        description="Explore top contributors, community activity, and curated content collections for investors."
+        description="Explore top contributors and community activity for investors."
       />
       <div className="section-spacing">
         <div className="container-wide">
@@ -69,9 +68,6 @@ export default function CommunityPage() {
           <div className="grid lg:grid-cols-3 gap-8 mt-8">
             <div>
               <FollowAuthors limit={5} />
-            </div>
-            <div className="lg:col-span-2">
-              <ContentCollections />
             </div>
           </div>
         </div>
