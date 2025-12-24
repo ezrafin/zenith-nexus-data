@@ -250,7 +250,7 @@ serve(async (req) => {
       .insert({
         user_id: user.id,
         bill_id: billId,
-        collection_context: context || {},
+        context: context || {},
       });
 
     if (insertError) {
