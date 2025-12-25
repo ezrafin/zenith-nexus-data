@@ -250,7 +250,7 @@ export function Header() {
                   
                   {/* Language Toggle */}
                   <DropdownMenuSeparator />
-                  <div className="relative">
+                  <div>
                     <button
                       type="button"
                       onClick={(e) => {
@@ -269,38 +269,36 @@ export function Header() {
                     <AnimatePresence>
                       {languageMenuOpen && (
                         <motion.div
-                          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
-                          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
-                          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
-                          transition={transitions.fast}
-                          className="absolute left-full top-0 ml-1 w-48 py-2 bg-popover border border-border rounded-xl shadow-xl z-[100]"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
                         >
-                          {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
-                            <button
-                              key={code}
-                              type="button"
-                              onClick={async (e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                await changeLanguage(code as SupportedLanguage);
-                                await updatePreferences({ language: code as SupportedLanguage });
-                                setLanguageMenuOpen(false);
-                              }}
-                              className={`w-full flex items-center gap-3 px-4 py-2.5 hover:bg-secondary/50 transition-colors text-left ${
-                                language === code ? 'bg-secondary/30' : ''
-                              }`}
-                            >
-                              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                <Globe className="h-4 w-4 text-primary" />
-                              </div>
-                              <div className="flex-1">
-                                <div className="text-sm font-medium text-foreground">{name}</div>
-                              </div>
-                              {language === code && (
-                                <span className="text-primary text-sm">✓</span>
-                              )}
-                            </button>
-                          ))}
+                          <div className="py-1 pl-4 space-y-0.5">
+                            {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
+                              <button
+                                key={code}
+                                type="button"
+                                onClick={async (e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  await changeLanguage(code as SupportedLanguage);
+                                  await updatePreferences({ language: code as SupportedLanguage });
+                                  setLanguageMenuOpen(false);
+                                }}
+                                className={`w-full flex items-center gap-2 px-2 py-1.5 text-sm rounded-sm transition-colors text-left hover:bg-accent hover:text-accent-foreground ${
+                                  language === code ? 'bg-secondary/50' : ''
+                                }`}
+                              >
+                                <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+                                <span className="flex-1">{name}</span>
+                                {language === code && (
+                                  <span className="text-primary text-xs">✓</span>
+                                )}
+                              </button>
+                            ))}
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -308,7 +306,7 @@ export function Header() {
                   
                   <DropdownMenuSeparator />
                   {/* Theme Toggle Submenu */}
-                  <div className="relative">
+                  <div>
                     <button
                       type="button"
                       onClick={(e) => {
@@ -336,41 +334,39 @@ export function Header() {
                     <AnimatePresence>
                       {themeMenuOpen && (
                         <motion.div
-                          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
-                          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
-                          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
-                          transition={transitions.fast}
-                          className="absolute left-full top-0 ml-1 w-52 py-2 bg-popover border border-border rounded-xl shadow-xl z-[100] max-h-80 overflow-y-auto"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
                         >
-                          {themes.map((theme) => {
-                            const Icon = theme.icon;
-                            const isActiveTheme = preferences.theme === theme.value;
-                            return (
-                              <button
-                                key={theme.value}
-                                type="button"
-                                onClick={async (e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  await handleThemeChange(theme.value);
-                                }}
-                                className={`w-full flex items-center gap-3 px-4 py-2.5 hover:bg-secondary/50 transition-colors text-left ${
-                                  isActiveTheme ? 'bg-secondary/30' : ''
-                                }`}
-                              >
-                                <div className={cn('w-3 h-3 rounded-full flex-shrink-0', theme.color)} />
-                                <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                  <Icon className="h-3.5 w-3.5 text-primary" />
-                                </div>
-                                <div className="flex-1">
-                                  <div className="text-sm font-medium text-foreground">{theme.label}</div>
-                                </div>
-                                {isActiveTheme && (
-                                  <span className="text-primary text-sm">✓</span>
-                                )}
-                              </button>
-                            );
-                          })}
+                          <div className="py-1 pl-4 space-y-0.5 max-h-60 overflow-y-auto">
+                            {themes.map((theme) => {
+                              const Icon = theme.icon;
+                              const isActiveTheme = preferences.theme === theme.value;
+                              return (
+                                <button
+                                  key={theme.value}
+                                  type="button"
+                                  onClick={async (e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    await handleThemeChange(theme.value);
+                                  }}
+                                  className={`w-full flex items-center gap-2 px-2 py-1.5 text-sm rounded-sm transition-colors text-left hover:bg-accent hover:text-accent-foreground ${
+                                    isActiveTheme ? 'bg-secondary/50' : ''
+                                  }`}
+                                >
+                                  <div className={cn('w-3 h-3 rounded-full flex-shrink-0', theme.color)} />
+                                  <Icon className="h-3.5 w-3.5 text-muted-foreground" />
+                                  <span className="flex-1">{theme.label}</span>
+                                  {isActiveTheme && (
+                                    <span className="text-primary text-xs">✓</span>
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
