@@ -1,12 +1,11 @@
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
 import {
   Breadcrumb,
-  BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { generateBreadcrumbs, BreadcrumbItem as BreadcrumbItemType } from '@/utils/breadcrumbs';
 import { StructuredData } from '@/components/seo/StructuredData';
@@ -60,50 +59,71 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
   return (
     <>
       {structuredData && <StructuredData data={structuredData} />}
-      <motion.div 
-        className="mb-6 md:mb-8"
-        initial={fadeInVariant.initial}
-        animate={fadeInVariant.animate}
-        transition={{
-          ...transitions.fast,
-          staggerChildren: prefersReducedMotion() ? 0 : STAGGER.fast / 1000,
-        }}
-      >
+      <div className="mb-6 md:mb-8">
         <Breadcrumb>
-          <BreadcrumbList className={className}>
+          <motion.ol
+            className={className ? `flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5 ${className}` : "flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5"}
+            initial={fadeInVariant.initial}
+            animate={fadeInVariant.animate}
+            transition={{
+              ...transitions.fast,
+              staggerChildren: prefersReducedMotion() ? 0 : STAGGER.fast / 1000,
+            }}
+          >
             {breadcrumbItems.map((item, index) => {
               const isLast = index === breadcrumbItems.length - 1;
               const path = item.url.replace('https://investopatronus.com', '');
 
               return (
-                <motion.div 
-                  key={item.url} 
-                  className="flex items-center"
-                  initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
-                  animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
-                  transition={{
-                    ...transitions.fast,
-                    delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
-                  }}
-                >
+                <React.Fragment key={item.url}>
                   {isLast ? (
-                    <BreadcrumbPage>{item.name}</BreadcrumbPage>
+                    <motion.li
+                      initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                      animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                      transition={{
+                        ...transitions.fast,
+                        delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
+                      }}
+                      className="inline-flex items-center"
+                    >
+                      <BreadcrumbPage>{item.name}</BreadcrumbPage>
+                    </motion.li>
                   ) : (
                     <>
-                      <BreadcrumbItem>
+                      <motion.li
+                        initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
+                        animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
+                        transition={{
+                          ...transitions.fast,
+                          delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
+                        }}
+                        className="inline-flex items-center gap-1.5"
+                      >
                         <BreadcrumbLink asChild>
                           <Link to={path} className="transition-colors hover:text-primary">{item.name}</Link>
                         </BreadcrumbLink>
-                      </BreadcrumbItem>
-                      <BreadcrumbSeparator />
+                      </motion.li>
+                      <motion.li
+                        initial={prefersReducedMotion() ? {} : { opacity: 0 }}
+                        animate={prefersReducedMotion() ? {} : { opacity: 1 }}
+                        transition={{
+                          ...transitions.fast,
+                          delay: prefersReducedMotion() ? 0 : ((index + 0.5) * STAGGER.fast) / 1000,
+                        }}
+                        role="presentation"
+                        aria-hidden="true"
+                        className="inline-flex items-center [&>svg]:size-3.5"
+                      >
+                        <ChevronRight />
+                      </motion.li>
                     </>
                   )}
-                </motion.div>
+                </React.Fragment>
               );
             })}
-          </BreadcrumbList>
+          </motion.ol>
         </Breadcrumb>
-      </motion.div>
+      </div>
     </>
   );
 }
