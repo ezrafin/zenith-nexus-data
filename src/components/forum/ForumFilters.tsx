@@ -23,6 +23,7 @@ interface ForumFiltersProps {
   onSearchChange: (query: string) => void;
   onClearFilters: () => void;
   categories?: Array<{ id: string; name: string }>;
+  compact?: boolean;
 }
 
 export function ForumFilters({
@@ -36,6 +37,7 @@ export function ForumFilters({
   onSearchChange,
   onClearFilters,
   categories = [],
+  compact = false,
 }: ForumFiltersProps) {
   const { t } = useTranslation({ namespace: 'forum' });
   const isMobile = useIsMobile();
@@ -106,7 +108,7 @@ export function ForumFilters({
 
         {/* Clear Filters */}
         {hasActiveFilters && (
-          <Button variant="outline" onClick={onClearFilters} className="mb-0 w-full sm:w-auto">
+          <Button variant="outline" onClick={onClearFilters} className="mb-0 w-full sm:w-auto min-h-[44px] touch-manipulation">
             <X className="mr-2 h-4 w-4" />
             {t('clearFilters')}
           </Button>
@@ -141,14 +143,35 @@ export function ForumFilters({
       </div>
 
       {/* Mobile: Filters in Sheet */}
-      {isMobile ? (
+      {isMobile && !compact ? (
         <Sheet open={filtersOpen} onOpenChange={setFiltersOpen}>
           <SheetTrigger asChild>
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full min-h-[44px] touch-manipulation">
               <Filter className="mr-2 h-4 w-4" />
               {t('filters')}
               {hasActiveFilters && (
                 <span className="ml-2 px-2 py-0.5 text-xs bg-primary text-primary-foreground rounded-full">
+                  {[categoryFilter, dateFilter !== 'all' ? dateFilter : null, searchQuery ? 'search' : null].filter(Boolean).length}
+                </span>
+              )}
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="bottom" className="h-[80vh]">
+            <SheetHeader>
+              <SheetTitle>{t('filters')}</SheetTitle>
+            </SheetHeader>
+            <div className="mt-6 space-y-4">
+              {filtersContent}
+            </div>
+          </SheetContent>
+        </Sheet>
+      ) : compact && isMobile ? (
+        <Sheet open={filtersOpen} onOpenChange={setFiltersOpen}>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="lg" className="min-h-[44px] min-w-[44px] touch-manipulation shadow-lg">
+              <Filter className="h-5 w-5" />
+              {hasActiveFilters && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground rounded-full text-xs flex items-center justify-center">
                   {[categoryFilter, dateFilter !== 'all' ? dateFilter : null, searchQuery ? 'search' : null].filter(Boolean).length}
                 </span>
               )}

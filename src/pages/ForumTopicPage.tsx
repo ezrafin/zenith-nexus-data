@@ -27,6 +27,8 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getValidationErrorMessageKey } from '@/lib/validation/contentValidator';
+import { formatRelativeTime } from '@/lib/utils/date';
+import { useIsMobile } from '@/hooks/useResponsive';
 
 const userLevels = [
   { min: 0, name: 'Newbie', color: 'bg-muted text-muted-foreground' },
@@ -46,6 +48,8 @@ export default function ForumTopicPage() {
   const queryClient = useQueryClient();
   const [submittingReply, setSubmittingReply] = useState(false);
   const replyEditorRef = useRef<HTMLDivElement | null>(null);
+  const isMobile = useIsMobile();
+  const { language } = useTranslation({ namespace: 'forum' });
   const {
     isBookmarked,
     isFollowing,
@@ -175,9 +179,9 @@ export default function ForumTopicPage() {
       if (error) throw error;
 
       // Invalidate cache to refresh comments and update reply count
-      queryClient.invalidateQueries({ queryKey: ['forumComments', topicId] });
-      queryClient.invalidateQueries({ queryKey: ['forumTopic', topicId] });
-      queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
+      await queryClient.invalidateQueries({ queryKey: ['forumComments', topicId] });
+      await queryClient.invalidateQueries({ queryKey: ['forumTopic', topicId] });
+      await queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
       
       // Trigger bill collection for posting reply
       await collectBill('forum_post_reply', {
@@ -186,6 +190,16 @@ export default function ForumTopicPage() {
       });
       
       toast.success('Reply posted');
+      
+      // Scroll to reply editor and focus it after a short delay to allow DOM update
+      setTimeout(() => {
+        replyEditorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Focus the textarea if it exists
+        const textarea = replyEditorRef.current?.querySelector('textarea');
+        if (textarea) {
+          setTimeout(() => textarea.focus(), 300);
+        }
+      }, 100);
     } catch (error: any) {
       toast.error(error.message || 'Failed to post reply');
     } finally {
@@ -310,7 +324,7 @@ export default function ForumTopicPage() {
             </Link>
             <span className="flex items-center gap-1.5">
               <Calendar className="h-4 w-4" />
-              {new Date(topic.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
+              {formatRelativeTime(new Date(topic.date), language)}
             </span>
             <span className="flex items-center gap-1.5">
               <MessageCircle className="h-4 w-4" />
@@ -364,35 +378,60 @@ export default function ForumTopicPage() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex flex-col md:flex-row">
-                    {/* Author sidebar */}
-                    <div className="md:w-48 p-4 md:p-6 bg-secondary/30 border-b md:border-b-0 md:border-r border-border/60">
-                      <div className="flex md:flex-col items-center md:items-start gap-4">
-                        <div className="relative">
-                          <img
-                            src={comment.authorAvatar}
-                            alt={comment.author}
-                            className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-muted ring-2 ring-background"
-                          />
-                        </div>
-                        <div className="md:mt-2 text-center md:text-left">
-                          <Link to={`/users/${comment.authorId || 'unknown'}`} className="font-medium block hover:text-primary transition-colors">
-                            {comment.author}
-                          </Link>
-                          {level && (
-                            <span className={cn('inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mt-1', level.color)}>
-                              {level.name === 'Guru' && <Star className="h-3 w-3" />}
-                              {level.name === 'Expert' && <Award className="h-3 w-3" />}
-                              {level.name}
-                            </span>
-                          )}
+                    {/* Author sidebar - hidden on mobile, shown on desktop */}
+                    {!isMobile && (
+                      <div className="md:w-48 p-4 md:p-6 bg-secondary/30 border-b md:border-b-0 md:border-r border-border/60">
+                        <div className="flex md:flex-col items-center md:items-start gap-4">
+                          <div className="relative">
+                            <img
+                              src={comment.authorAvatar}
+                              alt={comment.author}
+                              className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-muted ring-2 ring-background"
+                            />
+                          </div>
+                          <div className="md:mt-2 text-center md:text-left">
+                            <Link to={`/users/${comment.authorId || 'unknown'}`} className="font-medium block hover:text-primary transition-colors">
+                              {comment.author}
+                            </Link>
+                            {level && (
+                              <span className={cn('inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mt-1', level.color)}>
+                                {level.name === 'Guru' && <Star className="h-3 w-3" />}
+                                {level.name === 'Expert' && <Award className="h-3 w-3" />}
+                                {level.name}
+                              </span>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    )}
 
                     {/* Content */}
                     <div className="flex-1 p-4 md:p-6">
+                      {/* Mobile: Author info above content */}
+                      {isMobile && (
+                        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-border/60">
+                          <img
+                            src={comment.authorAvatar}
+                            alt={comment.author}
+                            className="w-10 h-10 rounded-full bg-muted ring-2 ring-background"
+                          />
+                          <div className="flex-1 min-w-0">
+                            <Link to={`/users/${comment.authorId || 'unknown'}`} className="font-medium block hover:text-primary transition-colors truncate">
+                              {comment.author}
+                            </Link>
+                            {level && (
+                              <span className={cn('inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mt-1', level.color)}>
+                                {level.name === 'Guru' && <Star className="h-3 w-3" />}
+                                {level.name === 'Expert' && <Award className="h-3 w-3" />}
+                                {level.name}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
                       <div className="flex items-center justify-between mb-4 text-xs text-muted-foreground">
-                        <span>{new Date(comment.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                        <span>{formatRelativeTime(new Date(comment.date), language)}</span>
                       </div>
                       
                       <MarkdownContent content={comment.content} className="text-foreground leading-relaxed mb-6" />

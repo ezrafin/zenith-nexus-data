@@ -178,7 +178,8 @@ export function ReactionButton({
         disabled={reactionMutation.isPending}
         loading={reactionMutation.isPending}
         className={cn(
-          'flex items-center gap-1.5 text-sm transition-colors relative',
+          'flex items-center gap-1.5 text-sm transition-all duration-200 relative interactive-button touch-target',
+          'hover:scale-105 active:scale-95',
           isReacted ? colorClass : 'text-muted-foreground hover:text-foreground',
           className
         )}

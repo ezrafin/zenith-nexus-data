@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { Bold, Italic, Code, Link as LinkIcon, Send, Strikethrough, Quote, List, ListOrdered, FileCode, Heading2, AlertCircle } from 'lucide-react';
+import { Bold, Italic, Code, Link as LinkIcon, Send, Strikethrough, Quote, List, ListOrdered, FileCode, Heading2, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 import { validateReplyContent, getValidationErrorMessageKey } from '@/lib/validation/contentValidator';
 import { useTranslation } from '@/hooks/useTranslation';
+import { MarkdownContent } from '@/components/content/MarkdownContent';
 
 interface ReplyEditorProps {
   onSubmit: (content: string) => Promise<void>;
@@ -28,6 +29,7 @@ export function ReplyEditor({
   const [content, setContent] = useState(initialValue);
   const [validationErrors, setValidationErrors] = useState<string[]>([]);
   const [isValidating, setIsValidating] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const validationTimeoutRef = useRef<NodeJS.Timeout>();
 
@@ -246,21 +248,46 @@ export function ReplyEditor({
         >
           <Heading2 className="h-4 w-4" />
         </Button>
+        
+        <Separator orientation="vertical" className="h-6 mx-1" />
+        
+        {/* Preview Toggle */}
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={() => setShowPreview(!showPreview)}
+          className="h-8 w-8 p-0"
+          title={showPreview ? "Hide Preview" : "Show Preview"}
+        >
+          {showPreview ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+        </Button>
       </div>
 
-      {/* Textarea */}
+      {/* Textarea / Preview Toggle */}
       <div className="space-y-2">
-        <Textarea
-          ref={textareaRef}
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          placeholder={placeholder}
-          rows={6}
-          className={cn(
-            "resize-none font-mono text-sm",
-            validationErrors.length > 0 && "border-destructive focus-visible:ring-destructive"
-          )}
-        />
+        {showPreview ? (
+          <div className="min-h-[200px] p-4 rounded-lg border border-border bg-card overflow-auto">
+            {content.trim() ? (
+              <MarkdownContent content={content} className="text-foreground leading-relaxed" />
+            ) : (
+              <p className="text-muted-foreground italic">Preview will appear here...</p>
+            )}
+          </div>
+        ) : (
+          <Textarea
+            ref={textareaRef}
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            placeholder={placeholder}
+            rows={6}
+            className={cn(
+              "resize-none font-mono text-sm min-h-[44px]",
+              "focus:ring-2 focus:ring-primary focus:ring-offset-2",
+              validationErrors.length > 0 && "border-destructive focus-visible:ring-destructive"
+            )}
+          />
+        )}
         {validationErrors.length > 0 && (
           <div className="flex items-start gap-2 p-2 rounded-md bg-destructive/10 border border-destructive/20">
             <AlertCircle className="h-4 w-4 text-destructive mt-0.5 flex-shrink-0" />

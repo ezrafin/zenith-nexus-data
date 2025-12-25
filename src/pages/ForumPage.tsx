@@ -11,6 +11,8 @@ import { useUser } from '@/context/UserContext';
 import { useForumCategories } from '@/hooks/useForumCategories';
 import { useForumTopics } from '@/hooks/useForumTopics';
 import { AssetBadge } from '@/components/forum/AssetBadge';
+import { CategoryGrid } from '@/components/forum/CategoryGrid';
+import { TopicCard } from '@/components/forum/TopicCard';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getLocaleForLanguage } from '@/lib/i18n';
@@ -110,31 +112,37 @@ export default function ForumPage() {
       filtered = filtered.filter(topic => new Date(topic.date) >= filterDate);
     }
 
-    // Sort
+    // Sort - pinned topics always first
+    const pinnedTopics = filtered.filter(t => t.is_pinned);
+    const unpinnedTopics = filtered.filter(t => !t.is_pinned);
+
     switch (sortBy) {
       case 'newest':
-        filtered.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        unpinnedTopics.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         break;
       case 'oldest':
-        filtered.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        unpinnedTopics.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
         break;
       case 'most_active':
-        filtered.sort((a, b) => b.replies - a.replies);
+        unpinnedTopics.sort((a, b) => b.replies - a.replies);
         break;
       case 'trending':
         // Combine replies and views for trending score
-        filtered.sort((a, b) => b.replies * 2 + b.views - (a.replies * 2 + a.views));
+        unpinnedTopics.sort((a, b) => b.replies * 2 + b.views - (a.replies * 2 + a.views));
         break;
       case 'most_liked':
-        // Would need like_count from database
-        filtered.sort((a, b) => b.replies - a.replies);
+        unpinnedTopics.sort((a, b) => (b.like_count || 0) - (a.like_count || 0));
         break;
       case 'controversial':
         // Would need reaction data
-        filtered.sort((a, b) => Math.abs(b.replies - a.replies));
+        unpinnedTopics.sort((a, b) => Math.abs(b.replies - a.replies));
         break;
     }
-    return filtered;
+
+    // Sort pinned topics by date (newest first)
+    pinnedTopics.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    return [...pinnedTopics, ...unpinnedTopics];
   }, [topics, sortBy, dateFilter, searchQuery]);
 
   // Visible topics for infinite scroll
@@ -197,7 +205,60 @@ export default function ForumPage() {
       </section>
 
       {/* Categories */}
-      
+      {categories.length > 0 && (
+        <section className="section-spacing-sm border-b border-border">
+          <div className="container-wide">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="heading-sm">{t('categories') || 'Categories'}</h2>
+              {categoryFilter && (
+                <button
+                  onClick={() => handleCategoryChange(undefined)}
+                  className="text-sm text-primary hover:underline touch-target"
+                >
+                  {t('clearFilter') || 'Clear filter'}
+                </button>
+              )}
+            </div>
+            <CategoryGrid
+              categories={categories}
+              selectedCategoryId={categoryFilter}
+              onCategoryClick={handleCategoryChange}
+            />
+          </div>
+        </section>
+      )}
+
+      {/* Trending Topics - Show when no category filter and sort is not trending */}
+      {!categoryFilter && sortBy !== 'trending' && filteredAndSortedTopics.length > 0 && (
+        <section className="section-spacing-sm border-b border-border bg-secondary/20">
+          <div className="container-wide">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="heading-sm">{t('trendingTopics') || 'Trending Discussions'}</h2>
+              <button
+                onClick={() => setSortBy('trending')}
+                className="text-sm text-primary hover:underline touch-target"
+              >
+                View all trending →
+              </button>
+            </div>
+            <div className="rounded-xl border border-border/60 bg-card overflow-hidden">
+              {filteredAndSortedTopics
+                .filter(topic => (topic.replies * 2 + topic.views) > 30 || topic.is_featured)
+                .slice(0, 3)
+                .map((topic, index) => (
+                  <TopicCard
+                    key={topic.id}
+                    topic={topic}
+                    categoryName={categories.find(c => c.id === topic.categoryId)?.name}
+                    index={index}
+                    language={language}
+                    showExcerpt={false}
+                  />
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Filters and Sorting */}
       <section className="section-spacing-sm">
@@ -226,72 +287,54 @@ export default function ForumPage() {
               {Array.from({
             length: 5
           }).map((_, i) => <SkeletonCard key={i} lines={2} />)}
-            </div> : filteredAndSortedTopics.length === 0 ? <div className="premium-card p-12 text-center">
-              <MessageSquare className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="font-semibold text-lg mb-2">{t('noDiscussionsFound')}</h3>
-              <p className="text-muted-foreground mb-6">
-                {searchQuery || categoryFilter || dateFilter !== 'all' ? t('tryAdjustingFilters') : t('beFirstToStart')}
-              </p>
-              {user && <Link to="/forum/new">
-                  <Button>
-                    <Plus className="mr-2 h-4 w-4" />
-                    {t('startDiscussion')}
-                  </Button>
-                </Link>}
-            </div> : <>
+            </div> : filteredAndSortedTopics.length === 0 ? (
+              <div className="premium-card p-12 md:p-16 text-center">
+                <div className="max-w-md mx-auto">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                    <MessageSquare className="h-10 w-10 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-xl mb-3">{t('noDiscussionsFound')}</h3>
+                  <p className="text-muted-foreground mb-8 leading-relaxed">
+                    {searchQuery || categoryFilter || dateFilter !== 'all' 
+                      ? t('tryAdjustingFilters') || 'Try adjusting your filters to see more discussions.'
+                      : t('beFirstToStart') || 'Be the first to start a discussion in this category!'}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    {(searchQuery || categoryFilter || dateFilter !== 'all') && (
+                      <Button variant="outline" onClick={handleClearFilters}>
+                        Clear Filters
+                      </Button>
+                    )}
+                    {user && (
+                      <Link to="/forum/new">
+                        <Button>
+                          <Plus className="mr-2 h-4 w-4" />
+                          {t('startDiscussion') || 'Start Discussion'}
+                        </Button>
+                      </Link>
+                    )}
+                    {!user && (
+                      <Link to="/auth/login">
+                        <Button variant="outline">
+                          Sign in to start a discussion
+                        </Button>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : <>
               <div className="rounded-xl border border-border/60 bg-card overflow-hidden">
-                {visibleTopics.map((topic, index) => <Link key={topic.id} to={`/forum/${topic.id}`} className={cn('flex items-center gap-4 p-4 md:p-6 hover:bg-secondary/50 transition-colors', index !== visibleTopics.length - 1 && 'border-b border-border/60')}>
-                    {/* Author avatar */}
-                    <div className="flex-shrink-0">
-                      <img src={topic.authorAvatar} alt={topic.author} className="w-12 h-12 rounded-full bg-muted ring-2 ring-background" loading="lazy" />
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-medium text-base md:text-lg truncate hover:text-primary transition-colors">
-                        {topic.title}
-                      </h3>
-                      <div className="flex flex-wrap items-center gap-2 md:gap-3 text-xs text-muted-foreground mt-1.5">
-                        <span className="font-medium text-foreground/80">{topic.author}</span>
-                        <span className="hidden sm:inline">•</span>
-                        <span className="hidden sm:inline">
-                          {t('lastActivity')} ·{' '}
-                          {new Date(topic.lastActivity).toLocaleString(getLocaleForLanguage(language), {
-                      month: 'short',
-                      day: '2-digit',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}
-                        </span>
-                        <span className="badge-secondary text-[10px] px-2 py-0.5">
-                          {categories.find(c => c.id === topic.categoryId)?.name || topic.categoryId}
-                        </span>
-                        {topic.symbol && <AssetBadge symbol={topic.symbol} assetType={topic.asset_type} />}
-                      </div>
-                      {/* Mobile replies hint */}
-                      <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-1 sm:hidden">
-                        <MessageCircle className="h-3.5 w-3.5" />
-                        <span className="tabular-nums">{topic.replies}</span>
-                        <span>{t('replies').toLowerCase()}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground flex-shrink-0">
-                      <div className="flex items-center gap-1.5 min-w-[60px]">
-                        <MessageCircle className="h-4 w-4" />
-                        <span className="tabular-nums">{topic.replies}</span>
-                      </div>
-                      <div className="flex items-center gap-1.5 min-w-[140px] text-xs">
-                        <Clock className="h-3.5 w-3.5" />
-                        {new Date(topic.lastActivity).toLocaleString(getLocaleForLanguage(language), {
-                    year: 'numeric',
-                    month: '2-digit',
-                    day: '2-digit',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                  })}
-                      </div>
-                    </div>
-                  </Link>)}
+                {visibleTopics.map((topic, index) => (
+                  <TopicCard
+                    key={topic.id}
+                    topic={topic}
+                    categoryName={categories.find(c => c.id === topic.categoryId)?.name}
+                    index={index}
+                    language={language}
+                    showExcerpt={true}
+                  />
+                ))}
               </div>
               
               {/* Load more trigger */}

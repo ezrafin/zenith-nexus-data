@@ -697,6 +697,29 @@
     @apply premium-card hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-0.5;
   }
 
+  /* Forum specific styles */
+  .forum-topic-card {
+    @apply transition-all duration-200 hover:shadow-md hover:shadow-primary/5;
+  }
+
+  .forum-topic-card:hover {
+    @apply -translate-y-0.5;
+  }
+
+  /* Touch targets - minimum 44x44px for mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] touch-manipulation;
+  }
+
+  /* Micro-interactions */
+  .interactive-button {
+    @apply transition-all duration-200 active:scale-95;
+  }
+
+  .interactive-button:active {
+    transform: scale(0.95);
+  }
+
   /* Glow effects */
   .glow {
     box-shadow: 0 0 40px -10px hsl(var(--glow) / 0.3);

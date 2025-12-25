@@ -125,6 +125,8 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
         authorReputation: authorReputation ?? undefined,
         symbol: topicWithExtras.symbol ?? undefined,
         asset_type: (topicWithExtras.asset_type as ForumTopic['asset_type']) ?? undefined,
+        is_pinned: topic.is_pinned ?? false,
+        is_featured: topic.is_featured ?? false,
       };
     });
   } catch (error) {

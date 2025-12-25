@@ -78,6 +78,8 @@ export interface ForumTopic {
   authorReputation?: number;
   symbol?: string;
   asset_type?: 'stock' | 'crypto' | 'index' | 'commodity' | 'currency' | 'etf';
+  is_pinned?: boolean;
+  is_featured?: boolean;
 }
 
 export interface ForumComment {
