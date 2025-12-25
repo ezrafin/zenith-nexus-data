@@ -120,9 +120,10 @@ export function Footer() {
                 transition={transitions.normal}
               >
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.content')}</h3>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   {footerLinks.content.map((link, index) => <motion.li 
                     key={link.href}
+                    className="h-6 flex items-center justify-center"
                     initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
                     whileInView={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -141,11 +142,11 @@ export function Footer() {
               {/* Markets */}
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.markets')}</h3>
-                <ul className="space-y-2.5">
-                  {footerLinks.markets.map(link => <li key={link.href}>
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center">
-                        <link.icon className="h-3.5 w-3.5" />
-                        {link.name}
+                <ul className="space-y-3">
+                  {footerLinks.markets.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2">
+                        <link.icon className="h-3.5 w-3.5 flex-shrink-0" />
+                        <span>{link.name}</span>
                       </Link>
                     </li>)}
                 </ul>
@@ -154,11 +155,11 @@ export function Footer() {
               {/* Education */}
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.education')}</h3>
-                <ul className="space-y-2.5">
-                  {footerLinks.education.map(link => <li key={link.href}>
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center">
-                        <link.icon className="h-3.5 w-3.5" />
-                        {link.name}
+                <ul className="space-y-3">
+                  {footerLinks.education.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2">
+                        <link.icon className="h-3.5 w-3.5 flex-shrink-0" />
+                        <span>{link.name}</span>
                       </Link>
                     </li>)}
                 </ul>
@@ -167,8 +168,8 @@ export function Footer() {
               {/* Community */}
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.community')}</h3>
-                <ul className="space-y-2.5">
-                  {footerLinks.community.map(link => <li key={link.href}>
+                <ul className="space-y-3">
+                  {footerLinks.community.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
                       <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                         {link.name}
                       </Link>
@@ -179,8 +180,8 @@ export function Footer() {
               {/* Legal */}
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.legal')}</h3>
-                <ul className="space-y-2.5">
-                  {footerLinks.legal.map(link => <li key={link.href}>
+                <ul className="space-y-3">
+                  {footerLinks.legal.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
                       <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                         {link.name}
                       </Link>

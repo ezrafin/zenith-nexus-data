@@ -208,7 +208,7 @@ export function Header() {
                           </Link>)}
                       </motion.div>}
                   </AnimatePresence>
-                </div> : <Link key={item.name} to={item.href} className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
+                </div> : <Link key={item.name} to={item.href} className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
                   {item.name}
                 </Link>)}
           </nav>
@@ -250,25 +250,21 @@ export function Header() {
                   
                   {/* Language Toggle */}
                   <DropdownMenuSeparator />
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setLanguageMenuOpen(true)}
-                    onMouseLeave={() => setLanguageMenuOpen(false)}
-                  >
-                    <DropdownMenuItem 
-                      onSelect={(e) => {
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={(e) => {
                         e.preventDefault();
-                      }}
-                      onPointerDown={(e) => {
-                        e.preventDefault();
+                        e.stopPropagation();
                         setLanguageMenuOpen(!languageMenuOpen);
+                        setThemeMenuOpen(false);
                       }}
-                      className="cursor-pointer"
+                      className="relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none w-full hover:bg-accent hover:text-accent-foreground"
                     >
                       <Globe className="mr-2 h-4 w-4" />
                       Language
                       <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-200 ${languageMenuOpen ? 'rotate-180' : ''}`} />
-                    </DropdownMenuItem>
+                    </button>
                     
                     <AnimatePresence>
                       {languageMenuOpen && (
@@ -277,14 +273,12 @@ export function Header() {
                           animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
                           exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
                           transition={transitions.fast}
-                          onMouseEnter={() => setLanguageMenuOpen(true)}
-                          onMouseLeave={() => setLanguageMenuOpen(false)}
-                          className="absolute left-full top-0 ml-1 w-48 py-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl z-[100]"
-                          style={{ pointerEvents: 'auto' }}
+                          className="absolute left-full top-0 ml-1 w-48 py-2 bg-popover border border-border rounded-xl shadow-xl z-[100]"
                         >
                           {Object.entries(LANGUAGE_NAMES).map(([code, name]) => (
                             <button
                               key={code}
+                              type="button"
                               onClick={async (e) => {
                                 e.preventDefault();
                                 e.stopPropagation();
@@ -314,20 +308,16 @@ export function Header() {
                   
                   <DropdownMenuSeparator />
                   {/* Theme Toggle Submenu */}
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setThemeMenuOpen(true)}
-                    onMouseLeave={() => setThemeMenuOpen(false)}
-                  >
-                    <DropdownMenuItem 
-                      onSelect={(e) => {
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={(e) => {
                         e.preventDefault();
-                      }}
-                      onPointerDown={(e) => {
-                        e.preventDefault();
+                        e.stopPropagation();
                         setThemeMenuOpen(!themeMenuOpen);
+                        setLanguageMenuOpen(false);
                       }}
-                      className="cursor-pointer"
+                      className="relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none w-full hover:bg-accent hover:text-accent-foreground"
                     >
                       {(() => {
                         const currentThemeData = getCurrentThemeData();
@@ -341,7 +331,7 @@ export function Header() {
                       })()}
                       Theme
                       <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-200 ${themeMenuOpen ? 'rotate-180' : ''}`} />
-                    </DropdownMenuItem>
+                    </button>
                     
                     <AnimatePresence>
                       {themeMenuOpen && (
@@ -350,24 +340,22 @@ export function Header() {
                           animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
                           exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
                           transition={transitions.fast}
-                          onMouseEnter={() => setThemeMenuOpen(true)}
-                          onMouseLeave={() => setThemeMenuOpen(false)}
-                          className="absolute left-full top-0 ml-1 w-52 py-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl z-[100] max-h-80 overflow-y-auto"
-                          style={{ pointerEvents: 'auto' }}
+                          className="absolute left-full top-0 ml-1 w-52 py-2 bg-popover border border-border rounded-xl shadow-xl z-[100] max-h-80 overflow-y-auto"
                         >
                           {themes.map((theme) => {
                             const Icon = theme.icon;
-                            const isActive = preferences.theme === theme.value;
+                            const isActiveTheme = preferences.theme === theme.value;
                             return (
                               <button
                                 key={theme.value}
+                                type="button"
                                 onClick={async (e) => {
                                   e.preventDefault();
                                   e.stopPropagation();
                                   await handleThemeChange(theme.value);
                                 }}
                                 className={`w-full flex items-center gap-3 px-4 py-2.5 hover:bg-secondary/50 transition-colors text-left ${
-                                  isActive ? 'bg-secondary/30' : ''
+                                  isActiveTheme ? 'bg-secondary/30' : ''
                                 }`}
                               >
                                 <div className={cn('w-3 h-3 rounded-full flex-shrink-0', theme.color)} />
@@ -377,7 +365,7 @@ export function Header() {
                                 <div className="flex-1">
                                   <div className="text-sm font-medium text-foreground">{theme.label}</div>
                                 </div>
-                                {isActive && (
+                                {isActiveTheme && (
                                   <span className="text-primary text-sm">✓</span>
                                 )}
                               </button>
