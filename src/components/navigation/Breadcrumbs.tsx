@@ -59,10 +59,16 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
   return (
     <>
       {structuredData && <StructuredData data={structuredData} />}
-      <div className="mb-6 md:mb-8">
+      <nav 
+        className="w-full mb-6 md:mb-8"
+        aria-label="breadcrumb"
+      >
         <Breadcrumb>
           <motion.ol
-            className={className ? `flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5 ${className}` : "flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5"}
+            className={className 
+              ? `flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground sm:gap-x-2.5 sm:gap-y-1.5 ${className}` 
+              : "flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground sm:gap-x-2.5 sm:gap-y-1.5"
+            }
             initial={fadeInVariant.initial}
             animate={fadeInVariant.animate}
             transition={{
@@ -84,9 +90,9 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
                         ...transitions.fast,
                         delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
                       }}
-                      className="inline-flex items-center"
+                      className="inline-flex items-center max-w-full"
                     >
-                      <BreadcrumbPage>{item.name}</BreadcrumbPage>
+                      <BreadcrumbPage className="truncate">{item.name}</BreadcrumbPage>
                     </motion.li>
                   ) : (
                     <>
@@ -97,10 +103,15 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
                           ...transitions.fast,
                           delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
                         }}
-                        className="inline-flex items-center gap-1.5"
+                        className="inline-flex items-center gap-1.5 flex-shrink-0"
                       >
                         <BreadcrumbLink asChild>
-                          <Link to={path} className="transition-colors hover:text-primary">{item.name}</Link>
+                          <Link 
+                            to={path} 
+                            className="transition-colors hover:text-primary whitespace-nowrap"
+                          >
+                            {item.name}
+                          </Link>
                         </BreadcrumbLink>
                       </motion.li>
                       <motion.li
@@ -112,7 +123,7 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
                         }}
                         role="presentation"
                         aria-hidden="true"
-                        className="inline-flex items-center [&>svg]:size-3.5"
+                        className="inline-flex items-center flex-shrink-0 [&>svg]:size-3 sm:[&>svg]:size-4"
                       >
                         <ChevronRight />
                       </motion.li>
@@ -123,7 +134,7 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
             })}
           </motion.ol>
         </Breadcrumb>
-      </div>
+      </nav>
     </>
   );
 }
