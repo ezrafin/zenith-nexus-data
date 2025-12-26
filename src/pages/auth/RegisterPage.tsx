@@ -257,6 +257,7 @@ export default function RegisterPage() {
                   type="email"
                   placeholder={t('auth.emailPlaceholderExample')}
                   value={email}
+                  autoComplete="email"
                   onChange={(e) => {
                     setEmail(e.target.value);
                     setError(null);
@@ -280,6 +281,7 @@ export default function RegisterPage() {
                     type={showPassword ? 'text' : 'password'}
                     placeholder="••••••••"
                     value={password}
+                    autoComplete="new-password"
                     onChange={(e) => {
                       setPassword(e.target.value);
                       setError(null);

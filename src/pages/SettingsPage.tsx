@@ -204,6 +204,7 @@ export default function SettingsPage() {
                       value={currentPassword}
                       onChange={(e) => setCurrentPassword(e.target.value)}
                       placeholder={t('settings.currentPassword')}
+                      autoComplete="current-password"
                       required
                     />
                     <button
@@ -225,6 +226,7 @@ export default function SettingsPage() {
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
                       placeholder={t('settings.newPassword')}
+                      autoComplete="new-password"
                       minLength={8}
                       required
                     />
@@ -250,6 +252,7 @@ export default function SettingsPage() {
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       placeholder={t('settings.confirmPassword')}
+                      autoComplete="new-password"
                       minLength={8}
                       required
                     />

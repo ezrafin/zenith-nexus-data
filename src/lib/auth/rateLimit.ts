@@ -1,4 +1,3 @@
-import { supabase } from '@/integrations/supabase/client';
 import { logger } from '@/lib/logger';
 
 export type AuthRateLimitAction = 'login' | 'signup' | 'password_reset' | 'email_verification';
@@ -24,38 +23,16 @@ export async function checkAuthRateLimit(
       return clientCheck;
     }
 
-    // Server-side rate limiting (more secure)
-    try {
-      const { data, error } = await supabase.functions.invoke('check-auth-rate-limit', {
-        body: { action, identifier },
-      });
-
-      if (error) {
-        logger.warn('Rate limit check failed, allowing action:', error);
-        // Fail open - allow action if check fails
-        return { allowed: true };
-      }
-
-      if (data && !data.allowed) {
-        // Update client-side cache
-        recordClientRateLimit(action, identifier);
-        return {
-          allowed: false,
-          message: data.message || 'Too many attempts. Please try again later.',
-          retryAfter: data.retryAfter,
-        };
-      }
-
-      // Record successful check on client
-      recordClientRateLimit(action, identifier);
-      return { allowed: true };
-    } catch (error) {
-      logger.error('Rate limit check error:', error);
-      // Fail open - allow action if check fails
-      return { allowed: true };
-    }
+    // Server-side rate limiting is disabled until Edge Function is deployed
+    // For now, we rely on client-side rate limiting only
+    // TODO: Re-enable server-side check when check-auth-rate-limit Edge Function is available
+    
+    // Record successful check on client
+    recordClientRateLimit(action, identifier);
+    return { allowed: true };
   } catch (error) {
     logger.error('Auth rate limit check failed:', error);
+    // Fail open - allow action if check fails
     return { allowed: true };
   }
 }

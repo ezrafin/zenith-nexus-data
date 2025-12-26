@@ -75,7 +75,7 @@ export function useCollectibleBills() {
         .from('user_legendary_spawns')
         .select('*')
         .eq('user_id', user.id)
-        .single();
+        .maybeSingle();
 
       if (!spawnError && spawnData) {
         let articleUrl = '';
