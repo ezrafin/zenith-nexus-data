@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 import { useUser } from '@/context/UserContext';
 import { X, Trophy, Sparkles } from 'lucide-react';
@@ -114,6 +114,12 @@ export function CollectiblesControlMenu() {
             side="right"
             className="w-full sm:w-[400px] md:w-[500px] overflow-y-auto"
           >
+            {/* Добавляем SheetTitle и SheetDescription для доступности */}
+            <SheetTitle className="sr-only">Bill Collection</SheetTitle>
+            <SheetDescription className="sr-only">
+              Collect all 42 $100 bills by exploring the platform. Track your progress and view collected bills.
+            </SheetDescription>
+
             <div className="flex flex-col h-full">
               {/* Header */}
               <div className="flex items-center justify-between mb-6 pb-4 border-b">
