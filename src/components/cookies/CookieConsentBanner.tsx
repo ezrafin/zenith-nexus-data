@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Switch } from '@/components/ui/switch';
 import { X, Cookie, Settings } from 'lucide-react';
 import { getCookieConsent, setCookieConsent } from '@/lib/cookies';
 import {
@@ -161,15 +162,10 @@ export function CookieConsentBanner() {
                     {t('cookieBanner.analyticsDescription')}
                   </p>
                 </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={consent.analytics}
-                    onChange={(e) => setConsent({ ...consent, analytics: e.target.checked })}
-                    className="sr-only peer"
-                  />
-                  <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-                </label>
+                <Switch
+                  checked={consent.analytics}
+                  onCheckedChange={(checked) => setConsent({ ...consent, analytics: checked })}
+                />
               </div>
               <div className="text-sm text-muted-foreground pl-4 border-l-2 border-muted">
                 <p className="mb-2">
@@ -194,15 +190,10 @@ export function CookieConsentBanner() {
                     {t('cookieBanner.preferencesDescription')}
                   </p>
                 </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={consent.preferences}
-                    onChange={(e) => setConsent({ ...consent, preferences: e.target.checked })}
-                    className="sr-only peer"
-                  />
-                  <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-                </label>
+                <Switch
+                  checked={consent.preferences}
+                  onCheckedChange={(checked) => setConsent({ ...consent, preferences: checked })}
+                />
               </div>
               <div className="text-sm text-muted-foreground pl-4 border-l-2 border-muted">
                 <p className="mb-2">
