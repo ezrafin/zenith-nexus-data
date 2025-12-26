@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Building2, Newspaper, MessageSquare, X, FileText, Filter, TrendingUp, User } from 'lucide-react';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -364,10 +364,16 @@ export function GlobalSearch() {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent 
-          className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[80vh] flex flex-col relative [&>button]:hidden"
+          className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[80vh] flex flex-col relative [&>button]:hidden !top-[50%] !left-[50%] !-translate-x-1/2 !-translate-y-1/2"
           aria-label="Global search dialog"
           aria-describedby="search-description"
         >
+          {/* Добавляем DialogTitle и DialogDescription для доступности */}
+          <DialogTitle className="sr-only">Global Search</DialogTitle>
+          <DialogDescription className="sr-only" id="search-description">
+            Search across companies, news articles, forum discussions, market tickers, and authors. Use filters to narrow results.
+          </DialogDescription>
+
           {/* Кастомная кнопка закрытия с правильным позиционированием */}
           <button
             onClick={() => setOpen(false)}
@@ -392,9 +398,6 @@ export function GlobalSearch() {
                 aria-describedby="search-description"
                 autoFocus
               />
-              <span id="search-description" className="sr-only">
-                Search across companies, news articles, forum discussions, market tickers, and authors. Use filters to narrow results.
-              </span>
               {query && (
                 <button 
                   onClick={() => setQuery('')} 
