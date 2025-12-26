@@ -38,4 +38,12 @@ export function getEducationArticlePath(articleId: string) {
   return `${EDUCATION_BASE_PATH}/article/${articleId}`;
 }
 
+// Course paths (using /course instead of /education/course)
+export function getCourseListingPath() {
+  return '/course';
+}
+
+export function getCoursePath(courseId: string) {
+  return `/course/${courseId}`;
+}
 

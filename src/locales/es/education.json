@@ -82,6 +82,38 @@
     "continueLearningDescription": "Explora más artículos para ampliar tu conocimiento financiero.",
     "continueLearningBasic": "Artículos básicos",
     "continueLearningAdvanced": "Artículos avanzados"
+  },
+  "courses": {
+    "badge": "Cursos",
+    "title": "Cursos de Educación Financiera",
+    "subtitle": "Cursos completos que cubren todo desde fundamentos de inversión hasta estrategias avanzadas de trading. Aprende a tu ritmo con módulos estructurados y lecciones prácticas.",
+    "infoTitle": "Cómo funcionan nuestros cursos",
+    "infoDescription": "Cada curso está dividido en módulos con múltiples lecciones. Completa lecciones a tu ritmo, realiza cuestionarios para probar tu conocimiento y aprueba el examen final para demostrar dominio. Rastrea tu progreso y regresa en cualquier momento para revisar materiales.",
+    "startCourse": "Comenzar curso",
+    "modules": "{{count}} módulos",
+    "lessons": "{{count}} lecciones",
+    "hours": "{{count}}+ horas",
+    "progress": "Progreso",
+    "moduleTest": "Prueba del módulo",
+    "finalExam": "Examen final",
+    "completed": "Completado",
+    "markAsCompleted": "Marcar como completado",
+    "lessonVideo": "Video de la lección",
+    "lessonNotes": "Notas de la lección",
+    "keyPoints": "Puntos clave para recordar",
+    "takeQuiz": "Hacer mini-cuestionario",
+    "backToLesson": "Volver a la lección",
+    "miniQuiz": "Mini-cuestionario",
+    "backToCourses": "Volver a los cursos",
+    "examResults": "Resultados del examen",
+    "passRate": "Tasa de aprobación",
+    "questions": "{{count}} preguntas",
+    "backToCourse": "Volver al curso",
+    "congratulations": "¡Felicitaciones! ¡Aprobaste!",
+    "needToPass": "Necesitas {{rate}}% para aprobar. ¡Inténtalo de nuevo!",
+    "lessThanHour": "Menos de 1 hora",
+    "outOf": "de",
+    "correct": "correctas"
   }
 }
 

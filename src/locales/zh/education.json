@@ -82,6 +82,38 @@
     "continueLearningDescription": "探索更多文章，拓展你的投资知识。",
     "continueLearningBasic": "基础文章",
     "continueLearningAdvanced": "高级文章"
+  },
+  "courses": {
+    "badge": "课程",
+    "title": "金融教育课程",
+    "subtitle": "全面的课程，涵盖从投资基础到高级交易策略的所有内容。按照自己的节奏学习，使用结构化模块和实践课程。",
+    "infoTitle": "我们的课程如何运作",
+    "infoDescription": "每个课程分为多个模块，每个模块包含多节课程。按照自己的节奏完成课程，参加测验以测试你的知识，并通过期末考试来展示你的掌握程度。跟踪你的进度，随时返回复习材料。",
+    "startCourse": "开始课程",
+    "modules": "{{count}} 个模块",
+    "lessons": "{{count}} 节课",
+    "hours": "{{count}}+ 小时",
+    "progress": "进度",
+    "moduleTest": "模块测试",
+    "finalExam": "期末考试",
+    "completed": "已完成",
+    "markAsCompleted": "标记为已完成",
+    "lessonVideo": "课程视频",
+    "lessonNotes": "课程笔记",
+    "keyPoints": "需要记住的要点",
+    "takeQuiz": "参加小测验",
+    "backToLesson": "返回课程",
+    "miniQuiz": "小测验",
+    "backToCourses": "返回课程列表",
+    "examResults": "考试结果",
+    "passRate": "及格率",
+    "questions": "{{count}} 个问题",
+    "backToCourse": "返回课程",
+    "congratulations": "恭喜！你通过了！",
+    "needToPass": "你需要 {{rate}}% 才能通过。再试一次！",
+    "lessThanHour": "少于 1 小时",
+    "outOf": "共",
+    "correct": "正确"
   }
 }
 

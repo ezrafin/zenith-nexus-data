@@ -82,6 +82,38 @@
     "continueLearningDescription": "Odkrywaj kolejne artykuły, aby rozwijać wiedzę inwestycyjną.",
     "continueLearningBasic": "Artykuły podstawowe",
     "continueLearningAdvanced": "Artykuły zaawansowane"
+  },
+  "courses": {
+    "badge": "Kursy",
+    "title": "Kursy Edukacji Finansowej",
+    "subtitle": "Kompleksowe kursy obejmujące wszystko od podstaw inwestowania po zaawansowane strategie tradingowe. Ucz się we własnym tempie z ustrukturyzowanymi modułami i praktycznymi lekcjami.",
+    "infoTitle": "Jak działają nasze kursy",
+    "infoDescription": "Każdy kurs jest podzielony na moduły z wieloma lekcjami. Ukończ lekcje we własnym tempie, rozwiąż quizy, aby sprawdzić wiedzę, i zdaj egzamin końcowy, aby wykazać się opanowaniem. Śledź postępy i wracaj w dowolnym momencie, aby przejrzeć materiały.",
+    "startCourse": "Rozpocznij kurs",
+    "modules": "{{count}} modułów",
+    "lessons": "{{count}} lekcji",
+    "hours": "{{count}}+ godzin",
+    "progress": "Postęp",
+    "moduleTest": "Test modułu",
+    "finalExam": "Egzamin końcowy",
+    "completed": "Ukończono",
+    "markAsCompleted": "Oznacz jako ukończone",
+    "lessonVideo": "Wideo lekcji",
+    "lessonNotes": "Notatki z lekcji",
+    "keyPoints": "Kluczowe punkty do zapamiętania",
+    "takeQuiz": "Rozwiąż mini-quiz",
+    "backToLesson": "Powrót do lekcji",
+    "miniQuiz": "Mini-quiz",
+    "backToCourses": "Powrót do kursów",
+    "examResults": "Wyniki egzaminu",
+    "passRate": "Próg zaliczenia",
+    "questions": "{{count}} pytań",
+    "backToCourse": "Powrót do kursu",
+    "congratulations": "Gratulacje! Zdałeś!",
+    "needToPass": "Potrzebujesz {{rate}}% do zaliczenia. Spróbuj ponownie!",
+    "lessThanHour": "Mniej niż 1 godzina",
+    "outOf": "z",
+    "correct": "poprawnych"
   }
 }
 

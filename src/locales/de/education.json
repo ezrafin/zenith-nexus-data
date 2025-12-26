@@ -82,6 +82,38 @@
     "continueLearningDescription": "Entdecke mehr Artikel, um dein Investmentwissen auszubauen.",
     "continueLearningBasic": "Basis-Artikel",
     "continueLearningAdvanced": "Fortgeschrittene Artikel"
+  },
+  "courses": {
+    "badge": "Kurse",
+    "title": "Finanzbildungskurse",
+    "subtitle": "Umfassende Kurse, die alles von Investment-Grundlagen bis zu fortgeschrittenen Handelsstrategien abdecken. Lerne in deinem eigenen Tempo mit strukturierten Modulen und praktischen Lektionen.",
+    "infoTitle": "Wie unsere Kurse funktionieren",
+    "infoDescription": "Jeder Kurs ist in Module mit mehreren Lektionen unterteilt. Schließe Lektionen in deinem eigenen Tempo ab, mache Quizze, um dein Wissen zu testen, und bestehe die Abschlussprüfung, um deine Beherrschung zu demonstrieren. Verfolge deinen Fortschritt und kehre jederzeit zurück, um Materialien zu wiederholen.",
+    "startCourse": "Kurs starten",
+    "modules": "{{count}} Module",
+    "lessons": "{{count}} Lektionen",
+    "hours": "{{count}}+ Stunden",
+    "progress": "Fortschritt",
+    "moduleTest": "Modultest",
+    "finalExam": "Abschlussprüfung",
+    "completed": "Abgeschlossen",
+    "markAsCompleted": "Als abgeschlossen markieren",
+    "lessonVideo": "Lektionsvideo",
+    "lessonNotes": "Lektionsnotizen",
+    "keyPoints": "Wichtige Punkte zum Merken",
+    "takeQuiz": "Mini-Quiz machen",
+    "backToLesson": "Zurück zur Lektion",
+    "miniQuiz": "Mini-Quiz",
+    "backToCourses": "Zurück zu den Kursen",
+    "examResults": "Prüfungsergebnisse",
+    "passRate": "Bestehensgrenze",
+    "questions": "{{count}} Fragen",
+    "backToCourse": "Zurück zum Kurs",
+    "congratulations": "Glückwunsch! Du hast bestanden!",
+    "needToPass": "Du brauchst {{rate}}% zum Bestehen. Versuche es erneut!",
+    "lessThanHour": "Weniger als 1 Stunde",
+    "outOf": "von",
+    "correct": "richtig"
   }
 }
 
