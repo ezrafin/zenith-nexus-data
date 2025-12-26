@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom';
 import { MessageSquare, TrendingUp, Briefcase, HelpCircle, Newspaper, Coins, MoreHorizontal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface Category {
   id: string;
   name: string;
-  slug: string;
+  slug?: string;
   description?: string;
   topic_count?: number;
 }

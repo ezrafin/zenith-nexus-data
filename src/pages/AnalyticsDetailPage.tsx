@@ -29,6 +29,7 @@ const typeLabels: Record<string, string> = {
 };
 
 export default function AnalyticsDetailPage() {
+  const { t } = useTranslation({ namespace: 'ui' });
   const { slug } = useParams();
   const [article, setArticle] = useState<AnalyticsArticle | null>(null);
   const [loading, setLoading] = useState(true);

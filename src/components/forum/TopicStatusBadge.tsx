@@ -18,7 +18,7 @@ export function TopicStatusBadge({
   isTrending,
   className,
 }: TopicStatusBadgeProps) {
-  const badges = [];
+  const badges: Array<{ label: string; icon: typeof Pin; className: string }> = [];
 
   if (isPinned) {
     badges.push({

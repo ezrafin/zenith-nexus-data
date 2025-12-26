@@ -26,6 +26,7 @@ const marketLabels: Record<string, string> = {
 };
 
 export default function NewsDetailPage() {
+  const { t } = useTranslation({ namespace: 'ui' });
   const { id } = useParams();
   const [news, setNews] = useState<NewsItem | null>(null);
   const [relatedNews, setRelatedNews] = useState<NewsItem[]>([]);

@@ -48,7 +48,7 @@ export function AvatarSelector({ open, onOpenChange, currentAvatar, onSelect, us
     const cached = sessionStorage.getItem('unavailableAvatars');
     if (cached) {
       try {
-        const cachedSet = new Set(JSON.parse(cached));
+        const cachedSet = new Set<string>(JSON.parse(cached));
         setUnavailableAvatars(cachedSet);
       } catch (error) {
         console.error('Failed to parse cached unavailable avatars:', error);
@@ -65,7 +65,7 @@ export function AvatarSelector({ open, onOpenChange, currentAvatar, onSelect, us
       const cached = sessionStorage.getItem('unavailableAvatars');
       if (cached) {
         try {
-          const cachedSet = new Set(JSON.parse(cached));
+          const cachedSet = new Set<string>(JSON.parse(cached) as string[]);
           if (cachedSet.size > 0) {
             setUnavailableAvatars(cachedSet);
             return;
