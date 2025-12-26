@@ -44,13 +44,15 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Combine React and all React-dependent libraries to ensure correct loading order
+          // Combine React, React-dependent libraries, and lucide icons to ensure correct loading order
+          // lucide-react uses forwardRef and must load AFTER React
           if (
             id.includes('node_modules/react') || 
             id.includes('node_modules/react-dom') ||
             id.includes('node_modules/react-router') ||
             id.includes('node_modules/framer-motion') || 
-            id.includes('node_modules/@radix-ui')
+            id.includes('node_modules/@radix-ui') ||
+            id.includes('node_modules/lucide-react')
           ) {
             return 'vendor-react';
           }
@@ -65,10 +67,6 @@ export default defineConfig(({ mode }) => ({
           // Charts
           if (id.includes('node_modules/recharts') || id.includes('node_modules/d3')) {
             return 'charts-vendor';
-          }
-          // Icons
-          if (id.includes('node_modules/lucide-react')) {
-            return 'icons-vendor';
           }
           // Large pages - split by route
           if (id.includes('/pages/')) {
