@@ -515,6 +515,7 @@
       "expected": "Erwartetes Verhalten",
       "expectedPlaceholder": "Was haben Sie erwartet?",
       "pageUrl": "Seiten-URL",
+      "pageUrlPlaceholder": "https://...",
       "cancel": "Abbrechen",
       "submit": "Bericht senden",
       "submitting": "Senden...",
@@ -568,6 +569,111 @@
     "ctaSubtitle": "Laden Sie unser Media Kit oder sprechen Sie mit unserem Team.",
     "ctaDownload": "Media Kit herunterladen",
     "ctaContact": "Vertrieb kontaktieren"
+  },
+  "marketTable": {
+    "symbol": "Symbol",
+    "name": "Name",
+    "price": "Preis",
+    "change": "Änderung",
+    "volume": "Volumen",
+    "actions": "Aktionen",
+    "sevenDays": "7T"
+  },
+  "marketOverview": {
+    "title": "Marktübersicht",
+    "gainers": "Gewinner",
+    "losers": "Verlierer",
+    "topGainers": "Top Gewinner",
+    "topLosers": "Top Verlierer",
+    "noGainersToday": "Heute keine Gewinner",
+    "noLosersToday": "Heute keine Verlierer",
+    "demoData": "Demo-Daten"
+  },
+  "watchlist": {
+    "addToWatchlist": "Zur Beobachtungsliste hinzufügen",
+    "inWatchlist": "In Beobachtungsliste",
+    "noWatchlists": "Keine Beobachtungslisten",
+    "addToWatchlistLabel": "Zur Beobachtungsliste hinzufügen"
+  },
+  "recommendedContent": {
+    "title": "Empfohlen für Sie",
+    "noRecommendations": "Noch keine Empfehlungen",
+    "exploreContent": "Inhalte erkunden, um personalisierte Vorschläge zu erhalten",
+    "trendingDiscussion": "Beliebte Diskussion",
+    "latestNews": "Neueste Nachrichten"
+  },
+  "trendingContent": {
+    "title": "Trending",
+    "noTrendingContent": "Noch keine beliebten Inhalte",
+    "today": "Heute",
+    "week": "Woche",
+    "month": "Monat"
+  },
+  "followAuthors": {
+    "title": "Top Autoren",
+    "signInToFollow": "Anmelden, um Autoren zu folgen",
+    "noAuthorsFound": "Keine Autoren gefunden",
+    "follow": "Folgen",
+    "following": "Folgt"
+  },
+  "globalSearch": {
+    "placeholder": "Unternehmen, Nachrichten, Forum, Ticker, Autoren suchen...",
+    "searching": "Suche...",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "typeToSearch": "Tippen Sie, um Unternehmen, Nachrichten, Forum, Ticker und Autoren zu suchen...",
+    "typeLabel": "Typ:",
+    "dateLabel": "Datum:",
+    "all": "Alle",
+    "allTime": "Gesamte Zeit",
+    "today": "Heute",
+    "thisWeek": "Diese Woche",
+    "thisMonth": "Diesen Monat",
+    "thisYear": "Dieses Jahr",
+    "companies": "Unternehmen",
+    "news": "Nachrichten",
+    "forum": "Forum",
+    "analytics": "Analysen",
+    "tickers": "Ticker",
+    "authors": "Autoren"
+  },
+  "footer": {
+    "tagline": "Ihr Wächter an den globalen Märkten. Professionelle Analysen und Finanzdaten in Echtzeit.",
+    "copyright": "© {{year}} INVESTOPATRONUS. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "by": "von",
+    "anonymous": "Anonym",
+    "minRead": "Min. Lesezeit",
+    "share": "Teilen",
+    "source": "Quelle",
+    "language": "Sprache",
+    "theme": "Design",
+    "closeMenu": "Menü schließen",
+    "openMenu": "Menü öffnen"
+  },
+  "articles": {
+    "keyTakeaways": "Wichtige Erkenntnisse",
+    "selfCheckQuestions": "Selbsttest-Fragen",
+    "additionalResources": "Zusätzliche Ressourcen",
+    "resourcesAndLinks": "Ressourcen & Links"
+  },
+  "companiesPage": {
+    "searchPlaceholder": "Suche nach Name, Beschreibung oder Standort...",
+    "regionPlaceholder": "Region",
+    "sortByPlaceholder": "Sortieren nach",
+    "combinedTrust": "Kombiniertes Vertrauen",
+    "communityTrust": "Community-Vertrauen",
+    "expertTrust": "Experten-Vertrauen",
+    "avgCommunityTrust": "Durchschn. Community-Vertrauen",
+    "avgExpertTrust": "Durchschn. Experten-Vertrauen"
+  },
+  "videoFilters": {
+    "searchPlaceholder": "Videos suchen...",
+    "searchLabel": "Suche",
+    "categoriesLabel": "Kategorien",
+    "levelLabel": "Niveau",
+    "tagsLabel": "Tags",
+    "clearFilters": "Filter zurücksetzen"
   },
   "cookieBanner": {
     "title": "Wir verwenden Cookies",

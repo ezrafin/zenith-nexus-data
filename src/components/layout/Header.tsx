@@ -407,7 +407,7 @@ export function Header() {
             type="button" 
             className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={mobileMenuOpen ? t('common.closeMenu') : t('common.openMenu')}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
           >
@@ -468,7 +468,7 @@ export function Header() {
                       className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium border border-border rounded-lg"
                     >
                       <Globe className="h-4 w-4" />
-                      Language
+                      {t('common.language')}
                       <span className="ml-auto">{languageMenuOpen ? '▼' : '▶'}</span>
                     </button>
                     
@@ -511,7 +511,7 @@ export function Header() {
                           </>
                         );
                       })()}
-                      Theme
+                      {t('common.theme')}
                       <span className="ml-auto">{themeMenuOpen ? '▼' : '▶'}</span>
                     </button>
                     

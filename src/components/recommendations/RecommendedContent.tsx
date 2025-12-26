@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Newspaper, MessageSquare, FileText, Video, Sparkles } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface RecommendedContentProps {
   className?: string;
@@ -11,6 +12,7 @@ interface RecommendedContentProps {
 }
 
 export function RecommendedContent({ className, limit = 5 }: RecommendedContentProps) {
+  const { t } = useTranslation({ namespace: 'ui' });
   const { recommendations, loading } = useRecommendations();
 
   const getIcon = (type: string) => {
@@ -50,7 +52,7 @@ export function RecommendedContent({ className, limit = 5 }: RecommendedContentP
       <div className={cn('space-y-3', className)}>
         <div className="flex items-center gap-2 mb-4">
           <Sparkles className="h-5 w-5 text-primary" />
-          <h3 className="font-semibold text-lg">Recommended for You</h3>
+          <h3 className="font-semibold text-lg">{t('recommendedContent.title')}</h3>
         </div>
         {Array.from({ length: Math.min(limit, 3) }).map((_, i) => (
           <SkeletonCard key={i} lines={2} />
@@ -63,8 +65,8 @@ export function RecommendedContent({ className, limit = 5 }: RecommendedContentP
     return (
       <div className={cn('premium-card p-6 text-center', className)}>
         <Sparkles className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-        <p className="text-muted-foreground">No recommendations yet</p>
-        <p className="text-xs text-muted-foreground mt-1">Explore content to get personalized suggestions</p>
+        <p className="text-muted-foreground">{t('recommendedContent.noRecommendations')}</p>
+        <p className="text-xs text-muted-foreground mt-1">{t('recommendedContent.exploreContent')}</p>
       </div>
     );
   }
@@ -73,7 +75,7 @@ export function RecommendedContent({ className, limit = 5 }: RecommendedContentP
     <div className={cn('space-y-3', className)}>
       <div className="flex items-center gap-2 mb-4">
         <Sparkles className="h-5 w-5 text-primary" />
-        <h3 className="font-semibold text-lg">Recommended for You</h3>
+        <h3 className="font-semibold text-lg">{t('recommendedContent.title')}</h3>
       </div>
       {recommendations.slice(0, limit).map((rec) => (
         <Link
@@ -89,7 +91,11 @@ export function RecommendedContent({ className, limit = 5 }: RecommendedContentP
               <h4 className="font-medium text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors">
                 {rec.title}
               </h4>
-              <p className="text-xs text-muted-foreground">{rec.reason}</p>
+              <p className="text-xs text-muted-foreground">
+                {rec.type === 'forum' ? t('recommendedContent.trendingDiscussion') : 
+                 rec.type === 'news' ? t('recommendedContent.latestNews') : 
+                 rec.reason}
+              </p>
             </div>
           </div>
         </Link>

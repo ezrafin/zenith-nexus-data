@@ -2,6 +2,7 @@ import { useAllMarkets } from '@/hooks/useAllMarkets';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { MarketData } from '@/lib/api/types';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // Get the top gainer from a market dataset
 const getTopGainer = (data: MarketData[] | undefined): MarketData | null => {
@@ -56,6 +57,7 @@ function MarketItem({ item, marketType, isGainer }: MarketItemProps) {
 }
 
 export function MarketOverview() {
+  const { t } = useTranslation({ namespace: 'ui' });
   const { indices, stocks, crypto, commodities, currencies } = useAllMarkets();
 
   // Get top gainer from each market type
@@ -81,10 +83,10 @@ export function MarketOverview() {
   return (
     <div className="premium-card p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-heading font-semibold text-lg">Market Overview</h2>
+        <h2 className="font-heading font-semibold text-lg">{t('marketOverview.title')}</h2>
         {isDemo && (
           <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400">
-            Demo data
+            {t('marketOverview.demoData')}
           </span>
         )}
       </div>
@@ -93,11 +95,11 @@ export function MarketOverview() {
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="text-center p-4 rounded-lg bg-green-500/10">
           <div className="text-2xl font-bold text-green-500">{topGainers.length}</div>
-          <div className="text-xs text-muted-foreground">Gainers</div>
+          <div className="text-xs text-muted-foreground">{t('marketOverview.gainers')}</div>
         </div>
         <div className="text-center p-4 rounded-lg bg-red-500/10">
           <div className="text-2xl font-bold text-red-500">{topLosers.length}</div>
-          <div className="text-xs text-muted-foreground">Losers</div>
+          <div className="text-xs text-muted-foreground">{t('marketOverview.losers')}</div>
         </div>
       </div>
 
@@ -105,14 +107,14 @@ export function MarketOverview() {
       <div className="mb-6">
         <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
           <TrendingUp className="h-4 w-4 text-green-500" />
-          Top Gainers
+          {t('marketOverview.topGainers')}
         </h3>
         <div className="space-y-2">
           {topGainers.map(({ item, type }) => (
             <MarketItem key={`${type}-${item.symbol}`} item={item} marketType={type} isGainer={true} />
           ))}
           {topGainers.length === 0 && (
-            <div className="text-sm text-muted-foreground text-center py-2">No gainers today</div>
+            <div className="text-sm text-muted-foreground text-center py-2">{t('marketOverview.noGainersToday')}</div>
           )}
         </div>
       </div>
@@ -121,14 +123,14 @@ export function MarketOverview() {
       <div>
         <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
           <TrendingDown className="h-4 w-4 text-red-500" />
-          Top Losers
+          {t('marketOverview.topLosers')}
         </h3>
         <div className="space-y-2">
           {topLosers.map(({ item, type }) => (
             <MarketItem key={`${type}-${item.symbol}`} item={item} marketType={type} isGainer={false} />
           ))}
           {topLosers.length === 0 && (
-            <div className="text-sm text-muted-foreground text-center py-2">No losers today</div>
+            <div className="text-sm text-muted-foreground text-center py-2">{t('marketOverview.noLosersToday')}</div>
           )}
         </div>
       </div>

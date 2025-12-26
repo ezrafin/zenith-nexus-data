@@ -104,7 +104,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 text-center lg:text-left max-w-xs">
-              Your Guardian in Global Markets. Professional analytics and real-time financial data.
+              {t('footer.tagline')}
             </p>
           </div>
           
@@ -201,7 +201,7 @@ export function Footer() {
           transition={transitions.normal}
         >
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} INVESTOPATRONUS. All rights reserved.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
         </motion.div>
       </motion.div>

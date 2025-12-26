@@ -69,9 +69,9 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
     return (
       <div className={cn('premium-card p-6 text-center', className)}>
         <UserPlus className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-        <p className="text-muted-foreground mb-2">Sign in to follow authors</p>
+        <p className="text-muted-foreground mb-2">{t('followAuthors.signInToFollow')}</p>
         <Link to="/auth/login" className="text-primary hover:underline text-sm">
-          Sign in
+          {t('buttons.signIn')}
         </Link>
       </div>
     );
@@ -82,7 +82,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
       <div className={cn('space-y-3', className)}>
         <div className="flex items-center gap-2 mb-4">
           <TrendingUp className="h-5 w-5 text-primary" />
-          <h3 className="font-semibold text-lg">Top Authors</h3>
+          <h3 className="font-semibold text-lg">{t('followAuthors.title')}</h3>
         </div>
         {Array.from({ length: Math.min(limit, 3) }).map((_, i) => (
           <SkeletonCard key={i} lines={2} />
@@ -94,7 +94,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
   if (authors.length === 0) {
     return (
       <div className={cn('premium-card p-6 text-center', className)}>
-        <p className="text-muted-foreground">No authors found</p>
+        <p className="text-muted-foreground">{t('followAuthors.noAuthorsFound')}</p>
       </div>
     );
   }
@@ -103,7 +103,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
     <div className={cn('space-y-4', className)}>
       <div className="flex items-center gap-2 mb-4">
         <TrendingUp className="h-5 w-5 text-primary" />
-        <h3 className="font-semibold text-lg">Top Authors</h3>
+        <h3 className="font-semibold text-lg">{t('followAuthors.title')}</h3>
       </div>
 
       <div className="space-y-3">
@@ -132,7 +132,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
                 <div className="flex-1 min-w-0">
                   <Link to={`/users/${author.id}`} className="block">
                     <h4 className="font-medium text-sm hover:text-primary transition-colors">
-                      {author.display_name || author.username || 'Anonymous'}
+                      {author.display_name || author.username || t('common.anonymous')}
                     </h4>
                   </Link>
                   {author.bio && (
@@ -160,12 +160,12 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
                   {author.is_following ? (
                     <>
                       <UserCheck className="h-3 w-3 mr-1" />
-                      Following
+                      {t('followAuthors.following')}
                     </>
                   ) : (
                     <>
                       <UserPlus className="h-3 w-3 mr-1" />
-                      Follow
+                      {t('followAuthors.follow')}
                     </>
                   )}
                 </Button>

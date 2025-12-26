@@ -395,6 +395,7 @@
       "expected": "Expected Behavior",
       "expectedPlaceholder": "What did you expect to happen?",
       "pageUrl": "Page URL",
+      "pageUrlPlaceholder": "https://...",
       "cancel": "Cancel",
       "submit": "Submit Report",
       "submitting": "Submitting...",
@@ -568,6 +569,111 @@
     "successDesc": "You're now subscribed to INVESTOPATRONUS newsletter",
     "successInline": "Successfully subscribed!",
     "privacyNote": "Unsubscribe anytime. We respect your privacy."
+  },
+  "marketTable": {
+    "symbol": "Symbol",
+    "name": "Name",
+    "price": "Price",
+    "change": "Change",
+    "volume": "Volume",
+    "actions": "Actions",
+    "sevenDays": "7D"
+  },
+  "marketOverview": {
+    "title": "Market Overview",
+    "gainers": "Gainers",
+    "losers": "Losers",
+    "topGainers": "Top Gainers",
+    "topLosers": "Top Losers",
+    "noGainersToday": "No gainers today",
+    "noLosersToday": "No losers today",
+    "demoData": "Demo data"
+  },
+  "watchlist": {
+    "addToWatchlist": "Add to Watchlist",
+    "inWatchlist": "In Watchlist",
+    "noWatchlists": "No watchlists",
+    "addToWatchlistLabel": "Add to Watchlist"
+  },
+  "recommendedContent": {
+    "title": "Recommended for You",
+    "noRecommendations": "No recommendations yet",
+    "exploreContent": "Explore content to get personalized suggestions",
+    "trendingDiscussion": "Trending discussion",
+    "latestNews": "Latest news"
+  },
+  "trendingContent": {
+    "title": "Trending",
+    "noTrendingContent": "No trending content yet",
+    "today": "Today",
+    "week": "Week",
+    "month": "Month"
+  },
+  "followAuthors": {
+    "title": "Top Authors",
+    "signInToFollow": "Sign in to follow authors",
+    "noAuthorsFound": "No authors found",
+    "follow": "Follow",
+    "following": "Following"
+  },
+  "globalSearch": {
+    "placeholder": "Search companies, news, forum, tickers, authors...",
+    "searching": "Searching...",
+    "noResults": "No results found.",
+    "typeToSearch": "Type to search companies, news, forum, tickers, and authors...",
+    "typeLabel": "Type:",
+    "dateLabel": "Date:",
+    "all": "All",
+    "allTime": "All Time",
+    "today": "Today",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "thisYear": "This Year",
+    "companies": "Companies",
+    "news": "News",
+    "forum": "Forum",
+    "analytics": "Analytics",
+    "tickers": "Tickers",
+    "authors": "Authors"
+  },
+  "footer": {
+    "tagline": "Your Guardian in Global Markets. Professional analytics and real-time financial data.",
+    "copyright": "© {{year}} INVESTOPATRONUS. All rights reserved."
+  },
+  "common": {
+    "by": "by",
+    "anonymous": "Anonymous",
+    "minRead": "min read",
+    "share": "Share",
+    "source": "Source",
+    "language": "Language",
+    "theme": "Theme",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu"
+  },
+  "articles": {
+    "keyTakeaways": "Key Takeaways",
+    "selfCheckQuestions": "Self-Check Questions",
+    "additionalResources": "Additional Resources",
+    "resourcesAndLinks": "Resources & Links"
+  },
+  "companiesPage": {
+    "searchPlaceholder": "Search by name, description, or location...",
+    "regionPlaceholder": "Region",
+    "sortByPlaceholder": "Sort by",
+    "combinedTrust": "Combined Trust",
+    "communityTrust": "Community Trust",
+    "expertTrust": "Expert Trust",
+    "avgCommunityTrust": "Avg Community Trust",
+    "avgExpertTrust": "Avg Expert Trust"
+  },
+  "videoFilters": {
+    "searchPlaceholder": "Search videos...",
+    "searchLabel": "Search",
+    "categoriesLabel": "Categories",
+    "levelLabel": "Level",
+    "tagsLabel": "Tags",
+    "clearFilters": "Clear Filters"
   },
   "cookieBanner": {
     "title": "We use cookies",

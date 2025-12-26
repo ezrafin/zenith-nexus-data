@@ -12,6 +12,7 @@ import type { MarketData } from '@/lib/api/types';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getMotionVariant, transitions, STAGGER, prefersReducedMotion } from '@/lib/animations';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface SearchResult {
   type: 'company' | 'news' | 'forum' | 'analytics' | 'ticker' | 'author';
@@ -25,6 +26,7 @@ interface SearchResult {
 }
 
 export function GlobalSearch() {
+  const { t } = useTranslation({ namespace: 'ui' });
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -397,7 +399,7 @@ export function GlobalSearch() {
               <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" aria-hidden="true" />
               <input
                 className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 min-h-[44px] touch-manipulation"
-                placeholder="Search companies, news, forum, tickers, authors..."
+                placeholder={t('globalSearch.placeholder')}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 aria-label="Search input"
@@ -420,34 +422,34 @@ export function GlobalSearch() {
               <Filter className="h-4 w-4 text-muted-foreground" />
               <div className="flex items-center gap-2 flex-1">
                 <div className="flex items-center gap-2">
-                  <Label htmlFor="content-type" className="text-xs">Type:</Label>
+                  <Label htmlFor="content-type" className="text-xs">{t('globalSearch.typeLabel')}</Label>
                   <Select value={contentType} onValueChange={(value: typeof contentType) => setContentType(value)}>
                     <SelectTrigger id="content-type" className="h-8 text-xs w-32">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">All</SelectItem>
-                      <SelectItem value="company">Companies</SelectItem>
-                      <SelectItem value="news">News</SelectItem>
-                      <SelectItem value="forum">Forum</SelectItem>
-                      <SelectItem value="analytics">Analytics</SelectItem>
-                      <SelectItem value="ticker">Tickers</SelectItem>
-                      <SelectItem value="author">Authors</SelectItem>
+                      <SelectItem value="all">{t('globalSearch.all')}</SelectItem>
+                      <SelectItem value="company">{t('globalSearch.companies')}</SelectItem>
+                      <SelectItem value="news">{t('globalSearch.news')}</SelectItem>
+                      <SelectItem value="forum">{t('globalSearch.forum')}</SelectItem>
+                      <SelectItem value="analytics">{t('globalSearch.analytics')}</SelectItem>
+                      <SelectItem value="ticker">{t('globalSearch.tickers')}</SelectItem>
+                      <SelectItem value="author">{t('globalSearch.authors')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Label htmlFor="date-filter" className="text-xs">Date:</Label>
+                  <Label htmlFor="date-filter" className="text-xs">{t('globalSearch.dateLabel')}</Label>
                   <Select value={dateFilter} onValueChange={(value: typeof dateFilter) => setDateFilter(value)}>
                     <SelectTrigger id="date-filter" className="h-8 text-xs w-32">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">All Time</SelectItem>
-                      <SelectItem value="today">Today</SelectItem>
-                      <SelectItem value="week">This Week</SelectItem>
-                      <SelectItem value="month">This Month</SelectItem>
-                      <SelectItem value="year">This Year</SelectItem>
+                      <SelectItem value="all">{t('globalSearch.allTime')}</SelectItem>
+                      <SelectItem value="today">{t('globalSearch.today')}</SelectItem>
+                      <SelectItem value="week">{t('globalSearch.thisWeek')}</SelectItem>
+                      <SelectItem value="month">{t('globalSearch.thisMonth')}</SelectItem>
+                      <SelectItem value="year">{t('globalSearch.thisYear')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -456,16 +458,16 @@ export function GlobalSearch() {
             <CommandList className="flex-1 overflow-y-auto p-2 max-h-[400px]">
               {loading && (
                 <div className="py-6 text-center text-sm text-muted-foreground">
-                  Searching...
+                  {t('globalSearch.searching')}
                 </div>
               )}
               
               {!loading && query && results.length === 0 && (
-                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandEmpty>{t('globalSearch.noResults')}</CommandEmpty>
               )}
 
               {!loading && groupedResults.company.length > 0 && (
-                <CommandGroup heading="Companies">
+                <CommandGroup heading={t('globalSearch.companies')}>
                   <AnimatePresence>
                     {groupedResults.company.map((result, index) => (
                       <motion.div
@@ -497,7 +499,7 @@ export function GlobalSearch() {
               )}
 
               {!loading && groupedResults.news.length > 0 && (
-                <CommandGroup heading="News">
+                <CommandGroup heading={t('globalSearch.news')}>
                   <AnimatePresence>
                     {groupedResults.news.map((result, index) => (
                       <motion.div
@@ -529,7 +531,7 @@ export function GlobalSearch() {
               )}
 
               {!loading && groupedResults.forum.length > 0 && (
-                <CommandGroup heading="Forum">
+                <CommandGroup heading={t('globalSearch.forum')}>
                   {groupedResults.forum.map((result) => (
                     <CommandItem
                       key={`forum-${result.id}`}
@@ -557,7 +559,7 @@ export function GlobalSearch() {
               )}
 
               {!loading && groupedResults.analytics && groupedResults.analytics.length > 0 && (
-                <CommandGroup heading="Analytics">
+                <CommandGroup heading={t('globalSearch.analytics')}>
                   {groupedResults.analytics.map((result) => (
                     <CommandItem
                       key={`analytics-${result.id}`}
@@ -577,7 +579,7 @@ export function GlobalSearch() {
               )}
 
               {!loading && groupedResults.ticker.length > 0 && (
-                <CommandGroup heading="Tickers">
+                <CommandGroup heading={t('globalSearch.tickers')}>
                   {groupedResults.ticker.map((result) => (
                     <CommandItem
                       key={`ticker-${result.id}`}
@@ -600,7 +602,7 @@ export function GlobalSearch() {
               )}
 
               {!loading && groupedResults.author.length > 0 && (
-                <CommandGroup heading="Authors">
+                <CommandGroup heading={t('globalSearch.authors')}>
                   {groupedResults.author.map((result) => (
                     <CommandItem
                       key={`author-${result.id}`}
@@ -621,7 +623,7 @@ export function GlobalSearch() {
 
               {!query && (
                 <div className="py-6 text-center text-sm text-muted-foreground">
-                  Type to search companies, news, forum, tickers, and authors...
+                  {t('globalSearch.typeToSearch')}
                 </div>
               )}
             </CommandList>

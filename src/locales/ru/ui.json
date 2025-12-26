@@ -509,6 +509,7 @@
       "expected": "Ожидаемое поведение",
       "expectedPlaceholder": "Что должно было произойти?",
       "pageUrl": "URL страницы",
+      "pageUrlPlaceholder": "https://...",
       "cancel": "Отмена",
       "submit": "Отправить отчёт",
       "submitting": "Отправка...",
@@ -569,6 +570,111 @@
     "heroSubtitle": "Профессиональная аналитика и данные в реальном времени для взвешенных решений",
     "heroPrimaryCta": "Смотреть рынки",
     "heroSecondaryCta": "Читать аналитику"
+  },
+  "marketTable": {
+    "symbol": "Символ",
+    "name": "Название",
+    "price": "Цена",
+    "change": "Изменение",
+    "volume": "Объём",
+    "actions": "Действия",
+    "sevenDays": "7Д"
+  },
+  "marketOverview": {
+    "title": "Обзор рынка",
+    "gainers": "Рост",
+    "losers": "Падение",
+    "topGainers": "Топ роста",
+    "topLosers": "Топ падения",
+    "noGainersToday": "Сегодня нет роста",
+    "noLosersToday": "Сегодня нет падения",
+    "demoData": "Демо-данные"
+  },
+  "watchlist": {
+    "addToWatchlist": "Добавить в список наблюдения",
+    "inWatchlist": "В списке наблюдения",
+    "noWatchlists": "Нет списков наблюдения",
+    "addToWatchlistLabel": "Добавить в список наблюдения"
+  },
+  "recommendedContent": {
+    "title": "Рекомендуется для вас",
+    "noRecommendations": "Пока нет рекомендаций",
+    "exploreContent": "Изучите контент, чтобы получить персонализированные предложения",
+    "trendingDiscussion": "Популярное обсуждение",
+    "latestNews": "Последние новости"
+  },
+  "trendingContent": {
+    "title": "Популярное",
+    "noTrendingContent": "Пока нет популярного контента",
+    "today": "Сегодня",
+    "week": "Неделя",
+    "month": "Месяц"
+  },
+  "followAuthors": {
+    "title": "Топ авторов",
+    "signInToFollow": "Войдите, чтобы подписаться на авторов",
+    "noAuthorsFound": "Авторы не найдены",
+    "follow": "Подписаться",
+    "following": "Подписан"
+  },
+  "globalSearch": {
+    "placeholder": "Поиск компаний, новостей, форума, тикеров, авторов...",
+    "searching": "Поиск...",
+    "noResults": "Результаты не найдены.",
+    "typeToSearch": "Введите для поиска компаний, новостей, форума, тикеров и авторов...",
+    "typeLabel": "Тип:",
+    "dateLabel": "Дата:",
+    "all": "Все",
+    "allTime": "За всё время",
+    "today": "Сегодня",
+    "thisWeek": "На этой неделе",
+    "thisMonth": "В этом месяце",
+    "thisYear": "В этом году",
+    "companies": "Компании",
+    "news": "Новости",
+    "forum": "Форум",
+    "analytics": "Аналитика",
+    "tickers": "Тикеры",
+    "authors": "Авторы"
+  },
+  "footer": {
+    "tagline": "Ваш защитник на глобальных рынках. Профессиональная аналитика и финансовые данные в реальном времени.",
+    "copyright": "© {{year}} INVESTOPATRONUS. Все права защищены."
+  },
+  "common": {
+    "by": "от",
+    "anonymous": "Анонимный",
+    "minRead": "мин чтения",
+    "share": "Поделиться",
+    "source": "Источник",
+    "language": "Язык",
+    "theme": "Тема",
+    "closeMenu": "Закрыть меню",
+    "openMenu": "Открыть меню"
+  },
+  "articles": {
+    "keyTakeaways": "Ключевые выводы",
+    "selfCheckQuestions": "Вопросы для самопроверки",
+    "additionalResources": "Дополнительные ресурсы",
+    "resourcesAndLinks": "Ресурсы и ссылки"
+  },
+  "companiesPage": {
+    "searchPlaceholder": "Поиск по названию, описанию или местоположению...",
+    "regionPlaceholder": "Регион",
+    "sortByPlaceholder": "Сортировать по",
+    "combinedTrust": "Общее доверие",
+    "communityTrust": "Доверие сообщества",
+    "expertTrust": "Доверие экспертов",
+    "avgCommunityTrust": "Среднее доверие сообщества",
+    "avgExpertTrust": "Среднее доверие экспертов"
+  },
+  "videoFilters": {
+    "searchPlaceholder": "Поиск видео...",
+    "searchLabel": "Поиск",
+    "categoriesLabel": "Категории",
+    "levelLabel": "Уровень",
+    "tagsLabel": "Теги",
+    "clearFilters": "Очистить фильтры"
   },
   "cookieBanner": {
     "title": "Мы используем файлы cookie",

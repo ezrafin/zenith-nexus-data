@@ -508,6 +508,7 @@
       "expected": "预期行为",
       "expectedPlaceholder": "您期望发生什么？",
       "pageUrl": "页面URL",
+      "pageUrlPlaceholder": "https://...",
       "cancel": "取消",
       "submit": "提交报告",
       "submitting": "提交中...",
@@ -568,6 +569,111 @@
     "heroSubtitle": "专业分析与实时数据，助力明智投资决策",
     "heroPrimaryCta": "查看市场",
     "heroSecondaryCta": "阅读分析"
+  },
+  "marketTable": {
+    "symbol": "代码",
+    "name": "名称",
+    "price": "价格",
+    "change": "变化",
+    "volume": "成交量",
+    "actions": "操作",
+    "sevenDays": "7天"
+  },
+  "marketOverview": {
+    "title": "市场概览",
+    "gainers": "涨幅",
+    "losers": "跌幅",
+    "topGainers": "涨幅最大",
+    "topLosers": "跌幅最大",
+    "noGainersToday": "今日无涨幅",
+    "noLosersToday": "今日无跌幅",
+    "demoData": "演示数据"
+  },
+  "watchlist": {
+    "addToWatchlist": "添加到观察列表",
+    "inWatchlist": "已在观察列表",
+    "noWatchlists": "无观察列表",
+    "addToWatchlistLabel": "添加到观察列表"
+  },
+  "recommendedContent": {
+    "title": "为您推荐",
+    "noRecommendations": "暂无推荐",
+    "exploreContent": "浏览内容以获取个性化建议",
+    "trendingDiscussion": "热门讨论",
+    "latestNews": "最新新闻"
+  },
+  "trendingContent": {
+    "title": "热门",
+    "noTrendingContent": "暂无热门内容",
+    "today": "今天",
+    "week": "本周",
+    "month": "本月"
+  },
+  "followAuthors": {
+    "title": "顶级作者",
+    "signInToFollow": "登录以关注作者",
+    "noAuthorsFound": "未找到作者",
+    "follow": "关注",
+    "following": "已关注"
+  },
+  "globalSearch": {
+    "placeholder": "搜索公司、新闻、论坛、代码、作者...",
+    "searching": "搜索中...",
+    "noResults": "未找到结果。",
+    "typeToSearch": "输入以搜索公司、新闻、论坛、代码和作者...",
+    "typeLabel": "类型：",
+    "dateLabel": "日期：",
+    "all": "全部",
+    "allTime": "全部时间",
+    "today": "今天",
+    "thisWeek": "本周",
+    "thisMonth": "本月",
+    "thisYear": "今年",
+    "companies": "公司",
+    "news": "新闻",
+    "forum": "论坛",
+    "analytics": "分析",
+    "tickers": "代码",
+    "authors": "作者"
+  },
+  "footer": {
+    "tagline": "守护您在全球市场中的位置。专业分析与实时金融数据。",
+    "copyright": "© {{year}} INVESTOPATRONUS。保留所有权利。"
+  },
+  "common": {
+    "by": "作者：",
+    "anonymous": "匿名",
+    "minRead": "分钟阅读",
+    "share": "分享",
+    "source": "来源",
+    "language": "语言",
+    "theme": "主题",
+    "closeMenu": "关闭菜单",
+    "openMenu": "打开菜单"
+  },
+  "articles": {
+    "keyTakeaways": "要点总结",
+    "selfCheckQuestions": "自测问题",
+    "additionalResources": "其他资源",
+    "resourcesAndLinks": "资源与链接"
+  },
+  "companiesPage": {
+    "searchPlaceholder": "按名称、描述或位置搜索...",
+    "regionPlaceholder": "地区",
+    "sortByPlaceholder": "排序方式",
+    "combinedTrust": "综合信任度",
+    "communityTrust": "社区信任度",
+    "expertTrust": "专家信任度",
+    "avgCommunityTrust": "平均社区信任度",
+    "avgExpertTrust": "平均专家信任度"
+  },
+  "videoFilters": {
+    "searchPlaceholder": "搜索视频...",
+    "searchLabel": "搜索",
+    "categoriesLabel": "分类",
+    "levelLabel": "级别",
+    "tagsLabel": "标签",
+    "clearFilters": "清除筛选"
   },
   "cookieBanner": {
     "title": "我们使用 Cookie",

@@ -10,6 +10,7 @@ import {
   HelpCircle, BookOpen, ExternalLink, Lightbulb 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const levelLabels = {
   beginner: 'Beginner',
@@ -25,6 +26,7 @@ const formatLabels = {
 };
 
 export default function VideoDetailPage() {
+  const { t } = useTranslation({ namespace: 'ui' });
   const { videoId } = useParams();
   const video = videos.find(v => v.id === videoId);
 
@@ -120,7 +122,7 @@ export default function VideoDetailPage() {
               <div className="glass-card p-6">
                 <h2 className="heading-sm mb-4 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  Key Takeaways
+                  {t('articles.keyTakeaways')}
                 </h2>
                 <ul className="space-y-3">
                   {video.keyTakeaways.map((takeaway, index) => (
@@ -136,7 +138,7 @@ export default function VideoDetailPage() {
               <div className="glass-card p-6">
                 <h2 className="heading-sm mb-4 flex items-center gap-2">
                   <HelpCircle className="h-5 w-5 text-primary" />
-                  Self-Check Questions
+                  {t('articles.selfCheckQuestions')}
                 </h2>
                 <div className="space-y-4">
                   {video.selfCheckQuestions.map((item, index) => (
@@ -165,7 +167,7 @@ export default function VideoDetailPage() {
                 <div className="glass-card p-6">
                   <h3 className="font-semibold mb-4 flex items-center gap-2">
                     <BookOpen className="h-5 w-5 text-primary" />
-                    Additional Resources
+                    {t('articles.additionalResources')}
                   </h3>
                   <ul className="space-y-2">
                     {video.resources.map((resource, index) => (

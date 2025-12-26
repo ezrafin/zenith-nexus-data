@@ -150,7 +150,7 @@ export default function LoginPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="you@example.com"
+                  placeholder={t('auth.emailPlaceholderExample')}
                   value={email}
                   autoComplete="email"
                   onChange={(e) => {

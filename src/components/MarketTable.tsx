@@ -4,6 +4,7 @@ import { TrendingUp, TrendingDown, ArrowUpDown, ChevronUp, ChevronDown } from 'l
 import { MarketData } from '@/lib/api/types';
 import { SimpleChart } from './SimpleChart';
 import { WatchlistButton } from './markets/WatchlistButton';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface MarketTableProps {
   data: MarketData[];
@@ -16,6 +17,7 @@ type SortKey = 'symbol' | 'name' | 'price' | 'change' | 'changePercent' | 'volum
 type SortDirection = 'asc' | 'desc';
 
 export function MarketTable({ data, showVolume = false, showChart = true, marketType = 'stocks' }: MarketTableProps) {
+  const { t } = useTranslation({ namespace: 'ui' });
   const [sortKey, setSortKey] = useState<SortKey>('symbol');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
 
@@ -102,18 +104,18 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
               </div>
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div>
-                  <span className="text-xs text-muted-foreground">Price</span>
+                  <span className="text-xs text-muted-foreground">{t('marketTable.price')}</span>
                   <div className="font-mono font-medium">{formatPrice(item.price)}</div>
                 </div>
                 <div>
-                  <span className="text-xs text-muted-foreground">Change</span>
+                  <span className="text-xs text-muted-foreground">{t('marketTable.change')}</span>
                   <div className={`font-mono ${isPositive ? 'text-positive' : 'text-negative'}`}>
                     {isPositive ? '+' : ''}{formatPrice(item.change)}
                   </div>
                 </div>
                 {showVolume && (
                   <div className="col-span-2">
-                    <span className="text-xs text-muted-foreground">Volume</span>
+                    <span className="text-xs text-muted-foreground">{t('marketTable.volume')}</span>
                     <div className="font-mono text-sm">{item.volume || '-'}</div>
                   </div>
                 )}
@@ -138,7 +140,7 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                   onClick={() => handleSort('symbol')}
                   className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Symbol <SortIcon column="symbol" />
+                  {t('marketTable.symbol')} <SortIcon column="symbol" />
                 </button>
               </th>
               <th className="text-left px-3 md:px-4 py-2 md:py-3">
@@ -146,7 +148,7 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                   onClick={() => handleSort('name')}
                   className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Name <SortIcon column="name" />
+                  {t('marketTable.name')} <SortIcon column="name" />
                 </button>
               </th>
               <th className="text-right px-3 md:px-4 py-2 md:py-3">
@@ -154,7 +156,7 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                   onClick={() => handleSort('price')}
                   className="flex items-center gap-1 justify-end text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Price <SortIcon column="price" />
+                  {t('marketTable.price')} <SortIcon column="price" />
                 </button>
               </th>
               <th className="text-right px-3 md:px-4 py-2 md:py-3">
@@ -162,7 +164,7 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                   onClick={() => handleSort('change')}
                   className="flex items-center gap-1 justify-end text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Change <SortIcon column="change" />
+                  {t('marketTable.change')} <SortIcon column="change" />
                 </button>
               </th>
               <th className="text-right px-3 md:px-4 py-2 md:py-3">
@@ -179,17 +181,17 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                     onClick={() => handleSort('volume')}
                     className="flex items-center gap-1 justify-end text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Volume <SortIcon column="volume" />
+                    {t('marketTable.volume')} <SortIcon column="volume" />
                   </button>
                 </th>
               )}
               {showChart && (
                 <th className="text-right px-3 md:px-4 py-2 md:py-3 w-32">
-                  <span className="text-xs font-medium text-muted-foreground">7D</span>
+                  <span className="text-xs font-medium text-muted-foreground">{t('marketTable.sevenDays')}</span>
                 </th>
               )}
               <th className="text-center px-3 md:px-4 py-2 md:py-3 w-24">
-                <span className="text-xs font-medium text-muted-foreground">Actions</span>
+                <span className="text-xs font-medium text-muted-foreground">{t('marketTable.actions')}</span>
               </th>
             </tr>
           </thead>

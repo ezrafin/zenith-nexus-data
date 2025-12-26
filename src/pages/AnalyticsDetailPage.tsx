@@ -185,7 +185,7 @@ export default function AnalyticsDetailPage() {
               <BookmarkButton contentType="analytics" contentId={article.slug} />
               <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="h-4 w-4 mr-2" />
-                Share
+                {t('common.share')}
               </Button>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function AnalyticsDetailPage() {
             <div className="mb-12 p-6 rounded-xl border border-border bg-secondary/30">
               <h2 className="heading-sm mb-6 flex items-center gap-2">
                 <ExternalLink className="h-5 w-5" />
-                Resources & Links
+                {t('articles.resourcesAndLinks')}
               </h2>
               <div className="space-y-3">
                 {article.resources.map((resource, index) => (

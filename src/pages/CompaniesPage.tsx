@@ -9,11 +9,13 @@ import { Input } from '@/components/ui/input';
 import { motion } from 'framer-motion';
 import { Building2, TrendingUp, Users, Award, ArrowUpDown, Globe, Search } from 'lucide-react';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { useTranslation } from '@/hooks/useTranslation';
 
 type SortOption = 'combined' | 'community' | 'expert';
 const ITEMS_PER_PAGE = 15;
 
 export default function CompaniesPage() {
+  const { t } = useTranslation({ namespace: 'ui' });
   // Bill collection: companies_page_visit
   usePageBillCollection({ billId: 'companies_page_visit' });
   const [selectedType, setSelectedType] = useState<OrganizationType | 'all'>('all');
@@ -109,12 +111,12 @@ export default function CompaniesPage() {
             <div className="premium-card p-4 text-center">
               <Users className="h-5 w-5 text-blue-500 mx-auto mb-2" />
               <div className="text-2xl font-bold">{stats.avgCommunity}</div>
-              <div className="text-xs text-muted-foreground">Avg Community Trust</div>
+              <div className="text-xs text-muted-foreground">{t('companiesPage.avgCommunityTrust')}</div>
             </div>
             <div className="premium-card p-4 text-center">
               <Award className="h-5 w-5 text-purple-500 mx-auto mb-2" />
               <div className="text-2xl font-bold">{stats.avgExpert}</div>
-              <div className="text-xs text-muted-foreground">Avg Expert Trust</div>
+              <div className="text-xs text-muted-foreground">{t('companiesPage.avgExpertTrust')}</div>
             </div>
           </motion.div>
 
@@ -130,7 +132,7 @@ export default function CompaniesPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search by name, description, or location..."
+                placeholder={t('companiesPage.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
@@ -162,7 +164,7 @@ export default function CompaniesPage() {
                   <Globe className="h-4 w-4 text-muted-foreground" />
                   <Select value={selectedRegion} onValueChange={(v) => handleRegionChange(v as Region | 'all')}>
                     <SelectTrigger className="w-[160px] sm:w-[180px]">
-                      <SelectValue placeholder="Region" />
+                      <SelectValue placeholder={t('companiesPage.regionPlaceholder')} />
                     </SelectTrigger>
                     <SelectContent align="end">
                       {regions.map((region) => (
@@ -179,12 +181,12 @@ export default function CompaniesPage() {
                   <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
                   <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortOption)}>
                     <SelectTrigger className="w-[160px] sm:w-[180px]">
-                      <SelectValue placeholder="Sort by" />
+                      <SelectValue placeholder={t('companiesPage.sortByPlaceholder')} />
                     </SelectTrigger>
                     <SelectContent align="end">
-                      <SelectItem value="combined">Combined Trust</SelectItem>
-                      <SelectItem value="community">Community Trust</SelectItem>
-                      <SelectItem value="expert">Expert Trust</SelectItem>
+                      <SelectItem value="combined">{t('companiesPage.combinedTrust')}</SelectItem>
+                      <SelectItem value="community">{t('companiesPage.communityTrust')}</SelectItem>
+                      <SelectItem value="expert">{t('companiesPage.expertTrust')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

@@ -105,7 +105,7 @@ export function BugReportForm({ onClose }: BugReportFormProps) {
           id="pageUrl"
           value={formData.pageUrl}
           onChange={(e) => setFormData({ ...formData, pageUrl: e.target.value })}
-          placeholder="https://..."
+          placeholder={t('contactPage.bugReport.pageUrlPlaceholder')}
         />
       </div>
 

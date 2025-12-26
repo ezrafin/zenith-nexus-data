@@ -2,6 +2,7 @@ import { Search, Filter, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { videoCategories, videoTags } from '@/data/videoLibrary';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface VideoFiltersProps {
   searchQuery: string;
@@ -30,6 +31,7 @@ export function VideoFilters({
   selectedTags,
   setSelectedTags
 }: VideoFiltersProps) {
+  const { t } = useTranslation({ namespace: 'ui' });
   const toggleTag = (tag: string) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter(t => t !== tag));
@@ -51,11 +53,11 @@ export function VideoFilters({
     <div className="glass-card p-6 space-y-6">
       {/* Search */}
       <div>
-        <label className="text-sm font-medium mb-2 block">Search</label>
+        <label className="text-sm font-medium mb-2 block">{t('videoFilters.searchLabel')}</label>
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Search videos..."
+            placeholder={t('videoFilters.searchPlaceholder')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10"
@@ -65,7 +67,7 @@ export function VideoFilters({
 
       {/* Categories */}
       <div>
-        <label className="text-sm font-medium mb-2 block">Categories</label>
+        <label className="text-sm font-medium mb-2 block">{t('videoFilters.categoriesLabel')}</label>
         <div className="space-y-1">
           {videoCategories.map(category => (
             <button
@@ -92,7 +94,7 @@ export function VideoFilters({
 
       {/* Levels */}
       <div>
-        <label className="text-sm font-medium mb-2 block">Level</label>
+        <label className="text-sm font-medium mb-2 block">{t('videoFilters.levelLabel')}</label>
         <div className="flex flex-wrap gap-2">
           {levels.map(level => (
             <button
@@ -112,7 +114,7 @@ export function VideoFilters({
 
       {/* Tags */}
       <div>
-        <label className="text-sm font-medium mb-2 block">Tags</label>
+        <label className="text-sm font-medium mb-2 block">{t('videoFilters.tagsLabel')}</label>
         <div className="flex flex-wrap gap-2">
           {videoTags.slice(0, 10).map(tag => (
             <button
@@ -138,7 +140,7 @@ export function VideoFilters({
           onClick={clearFilters}
         >
           <X className="h-4 w-4 mr-2" />
-          Clear Filters
+          {t('videoFilters.clearFilters')}
         </Button>
       )}
     </div>

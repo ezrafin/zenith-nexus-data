@@ -508,6 +508,7 @@
       "expected": "Comportement Attendu",
       "expectedPlaceholder": "Que devait-il se passer ?",
       "pageUrl": "URL de la Page",
+      "pageUrlPlaceholder": "https://...",
       "cancel": "Annuler",
       "submit": "Envoyer le Rapport",
       "submitting": "Envoi...",
@@ -568,6 +569,111 @@
     "heroSubtitle": "Analyses professionnelles et données en temps réel pour des décisions éclairées",
     "heroPrimaryCta": "Voir les marchés",
     "heroSecondaryCta": "Lire les analyses"
+  },
+  "marketTable": {
+    "symbol": "Symbole",
+    "name": "Nom",
+    "price": "Prix",
+    "change": "Variation",
+    "volume": "Volume",
+    "actions": "Actions",
+    "sevenDays": "7J"
+  },
+  "marketOverview": {
+    "title": "Aperçu du marché",
+    "gainers": "Gagnants",
+    "losers": "Perdants",
+    "topGainers": "Top gagnants",
+    "topLosers": "Top perdants",
+    "noGainersToday": "Aucun gagnant aujourd'hui",
+    "noLosersToday": "Aucun perdant aujourd'hui",
+    "demoData": "Données de démonstration"
+  },
+  "watchlist": {
+    "addToWatchlist": "Ajouter à la liste de suivi",
+    "inWatchlist": "Dans la liste de suivi",
+    "noWatchlists": "Aucune liste de suivi",
+    "addToWatchlistLabel": "Ajouter à la liste de suivi"
+  },
+  "recommendedContent": {
+    "title": "Recommandé pour vous",
+    "noRecommendations": "Aucune recommandation pour le moment",
+    "exploreContent": "Explorez le contenu pour obtenir des suggestions personnalisées",
+    "trendingDiscussion": "Discussion tendance",
+    "latestNews": "Dernières actualités"
+  },
+  "trendingContent": {
+    "title": "Tendances",
+    "noTrendingContent": "Aucun contenu tendance pour le moment",
+    "today": "Aujourd'hui",
+    "week": "Semaine",
+    "month": "Mois"
+  },
+  "followAuthors": {
+    "title": "Meilleurs auteurs",
+    "signInToFollow": "Connectez-vous pour suivre les auteurs",
+    "noAuthorsFound": "Aucun auteur trouvé",
+    "follow": "Suivre",
+    "following": "Suivi"
+  },
+  "globalSearch": {
+    "placeholder": "Rechercher entreprises, actualités, forum, tickers, auteurs...",
+    "searching": "Recherche...",
+    "noResults": "Aucun résultat trouvé.",
+    "typeToSearch": "Tapez pour rechercher entreprises, actualités, forum, tickers et auteurs...",
+    "typeLabel": "Type :",
+    "dateLabel": "Date :",
+    "all": "Tout",
+    "allTime": "Tout le temps",
+    "today": "Aujourd'hui",
+    "thisWeek": "Cette semaine",
+    "thisMonth": "Ce mois",
+    "thisYear": "Cette année",
+    "companies": "Entreprises",
+    "news": "Actualités",
+    "forum": "Forum",
+    "analytics": "Analyses",
+    "tickers": "Tickers",
+    "authors": "Auteurs"
+  },
+  "footer": {
+    "tagline": "Votre gardien sur les marchés mondiaux. Analyses professionnelles et données financières en temps réel.",
+    "copyright": "© {{year}} INVESTOPATRONUS. Tous droits réservés."
+  },
+  "common": {
+    "by": "par",
+    "anonymous": "Anonyme",
+    "minRead": "min de lecture",
+    "share": "Partager",
+    "source": "Source",
+    "language": "Langue",
+    "theme": "Thème",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu"
+  },
+  "articles": {
+    "keyTakeaways": "Points clés",
+    "selfCheckQuestions": "Questions d'auto-évaluation",
+    "additionalResources": "Ressources supplémentaires",
+    "resourcesAndLinks": "Ressources et liens"
+  },
+  "companiesPage": {
+    "searchPlaceholder": "Rechercher par nom, description ou localisation...",
+    "regionPlaceholder": "Région",
+    "sortByPlaceholder": "Trier par",
+    "combinedTrust": "Confiance Combinée",
+    "communityTrust": "Confiance de la Communauté",
+    "expertTrust": "Confiance des Experts",
+    "avgCommunityTrust": "Confiance Moyenne de la Communauté",
+    "avgExpertTrust": "Confiance Moyenne des Experts"
+  },
+  "videoFilters": {
+    "searchPlaceholder": "Rechercher des vidéos...",
+    "searchLabel": "Rechercher",
+    "categoriesLabel": "Catégories",
+    "levelLabel": "Niveau",
+    "tagsLabel": "Tags",
+    "clearFilters": "Effacer les filtres"
   },
   "cookieBanner": {
     "title": "Nous utilisons des cookies",

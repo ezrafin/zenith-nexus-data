@@ -173,14 +173,14 @@ export default function NewsDetailPage() {
               <BookmarkButton contentType="article" contentId={news.id} />
               <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="h-4 w-4 mr-2" />
-                Share
+                {t('common.share')}
               </Button>
             </div>
           </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
             <ExternalLink className="h-4 w-4" />
-            Source: {news.source}
+            {t('common.source')}: {news.source}
           </div>
 
           <div className="prose prose-lg max-w-none">

@@ -5,6 +5,7 @@ import { TrendingUp, MessageSquare, FileText, Newspaper, Video, Clock, Eye, Thum
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { cn } from '@/lib/utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface TrendingItem {
   id: string;
@@ -18,6 +19,7 @@ interface TrendingItem {
 }
 
 export function TrendingContent({ className, limit = 10 }: { className?: string; limit?: number }) {
+  const { t } = useTranslation({ namespace: 'ui' });
   const [trending, setTrending] = useState<TrendingItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [timeframe, setTimeframe] = useState<'today' | 'week' | 'month'>('week');
@@ -142,7 +144,7 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
       <div className={cn('space-y-3', className)}>
         <div className="flex items-center gap-2 mb-4">
           <TrendingUp className="h-5 w-5 text-primary" />
-          <h3 className="font-semibold text-lg">Trending</h3>
+          <h3 className="font-semibold text-lg">{t('trendingContent.title')}</h3>
         </div>
         {Array.from({ length: Math.min(limit, 3) }).map((_, i) => (
           <SkeletonCard key={i} lines={2} />
@@ -155,7 +157,7 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
     return (
       <div className={cn('premium-card p-6 text-center', className)}>
         <TrendingUp className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-        <p className="text-muted-foreground">No trending content yet</p>
+        <p className="text-muted-foreground">{t('trendingContent.noTrendingContent')}</p>
       </div>
     );
   }
@@ -165,13 +167,13 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <TrendingUp className="h-5 w-5 text-primary" />
-          <h3 className="font-semibold text-lg">Trending</h3>
+          <h3 className="font-semibold text-lg">{t('trendingContent.title')}</h3>
         </div>
         <Tabs value={timeframe} onValueChange={(value) => setTimeframe(value as 'today' | 'week' | 'month')}>
           <TabsList className="h-8">
-            <TabsTrigger value="today" className="text-xs">Today</TabsTrigger>
-            <TabsTrigger value="week" className="text-xs">Week</TabsTrigger>
-            <TabsTrigger value="month" className="text-xs">Month</TabsTrigger>
+            <TabsTrigger value="today" className="text-xs">{t('trendingContent.today')}</TabsTrigger>
+            <TabsTrigger value="week" className="text-xs">{t('trendingContent.week')}</TabsTrigger>
+            <TabsTrigger value="month" className="text-xs">{t('trendingContent.month')}</TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
@@ -212,7 +214,7 @@ export function TrendingContent({ className, limit = 10 }: { className?: string;
                     </span>
                   )}
                   {item.author && (
-                    <span className="truncate">by {item.author}</span>
+                    <span className="truncate">{t('common.by')} {item.author}</span>
                   )}
                   <span className="flex items-center gap-1 ml-auto">
                     <Clock className="h-3 w-3" />
