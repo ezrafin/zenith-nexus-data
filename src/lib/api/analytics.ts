@@ -44,8 +44,8 @@ const countWords = (text: string): number => {
 };
 
 // Combine all articles from all authors
-// Total: 420 articles
-// Distribution: Christina 94, Assunta 24, Lysander 61, Elias 16, Anastasia 40, Luca 25, Isabelle 113, Xu 47
+// Total: 420+ articles (target: 200 minimum)
+// Distribution: Christina 41/50, Assunta 30/30, Lysander 61, Elias 16, Anastasia 40, Luca 25, Isabelle 113, Xu 47
 // Note: Articles are organized by author in separate modules (analytics-{author}.ts)
 // Current articles below will be gradually migrated to author-specific modules
 const quickAnalytics: AnalyticsArticle[] = [
