@@ -6481,4 +6481,580 @@ Thailand has long been a favorite destination for emerging market investors.`),
     imageUrl: getImage('markets', 274),
     tags: ['Thailand', 'Emerging Markets', 'Equities', 'Tourism', 'Asia'],
   },
+  {
+    slug: 'philippines-equity-markets-consumer-growth-and-remittances',
+    title: 'Philippines Equity Markets: Consumer Growth and Remittance Economy',
+    excerpt:
+      'How Philippine equity markets benefit from consumer growth and remittances, why the consumer story offers opportunities, and which sectors present the best investment cases.',
+    content: `# Philippines Equity Markets: Consumer Growth and Remittance Economy
+
+## Introduction
+
+The Philippines represents an attractive consumer growth story in Southeast Asia, with its equity markets benefiting from a large and growing population, rising remittances, and expanding middle class. The country's economy is significantly supported by remittances from overseas Filipino workers, which drive consumer spending and support economic growth. Combined with favorable demographics, urbanization trends, and improving infrastructure, the Philippines offers compelling investment opportunities, particularly in consumer and financial sectors.
+
+As of late 2024, Philippine equities face a mixed environment. Remittances have remained strong, supporting consumer spending. The economy has shown resilience. Corporate earnings have been solid in consumer-exposed sectors. Infrastructure development is progressing. Yet, valuations can be demanding, and structural challenges including infrastructure gaps and governance issues persist. For investors, the Philippines offers exposure to a consumer growth story but requires careful stock selection and risk management.
+
+This evolution creates opportunities across multiple sectors:
+- **Consumer** – large and growing consumer market.
+- **Financials** – banking sector with growth potential.
+- **Real estate** – real estate development.
+- **Infrastructure** – infrastructure development.
+
+This article explores how Philippine equity markets are positioned, which factors drive consumer growth, what opportunities exist, and how investors should evaluate this consumer growth market.
+
+## Market Fundamentals
+
+### Market Structure
+
+Philippine equity market structure:
+
+**Philippine Stock Exchange:**
+- **Market structure** – PSE market structure.
+- **Listings** – number of listed companies.
+- **Liquidity** – market liquidity.
+- **Indices** – market indices.
+
+**Market Characteristics:**
+- **Size** – market capitalization.
+- **Sector composition** – sector composition.
+- **Foreign ownership** – foreign ownership levels.
+- **Liquidity** – trading liquidity.
+
+**Indices:**
+- **PSEi Index** – PSEi index.
+- **Sector indices** – sector-specific indices.
+- **Benchmarks** – benchmark indices.
+
+### Economic Fundamentals
+
+Philippine economic fundamentals:
+
+**Remittances:**
+- **Remittance economy** – remittances as economic driver.
+- **Overseas workers** – overseas Filipino workers.
+- **Consumer spending** – remittance-driven consumer spending.
+- **Stability** – remittance stability.
+
+**Demographics:**
+- **Large population** – large population.
+- **Young population** – young population.
+- **Middle class** – growing middle class.
+- **Urbanization** – urbanization trends.
+
+**Growth:**
+- **GDP growth** – solid GDP growth.
+- **Resilience** – economic resilience.
+- **Drivers** – growth drivers.
+- **Outlook** – growth outlook.
+
+## Investment Opportunities
+
+### Consumer Sector
+
+Philippine consumer market:
+
+**Market:**
+- **Large market** – large consumer market.
+- **Growth** – strong consumer spending growth.
+- **Remittances** – remittance-driven spending.
+- **Middle class** – growing middle class.
+
+**Companies:**
+- **Retail** – retail companies.
+- **Food and beverage** – food and beverage.
+- **Consumer goods** – consumer goods.
+- **E-commerce** – e-commerce growth.
+
+**Investment Case:**
+- **Remittances** – remittance support.
+- **Growth** – strong consumer growth.
+- **Demographics** – favorable demographics.
+- **Returns** – return potential.
+
+### Financial Sector
+
+Philippine banking sector:
+
+**Banks:**
+- **Major banks** – major Philippine banks.
+- **Growth potential** – strong growth potential.
+- **Penetration** – banking penetration.
+- **Remittances** – remittance-related services.
+
+**Financial Services:**
+- **Non-bank financial** – non-bank financial services.
+- **Remittance services** – remittance services.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Growth** – strong growth potential.
+- **Penetration** – market penetration.
+- **Remittances** – remittance benefits.
+- **Returns** – return potential.
+
+### Real Estate Sector
+
+Real estate development:
+
+**Demand:**
+- **Housing demand** – strong housing demand.
+- **Urbanization** – urbanization-driven demand.
+- **Middle class** – middle class growth.
+- **Growth** – growth potential.
+
+**Companies:**
+- **Real estate developers** – real estate developers.
+- **REITs** – real estate investment trusts.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Demand** – strong demand fundamentals.
+- **Growth** – growth potential.
+- **Returns** – return potential.
+
+### Infrastructure
+
+Infrastructure development:
+
+**Needs:**
+- **Infrastructure needs** – significant infrastructure needs.
+- **Investment** – investment requirements.
+- **Development** – infrastructure development.
+- **Growth** – growth support.
+
+**Companies:**
+- **Infrastructure companies** – infrastructure companies.
+- **Construction** – construction companies.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Investment** – infrastructure investment.
+- **Growth** – growth potential.
+- **Returns** – return potential.
+
+## Risk Factors
+
+### Structural Risks
+
+Structural risk factors:
+
+**Infrastructure:**
+- **Infrastructure gaps** – infrastructure limitations.
+- **Impact** – impact on growth.
+- **Investment** – investment needs.
+- **Risk** – infrastructure risk.
+
+**Governance:**
+- **Governance concerns** – governance concerns.
+- **Transparency** – transparency issues.
+- **Impact** – impact on investment.
+- **Risk** – governance risk.
+
+**Remittances:**
+- **Remittance dependence** – dependence on remittances.
+- **Vulnerability** – vulnerability to external shocks.
+- **Impact** – impact on economy.
+- **Risk** – remittance risk.
+
+### Economic Risks
+
+Economic risk factors:
+
+**Currency:**
+- **Peso** – Philippine peso volatility.
+- **FX risk** – foreign exchange risk.
+- **Impact** – currency impact.
+- **Hedging** – hedging considerations.
+
+**Growth:**
+- **Growth volatility** – growth volatility.
+- **Cyclical** – cyclical risks.
+- **External** – external demand.
+- **Impact** – impact on markets.
+
+**Fiscal:**
+- **Fiscal challenges** – fiscal challenges.
+- **Budget** – budget management.
+- **Impact** – economic impact.
+- **Risk** – fiscal risk.
+
+## Investment Considerations
+
+### Stock Selection
+
+Selective stock selection:
+
+**Criteria:**
+- **Quality** – focus on quality companies.
+- **Consumer exposure** – consumer growth exposure.
+- **Valuation** – reasonable valuations.
+- **Fundamentals** – strong fundamentals.
+
+**Approach:**
+- **Selective** – highly selective approach.
+- **Bottom-up** – bottom-up stock selection.
+- **Consumer themes** – consumer theme exposure.
+- **Risk management** – strong risk management.
+
+### Risk Management
+
+Managing risks:
+
+**Approaches:**
+- **Selective exposure** – selective market exposure.
+- **Quality focus** – focus on quality companies.
+- **Position sizing** – careful position sizing.
+- **Monitoring** – continuous monitoring.
+
+**Hedging:**
+- **Currency** – currency hedging.
+- **Remittance** – remittance risk management.
+- **Portfolio** – portfolio risk management.
+- **Tools** – risk management tools.
+
+## Market Dynamics
+
+### Performance
+
+Market performance:
+
+**Characteristics:**
+- **Growth** – growth characteristics.
+- **Volatility** – volatility characteristics.
+- **Returns** – return characteristics.
+- **Consumer** – consumer growth benefits.
+
+**Recent:**
+- **Recent performance** – recent market performance.
+- **Factors** – performance drivers.
+- **Outlook** – performance outlook.
+- **Risks** – performance risks.
+
+### Evolution
+
+Market evolution:
+
+**Development:**
+- **Market development** – ongoing market development.
+- **Corporate** – corporate development.
+- **Infrastructure** – infrastructure development.
+- **Sophistication** – increasing sophistication.
+
+**Opportunities:**
+- **Consumer** – consumer growth opportunities.
+- **Remittances** – remittance benefits.
+- **Quality** – quality companies.
+- **Returns** – return potential.
+
+## Conclusion
+
+Philippine equity markets offer exposure to an attractive consumer growth story driven by remittances, demographics, and urbanization. While infrastructure gaps, governance issues, and remittance dependence create risks, the consumer growth story remains compelling. Success requires careful stock selection, focus on quality companies with consumer exposure, and strong risk management.
+
+For investors, the Philippines requires understanding remittance dynamics, consumer growth drivers, and risk factors. Success requires selective approach, bottom-up stock selection, and strong risk management.
+
+The Philippine equity market will continue to evolve as consumer growth continues and infrastructure develops. Investors that successfully identify quality opportunities while managing risks will be positioned to benefit from this consumer growth story.
+
+Investors should focus on:
+- **Consumer themes** – exposure to consumer growth themes.
+- **Quality companies** – quality companies with consumer exposure.
+- **Risk management** – strong risk management of structural risks.
+- **Long-term** – long-term investment horizon.
+
+The Philippines offers a compelling consumer growth story but requires discipline and selective approach. Investors that successfully navigate this will be positioned to benefit from this remittance-driven consumer economy.`,
+    date: formatDate(128),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Philippines Equity Markets: Consumer Growth and Remittance Economy
+
+## Introduction
+
+The Philippines represents an attractive consumer growth story in Southeast Asia.`),
+    ),
+    imageUrl: getImage('markets', 275),
+    tags: ['Philippines', 'Emerging Markets', 'Equities', 'Consumer', 'Asia'],
+  },
+  {
+    slug: 'vietnam-equity-markets-manufacturing-hub-and-growth-opportunities',
+    title: 'Vietnam Equity Markets: Manufacturing Hub and Growth Opportunities',
+    excerpt:
+      'How Vietnamese equity markets benefit from manufacturing relocation, why Vietnam offers manufacturing opportunities, and which sectors present the best investment cases.',
+    content: `# Vietnam Equity Markets: Manufacturing Hub and Growth Opportunities
+
+## Introduction
+
+Vietnam has emerged as one of the most attractive manufacturing destinations in Asia, benefiting from supply chain diversification, trade tensions, and cost advantages. The country's equity markets are benefiting from manufacturing investment, infrastructure development, and economic growth driven by export-oriented manufacturing. Combined with favorable demographics, improving infrastructure, and trade agreements, Vietnam offers compelling investment opportunities, particularly in manufacturing, real estate, and financial sectors.
+
+As of late 2024, Vietnamese equities are benefiting from manufacturing momentum. Foreign direct investment in manufacturing is strong. Infrastructure development is progressing. Corporate earnings have improved in manufacturing-exposed sectors. Yet, market development remains early stage, and liquidity can be limited. For investors, Vietnam offers exposure to a manufacturing growth story but requires careful stock selection and understanding of market limitations.
+
+This evolution creates opportunities across multiple sectors:
+- **Manufacturing** – manufacturing companies benefiting from investment.
+- **Real estate** – real estate development.
+- **Financials** – banking sector with growth potential.
+- **Infrastructure** – infrastructure companies.
+
+This article explores how Vietnamese equity markets are positioned, which factors drive manufacturing opportunities, what challenges exist, and how investors should evaluate this manufacturing growth market.
+
+## Market Fundamentals
+
+### Market Structure
+
+Vietnamese equity market structure:
+
+**Ho Chi Minh Stock Exchange:**
+- **Market structure** – HOSE market structure.
+- **Listings** – number of listed companies.
+- **Liquidity** – market liquidity.
+- **Indices** – market indices.
+
+**Market Characteristics:**
+- **Size** – market capitalization.
+- **Sector composition** – sector composition.
+- **Foreign ownership** – foreign ownership levels.
+- **Liquidity** – trading liquidity considerations.
+
+**Indices:**
+- **VN-Index** – VN-Index.
+- **Sector indices** – sector-specific indices.
+- **Benchmarks** – benchmark indices.
+
+### Economic Fundamentals
+
+Vietnamese economic fundamentals:
+
+**Manufacturing:**
+- **Manufacturing hub** – emerging manufacturing hub.
+- **FDI** – foreign direct investment.
+- **Export orientation** – export-oriented manufacturing.
+- **Growth** – manufacturing growth.
+
+**Trade:**
+- **Trade agreements** – trade agreements.
+- **Market access** – market access.
+- **Competitiveness** – competitiveness.
+- **Benefits** – trade benefits.
+
+**Demographics:**
+- **Young population** – young population.
+- **Workforce** – competitive workforce.
+- **Urbanization** – urbanization trends.
+- **Growth** – demographic growth.
+
+## Investment Opportunities
+
+### Manufacturing Sector
+
+Manufacturing companies benefiting from investment:
+
+**Companies:**
+- **Manufacturing companies** – manufacturing companies.
+- **Export orientation** – export-oriented.
+- **FDI benefits** – benefits from FDI.
+- **Returns** – return potential.
+
+**Investment:**
+- **Manufacturing investment** – strong manufacturing investment.
+- **Growth** – manufacturing growth.
+- **Competitiveness** – competitiveness.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Manufacturing** – direct manufacturing benefits.
+- **Growth** – strong growth potential.
+- **FDI** – FDI-driven growth.
+- **Returns** – return potential.
+
+### Real Estate Sector
+
+Real estate development:
+
+**Demand:**
+- **Industrial real estate** – industrial real estate demand.
+- **Residential** – residential development.
+- **Commercial** – commercial real estate.
+- **Growth** – growth potential.
+
+**Companies:**
+- **Real estate developers** – real estate developers.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Demand** – strong demand fundamentals.
+- **Growth** – growth potential.
+- **Returns** – return potential.
+
+### Financial Sector
+
+Vietnamese banking sector:
+
+**Banks:**
+- **Major banks** – major Vietnamese banks.
+- **Growth potential** – growth potential.
+- **Penetration** – banking penetration.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Growth** – growth potential.
+- **Penetration** – market penetration.
+- **Economic growth** – economic growth benefits.
+- **Returns** – return potential.
+
+### Infrastructure
+
+Infrastructure development:
+
+**Needs:**
+- **Infrastructure needs** – infrastructure development needs.
+- **Investment** – investment requirements.
+- **Manufacturing** – manufacturing infrastructure.
+- **Growth** – growth support.
+
+**Companies:**
+- **Infrastructure companies** – infrastructure companies.
+- **Construction** – construction companies.
+- **Returns** – return potential.
+
+**Investment Case:**
+- **Investment** – infrastructure investment.
+- **Growth** – growth potential.
+- **Returns** – return potential.
+
+## Risk Factors
+
+### Market Risks
+
+Market risk factors:
+
+**Liquidity:**
+- **Limited liquidity** – limited market liquidity.
+- **Trading** – trading considerations.
+- **Impact** – impact on investment.
+- **Risk** – liquidity risk.
+
+**Market Development:**
+- **Early stage** – early stage market development.
+- **Regulation** – evolving regulation.
+- **Transparency** – transparency considerations.
+- **Risk** – market development risk.
+
+### Economic Risks
+
+Economic risk factors:
+
+**Manufacturing Dependence:**
+- **Manufacturing dependence** – dependence on manufacturing.
+- **External demand** – external demand dependence.
+- **Impact** – impact on economy.
+- **Risk** – manufacturing risk.
+
+**Currency:**
+- **Dong** – Vietnamese dong.
+- **FX risk** – foreign exchange risk.
+- **Impact** – currency impact.
+- **Hedging** – hedging considerations.
+
+**Growth:**
+- **Growth volatility** – growth volatility.
+- **Cyclical** – cyclical risks.
+- **External** – external demand.
+- **Impact** – impact on markets.
+
+## Investment Considerations
+
+### Stock Selection
+
+Selective stock selection:
+
+**Criteria:**
+- **Manufacturing exposure** – exposure to manufacturing trends.
+- **Quality** – quality companies.
+- **Fundamentals** – strong fundamentals.
+- **Valuation** – reasonable valuations.
+
+**Approach:**
+- **Selective** – highly selective approach.
+- **Bottom-up** – bottom-up stock selection.
+- **Manufacturing themes** – manufacturing theme exposure.
+- **Risk management** – strong risk management.
+
+### Risk Management
+
+Managing risks:
+
+**Approaches:**
+- **Selective exposure** – selective market exposure.
+- **Liquidity** – liquidity considerations.
+- **Position sizing** – careful position sizing.
+- **Monitoring** – continuous monitoring.
+
+**Hedging:**
+- **Currency** – currency hedging.
+- **Liquidity** – liquidity risk management.
+- **Portfolio** – portfolio risk management.
+- **Tools** – risk management tools.
+
+## Market Dynamics
+
+### Performance
+
+Market performance:
+
+**Characteristics:**
+- **Growth** – growth characteristics.
+- **Volatility** – volatility characteristics.
+- **Returns** – return characteristics.
+- **Manufacturing** – manufacturing growth benefits.
+
+**Recent:**
+- **Recent performance** – recent market performance.
+- **Factors** – performance drivers.
+- **Outlook** – performance outlook.
+- **Risks** – performance risks.
+
+### Evolution
+
+Market evolution:
+
+**Development:**
+- **Market development** – ongoing market development.
+- **Manufacturing** – manufacturing growth.
+- **Infrastructure** – infrastructure development.
+- **Sophistication** – increasing sophistication.
+
+**Opportunities:**
+- **Manufacturing** – manufacturing opportunities.
+- **FDI** – FDI-driven opportunities.
+- **Quality** – quality companies.
+- **Returns** – return potential.
+
+## Conclusion
+
+Vietnamese equity markets offer exposure to an attractive manufacturing growth story driven by supply chain diversification, cost advantages, and trade benefits. While market development remains early stage and liquidity can be limited, the manufacturing momentum provides strong growth potential. Success requires careful stock selection, focus on manufacturing beneficiaries, and understanding of market limitations.
+
+For investors, Vietnam requires understanding manufacturing trends, identifying beneficiaries, and managing market risks. Success requires selective approach, bottom-up stock selection, and strong risk management.
+
+The Vietnamese equity market will continue to evolve as manufacturing investment continues and market development progresses. Investors that successfully identify manufacturing opportunities while managing risks will be positioned to benefit from this manufacturing growth story.
+
+Investors should focus on:
+- **Manufacturing themes** – exposure to manufacturing growth themes.
+- **Quality companies** – quality companies with manufacturing exposure.
+- **Risk management** – strong risk management of market risks.
+- **Patience** – patience with market development.
+
+Vietnam offers a compelling manufacturing growth story but requires understanding of market limitations. Investors that successfully navigate this will be positioned to benefit from this emerging manufacturing hub.`,
+    date: formatDate(129),
+    author: 'Anastasia Petrova',
+    authorAvatar: getAuthorAvatar('Anastasia Petrova'),
+    type: 'expert',
+    readTime: calculateReadTime(
+      countWords(`# Vietnam Equity Markets: Manufacturing Hub and Growth Opportunities
+
+## Introduction
+
+Vietnam has emerged as one of the most attractive manufacturing destinations in Asia.`),
+    ),
+    imageUrl: getImage('markets', 276),
+    tags: ['Vietnam', 'Emerging Markets', 'Equities', 'Manufacturing', 'Asia'],
+  },
 ];
