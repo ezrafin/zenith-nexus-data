@@ -649,7 +649,9 @@
     "language": "语言",
     "theme": "主题",
     "closeMenu": "关闭菜单",
-    "openMenu": "打开菜单"
+    "openMenu": "打开菜单",
+    "bookmark": "书签",
+    "bookmarked": "已收藏"
   },
   "articles": {
     "keyTakeaways": "要点总结",

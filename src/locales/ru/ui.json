@@ -650,7 +650,9 @@
     "language": "Язык",
     "theme": "Тема",
     "closeMenu": "Закрыть меню",
-    "openMenu": "Открыть меню"
+    "openMenu": "Открыть меню",
+    "bookmark": "Закладка",
+    "bookmarked": "В закладках"
   },
   "articles": {
     "keyTakeaways": "Ключевые выводы",

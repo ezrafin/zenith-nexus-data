@@ -649,7 +649,9 @@
     "language": "Langue",
     "theme": "Thème",
     "closeMenu": "Fermer le menu",
-    "openMenu": "Ouvrir le menu"
+    "openMenu": "Ouvrir le menu",
+    "bookmark": "Marquer",
+    "bookmarked": "Enregistré"
   },
   "articles": {
     "keyTakeaways": "Points clés",

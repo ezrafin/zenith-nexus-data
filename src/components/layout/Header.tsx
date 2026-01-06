@@ -392,10 +392,10 @@ export function Header() {
               </DropdownMenu>
             ) : (
               <>
-                <Link to="/auth/login" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/auth/login" className="inline-flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors leading-tight">
                   {t('buttons.signIn')}
                 </Link>
-                <Link to="/auth/register" className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:shadow-primary/25">
+                <Link to="/auth/register" className="inline-flex items-center px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 leading-tight">
                   {t('buttons.register')}
                 </Link>
               </>

@@ -127,13 +127,13 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
       </motion.div>
       <AnimatePresence mode="wait">
         <motion.span
-          key={isBookmarked ? t('toast.bookmarked', { ns: 'ui' }) : t('actions.bookmark', { ns: 'forum' })}
+          key={isBookmarked ? t('common.bookmarked') : t('common.bookmark')}
           initial={prefersReducedMotion() ? {} : { opacity: 0, x: -5 }}
           animate={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
           exit={prefersReducedMotion() ? {} : { opacity: 0, x: 5 }}
           transition={transitions.fast}
         >
-          {isBookmarked ? t('actions.bookmarked', { ns: 'forum' }) : t('actions.bookmark', { ns: 'forum' })}
+          {isBookmarked ? t('common.bookmarked') : t('common.bookmark')}
         </motion.span>
       </AnimatePresence>
       {isBookmarked && !prefersReducedMotion() && (

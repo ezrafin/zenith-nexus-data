@@ -649,7 +649,9 @@
     "language": "Language",
     "theme": "Theme",
     "closeMenu": "Close menu",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "bookmark": "Bookmark",
+    "bookmarked": "Bookmarked"
   },
   "articles": {
     "keyTakeaways": "Key Takeaways",

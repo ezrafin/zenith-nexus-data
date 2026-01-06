@@ -44,7 +44,6 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
-
         {/* Story */}
         <section className="container-wide section-spacing-sm">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

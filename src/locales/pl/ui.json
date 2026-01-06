@@ -649,7 +649,9 @@
     "language": "Język",
     "theme": "Motyw",
     "closeMenu": "Zamknij menu",
-    "openMenu": "Otwórz menu"
+    "openMenu": "Otwórz menu",
+    "bookmark": "Zakładka",
+    "bookmarked": "Zapisane"
   },
   "articles": {
     "keyTakeaways": "Kluczowe wnioski",
