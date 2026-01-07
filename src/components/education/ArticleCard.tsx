@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Clock, Calendar, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Article, getArticleUrl } from '@/data/educationArticles';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -29,7 +29,9 @@ export function ArticleCard({ article, isCompleted = false, onToggleCompleted }:
   };
 
   return (
-    <article className="glass-card p-6 flex flex-col h-full">
+    <article className={`glass-card p-6 flex flex-col h-full transition-colors ${
+      isCompleted ? 'border-2 border-emerald-500' : ''
+    }`}>
       {/* Header badges */}
       <div className="flex items-center gap-2 mb-4">
         <span className="text-xs px-2.5 py-1 rounded-full bg-secondary/80 text-foreground font-medium">
@@ -62,15 +64,9 @@ export function ArticleCard({ article, isCompleted = false, onToggleCompleted }:
       {/* Footer */}
       <div className="flex items-center justify-between pt-3 border-t border-border/50">
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1">
-            <Clock className="h-3.5 w-3.5" />
-            {article.readTime}
-          </span>
+          <span>{article.readTime}</span>
           {isAdvanced && 'lastUpdated' in article && (
-            <span className="flex items-center gap-1">
-              <Calendar className="h-3.5 w-3.5" />
-              {article.lastUpdated}
-            </span>
+            <span>{article.lastUpdated}</span>
           )}
         </div>
         

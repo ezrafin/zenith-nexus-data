@@ -135,8 +135,8 @@ export default function AdvancedArticlesPage() {
                       </div>
                       <span className="text-xs text-muted-foreground">
                         {t('advanced.yourProgressSummary', {
-                          completedCount,
-                          totalCount,
+                          completed: completedCount,
+                          total: totalCount,
                         })}
                       </span>
                     </div>
