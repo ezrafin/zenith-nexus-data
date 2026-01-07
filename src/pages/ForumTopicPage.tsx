@@ -61,7 +61,7 @@ export default function ForumTopicPage() {
   
   // Bill collection: forum_topic_visit
   const { collectBill } = useCollectibleBills();
-  usePageBillCollection({ billId: 'forum_topic_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'forum_topic_visit' });
   
   // Wrapper for bookmark to trigger bill collection
   const handleBookmark = async () => {
@@ -487,6 +487,7 @@ export default function ForumTopicPage() {
           )}
         </div>
       </section>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

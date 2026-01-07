@@ -21,7 +21,7 @@ export default function CareersPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   
   // Bill collection: info_page_visit
-  usePageBillCollection({ billId: 'info_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'info_page_visit' });
   const [selectedPosition, setSelectedPosition] = useState('');
 
   const openApplicationForm = (position: string) => {
@@ -102,6 +102,7 @@ export default function CareersPage() {
           />
         </DialogContent>
       </Dialog>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

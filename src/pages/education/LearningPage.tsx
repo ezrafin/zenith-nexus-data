@@ -35,7 +35,7 @@ export default function LearningPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   
   // Bill collection: learning_page_visit
-  usePageBillCollection({ billId: 'learning_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'learning_page_visit' });
 
   // Calculate category counts based on current level filter
   const categoriesWithCounts = useMemo(() => {
@@ -237,6 +237,7 @@ export default function LearningPage() {
           </div>
         </section>
       </div>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

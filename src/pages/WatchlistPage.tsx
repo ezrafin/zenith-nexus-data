@@ -51,7 +51,7 @@ export default function WatchlistPage() {
   
   // Bill collection: watchlists_page_visit
   const { collectBill } = useCollectibleBills();
-  usePageBillCollection({ billId: 'watchlists_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'watchlists_page_visit' });
 
   useEffect(() => {
     // Wait for auth to finish loading before deciding what to do
@@ -381,6 +381,7 @@ export default function WatchlistPage() {
           )}
         </div>
       </div>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

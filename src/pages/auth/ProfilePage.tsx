@@ -19,7 +19,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 export default function ProfilePage() {
   // Bill collection: profile_own_visit
-  usePageBillCollection({ billId: 'profile_own_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'profile_own_visit' });
   const { user, profile, loading: authLoading, updateProfile } = useUser();
   const { t } = useTranslation({ namespace: 'ui' });
   const [displayName, setDisplayName] = useState('');
@@ -351,6 +351,7 @@ export default function ProfilePage() {
         onSelect={handleAvatarSelect}
         userId={user.id}
       />
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

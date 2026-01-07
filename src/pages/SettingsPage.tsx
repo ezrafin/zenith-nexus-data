@@ -16,7 +16,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function SettingsPage() {
   // Bill collection: settings_visit
-  usePageBillCollection({ billId: 'settings_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'settings_visit' });
   const { user } = useUser();
   const { preferences, loading, updatePreferences } = useUserPreferences();
   const { t } = useTranslation({ namespace: 'ui' });

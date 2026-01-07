@@ -107,21 +107,15 @@ export function BillVisual({
                 />
               )}
               
-              {/* $100 Bill Design */}
-              <div className={cn(
-                'w-full h-full rounded-lg border-2 flex flex-col items-center justify-center font-bold text-xs md:text-sm lg:text-base',
-                rarity === 'legendary' 
-                  ? 'bg-gradient-to-br from-amber-50 to-amber-100 border-amber-400 text-amber-900 dark:from-amber-900/30 dark:to-amber-800/30 dark:border-amber-500 dark:text-amber-200'
-                  : 'bg-gradient-to-br from-green-50 to-green-100 border-green-400 text-green-900 dark:from-green-900/30 dark:to-green-800/30 dark:border-green-500 dark:text-green-200'
-              )}>
-                <div className="text-center leading-tight">
-                  <div className="text-[0.6em] md:text-[0.7em] lg:text-[0.8em]">$</div>
-                  <div className="text-[0.8em] md:text-[1em] lg:text-[1.2em]">100</div>
-                </div>
-                {rarity === 'legendary' && (
-                  <div className="absolute -top-1 -right-1 text-[0.5em]">⭐</div>
-                )}
-              </div>
+              {/* Coin Image */}
+              <img 
+                src="/coin.png"
+                alt="Coin"
+                className="w-full h-full object-contain"
+              />
+              {rarity === 'legendary' && (
+                <div className="absolute -top-1 -right-1 text-lg">⭐</div>
+              )}
             </div>
 
             {/* Particle effects on click */}

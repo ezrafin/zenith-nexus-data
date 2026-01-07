@@ -5,7 +5,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function AboutPage() {
   // Bill collection: info_page_visit
-  usePageBillCollection({ billId: 'info_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'info_page_visit' });
   const { t } = useTranslation({ namespace: 'ui' });
 
   const values = [
@@ -102,6 +102,7 @@ export default function AboutPage() {
         </section>
 
       </div>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

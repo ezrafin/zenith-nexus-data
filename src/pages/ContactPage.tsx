@@ -14,7 +14,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function ContactPage() {
   // Bill collection: info_page_visit
-  usePageBillCollection({ billId: 'info_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'info_page_visit' });
   const { t } = useTranslation({ namespace: 'ui' });
   const { user } = useAuth();
   const [formData, setFormData] = useState({

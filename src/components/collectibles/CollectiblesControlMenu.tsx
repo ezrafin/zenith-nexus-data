@@ -54,11 +54,9 @@ export function CollectiblesControlMenu() {
           <SheetTrigger asChild>
             <motion.button
               className={cn(
-                'relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full border-2 shadow-lg overflow-visible',
-                'bg-gradient-to-br from-green-50 to-green-100 border-green-400 text-green-900',
-                'dark:from-green-900/30 dark:to-green-800/30 dark:border-green-500 dark:text-green-200',
+                'relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg overflow-visible',
                 'hover:scale-105 transition-all duration-200 cursor-pointer',
-                'focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2',
+                'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
                 'active:scale-95'
               )}
               whileHover={{ 
@@ -74,7 +72,7 @@ export function CollectiblesControlMenu() {
             >
               {/* Ripple effect on click */}
               <motion.div
-                className="absolute inset-0 rounded-full bg-green-400/20"
+                className="absolute inset-0 rounded-full bg-primary/20"
                 initial={{ scale: 0, opacity: 0.6 }}
                 whileTap={{
                   scale: 1.5,
@@ -86,14 +84,13 @@ export function CollectiblesControlMenu() {
                 }}
               />
 
-              {/* Bill Icon */}
-              <motion.div 
-                className="text-center font-bold text-lg md:text-xl relative z-10"
+              {/* Menu Image */}
+              <motion.img 
+                src="/menu.png"
+                alt="Menu"
+                className="w-full h-full object-contain relative z-10"
                 whileTap={{ scale: 0.9 }}
-              >
-                <div className="text-[0.6em]">$</div>
-                <div className="text-[0.8em]">100</div>
-              </motion.div>
+              />
 
               {/* Progress Badge */}
               <motion.div
@@ -136,24 +133,82 @@ export function CollectiblesControlMenu() {
                 </div>
               </div>
 
-              {/* Progress Overview */}
-              <div className="mb-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium">{t('billCollection.progress')}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {collectedCount} / {totalCount}
-                  </span>
-                </div>
-                <div className="w-full h-3 bg-secondary rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-green-500 to-green-600"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progressPercent}%` }}
-                    transition={{ duration: 0.5, ease: 'easeOut' }}
-                  />
-                </div>
-                <div className="mt-2 text-xs text-muted-foreground">
-                  {Math.round(progressPercent)}% {t('billCollection.complete')}
+              {/* Progress Overview - Circular */}
+              <div className="mb-6 flex flex-col items-center">
+                <div className="relative w-48 h-48 md:w-56 md:h-56 mb-4">
+                  {/* Circular Progress Background */}
+                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="90"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="8"
+                      className="text-secondary"
+                    />
+                    <motion.circle
+                      cx="100"
+                      cy="100"
+                      r="90"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="8"
+                      strokeLinecap="round"
+                      className="text-emerald-500"
+                      initial={{ pathLength: 0 }}
+                      animate={{ pathLength: progressPercent / 100 }}
+                      transition={{ duration: 0.5, ease: 'easeOut' }}
+                      strokeDasharray={`${2 * Math.PI * 90}`}
+                    />
+                  </svg>
+                  
+                  {/* Dollar images around circle */}
+                  {Array.from({ length: totalCount }).map((_, index) => {
+                    const angle = (index * 360) / totalCount;
+                    const radians = ((angle - 90) * Math.PI) / 180; // -90 to start from top
+                    const radius = 90;
+                    const centerX = 100;
+                    const centerY = 100;
+                    const x = centerX + radius * Math.cos(radians);
+                    const y = centerY + radius * Math.sin(radians);
+                    const isCollected = index < collectedCount;
+                    
+                    return (
+                      <motion.img
+                        key={index}
+                        src="/coin.png"
+                        alt="Coin"
+                        className={`absolute w-6 h-6 md:w-8 md:h-8 transition-opacity pointer-events-none ${
+                          isCollected ? 'opacity-100' : 'opacity-30'
+                        }`}
+                        style={{
+                          left: `${x}%`,
+                          top: `${y}%`,
+                          transform: 'translate(-50%, -50%)',
+                        }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ 
+                          scale: isCollected ? 1 : 0.6,
+                          opacity: isCollected ? 1 : 0.3
+                        }}
+                        transition={{ 
+                          delay: index * 0.02,
+                          duration: 0.3 
+                        }}
+                      />
+                    );
+                  })}
+                  
+                  {/* Center counter */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <div className="text-3xl md:text-4xl font-bold text-foreground">
+                      {collectedCount}/{totalCount}
+                    </div>
+                    <div className="text-xs md:text-sm text-muted-foreground mt-1">
+                      {t('billCollection.complete')}
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -200,23 +255,18 @@ export function CollectiblesControlMenu() {
                             : 'bg-card border-border hover:bg-secondary/50'
                         )}
                       >
-                        {/* Bill Icon */}
-                        <div
-                          className={cn(
-                            'flex-shrink-0 w-10 h-10 rounded-lg border-2 flex items-center justify-center font-bold text-xs',
-                            isCollected
-                              ? isLegendary
-                                ? 'bg-gradient-to-br from-amber-50 to-amber-100 border-amber-400 text-amber-900 dark:from-amber-900/30 dark:to-amber-800/30 dark:border-amber-500 dark:text-amber-200'
-                                : 'bg-gradient-to-br from-green-50 to-green-100 border-green-400 text-green-900 dark:from-green-900/30 dark:to-green-800/30 dark:border-green-500 dark:text-green-200'
-                              : 'bg-muted border-muted-foreground/20 text-muted-foreground'
-                          )}
-                        >
-                          <div className="text-center leading-tight">
-                            <div className="text-[0.5em]">$</div>
-                            <div className="text-[0.7em]">100</div>
-                          </div>
+                        {/* Coin Icon */}
+                        <div className="relative flex-shrink-0 w-10 h-10">
+                          <img 
+                            src="/coin.png"
+                            alt="Coin"
+                            className={cn(
+                              'w-full h-full object-contain',
+                              !isCollected && 'opacity-30 grayscale'
+                            )}
+                          />
                           {isLegendary && (
-                            <div className="absolute -top-0.5 -right-0.5 text-[0.4em]">⭐</div>
+                            <div className="absolute -top-0.5 -right-0.5 text-xs">⭐</div>
                           )}
                         </div>
 

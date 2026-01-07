@@ -37,7 +37,7 @@ export default function AnalyticsDetailPage() {
   const { addToHistory } = useReadingHistory();
   
   // Bill collection: analytics_read
-  usePageBillCollection({ billId: 'analytics_read' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'analytics_read' });
   
   // Fetch related content based on article type/category
   const { relatedItems } = useRelatedContent({
@@ -293,6 +293,7 @@ export default function AnalyticsDetailPage() {
         </div>
       </article>
       {slug && <LegendaryBillSpawn articleId={slug} articleType="analytics" />}
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

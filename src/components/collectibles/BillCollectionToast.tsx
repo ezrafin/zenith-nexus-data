@@ -31,18 +31,13 @@ export function BillCollectionToast({
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-            className={`
-              flex items-center justify-center w-12 h-12 rounded-lg border-2 font-bold text-lg
-              ${isLegendary 
-                ? 'bg-gradient-to-br from-amber-50 to-amber-100 border-amber-400 text-amber-900 dark:from-amber-900/30 dark:to-amber-800/30 dark:border-amber-500 dark:text-amber-200'
-                : 'bg-gradient-to-br from-green-50 to-green-100 border-green-400 text-green-900 dark:from-green-900/30 dark:to-green-800/30 dark:border-green-500 dark:text-green-200'
-              }
-            `}
+            className="relative w-12 h-12"
           >
-            <div className="text-center leading-tight">
-              <div className="text-xs">$</div>
-              <div className="text-base">100</div>
-            </div>
+            <img 
+              src="/coin.png"
+              alt="Coin"
+              className="w-full h-full object-contain"
+            />
             {isLegendary && (
               <div className="absolute -top-1 -right-1 text-xs">⭐</div>
             )}
@@ -92,17 +87,12 @@ export async function showBillCollectionToast(
   
   toast.success(
     <div className="flex items-center gap-3">
-      <div className={`
-        flex items-center justify-center w-12 h-12 rounded-lg border-2 font-bold text-lg
-        ${isLegendary 
-          ? 'bg-gradient-to-br from-amber-50 to-amber-100 border-amber-400 text-amber-900 dark:from-amber-900/30 dark:to-amber-800/30 dark:border-amber-500 dark:text-amber-200'
-          : 'bg-gradient-to-br from-green-50 to-green-100 border-green-400 text-green-900 dark:from-green-900/30 dark:to-green-800/30 dark:border-green-500 dark:text-green-200'
-        }
-      `}>
-        <div className="text-center leading-tight">
-          <div className="text-xs">$</div>
-          <div className="text-base">100</div>
-        </div>
+      <div className="relative w-12 h-12">
+        <img 
+          src="/coin.png"
+          alt="Coin"
+          className="w-full h-full object-contain"
+        />
         {isLegendary && (
           <div className="absolute -top-1 -right-1 text-xs">⭐</div>
         )}

@@ -30,7 +30,7 @@ export default function BookmarksPage() {
   
   // Bill collection: bookmarks_page_visit
   const { collectBill } = useCollectibleBills();
-  usePageBillCollection({ billId: 'bookmarks_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'bookmarks_page_visit' });
 
   useEffect(() => {
     if (user) {
@@ -260,6 +260,7 @@ export default function BookmarksPage() {
           </Tabs>
         </div>
       </div>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

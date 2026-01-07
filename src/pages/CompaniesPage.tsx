@@ -17,7 +17,7 @@ const ITEMS_PER_PAGE = 15;
 export default function CompaniesPage() {
   const { t } = useTranslation({ namespace: 'ui' });
   // Bill collection: companies_page_visit
-  usePageBillCollection({ billId: 'companies_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'companies_page_visit' });
   const [selectedType, setSelectedType] = useState<OrganizationType | 'all'>('all');
   const [selectedRegion, setSelectedRegion] = useState<Region | 'all'>('all');
   const [sortBy, setSortBy] = useState<SortOption>('combined');
@@ -241,6 +241,7 @@ export default function CompaniesPage() {
           )}
         </div>
       </section>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

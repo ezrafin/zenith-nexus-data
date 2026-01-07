@@ -11,7 +11,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 export default function VideoLibraryPage() {
   const { t } = useTranslation({ namespace: 'ui' });
   // Bill collection: video_library_visit
-  usePageBillCollection({ billId: 'video_library_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'video_library_visit' });
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
@@ -127,6 +127,7 @@ export default function VideoLibraryPage() {
           </div>
         </section>
       </div>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

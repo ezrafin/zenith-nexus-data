@@ -15,7 +15,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 const ITEMS_PER_PAGE = 15;
 export default function NewsPage() {
   // Bill collection: news_page_visit
-  usePageBillCollection({ billId: 'news_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'news_page_visit' });
   const { t, language } = useTranslation({ namespace: 'ui' });
   const [activeFilter, setActiveFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
@@ -188,5 +188,6 @@ export default function NewsPage() {
             </div>}
         </div>
       </section>
+      {CoinComponent && <CoinComponent />}
     </Layout>;
 }

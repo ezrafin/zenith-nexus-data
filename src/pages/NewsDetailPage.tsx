@@ -34,7 +34,7 @@ export default function NewsDetailPage() {
   const { addToHistory } = useReadingHistory();
   
   // Bill collection: news_article_read
-  usePageBillCollection({ billId: 'news_article_read' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'news_article_read' });
 
   useEffect(() => {
     async function loadNews() {
@@ -203,6 +203,7 @@ export default function NewsDetailPage() {
         </div>
       </article>
       {id && <LegendaryBillSpawn articleId={id} articleType="news" />}
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }

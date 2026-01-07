@@ -15,7 +15,7 @@ const ITEMS_PER_PAGE = 15;
 
 export default function AnalyticsPage() {
   // Bill collection: analytics_page_visit
-  usePageBillCollection({ billId: 'analytics_page_visit' });
+  const { CoinComponent } = usePageBillCollection({ billId: 'analytics_page_visit' });
   const { t } = useTranslation({ namespace: 'analytics' });
   const { t: tUi } = useTranslation({ namespace: 'ui' });
   const [activeFilter, setActiveFilter] = useState('all');
@@ -189,6 +189,7 @@ export default function AnalyticsPage() {
           )}
         </div>
       </section>
+      {CoinComponent && <CoinComponent />}
     </Layout>
   );
 }
