@@ -141,72 +141,32 @@ export function CollectiblesControlMenu() {
                     <circle
                       cx="100"
                       cy="100"
-                      r="90"
+                      r="85"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="8"
+                      strokeWidth="16"
                       className="text-secondary"
                     />
                     <motion.circle
                       cx="100"
                       cy="100"
-                      r="90"
+                      r="85"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="8"
+                      strokeWidth="16"
                       strokeLinecap="round"
                       className="text-emerald-500"
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: progressPercent / 100 }}
                       transition={{ duration: 0.5, ease: 'easeOut' }}
-                      strokeDasharray={`${2 * Math.PI * 90}`}
+                      strokeDasharray={`${2 * Math.PI * 85}`}
                     />
                   </svg>
-                  
-                  {/* Dollar images around circle */}
-                  {Array.from({ length: totalCount }).map((_, index) => {
-                    const angle = (index * 360) / totalCount;
-                    const radians = ((angle - 90) * Math.PI) / 180; // -90 to start from top
-                    const radius = 90;
-                    const centerX = 100;
-                    const centerY = 100;
-                    const x = centerX + radius * Math.cos(radians);
-                    const y = centerY + radius * Math.sin(radians);
-                    const isCollected = index < collectedCount;
-                    
-                    return (
-                      <motion.img
-                        key={index}
-                        src="/coin.png"
-                        alt="Coin"
-                        className={`absolute w-6 h-6 md:w-8 md:h-8 transition-opacity pointer-events-none ${
-                          isCollected ? 'opacity-100' : 'opacity-30'
-                        }`}
-                        style={{
-                          left: `${x}%`,
-                          top: `${y}%`,
-                          transform: 'translate(-50%, -50%)',
-                        }}
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ 
-                          scale: isCollected ? 1 : 0.6,
-                          opacity: isCollected ? 1 : 0.3
-                        }}
-                        transition={{ 
-                          delay: index * 0.02,
-                          duration: 0.3 
-                        }}
-                      />
-                    );
-                  })}
                   
                   {/* Center counter */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <div className="text-3xl md:text-4xl font-bold text-foreground">
                       {collectedCount}/{totalCount}
-                    </div>
-                    <div className="text-xs md:text-sm text-muted-foreground mt-1">
-                      {t('billCollection.complete')}
                     </div>
                   </div>
                 </div>
