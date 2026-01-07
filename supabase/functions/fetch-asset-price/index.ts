@@ -55,6 +55,8 @@ async function fetchFinnhubPrice(symbol: string, marketType: string): Promise<Pr
       finnhubSymbol = COMMODITY_SYMBOL_MAP[symbol].finnhub || symbol;
     }
     
+    console.log(`Trying Finnhub for ${symbol} (as ${finnhubSymbol})`);
+    
     const response = await fetch(
       `https://finnhub.io/api/v1/quote?symbol=${finnhubSymbol}&token=${apiKey}`
     );
@@ -65,6 +67,7 @@ async function fetchFinnhubPrice(symbol: string, marketType: string): Promise<Pr
     }
     
     const data = await response.json();
+    console.log(`Finnhub response for ${symbol}:`, JSON.stringify(data));
     
     // Check if we have valid data (c = current price)
     if (data && data.c && data.c > 0) {
@@ -80,7 +83,7 @@ async function fetchFinnhubPrice(symbol: string, marketType: string): Promise<Pr
       };
     }
     
-    console.log(`Finnhub returned no price data for ${symbol}`);
+    console.log(`Finnhub returned no price data for ${symbol} (c=${data?.c})`);
     return null;
   } catch (error) {
     console.error(`Finnhub error for ${symbol}:`, error);
