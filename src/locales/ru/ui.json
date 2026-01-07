@@ -53,7 +53,9 @@
     "bookmarks": "Закладки",
     "settings": "Настройки",
     "achievements": "Достижения",
-    "view": "Просмотр"
+    "view": "Просмотр",
+    "menu": "Меню",
+    "retry": "Попробовать снова"
   },
   "labels": {
     "email": "Электронная почта",
@@ -427,6 +429,8 @@
     "discussionsNoneSubtitle": "Начните обсуждение по одному из активов watchlist, чтобы увидеть его здесь",
     "noItems": "В этой watchlist нет элементов",
     "addInstruments": "Добавить инструменты",
+    "itemDeleteSuccess": "Элемент удалён из списка",
+    "itemDeleteError": "Не удалось удалить элемент",
     "marketType": {
       "indices": "Индексы",
       "stocks": "Акции",

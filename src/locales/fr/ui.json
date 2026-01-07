@@ -53,7 +53,9 @@
     "bookmarks": "Favoris",
     "settings": "Paramètres",
     "achievements": "Succès",
-    "view": "Voir"
+    "view": "Voir",
+    "menu": "Menu",
+    "retry": "Réessayer"
   },
   "labels": {
     "email": "E-mail",
@@ -426,6 +428,8 @@
     "discussionsNoneSubtitle": "Lancez une discussion sur un actif de votre watchlist pour la voir ici",
     "noItems": "Aucun élément dans cette watchlist",
     "addInstruments": "Ajouter des instruments",
+    "itemDeleteSuccess": "Élément retiré de la watchlist",
+    "itemDeleteError": "Échec du retrait",
     "marketType": {
       "indices": "Indices",
       "stocks": "Actions",

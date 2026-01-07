@@ -60,7 +60,9 @@
     "bookmarks": "Bookmarks",
     "settings": "Settings",
     "achievements": "Achievements",
-    "view": "View"
+    "view": "View",
+    "menu": "Menu",
+    "retry": "Try Again"
   },
   "labels": {
     "email": "Email",
@@ -528,6 +530,8 @@
     "discussionsNoneSubtitle": "Start a discussion about one of your watchlist assets to see it here",
     "noItems": "No items in this watchlist",
     "addInstruments": "Add Instruments",
+    "itemDeleteSuccess": "Item removed from watchlist",
+    "itemDeleteError": "Failed to remove item",
     "marketType": {
       "indices": "Indices",
       "stocks": "Stocks",
