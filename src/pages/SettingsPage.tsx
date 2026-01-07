@@ -15,8 +15,8 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 
 export default function SettingsPage() {
-  // Bill collection: settings_page_visit
-  usePageBillCollection({ billId: 'settings_page_visit' });
+  // Bill collection: settings_visit
+  usePageBillCollection({ billId: 'settings_visit' });
   const { user } = useUser();
   const { preferences, loading, updatePreferences } = useUserPreferences();
   const { t } = useTranslation({ namespace: 'ui' });

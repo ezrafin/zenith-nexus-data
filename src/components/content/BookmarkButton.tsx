@@ -82,7 +82,7 @@ export function BookmarkButton({ contentType, contentId, className }: BookmarkBu
         toast.success(t('toast.addedToBookmarks', { ns: 'ui' }));
         
         // Trigger bill collection for creating bookmark
-        await collectBill('bookmark_create', {
+        await collectBill('bookmark_add', {
           action: 'create_bookmark',
           metadata: { contentType, contentId },
         });
