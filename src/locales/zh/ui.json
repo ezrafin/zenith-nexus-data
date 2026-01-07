@@ -53,7 +53,9 @@
     "bookmarks": "书签",
     "settings": "设置",
     "achievements": "成就",
-    "view": "查看"
+    "view": "查看",
+    "menu": "菜单",
+    "retry": "重试"
   },
   "labels": {
     "email": "电子邮件",
@@ -426,6 +428,8 @@
     "discussionsNoneSubtitle": "围绕某个自选资产发起讨论即可在此看到",
     "noItems": "该自选列表暂无项目",
     "addInstruments": "添加资产",
+    "itemDeleteSuccess": "已从自选列表中移除",
+    "itemDeleteError": "移除失败",
     "marketType": {
       "indices": "指数",
       "stocks": "股票",

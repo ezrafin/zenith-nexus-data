@@ -60,7 +60,9 @@
     "bookmarks": "Lesezeichen",
     "settings": "Einstellungen",
     "achievements": "Erfolge",
-    "view": "Anzeigen"
+    "view": "Anzeigen",
+    "menu": "Menü",
+    "retry": "Erneut versuchen"
   },
   "labels": {
     "email": "E-Mail",
@@ -433,6 +435,8 @@
     "discussionsNoneSubtitle": "Starte eine Diskussion zu einem Asset deiner Watchlist, um sie hier zu sehen",
     "noItems": "Keine Einträge in dieser Watchlist",
     "addInstruments": "Instrumente hinzufügen",
+    "itemDeleteSuccess": "Eintrag aus Watchlist entfernt",
+    "itemDeleteError": "Entfernen fehlgeschlagen",
     "marketType": {
       "indices": "Indizes",
       "stocks": "Aktien",
