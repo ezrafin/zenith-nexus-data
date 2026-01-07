@@ -169,6 +169,22 @@ export default function WatchlistPage() {
     }
   };
 
+  const deleteWatchlistItem = async (watchlistId: string, itemId: string) => {
+    try {
+      const { error } = await supabase.from('watchlist_items').delete().eq('id', itemId);
+      if (error) throw error;
+
+      setWatchlists(watchlists.map((w) => 
+        w.id === watchlistId 
+          ? { ...w, items: w.items.filter((item) => item.id !== itemId) }
+          : w
+      ));
+      toast.success(t('watchlistPage.itemDeleteSuccess', { defaultValue: 'Item removed from watchlist' }));
+    } catch (error) {
+      toast.error(t('watchlistPage.itemDeleteError', { defaultValue: 'Failed to remove item' }));
+    }
+  };
+
   if (!user) {
     return (
       <Layout>
@@ -297,6 +313,7 @@ export default function WatchlistPage() {
                   key={watchlist.id}
                   watchlist={watchlist}
                   onDelete={deleteWatchlist}
+                  onDeleteItem={deleteWatchlistItem}
                 />
               ))}
             </div>
@@ -368,7 +385,7 @@ export default function WatchlistPage() {
   );
 }
 
-function WatchlistCard({ watchlist, onDelete }: { watchlist: Watchlist; onDelete: (id: string) => void }) {
+function WatchlistCard({ watchlist, onDelete, onDeleteItem }: { watchlist: Watchlist; onDelete: (id: string) => void; onDeleteItem: (watchlistId: string, itemId: string) => void }) {
   const { t } = useTranslation({ namespace: 'ui' });
 
   return (
@@ -408,7 +425,7 @@ function WatchlistCard({ watchlist, onDelete }: { watchlist: Watchlist; onDelete
       ) : (
         <div className="space-y-2">
           {watchlist.items.map((item) => (
-            <WatchlistItemRow key={item.id} item={item} />
+            <WatchlistItemRow key={item.id} item={item} watchlistId={watchlist.id} onDelete={onDeleteItem} />
           ))}
         </div>
       )}
@@ -416,7 +433,7 @@ function WatchlistCard({ watchlist, onDelete }: { watchlist: Watchlist; onDelete
   );
 }
 
-function WatchlistItemRow({ item }: { item: WatchlistItem }) {
+function WatchlistItemRow({ item, watchlistId, onDelete }: { item: WatchlistItem; watchlistId: string; onDelete: (watchlistId: string, itemId: string) => void }) {
   const [price, setPrice] = useState<{ price: number; changePercent: number } | null>(null);
   const [loading, setLoading] = useState(true);
   const { t } = useTranslation({ namespace: 'ui' });
@@ -452,39 +469,55 @@ function WatchlistItemRow({ item }: { item: WatchlistItem }) {
     return `$${value.toFixed(4)}`;
   };
 
+  const handleDelete = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onDelete(watchlistId, item.id);
+  };
+
   return (
-    <Link
-      to={`/markets/${item.market_type}`}
-      className="flex items-center justify-between p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-colors"
-    >
-      <div className="flex items-center gap-3">
-        <Icon className="h-5 w-5 text-primary" />
-        <div>
-          <span className="font-mono font-medium">{item.symbol}</span>
-          <span className="text-xs text-muted-foreground ml-2 capitalize">
-            {t(`watchlistPage.marketType.${item.market_type as keyof typeof marketIcons}`) || item.market_type}
-          </span>
-        </div>
-      </div>
-      <div className="text-right">
-        {loading ? (
-          <div className="h-5 w-16 bg-muted animate-pulse rounded"></div>
-        ) : price ? (
-          <div className="flex flex-col items-end">
-            <span className="font-mono font-semibold">{formatPrice(price.price)}</span>
-            {price.changePercent !== 0 && (
-              <span className={`text-xs ${price.changePercent >= 0 ? 'text-green-500' : 'text-red-500'}`}>
-                {price.changePercent >= 0 ? '+' : ''}{price.changePercent.toFixed(2)}%
-              </span>
-            )}
+    <div className="flex items-center justify-between p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-colors gap-2">
+      <Link
+        to={`/markets/${item.market_type}`}
+        className="flex items-center justify-between flex-1 min-w-0"
+      >
+        <div className="flex items-center gap-3 min-w-0">
+          <Icon className="h-5 w-5 text-primary flex-shrink-0" />
+          <div className="min-w-0">
+            <span className="font-mono font-medium">{item.symbol}</span>
+            <span className="text-xs text-muted-foreground ml-2 capitalize">
+              {t(`watchlistPage.marketType.${item.market_type as keyof typeof marketIcons}`) || item.market_type}
+            </span>
           </div>
-        ) : (
-          <Button variant="ghost" size="sm">
-            {t('buttons.view', { defaultValue: 'View' })}
-          </Button>
-        )}
-      </div>
-    </Link>
+        </div>
+        <div className="text-right flex-shrink-0">
+          {loading ? (
+            <div className="h-5 w-16 bg-muted animate-pulse rounded"></div>
+          ) : price ? (
+            <div className="flex flex-col items-end">
+              <span className="font-mono font-semibold">{formatPrice(price.price)}</span>
+              {price.changePercent !== 0 && (
+                <span className={`text-xs ${price.changePercent >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                  {price.changePercent >= 0 ? '+' : ''}{price.changePercent.toFixed(2)}%
+                </span>
+              )}
+            </div>
+          ) : (
+            <Button variant="ghost" size="sm">
+              {t('buttons.view', { defaultValue: 'View' })}
+            </Button>
+          )}
+        </div>
+      </Link>
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={handleDelete}
+        className="text-destructive hover:text-destructive flex-shrink-0"
+      >
+        <Trash2 className="h-4 w-4" />
+      </Button>
+    </div>
   );
 }
 

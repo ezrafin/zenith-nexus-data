@@ -13,7 +13,7 @@ interface MarketTableProps {
   marketType?: 'indices' | 'stocks' | 'crypto' | 'commodities' | 'currencies';
 }
 
-type SortKey = 'symbol' | 'name' | 'price' | 'change' | 'changePercent' | 'volume';
+type SortKey = 'symbol' | 'name' | 'price' | 'changePercent' | 'volume';
 type SortDirection = 'asc' | 'desc';
 
 export function MarketTable({ data, showVolume = false, showChart = true, marketType = 'stocks' }: MarketTableProps) {
@@ -39,7 +39,6 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
         comparison = a[sortKey].localeCompare(b[sortKey]);
         break;
       case 'price':
-      case 'change':
       case 'changePercent':
         comparison = a[sortKey] - b[sortKey];
         break;
@@ -108,9 +107,9 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                   <div className="font-mono font-medium">{formatPrice(item.price)}</div>
                 </div>
                 <div>
-                  <span className="text-xs text-muted-foreground">{t('marketTable.change')}</span>
+                  <span className="text-xs text-muted-foreground">%</span>
                   <div className={`font-mono ${isPositive ? 'text-positive' : 'text-negative'}`}>
-                    {isPositive ? '+' : ''}{formatPrice(item.change)}
+                    {isPositive ? '+' : ''}{Math.abs(item.changePercent).toFixed(2)}%
                   </div>
                 </div>
                 {showVolume && (
@@ -161,14 +160,6 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
               </th>
               <th className="text-right px-3 md:px-4 py-2 md:py-3">
                 <button
-                  onClick={() => handleSort('change')}
-                  className="flex items-center gap-1 justify-end text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t('marketTable.change')} <SortIcon column="change" />
-                </button>
-              </th>
-              <th className="text-right px-3 md:px-4 py-2 md:py-3">
-                <button
                   onClick={() => handleSort('changePercent')}
                   className="flex items-center gap-1 justify-end text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -214,11 +205,6 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                   </td>
                   <td className="px-3 md:px-4 py-3 md:py-4 text-right">
                     <span className="font-mono font-medium text-sm tabular-nums">{formatPrice(item.price)}</span>
-                  </td>
-                  <td className="px-3 md:px-4 py-3 md:py-4 text-right">
-                    <span className={`font-mono text-sm tabular-nums ${isPositive ? 'text-positive' : 'text-negative'}`}>
-                      {isPositive ? '+' : ''}{formatPrice(item.change)}
-                    </span>
                   </td>
                   <td className="px-3 md:px-4 py-3 md:py-4 text-right">
                     <span className={`inline-flex items-center gap-1 font-mono text-sm font-medium tabular-nums ${
