@@ -736,7 +736,10 @@
     "collectAllRegularFirst": "Collectez d'abord les 41 billets réguliers",
     "billCollected": "Billet Collecté !",
     "legendaryBillCollected": "🎉 Billet Légendaire Collecté !",
-    "progressLabel": "Progression :"
+    "progressLabel": "Progression :",
+    "legendarySpawned": "Billet Légendaire Apparu !",
+    "legendarySpawnedHint": "Visite une page d'article pour trouver le billet légendaire de 100 $.",
+    "legendarySpawnedCheck": "Indice : Vérifie les articles {{articleType}}"
   },
   "topicStatus": {
     "pinned": "Épinglé",

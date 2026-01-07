@@ -736,7 +736,10 @@
     "collectAllRegularFirst": "Sammle zuerst alle 41 regulären Scheine",
     "billCollected": "Schein gesammelt!",
     "legendaryBillCollected": "🎉 Legendärer Schein gesammelt!",
-    "progressLabel": "Fortschritt:"
+    "progressLabel": "Fortschritt:",
+    "legendarySpawned": "Legendärer Schein erschienen!",
+    "legendarySpawnedHint": "Besuche eine Artikelseite, um den legendären $100-Schein zu finden.",
+    "legendarySpawnedCheck": "Hinweis: Überprüfe {{articleType}} Artikel"
   },
   "topicStatus": {
     "pinned": "Angepinnt",

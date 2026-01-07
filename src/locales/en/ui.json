@@ -759,7 +759,10 @@
     "collectAllRegularFirst": "Collect all 41 regular bills first",
     "billCollected": "Bill Collected!",
     "legendaryBillCollected": "🎉 Legendary Bill Collected!",
-    "progressLabel": "Progress:"
+    "progressLabel": "Progress:",
+    "legendarySpawned": "Legendary Bill Spawned!",
+    "legendarySpawnedHint": "Visit an article page to find the legendary $100 bill.",
+    "legendarySpawnedCheck": "Hint: Check {{articleType}} articles"
   },
   "topicStatus": {
     "pinned": "Pinned",

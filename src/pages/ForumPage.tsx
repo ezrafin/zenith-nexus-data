@@ -233,7 +233,7 @@ export default function ForumPage() {
         <section className="section-spacing-sm border-b border-border bg-secondary/20">
           <div className="container-wide">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="heading-sm">{t('trendingTopics') || 'Trending Discussions'}</h2>
+              <h2 className="heading-sm">{t('categories.trendingTopics') || 'Trending Discussions'}</h2>
               <button
                 onClick={() => setSortBy('trending')}
                 className="text-sm text-primary hover:underline touch-target"

@@ -736,7 +736,10 @@
     "collectAllRegularFirst": "请先收集全部 41 张普通票据",
     "billCollected": "票据已收集！",
     "legendaryBillCollected": "🎉 传奇票据已收集！",
-    "progressLabel": "进度："
+    "progressLabel": "进度：",
+    "legendarySpawned": "传奇票据已生成！",
+    "legendarySpawnedHint": "访问文章页面以找到传奇的 $100 票据。",
+    "legendarySpawnedCheck": "提示：查看 {{articleType}} 文章"
   },
   "topicStatus": {
     "pinned": "置顶",

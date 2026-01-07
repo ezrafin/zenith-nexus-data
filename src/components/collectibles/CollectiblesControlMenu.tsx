@@ -164,14 +164,14 @@ export function CollectiblesControlMenu() {
                     <Sparkles className="h-5 w-5 text-amber-500 mt-0.5" />
                     <div className="flex-1">
                       <div className="font-semibold text-amber-900 dark:text-amber-200 mb-1">
-                        Legendary Bill Spawned!
+                        {t('billCollection.legendarySpawned')}
                       </div>
                       <div className="text-sm text-amber-800 dark:text-amber-300">
-                        Visit an article page to find the legendary $100 bill.
+                        {t('billCollection.legendarySpawnedHint')}
                       </div>
                       {legendarySpawn && (
                         <div className="text-xs text-amber-700 dark:text-amber-400 mt-2">
-                          Hint: Check {legendarySpawn.articleType.replace('_', ' ')} articles
+                          {t('billCollection.legendarySpawnedCheck', { articleType: legendarySpawn.articleType.replace('_', ' ') })}
                         </div>
                       )}
                     </div>

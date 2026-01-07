@@ -736,7 +736,10 @@
     "collectAllRegularFirst": "Najpierw zbierz wszystkie 41 zwykłych banknotów",
     "billCollected": "Banknot Zebrany!",
     "legendaryBillCollected": "🎉 Legendarny Banknot Zebrany!",
-    "progressLabel": "Postęp:"
+    "progressLabel": "Postęp:",
+    "legendarySpawned": "Legendarny Banknot Pojawił Się!",
+    "legendarySpawnedHint": "Odwiedź stronę artykułu, aby znaleźć legendarny banknot 100 $.",
+    "legendarySpawnedCheck": "Wskazówka: Sprawdź artykuły {{articleType}}"
   },
   "topicStatus": {
     "pinned": "Przypięte",
