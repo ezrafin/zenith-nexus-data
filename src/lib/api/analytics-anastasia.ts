@@ -3097,215 +3097,469 @@ Central & Eastern Europe (CEE) is not a single macro bloc. Countries differ mate
 
 ## Introduction
 
-Central & Eastern Europe (CEE) offers exposure to:
+Central & Eastern Europe (CEE) offers exposure to converging economies, open trade regimes, and integration with EU value chains. The region encompasses countries that have undergone significant economic transformation since the fall of communism, creating opportunities for investors seeking exposure to catch-up growth, EU integration benefits, and regional economic convergence.
 
-- Converging economies.
-- Open trade regimes.
-- Integration with EU value chains.
+The CEE region includes countries such as Poland, Czech Republic, Hungary, Romania, Bulgaria, Slovakia, and others that have joined the European Union over the past two decades. These economies share common characteristics: relatively young populations, competitive labor costs, strong manufacturing bases, and increasing integration with Western European supply chains.
 
-Yet its **equity markets** remain comparatively shallow:
+Yet its **equity markets** remain comparatively shallow when measured against the region's economic size and growth potential. This shallowness manifests in several ways:
 
-- Limited free float in some flagship names.
-- Concentration in a few sectors (banks, energy, utilities, telecoms).
-- A relatively small universe of liquid, index‑eligible stocks.
+- Limited free float in some flagship names, with significant state or strategic ownership
+- Concentration in a few sectors (banks, energy, utilities, telecoms) that reflect the region's economic structure
+- A relatively small universe of liquid, index‑eligible stocks compared to Western European markets
+- Lower market capitalization relative to GDP than in more developed markets
 
-At the same time, privatization plans, new listings, and cross‑border M&A are gradually reshaping the opportunity set. This article explores how investors can approach CEE equity markets, with a focus on:
+This market structure creates both challenges and opportunities for investors. The limited liquidity and concentration can make portfolio construction difficult, but they can also create mispricing opportunities where fundamentals improve faster than market recognition.
 
-- Market structure and liquidity.
-- Privatization and listing pipelines.
-- Governance and country‑risk considerations.
+At the same time, privatization plans, new listings, and cross‑border M&A are gradually reshaping the opportunity set. Governments across the region are pursuing capital market development agendas, seeking to attract foreign investment and deepen local markets. This evolution creates a dynamic investment landscape that requires careful navigation.
+
+This article explores how investors can approach CEE equity markets, with a focus on market structure and liquidity, privatization and listing pipelines, and governance and country‑risk considerations.
+
+## Understanding the CEE Region
+
+### Economic Characteristics
+
+**Growth Dynamics:**
+- Catch-up growth potential relative to Western Europe
+- EU membership benefits and structural fund access
+- Competitive manufacturing and export sectors
+- Young and educated workforces
+- Increasing urbanization and consumer spending
+
+**Economic Structure:**
+- Strong manufacturing sectors, particularly automotive and electronics
+- Growing services sectors
+- Energy and infrastructure development needs
+- Banking systems that are central to financial intermediation
+
+**Integration Benefits:**
+- Access to EU single market
+- Supply chain integration with Western Europe
+- Technology and knowledge transfer
+- Regulatory harmonization
+
+### Regional Diversity
+
+**Country Variations:**
+- Poland: Largest economy, most developed equity market
+- Czech Republic: Strong manufacturing, developed market
+- Hungary: Smaller market, policy volatility
+- Romania: Large population, growth potential, governance challenges
+- Bulgaria: Smaller market, EU integration benefits
+- Other markets: Varying sizes and development levels
+
+**Investment Implications:**
+- Country-specific risk assessment required
+- Different market structures and liquidity profiles
+- Varying governance and regulatory standards
+- Diverse economic drivers and sector compositions
 
 ## Structure of CEE Equity Markets
 
 ### Market Depth and Free Float
 
-CEE equity indices often feature:
+CEE equity indices often feature distinct structural characteristics:
 
-- A small number of large caps with:
-  - Significant state ownership.
-  - Concentrated domestic shareholder bases.
-- A long tail of:
-  - Small and mid caps with thin trading volumes.
-  - Limited analyst coverage.
+**Large-Cap Concentration:**
+- A small number of large caps with significant state ownership
+- Concentrated domestic shareholder bases
+- Strategic investors holding substantial stakes
+- Limited free float reducing available shares
 
-Challenges for investors:
+**Small and Mid-Cap Universe:**
+- A long tail of small and mid caps with thin trading volumes
+- Limited analyst coverage creating information gaps
+- Lower institutional ownership
+- More idiosyncratic risk
 
-- Difficulty building or exiting positions without moving prices.
-- Concentration risk in a handful of liquid names.
+**Market Depth Challenges:**
+- Difficulty building or exiting positions without moving prices
+- Concentration risk in a handful of liquid names
+- Limited diversification options within single markets
+- Higher transaction costs due to wider spreads
 
-Opportunities:
-
-- Mis‑pricings where:
-  - Fundamentals improve faster than liquidity.
-  - Governance reforms unlock value.
+**Opportunities from Market Structure:**
+- Mis‑pricings where fundamentals improve faster than liquidity
+- Governance reforms that unlock value
+- Privatization creating new investment opportunities
+- Market development expanding the opportunity set
 
 ### Sector Concentration
 
-Common sector tilts include:
+Common sector tilts reflect the region's economic structure:
 
-- **Banks and financials**
-  - Large weights reflecting bank‑centric financial systems.
-- **Energy and utilities**
-  - Legacy national champions.
-  - Increasing exposure to transition investments.
-- **Telecoms and infrastructure**
-  - Stable cash flows.
-  - Regulated pricing frameworks.
+**Banks and Financials:**
+- Large weights reflecting bank‑centric financial systems
+- Banks as primary financial intermediaries
+- Exposure to credit cycles and economic growth
+- Dividend yields and capital return potential
 
-Less representation in:
+**Energy and Utilities:**
+- Legacy national champions with strategic importance
+- Increasing exposure to transition investments
+- Regulatory frameworks affecting returns
+- Infrastructure development needs
 
-- High‑growth technology.
-- Diversified consumer names.
+**Telecoms and Infrastructure:**
+- Stable cash flows from essential services
+- Regulated pricing frameworks
+- Infrastructure investment requirements
+- Digital transformation opportunities
 
-Investors must recognize that CEE equity allocations often:
+**Underrepresented Sectors:**
+- High‑growth technology companies (though this is changing)
+- Diversified consumer names (growing but still limited)
+- Healthcare and pharmaceuticals (developing)
+- Real estate (growing but fragmented)
 
-- Imply specific sector and factor exposures.
-- Behave differently from broader EM or European benchmarks.
+**Investment Implications:**
+- Investors must recognize that CEE equity allocations often imply specific sector and factor exposures
+- Portfolios behave differently from broader EM or European benchmarks
+- Sector concentration creates both risk and opportunity
+- Understanding sector dynamics is crucial for risk management
+
+### Market Size and Liquidity
+
+**Market Capitalization:**
+- Total market cap varies significantly by country
+- Poland has the largest market in the region
+- Other markets are smaller but growing
+- Market cap to GDP ratios lower than Western Europe
+
+**Liquidity Characteristics:**
+- Top names have reasonable liquidity
+- Mid and small caps often illiquid
+- Trading volumes concentrated in few stocks
+- Liquidity can disappear during stress
+
+**Index Composition:**
+- Narrow indices with few constituents
+- High concentration in top holdings
+- Limited diversification within indices
+- Active management can add value
 
 ## Privatizations, IPOs, and Market Development
 
 ### Privatization Waves and State Ownership
 
-CEE countries have gone through multiple waves of privatization:
+CEE countries have gone through multiple waves of privatization since the transition from communism:
 
-- Early post‑transition privatizations.
-- Subsequent sales of residual state stakes.
+**Historical Privatization:**
+- Early post‑transition privatizations in the 1990s
+- Subsequent sales of residual state stakes
+- Strategic sales to foreign investors
+- Public offerings creating listed companies
 
-In some cases:
+**Current State Ownership:**
+- States retain significant stakes in strategic sectors
+- Golden shares providing veto rights
+- Blocking minorities preventing full control
+- Informal influence over strategy and operations
 
-- States retain:
-  - Golden shares.
-  - Blocking minorities.
-  - Informal influence over strategy.
+**Privatization Plans:**
+- Ongoing privatization programs in several countries
+- Plans to reduce state ownership
+- Strategic sector considerations
+- Political factors affecting timing and execution
 
-For investors:
+**For Investors:**
+- Clarity about future privatization plans is critical
+- Governance arrangements in partially privatized entities matter
+- Political interference risk affects valuations
+- Dividend policy stability depends on ownership structure
 
-- Clarity about:
-  - Future privatization plans.
-  - Governance arrangements in partially privatized entities.
-is critical to pricing:
-
-- Political interference risk.
-- Dividend policy stability.
+**Valuation Considerations:**
+- State ownership discounts or premiums
+- Privatization potential creating optionality
+- Governance improvements unlocking value
+- Policy risk affecting multiples
 
 ### New Listings and Capital-Market Agendas
 
-Some governments and exchanges in the region have explicit goals to:
+Some governments and exchanges in the region have explicit goals to deepen local capital markets:
 
-- Deepen local capital markets.
-- Attract:
-  - Regional champions.
-  - New economy firms.
+**Market Development Objectives:**
+- Attract regional champions to list locally
+- Encourage new economy firms to go public
+- Develop local institutional investor base
+- Increase market liquidity and depth
 
-Developments include:
+**Recent Developments:**
+- IPOs of infrastructure assets
+- Energy and utility spin‑offs
+- Listings of regional banks
+- Consumer‑facing companies going public
 
-- IPOs of:
-  - Infrastructure assets.
-  - Energy and utility spin‑offs.
-- Listings of:
-  - Regional banks.
-  - Consumer‑facing companies.
+**Challenges:**
+- Pipelines can be uneven across countries
+- Macroeconomic volatility affects timing
+- Global risk appetite heavily influences IPO windows
+- Regulatory and governance standards vary
 
-However:
+**Investor Engagement:**
+- Track national capital‑market strategies
+- Engage with exchanges and regulators
+- Understand pipeline quality and timing
+- Assess investor‑protection frameworks
 
-- Pipelines can be uneven.
-- Macroeconomic volatility and global risk appetite heavily influence timing.
-
-Investors should:
-
-- Track national capital‑market strategies.
-- Engage with exchanges and regulators to understand:
-  - Pipeline quality.
-  - Investor‑protection frameworks.
+**Future Opportunities:**
+- Infrastructure privatization creating new listings
+- Technology companies considering public markets
+- Regional champions expanding through listings
+- Cross-border listings and dual listings
 
 ## Governance, Minority Rights, and ESG Considerations
 
 ### State Influence and Corporate Governance
 
-State involvement can:
+State involvement creates complex dynamics:
 
-- Provide:
-  - Implicit support in crises.
-  - Policy alignment in strategic sectors.
-- Also create:
-  - Conflicts between political and commercial objectives.
-  - Uncertainty around capital allocation and payout policies.
+**Potential Benefits:**
+- Implicit support in crises
+- Policy alignment in strategic sectors
+- Long-term orientation
+- Strategic sector protection
 
-Investors should:
+**Potential Drawbacks:**
+- Conflicts between political and commercial objectives
+- Uncertainty around capital allocation and payout policies
+- Political interference in operations
+- Minority shareholder concerns
 
-- Assess:
-  - Board independence.
-  - Minority shareholder protections.
-  - Track record of:
-    - Related‑party transactions.
-    - Policy‑driven decisions that affect equity value.
+**Governance Assessment:**
+- Board independence and composition
+- Minority shareholder protections
+- Track record of related‑party transactions
+- Policy‑driven decisions affecting equity value
+
+**Investor Considerations:**
+- Governance quality varies significantly
+- State ownership creates specific risks
+- Minority rights protection is crucial
+- Transparency and disclosure standards matter
 
 ### ESG and Transition Risks
 
-CEE companies face:
+CEE companies face significant ESG challenges:
 
-- Legacy assets in:
-  - High‑emitting energy sectors.
-  - Industrial and mining activities.
-- Increasing EU‑level climate and environmental regulation.
+**Legacy Assets:**
+- High‑emitting energy sectors
+- Industrial and mining activities
+- Environmental remediation needs
+- Transition capital requirements
 
-For equity investors, key issues include:
+**Regulatory Pressure:**
+- Increasing EU‑level climate and environmental regulation
+- Carbon pricing and emissions trading
+- Environmental standards and compliance
+- Transition planning requirements
 
-- Transition plans and capex commitments.
-- Environmental liabilities and remediation obligations.
-- Disclosure quality and ESG‑risk management.
+**For Equity Investors:**
+- Transition plans and capex commitments are critical
+- Environmental liabilities and remediation obligations affect valuations
+- Disclosure quality and ESG‑risk management vary
+- Transition risks can create both challenges and opportunities
+
+**ESG Integration:**
+- Assessing company ESG practices
+- Understanding transition risks
+- Evaluating ESG improvement potential
+- Considering ESG in investment decisions
+
+## Country-Specific Considerations
+
+### Poland
+
+**Market Characteristics:**
+- Largest CEE equity market
+- Most developed capital markets
+- Reasonable liquidity in top names
+- Growing small-cap universe
+
+**Investment Themes:**
+- Banking sector strength
+- Consumer growth
+- Infrastructure development
+- Technology sector growth
+
+### Czech Republic
+
+**Market Characteristics:**
+- Developed market structure
+- Strong manufacturing focus
+- Reasonable liquidity
+- Quality companies
+
+**Investment Themes:**
+- Manufacturing excellence
+- Automotive sector
+- Consumer growth
+- Infrastructure
+
+### Hungary
+
+**Market Characteristics:**
+- Smaller market size
+- Policy volatility
+- State influence
+- Limited liquidity
+
+**Investment Themes:**
+- Selective opportunities
+- Policy risk management
+- Quality focus
+- Careful position sizing
+
+### Romania
+
+**Market Characteristics:**
+- Large population and growth potential
+- Governance challenges
+- Developing markets
+- Limited liquidity
+
+**Investment Themes:**
+- Growth potential
+- Banking sector
+- Consumer growth
+- Selective quality
+
+### Other Markets
+
+**Characteristics:**
+- Varying sizes and development
+- Different risk profiles
+- Selective opportunities
+- Liquidity considerations
 
 ## Portfolio Construction and Risk Management
 
 ### Liquidity-Aware Position Sizing
 
-Given market depth constraints:
+Given market depth constraints, careful position sizing is essential:
 
-- Position sizes should be:
-  - Calibrated to average daily volumes.
-  - Structured to allow exits under stress scenarios.
+**Position Sizing Principles:**
+- Calibrate sizes to average daily volumes
+- Structure positions to allow exits under stress scenarios
+- Consider free float and ownership structure
+- Account for concentration risks
 
-Tools to manage liquidity risk:
+**Liquidity Management Tools:**
+- Combine direct holdings in larger names with regional funds or ETFs for smaller markets
+- Use staggered execution strategies to limit market impact
+- Maintain liquidity buffers
+- Monitor position sizes relative to market depth
 
-- Combining:
-  - Direct holdings in larger names.
-  - Regional funds or ETFs for smaller markets.
-- Staggered execution strategies to limit market impact.
+**Risk Management:**
+- Set position limits based on liquidity
+- Diversify across countries and sectors
+- Monitor concentration risks
+- Plan exit strategies
 
 ### Country and Political Risk
 
-CEE equity returns are influenced by:
+CEE equity returns are influenced by multiple risk factors:
 
-- Domestic political cycles.
-- EU funding flows and conditionality.
-- Relations with neighboring countries and broader geopolitical blocs.
+**Political Factors:**
+- Domestic political cycles
+- Policy changes and reversals
+- EU relations and conditionality
+- Geopolitical tensions
 
-Country‑level diagnostics:
+**Economic Factors:**
+- EU funding flows and conditionality
+- Economic growth cycles
+- Currency volatility
+- Inflation dynamics
 
-- Stability and predictability of:
-  - Policy and regulation.
-  - Tax and fiscal regimes.
-  - Treatment of foreign investors.
+**Geopolitical Factors:**
+- Relations with neighboring countries
+- Broader geopolitical bloc dynamics
+- Regional tensions
+- EU integration depth
 
-Investors can:
+**Country‑Level Diagnostics:**
+- Stability and predictability of policy and regulation
+- Tax and fiscal regime consistency
+- Treatment of foreign investors
+- Rule of law and institutional quality
 
-- Diversify across multiple CEE markets.
-- Adjust exposure as:
-  - Political risk premia widen or narrow.
+**Risk Management:**
+- Diversify across multiple CEE markets
+- Adjust exposure as political risk premia widen or narrow
+- Monitor country-specific developments
+- Maintain flexibility in allocation
+
+### Sector and Factor Considerations
+
+**Sector Allocation:**
+- Understand sector concentration risks
+- Balance cyclical and defensive exposures
+- Consider sector-specific risks
+- Monitor sector developments
+
+**Factor Exposure:**
+- Recognize implicit factor tilts
+- Balance factor exposures
+- Consider style factors
+- Monitor factor performance
+
+## Investment Strategies
+
+### Active vs. Passive Approaches
+
+**Active Management:**
+- Can add value through stock selection
+- Important for liquidity management
+- Governance engagement opportunities
+- Flexibility in positioning
+
+**Passive Approaches:**
+- Lower cost
+- Broad diversification
+- Index tracking
+- Limited flexibility
+
+**Hybrid Approaches:**
+- Core passive with active satellite
+- Active in liquid names, passive in smaller markets
+- Factor-based strategies
+- Thematic approaches
+
+### Thematic Opportunities
+
+**EU Integration:**
+- Structural fund beneficiaries
+- Supply chain integration
+- Regulatory harmonization
+- Market access benefits
+
+**Digitalization:**
+- Technology adoption
+- Digital infrastructure
+- E-commerce growth
+- Fintech development
+
+**Sustainability:**
+- Energy transition
+- Environmental investments
+- ESG improvements
+- Green finance
+
+**Consumer Growth:**
+- Rising incomes
+- Urbanization
+- Consumer spending growth
+- Brand development
 
 ## Conclusion
 
-CEE equity markets remain relatively shallow and concentrated, but they are not static. Privatizations, new listings, and the integration of regional champions into broader European supply chains are gradually expanding the opportunity set.
+CEE equity markets remain relatively shallow and concentrated, but they are not static. Privatizations, new listings, and the integration of regional champions into broader European supply chains are gradually expanding the opportunity set. The region offers unique opportunities for investors willing to navigate the complexities of shallow markets, governance challenges, and country-specific risks.
 
-For investors, the key is to:
+For investors, the key is to treat CEE equities as a **targeted, liquidity‑aware allocation** within a broader EM or European portfolio. Success requires focus on governance and minority‑rights protections, sector and country balance, and sensible position sizes relative to market depth.
 
-- Treat CEE equities as a **targeted, liquidity‑aware allocation** within a broader EM or European portfolio.
-- Focus on:
-  - Governance and minority‑rights protections.
-  - Sector and country balance.
-  - Sensible position sizes relative to market depth.
+The CEE region's economic fundamentals remain attractive, with catch-up growth potential, EU integration benefits, and competitive advantages in manufacturing and services. As capital markets develop and governance standards improve, the investment opportunity set should continue to expand.
 
-With this framework, CEE can provide differentiated exposure to convergence, reform, and regional growth without unduly compromising liquidity or governance standards.`,
+With a disciplined framework that accounts for liquidity constraints, governance risks, and country-specific factors, CEE can provide differentiated exposure to convergence, reform, and regional growth without unduly compromising liquidity or governance standards. Investors who commit the necessary resources to understand these markets and manage their unique risks can find attractive opportunities in this evolving landscape.`,
     date: formatDate(263),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
