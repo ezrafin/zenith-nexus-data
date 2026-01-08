@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { useLocation, Routes, Route } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { getMotionVariant, transitions, prefersReducedMotion } from '@/lib/animations';
@@ -10,6 +10,11 @@ interface AnimatedRoutesWrapperProps {
 export function AnimatedRoutesWrapper({ children }: AnimatedRoutesWrapperProps) {
   const location = useLocation();
   const pageVariant = getMotionVariant('pageTransition');
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   if (prefersReducedMotion()) {
     return <Routes location={location}>{children}</Routes>;
