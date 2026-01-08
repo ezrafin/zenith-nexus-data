@@ -19,59 +19,80 @@ import { ErrorBoundary } from "@/components/error/ErrorBoundary";
 // Eager load critical pages
 import Index from "./pages/Index";
 
+// Lazy load with error handling and retry mechanism
+const lazyWithRetry = (componentImport: () => Promise<any>) => {
+  return lazy(async () => {
+    try {
+      return await componentImport();
+    } catch (error) {
+      // If module fails to load, try reloading the page
+      if (error instanceof Error && error.message.includes('Failed to fetch dynamically imported module')) {
+        console.warn('Module load failed, reloading page...', error);
+        // Small delay before reload to avoid infinite loops
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
+        // Return a placeholder component while reloading
+        return { default: () => <LoadingScreen /> };
+      }
+      throw error;
+    }
+  });
+};
+
 // Lazy load other pages for better performance
-const NewsPage = lazy(() => import("./pages/NewsPage"));
-const NewsDetailPage = lazy(() => import("./pages/NewsDetailPage"));
-const AnalyticsPage = lazy(() => import("./pages/AnalyticsPage"));
-const AnalyticsDetailPage = lazy(() => import("./pages/AnalyticsDetailPage"));
-const MarketsPage = lazy(() => import("./pages/MarketsPage"));
-const CompaniesPage = lazy(() => import("./pages/CompaniesPage"));
-const CompanyDetailPage = lazy(() => import("./pages/CompanyDetailPage"));
-const ForumPage = lazy(() => import("./pages/ForumPage"));
-const ForumTopicPage = lazy(() => import("./pages/ForumTopicPage"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const NewsPage = lazyWithRetry(() => import("./pages/NewsPage"));
+const NewsDetailPage = lazyWithRetry(() => import("./pages/NewsDetailPage"));
+const AnalyticsPage = lazyWithRetry(() => import("./pages/AnalyticsPage"));
+const AnalyticsDetailPage = lazyWithRetry(() => import("./pages/AnalyticsDetailPage"));
+const MarketsPage = lazyWithRetry(() => import("./pages/MarketsPage"));
+const CompaniesPage = lazyWithRetry(() => import("./pages/CompaniesPage"));
+const CompanyDetailPage = lazyWithRetry(() => import("./pages/CompanyDetailPage"));
+const ForumPage = lazyWithRetry(() => import("./pages/ForumPage"));
+const ForumTopicPage = lazyWithRetry(() => import("./pages/ForumTopicPage"));
+const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 // Information Pages
-const AboutPage = lazy(() => import("./pages/AboutPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
-const CareersPage = lazy(() => import("./pages/CareersPage"));
-const AuthorsPage = lazy(() => import("./pages/AuthorsPage"));
-const DisclaimerPage = lazy(() => import("./pages/DisclaimerPage"));
-const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
-const TermsPage = lazy(() => import("./pages/TermsPage"));
+const AboutPage = lazyWithRetry(() => import("./pages/AboutPage"));
+const ContactPage = lazyWithRetry(() => import("./pages/ContactPage"));
+const CareersPage = lazyWithRetry(() => import("./pages/CareersPage"));
+const AuthorsPage = lazyWithRetry(() => import("./pages/AuthorsPage"));
+const DisclaimerPage = lazyWithRetry(() => import("./pages/DisclaimerPage"));
+const PrivacyPage = lazyWithRetry(() => import("./pages/PrivacyPage"));
+const TermsPage = lazyWithRetry(() => import("./pages/TermsPage"));
 // Video Pages
-const VideoLibraryPage = lazy(() => import("./pages/video/VideoLibraryPage"));
-const VideoDetailPage = lazy(() => import("./pages/video/VideoDetailPage"));
+const VideoLibraryPage = lazyWithRetry(() => import("./pages/video/VideoLibraryPage"));
+const VideoDetailPage = lazyWithRetry(() => import("./pages/video/VideoDetailPage"));
 // Education Pages
-const LearningPage = lazy(() => import("./pages/education/LearningPage"));
-const LearningCoursePage = lazy(() => import("./pages/education/LearningCoursePage"));
-const BasicArticlesPage = lazy(() => import("./pages/education/BasicArticlesPage"));
-const AdvancedArticlesPage = lazy(() => import("./pages/education/AdvancedArticlesPage"));
-const ArticleDetailPage = lazy(() => import("./pages/education/ArticleDetailPage"));
+const LearningPage = lazyWithRetry(() => import("./pages/education/LearningPage"));
+const LearningCoursePage = lazyWithRetry(() => import("./pages/education/LearningCoursePage"));
+const BasicArticlesPage = lazyWithRetry(() => import("./pages/education/BasicArticlesPage"));
+const AdvancedArticlesPage = lazyWithRetry(() => import("./pages/education/AdvancedArticlesPage"));
+const ArticleDetailPage = lazyWithRetry(() => import("./pages/education/ArticleDetailPage"));
 // Course Platform
-const CourseListingPage = lazy(() => import("./pages/course/CourseListingPage"));
-const CoursePlatformPage = lazy(() => import("./pages/course/CoursePlatformPage"));
+const CourseListingPage = lazyWithRetry(() => import("./pages/course/CourseListingPage"));
+const CoursePlatformPage = lazyWithRetry(() => import("./pages/course/CoursePlatformPage"));
 // Auth Pages
-const LoginPage = lazy(() => import("./pages/auth/LoginPage"));
-const RegisterPage = lazy(() => import("./pages/auth/RegisterPage"));
-const AuthCallbackPage = lazy(() => import("./pages/auth/AuthCallbackPage"));
-const ForgotPasswordPage = lazy(() => import("./pages/auth/ForgotPasswordPage"));
-const ResetPasswordPage = lazy(() => import("./pages/auth/ResetPasswordPage"));
+const LoginPage = lazyWithRetry(() => import("./pages/auth/LoginPage"));
+const RegisterPage = lazyWithRetry(() => import("./pages/auth/RegisterPage"));
+const AuthCallbackPage = lazyWithRetry(() => import("./pages/auth/AuthCallbackPage"));
+const ForgotPasswordPage = lazyWithRetry(() => import("./pages/auth/ForgotPasswordPage"));
+const ResetPasswordPage = lazyWithRetry(() => import("./pages/auth/ResetPasswordPage"));
 // Profile
-const ProfilePage = lazy(() => import("./pages/auth/ProfilePage"));
+const ProfilePage = lazyWithRetry(() => import("./pages/auth/ProfilePage"));
 // Settings
-const SettingsPage = lazy(() => import("./pages/SettingsPage"));
+const SettingsPage = lazyWithRetry(() => import("./pages/SettingsPage"));
 // Watchlists
-const WatchlistPage = lazy(() => import("./pages/WatchlistPage"));
+const WatchlistPage = lazyWithRetry(() => import("./pages/WatchlistPage"));
 // Forum
-const CreateDiscussionPage = lazy(() => import("./pages/forum/CreateDiscussionPage"));
+const CreateDiscussionPage = lazyWithRetry(() => import("./pages/forum/CreateDiscussionPage"));
 // Bookmarks
-const BookmarksPage = lazy(() => import("./pages/BookmarksPage"));
+const BookmarksPage = lazyWithRetry(() => import("./pages/BookmarksPage"));
 // User Profile
-const UserProfilePage = lazy(() => import("./pages/users/UserProfilePage"));
+const UserProfilePage = lazyWithRetry(() => import("./pages/users/UserProfilePage"));
 // Community
-const CommunityPage = lazy(() => import("./pages/CommunityPage"));
+const CommunityPage = lazyWithRetry(() => import("./pages/CommunityPage"));
 // Admin
-const ModerationPage = lazy(() => import("./pages/admin/ModerationPage"));
+const ModerationPage = lazyWithRetry(() => import("./pages/admin/ModerationPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
