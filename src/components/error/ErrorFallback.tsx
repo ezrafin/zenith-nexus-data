@@ -1,7 +1,6 @@
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
 import { ErrorInfo } from 'react';
 
 interface ErrorFallbackProps {
@@ -81,9 +80,9 @@ export function ErrorFallback({
 
           <p className="text-center text-xs text-muted-foreground mt-4">
             If this problem persists, please{' '}
-            <Link to="/contact" className="text-primary hover:underline">
+            <a href="/contact" className="text-primary hover:underline">
               contact support
-            </Link>
+            </a>
             .
           </p>
         </CardContent>
