@@ -15,16 +15,22 @@ interface PageCoinProps {
  * Only shows if the coin hasn't been collected yet
  */
 export function PageCoin({ billId, position, size = 'md' }: PageCoinProps) {
-  const { isCollected, collectBill } = useCollectibleBills();
+  const { isCollected, collectBill, loading } = useCollectibleBills();
   const location = useLocation();
   const [shouldShow, setShouldShow] = useState(false);
+  const [hasInitialized, setHasInitialized] = useState(false);
 
   useEffect(() => {
-    // Only show if not collected
-    setShouldShow(!isCollected(billId));
-  }, [billId, isCollected]);
+    // Wait for collection data to load before showing/hiding coin
+    // This prevents the blinking effect
+    if (!loading) {
+      setHasInitialized(true);
+      setShouldShow(!isCollected(billId));
+    }
+  }, [billId, isCollected, loading]);
 
-  if (!shouldShow) {
+  // Don't render anything until we've loaded collection data
+  if (!hasInitialized || !shouldShow) {
     return null;
   }
 
