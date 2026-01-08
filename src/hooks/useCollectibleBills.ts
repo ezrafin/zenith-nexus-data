@@ -124,7 +124,7 @@ export function useCollectibleBills() {
       return {
         success: false,
         collected: false,
-        error: 'You must be signed in to collect bills',
+        error: 'You must be signed in to collect coins',
       };
     }
 
@@ -157,9 +157,13 @@ export function useCollectibleBills() {
       const response = data as CollectBillResponse;
 
       if (response.success && response.collected) {
-        // Update local state
+        // Update local state immediately from server response
         if (response.bill) {
-          setCollectedBills(prev => [...prev, billId]);
+          setCollectedBills(prev => {
+            // Avoid duplicates
+            if (prev.includes(billId)) return prev;
+            return [...prev, billId];
+          });
         }
         if (response.progress) {
           setProgress(response.progress);
@@ -168,14 +172,14 @@ export function useCollectibleBills() {
           setLegendarySpawn(response.legendarySpawn);
         }
 
-        // Reload collection data to ensure consistency
-        await loadCollectionData();
+        // Don't reload data - we already have the latest from server response
+        // This prevents the menu from showing stale data
       }
 
       return response;
     } catch (err) {
-      console.error('Error collecting bill:', err);
-      const errorMessage = err instanceof Error ? err.message : 'Failed to collect bill';
+      console.error('Error collecting coin:', err);
+      const errorMessage = err instanceof Error ? err.message : 'Failed to collect coin';
       setError(errorMessage);
       return {
         success: false,

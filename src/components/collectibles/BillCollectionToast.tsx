@@ -78,8 +78,8 @@ export async function showBillCollectionToast(
   // Simple translation function that returns fallback labels
   const getLabel = (key: string): string => {
     const labels: Record<string, string> = {
-      'billCollection.legendaryBillCollected': 'Legendary Bill Collected!',
-      'billCollection.billCollected': 'Bill Collected!',
+      'billCollection.legendaryBillCollected': 'Legendary Coin Collected!',
+      'billCollection.billCollected': 'Coin Collected!',
       'billCollection.progressLabel': 'Progress:'
     };
     return labels[key] || key;

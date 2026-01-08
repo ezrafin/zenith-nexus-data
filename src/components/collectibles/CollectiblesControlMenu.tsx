@@ -230,7 +230,7 @@ export function CollectiblesControlMenu() {
                           )}
                         </div>
 
-                        {/* Bill Info */}
+                        {/* Coin Info */}
                         <div className="flex-1 min-w-0">
                           <div
                             className={cn(

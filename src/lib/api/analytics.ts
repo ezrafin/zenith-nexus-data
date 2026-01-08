@@ -3056,6 +3056,13 @@ export async function fetchAnalytics(type?: string): Promise<AnalyticsArticle[]>
     result = result.filter((item) => item.type === type);
   }
 
+  // Sort by date (newest first)
+  result.sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return dateB - dateA; // Descending order (newest first)
+  });
+
   return result;
 }
 
