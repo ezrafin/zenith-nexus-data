@@ -41,14 +41,18 @@ export function ReplyEditor({
     }
   }, [initialValue]);
 
-  // Debounced validation
-  const validateContent = useCallback((text: string) => {
+  // Debounced validation - using ref to avoid recreating callback
+  const tRef = useRef(t);
+  tRef.current = t;
+
+  // Validate on content change with debounce
+  useEffect(() => {
     if (validationTimeoutRef.current) {
       clearTimeout(validationTimeoutRef.current);
     }
 
     // Clear errors immediately if content is empty
-    if (!text.trim()) {
+    if (!content.trim()) {
       setValidationErrors([]);
       setIsValidating(false);
       return;
@@ -56,11 +60,11 @@ export function ReplyEditor({
 
     setIsValidating(true);
     validationTimeoutRef.current = setTimeout(() => {
-      const validation = validateReplyContent(text);
+      const validation = validateReplyContent(content);
       if (!validation.isValid) {
         const errorMessages = validation.errors.map(error => {
           const key = getValidationErrorMessageKey(error);
-          return t(key);
+          return tRef.current(key);
         });
         setValidationErrors(errorMessages);
       } else {
@@ -68,17 +72,13 @@ export function ReplyEditor({
       }
       setIsValidating(false);
     }, 500);
-  }, [t]);
 
-  // Validate on content change
-  useEffect(() => {
-    validateContent(content);
     return () => {
       if (validationTimeoutRef.current) {
         clearTimeout(validationTimeoutRef.current);
       }
     };
-  }, [content, validateContent]);
+  }, [content]);
 
   const insertMarkdown = (before: string, after: string = '', newLine: boolean = false) => {
     const textarea = textareaRef.current;

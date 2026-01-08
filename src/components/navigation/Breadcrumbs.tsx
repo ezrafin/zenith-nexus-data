@@ -65,10 +65,7 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
       >
         <Breadcrumb>
           <motion.ol
-            className={className 
-              ? `flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground sm:gap-x-2.5 overflow-hidden ${className}` 
-              : "flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground sm:gap-x-2.5 overflow-hidden"
-            }
+            className={`flex items-center gap-x-1.5 text-sm text-muted-foreground sm:gap-x-2.5${className ? ` ${className}` : ''}`}
             initial={fadeInVariant.initial}
             animate={fadeInVariant.animate}
             transition={{
