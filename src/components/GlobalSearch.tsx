@@ -146,6 +146,7 @@ export function GlobalSearch() {
         let forumQuery = supabase
           .from('forum_discussions')
           .select('id, title, category, created_at')
+          .eq('status', 'approved')
           .ilike('title', `%${searchQuery}%`);
 
         if (dateFilter !== 'all') {

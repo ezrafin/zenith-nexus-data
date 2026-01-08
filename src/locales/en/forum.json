@@ -202,5 +202,12 @@
     "new": "New",
     "hot": "Hot",
     "trending": "Trending"
+  },
+  "moderation": {
+    "pendingTitle": "Discussion Submitted for Review",
+    "pendingMessage": "Your discussion has been submitted and is pending moderation. It will appear on the forum once approved by an administrator.",
+    "discussionTitle": "Your Discussion:",
+    "backToForum": "Back to Forum",
+    "createAnother": "Create Another Discussion"
   }
 }

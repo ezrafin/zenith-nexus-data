@@ -70,6 +70,7 @@ export async function fetchForumCategories(): Promise<ForumCategory[]> {
 export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[]> {
   try {
     // Join with profiles to get real avatar_url and display_name
+    // Only show approved discussions
     let query = supabase
       .from('forum_discussions')
       .select(`
@@ -80,6 +81,7 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
           reputation_score
         )
       `)
+      .eq('status', 'approved')
       .order('is_pinned', { ascending: false })
       .order('created_at', { ascending: false });
     
@@ -218,6 +220,7 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
     const symbols = [...new Set(itemsData.map(i => i.symbol))];
     
     // Get discussions that mention these symbols in tags, with profile join
+    // Only show approved discussions
     const { data, error } = await supabase
       .from('forum_discussions')
       .select(`
@@ -228,6 +231,7 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
           reputation_score
         )
       `)
+      .eq('status', 'approved')
       .overlaps('tags', symbols)
       .order('created_at', { ascending: false })
       .limit(20);
@@ -273,6 +277,8 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
 export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
   try {
     // Join with profiles to get real avatar_url and display_name
+    // Allow viewing pending/rejected discussions only if user is the author
+    // For approved discussions, anyone can view
     const { data, error } = await supabase
       .from('forum_discussions')
       .select(`
@@ -285,6 +291,8 @@ export async function fetchTopicById(id: string): Promise<ForumTopic | null> {
       `)
       .eq('id', id)
       .single();
+    
+    // Note: RLS policy will handle filtering - users can see their own pending/rejected discussions
     
     if (error) throw error;
     

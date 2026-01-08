@@ -21,11 +21,13 @@
 17. ✅ Расширена analytics статья "Edge Computing and Distributed AI" (803 → 1500+ слов)
 18. ✅ Добавлен контент для education статьи "How Dividends Work" (1500+ слов)
 19. ✅ Расширена analytics статья "Cloud-Native Software and Platform Economics" (817 → 1500+ слов)
+20. ✅ Добавлен контент для education статьи "Bull vs Bear Markets Explained" (1500+ слов)
+21. ✅ Расширена analytics статья "AI Hardware Race: Beyond GPUs" (834 → 1500+ слов)
 
 ## Результат
 
-- **Word count issues**: 179 → 170 статей (улучшение на 9 статей)
-- **Placeholder issues**: 28 статей (добавлен контент для 8 education статей, осталось 19 education + 1 analytics)
+- **Word count issues**: 179 → 169 статей (улучшение на 10 статей)
+- **Placeholder issues**: 28 статей (добавлен контент для 9 education статей, осталось 18 education + 1 analytics)
 
 ## Осталось исправить
 

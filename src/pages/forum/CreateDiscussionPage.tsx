@@ -10,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Send } from 'lucide-react';
+import { Send, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useForumCategories } from '@/hooks/useForumCategories';
 import { checkRateLimit } from '@/lib/api/rateLimit';
@@ -32,6 +32,7 @@ export default function CreateDiscussionPage() {
   const [assetType, setAssetType] = useState<'stock' | 'crypto' | 'index' | 'commodity' | 'currency' | 'etf' | ''>('');
   const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ title?: string; content?: string }>({});
+  const [moderationStatus, setModerationStatus] = useState<{ discussionId: string; title: string } | null>(null);
 
   // Use React Query hook for categories
   const { data: categories = [], isLoading: loadingCategories } = useForumCategories();
@@ -41,6 +42,51 @@ export default function CreateDiscussionPage() {
       setCategory(categories[0].id);
     }
   }, [categories, category]);
+
+  // Show moderation status page if discussion was submitted
+  if (moderationStatus) {
+    return (
+      <Layout>
+        <div className="section-spacing">
+          <div className="container-wide max-w-4xl">
+            <div className="premium-card p-8 md:p-12 text-center">
+              <div className="flex justify-center mb-6">
+                <div className="rounded-full bg-primary/10 p-4">
+                  <Clock className="h-12 w-12 text-primary" />
+                </div>
+              </div>
+              <h1 className="heading-lg mb-4">{t('moderation.pendingTitle')}</h1>
+              <p className="text-lg text-muted-foreground mb-6">
+                {t('moderation.pendingMessage')}
+              </p>
+              <div className="bg-muted/50 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+                <p className="font-semibold mb-2">{t('moderation.discussionTitle')}</p>
+                <p className="text-muted-foreground">{moderationStatus.title}</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button onClick={() => {
+                  setModerationStatus(null);
+                  navigate('/forum');
+                }} variant="outline">
+                  {t('moderation.backToForum')}
+                </Button>
+                <Button onClick={() => {
+                  setModerationStatus(null);
+                  setTitle('');
+                  setContent('');
+                  setTags('');
+                  setSymbol('');
+                  setAssetType('');
+                }}>
+                  {t('moderation.createAnother')}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 
   if (!user) {
     return (
@@ -116,11 +162,37 @@ export default function CreateDiscussionPage() {
           user_id: user.id,
           symbol: validation.data.symbol || null,
           asset_type: validation.data.asset_type || null,
+          status: 'pending', // Set status to pending for moderation
         })
         .select()
         .single();
 
       if (error) throw error;
+
+      // Send moderation email notification
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-discussion-moderation-email', {
+          body: {
+            discussionId: data.id,
+            title: validation.data.title,
+            content: validation.data.content,
+            authorName: profile?.display_name || user.email || 'Anonymous',
+            authorEmail: user.email || '',
+            category: validation.data.category,
+            tags: tagsArray,
+            symbol: validation.data.symbol || null,
+            assetType: validation.data.asset_type || null,
+          },
+        });
+
+        if (emailError) {
+          console.error('Error sending moderation email:', emailError);
+          // Don't throw - discussion is still created
+        }
+      } catch (emailErr) {
+        console.error('Error sending moderation email:', emailErr);
+        // Don't throw - discussion is still created
+      }
 
       // Invalidate forum topics queries to refresh the list
       queryClient.invalidateQueries({ queryKey: ['forumTopics'] });
@@ -132,8 +204,18 @@ export default function CreateDiscussionPage() {
         metadata: { discussionId: data.id },
       });
       
-      toast.success(t('discussionCreatedSuccess'));
-      navigate(`/forum/${data.id}`);
+      // Show moderation status page instead of navigating
+      setModerationStatus({
+        discussionId: data.id,
+        title: validation.data.title,
+      });
+      
+      // Reset form
+      setTitle('');
+      setContent('');
+      setTags('');
+      setSymbol('');
+      setAssetType('');
     } catch (error: any) {
       toast.error(error.message || t('discussionCreatedError'));
     } finally {
