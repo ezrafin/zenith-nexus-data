@@ -1,18 +1,21 @@
-import { formatDistanceToNow, type Locale } from 'date-fns';
-import { enUS, ru, de, fr, es, pl, zhCN } from 'date-fns/locale';
+import { format } from 'date-fns';
 
-const locales: Record<string, Locale> = {
-  en: enUS,
-  ru: ru,
-  de: de,
-  fr: fr,
-  es: es,
-  pl: pl,
-  zh: zhCN,
-};
+/**
+ * Format date as DD.MM.YYYY
+ * @param date - Date to format
+ * @param _language - Language (unused, kept for API compatibility)
+ * @returns Formatted date string like "09.01.2026"
+ */
+export function formatRelativeTime(date: Date, _language: string = 'en'): string {
+  return format(date, 'dd.MM.yyyy');
+}
 
-export function formatRelativeTime(date: Date, language: string = 'en'): string {
-  const locale = locales[language] || locales.en;
-  return formatDistanceToNow(date, { addSuffix: true, locale });
+/**
+ * Format date with time as DD.MM.YYYY HH:mm
+ * @param date - Date to format
+ * @returns Formatted date string like "09.01.2026 14:30"
+ */
+export function formatDateTime(date: Date): string {
+  return format(date, 'dd.MM.yyyy HH:mm');
 }
 

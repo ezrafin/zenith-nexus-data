@@ -37,6 +37,9 @@ interface PendingDiscussion {
   is_pinned: boolean;
 }
 
+// Admin email - only this user can access moderation
+const ADMIN_EMAIL = 'mark.lindt.finance@gmail.com';
+
 export default function ModerationPage() {
   const { user } = useUser();
   const { t } = useTranslation({ namespace: 'ui' });
@@ -47,8 +50,11 @@ export default function ModerationPage() {
   const [activeTab, setActiveTab] = useState<'reports' | 'discussions'>('discussions');
   const [reportsTab, setReportsTab] = useState<'pending' | 'all'>('pending');
 
+  // Check if current user is admin
+  const isAdmin = user?.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+
   useEffect(() => {
-    if (user) {
+    if (user && isAdmin) {
       if (activeTab === 'reports') {
         loadReports();
       } else {
@@ -57,7 +63,7 @@ export default function ModerationPage() {
     } else {
       setLoading(false);
     }
-  }, [user, activeTab, reportsTab]);
+  }, [user, isAdmin, activeTab, reportsTab]);
 
   const loadReports = async () => {
     setLoading(true);
@@ -203,10 +209,19 @@ export default function ModerationPage() {
     );
   }
 
-  // TODO: In a real app, check if user has moderator role
-  // For now, allow access to all authenticated users
-  // const isModerator = user?.user_metadata?.role === 'moderator' || user?.user_metadata?.role === 'admin';
-  // if (!isModerator) { ... }
+  // Only admin can access this page
+  if (!isAdmin) {
+    return (
+      <Layout>
+        <div className="min-h-[80vh] flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="heading-lg mb-4">Access Denied</h1>
+            <p className="text-muted-foreground">You do not have permission to access moderation tools.</p>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>

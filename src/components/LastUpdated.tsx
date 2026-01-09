@@ -1,6 +1,6 @@
 import { RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { formatDistanceToNow } from 'date-fns';
+import { format } from 'date-fns';
 import { useTranslation } from '@/hooks/useTranslation';
 
 interface LastUpdatedProps {
@@ -15,7 +15,7 @@ export function LastUpdated({ timestamp, onRefresh, loading }: LastUpdatedProps)
     <div className="flex items-center gap-3 text-sm text-muted-foreground">
       {timestamp && (
         <span>
-          {t('lastUpdated.updated')} {formatDistanceToNow(timestamp, { addSuffix: true })}
+          {t('lastUpdated.updated')} {format(timestamp, 'dd.MM.yyyy HH:mm')}
         </span>
       )}
       <Button
