@@ -301,7 +301,6 @@ export function Header() {
                                   e.preventDefault();
                                   e.stopPropagation();
                                   await changeLanguage(code as SupportedLanguage);
-                                  await updatePreferences({ language: code as SupportedLanguage });
                                   setLanguageMenuOpen(false);
                                 }}
                                 className={`w-full flex items-center gap-2 px-2 py-1.5 text-sm rounded-sm transition-colors text-left hover:bg-accent hover:text-accent-foreground ${

@@ -2299,14 +2299,2003 @@ export const courses: Course[] = [
   title: 'Economics & Personal Finance',
   description: 'Practical application of economic principles to personal financial planning and decision-making',
   finalExamPassRate: 75,
-  modules: Array.from({ length: 21 }, (_, i) => ({
-    id: `module-${i + 1}`,
-    title: `Module ${i + 1}`,
-    description: '',
-    lessons: [],
-    moduleTest: []
-  })),
-  finalExam: []
+  modules: [
+    {
+      id: 'module-1',
+      title: 'Unit 1: Foundations of economics',
+      description: 'Fundamental economic concepts and principles',
+      lessons: [
+        {
+          id: 'lesson-1-1',
+          title: 'Scarcity',
+          duration: '15 min',
+          videoUrl: '',
+          notes: '# Scarcity\n\nScarcity is the fundamental economic problem of having unlimited wants but limited resources.',
+          importantPoints: [
+            'Unlimited wants, limited resources',
+            'Forces choices and trade-offs',
+            'Foundation of all economics'
+          ],
+          quiz: [
+            {
+              id: 'q1-1-1',
+              question: 'What is scarcity?',
+              options: ['Abundance of resources', 'Unlimited wants with limited resources', 'No wants', 'Infinite resources'],
+              correctAnswer: 1,
+              explanation: 'Scarcity is the fundamental economic problem of unlimited wants but limited resources.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-2',
+          title: 'Costs and benefits',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Costs and benefits\n\nDecision-making involves weighing costs against benefits to make rational choices.',
+          importantPoints: [
+            'Every choice has costs and benefits',
+            'Opportunity cost is the next best alternative',
+            'Rational decisions maximize net benefits'
+          ],
+          quiz: [
+            {
+              id: 'q1-2-1',
+              question: 'What is opportunity cost?',
+              options: ['Monetary cost', 'The next best alternative given up', 'Total cost', 'Fixed cost'],
+              correctAnswer: 1,
+              explanation: 'Opportunity cost is the value of the next best alternative that must be given up when making a choice.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-3',
+          title: 'Decision making and unintended consequences',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Decision making and unintended consequences\n\nEconomic decisions can have unintended consequences that affect individuals and society.',
+          importantPoints: [
+            'Decisions have ripple effects',
+            'Unintended consequences are common',
+            'Consider broader impacts'
+          ],
+          quiz: [
+            {
+              id: 'q1-3-1',
+              question: 'What are unintended consequences?',
+              options: ['Planned outcomes', 'Unexpected results of decisions', 'No consequences', 'Only positive effects'],
+              correctAnswer: 1,
+              explanation: 'Unintended consequences are unexpected results that occur from economic decisions.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-4',
+          title: 'Factors of production',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Factors of production\n\nThe factors of production are resources used to produce goods and services: land, labor, capital, and entrepreneurship.',
+          importantPoints: [
+            'Land: natural resources',
+            'Labor: human effort',
+            'Capital: tools and equipment',
+            'Entrepreneurship: innovation and risk-taking'
+          ],
+          quiz: [
+            {
+              id: 'q1-4-1',
+              question: 'What are the factors of production?',
+              options: ['Only labor', 'Land, labor, capital, entrepreneurship', 'Only capital', 'Only land'],
+              correctAnswer: 1,
+              explanation: 'The four factors of production are land, labor, capital, and entrepreneurship.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-5',
+          title: 'Human capital and income',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Human capital and income\n\nHuman capital refers to the knowledge, skills, and experience that increase earning potential.',
+          importantPoints: [
+            'Education builds human capital',
+            'Skills increase income potential',
+            'Investment in human capital pays off'
+          ],
+          quiz: [
+            {
+              id: 'q1-5-1',
+              question: 'What is human capital?',
+              options: ['Physical assets', 'Knowledge, skills, and experience', 'Money', 'Property'],
+              correctAnswer: 1,
+              explanation: 'Human capital is the knowledge, skills, and experience that increase a person\'s earning potential.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-6',
+          title: 'Economic systems',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Economic systems\n\nEconomic systems determine how resources are allocated: market, command, traditional, and mixed economies.',
+          importantPoints: [
+            'Market: supply and demand',
+            'Command: central planning',
+            'Mixed: combination of both'
+          ],
+          quiz: [
+            {
+              id: 'q1-6-1',
+              question: 'What characterizes a market economy?',
+              options: ['Central planning', 'Supply and demand determine prices', 'No prices', 'Government control'],
+              correctAnswer: 1,
+              explanation: 'A market economy relies on supply and demand to determine prices and allocate resources.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt1-1',
+          question: 'What is scarcity?',
+          options: ['Abundance of resources', 'Unlimited wants with limited resources', 'No wants', 'Infinite resources'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-2',
+      title: 'Unit 2: Producers and consumers in markets',
+      description: 'Understanding how producers and consumers interact in markets',
+      lessons: [
+        {
+          id: 'lesson-2-1',
+          title: 'Incentives and marketing',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Incentives and marketing\n\nIncentives motivate behavior. Marketing uses incentives to influence consumer decisions.',
+          importantPoints: [
+            'Incentives drive behavior',
+            'Marketing creates incentives',
+            'Positive and negative incentives'
+          ],
+          quiz: [
+            {
+              id: 'q2-1-1',
+              question: 'What do incentives do?',
+              options: ['Nothing', 'Motivate behavior', 'Reduce prices', 'Increase costs'],
+              correctAnswer: 1,
+              explanation: 'Incentives motivate people to act in certain ways by offering rewards or penalties.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-2-2',
+          title: 'Cost, revenue, and profit',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Cost, revenue, and profit\n\nProfit is the difference between revenue and costs. Understanding these concepts is essential for business success.',
+          importantPoints: [
+            'Revenue = price × quantity',
+            'Profit = revenue - costs',
+            'Maximize profit by optimizing costs and revenue'
+          ],
+          quiz: [
+            {
+              id: 'q2-2-1',
+              question: 'What is profit?',
+              options: ['Revenue only', 'Revenue minus costs', 'Costs only', 'Price only'],
+              correctAnswer: 1,
+              explanation: 'Profit is the difference between total revenue and total costs.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-2-3',
+          title: 'Productivity and economic growth',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Productivity and economic growth\n\nProductivity measures output per unit of input. Higher productivity drives economic growth.',
+          importantPoints: [
+            'Productivity = output / input',
+            'Technology increases productivity',
+            'Economic growth depends on productivity'
+          ],
+          quiz: [
+            {
+              id: 'q2-3-1',
+              question: 'What is productivity?',
+              options: ['Total output', 'Output per unit of input', 'Input only', 'Cost only'],
+              correctAnswer: 1,
+              explanation: 'Productivity measures how efficiently inputs are converted into outputs.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-2-4',
+          title: 'Business organization',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Business organization\n\nBusinesses can be organized as sole proprietorships, partnerships, corporations, or LLCs.',
+          importantPoints: [
+            'Different legal structures',
+            'Each has advantages and disadvantages',
+            'Affects liability and taxes'
+          ],
+          quiz: [
+            {
+              id: 'q2-4-1',
+              question: 'What are common business structures?',
+              options: ['Only corporations', 'Sole proprietorship, partnership, corporation, LLC', 'Only partnerships', 'No structures'],
+              correctAnswer: 1,
+              explanation: 'Common business structures include sole proprietorships, partnerships, corporations, and LLCs.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-2-5',
+          title: 'Market structures and competition',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Market structures and competition\n\nMarket structures range from perfect competition to monopoly, affecting prices and competition.',
+          importantPoints: [
+            'Perfect competition: many firms',
+            'Monopoly: single firm',
+            'Market structure affects prices'
+          ],
+          quiz: [
+            {
+              id: 'q2-5-1',
+              question: 'What characterizes perfect competition?',
+              options: ['One firm', 'Many firms with identical products', 'No competition', 'Government control'],
+              correctAnswer: 1,
+              explanation: 'Perfect competition has many firms selling identical products with no barriers to entry.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt2-1',
+          question: 'What is profit?',
+          options: ['Revenue only', 'Revenue minus costs', 'Costs only', 'Price only'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-3',
+      title: 'Unit 3: The microeconomy and price systems',
+      description: 'Understanding supply, demand, and price determination',
+      lessons: [
+        {
+          id: 'lesson-3-1',
+          title: 'Demand',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Demand\n\nDemand represents the quantity of a good or service consumers are willing and able to buy at various prices.',
+          importantPoints: [
+            'Law of demand: price and quantity inversely related',
+            'Demand curve slopes downward',
+            'Factors affect demand'
+          ],
+          quiz: [
+            {
+              id: 'q3-1-1',
+              question: 'What is the law of demand?',
+              options: ['Price and quantity directly related', 'Price and quantity inversely related', 'No relationship', 'Same always'],
+              correctAnswer: 1,
+              explanation: 'The law of demand states that as price increases, quantity demanded decreases.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-3-2',
+          title: 'Supply',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Supply\n\nSupply represents the quantity of a good or service producers are willing and able to sell at various prices.',
+          importantPoints: [
+            'Law of supply: price and quantity directly related',
+            'Supply curve slopes upward',
+            'Factors affect supply'
+          ],
+          quiz: [
+            {
+              id: 'q3-2-1',
+              question: 'What is the law of supply?',
+              options: ['Price and quantity inversely related', 'Price and quantity directly related', 'No relationship', 'Same always'],
+              correctAnswer: 1,
+              explanation: 'The law of supply states that as price increases, quantity supplied increases.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-3-3',
+          title: 'Elasticity',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Elasticity\n\nElasticity measures how responsive quantity demanded or supplied is to changes in price.',
+          importantPoints: [
+            'Elastic: quantity changes more than price',
+            'Inelastic: quantity changes less than price',
+            'Affects total revenue'
+          ],
+          quiz: [
+            {
+              id: 'q3-3-1',
+              question: 'What does elasticity measure?',
+              options: ['Price level', 'Responsiveness to price changes', 'Quantity only', 'Cost only'],
+              correctAnswer: 1,
+              explanation: 'Elasticity measures how responsive quantity demanded or supplied is to price changes.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-3-4',
+          title: 'Equilibrium',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Equilibrium\n\nEquilibrium occurs when supply equals demand, determining market price and quantity.',
+          importantPoints: [
+            'Equilibrium: supply = demand',
+            'Market-clearing price',
+            'Surplus and shortage'
+          ],
+          quiz: [
+            {
+              id: 'q3-4-1',
+              question: 'What is market equilibrium?',
+              options: ['Supply exceeds demand', 'Demand exceeds supply', 'Supply equals demand', 'No supply or demand'],
+              correctAnswer: 2,
+              explanation: 'Market equilibrium occurs when the quantity supplied equals the quantity demanded.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-3-5',
+          title: 'Price controls',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Price controls\n\nPrice controls are government-imposed limits on prices, including price ceilings and price floors.',
+          importantPoints: [
+            'Price ceilings: maximum prices',
+            'Price floors: minimum prices',
+            'Can create shortages or surpluses'
+          ],
+          quiz: [
+            {
+              id: 'q3-5-1',
+              question: 'What is a price ceiling?',
+              options: ['Minimum price', 'Maximum price', 'Average price', 'No price'],
+              correctAnswer: 1,
+              explanation: 'A price ceiling is a government-imposed maximum price that can be charged for a good or service.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt3-1',
+          question: 'What is the law of demand?',
+          options: ['Price and quantity directly related', 'Price and quantity inversely related', 'No relationship', 'Same always'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-4',
+      title: 'Unit 4: The role of government in markets',
+      description: 'Understanding government intervention in markets',
+      lessons: [
+        {
+          id: 'lesson-4-1',
+          title: 'Public vs private',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Public vs private\n\nThe distinction between public (government) and private (market) provision of goods and services.',
+          importantPoints: [
+            'Public: government provides',
+            'Private: market provides',
+            'Each has advantages'
+          ],
+          quiz: [
+            {
+              id: 'q4-1-1',
+              question: 'What is the difference between public and private?',
+              options: ['No difference', 'Public is government, private is market', 'Public is market, private is government', 'Same thing'],
+              correctAnswer: 1,
+              explanation: 'Public refers to government provision, while private refers to market provision.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-4-2',
+          title: 'Property rights',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Property rights\n\nProperty rights define ownership and use of resources, essential for market economies.',
+          importantPoints: [
+            'Define ownership',
+            'Enable trade',
+            'Foundation of markets'
+          ],
+          quiz: [
+            {
+              id: 'q4-2-1',
+              question: 'What are property rights?',
+              options: ['No ownership', 'Legal rights to own and use property', 'Only for government', 'Not important'],
+              correctAnswer: 1,
+              explanation: 'Property rights are legal rights that define ownership and use of resources.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-4-3',
+          title: 'Redistribution of wealth',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Redistribution of wealth\n\nGovernment policies that transfer wealth from some groups to others, such as taxes and transfers.',
+          importantPoints: [
+            'Taxes fund redistribution',
+            'Social programs',
+            'Debated effectiveness'
+          ],
+          quiz: [
+            {
+              id: 'q4-3-1',
+              question: 'What is wealth redistribution?',
+              options: ['No transfers', 'Transferring wealth between groups', 'Only taxes', 'Only spending'],
+              correctAnswer: 1,
+              explanation: 'Wealth redistribution involves transferring wealth from some groups to others through taxes and transfers.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt4-1',
+          question: 'What is the difference between public and private?',
+          options: ['No difference', 'Public is government, private is market', 'Public is market, private is government', 'Same thing'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-5',
+      title: 'Unit 5: Macroeconomic challenges',
+      description: 'Understanding macroeconomic indicators and challenges',
+      lessons: [
+        {
+          id: 'lesson-5-1',
+          title: 'Macroeconomic indicators',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Macroeconomic indicators\n\nKey indicators measure economic health: GDP, unemployment, inflation, and others.',
+          importantPoints: [
+            'GDP measures output',
+            'Unemployment rate',
+            'Inflation rate'
+          ],
+          quiz: [
+            {
+              id: 'q5-1-1',
+              question: 'What does GDP measure?',
+              options: ['Unemployment', 'Total economic output', 'Inflation', 'Interest rates'],
+              correctAnswer: 1,
+              explanation: 'GDP (Gross Domestic Product) measures the total value of goods and services produced in an economy.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-5-2',
+          title: 'The macroeconomy and economic challenges',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# The macroeconomy and economic challenges\n\nThe overall economy faces challenges like inflation, unemployment, and growth.',
+          importantPoints: [
+            'Inflation challenges',
+            'Unemployment issues',
+            'Growth objectives'
+          ],
+          quiz: [
+            {
+              id: 'q5-2-1',
+              question: 'What are key economic challenges?',
+              options: ['Only inflation', 'Inflation, unemployment, growth', 'Only unemployment', 'No challenges'],
+              correctAnswer: 1,
+              explanation: 'Key economic challenges include managing inflation, unemployment, and promoting growth.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-5-3',
+          title: 'Business cycles',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Business cycles\n\nBusiness cycles are fluctuations in economic activity: expansion, peak, contraction, and trough.',
+          importantPoints: [
+            'Expansion: growth',
+            'Recession: decline',
+            'Cycles are normal'
+          ],
+          quiz: [
+            {
+              id: 'q5-3-1',
+              question: 'What are business cycles?',
+              options: ['Constant growth', 'Fluctuations in economic activity', 'No change', 'Only decline'],
+              correctAnswer: 1,
+              explanation: 'Business cycles are recurring fluctuations in economic activity, including expansions and contractions.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt5-1',
+          question: 'What does GDP measure?',
+          options: ['Unemployment', 'Total economic output', 'Inflation', 'Interest rates'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-6',
+      title: 'Unit 6: U.S. financial system',
+      description: 'Understanding money, financial markets, and the Federal Reserve',
+      lessons: [
+        {
+          id: 'lesson-6-1',
+          title: 'Money',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Money\n\nMoney serves as a medium of exchange, store of value, and unit of account.',
+          importantPoints: [
+            'Medium of exchange',
+            'Store of value',
+            'Unit of account'
+          ],
+          quiz: [
+            {
+              id: 'q6-1-1',
+              question: 'What are the functions of money?',
+              options: ['Only exchange', 'Medium of exchange, store of value, unit of account', 'Only storage', 'Only accounting'],
+              correctAnswer: 1,
+              explanation: 'Money serves as a medium of exchange, store of value, and unit of account.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-6-2',
+          title: 'Financial markets and institutions',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Financial markets and institutions\n\nFinancial markets facilitate the exchange of financial assets. Institutions include banks, investment firms, and others.',
+          importantPoints: [
+            'Markets facilitate trading',
+            'Institutions provide services',
+            'Essential for economy'
+          ],
+          quiz: [
+            {
+              id: 'q6-2-1',
+              question: 'What do financial markets do?',
+              options: ['Nothing', 'Facilitate exchange of financial assets', 'Only banking', 'Only stocks'],
+              correctAnswer: 1,
+              explanation: 'Financial markets facilitate the exchange of financial assets like stocks, bonds, and derivatives.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-6-3',
+          title: 'The Federal Reserve',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# The Federal Reserve\n\nThe Federal Reserve is the central bank of the United States, responsible for monetary policy.',
+          importantPoints: [
+            'Central bank of the U.S.',
+            'Sets monetary policy',
+            'Regulates banks'
+          ],
+          quiz: [
+            {
+              id: 'q6-3-1',
+              question: 'What is the Federal Reserve?',
+              options: ['Commercial bank', 'Central bank of the U.S.', 'Government agency', 'Investment firm'],
+              correctAnswer: 1,
+              explanation: 'The Federal Reserve is the central bank of the United States, responsible for monetary policy.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt6-1',
+          question: 'What are the functions of money?',
+          options: ['Only exchange', 'Medium of exchange, store of value, unit of account', 'Only storage', 'Only accounting'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-7',
+      title: 'Unit 7: Economic stabilization',
+      description: 'Understanding monetary and fiscal policy',
+      lessons: [
+        {
+          id: 'lesson-7-1',
+          title: 'Monetary policy',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Monetary policy\n\nMonetary policy involves controlling the money supply and interest rates to influence the economy.',
+          importantPoints: [
+            'Controls money supply',
+            'Sets interest rates',
+            'Aims for price stability and growth'
+          ],
+          quiz: [
+            {
+              id: 'q7-1-1',
+              question: 'What is monetary policy?',
+              options: ['Tax policy', 'Controlling money supply and interest rates', 'Spending policy', 'Trade policy'],
+              correctAnswer: 1,
+              explanation: 'Monetary policy involves controlling the money supply and interest rates to influence economic activity.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-7-2',
+          title: 'Fiscal policy',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Fiscal policy\n\nFiscal policy involves government spending and taxation to influence the economy.',
+          importantPoints: [
+            'Government spending',
+            'Taxation',
+            'Budget deficits and surpluses'
+          ],
+          quiz: [
+            {
+              id: 'q7-2-1',
+              question: 'What is fiscal policy?',
+              options: ['Interest rates', 'Government spending and taxation', 'Money supply', 'Bank regulation'],
+              correctAnswer: 1,
+              explanation: 'Fiscal policy involves government spending and taxation to influence economic activity.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-7-3',
+          title: 'Government budgets: revenue and expenditures',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Government budgets: revenue and expenditures\n\nGovernment budgets balance revenue (taxes) and expenditures (spending).',
+          importantPoints: [
+            'Revenue from taxes',
+            'Expenditures on services',
+            'Deficits and surpluses'
+          ],
+          quiz: [
+            {
+              id: 'q7-3-1',
+              question: 'What are government budgets?',
+              options: ['Only spending', 'Balance of revenue and expenditures', 'Only revenue', 'No balance'],
+              correctAnswer: 1,
+              explanation: 'Government budgets balance revenue (from taxes) and expenditures (on services and programs).'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt7-1',
+          question: 'What is monetary policy?',
+          options: ['Tax policy', 'Controlling money supply and interest rates', 'Spending policy', 'Trade policy'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-8',
+      title: 'Unit 8: Global economy',
+      description: 'Understanding international trade and globalization',
+      lessons: [
+        {
+          id: 'lesson-8-1',
+          title: 'Trade',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Trade\n\nInternational trade allows countries to specialize and benefit from comparative advantage.',
+          importantPoints: [
+            'Specialization benefits',
+            'Comparative advantage',
+            'Trade agreements'
+          ],
+          quiz: [
+            {
+              id: 'q8-1-1',
+              question: 'What is the main benefit of trade?',
+              options: ['Higher prices', 'Specialization and efficiency', 'Less competition', 'More regulation'],
+              correctAnswer: 1,
+              explanation: 'International trade allows countries to specialize based on comparative advantage, increasing efficiency.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-8-2',
+          title: 'Currency conversion',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Currency conversion\n\nExchange rates determine how much one currency is worth in terms of another.',
+          importantPoints: [
+            'Exchange rates fluctuate',
+            'Affects trade and travel',
+            'Floating vs fixed rates'
+          ],
+          quiz: [
+            {
+              id: 'q8-2-1',
+              question: 'What are exchange rates?',
+              options: ['Interest rates', 'Value of one currency in terms of another', 'Tax rates', 'Inflation rates'],
+              correctAnswer: 1,
+              explanation: 'Exchange rates determine how much one currency is worth in terms of another currency.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-8-3',
+          title: 'Globalization',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Globalization\n\nGlobalization is the increasing interconnectedness of economies, cultures, and societies worldwide.',
+          importantPoints: [
+            'Increased trade',
+            'Cultural exchange',
+            'Economic integration'
+          ],
+          quiz: [
+            {
+              id: 'q8-3-1',
+              question: 'What is globalization?',
+              options: ['Isolation', 'Increasing interconnectedness worldwide', 'Only trade', 'Only culture'],
+              correctAnswer: 1,
+              explanation: 'Globalization is the increasing interconnectedness of economies, cultures, and societies worldwide.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt8-1',
+          question: 'What is the main benefit of trade?',
+          options: ['Higher prices', 'Specialization and efficiency', 'Less competition', 'More regulation'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-9',
+      title: 'Unit 9: Careers and education',
+      description: 'Understanding the relationship between education, careers, and earnings',
+      lessons: [
+        {
+          id: 'lesson-9-1',
+          title: 'Education and earnings',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Education and earnings\n\nHigher levels of education generally correlate with higher earnings over a lifetime.',
+          importantPoints: [
+            'Education increases earnings',
+            'College degree premium',
+            'Lifetime earnings difference'
+          ],
+          quiz: [
+            {
+              id: 'q9-1-1',
+              question: 'What is the relationship between education and earnings?',
+              options: ['No relationship', 'Higher education generally means higher earnings', 'Lower education means higher earnings', 'Same for all'],
+              correctAnswer: 1,
+              explanation: 'Higher levels of education generally correlate with higher lifetime earnings.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-9-2',
+          title: 'Postsecondary education',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Postsecondary education\n\nPostsecondary education includes colleges, universities, and vocational training programs.',
+          importantPoints: [
+            'College and university options',
+            'Vocational training',
+            'Different paths available'
+          ],
+          quiz: [
+            {
+              id: 'q9-2-1',
+              question: 'What is postsecondary education?',
+              options: ['High school', 'Education after high school', 'Elementary school', 'No education'],
+              correctAnswer: 1,
+              explanation: 'Postsecondary education refers to education after high school, including college and vocational training.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-9-3',
+          title: 'Cost of postsecondary education',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Cost of postsecondary education\n\nCollege costs include tuition, fees, room, board, and other expenses.',
+          importantPoints: [
+            'Tuition and fees',
+            'Room and board',
+            'Additional expenses'
+          ],
+          quiz: [
+            {
+              id: 'q9-3-1',
+              question: 'What are college costs?',
+              options: ['Only tuition', 'Tuition, fees, room, board, and other expenses', 'Only fees', 'No costs'],
+              correctAnswer: 1,
+              explanation: 'College costs include tuition, fees, room, board, books, and other expenses.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-9-4',
+          title: 'Financial aid',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Financial aid\n\nFinancial aid includes grants, scholarships, and work-study programs to help pay for education.',
+          importantPoints: [
+            'Grants: free money',
+            'Scholarships: merit-based',
+            'Work-study: employment'
+          ],
+          quiz: [
+            {
+              id: 'q9-4-1',
+              question: 'What is financial aid?',
+              options: ['Only loans', 'Grants, scholarships, work-study, loans', 'Only grants', 'Only scholarships'],
+              correctAnswer: 1,
+              explanation: 'Financial aid includes grants, scholarships, work-study programs, and loans to help pay for education.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-9-5',
+          title: 'Student loans',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Student loans\n\nStudent loans help finance education but must be repaid with interest.',
+          importantPoints: [
+            'Must be repaid',
+            'Interest accrues',
+            'Different loan types'
+          ],
+          quiz: [
+            {
+              id: 'q9-5-1',
+              question: 'What are student loans?',
+              options: ['Free money', 'Borrowed money that must be repaid', 'Grants', 'Scholarships'],
+              correctAnswer: 1,
+              explanation: 'Student loans are borrowed money that must be repaid with interest after graduation.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt9-1',
+          question: 'What is the relationship between education and earnings?',
+          options: ['No relationship', 'Higher education generally means higher earnings', 'Lower education means higher earnings', 'Same for all'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-10',
+      title: 'Unit 10: Employment',
+      description: 'Understanding employment, compensation, and the hiring process',
+      lessons: [
+        {
+          id: 'lesson-10-1',
+          title: 'Compensation',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Compensation\n\nCompensation includes salary, wages, benefits, and other forms of payment for work.',
+          importantPoints: [
+            'Salary vs wages',
+            'Benefits package',
+            'Total compensation matters'
+          ],
+          quiz: [
+            {
+              id: 'q10-1-1',
+              question: 'What is compensation?',
+              options: ['Only salary', 'Salary, wages, benefits, and other payment', 'Only benefits', 'Only wages'],
+              correctAnswer: 1,
+              explanation: 'Compensation includes all forms of payment: salary, wages, benefits, and other perks.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-10-2',
+          title: 'Paycheck',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Paycheck\n\nUnderstanding paycheck deductions: taxes, insurance, retirement contributions, and net pay.',
+          importantPoints: [
+            'Gross vs net pay',
+            'Tax deductions',
+            'Other deductions'
+          ],
+          quiz: [
+            {
+              id: 'q10-2-1',
+              question: 'What is the difference between gross and net pay?',
+              options: ['No difference', 'Gross is before deductions, net is after', 'Gross is after, net is before', 'Same amount'],
+              correctAnswer: 1,
+              explanation: 'Gross pay is total earnings before deductions; net pay is take-home pay after deductions.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-10-3',
+          title: 'Non-typical pay',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Non-typical pay\n\nNon-traditional payment methods include commissions, tips, bonuses, and piecework.',
+          importantPoints: [
+            'Commissions',
+            'Tips',
+            'Bonuses'
+          ],
+          quiz: [
+            {
+              id: 'q10-3-1',
+              question: 'What is non-typical pay?',
+              options: ['Only salary', 'Commissions, tips, bonuses, piecework', 'Only wages', 'No pay'],
+              correctAnswer: 1,
+              explanation: 'Non-typical pay includes commissions, tips, bonuses, and piecework rather than fixed salary or wages.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-10-4',
+          title: 'Hiring process',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Hiring process\n\nThe hiring process includes application, interview, background checks, and job offers.',
+          importantPoints: [
+            'Application and resume',
+            'Interviews',
+            'Background checks'
+          ],
+          quiz: [
+            {
+              id: 'q10-4-1',
+              question: 'What is the hiring process?',
+              options: ['Only interview', 'Application, interview, background check, offer', 'Only application', 'No process'],
+              correctAnswer: 1,
+              explanation: 'The hiring process typically includes application, interview, background check, and job offer stages.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt10-1',
+          question: 'What is compensation?',
+          options: ['Only salary', 'Salary, wages, benefits, and other payment', 'Only benefits', 'Only wages'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-11',
+      title: 'Unit 11: Banking',
+      description: 'Understanding banking, accounts, and interest',
+      lessons: [
+        {
+          id: 'lesson-11-1',
+          title: 'Banking and financial institutions',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Banking and financial institutions\n\nBanks and financial institutions provide services like deposits, loans, and investments.',
+          importantPoints: [
+            'Deposit services',
+            'Lending services',
+            'Investment services'
+          ],
+          quiz: [
+            {
+              id: 'q11-1-1',
+              question: 'What services do banks provide?',
+              options: ['Only deposits', 'Deposits, loans, investments', 'Only loans', 'Only investments'],
+              correctAnswer: 1,
+              explanation: 'Banks provide deposit services, lending services, and investment services.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-11-2',
+          title: 'Understanding bank accounts',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Understanding bank accounts\n\nDifferent types of bank accounts: checking, savings, money market, and CDs.',
+          importantPoints: [
+            'Checking: transactions',
+            'Savings: interest earning',
+            'Different features'
+          ],
+          quiz: [
+            {
+              id: 'q11-2-1',
+              question: 'What are types of bank accounts?',
+              options: ['Only checking', 'Checking, savings, money market, CDs', 'Only savings', 'No accounts'],
+              correctAnswer: 1,
+              explanation: 'Common bank accounts include checking, savings, money market accounts, and certificates of deposit (CDs).'
+            }
+          ]
+        },
+        {
+          id: 'lesson-11-3',
+          title: 'Tracking, reconciling and more',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Tracking, reconciling and more\n\nTracking transactions, reconciling accounts, and managing bank accounts effectively.',
+          importantPoints: [
+            'Track all transactions',
+            'Reconcile regularly',
+            'Monitor for fraud'
+          ],
+          quiz: [
+            {
+              id: 'q11-3-1',
+              question: 'Why is reconciling important?',
+              options: ['Not important', 'Ensures accuracy and detects errors', 'Only for businesses', 'Too complicated'],
+              correctAnswer: 1,
+              explanation: 'Reconciling accounts ensures accuracy, detects errors, and helps identify fraudulent activity.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-11-4',
+          title: 'Interest',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Interest\n\nInterest is earned on savings and paid on loans. Understanding interest rates and compounding.',
+          importantPoints: [
+            'Earn interest on savings',
+            'Pay interest on loans',
+            'Compound interest grows'
+          ],
+          quiz: [
+            {
+              id: 'q11-4-1',
+              question: 'What is interest?',
+              options: ['Only cost', 'Cost of borrowing or return on lending', 'Only return', 'No cost or return'],
+              correctAnswer: 1,
+              explanation: 'Interest is the cost of borrowing money or the return earned on lending/saving money.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt11-1',
+          question: 'What services do banks provide?',
+          options: ['Only deposits', 'Deposits, loans, investments', 'Only loans', 'Only investments'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-12',
+      title: 'Unit 12: Financial goals',
+      description: 'Setting and achieving financial goals',
+      lessons: [
+        {
+          id: 'lesson-12-1',
+          title: 'SMART goals',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# SMART goals\n\nSMART goals are Specific, Measurable, Achievable, Relevant, and Time-bound.',
+          importantPoints: [
+            'Specific: clear and defined',
+            'Measurable: can track progress',
+            'Time-bound: has deadline'
+          ],
+          quiz: [
+            {
+              id: 'q12-1-1',
+              question: 'What does SMART stand for?',
+              options: ['Simple goals', 'Specific, Measurable, Achievable, Relevant, Time-bound', 'Smart money', 'Savings only'],
+              correctAnswer: 1,
+              explanation: 'SMART stands for Specific, Measurable, Achievable, Relevant, and Time-bound goals.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-12-2',
+          title: 'Short, medium, and long term goals',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Short, medium, and long term goals\n\nFinancial goals can be categorized by time horizon: short (under 1 year), medium (1-5 years), long (5+ years).',
+          importantPoints: [
+            'Short term: under 1 year',
+            'Medium term: 1-5 years',
+            'Long term: 5+ years'
+          ],
+          quiz: [
+            {
+              id: 'q12-2-1',
+              question: 'What is a long-term goal?',
+              options: ['Under 1 year', '1-5 years', '5+ years', 'No time limit'],
+              correctAnswer: 2,
+              explanation: 'Long-term financial goals typically span 5 or more years.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-12-3',
+          title: 'Net worth',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Net worth\n\nNet worth is the difference between assets and liabilities, measuring overall financial health.',
+          importantPoints: [
+            'Net worth = Assets - Liabilities',
+            'Measures financial health',
+            'Track over time'
+          ],
+          quiz: [
+            {
+              id: 'q12-3-1',
+              question: 'What is net worth?',
+              options: ['Only assets', 'Assets minus liabilities', 'Only liabilities', 'Income'],
+              correctAnswer: 1,
+              explanation: 'Net worth is calculated as total assets minus total liabilities.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt12-1',
+          question: 'What does SMART stand for?',
+          options: ['Simple goals', 'Specific, Measurable, Achievable, Relevant, Time-bound', 'Smart money', 'Savings only'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-13',
+      title: 'Unit 13: Budgeting & saving',
+      description: 'Creating budgets and building savings',
+      lessons: [
+        {
+          id: 'lesson-13-1',
+          title: 'Budgeting',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Budgeting\n\nA budget is a plan for managing income and expenses to achieve financial goals.',
+          importantPoints: [
+            'Track income and expenses',
+            'Plan spending',
+            'Achieve goals'
+          ],
+          quiz: [
+            {
+              id: 'q13-1-1',
+              question: 'What is a budget?',
+              options: ['Only expenses', 'Plan for managing income and expenses', 'Only income', 'No plan'],
+              correctAnswer: 1,
+              explanation: 'A budget is a plan for managing income and expenses to achieve financial goals.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-13-2',
+          title: 'Saving money',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Saving money\n\nSaving involves setting aside money for future needs and goals.',
+          importantPoints: [
+            'Pay yourself first',
+            'Emergency fund',
+            'Automate savings'
+          ],
+          quiz: [
+            {
+              id: 'q13-2-1',
+              question: 'What is the "pay yourself first" principle?',
+              options: ['Spend first', 'Save before spending', 'No saving', 'Only spending'],
+              correctAnswer: 1,
+              explanation: '"Pay yourself first" means saving money before spending on other expenses.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-13-3',
+          title: 'Reducing expenses',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Reducing expenses\n\nReducing expenses increases savings and helps achieve financial goals faster.',
+          importantPoints: [
+            'Identify needs vs wants',
+            'Cut unnecessary expenses',
+            'Negotiate bills'
+          ],
+          quiz: [
+            {
+              id: 'q13-3-1',
+              question: 'How can you reduce expenses?',
+              options: ['Spend more', 'Identify needs vs wants, cut unnecessary expenses', 'No reduction possible', 'Only increase income'],
+              correctAnswer: 1,
+              explanation: 'Reduce expenses by identifying needs vs wants, cutting unnecessary spending, and negotiating bills.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt13-1',
+          question: 'What is a budget?',
+          options: ['Only expenses', 'Plan for managing income and expenses', 'Only income', 'No plan'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-14',
+      title: 'Unit 14: Saving & investing',
+      description: 'Understanding risk, return, and retirement planning',
+      lessons: [
+        {
+          id: 'lesson-14-1',
+          title: 'Risk and return',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Risk and return\n\nHigher potential returns generally come with higher risk. Understanding this trade-off is crucial.',
+          importantPoints: [
+            'Risk-return trade-off',
+            'Diversification reduces risk',
+            'Time horizon matters'
+          ],
+          quiz: [
+            {
+              id: 'q14-1-1',
+              question: 'What is the risk-return relationship?',
+              options: ['No relationship', 'Higher return generally means higher risk', 'Lower return means higher risk', 'Same for all'],
+              correctAnswer: 1,
+              explanation: 'Generally, investments with higher potential returns carry higher risk.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-14-2',
+          title: 'Planning for retirement',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Planning for retirement\n\nRetirement planning involves estimating needs, saving, and investing for future retirement.',
+          importantPoints: [
+            'Estimate retirement needs',
+            'Start early',
+            'Use retirement accounts'
+          ],
+          quiz: [
+            {
+              id: 'q14-2-1',
+              question: 'Why start retirement planning early?',
+              options: ['Not important', 'Time allows compound growth', 'Too complicated', 'No benefits'],
+              correctAnswer: 1,
+              explanation: 'Starting early allows compound interest to work, significantly increasing retirement savings.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-14-3',
+          title: 'Saving for retirement',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Saving for retirement\n\nRetirement savings vehicles include 401(k)s, IRAs, and other tax-advantaged accounts.',
+          importantPoints: [
+            '401(k) plans',
+            'IRA accounts',
+            'Tax advantages'
+          ],
+          quiz: [
+            {
+              id: 'q14-3-1',
+              question: 'What are retirement savings vehicles?',
+              options: ['Only savings accounts', '401(k)s, IRAs, and other tax-advantaged accounts', 'Only checking', 'No options'],
+              correctAnswer: 1,
+              explanation: 'Retirement savings vehicles include 401(k)s, IRAs, and other tax-advantaged accounts.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt14-1',
+          question: 'What is the risk-return relationship?',
+          options: ['No relationship', 'Higher return generally means higher risk', 'Lower return means higher risk', 'Same for all'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-15',
+      title: 'Unit 15: Consumer credit',
+      description: 'Understanding credit cards and credit scores',
+      lessons: [
+        {
+          id: 'lesson-15-1',
+          title: 'Credit cards',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Credit cards\n\nCredit cards allow borrowing to make purchases, but must be repaid with interest if not paid in full.',
+          importantPoints: [
+            'Convenient but costly',
+            'Pay in full to avoid interest',
+            'Understand terms'
+          ],
+          quiz: [
+            {
+              id: 'q15-1-1',
+              question: 'How can you avoid credit card interest?',
+              options: ['Never use cards', 'Pay balance in full each month', 'Only pay minimum', 'Ignore bills'],
+              correctAnswer: 1,
+              explanation: 'Paying the full balance each month avoids interest charges on credit cards.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-15-2',
+          title: 'Credit score',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Credit score\n\nCredit scores measure creditworthiness and affect loan rates and approval.',
+          importantPoints: [
+            'FICO and VantageScore',
+            'Factors: payment history, utilization, length',
+            'Higher score = better rates'
+          ],
+          quiz: [
+            {
+              id: 'q15-2-1',
+              question: 'What affects credit scores?',
+              options: ['Only income', 'Payment history, credit utilization, length of credit', 'Only age', 'Only location'],
+              correctAnswer: 1,
+              explanation: 'Credit scores are affected by payment history, credit utilization, length of credit history, and other factors.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt15-1',
+          question: 'How can you avoid credit card interest?',
+          options: ['Never use cards', 'Pay balance in full each month', 'Only pay minimum', 'Ignore bills'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-16',
+      title: 'Unit 16: Loans and debt',
+      description: 'Understanding borrowing, loans, and debt management',
+      lessons: [
+        {
+          id: 'lesson-16-1',
+          title: 'Terms of borrowing',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Terms of borrowing\n\nLoan terms include principal, interest rate, term length, and repayment schedule.',
+          importantPoints: [
+            'Principal: amount borrowed',
+            'Interest rate: cost of borrowing',
+            'Term: repayment period'
+          ],
+          quiz: [
+            {
+              id: 'q16-1-1',
+              question: 'What are loan terms?',
+              options: ['Only interest', 'Principal, interest rate, term length, repayment schedule', 'Only principal', 'No terms'],
+              correctAnswer: 1,
+              explanation: 'Loan terms include the principal amount, interest rate, term length, and repayment schedule.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-16-2',
+          title: 'Borrowing money',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Borrowing money\n\nBorrowing money involves understanding costs, risks, and responsibilities of debt.',
+          importantPoints: [
+            'Understand total cost',
+            'Compare options',
+            'Borrow responsibly'
+          ],
+          quiz: [
+            {
+              id: 'q16-2-1',
+              question: 'What should you consider when borrowing?',
+              options: ['Only interest rate', 'Total cost, terms, ability to repay', 'Only amount', 'No considerations'],
+              correctAnswer: 1,
+              explanation: 'When borrowing, consider the total cost, terms, and your ability to repay the loan.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-16-3',
+          title: 'Types of loans',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Types of loans\n\nDifferent types of loans: personal, auto, mortgage, student, and others, each with specific purposes.',
+          importantPoints: [
+            'Personal loans',
+            'Secured vs unsecured',
+            'Different purposes'
+          ],
+          quiz: [
+            {
+              id: 'q16-3-1',
+              question: 'What are types of loans?',
+              options: ['Only personal', 'Personal, auto, mortgage, student, and others', 'Only mortgage', 'No types'],
+              correctAnswer: 1,
+              explanation: 'Common loan types include personal, auto, mortgage, student, and business loans.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-16-4',
+          title: 'Debt',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Debt\n\nDebt management involves understanding total debt, prioritizing repayment, and avoiding excessive debt.',
+          importantPoints: [
+            'Track total debt',
+            'Prioritize high-interest debt',
+            'Avoid debt overload'
+          ],
+          quiz: [
+            {
+              id: 'q16-4-1',
+              question: 'How should you manage debt?',
+              options: ['Ignore it', 'Track total debt, prioritize high-interest, avoid overload', 'Only pay minimum', 'Borrow more'],
+              correctAnswer: 1,
+              explanation: 'Manage debt by tracking total debt, prioritizing high-interest debt repayment, and avoiding excessive debt.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-16-5',
+          title: 'Bankruptcy',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Bankruptcy\n\nBankruptcy is a legal process for individuals unable to repay debts, with long-term consequences.',
+          importantPoints: [
+            'Last resort option',
+            'Long-term credit impact',
+            'Different chapters'
+          ],
+          quiz: [
+            {
+              id: 'q16-5-1',
+              question: 'What is bankruptcy?',
+              options: ['Debt elimination', 'Legal process for debt relief', 'Easy solution', 'No consequences'],
+              correctAnswer: 1,
+              explanation: 'Bankruptcy is a legal process for individuals unable to repay debts, with significant long-term consequences.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt16-1',
+          question: 'What are loan terms?',
+          options: ['Only interest', 'Principal, interest rate, term length, repayment schedule', 'Only principal', 'No terms'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-17',
+      title: 'Unit 17: Taxes',
+      description: 'Understanding personal and local taxes',
+      lessons: [
+        {
+          id: 'lesson-17-1',
+          title: 'What are taxes and why do we pay them',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# What are taxes and why do we pay them\n\nTaxes fund government services and programs. Understanding why we pay taxes is important.',
+          importantPoints: [
+            'Fund government services',
+            'Required by law',
+            'Different tax types'
+          ],
+          quiz: [
+            {
+              id: 'q17-1-1',
+              question: 'Why do we pay taxes?',
+              options: ['Optional', 'Fund government services and programs', 'Only for some', 'No reason'],
+              correctAnswer: 1,
+              explanation: 'Taxes fund government services like education, infrastructure, defense, and social programs.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-17-2',
+          title: 'Local taxes',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Local taxes\n\nLocal taxes include property taxes, sales taxes, and local income taxes that fund local services.',
+          importantPoints: [
+            'Property taxes',
+            'Sales taxes',
+            'Local income taxes'
+          ],
+          quiz: [
+            {
+              id: 'q17-2-1',
+              question: 'What are local taxes?',
+              options: ['Only federal', 'Property, sales, local income taxes', 'Only state', 'No local taxes'],
+              correctAnswer: 1,
+              explanation: 'Local taxes include property taxes, sales taxes, and local income taxes that fund local government services.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-17-3',
+          title: 'Tax forms',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Tax forms\n\nUnderstanding tax forms like W-2, 1099, and tax returns is essential for filing taxes correctly.',
+          importantPoints: [
+            'W-2 for employees',
+            '1099 for contractors',
+            'Tax return forms'
+          ],
+          quiz: [
+            {
+              id: 'q17-3-1',
+              question: 'What is a W-2?',
+              options: ['Tax return', 'Wage and tax statement from employer', '1099 form', 'No form'],
+              correctAnswer: 1,
+              explanation: 'A W-2 is a wage and tax statement that employers provide to employees for tax filing.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-17-4',
+          title: 'Personal taxes',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Personal taxes\n\nPersonal income taxes are based on earnings and vary by income level, deductions, and credits.',
+          importantPoints: [
+            'Based on income',
+            'Deductions reduce taxable income',
+            'Credits reduce tax owed'
+          ],
+          quiz: [
+            {
+              id: 'q17-4-1',
+              question: 'What are personal taxes based on?',
+              options: ['Only age', 'Income, deductions, credits', 'Only location', 'No basis'],
+              correctAnswer: 1,
+              explanation: 'Personal income taxes are based on income, with deductions and credits affecting the final amount owed.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt17-1',
+          question: 'Why do we pay taxes?',
+          options: ['Optional', 'Fund government services and programs', 'Only for some', 'No reason'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-18',
+      title: 'Unit 18: Insurance',
+      description: 'Understanding different types of insurance and risk management',
+      lessons: [
+        {
+          id: 'lesson-18-1',
+          title: 'What is risk and how to manage it?',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# What is risk and how to manage it?\n\nRisk is the possibility of loss. Insurance is one way to manage and transfer risk.',
+          importantPoints: [
+            'Risk is possibility of loss',
+            'Insurance transfers risk',
+            'Other risk management strategies'
+          ],
+          quiz: [
+            {
+              id: 'q18-1-1',
+              question: 'What is risk?',
+              options: ['Guarantee', 'Possibility of loss', 'No possibility', 'Certainty'],
+              correctAnswer: 1,
+              explanation: 'Risk is the possibility of experiencing a loss or negative outcome.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-18-2',
+          title: 'Insurance basics and terminology',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Insurance basics and terminology\n\nUnderstanding insurance terms: premium, deductible, coverage, and policy limits.',
+          importantPoints: [
+            'Premium: cost of insurance',
+            'Deductible: amount you pay first',
+            'Coverage: what is protected'
+          ],
+          quiz: [
+            {
+              id: 'q18-2-1',
+              question: 'What is a premium?',
+              options: ['Deductible', 'Cost of insurance', 'Coverage amount', 'Claim payment'],
+              correctAnswer: 1,
+              explanation: 'A premium is the cost you pay for insurance coverage, typically monthly or annually.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-18-3',
+          title: 'Car insurance',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Car insurance\n\nCar insurance protects against financial loss from accidents, theft, and other vehicle-related incidents.',
+          importantPoints: [
+            'Liability coverage',
+            'Collision and comprehensive',
+            'Required by law in most states'
+          ],
+          quiz: [
+            {
+              id: 'q18-3-1',
+              question: 'What does car insurance cover?',
+              options: ['Only accidents', 'Accidents, theft, liability, and other incidents', 'Only theft', 'Nothing'],
+              correctAnswer: 1,
+              explanation: 'Car insurance covers accidents, theft, liability, and other vehicle-related incidents.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-18-4',
+          title: 'Health insurance',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Health insurance\n\nHealth insurance helps pay for medical expenses, including doctor visits, hospital stays, and medications.',
+          importantPoints: [
+            'Covers medical expenses',
+            'Premiums and deductibles',
+            'Networks and coverage'
+          ],
+          quiz: [
+            {
+              id: 'q18-4-1',
+              question: 'What does health insurance cover?',
+              options: ['Only emergencies', 'Medical expenses including doctor visits, hospital stays, medications', 'Only medications', 'Nothing'],
+              correctAnswer: 1,
+              explanation: 'Health insurance covers medical expenses including doctor visits, hospital stays, and medications.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-18-5',
+          title: 'Life insurance',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Life insurance\n\nLife insurance provides financial protection to beneficiaries upon the policyholder\'s death.',
+          importantPoints: [
+            'Term vs whole life',
+            'Beneficiaries receive death benefit',
+            'Protects dependents'
+          ],
+          quiz: [
+            {
+              id: 'q18-5-1',
+              question: 'What is life insurance?',
+              options: ['Health coverage', 'Financial protection for beneficiaries upon death', 'Property insurance', 'Auto insurance'],
+              correctAnswer: 1,
+              explanation: 'Life insurance provides financial protection to beneficiaries when the policyholder dies.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-18-6',
+          title: 'Property insurance',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Property insurance\n\nProperty insurance protects homes and belongings from damage, theft, and liability.',
+          importantPoints: [
+            'Homeowners insurance',
+            'Renters insurance',
+            'Covers property and liability'
+          ],
+          quiz: [
+            {
+              id: 'q18-6-1',
+              question: 'What does property insurance cover?',
+              options: ['Only homes', 'Homes, belongings, damage, theft, liability', 'Only belongings', 'Nothing'],
+              correctAnswer: 1,
+              explanation: 'Property insurance covers homes, belongings, damage, theft, and liability.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-18-7',
+          title: 'Estate planning',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Estate planning\n\nEstate planning involves preparing for the transfer of assets after death through wills, trusts, and other tools.',
+          importantPoints: [
+            'Wills and trusts',
+            'Beneficiary designations',
+            'Minimize taxes'
+          ],
+          quiz: [
+            {
+              id: 'q18-7-1',
+              question: 'What is estate planning?',
+              options: ['Only wills', 'Preparing for asset transfer after death', 'Only trusts', 'No planning'],
+              correctAnswer: 1,
+              explanation: 'Estate planning involves preparing for the transfer of assets after death through wills, trusts, and other legal tools.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt18-1',
+          question: 'What is risk?',
+          options: ['Guarantee', 'Possibility of loss', 'No possibility', 'Certainty'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-19',
+      title: 'Unit 19: Car buying',
+      description: 'Understanding car ownership, leasing, and loans',
+      lessons: [
+        {
+          id: 'lesson-19-1',
+          title: 'Owning vs leasing',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Owning vs leasing\n\nComparing car ownership and leasing: each has advantages and disadvantages depending on needs.',
+          importantPoints: [
+            'Ownership: build equity',
+            'Leasing: lower payments, no equity',
+            'Consider total cost'
+          ],
+          quiz: [
+            {
+              id: 'q19-1-1',
+              question: 'What is a key difference between owning and leasing?',
+              options: ['No difference', 'Ownership builds equity, leasing does not', 'Leasing builds equity', 'Same cost'],
+              correctAnswer: 1,
+              explanation: 'Ownership allows you to build equity in the car, while leasing does not build equity.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-19-2',
+          title: 'Car loans',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Car loans\n\nCar loans finance vehicle purchases. Understanding interest rates, terms, and total cost is important.',
+          importantPoints: [
+            'Interest rates vary',
+            'Loan term affects payments',
+            'Total cost matters'
+          ],
+          quiz: [
+            {
+              id: 'q19-2-1',
+              question: 'What should you consider with car loans?',
+              options: ['Only monthly payment', 'Interest rate, term, total cost', 'Only interest rate', 'No considerations'],
+              correctAnswer: 1,
+              explanation: 'Consider the interest rate, loan term, and total cost when evaluating car loans.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-19-3',
+          title: 'Cost of car ownership',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Cost of car ownership\n\nCar ownership costs include purchase price, insurance, maintenance, fuel, and depreciation.',
+          importantPoints: [
+            'Purchase price',
+            'Ongoing costs: insurance, maintenance, fuel',
+            'Depreciation'
+          ],
+          quiz: [
+            {
+              id: 'q19-3-1',
+              question: 'What are car ownership costs?',
+              options: ['Only purchase price', 'Purchase, insurance, maintenance, fuel, depreciation', 'Only fuel', 'No costs'],
+              correctAnswer: 1,
+              explanation: 'Car ownership costs include the purchase price, insurance, maintenance, fuel, and depreciation.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt19-1',
+          question: 'What is a key difference between owning and leasing?',
+          options: ['No difference', 'Ownership builds equity, leasing does not', 'Leasing builds equity', 'Same cost'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-20',
+      title: 'Unit 20: Housing',
+      description: 'Understanding renting vs homeownership',
+      lessons: [
+        {
+          id: 'lesson-20-1',
+          title: 'Renting vs homeownership',
+          duration: '25 min',
+          videoUrl: '',
+          notes: '# Renting vs homeownership\n\nComparing renting and homeownership: each has financial and lifestyle implications.',
+          importantPoints: [
+            'Renting: flexibility, no equity',
+            'Homeownership: equity, responsibility',
+            'Consider total cost of ownership'
+          ],
+          quiz: [
+            {
+              id: 'q20-1-1',
+              question: 'What is a key advantage of renting?',
+              options: ['Building equity', 'Flexibility and mobility', 'Tax deductions', 'Forced savings'],
+              correctAnswer: 1,
+              explanation: 'Renting offers flexibility and mobility without the commitment and costs of homeownership.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt20-1',
+          question: 'What is a key advantage of renting?',
+          options: ['Building equity', 'Flexibility and mobility', 'Tax deductions', 'Forced savings'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-21',
+      title: 'Unit 21: Scams & fraud',
+      description: 'Protecting yourself from scams, fraud, and identity theft',
+      lessons: [
+        {
+          id: 'lesson-21-1',
+          title: 'Personal information and identity',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Personal information and identity\n\nProtecting personal information is crucial to prevent identity theft and fraud.',
+          importantPoints: [
+            'Protect sensitive information',
+            'Monitor accounts',
+            'Report suspicious activity'
+          ],
+          quiz: [
+            {
+              id: 'q21-1-1',
+              question: 'Why protect personal information?',
+              options: ['Not important', 'Prevent identity theft and fraud', 'No risk', 'Too complicated'],
+              correctAnswer: 1,
+              explanation: 'Protecting personal information helps prevent identity theft and financial fraud.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-21-2',
+          title: 'Common scams',
+          duration: '22 min',
+          videoUrl: '',
+          notes: '# Common scams\n\nCommon scams include phishing, fake investments, romance scams, and others. Recognizing red flags is important.',
+          importantPoints: [
+            'Phishing emails',
+            'Fake investments',
+            'Too good to be true'
+          ],
+          quiz: [
+            {
+              id: 'q21-2-1',
+              question: 'What are common scams?',
+              options: ['Only online', 'Phishing, fake investments, romance scams, and others', 'Only phone', 'No scams'],
+              correctAnswer: 1,
+              explanation: 'Common scams include phishing, fake investments, romance scams, and various other fraudulent schemes.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-21-3',
+          title: 'Contracts',
+          duration: '20 min',
+          videoUrl: '',
+          notes: '# Contracts\n\nUnderstanding contracts, reading terms carefully, and knowing your rights is important for consumer protection.',
+          importantPoints: [
+            'Read contracts carefully',
+            'Understand terms',
+            'Know your rights'
+          ],
+          quiz: [
+            {
+              id: 'q21-3-1',
+              question: 'What should you do with contracts?',
+              options: ['Sign immediately', 'Read carefully and understand terms', 'Ignore terms', 'No need to read'],
+              correctAnswer: 1,
+              explanation: 'Always read contracts carefully, understand all terms, and know your rights before signing.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-21-4',
+          title: 'Consumer protection agencies',
+          duration: '18 min',
+          videoUrl: '',
+          notes: '# Consumer protection agencies\n\nConsumer protection agencies help protect consumers from fraud, scams, and unfair practices.',
+          importantPoints: [
+            'FTC: Federal Trade Commission',
+            'CFPB: Consumer Financial Protection Bureau',
+            'State agencies'
+          ],
+          quiz: [
+            {
+              id: 'q21-4-1',
+              question: 'What do consumer protection agencies do?',
+              options: ['Nothing', 'Protect consumers from fraud and unfair practices', 'Only for businesses', 'No protection'],
+              correctAnswer: 1,
+              explanation: 'Consumer protection agencies help protect consumers from fraud, scams, and unfair business practices.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt21-1',
+          question: 'Why protect personal information?',
+          options: ['Not important', 'Prevent identity theft and fraud', 'No risk', 'Too complicated'],
+          correctAnswer: 1
+        }
+      ]
+    }
+  ],
+  finalExam: [
+    {
+      id: 'fe-1',
+      question: 'What is scarcity?',
+      options: ['Abundance of resources', 'Unlimited wants with limited resources', 'No wants', 'Infinite resources'],
+      correctAnswer: 1
+    },
+    {
+      id: 'fe-2',
+      question: 'What is a budget?',
+      options: ['Only expenses', 'Plan for managing income and expenses', 'Only income', 'No plan'],
+      correctAnswer: 1
+    },
+    {
+      id: 'fe-3',
+      question: 'What is risk?',
+      options: ['Guarantee', 'Possibility of loss', 'No possibility', 'Certainty'],
+      correctAnswer: 1
+    }
+  ]
 }
 ];
 

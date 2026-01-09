@@ -24,16 +24,14 @@ const typeColors: Record<OrganizationType, string> = {
 };
 
 function getTrustColor(score: number): string {
-  if (score >= 85) return 'text-green-500';
-  if (score >= 70) return 'text-yellow-500';
-  if (score >= 50) return 'text-orange-500';
+  if (score >= 70) return 'text-green-500';
+  if (score >= 50) return 'text-yellow-500';
   return 'text-red-500';
 }
 
 function getTrustBgColor(score: number): string {
-  if (score >= 85) return 'bg-green-500';
-  if (score >= 70) return 'bg-yellow-500';
-  if (score >= 50) return 'bg-orange-500';
+  if (score >= 70) return 'bg-green-500';
+  if (score >= 50) return 'bg-yellow-500';
   return 'bg-red-500';
 }
 

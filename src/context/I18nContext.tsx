@@ -20,6 +20,7 @@ export function I18nProvider({ children }: I18nProviderProps) {
   const [language, setLanguage] = useState<SupportedLanguage>('en');
   const [translations, setTranslations] = useState<Record<string, Record<string, any>>>({});
   const [loading, setLoading] = useState(true);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const loadTranslationsForLanguage = useCallback(async (lang: SupportedLanguage) => {
     setLoading(true);
@@ -42,7 +43,7 @@ export function I18nProvider({ children }: I18nProviderProps) {
 
   // Initialize language on mount
   useEffect(() => {
-    if (preferencesLoading) return;
+    if (preferencesLoading || isInitialized) return;
 
     let initialLanguage: SupportedLanguage = 'en';
     
@@ -61,11 +62,10 @@ export function I18nProvider({ children }: I18nProviderProps) {
       }
     }
 
-    // Если есть явно сохраненный язык в localStorage - используем его
+    // Приоритет: сохраненный язык > preferences.language > определение по браузеру
     if (storedLanguage) {
       initialLanguage = storedLanguage;
-    } else if (preferences.language && preferences.language !== 'en' && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
-      // Если язык не дефолтный и есть в preferences (для авторизованных пользователей из БД)
+    } else if (preferences.language && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
       initialLanguage = preferences.language as SupportedLanguage;
     } else {
       // Если нет сохраненного языка - определяем по браузеру
@@ -78,7 +78,8 @@ export function I18nProvider({ children }: I18nProviderProps) {
 
     setLanguage(initialLanguage);
     loadTranslationsForLanguage(initialLanguage);
-  }, [preferences.language, preferencesLoading, loadTranslationsForLanguage, updatePreferences]);
+    setIsInitialized(true);
+  }, [preferences.language, preferencesLoading, loadTranslationsForLanguage, updatePreferences, isInitialized]);
 
   const changeLanguage = useCallback(async (lang: SupportedLanguage) => {
     if (lang === language) return;
