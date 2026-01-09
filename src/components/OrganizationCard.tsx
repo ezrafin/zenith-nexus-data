@@ -234,7 +234,8 @@ export function OrganizationCard({ organization, index = 0 }: OrganizationCardPr
         {organization.website && (
           <button 
             onClick={handleWebsiteClick}
-            className="flex items-center gap-1 text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+            className="flex items-center gap-1 text-primary opacity-70 hover:opacity-100 transition-opacity"
+            aria-label={`Visit ${organization.name} website`}
           >
             <ExternalLink className="h-3 w-3" />
           </button>
