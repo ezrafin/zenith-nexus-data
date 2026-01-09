@@ -2,15 +2,17 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
-import { MessageSquare, FileText, Clock } from 'lucide-react';
+import { MessageSquare, FileText, Clock, Star } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
+import { useFollowingList } from '@/hooks/useFollowingList';
 
 interface ActivityItem {
   id: string;
-  type: 'post' | 'reply';
+  type: 'post' | 'reply' | 'evaluation';
   title: string;
   content?: string;
   user_name: string;
+  user_id?: string;
   user_avatar: string;
   created_at: string;
   link: string;
@@ -18,6 +20,7 @@ interface ActivityItem {
 
 export function ActivityFeed() {
   const { user } = useUser();
+  const { followingIds } = useFollowingList();
   const [activities, setActivities] = useState<ActivityItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,28 +30,31 @@ export function ActivityFeed() {
     } else {
       setLoading(false);
     }
-  }, [user]);
+  }, [user, followingIds]);
 
   const loadActivityFeed = async () => {
     if (!user) return;
 
     setLoading(true);
     try {
-      // Get recent discussions
-      const { data: postsData } = await supabase
-        .from('forum_discussions')
-        .select('id, title, created_at, author_name')
-        .order('created_at', { ascending: false })
-        .limit(10);
-
-      // Get recent replies
-      const { data: repliesData } = await supabase
-        .from('forum_replies')
-        .select('id, content, created_at, discussion_id, author_name')
-        .order('created_at', { ascending: false })
-        .limit(10);
+      // If user has following, filter by following users, otherwise show all
+      const shouldFilterByFollowing = followingIds.length > 0;
 
       const activitiesList: ActivityItem[] = [];
+
+      // Get recent discussions from followed users
+      let postsQuery = supabase
+        .from('forum_discussions')
+        .select('id, title, created_at, author_name, user_id')
+        .eq('is_featured', true)
+        .order('created_at', { ascending: false })
+        .limit(shouldFilterByFollowing ? 20 : 10);
+
+      if (shouldFilterByFollowing) {
+        postsQuery = postsQuery.in('user_id', followingIds);
+      }
+
+      const { data: postsData } = await postsQuery;
 
       if (postsData) {
         postsData.forEach((post: any) => {
@@ -57,12 +63,26 @@ export function ActivityFeed() {
             type: 'post',
             title: post.title,
             user_name: post.author_name || 'Anonymous',
+            user_id: post.user_id,
             user_avatar: '',
             created_at: post.created_at,
             link: `/forum/${post.id}`,
           });
         });
       }
+
+      // Get recent replies from followed users
+      let repliesQuery = supabase
+        .from('forum_replies')
+        .select('id, content, created_at, discussion_id, author_name, user_id')
+        .order('created_at', { ascending: false })
+        .limit(shouldFilterByFollowing ? 20 : 10);
+
+      if (shouldFilterByFollowing) {
+        repliesQuery = repliesQuery.in('user_id', followingIds);
+      }
+
+      const { data: repliesData } = await repliesQuery;
 
       if (repliesData) {
         repliesData.forEach((reply: any) => {
@@ -72,11 +92,48 @@ export function ActivityFeed() {
             title: 'Replied to discussion',
             content: reply.content?.substring(0, 100),
             user_name: reply.author_name || 'Anonymous',
+            user_id: reply.user_id,
             user_avatar: '',
             created_at: reply.created_at,
             link: `/forum/${reply.discussion_id}`,
           });
         });
+      }
+
+      // Get company evaluations from followed users
+      if (shouldFilterByFollowing) {
+        const { data: evaluationsData } = await supabase
+          .from('company_evaluations')
+          .select('id, company_slug, rating, comment, created_at, user_id')
+          .in('user_id', followingIds)
+          .order('created_at', { ascending: false })
+          .limit(10);
+
+        if (evaluationsData) {
+          // Get user profiles for evaluations
+          const userIds = [...new Set(evaluationsData.map(e => e.user_id))];
+          const { data: profiles } = await supabase
+            .from('profiles')
+            .select('id, display_name')
+            .in('id', userIds);
+
+          const profileMap = new Map(profiles?.map(p => [p.id, p]) || []);
+
+          evaluationsData.forEach((eval: any) => {
+            const profile = profileMap.get(eval.user_id);
+            activitiesList.push({
+              id: eval.id,
+              type: 'evaluation',
+              title: `Rated ${eval.company_slug}`,
+              content: eval.comment || `Rating: ${eval.rating}/100`,
+              user_name: profile?.display_name || 'User',
+              user_id: eval.user_id,
+              user_avatar: '',
+              created_at: eval.created_at,
+              link: `/companies/${eval.company_slug}`,
+            });
+          });
+        }
       }
 
       // Sort by date
@@ -128,7 +185,11 @@ export function ActivityFeed() {
   return (
     <div className="space-y-3">
       {activities.map((activity) => {
-        const Icon = activity.type === 'post' ? FileText : MessageSquare;
+        const Icon = activity.type === 'post' 
+          ? FileText 
+          : activity.type === 'evaluation' 
+          ? Star 
+          : MessageSquare;
         return (
           <Link
             key={`${activity.type}-${activity.id}`}
@@ -143,7 +204,11 @@ export function ActivityFeed() {
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
                   <span className="font-medium text-xs sm:text-sm">{activity.user_name}</span>
                   <span className="text-xs text-muted-foreground">
-                    {activity.type === 'post' ? 'created a discussion' : 'replied'}
+                    {activity.type === 'post' 
+                      ? 'created a discussion' 
+                      : activity.type === 'evaluation'
+                      ? 'rated a company'
+                      : 'replied'}
                   </span>
                 </div>
                 <div className="font-medium text-xs sm:text-sm mb-1 line-clamp-1">{activity.title}</div>

@@ -20,7 +20,7 @@ export function useUserFollow(targetUserId?: string) {
         .from('user_follows' as any)
         .select('id')
         .eq('follower_id', user.id)
-        .eq('followed_id', targetUserId)
+        .eq('following_id', targetUserId)
         .maybeSingle();
 
       if (error) {
@@ -52,7 +52,7 @@ export function useUserFollow(targetUserId?: string) {
       if (next) {
         const { error } = await supabase.from('user_follows' as any).insert({
           follower_id: user.id,
-          followed_id: targetUserId,
+          following_id: targetUserId,
         });
         if (error) throw error;
         toast.success(t('toast.followingUser'));
@@ -67,7 +67,7 @@ export function useUserFollow(targetUserId?: string) {
           .from('user_follows' as any)
           .delete()
           .eq('follower_id', user.id)
-          .eq('followed_id', targetUserId);
+          .eq('following_id', targetUserId);
         if (error) throw error;
         toast.success(t('toast.unfollowedUser'));
       }

@@ -89,7 +89,7 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
                       }}
                       className="inline-flex items-center max-w-full"
                     >
-                      <BreadcrumbPage className="truncate">{item.name}</BreadcrumbPage>
+                      <BreadcrumbPage className="truncate inline-flex items-center leading-none">{item.name}</BreadcrumbPage>
                     </motion.li>
                   ) : (
                     <>
@@ -105,7 +105,7 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
                         <BreadcrumbLink asChild>
                           <Link 
                             to={path} 
-                            className="transition-colors hover:text-primary whitespace-nowrap"
+                            className="transition-colors hover:text-primary whitespace-nowrap inline-flex items-center leading-none"
                           >
                             {item.name}
                           </Link>
@@ -120,7 +120,7 @@ export function Breadcrumbs({ pageTitle, items, className }: BreadcrumbsProps) {
                         }}
                         role="presentation"
                         aria-hidden="true"
-                        className="inline-flex items-center justify-center flex-shrink-0"
+                        className="inline-flex items-center justify-center flex-shrink-0 leading-none"
                       >
                         <ChevronRight className="size-3 sm:size-4 flex-shrink-0" />
                       </motion.li>

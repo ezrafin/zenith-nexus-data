@@ -11,6 +11,7 @@ import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useFollowingList } from '@/hooks/useFollowingList';
 
 interface CompanyRatingProps {
   companySlug: string;
@@ -31,6 +32,7 @@ interface Evaluation {
 
 export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
   const { user } = useUser();
+  const { followingIds } = useFollowingList();
   const { t } = useTranslation({ namespace: 'ui' });
   const [evaluations, setEvaluations] = useState<Evaluation[]>([]);
   const [userRating, setUserRating] = useState<number>(0);
@@ -44,7 +46,7 @@ export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
 
   useEffect(() => {
     loadEvaluations();
-  }, [companySlug, user]);
+  }, [companySlug, user, followingIds]);
 
   const loadEvaluations = async () => {
     try {
@@ -67,10 +69,24 @@ export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
         
         const profileMap = new Map(profiles?.map(p => [p.id, p]) || []);
         
-        const evalsWithProfiles = evals.map(e => ({
+        let evalsWithProfiles = evals.map(e => ({
           ...e,
           profiles: profileMap.get(e.user_id) || null
         }));
+
+        // If user has following, prioritize evaluations from followed users
+        if (user && followingIds.length > 0) {
+          evalsWithProfiles.sort((a, b) => {
+            const aIsFollowed = followingIds.includes(a.user_id);
+            const bIsFollowed = followingIds.includes(b.user_id);
+            
+            if (aIsFollowed && !bIsFollowed) return -1;
+            if (!aIsFollowed && bIsFollowed) return 1;
+            
+            // If both are followed or both are not, sort by date
+            return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+          });
+        }
         
         setEvaluations(evalsWithProfiles as any);
         

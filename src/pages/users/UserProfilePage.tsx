@@ -38,7 +38,7 @@ export default function UserProfilePage() {
       supabase
         .from('user_follows' as any)
         .select('*', { count: 'exact', head: true })
-        .eq('followed_id', targetUserId),
+        .eq('following_id', targetUserId),
       supabase
         .from('user_follows' as any)
         .select('*', { count: 'exact', head: true })
