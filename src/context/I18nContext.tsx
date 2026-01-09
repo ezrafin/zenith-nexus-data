@@ -45,15 +45,32 @@ export function I18nProvider({ children }: I18nProviderProps) {
     if (preferencesLoading) return;
 
     let initialLanguage: SupportedLanguage = 'en';
+    
+    // Проверяем, есть ли реально сохраненные настройки в localStorage
+    const hasStoredPreferences = localStorage.getItem('userPreferences');
+    let storedLanguage: SupportedLanguage | null = null;
+    
+    if (hasStoredPreferences) {
+      try {
+        const storedPrefs = JSON.parse(hasStoredPreferences);
+        if (storedPrefs?.language && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(storedPrefs.language)) {
+          storedLanguage = storedPrefs.language as SupportedLanguage;
+        }
+      } catch (e) {
+        console.error('Error parsing stored preferences:', e);
+      }
+    }
 
-    // Если есть сохраненный язык в preferences - используем его
-    if (preferences.language && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
+    // Если есть явно сохраненный язык в localStorage - используем его
+    if (storedLanguage) {
+      initialLanguage = storedLanguage;
+    } else if (preferences.language && preferences.language !== 'en' && ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'].includes(preferences.language)) {
+      // Если язык не дефолтный и есть в preferences (для авторизованных пользователей из БД)
       initialLanguage = preferences.language as SupportedLanguage;
     } else {
       // Если нет сохраненного языка - определяем по браузеру
       initialLanguage = detectBrowserLanguage();
-      // Сохраняем определенный язык в preferences (только если пользователь не авторизован или нет сохраненных настроек)
-      const hasStoredPreferences = localStorage.getItem('userPreferences');
+      // Сохраняем определенный язык в preferences (только если нет сохраненных настроек)
       if (!hasStoredPreferences) {
         updatePreferences({ language: initialLanguage }).catch(console.error);
       }
