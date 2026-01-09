@@ -111,7 +111,7 @@ export default function ContactPage() {
                   <div className="flex-1">
                     <h3 className="font-semibold mb-1">{t('contactPage.techSupportTitle')}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{t('contactPage.techSupportDesc')}</p>
-                    <Button variant="outline" size="sm" onClick={handleBugReportClick}>
+                    <Button variant="outline" size="sm" className="w-full sm:w-auto" onClick={handleBugReportClick}>
                       <Bug className="h-4 w-4 mr-2" />
                       {t('contactPage.reportBugButton')}
                     </Button>

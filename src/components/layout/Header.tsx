@@ -36,6 +36,18 @@ export function Header() {
   const { preferences, updatePreferences } = useUserPreferences();
   const { changeLanguage, language } = useI18n();
 
+  // Block body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navigation = useMemo(() => [{
     name: t('navigation.content'),
     href: '/news',
@@ -421,11 +433,11 @@ export function Header() {
         {mobileMenuOpen && (
           <motion.nav 
           id="mobile-navigation"
-          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, height: 0, y: -20 }}
-          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, height: 'auto', y: 0 }}
-          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, height: 0, y: -20 }}
+          initial={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: '-100%' }}
+          animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: '-100%' }}
           transition={transitions.normal}
-          className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border max-h-[80vh] overflow-y-auto overflow-hidden"
+          className="lg:hidden fixed inset-0 top-16 bg-background/95 backdrop-blur-xl border-b border-border h-[calc(100vh-4rem)] overflow-y-auto z-50"
           role="navigation"
           aria-label="Mobile navigation">
             <div className="container-wide py-4 space-y-1">
