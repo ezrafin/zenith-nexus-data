@@ -727,7 +727,8 @@
     "allAuthors": "Tous les Auteurs"
   },
   "marketWidget": {
-    "live": "En direct"
+    "live": "En direct",
+    "viewAll": "Voir tout"
   },
   "billCollection": {
     "title": "Collection de Pièces",

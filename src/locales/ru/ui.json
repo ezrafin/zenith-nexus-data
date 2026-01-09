@@ -728,7 +728,8 @@
     "allAuthors": "Все авторы"
   },
   "marketWidget": {
-    "live": "В прямом эфире"
+    "live": "В прямом эфире",
+    "viewAll": "Смотреть все"
   },
   "billCollection": {
     "title": "Коллекция монет",

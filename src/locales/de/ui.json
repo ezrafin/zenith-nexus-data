@@ -727,7 +727,8 @@
     "allAuthors": "Alle Autoren"
   },
   "marketWidget": {
-    "live": "Live"
+    "live": "Live",
+    "viewAll": "Alle anzeigen"
   },
   "billCollection": {
     "title": "Münzsammlung",

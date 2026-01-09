@@ -733,7 +733,8 @@
     "allAuthors": "All Authors"
   },
   "marketWidget": {
-    "live": "Live"
+    "live": "Live",
+    "viewAll": "View all"
   },
   "lastUpdated": {
     "updated": "Updated"

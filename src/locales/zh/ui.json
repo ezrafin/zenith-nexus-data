@@ -727,7 +727,8 @@
     "allAuthors": "所有作者"
   },
   "marketWidget": {
-    "live": "实时"
+    "live": "实时",
+    "viewAll": "查看全部"
   },
   "billCollection": {
     "title": "硬币收集",

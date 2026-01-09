@@ -727,7 +727,8 @@
     "allAuthors": "Todos los Autores"
   },
   "marketWidget": {
-    "live": "En vivo"
+    "live": "En vivo",
+    "viewAll": "Ver todo"
   },
   "billCollection": {
     "title": "Colección de Monedas",

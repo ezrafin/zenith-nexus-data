@@ -75,7 +75,7 @@ export function MarketMiniTable({ title, data, href, icon: Icon }: MarketMiniTab
         {/* Footer */}
         <div className="mt-4 pt-3 border-t border-border/50">
           <span className="flex items-center gap-1 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-            View all
+            {t('marketWidget.viewAll')}
             <ArrowUpRight className="h-3 w-3" />
           </span>
         </div>

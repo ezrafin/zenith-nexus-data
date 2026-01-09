@@ -727,7 +727,8 @@
     "allAuthors": "Wszyscy Autorzy"
   },
   "marketWidget": {
-    "live": "Na żywo"
+    "live": "Na żywo",
+    "viewAll": "Zobacz wszystko"
   },
   "billCollection": {
     "title": "Kolekcja Monet",
