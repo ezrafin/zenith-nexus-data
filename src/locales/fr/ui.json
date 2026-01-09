@@ -777,7 +777,27 @@
       "theme_change": "Changeur de Thème",
       "language_change": "Polyglotte",
       "legendary_hidden_treasure": "Trésor Caché",
-      "companies_page_visit": "Explorateur d'Entreprises"
+      "companies_page_visit": "Explorateur d'Entreprises",
+      "forum_create_discussion": "Démarreur de Discussion",
+      "forum_post_reply": "Conversationniste",
+      "forum_bookmark": "Collectionneur de Signets",
+      "forum_follow": "Suiveur de Fil",
+      "forum_topic_visit": "Explorateur de Sujets",
+      "news_page_visit": "Lecteur de Nouvelles",
+      "news_article_read": "Explorateur d'Articles",
+      "analytics_page_visit": "Explorateur d'Analytiques",
+      "analytics_article_read": "Lecteur d'Analytiques",
+      "learning_page_visit": "Enthousiaste de l'Apprentissage",
+      "video_library_visit": "Apprenant Vidéo",
+      "bookmarks_page_visit": "Gestionnaire de Signets",
+      "bookmark_create": "Sauveur de Contenu",
+      "watchlists_page_visit": "Gestionnaire de Listes",
+      "watchlist_add_item": "Traqueur de Marché",
+      "settings_page_visit": "Explorateur de Paramètres",
+      "settings_language_change": "Polyglotte",
+      "global_search_use": "Maître de la Recherche",
+      "user_follow": "Connecteur Social",
+      "info_page_visit": "Chercheur d'Informations"
     }
   },
   "topicStatus": {

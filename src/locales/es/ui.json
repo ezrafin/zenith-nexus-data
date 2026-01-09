@@ -777,7 +777,27 @@
       "theme_change": "Cambiador de Tema",
       "language_change": "Políglota",
       "legendary_hidden_treasure": "Tesoro Oculto",
-      "companies_page_visit": "Explorador de Empresas"
+      "companies_page_visit": "Explorador de Empresas",
+      "forum_create_discussion": "Iniciador de Discusión",
+      "forum_post_reply": "Conversador",
+      "forum_bookmark": "Coleccionista de Marcadores",
+      "forum_follow": "Seguidor de Hilo",
+      "forum_topic_visit": "Explorador de Temas",
+      "news_page_visit": "Lector de Noticias",
+      "news_article_read": "Explorador de Artículos",
+      "analytics_page_visit": "Explorador de Analíticas",
+      "analytics_article_read": "Lector de Analíticas",
+      "learning_page_visit": "Entusiasta del Aprendizaje",
+      "video_library_visit": "Aprendiz de Video",
+      "bookmarks_page_visit": "Administrador de Marcadores",
+      "bookmark_create": "Ahorrador de Contenido",
+      "watchlists_page_visit": "Administrador de Listas",
+      "watchlist_add_item": "Rastreador de Mercado",
+      "settings_page_visit": "Explorador de Configuración",
+      "settings_language_change": "Políglota",
+      "global_search_use": "Maestro de Búsqueda",
+      "user_follow": "Conector Social",
+      "info_page_visit": "Buscador de Información"
     }
   },
   "topicStatus": {

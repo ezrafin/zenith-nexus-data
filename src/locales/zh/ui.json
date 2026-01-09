@@ -777,7 +777,27 @@
       "theme_change": "主题更换者",
       "language_change": "多语言者",
       "legendary_hidden_treasure": "隐藏的宝藏",
-      "companies_page_visit": "公司探索者"
+      "companies_page_visit": "公司探索者",
+      "forum_create_discussion": "讨论发起者",
+      "forum_post_reply": "对话者",
+      "forum_bookmark": "书签收藏家",
+      "forum_follow": "主题关注者",
+      "forum_topic_visit": "主题探索者",
+      "news_page_visit": "新闻读者",
+      "news_article_read": "文章探索者",
+      "analytics_page_visit": "分析探索者",
+      "analytics_article_read": "分析读者",
+      "learning_page_visit": "学习爱好者",
+      "video_library_visit": "视频学习者",
+      "bookmarks_page_visit": "书签管理器",
+      "bookmark_create": "内容保存者",
+      "watchlists_page_visit": "观察列表管理器",
+      "watchlist_add_item": "市场追踪者",
+      "settings_page_visit": "设置探索者",
+      "settings_language_change": "多语言者",
+      "global_search_use": "搜索大师",
+      "user_follow": "社交连接者",
+      "info_page_visit": "信息寻求者"
     }
   },
   "topicStatus": {

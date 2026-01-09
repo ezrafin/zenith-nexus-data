@@ -777,7 +777,27 @@
       "theme_change": "Zmieniacz Motywu",
       "language_change": "Poliglota",
       "legendary_hidden_treasure": "Ukryty Skarb",
-      "companies_page_visit": "Odkrywca Firm"
+      "companies_page_visit": "Odkrywca Firm",
+      "forum_create_discussion": "Rozpoczynający Dyskusję",
+      "forum_post_reply": "Rozmówca",
+      "forum_bookmark": "Kolekcjoner Zakładek",
+      "forum_follow": "Obserwator Wątku",
+      "forum_topic_visit": "Odkrywca Tematów",
+      "news_page_visit": "Czytelnik Wiadomości",
+      "news_article_read": "Odkrywca Artykułów",
+      "analytics_page_visit": "Odkrywca Analityki",
+      "analytics_article_read": "Czytelnik Analityki",
+      "learning_page_visit": "Entuzjasta Nauki",
+      "video_library_visit": "Uczeń Wideo",
+      "bookmarks_page_visit": "Menedżer Zakładek",
+      "bookmark_create": "Oszczędzający Treść",
+      "watchlists_page_visit": "Menedżer List Obserwowanych",
+      "watchlist_add_item": "Śledzący Rynek",
+      "settings_page_visit": "Odkrywca Ustawień",
+      "settings_language_change": "Poliglota",
+      "global_search_use": "Mistrz Wyszukiwania",
+      "user_follow": "Łącznik Społeczny",
+      "info_page_visit": "Poszukiwacz Informacji"
     }
   },
   "topicStatus": {

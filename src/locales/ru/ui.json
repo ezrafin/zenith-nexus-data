@@ -778,7 +778,27 @@
       "theme_change": "Смена темы",
       "language_change": "Полиглот",
       "legendary_hidden_treasure": "Скрытое сокровище",
-      "companies_page_visit": "Исследователь компаний"
+      "companies_page_visit": "Исследователь компаний",
+      "forum_create_discussion": "Начинающий дискуссию",
+      "forum_post_reply": "Собеседник",
+      "forum_bookmark": "Коллекционер закладок",
+      "forum_follow": "Подписчик темы",
+      "forum_topic_visit": "Исследователь тем",
+      "news_page_visit": "Читатель новостей",
+      "news_article_read": "Исследователь статей",
+      "analytics_page_visit": "Исследователь аналитики",
+      "analytics_article_read": "Читатель аналитики",
+      "learning_page_visit": "Энтузиаст обучения",
+      "video_library_visit": "Видео-ученик",
+      "bookmarks_page_visit": "Менеджер закладок",
+      "bookmark_create": "Сберегатель контента",
+      "watchlists_page_visit": "Менеджер списков наблюдения",
+      "watchlist_add_item": "Отслеживатель рынка",
+      "settings_page_visit": "Исследователь настроек",
+      "settings_language_change": "Полиглот",
+      "global_search_use": "Мастер поиска",
+      "user_follow": "Социальный коннектор",
+      "info_page_visit": "Искатель информации"
     }
   },
   "topicStatus": {

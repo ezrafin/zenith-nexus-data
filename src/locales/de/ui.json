@@ -777,7 +777,27 @@
       "theme_change": "Theme-Wechsler",
       "language_change": "Polyglott",
       "legendary_hidden_treasure": "Versteckter Schatz",
-      "companies_page_visit": "Unternehmen-Entdecker"
+      "companies_page_visit": "Unternehmen-Entdecker",
+      "forum_create_discussion": "Diskussions-Starter",
+      "forum_post_reply": "Gesprächspartner",
+      "forum_bookmark": "Lesezeichen-Sammler",
+      "forum_follow": "Thread-Follower",
+      "forum_topic_visit": "Themen-Entdecker",
+      "news_page_visit": "Nachrichten-Leser",
+      "news_article_read": "Artikel-Entdecker",
+      "analytics_page_visit": "Analytik-Entdecker",
+      "analytics_article_read": "Analytik-Leser",
+      "learning_page_visit": "Lern-Enthusiast",
+      "video_library_visit": "Video-Lernender",
+      "bookmarks_page_visit": "Lesezeichen-Manager",
+      "bookmark_create": "Inhalts-Sparer",
+      "watchlists_page_visit": "Watchlist-Manager",
+      "watchlist_add_item": "Markt-Tracker",
+      "settings_page_visit": "Einstellungen-Entdecker",
+      "settings_language_change": "Polyglott",
+      "global_search_use": "Such-Meister",
+      "user_follow": "Sozialer Verbinder",
+      "info_page_visit": "Informations-Sucher"
     }
   },
   "topicStatus": {

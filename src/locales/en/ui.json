@@ -800,7 +800,27 @@
       "theme_change": "Theme Changer",
       "language_change": "Polyglot",
       "legendary_hidden_treasure": "Hidden Treasure",
-      "companies_page_visit": "Company Explorer"
+      "companies_page_visit": "Company Explorer",
+      "forum_create_discussion": "Discussion Starter",
+      "forum_post_reply": "Conversationalist",
+      "forum_bookmark": "Bookmark Collector",
+      "forum_follow": "Thread Follower",
+      "forum_topic_visit": "Topic Explorer",
+      "news_page_visit": "News Reader",
+      "news_article_read": "Article Explorer",
+      "analytics_page_visit": "Analytics Explorer",
+      "analytics_article_read": "Analytics Reader",
+      "learning_page_visit": "Learning Enthusiast",
+      "video_library_visit": "Video Learner",
+      "bookmarks_page_visit": "Bookmarks Manager",
+      "bookmark_create": "Content Saver",
+      "watchlists_page_visit": "Watchlist Manager",
+      "watchlist_add_item": "Market Tracker",
+      "settings_page_visit": "Settings Explorer",
+      "settings_language_change": "Polyglot",
+      "global_search_use": "Search Master",
+      "user_follow": "Social Connector",
+      "info_page_visit": "Information Seeker"
     }
   },
   "topicStatus": {
