@@ -558,7 +558,7 @@ export default function CoursePlatformPage() {
                                   ? 'text-green-700 dark:text-green-400 bg-green-500/10' 
                                   : 'text-red-700 dark:text-red-400 bg-red-500/10'
                               }`}>
-                                {question.optionExplanations[oIndex]}
+                                {question.optionExplanations?.[oIndex]}
                               </p>
                             )}
                           </div>

@@ -5,11 +5,12 @@ import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
-import { Shield, Trash2, Lock, Pin, CheckCircle, XCircle } from 'lucide-react';
+import { Shield, Trash2, Lock, Pin, CheckCircle, XCircle, MessageCircle, Star, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useTranslation } from '@/hooks/useTranslation';
+import { formatRelativeTime } from '@/lib/utils/date';
 
 interface Report {
   id: string;
@@ -37,17 +38,43 @@ interface PendingDiscussion {
   is_pinned: boolean;
 }
 
+interface PendingReply {
+  id: string;
+  discussion_id: string;
+  content: string;
+  author_name: string;
+  created_at: string;
+  user_id: string | null;
+  is_approved: boolean;
+  discussion_title?: string;
+}
+
+interface PendingEvaluation {
+  id: string;
+  user_id: string;
+  company_slug: string;
+  rating: number;
+  comment: string | null;
+  created_at: string;
+  is_approved: boolean;
+  user_name?: string;
+}
+
 // Admin email - only this user can access moderation
 const ADMIN_EMAIL = 'mark.lindt.finance@gmail.com';
 
 export default function ModerationPage() {
   const { user } = useUser();
-  const { t } = useTranslation({ namespace: 'ui' });
+  const { t, language } = useTranslation({ namespace: 'ui' });
   const [reports, setReports] = useState<Report[]>([]);
   const [pendingDiscussions, setPendingDiscussions] = useState<PendingDiscussion[]>([]);
+  const [pendingReplies, setPendingReplies] = useState<PendingReply[]>([]);
+  const [pendingEvaluations, setPendingEvaluations] = useState<PendingEvaluation[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingDiscussions, setLoadingDiscussions] = useState(false);
-  const [activeTab, setActiveTab] = useState<'reports' | 'discussions'>('discussions');
+  const [loadingReplies, setLoadingReplies] = useState(false);
+  const [loadingEvaluations, setLoadingEvaluations] = useState(false);
+  const [activeTab, setActiveTab] = useState<'discussions' | 'replies' | 'evaluations' | 'reports'>('discussions');
   const [reportsTab, setReportsTab] = useState<'pending' | 'all'>('pending');
 
   // Check if current user is admin
@@ -57,8 +84,12 @@ export default function ModerationPage() {
     if (user && isAdmin) {
       if (activeTab === 'reports') {
         loadReports();
-      } else {
+      } else if (activeTab === 'discussions') {
         loadPendingDiscussions();
+      } else if (activeTab === 'replies') {
+        loadPendingReplies();
+      } else if (activeTab === 'evaluations') {
+        loadPendingEvaluations();
       }
     } else {
       setLoading(false);
@@ -109,6 +140,78 @@ export default function ModerationPage() {
     }
   };
 
+  const loadPendingReplies = async () => {
+    setLoadingReplies(true);
+    try {
+      // Load replies that are not approved
+      const { data, error } = await supabase
+        .from('forum_replies')
+        .select('*')
+        .eq('is_approved', false)
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      // Get discussion titles for each reply
+      const repliesWithTitles = await Promise.all(
+        (data || []).map(async (reply: any) => {
+          const { data: discussion } = await supabase
+            .from('forum_discussions')
+            .select('title')
+            .eq('id', reply.discussion_id)
+            .single();
+          return {
+            ...reply,
+            discussion_title: discussion?.title || 'Unknown Discussion',
+          };
+        })
+      );
+
+      setPendingReplies(repliesWithTitles as PendingReply[]);
+    } catch (error) {
+      console.error('Error loading pending replies:', error);
+      toast.error('Failed to load pending replies');
+    } finally {
+      setLoadingReplies(false);
+    }
+  };
+
+  const loadPendingEvaluations = async () => {
+    setLoadingEvaluations(true);
+    try {
+      // Load evaluations that are not approved (with comments only)
+      const { data, error } = await supabase
+        .from('company_evaluations')
+        .select('*')
+        .eq('is_approved', false)
+        .not('comment', 'is', null)
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      // Get user names for each evaluation
+      const userIds = [...new Set((data || []).map((e: any) => e.user_id))];
+      const { data: profiles } = await supabase
+        .from('profiles')
+        .select('id, display_name')
+        .in('id', userIds);
+
+      const profileMap = new Map((profiles || []).map(p => [p.id, p.display_name]));
+
+      const evaluationsWithNames = (data || []).map((evaluation: any) => ({
+        ...evaluation,
+        user_name: profileMap.get(evaluation.user_id) || 'Anonymous',
+      }));
+
+      setPendingEvaluations(evaluationsWithNames as PendingEvaluation[]);
+    } catch (error) {
+      console.error('Error loading pending evaluations:', error);
+      toast.error('Failed to load pending evaluations');
+    } finally {
+      setLoadingEvaluations(false);
+    }
+  };
+
   const handleDiscussionModeration = async (discussionId: string, action: 'approve' | 'reject') => {
     try {
       if (action === 'approve') {
@@ -131,6 +234,56 @@ export default function ModerationPage() {
       loadPendingDiscussions();
     } catch (error: any) {
       toast.error(error.message || 'Failed to update discussion');
+    }
+  };
+
+  const handleReplyModeration = async (replyId: string, action: 'approve' | 'reject') => {
+    try {
+      if (action === 'approve') {
+        // Mark as approved
+        const { error } = await supabase
+          .from('forum_replies')
+          .update({ is_approved: true })
+          .eq('id', replyId);
+        if (error) throw error;
+        toast.success('Reply approved');
+      } else {
+        // Delete rejected reply
+        const { error } = await supabase
+          .from('forum_replies')
+          .delete()
+          .eq('id', replyId);
+        if (error) throw error;
+        toast.success('Reply rejected and deleted');
+      }
+      loadPendingReplies();
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to update reply');
+    }
+  };
+
+  const handleEvaluationModeration = async (evaluationId: string, action: 'approve' | 'reject') => {
+    try {
+      if (action === 'approve') {
+        // Mark as approved
+        const { error } = await supabase
+          .from('company_evaluations')
+          .update({ is_approved: true })
+          .eq('id', evaluationId);
+        if (error) throw error;
+        toast.success('Evaluation approved');
+      } else {
+        // Delete rejected evaluation
+        const { error } = await supabase
+          .from('company_evaluations')
+          .delete()
+          .eq('id', evaluationId);
+        if (error) throw error;
+        toast.success('Evaluation rejected and deleted');
+      }
+      loadPendingEvaluations();
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to update evaluation');
     }
   };
 
@@ -230,16 +383,40 @@ export default function ModerationPage() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h1 className="heading-lg mb-2">Moderation Dashboard</h1>
-              <p className="text-muted-foreground">Review and manage reported content</p>
+              <p className="text-muted-foreground">Review and manage content before it appears on the site</p>
             </div>
           </div>
 
-          <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'reports' | 'discussions')}>
-            <TabsList>
-              <TabsTrigger value="discussions">Pending Discussions</TabsTrigger>
-              <TabsTrigger value="reports">Reports</TabsTrigger>
+          <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as typeof activeTab)}>
+            <TabsList className="mb-6">
+              <TabsTrigger value="discussions" className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" />
+                Discussions
+                {pendingDiscussions.length > 0 && (
+                  <Badge variant="destructive" className="ml-1">{pendingDiscussions.length}</Badge>
+                )}
+              </TabsTrigger>
+              <TabsTrigger value="replies" className="flex items-center gap-2">
+                <MessageSquare className="h-4 w-4" />
+                Replies
+                {pendingReplies.length > 0 && (
+                  <Badge variant="destructive" className="ml-1">{pendingReplies.length}</Badge>
+                )}
+              </TabsTrigger>
+              <TabsTrigger value="evaluations" className="flex items-center gap-2">
+                <Star className="h-4 w-4" />
+                Company Reviews
+                {pendingEvaluations.length > 0 && (
+                  <Badge variant="destructive" className="ml-1">{pendingEvaluations.length}</Badge>
+                )}
+              </TabsTrigger>
+              <TabsTrigger value="reports" className="flex items-center gap-2">
+                <Shield className="h-4 w-4" />
+                Reports
+              </TabsTrigger>
             </TabsList>
 
+            {/* Discussions Tab */}
             <TabsContent value="discussions" className="mt-6">
               {loadingDiscussions ? (
                 <div className="space-y-4">
@@ -265,7 +442,7 @@ export default function ModerationPage() {
                           <div className="flex items-center gap-3 mb-3">
                             <Badge variant="destructive">Pending</Badge>
                             <span className="text-sm text-muted-foreground">
-                              {new Date(discussion.created_at).toLocaleDateString()}
+                              {formatRelativeTime(new Date(discussion.created_at), language)}
                             </span>
                             <span className="text-sm text-muted-foreground">
                               Category: {discussion.category}
@@ -307,6 +484,138 @@ export default function ModerationPage() {
               )}
             </TabsContent>
 
+            {/* Replies Tab */}
+            <TabsContent value="replies" className="mt-6">
+              {loadingReplies ? (
+                <div className="space-y-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <SkeletonCard key={i} lines={3} />
+                  ))}
+                </div>
+              ) : pendingReplies.length === 0 ? (
+                <div className="premium-card p-12 text-center">
+                  <CheckCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="font-semibold text-lg mb-2">No pending replies</h3>
+                  <p className="text-muted-foreground">All replies have been reviewed.</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {pendingReplies.map((reply) => (
+                    <div
+                      key={reply.id}
+                      className="premium-card p-6"
+                    >
+                      <div className="flex items-start justify-between gap-4 mb-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <Badge variant="destructive">Pending</Badge>
+                            <span className="text-sm text-muted-foreground">
+                              {formatRelativeTime(new Date(reply.created_at), language)}
+                            </span>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">
+                            <strong>Reply to:</strong>{' '}
+                            <Link to={`/forum/${reply.discussion_id}`} className="text-primary hover:underline">
+                              {reply.discussion_title}
+                            </Link>
+                          </p>
+                          <p className="text-sm text-muted-foreground mb-3">
+                            <strong>Author:</strong> {reply.author_name}
+                          </p>
+                          <div className="bg-muted/50 rounded-lg p-4 mb-4">
+                            <p className="text-sm whitespace-pre-wrap">{reply.content}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex gap-3 justify-end">
+                        <Button
+                          variant="outline"
+                          onClick={() => handleReplyModeration(reply.id, 'reject')}
+                        >
+                          <XCircle className="h-4 w-4 mr-2" />
+                          Reject
+                        </Button>
+                        <Button
+                          onClick={() => handleReplyModeration(reply.id, 'approve')}
+                        >
+                          <CheckCircle className="h-4 w-4 mr-2" />
+                          Approve
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </TabsContent>
+
+            {/* Evaluations Tab */}
+            <TabsContent value="evaluations" className="mt-6">
+              {loadingEvaluations ? (
+                <div className="space-y-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <SkeletonCard key={i} lines={3} />
+                  ))}
+                </div>
+              ) : pendingEvaluations.length === 0 ? (
+                <div className="premium-card p-12 text-center">
+                  <CheckCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="font-semibold text-lg mb-2">No pending company reviews</h3>
+                  <p className="text-muted-foreground">All company reviews have been moderated.</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {pendingEvaluations.map((evaluation) => (
+                    <div
+                      key={evaluation.id}
+                      className="premium-card p-6"
+                    >
+                      <div className="flex items-start justify-between gap-4 mb-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <Badge variant="destructive">Pending</Badge>
+                            <span className="text-sm text-muted-foreground">
+                              {formatRelativeTime(new Date(evaluation.created_at), language)}
+                            </span>
+                            <Badge variant="outline">Rating: {evaluation.rating}/100</Badge>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">
+                            <strong>Company:</strong>{' '}
+                            <Link to={`/companies/${evaluation.company_slug}`} className="text-primary hover:underline">
+                              {evaluation.company_slug}
+                            </Link>
+                          </p>
+                          <p className="text-sm text-muted-foreground mb-3">
+                            <strong>User:</strong> {evaluation.user_name}
+                          </p>
+                          {evaluation.comment && (
+                            <div className="bg-muted/50 rounded-lg p-4 mb-4">
+                              <p className="text-sm whitespace-pre-wrap">{evaluation.comment}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex gap-3 justify-end">
+                        <Button
+                          variant="outline"
+                          onClick={() => handleEvaluationModeration(evaluation.id, 'reject')}
+                        >
+                          <XCircle className="h-4 w-4 mr-2" />
+                          Reject
+                        </Button>
+                        <Button
+                          onClick={() => handleEvaluationModeration(evaluation.id, 'approve')}
+                        >
+                          <CheckCircle className="h-4 w-4 mr-2" />
+                          Approve
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </TabsContent>
+
+            {/* Reports Tab */}
             <TabsContent value="reports" className="mt-6">
               <Tabs value={reportsTab} onValueChange={(value) => setReportsTab(value as 'pending' | 'all')} className="mb-4">
                 <TabsList>
@@ -342,7 +651,7 @@ export default function ModerationPage() {
                             {report.target_type}
                           </span>
                           <span className="text-sm text-muted-foreground">
-                            {new Date(report.created_at).toLocaleDateString()}
+                            {formatRelativeTime(new Date(report.created_at), language)}
                           </span>
                         </div>
                         <div className="mb-2">
@@ -439,4 +748,3 @@ export default function ModerationPage() {
     </Layout>
   );
 }
-
