@@ -22,7 +22,7 @@ export function useFollowingList() {
 
       if (error) throw error;
 
-      setFollowingIds(data?.map(item => item.following_id) || []);
+      setFollowingIds((data as any[] | null)?.map(item => item.following_id) || []);
     } catch (error) {
       console.error('Error loading following list:', error);
       setFollowingIds([]);

@@ -141,7 +141,8 @@ export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
         if (error) throw error;
         toast.success(t('toast.evaluationUpdated', { ns: 'ui' }));
       } else {
-        // Create new evaluation
+        // Create new evaluation - requires moderation if has comment
+        const hasComment = userComment.trim().length > 0;
         const { error } = await supabase
           .from('company_evaluations')
           .insert({
@@ -149,10 +150,11 @@ export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
             company_slug: companySlug,
             rating: userRating,
             comment: userComment.trim() || null,
+            is_approved: !hasComment, // Auto-approve if no comment, otherwise needs moderation
           });
 
         if (error) throw error;
-        toast.success(t('toast.thankYouForEvaluation', { ns: 'ui' }));
+        toast.success(hasComment ? 'Review submitted for moderation' : t('toast.thankYouForEvaluation', { ns: 'ui' }));
       }
 
       setShowCommentForm(false);

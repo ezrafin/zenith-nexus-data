@@ -119,18 +119,18 @@ export function ActivityFeed() {
 
           const profileMap = new Map(profiles?.map(p => [p.id, p]) || []);
 
-          evaluationsData.forEach((eval: any) => {
-            const profile = profileMap.get(eval.user_id);
+          evaluationsData.forEach((item: any) => {
+            const profile = profileMap.get(item.user_id);
             activitiesList.push({
-              id: eval.id,
+              id: item.id,
               type: 'evaluation',
-              title: `Rated ${eval.company_slug}`,
-              content: eval.comment || `Rating: ${eval.rating}/100`,
+              title: `Rated ${item.company_slug}`,
+              content: item.comment || `Rating: ${item.rating}/100`,
               user_name: profile?.display_name || 'User',
-              user_id: eval.user_id,
+              user_id: item.user_id,
               user_avatar: '',
-              created_at: eval.created_at,
-              link: `/companies/${eval.company_slug}`,
+              created_at: item.created_at,
+              link: `/companies/${item.company_slug}`,
             });
           });
         }

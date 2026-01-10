@@ -97,6 +97,7 @@ export type Database = {
           company_slug: string
           created_at: string
           id: string
+          is_approved: boolean
           rating: number
           updated_at: string
           user_id: string
@@ -106,6 +107,7 @@ export type Database = {
           company_slug: string
           created_at?: string
           id?: string
+          is_approved?: boolean
           rating: number
           updated_at?: string
           user_id: string
@@ -115,6 +117,7 @@ export type Database = {
           company_slug?: string
           created_at?: string
           id?: string
+          is_approved?: boolean
           rating?: number
           updated_at?: string
           user_id?: string
@@ -363,6 +366,7 @@ export type Database = {
           created_at: string
           discussion_id: string
           id: string
+          is_approved: boolean
           user_id: string | null
         }
         Insert: {
@@ -371,6 +375,7 @@ export type Database = {
           created_at?: string
           discussion_id: string
           id?: string
+          is_approved?: boolean
           user_id?: string | null
         }
         Update: {
@@ -379,6 +384,7 @@ export type Database = {
           created_at?: string
           discussion_id?: string
           id?: string
+          is_approved?: boolean
           user_id?: string | null
         }
         Relationships: [

@@ -9404,7 +9404,7 @@ export const companyOverviews: Record<string, CompanyOverview> = {
       'Q4 2025: Continued focus on customer experience improvement',
     ],
     competitiveAdvantages: [
-      'One of Poland's oldest and most established banks',
+      "One of Poland's oldest and most established banks",
       'Strong brand recognition and heritage',
       'Comprehensive banking services',
       'Modern digital capabilities',
@@ -10588,7 +10588,7 @@ export const companyOverviews: Record<string, CompanyOverview> = {
       'Q4 2025: Continued modernization initiatives',
     ],
     competitiveAdvantages: [
-      'One of Romania's oldest banks',
+      "One of Romania's oldest banks",
       'State-owned with strong backing',
       'Extensive branch network',
       'Focus on retail banking',
@@ -10726,7 +10726,7 @@ export const companyOverviews: Record<string, CompanyOverview> = {
       'Q4 2025: Continued focus on customer experience',
     ],
     competitiveAdvantages: [
-      'One of Greece's oldest and largest banks',
+      "One of Greece's oldest and largest banks",
       'Comprehensive financial services',
       'Modern digital platform',
       'Strong market position',

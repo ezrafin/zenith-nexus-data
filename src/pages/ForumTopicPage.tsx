@@ -175,6 +175,7 @@ export default function ForumTopicPage() {
           content,
           author_name: profile?.display_name || user.email || 'Anonymous',
           user_id: user.id,
+          is_approved: false, // Requires admin approval
         });
 
       if (error) throw error;
@@ -190,7 +191,7 @@ export default function ForumTopicPage() {
         action: 'post_reply',
       });
       
-      toast.success(t('toast.replyPosted'));
+      toast.success(t('toast.replyPendingModeration') || 'Reply submitted for moderation');
       
       // Scroll to reply editor and focus it after a short delay to allow DOM update
       setTimeout(() => {

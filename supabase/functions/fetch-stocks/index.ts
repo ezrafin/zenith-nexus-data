@@ -199,7 +199,7 @@ serve(async (req) => {
     }
 
     // 7. Try ExchangeRate-API (for currencies only)
-    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies')) {
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies') {
       try {
         console.log('Attempting ExchangeRate-API for currencies...');
         marketData = await retryWithBackoff(async () => {
