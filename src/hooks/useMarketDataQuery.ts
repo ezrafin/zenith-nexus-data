@@ -73,8 +73,8 @@ async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'c
     if (responseData?.data && responseData.data.length > 0) {
       const result = {
         data: responseData.data,
-        timestamp: responseData.timestamp,
-        isDemo: false,
+        timestamp: responseData.timestamp || new Date().toISOString(),
+        isDemo: responseData.isDemo || false,
       };
       setCachedData(type, result.data, result.timestamp, result.isDemo);
       return result;
@@ -117,12 +117,22 @@ async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'c
     if (result?.data) {
       const data = {
         data: result.data,
-        timestamp: result.timestamp,
-        isDemo: false,
+        timestamp: result.timestamp || new Date().toISOString(),
+        isDemo: result.isDemo || false,
       };
       setCachedData(type, data.data, data.timestamp, data.isDemo);
       return data;
     } else if (result?.error) {
+      // Even on error, return mock data if available
+      if (result.data && Array.isArray(result.data) && result.data.length > 0) {
+        const data = {
+          data: result.data,
+          timestamp: result.timestamp || new Date().toISOString(),
+          isDemo: result.isDemo !== undefined ? result.isDemo : true,
+        };
+        setCachedData(type, data.data, data.timestamp, data.isDemo);
+        return data;
+      }
       throw new Error(result.error);
     }
     

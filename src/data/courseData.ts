@@ -2,15 +2,17 @@ export interface QuizQuestion {
   id: string;
   question: string;
   options: string[];
+  optionExplanations?: string[]; // Explanations for each option (appears after selection)
   correctAnswer: number;
-  explanation?: string;
+  explanation?: string; // General explanation (optional, for backward compatibility)
 }
 
 export interface Lesson {
   id: string;
   title: string;
   duration: string;
-  videoUrl?: string;
+  videoUrl?: string; // Legacy field, will be generated dynamically from R2
+  videoCount?: number; // Number of videos in this lesson (default: 1)
   notes: string;
   importantPoints: string[];
   quiz: QuizQuestion[];
@@ -49,13 +51,399 @@ export const courses: Course[] = [
   title: 'Macroeconomics',
   description: 'Comprehensive study of macroeconomic principles, policies, and their impact on global economies',
   finalExamPassRate: 75,
-  modules: Array.from({ length: 8 }, (_, i) => ({
-    id: `module-${i + 1}`,
-    title: `Module ${i + 1}`,
-    description: '',
-    lessons: [],
-    moduleTest: []
-  })),
+  modules: [
+    {
+      id: 'module-1',
+      title: 'Unit 1: Basic economics concepts',
+      description: 'Introduction to fundamental economic concepts and principles',
+      lessons: [
+        {
+          id: 'lesson-1-1',
+          title: 'Introduction to macroeconomics',
+          duration: '25 min',
+          videoCount: 5,
+          notes: '# Introduction to macroeconomics\n\nThis lesson introduces the fundamental concepts of macroeconomics, including scarcity, economic models, and different economic systems.',
+          importantPoints: [
+            'Economics studies how societies allocate scarce resources',
+            'Scarcity is the fundamental economic problem',
+            'Economic models help simplify complex reality',
+            'Different economic systems allocate resources differently'
+          ],
+          quiz: [
+            {
+              id: 'q1-1-1',
+              question: 'Which of the following best describes what we mean by resources in economics?',
+              options: [
+                'Natural resources like natural gas and trees',
+                'The factors used to produce goods and services',
+                'Human resources like workers',
+                'The ability to handle a situation',
+                'Monetary wealth'
+              ],
+              optionExplanations: [
+                'Natural resources are part of one of the economic resources, land, but resources are broader than just natural resources.',
+                'The four economic resources—land, labor, capital, and entrepreneurship—are used to produce goods and services.',
+                'Human resources, or labor, are one of the economic resources, but resources are broader than just labor.',
+                'While this is a common use of the word resource in everyday language, when economists talk about resources they are using a different meaning.',
+                'While this is a common use of the word resource in everyday language, when economists talk about resources they are using a different meaning.'
+              ],
+              correctAnswer: 1
+            },
+            {
+              id: 'q1-1-2',
+              question: 'Which of the following best captures the idea of the fundamental economic problem?',
+              options: [
+                'Limited wants and limited resources',
+                'Infinite resources and limited wants',
+                'Limited resources and unlimited wants',
+                'Unlimited resources and unlimited wants',
+                'Lack of demand for limited resources'
+              ],
+              optionExplanations: [
+                'Even if wants are limited, an economic system must decide how scarce resources are allocated among those wants.',
+                'If resources aren\'t scarce, then an economic system of allocating them is not necessary.',
+                'The unlimited wants of humans results in the problem of scarcity, which any economic system must address.',
+                'If resources aren\'t scarce, then an economic system of allocating them is not necessary.',
+                'If nobody wants a resource, then an economic system of allocating it is not necessary.'
+              ],
+              correctAnswer: 2
+            },
+            {
+              id: 'q1-1-3',
+              question: 'Which of the following is an example of a macroeconomic question?',
+              options: [
+                'How will a consumer react if their income decreases?',
+                'How many smartphones should Samsung produce this quarter?',
+                'What would be the likely impact of an increase in business taxes on the overall level of inflation in the country?',
+                'What is the optimal number of workers for an ice cream shop to employ during the summer months?',
+                'Who are the winners and losers from the imposition of a tax on cigarettes?'
+              ],
+              optionExplanations: [
+                'This is a microeconomic question because it relates to individual behavior.',
+                'This is a microeconomic question because it relates to the decision making of an individual firm.',
+                'This is a macroeconomic question because it deals with the the impact on the overall price level in the country as a whole.',
+                'This is a microeconomic question because it relates to the decision making of an individual firm.',
+                'This is a microeconomic question because it relates to a market for a product.'
+              ],
+              correctAnswer: 2
+            },
+            {
+              id: 'q1-1-4',
+              question: 'Which of the following is the best definition of an economic system?',
+              options: [
+                'A set of policies used by government to regulate what is produced',
+                'A model for understanding how economies work',
+                'A mechanism that decides what to make, how to make it, and who gets it',
+                'A model that illustrates the flows of goods and services',
+                'A government program for promoting economic growth and employment'
+              ],
+              optionExplanations: [
+                'An economic system concerns not just what is produced, but how that production is allocated. Additionally, an economic system can exist with or without government regulation.',
+                'Economic systems are how resources are produced and goods and services are allocated. Models can help us understand how these systems work.',
+                'Economic systems are ways of allocating resources to production and the distribution of production created with those resources',
+                'Economic systems are how resources are produced and goods and services allocated. Models can help us understand how these systems work.',
+                'Economic systems can include more than just government decisions.'
+              ],
+              correctAnswer: 2
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-2',
+          title: 'Opportunity cost and the Production Possibilities Curve',
+          duration: '30 min',
+          videoCount: 5,
+          notes: '# Opportunity cost and the Production Possibilities Curve\n\nThis lesson explores opportunity cost and how the Production Possibilities Curve (PPC) illustrates trade-offs and economic efficiency.',
+          importantPoints: [
+            'Opportunity cost is the value of the next best alternative',
+            'The PPC shows maximum production possibilities',
+            'Points on the curve represent efficient production',
+            'The shape of the PPC reflects opportunity cost patterns'
+          ],
+          quiz: [
+            {
+              id: 'q1-2-1',
+              question: 'What is opportunity cost?',
+              options: ['The monetary cost', 'The value of the next best alternative given up', 'The total cost', 'The fixed cost'],
+              correctAnswer: 1,
+              explanation: 'Opportunity cost is the value of the next best alternative that must be given up when making a choice.'
+            },
+            {
+              id: 'q1-2-2',
+              question: 'What does a point on the Production Possibilities Curve represent?',
+              options: ['Inefficient production', 'Efficient production using all available resources', 'Impossible production', 'Future production'],
+              correctAnswer: 1,
+              explanation: 'Points on the PPC represent efficient production, meaning all available resources are being used effectively.'
+            },
+            {
+              id: 'q1-2-3',
+              question: 'What does an increasing opportunity cost PPC look like?',
+              options: ['A straight line', 'A curved line bowed outward', 'A curved line bowed inward', 'A vertical line'],
+              correctAnswer: 1,
+              explanation: 'An increasing opportunity cost PPC is bowed outward, showing that as more of one good is produced, the opportunity cost increases.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-3',
+          title: 'Comparative advantage and the gains from trade',
+          duration: '35 min',
+          videoCount: 7,
+          notes: '# Comparative advantage and the gains from trade\n\nThis lesson explains how countries and individuals benefit from specialization and trade through comparative advantage.',
+          importantPoints: [
+            'Comparative advantage differs from absolute advantage',
+            'Specialization based on comparative advantage increases total output',
+            'Trade benefits all parties when based on comparative advantage',
+            'Terms of trade determine how gains are distributed'
+          ],
+          quiz: [
+            {
+              id: 'q1-3-1',
+              question: 'What is comparative advantage?',
+              options: ['Producing more of everything', 'Producing at lower opportunity cost than others', 'Producing faster', 'Producing cheaper'],
+              correctAnswer: 1,
+              explanation: 'Comparative advantage means producing a good at a lower opportunity cost than others.'
+            },
+            {
+              id: 'q1-3-2',
+              question: 'How do countries benefit from trade?',
+              options: ['By avoiding specialization', 'By specializing in goods where they have comparative advantage', 'By producing everything themselves', 'By limiting trade'],
+              correctAnswer: 1,
+              explanation: 'Countries benefit by specializing in goods where they have comparative advantage and trading for other goods.'
+            },
+            {
+              id: 'q1-3-3',
+              question: 'What determines the terms of trade?',
+              options: ['Only supply', 'Only demand', 'The opportunity costs of both trading partners', 'Government policy'],
+              correctAnswer: 2,
+              explanation: 'Terms of trade are determined by the opportunity costs of both trading partners, falling between their opportunity cost ratios.'
+            },
+            {
+              id: 'q1-3-4',
+              question: 'When are there no gains from trade?',
+              options: ['Always', 'When opportunity costs are identical', 'When one country is better at everything', 'Never'],
+              correctAnswer: 1,
+              explanation: 'When opportunity costs are identical, there are no gains from trade because no specialization advantage exists.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-4',
+          title: 'Demand',
+          duration: '30 min',
+          videoCount: 6,
+          notes: '# Demand\n\nThis lesson covers the law of demand and the factors that influence demand for goods and services.',
+          importantPoints: [
+            'The law of demand: price and quantity demanded are inversely related',
+            'Demand is affected by prices of related goods, income, preferences, and expectations',
+            'Normal goods increase in demand with income; inferior goods decrease',
+            'A change in demand differs from a change in quantity demanded'
+          ],
+          quiz: [
+            {
+              id: 'q1-4-1',
+              question: 'According to the law of demand, what happens when price increases?',
+              options: ['Quantity demanded increases', 'Quantity demanded decreases', 'Demand increases', 'Demand decreases'],
+              correctAnswer: 1,
+              explanation: 'The law of demand states that as price increases, quantity demanded decreases, ceteris paribus.'
+            },
+            {
+              id: 'q1-4-2',
+              question: 'What are substitute goods?',
+              options: ['Goods used together', 'Goods that can replace each other', 'Goods that are identical', 'Goods with no relationship'],
+              correctAnswer: 1,
+              explanation: 'Substitute goods can replace each other in consumption. When the price of one increases, demand for the substitute increases.'
+            },
+            {
+              id: 'q1-4-3',
+              question: 'What is a normal good?',
+              options: ['A good with constant demand', 'A good whose demand increases with income', 'A good whose demand decreases with income', 'A luxury good'],
+              correctAnswer: 1,
+              explanation: 'A normal good is one whose demand increases when consumer income increases.'
+            },
+            {
+              id: 'q1-4-4',
+              question: 'What is the difference between a change in demand and a change in quantity demanded?',
+              options: ['No difference', 'Change in demand shifts the curve; change in quantity demanded moves along the curve', 'Change in quantity demanded shifts the curve', 'They are the same'],
+              correctAnswer: 1,
+              explanation: 'A change in demand shifts the entire demand curve due to non-price factors. A change in quantity demanded is movement along the curve due to price changes.'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-5',
+          title: 'Supply',
+          duration: '25 min',
+          videoCount: 3,
+          notes: '# Supply\n\nThis lesson explains the law of supply and the factors that affect the supply of goods and services.',
+          importantPoints: [
+            'The law of supply: price and quantity supplied are directly related',
+            'Supply is affected by production costs, technology, number of sellers, and expectations',
+            'A change in supply shifts the curve; a change in quantity supplied moves along the curve',
+            'Supply determinants include input prices, technology, and government policies'
+          ],
+          quiz: [
+            {
+              id: 'q1-5-1',
+              question: 'According to the law of supply, what happens when price increases?',
+              options: ['Quantity supplied decreases', 'Quantity supplied increases', 'Supply decreases', 'Supply increases'],
+              correctAnswer: 1,
+              explanation: 'The law of supply states that as price increases, quantity supplied increases, ceteris paribus.'
+            },
+            {
+              id: 'q1-5-2',
+              question: 'What factors affect supply?',
+              options: ['Only price', 'Production costs, technology, number of sellers, expectations', 'Only demand', 'Only income'],
+              correctAnswer: 1,
+              explanation: 'Supply is affected by production costs, technology, number of sellers, expectations, and government policies.'
+            },
+            {
+              id: 'q1-5-3',
+              question: 'What is the difference between a change in supply and a change in quantity supplied?',
+              options: ['No difference', 'Change in supply shifts the curve; change in quantity supplied moves along the curve', 'Change in quantity supplied shifts the curve', 'They are the same'],
+              correctAnswer: 1,
+              explanation: 'A change in supply shifts the entire supply curve due to non-price factors. A change in quantity supplied is movement along the curve due to price changes.'
+            },
+            {
+              id: 'q1-5-4',
+              question: 'What happens to supply when production costs increase?',
+              options: ['Supply increases', 'Supply decreases', 'Supply stays the same', 'Quantity supplied increases'],
+              correctAnswer: 1,
+              explanation: 'When production costs increase, suppliers are willing to produce less at each price, causing the supply curve to shift left (decrease in supply).'
+            }
+          ]
+        },
+        {
+          id: 'lesson-1-6',
+          title: 'Markets',
+          duration: '30 min',
+          videoCount: 3,
+          notes: '# Markets\n\nThis lesson explores how supply and demand interact to determine market equilibrium, and how markets adjust to changes.',
+          importantPoints: [
+            'Market equilibrium occurs where supply equals demand',
+            'Equilibrium price and quantity are determined by the intersection of supply and demand',
+            'Changes in supply or demand cause equilibrium to shift',
+            'Markets naturally move toward equilibrium through price adjustments'
+          ],
+          quiz: [
+            {
+              id: 'q1-6-1',
+              question: 'What is market equilibrium?',
+              options: ['When supply exceeds demand', 'When demand exceeds supply', 'When supply equals demand', 'When there is no market'],
+              correctAnswer: 2,
+              explanation: 'Market equilibrium occurs when the quantity supplied equals the quantity demanded at a particular price.'
+            },
+            {
+              id: 'q1-6-2',
+              question: 'What happens when there is a surplus in the market?',
+              options: ['Price increases', 'Price decreases', 'Price stays the same', 'Demand increases'],
+              correctAnswer: 1,
+              explanation: 'A surplus occurs when quantity supplied exceeds quantity demanded. Prices tend to fall to eliminate the surplus.'
+            },
+            {
+              id: 'q1-6-3',
+              question: 'What happens when there is a shortage in the market?',
+              options: ['Price decreases', 'Price increases', 'Price stays the same', 'Supply increases'],
+              correctAnswer: 1,
+              explanation: 'A shortage occurs when quantity demanded exceeds quantity supplied. Prices tend to rise to eliminate the shortage.'
+            },
+            {
+              id: 'q1-6-4',
+              question: 'What happens to equilibrium price and quantity when demand increases?',
+              options: ['Price decreases, quantity decreases', 'Price increases, quantity increases', 'Price stays the same, quantity increases', 'Price increases, quantity decreases'],
+              correctAnswer: 1,
+              explanation: 'When demand increases, the demand curve shifts right, leading to a higher equilibrium price and quantity.'
+            },
+            {
+              id: 'q1-6-5',
+              question: 'What happens to equilibrium price and quantity when supply increases?',
+              options: ['Price increases, quantity increases', 'Price decreases, quantity increases', 'Price decreases, quantity decreases', 'Price stays the same, quantity increases'],
+              correctAnswer: 1,
+              explanation: 'When supply increases, the supply curve shifts right, leading to a lower equilibrium price and higher quantity.'
+            },
+            {
+              id: 'q1-6-6',
+              question: 'What happens when both demand and supply increase?',
+              options: ['Price increases, quantity decreases', 'Price decreases, quantity increases', 'Price is ambiguous, quantity increases', 'Price increases, quantity is ambiguous'],
+              correctAnswer: 2,
+              explanation: 'When both demand and supply increase, quantity definitely increases, but the effect on price is ambiguous depending on the relative magnitude of the shifts.'
+            },
+            {
+              id: 'q1-6-7',
+              question: 'What is market disequilibrium?',
+              options: ['When supply equals demand', 'When supply does not equal demand', 'When price is zero', 'When there is no market'],
+              correctAnswer: 1,
+              explanation: 'Market disequilibrium occurs when quantity supplied does not equal quantity demanded, resulting in surpluses or shortages.'
+            },
+            {
+              id: 'q1-6-8',
+              question: 'How do markets reach equilibrium?',
+              options: ['Through government intervention', 'Through price adjustments', 'Through quantity restrictions', 'Markets never reach equilibrium'],
+              correctAnswer: 1,
+              explanation: 'Markets reach equilibrium through price adjustments. When there is a surplus, prices fall; when there is a shortage, prices rise until equilibrium is reached.'
+            }
+          ]
+        }
+      ],
+      moduleTest: [
+        {
+          id: 'mt1-1',
+          question: 'What is the fundamental economic problem?',
+          options: ['Unlimited resources', 'Scarcity', 'High prices', 'Government intervention'],
+          correctAnswer: 1
+        }
+      ]
+    },
+    {
+      id: 'module-2',
+      title: 'Module 2',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    },
+    {
+      id: 'module-3',
+      title: 'Module 3',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    },
+    {
+      id: 'module-4',
+      title: 'Module 4',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    },
+    {
+      id: 'module-5',
+      title: 'Module 5',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    },
+    {
+      id: 'module-6',
+      title: 'Module 6',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    },
+    {
+      id: 'module-7',
+      title: 'Module 7',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    },
+    {
+      id: 'module-8',
+      title: 'Module 8',
+      description: '',
+      lessons: [],
+      moduleTest: []
+    }
+  ],
   finalExam: []
 },
 {

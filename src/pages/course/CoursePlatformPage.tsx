@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { getCourseById, getAllCourses } from '@/data/courseData';
@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom';
 import { getCourseListingPath } from '@/lib/educationRoutes';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
+import { VideoPlayer } from '@/components/education/VideoPlayer';
+import { getLessonVideoUrls } from '@/lib/r2VideoUtils';
 
 export default function CoursePlatformPage() {
   const { t } = useTranslation({ namespace: 'education' });
@@ -78,6 +80,30 @@ export default function CoursePlatformPage() {
 
   const totalLessons = course.modules.reduce((acc, m) => acc + m.lessons.length, 0);
   const progressPercent = totalLessons > 0 ? (completedLessons.length / totalLessons) * 100 : 0;
+
+  // Get video URLs for selected lesson
+  const lessonVideoUrls = useMemo(() => {
+    if (!selectedLesson) return [];
+    
+    // Find module and lesson indices
+    let moduleIndex = -1;
+    let lessonIndex = -1;
+    
+    for (let mIdx = 0; mIdx < course.modules.length; mIdx++) {
+      const module = course.modules[mIdx];
+      const lIdx = module.lessons.findIndex(l => l.id === selectedLesson.id);
+      if (lIdx !== -1) {
+        moduleIndex = mIdx;
+        lessonIndex = lIdx;
+        break;
+      }
+    }
+    
+    if (moduleIndex === -1 || lessonIndex === -1) return [];
+    
+    const videoCount = selectedLesson.videoCount || 1;
+    return getLessonVideoUrls(course.id, moduleIndex, lessonIndex, videoCount);
+  }, [selectedLesson, course.id, course.modules]);
 
   const markComplete = async () => {
     if (selectedLesson && !completedLessons.includes(selectedLesson.id)) {
@@ -310,17 +336,41 @@ export default function CoursePlatformPage() {
           <main className="flex-1 p-6 lg:p-8 overflow-y-auto">
             {selectedLesson && !showQuiz && !showFinalExam && !showModuleTest && (
               <div className="max-w-4xl mx-auto space-y-6">
-                {/* Video Placeholder */}
-                <div className="glass-card overflow-hidden">
-                  <div className="aspect-video bg-secondary flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center mx-auto mb-3 cursor-pointer hover:scale-110 transition-transform">
-                        <Play className="h-6 w-6 text-primary-foreground ml-1" />
+                {/* Video Player(s) */}
+                {lessonVideoUrls.length > 0 ? (
+                  <div className="space-y-4">
+                    {lessonVideoUrls.map((videoUrl, index) => (
+                      <div key={index} className="glass-card overflow-hidden p-0">
+                        {lessonVideoUrls.length > 1 && (
+                          <div className="px-4 pt-4 pb-2">
+                            <span className="text-sm text-muted-foreground">
+                              {t('courses.video')} {index + 1} {lessonVideoUrls.length > 1 ? `of ${lessonVideoUrls.length}` : ''}
+                            </span>
+                          </div>
+                        )}
+                        <VideoPlayer
+                          src={videoUrl}
+                          title={selectedLesson.title}
+                          className="aspect-video"
+                          onError={(error) => {
+                            console.error('Video loading error:', error);
+                          }}
+                        />
                       </div>
-                      <p className="text-sm text-muted-foreground">{t('courses.lessonVideo')}</p>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="glass-card overflow-hidden">
+                    <div className="aspect-video bg-secondary flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center mx-auto mb-3">
+                          <Play className="h-6 w-6 text-primary-foreground ml-1" />
+                        </div>
+                        <p className="text-sm text-muted-foreground">{t('courses.lessonVideo')}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
 
                 {/* Lesson Info */}
                 <div className="flex items-center justify-between">
@@ -460,44 +510,71 @@ export default function CoursePlatformPage() {
             )}
 
             {/* Quiz View */}
-            {showQuiz && selectedLesson && !showFinalExam && !showModuleTest && (
-              <div className="max-w-2xl mx-auto space-y-6">
-                <div className="flex items-center justify-between">
-                  <h2 className="heading-md">{t('courses.miniQuiz')}</h2>
-                  <Button variant="outline" onClick={() => setShowQuiz(false)}>
-                    {t('courses.backToLesson')}
-                  </Button>
-                </div>
+            {showQuiz && selectedLesson && !showFinalExam && !showModuleTest && (() => {
+              // Find lesson index in module to generate quiz number
+              let lessonNumber = 1;
+              for (const module of course.modules) {
+                const lessonIndex = module.lessons.findIndex(l => l.id === selectedLesson.id);
+                if (lessonIndex !== -1) {
+                  lessonNumber = lessonIndex + 1;
+                  break;
+                }
+              }
+              return (
+                <div className="max-w-2xl mx-auto space-y-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="heading-md">{t('courses.quiz')} {lessonNumber}</h2>
+                    <Button variant="outline" onClick={() => setShowQuiz(false)}>
+                      {t('courses.backToLesson')}
+                    </Button>
+                  </div>
 
                 {selectedLesson.quiz.map((question, qIndex) => (
                   <div key={question.id} className="glass-card p-6">
                     <p className="font-medium mb-4">{qIndex + 1}. {question.question}</p>
                     <div className="space-y-2">
-                      {question.options.map((option, oIndex) => (
-                        <button
-                          key={oIndex}
-                          onClick={() => handleQuizAnswer(question.id, oIndex)}
-                          className={`w-full text-left p-3 rounded-lg border transition-colors ${
-                            quizAnswers[question.id] === oIndex
-                              ? quizAnswers[question.id] === question.correctAnswer
-                                ? 'border-green-500 bg-green-500/10'
-                                : 'border-red-500 bg-red-500/10'
-                              : 'border-border hover:border-primary/50'
-                          }`}
-                        >
-                          {option}
-                        </button>
-                      ))}
+                      {question.options.map((option, oIndex) => {
+                        const isSelected = quizAnswers[question.id] === oIndex;
+                        const isCorrect = oIndex === question.correctAnswer;
+                        const showExplanation = isSelected && question.optionExplanations && question.optionExplanations[oIndex];
+                        
+                        return (
+                          <div key={oIndex} className="space-y-1">
+                            <button
+                              onClick={() => handleQuizAnswer(question.id, oIndex)}
+                              className={`w-full text-left p-3 rounded-lg border transition-colors ${
+                                isSelected
+                                  ? isCorrect
+                                    ? 'border-green-500 bg-green-500/10'
+                                    : 'border-red-500 bg-red-500/10'
+                                  : 'border-border hover:border-primary/50'
+                              }`}
+                            >
+                              {option}
+                            </button>
+                            {showExplanation && (
+                              <p className={`text-sm p-3 rounded-lg ml-2 ${
+                                isCorrect 
+                                  ? 'text-green-700 dark:text-green-400 bg-green-500/10' 
+                                  : 'text-red-700 dark:text-red-400 bg-red-500/10'
+                              }`}>
+                                {question.optionExplanations[oIndex]}
+                              </p>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
-                    {quizAnswers[question.id] !== undefined && question.explanation && (
+                    {quizAnswers[question.id] !== undefined && question.explanation && !question.optionExplanations && (
                       <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
                         {question.explanation}
                       </p>
                     )}
                   </div>
                 ))}
-              </div>
-            )}
+                </div>
+              );
+            })()}
 
             {/* Final Exam View */}
             {showFinalExam && !showModuleTest && (

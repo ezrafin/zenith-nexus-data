@@ -1,9 +1,16 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { validateMarketData, hasMinimumData } from "../_shared/validation.ts";
+import { retryWithBackoff, isRetryableError, retryWithBackoffConditional } from "../_shared/retry.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
+
+interface MarketDataSource {
+  data: any[];
+  source: string;
+}
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -14,78 +21,257 @@ serve(async (req) => {
     const { searchParams } = new URL(req.url);
     const type = searchParams.get('type') || 'stocks';
     
-    console.log(`Fetching ${type} data...`);
+    console.log(`Fetching ${type} data with multiple fallbacks...`);
 
     const FINNHUB_API_KEY = Deno.env.get('FINNHUB_API_KEY');
     const ALPHA_VANTAGE_API_KEY = Deno.env.get('ALPHA_VANTAGE_API_KEY');
+    const IEX_CLOUD_API_KEY = Deno.env.get('IEX_CLOUD_API_KEY');
+    const POLYGON_API_KEY = Deno.env.get('POLYGON_API_KEY');
+    const TWELVE_DATA_API_KEY = Deno.env.get('TWELVE_DATA_API_KEY');
     
-    let marketData = null;
-    
-    // Try Finnhub first
+    let marketData: MarketDataSource | null = null;
+    let dataSource = 'unknown';
+
+    // Fallback chain for stocks/indices/commodities:
+    // 1. Finnhub (if key exists)
+    // 2. IEX Cloud (if key exists)
+    // 3. Polygon.io (if key exists)
+    // 4. Alpha Vantage (if key exists, stocks only)
+    // 5. Twelve Data (if key exists)
+    // 6. Yahoo Finance (improved)
+    // 7. ExchangeRate-API (for currencies only)
+    // 8. Mock data
+
+    // 1. Try Finnhub
     if (FINNHUB_API_KEY) {
       try {
-        marketData = await fetchFinnhubQuotes(type, FINNHUB_API_KEY);
-        if (marketData && marketData.length > 0) {
-          console.log(`Successfully fetched ${type} data from Finnhub (${marketData.length} items)`);
+        console.log(`Attempting Finnhub API for ${type}...`);
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchFinnhubQuotes(type, FINNHUB_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'finnhub' };
+          }
+          throw new Error('Finnhub returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Finnhub`);
         } else {
           marketData = null;
         }
       } catch (apiError) {
-        console.log(`Finnhub API error for ${type}:`, apiError);
+        console.log(`Finnhub API failed for ${type}:`, apiError instanceof Error ? apiError.message : 'Unknown error');
         marketData = null;
       }
-    }
-    
-    // Fallback to Alpha Vantage for stocks
-    if (!marketData && ALPHA_VANTAGE_API_KEY && type === 'stocks') {
-      try {
-        marketData = await fetchAlphaVantageQuotes(ALPHA_VANTAGE_API_KEY);
-        if (marketData && marketData.length > 0) {
-          console.log(`Successfully fetched ${type} data from Alpha Vantage (${marketData.length} items)`);
-        } else {
-          marketData = null;
-        }
-      } catch (apiError) {
-        console.log(`Alpha Vantage API error:`, apiError);
-        marketData = null;
-      }
-    }
-    
-    // Fallback to Yahoo Finance proxy (free, no key required)
-    if (!marketData) {
-      try {
-        marketData = await fetchYahooFinanceQuotes(type);
-        if (marketData && marketData.length > 0) {
-          console.log(`Successfully fetched ${type} data from Yahoo Finance (${marketData.length} items)`);
-        } else {
-          marketData = null;
-        }
-      } catch (apiError) {
-        console.log(`Yahoo Finance API error:`, apiError);
-        marketData = null;
-      }
-    }
-    
-    // Final fallback to mock data
-    if (!marketData || marketData.length === 0) {
-      console.log(`All APIs failed for ${type}, using mock data`);
-      marketData = getMockData(type);
     }
 
-    return new Response(JSON.stringify({ data: marketData, timestamp: new Date().toISOString() }), {
-      headers: { 
-        ...corsHeaders, 
-        'Content-Type': 'application/json',
-        'Cache-Control': 'public, max-age=30',
-      },
-    });
+    // 2. Try IEX Cloud (for stocks and indices)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && IEX_CLOUD_API_KEY && (type === 'stocks' || type === 'indices')) {
+      try {
+        console.log(`Attempting IEX Cloud API for ${type}...`);
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchIEXCloudQuotes(type, IEX_CLOUD_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'iexcloud' };
+          }
+          throw new Error('IEX Cloud returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from IEX Cloud`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log(`IEX Cloud API failed for ${type}:`, apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 3. Try Polygon.io (for stocks, indices, commodities)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && POLYGON_API_KEY && (type === 'stocks' || type === 'indices' || type === 'commodities')) {
+      try {
+        console.log(`Attempting Polygon.io API for ${type}...`);
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchPolygonQuotes(type, POLYGON_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'polygon' };
+          }
+          throw new Error('Polygon.io returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Polygon.io`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log(`Polygon.io API failed for ${type}:`, apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 4. Try Alpha Vantage (stocks only)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && ALPHA_VANTAGE_API_KEY && type === 'stocks') {
+      try {
+        console.log('Attempting Alpha Vantage API for stocks...');
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchAlphaVantageQuotes(ALPHA_VANTAGE_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'alphavantage' };
+          }
+          throw new Error('Alpha Vantage returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Alpha Vantage`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('Alpha Vantage API failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 5. Try Twelve Data
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && TWELVE_DATA_API_KEY) {
+      try {
+        console.log(`Attempting Twelve Data API for ${type}...`);
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchTwelveDataQuotes(type, TWELVE_DATA_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'twelvedata' };
+          }
+          throw new Error('Twelve Data returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Twelve Data`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log(`Twelve Data API failed for ${type}:`, apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 6. Try improved Yahoo Finance
+    if (!marketData || !hasMinimumData(marketData.data, 3)) {
+      try {
+        console.log(`Attempting Yahoo Finance API for ${type}...`);
+        marketData = await retryWithBackoffConditional(
+          async () => {
+            const data = await fetchYahooFinanceQuotes(type);
+            const validated = validateMarketData(data);
+            if (hasMinimumData(validated, 3)) {
+              return { data: validated, source: 'yahoo' };
+            }
+            throw new Error('Yahoo Finance returned insufficient valid data');
+          },
+          isRetryableError,
+          3,
+          2000,
+          15000
+        );
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Yahoo Finance`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log(`Yahoo Finance API failed for ${type}:`, apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 7. Try ExchangeRate-API (for currencies only)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies')) {
+      try {
+        console.log('Attempting ExchangeRate-API for currencies...');
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchExchangeRateAPI();
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'exchangerate' };
+          }
+          throw new Error('ExchangeRate-API returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from ExchangeRate-API`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('ExchangeRate-API failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 8. Final fallback to mock data
+    if (!marketData || !hasMinimumData(marketData.data, 3)) {
+      console.log(`All APIs failed for ${type}, using mock data`);
+      const mockData = getMockData(type);
+      const validated = validateMarketData(mockData);
+      marketData = { data: validated, source: 'mock' };
+      dataSource = 'mock';
+    }
+
+    const finalData = marketData.data;
+    console.log(`Returning ${finalData.length} items from source: ${dataSource} for type: ${type}`);
+
+    return new Response(
+      JSON.stringify({
+        data: finalData,
+        timestamp: new Date().toISOString(),
+        source: dataSource,
+        isDemo: dataSource === 'mock',
+      }),
+      {
+        headers: {
+          ...corsHeaders,
+          'Content-Type': 'application/json',
+          'Cache-Control': 'public, max-age=30',
+        },
+      }
+    );
   } catch (error: unknown) {
-    console.error('Error fetching stock data:', error);
+    console.error('Error fetching market data:', error);
     const message = error instanceof Error ? error.message : 'Unknown error';
-    return new Response(JSON.stringify({ error: message }), {
-      status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    
+    // Even on error, return mock data so UI doesn't break
+    const { searchParams } = new URL(req.url);
+    const type = searchParams.get('type') || 'stocks';
+    const mockData = validateMarketData(getMockData(type));
+    
+    return new Response(
+      JSON.stringify({
+        data: mockData,
+        timestamp: new Date().toISOString(),
+        source: 'mock',
+        isDemo: true,
+        error: message,
+      }),
+      {
+        status: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
   }
 });
 
@@ -98,47 +284,395 @@ const STOCK_SYMBOLS = [
 
 // Index symbols with ETF proxies
 const INDEX_SYMBOLS = [
-  { symbol: '^GSPC', name: 'S&P 500', finnhub: 'SPY', yahoo: '^GSPC' },
-  { symbol: '^DJI', name: 'Dow Jones Industrial Average', finnhub: 'DIA', yahoo: '^DJI' },
-  { symbol: '^IXIC', name: 'NASDAQ Composite', finnhub: 'QQQ', yahoo: '^IXIC' },
-  { symbol: '^RUT', name: 'Russell 2000', finnhub: 'IWM', yahoo: '^RUT' },
-  { symbol: '^FTSE', name: 'FTSE 100', finnhub: 'EWU', yahoo: '^FTSE' },
-  { symbol: '^GDAXI', name: 'DAX', finnhub: 'EWG', yahoo: '^GDAXI' },
-  { symbol: '^FCHI', name: 'CAC 40', finnhub: 'EWQ', yahoo: '^FCHI' },
-  { symbol: '^N225', name: 'Nikkei 225', finnhub: 'EWJ', yahoo: '^N225' },
-  { symbol: '^HSI', name: 'Hang Seng', finnhub: 'EWH', yahoo: '^HSI' },
+  { symbol: '^GSPC', name: 'S&P 500', finnhub: 'SPY', yahoo: '^GSPC', iex: 'SPY', polygon: 'I:SPX' },
+  { symbol: '^DJI', name: 'Dow Jones Industrial Average', finnhub: 'DIA', yahoo: '^DJI', iex: 'DIA', polygon: 'I:DJI' },
+  { symbol: '^IXIC', name: 'NASDAQ Composite', finnhub: 'QQQ', yahoo: '^IXIC', iex: 'QQQ', polygon: 'I:IXIC' },
+  { symbol: '^RUT', name: 'Russell 2000', finnhub: 'IWM', yahoo: '^RUT', iex: 'IWM', polygon: 'I:RUT' },
+  { symbol: '^FTSE', name: 'FTSE 100', finnhub: 'EWU', yahoo: '^FTSE', iex: 'EWU', polygon: 'I:FTSE' },
+  { symbol: '^GDAXI', name: 'DAX', finnhub: 'EWG', yahoo: '^GDAXI', iex: 'EWG', polygon: 'I:GDAXI' },
+  { symbol: '^FCHI', name: 'CAC 40', finnhub: 'EWQ', yahoo: '^FCHI', iex: 'EWQ', polygon: 'I:FCHI' },
+  { symbol: '^N225', name: 'Nikkei 225', finnhub: 'EWJ', yahoo: '^N225', iex: 'EWJ', polygon: 'I:N225' },
+  { symbol: '^HSI', name: 'Hang Seng', finnhub: 'EWH', yahoo: '^HSI', iex: 'EWH', polygon: 'I:HSI' },
 ];
 
 // Commodity symbols with proxies
 const COMMODITY_SYMBOLS = [
-  { symbol: 'GC=F', name: 'Gold Futures', finnhub: 'GLD', yahoo: 'GC=F' },
-  { symbol: 'SI=F', name: 'Silver Futures', finnhub: 'SLV', yahoo: 'SI=F' },
-  { symbol: 'CL=F', name: 'Crude Oil WTI', finnhub: 'USO', yahoo: 'CL=F' },
-  { symbol: 'NG=F', name: 'Natural Gas', finnhub: 'UNG', yahoo: 'NG=F' },
-  { symbol: 'HG=F', name: 'Copper Futures', finnhub: 'CPER', yahoo: 'HG=F' },
-  { symbol: 'PL=F', name: 'Platinum Futures', finnhub: 'PPLT', yahoo: 'PL=F' },
-  { symbol: 'PA=F', name: 'Palladium Futures', finnhub: 'PALL', yahoo: 'PA=F' },
-  { symbol: 'ZW=F', name: 'Wheat Futures', finnhub: 'WEAT', yahoo: 'ZW=F' },
-  { symbol: 'ZC=F', name: 'Corn Futures', finnhub: 'CORN', yahoo: 'ZC=F' },
-  { symbol: 'KC=F', name: 'Coffee Futures', finnhub: 'JO', yahoo: 'KC=F' },
+  { symbol: 'GC=F', name: 'Gold Futures', finnhub: 'GLD', yahoo: 'GC=F', polygon: 'XAUUSD' },
+  { symbol: 'SI=F', name: 'Silver Futures', finnhub: 'SLV', yahoo: 'SI=F', polygon: 'XAGUSD' },
+  { symbol: 'CL=F', name: 'Crude Oil WTI', finnhub: 'USO', yahoo: 'CL=F', polygon: 'C:CL' },
+  { symbol: 'NG=F', name: 'Natural Gas', finnhub: 'UNG', yahoo: 'NG=F', polygon: 'C:NG' },
+  { symbol: 'HG=F', name: 'Copper Futures', finnhub: 'CPER', yahoo: 'HG=F', polygon: 'C:HG' },
+  { symbol: 'PL=F', name: 'Platinum Futures', finnhub: 'PPLT', yahoo: 'PL=F', polygon: 'XPTUSD' },
+  { symbol: 'PA=F', name: 'Palladium Futures', finnhub: 'PALL', yahoo: 'PA=F', polygon: 'XPDUSD' },
+  { symbol: 'ZW=F', name: 'Wheat Futures', finnhub: 'WEAT', yahoo: 'ZW=F', polygon: 'C:ZW' },
+  { symbol: 'ZC=F', name: 'Corn Futures', finnhub: 'CORN', yahoo: 'ZC=F', polygon: 'C:ZC' },
+  { symbol: 'KC=F', name: 'Coffee Futures', finnhub: 'JO', yahoo: 'KC=F', polygon: 'C:KC' },
 ];
 
 // Currency pairs
 const CURRENCY_SYMBOLS = [
-  { symbol: 'EURUSD', name: 'Euro / US Dollar', yahoo: 'EURUSD=X' },
-  { symbol: 'GBPUSD', name: 'British Pound / US Dollar', yahoo: 'GBPUSD=X' },
-  { symbol: 'USDJPY', name: 'US Dollar / Japanese Yen', yahoo: 'JPY=X' },
-  { symbol: 'USDCHF', name: 'US Dollar / Swiss Franc', yahoo: 'CHF=X' },
-  { symbol: 'AUDUSD', name: 'Australian Dollar / US Dollar', yahoo: 'AUDUSD=X' },
-  { symbol: 'USDCAD', name: 'US Dollar / Canadian Dollar', yahoo: 'CAD=X' },
-  { symbol: 'NZDUSD', name: 'New Zealand Dollar / US Dollar', yahoo: 'NZDUSD=X' },
-  { symbol: 'EURGBP', name: 'Euro / British Pound', yahoo: 'EURGBP=X' },
-  { symbol: 'USDCNY', name: 'US Dollar / Chinese Yuan', yahoo: 'CNY=X' },
-  { symbol: 'USDSGD', name: 'US Dollar / Singapore Dollar', yahoo: 'SGD=X' },
+  { symbol: 'EURUSD', name: 'Euro / US Dollar', yahoo: 'EURUSD=X', exchangeRate: 'EUR' },
+  { symbol: 'GBPUSD', name: 'British Pound / US Dollar', yahoo: 'GBPUSD=X', exchangeRate: 'GBP' },
+  { symbol: 'USDJPY', name: 'US Dollar / Japanese Yen', yahoo: 'JPY=X', exchangeRate: 'JPY' },
+  { symbol: 'USDCHF', name: 'US Dollar / Swiss Franc', yahoo: 'CHF=X', exchangeRate: 'CHF' },
+  { symbol: 'AUDUSD', name: 'Australian Dollar / US Dollar', yahoo: 'AUDUSD=X', exchangeRate: 'AUD' },
+  { symbol: 'USDCAD', name: 'US Dollar / Canadian Dollar', yahoo: 'CAD=X', exchangeRate: 'CAD' },
+  { symbol: 'NZDUSD', name: 'New Zealand Dollar / US Dollar', yahoo: 'NZDUSD=X', exchangeRate: 'NZD' },
+  { symbol: 'EURGBP', name: 'Euro / British Pound', yahoo: 'EURGBP=X', exchangeRate: null },
+  { symbol: 'USDCNY', name: 'US Dollar / Chinese Yuan', yahoo: 'CNY=X', exchangeRate: 'CNY' },
+  { symbol: 'USDSGD', name: 'US Dollar / Singapore Dollar', yahoo: 'SGD=X', exchangeRate: 'SGD' },
 ];
 
+// IEX Cloud API
+async function fetchIEXCloudQuotes(type: string, apiKey: string): Promise<any[]> {
+  if (type === 'stocks') {
+    const symbols = STOCK_SYMBOLS.slice(0, 15).join(',');
+    const response = await fetch(
+      `https://cloud.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=quote&token=${apiKey}`
+    );
+    
+    if (!response.ok) {
+      throw new Error(`IEX Cloud API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return Object.entries(data).map(([symbol, quoteData]: [string, any]) => {
+      const quote = quoteData.quote;
+      if (!quote || !quote.latestPrice) return null;
+      
+      return {
+        symbol,
+        name: quote.companyName || symbol,
+        price: quote.latestPrice,
+        change: quote.change || 0,
+        changePercent: quote.changePercent || 0,
+        high: quote.high || quote.latestPrice,
+        low: quote.low || quote.latestPrice,
+        volume: formatVolume(quote.volume || 0),
+      };
+    }).filter(Boolean);
+  }
+  
+  if (type === 'indices') {
+    const results = await Promise.all(
+      INDEX_SYMBOLS.map(async (item) => {
+        try {
+          const response = await fetch(
+            `https://cloud.iexapis.com/stable/stock/${item.iex}/quote?token=${apiKey}`
+          );
+          if (!response.ok) return null;
+          
+          const quote = await response.json();
+          if (!quote.latestPrice) return null;
+          
+          return {
+            symbol: formatSymbol(item.symbol, 'indices'),
+            name: item.name,
+            price: quote.latestPrice,
+            change: quote.change || 0,
+            changePercent: quote.changePercent || 0,
+            high: quote.high || quote.latestPrice,
+            low: quote.low || quote.latestPrice,
+          };
+        } catch {
+          return null;
+        }
+      })
+    );
+    return results.filter(Boolean);
+  }
+  
+  return [];
+}
+
+// Polygon.io API
+async function fetchPolygonQuotes(type: string, apiKey: string): Promise<any[]> {
+  if (type === 'stocks') {
+    const symbols = STOCK_SYMBOLS.slice(0, 10);
+    const results = await Promise.all(
+      symbols.map(async (symbol) => {
+        try {
+          const response = await fetch(
+            `https://api.polygon.io/v2/aggs/ticker/${symbol}/prev?adjusted=true&apiKey=${apiKey}`
+          );
+          if (!response.ok) return null;
+          
+          const data = await response.json();
+          const result = data.results?.[0];
+          if (!result || !result.c) return null;
+          
+          return {
+            symbol,
+            name: symbol,
+            price: result.c,
+            change: result.c - result.o,
+            changePercent: ((result.c - result.o) / result.o) * 100,
+            high: result.h,
+            low: result.l,
+            volume: formatVolume(result.v || 0),
+          };
+        } catch {
+          return null;
+        }
+      })
+    );
+    return results.filter(Boolean);
+  }
+  
+  if (type === 'indices') {
+    const results = await Promise.all(
+      INDEX_SYMBOLS.slice(0, 5).map(async (item) => {
+        try {
+          const response = await fetch(
+            `https://api.polygon.io/v2/aggs/ticker/${item.polygon}/prev?adjusted=true&apiKey=${apiKey}`
+          );
+          if (!response.ok) return null;
+          
+          const data = await response.json();
+          const result = data.results?.[0];
+          if (!result || !result.c) return null;
+          
+          return {
+            symbol: formatSymbol(item.symbol, 'indices'),
+            name: item.name,
+            price: result.c,
+            change: result.c - result.o,
+            changePercent: ((result.c - result.o) / result.o) * 100,
+            high: result.h,
+            low: result.l,
+          };
+        } catch {
+          return null;
+        }
+      })
+    );
+    return results.filter(Boolean);
+  }
+  
+  if (type === 'commodities') {
+    const results = await Promise.all(
+      COMMODITY_SYMBOLS.slice(0, 5).map(async (item) => {
+        try {
+          const response = await fetch(
+            `https://api.polygon.io/v2/aggs/ticker/${item.polygon}/prev?adjusted=true&apiKey=${apiKey}`
+          );
+          if (!response.ok) return null;
+          
+          const data = await response.json();
+          const result = data.results?.[0];
+          if (!result || !result.c) return null;
+          
+          return {
+            symbol: formatSymbol(item.symbol, 'commodities'),
+            name: item.name,
+            price: result.c,
+            change: result.c - result.o,
+            changePercent: ((result.c - result.o) / result.o) * 100,
+            high: result.h,
+            low: result.l,
+          };
+        } catch {
+          return null;
+        }
+      })
+    );
+    return results.filter(Boolean);
+  }
+  
+  return [];
+}
+
+// Twelve Data API
+async function fetchTwelveDataQuotes(type: string, apiKey: string): Promise<any[]> {
+  if (type === 'stocks') {
+    const symbols = STOCK_SYMBOLS.slice(0, 10).join(',');
+    const response = await fetch(
+      `https://api.twelvedata.com/price?symbol=${symbols}&apikey=${apiKey}`
+    );
+    
+    if (!response.ok) {
+      throw new Error(`Twelve Data API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    // Twelve Data returns object with symbol keys
+    if (Array.isArray(data)) {
+      return data.map((item: any) => ({
+        symbol: item.symbol,
+        name: item.symbol,
+        price: parseFloat(item.price) || 0,
+        change: 0,
+        changePercent: 0,
+        high: parseFloat(item.price) || 0,
+        low: parseFloat(item.price) || 0,
+      })).filter((item: any) => item.price > 0);
+    }
+    
+    return Object.entries(data).map(([symbol, priceData]: [string, any]) => ({
+      symbol,
+      name: symbol,
+      price: parseFloat(priceData.price) || 0,
+      change: 0,
+      changePercent: 0,
+      high: parseFloat(priceData.price) || 0,
+      low: parseFloat(priceData.price) || 0,
+    })).filter((item: any) => item.price > 0);
+  }
+  
+  return [];
+}
+
+// ExchangeRate-API (free, no key required for base pairs)
+async function fetchExchangeRateAPI(): Promise<any[]> {
+  try {
+    const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+    
+    if (!response.ok) {
+      throw new Error(`ExchangeRate-API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const rates = data.rates || {};
+    
+    return CURRENCY_SYMBOLS.map((item) => {
+      if (!item.exchangeRate) {
+        // For cross pairs like EUR/GBP, calculate from USD rates
+        if (item.symbol === 'EURGBP') {
+          const eurRate = rates['EUR'] || 1;
+          const gbpRate = rates['GBP'] || 1;
+          const price = eurRate / gbpRate;
+          return {
+            symbol: 'EUR/GBP',
+            name: item.name,
+            price,
+            change: 0,
+            changePercent: 0,
+            high: price,
+            low: price,
+          };
+        }
+        return null;
+      }
+      
+      const rate = rates[item.exchangeRate];
+      if (!rate) return null;
+      
+      // For USD pairs, use direct rate; for others, calculate
+      let price = rate;
+      if (item.symbol.startsWith('USD')) {
+        price = 1 / rate; // Invert for USD/XXX pairs
+      }
+      
+      return {
+        symbol: formatSymbol(item.symbol, 'currencies'),
+        name: item.name,
+        price,
+        change: 0,
+        changePercent: 0,
+        high: price,
+        low: price,
+      };
+    }).filter(Boolean);
+  } catch (error) {
+    console.error('ExchangeRate-API error:', error);
+    return [];
+  }
+}
+
+// Improved Yahoo Finance with better headers and retry
+async function fetchYahooFinanceQuotes(type: string): Promise<any[]> {
+  let symbols: string[] = [];
+  let symbolMap: Record<string, { name: string; originalSymbol: string }> = {};
+  
+  if (type === 'stocks') {
+    symbols = STOCK_SYMBOLS.slice(0, 20);
+    symbols.forEach(s => symbolMap[s] = { name: s, originalSymbol: s });
+  } else if (type === 'indices') {
+    INDEX_SYMBOLS.forEach(item => {
+      symbols.push(item.yahoo);
+      symbolMap[item.yahoo] = { name: item.name, originalSymbol: item.symbol };
+    });
+  } else if (type === 'commodities') {
+    COMMODITY_SYMBOLS.forEach(item => {
+      symbols.push(item.yahoo);
+      symbolMap[item.yahoo] = { name: item.name, originalSymbol: item.symbol };
+    });
+  } else if (type === 'currencies') {
+    CURRENCY_SYMBOLS.forEach(item => {
+      symbols.push(item.yahoo);
+      symbolMap[item.yahoo] = { name: item.name, originalSymbol: item.symbol };
+    });
+  } else {
+    return [];
+  }
+  
+  // Batch symbols in groups of 10 to avoid URL length issues
+  const batches: string[][] = [];
+  for (let i = 0; i < symbols.length; i += 10) {
+    batches.push(symbols.slice(i, i + 10));
+  }
+  
+  const allResults: any[] = [];
+  
+  for (const batch of batches) {
+    try {
+      const symbolsStr = batch.join(',');
+      const response = await fetch(
+        `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbolsStr)}`,
+        {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Referer': 'https://finance.yahoo.com/',
+            'Origin': 'https://finance.yahoo.com',
+          },
+        }
+      );
+      
+      if (!response.ok) {
+        if (response.status === 429) {
+          // Rate limited, wait a bit
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          continue;
+        }
+        throw new Error(`Yahoo Finance API error: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      const quotes = data?.quoteResponse?.result || [];
+      
+      const batchResults = quotes.map((quote: any) => {
+        const info = symbolMap[quote.symbol] || { name: quote.shortName || quote.symbol, originalSymbol: quote.symbol };
+        return {
+          symbol: formatSymbol(info.originalSymbol, type),
+          name: info.name || quote.shortName || quote.symbol,
+          price: quote.regularMarketPrice || 0,
+          change: quote.regularMarketChange || 0,
+          changePercent: quote.regularMarketChangePercent || 0,
+          high: quote.regularMarketDayHigh || quote.regularMarketPrice || 0,
+          low: quote.regularMarketDayLow || quote.regularMarketPrice || 0,
+          volume: formatVolume(quote.regularMarketVolume || 0),
+        };
+      }).filter((q: any) => q.price > 0);
+      
+      allResults.push(...batchResults);
+      
+      // Small delay between batches to avoid rate limiting
+      if (batches.length > 1) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    } catch (error) {
+      console.error('Yahoo Finance batch error:', error);
+      // Continue with next batch
+    }
+  }
+  
+  return allResults;
+}
+
 // Alpha Vantage API (free tier: 5 calls/minute, 500 calls/day)
-async function fetchAlphaVantageQuotes(apiKey: string) {
+async function fetchAlphaVantageQuotes(apiKey: string): Promise<any[]> {
   // Alpha Vantage has rate limits, so we fetch a subset
   const topSymbols = STOCK_SYMBOLS.slice(0, 10);
   const results = await Promise.all(
@@ -171,72 +705,7 @@ async function fetchAlphaVantageQuotes(apiKey: string) {
   return results.filter(Boolean);
 }
 
-// Yahoo Finance via query1.finance.yahoo.com (free, no key required)
-async function fetchYahooFinanceQuotes(type: string) {
-  let symbols: string[] = [];
-  let symbolMap: Record<string, { name: string; originalSymbol: string }> = {};
-  
-  if (type === 'stocks') {
-    symbols = STOCK_SYMBOLS.slice(0, 15);
-    symbols.forEach(s => symbolMap[s] = { name: s, originalSymbol: s });
-  } else if (type === 'indices') {
-    INDEX_SYMBOLS.forEach(item => {
-      symbols.push(item.yahoo);
-      symbolMap[item.yahoo] = { name: item.name, originalSymbol: item.symbol };
-    });
-  } else if (type === 'commodities') {
-    COMMODITY_SYMBOLS.forEach(item => {
-      symbols.push(item.yahoo);
-      symbolMap[item.yahoo] = { name: item.name, originalSymbol: item.symbol };
-    });
-  } else if (type === 'currencies') {
-    CURRENCY_SYMBOLS.forEach(item => {
-      symbols.push(item.yahoo);
-      symbolMap[item.yahoo] = { name: item.name, originalSymbol: item.symbol };
-    });
-  } else {
-    return null;
-  }
-  
-  try {
-    // Use Yahoo Finance v7 API
-    const symbolsStr = symbols.join(',');
-    const response = await fetch(
-      `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbolsStr)}`,
-      {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-      }
-    );
-    
-    if (!response.ok) {
-      throw new Error(`Yahoo Finance API error: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    const quotes = data?.quoteResponse?.result || [];
-    
-    return quotes.map((quote: any) => {
-      const info = symbolMap[quote.symbol] || { name: quote.shortName || quote.symbol, originalSymbol: quote.symbol };
-      return {
-        symbol: formatSymbol(info.originalSymbol, type),
-        name: info.name || quote.shortName || quote.symbol,
-        price: quote.regularMarketPrice || 0,
-        change: quote.regularMarketChange || 0,
-        changePercent: quote.regularMarketChangePercent || 0,
-        high: quote.regularMarketDayHigh || quote.regularMarketPrice,
-        low: quote.regularMarketDayLow || quote.regularMarketPrice,
-        volume: formatVolume(quote.regularMarketVolume || 0),
-      };
-    }).filter((q: any) => q.price > 0);
-  } catch (error) {
-    console.error('Yahoo Finance fetch error:', error);
-    return null;
-  }
-}
-
-async function fetchFinnhubQuotes(type: string, apiKey: string) {
+async function fetchFinnhubQuotes(type: string, apiKey: string): Promise<any[]> {
   if (type === 'stocks') {
     const results = await Promise.all(
       STOCK_SYMBOLS.map(async (symbol) => {
@@ -355,12 +824,12 @@ async function fetchFinnhubQuotes(type: string, apiKey: string) {
     
     const validResults = results.filter(Boolean);
     if (validResults.length < 3) {
-      return null;
+      return [];
     }
     return validResults;
   }
   
-  return null;
+  return [];
 }
 
 function formatSymbol(symbol: string, type: string): string {
@@ -391,7 +860,7 @@ function formatSymbol(symbol: string, type: string): string {
 }
 
 function formatVolume(value: number): string {
-  if (!value) return '-';
+  if (!value || value === 0) return '-';
   if (value >= 1e9) return `${(value / 1e9).toFixed(2)}B`;
   if (value >= 1e6) return `${(value / 1e6).toFixed(2)}M`;
   if (value >= 1e3) return `${(value / 1e3).toFixed(2)}K`;

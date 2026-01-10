@@ -1,9 +1,16 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { validateMarketData, hasMinimumData } from "../_shared/validation.ts";
+import { retryWithBackoff } from "../_shared/retry.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
+
+interface CryptoSource {
+  data: any[];
+  source: string;
+}
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -11,57 +18,256 @@ serve(async (req) => {
   }
 
   try {
-    console.log('Fetching crypto data from CoinGecko...');
+    console.log('Fetching crypto data with multiple fallbacks...');
     
-    let marketData;
+    let marketData: CryptoSource | null = null;
+    let dataSource = 'unknown';
+
+    // Fallback chain: CoinGecko -> Binance -> CoinCap -> Mock
+    
+    // 1. Try CoinGecko
     try {
-      const response = await fetch(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h'
-      );
+      console.log('Attempting CoinGecko API...');
+      marketData = await retryWithBackoff(async () => {
+        const response = await fetch(
+          'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h',
+          {
+            headers: {
+              'Accept': 'application/json',
+            },
+          }
+        );
 
-      if (!response.ok) {
-        throw new Error(`CoinGecko API error: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`CoinGecko API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(`Fetched ${data.length} crypto assets from CoinGecko`);
+
+        const mapped = data.map((coin: any) => ({
+          symbol: coin.symbol?.toUpperCase() || '',
+          name: coin.name || '',
+          price: coin.current_price || 0,
+          change: coin.price_change_24h || 0,
+          changePercent: coin.price_change_percentage_24h || 0,
+          high: coin.high_24h || coin.current_price || 0,
+          low: coin.low_24h || coin.current_price || 0,
+          volume: formatVolume(coin.total_volume),
+          marketCap: formatVolume(coin.market_cap),
+          image: coin.image,
+        }));
+
+        const validated = validateMarketData(mapped);
+        if (hasMinimumData(validated, 5)) {
+          return { data: validated, source: 'coingecko' };
+        }
+        throw new Error('CoinGecko returned insufficient valid data');
+      }, 3, 1000, 10000);
+
+      if (marketData && hasMinimumData(marketData.data, 5)) {
+        dataSource = marketData.source;
+        console.log(`Successfully fetched ${marketData.data.length} valid items from CoinGecko`);
+      } else {
+        marketData = null;
       }
-
-      const data = await response.json();
-      console.log(`Fetched ${data.length} crypto assets from CoinGecko`);
-
-      marketData = data.map((coin: any) => ({
-        symbol: coin.symbol.toUpperCase(),
-        name: coin.name,
-        price: coin.current_price,
-        change: coin.price_change_24h || 0,
-        changePercent: coin.price_change_percentage_24h || 0,
-        high: coin.high_24h || coin.current_price,
-        low: coin.low_24h || coin.current_price,
-        volume: formatVolume(coin.total_volume),
-        marketCap: formatVolume(coin.market_cap),
-        image: coin.image,
-      }));
     } catch (apiError) {
-      console.log('CoinGecko API unavailable, using curated mock data');
-      marketData = getMockCryptoData();
+      console.log('CoinGecko API failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+      marketData = null;
     }
 
-    return new Response(JSON.stringify({ data: marketData, timestamp: new Date().toISOString() }), {
-      headers: { 
-        ...corsHeaders, 
-        'Content-Type': 'application/json',
-        'Cache-Control': 'public, max-age=30', // Cache for 30 seconds
-      },
-    });
+    // 2. Try Binance Public API (free, no key required)
+    if (!marketData || !hasMinimumData(marketData.data, 5)) {
+      try {
+        console.log('Attempting Binance Public API...');
+        marketData = await retryWithBackoff(async () => {
+          const response = await fetch(
+            'https://api.binance.com/api/v3/ticker/24hr',
+            {
+              headers: {
+                'Accept': 'application/json',
+              },
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error(`Binance API error: ${response.status}`);
+          }
+
+          const data = await response.json();
+          
+          // Top 20 by volume
+          const topSymbols = [
+            'BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT',
+            'USDCUSDT', 'ADAUSDT', 'DOGEUSDT', 'TRXUSDT', 'AVAXUSDT',
+            'LINKUSDT', 'DOTUSDT', 'MATICUSDT', 'SHIBUSDT', 'UNIUSDT',
+            'ATOMUSDT', 'ETCUSDT', 'LTCUSDT', 'XLMUSDT', 'ALGOUSDT'
+          ];
+
+          const cryptoMap: Record<string, string> = {
+            'BTCUSDT': 'Bitcoin',
+            'ETHUSDT': 'Ethereum',
+            'BNBUSDT': 'BNB',
+            'SOLUSDT': 'Solana',
+            'XRPUSDT': 'XRP',
+            'USDCUSDT': 'USD Coin',
+            'ADAUSDT': 'Cardano',
+            'DOGEUSDT': 'Dogecoin',
+            'TRXUSDT': 'TRON',
+            'AVAXUSDT': 'Avalanche',
+            'LINKUSDT': 'Chainlink',
+            'DOTUSDT': 'Polkadot',
+            'MATICUSDT': 'Polygon',
+            'SHIBUSDT': 'Shiba Inu',
+            'UNIUSDT': 'Uniswap',
+            'ATOMUSDT': 'Cosmos',
+            'ETCUSDT': 'Ethereum Classic',
+            'LTCUSDT': 'Litecoin',
+            'XLMUSDT': 'Stellar',
+            'ALGOUSDT': 'Algorand',
+          };
+
+          const filtered = data
+            .filter((ticker: any) => topSymbols.includes(ticker.symbol))
+            .slice(0, 20)
+            .map((ticker: any) => {
+              const symbol = ticker.symbol.replace('USDT', '');
+              return {
+                symbol: symbol,
+                name: cryptoMap[ticker.symbol] || symbol,
+                price: parseFloat(ticker.lastPrice) || 0,
+                change: parseFloat(ticker.priceChange) || 0,
+                changePercent: parseFloat(ticker.priceChangePercent) || 0,
+                high: parseFloat(ticker.highPrice) || 0,
+                low: parseFloat(ticker.lowPrice) || 0,
+                volume: formatVolume(parseFloat(ticker.volume) * parseFloat(ticker.lastPrice)),
+                marketCap: formatVolume(parseFloat(ticker.quoteVolume)),
+              };
+            });
+
+          const validated = validateMarketData(filtered);
+          if (hasMinimumData(validated, 5)) {
+            return { data: validated, source: 'binance' };
+          }
+          throw new Error('Binance returned insufficient valid data');
+        }, 3, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 5)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Binance`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('Binance API failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 3. Try CoinCap API (free, no key required)
+    if (!marketData || !hasMinimumData(marketData.data, 5)) {
+      try {
+        console.log('Attempting CoinCap API...');
+        marketData = await retryWithBackoff(async () => {
+          const response = await fetch(
+            'https://api.coincap.io/v2/assets?limit=20',
+            {
+              headers: {
+                'Accept': 'application/json',
+              },
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error(`CoinCap API error: ${response.status}`);
+          }
+
+          const result = await response.json();
+          const data = result.data || [];
+
+          const mapped = data.map((coin: any) => ({
+            symbol: coin.symbol?.toUpperCase() || '',
+            name: coin.name || '',
+            price: parseFloat(coin.priceUsd) || 0,
+            change: parseFloat(coin.changePercent24Hr) || 0,
+            changePercent: parseFloat(coin.changePercent24Hr) || 0,
+            high: parseFloat(coin.priceUsd) || 0, // CoinCap doesn't provide high/low
+            low: parseFloat(coin.priceUsd) || 0,
+            volume: formatVolume(parseFloat(coin.volumeUsd24Hr) || 0),
+            marketCap: formatVolume(parseFloat(coin.marketCapUsd) || 0),
+          }));
+
+          const validated = validateMarketData(mapped);
+          if (hasMinimumData(validated, 5)) {
+            return { data: validated, source: 'coincap' };
+          }
+          throw new Error('CoinCap returned insufficient valid data');
+        }, 3, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 5)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from CoinCap`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('CoinCap API failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 4. Final fallback to mock data
+    if (!marketData || !hasMinimumData(marketData.data, 5)) {
+      console.log('All APIs failed, using mock data');
+      const mockData = getMockCryptoData();
+      const validated = validateMarketData(mockData);
+      marketData = { data: validated, source: 'mock' };
+      dataSource = 'mock';
+    }
+
+    const finalData = marketData.data;
+    console.log(`Returning ${finalData.length} items from source: ${dataSource}`);
+
+    return new Response(
+      JSON.stringify({
+        data: finalData,
+        timestamp: new Date().toISOString(),
+        source: dataSource,
+        isDemo: dataSource === 'mock',
+      }),
+      {
+        headers: {
+          ...corsHeaders,
+          'Content-Type': 'application/json',
+          'Cache-Control': 'public, max-age=30',
+        },
+      }
+    );
   } catch (error: unknown) {
     console.error('Error fetching crypto data:', error);
     const message = error instanceof Error ? error.message : 'Unknown error';
-    return new Response(JSON.stringify({ error: message }), {
-      status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    
+    // Even on error, return mock data so UI doesn't break
+    const mockData = validateMarketData(getMockCryptoData());
+    
+    return new Response(
+      JSON.stringify({
+        data: mockData,
+        timestamp: new Date().toISOString(),
+        source: 'mock',
+        isDemo: true,
+        error: message,
+      }),
+      {
+        status: 200, // Return 200 with mock data instead of 500
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
   }
 });
 
 function formatVolume(value: number): string {
-  if (!value) return '-';
+  if (!value || value === 0) return '-';
   if (value >= 1e12) return `$${(value / 1e12).toFixed(2)}T`;
   if (value >= 1e9) return `$${(value / 1e9).toFixed(2)}B`;
   if (value >= 1e6) return `$${(value / 1e6).toFixed(2)}M`;
