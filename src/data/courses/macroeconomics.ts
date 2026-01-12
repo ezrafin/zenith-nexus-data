@@ -967,9 +967,9 @@ A country can have high GDP but poor quality of life, or vice versa.
 
 GDP measures economic output but has significant limitations. It doesn't capture non-market activities, quality of life, income distribution, environmental costs, or sustainability. Alternative measures like HDI, GPI, and Green GDP attempt to address these limitations.`,
         importantPoints: [
-          'GDP doesn't measure non-market activities or quality of life',
-          'GDP doesn't reflect income distribution or negative externalities',
-          'GDP doesn't account for informal economy or sustainability',
+          "GDP doesn't measure non-market activities or quality of life",
+          "GDP doesn't reflect income distribution or negative externalities",
+          "GDP doesn't account for informal economy or sustainability",
           'Alternative measures like HDI and GPI address GDP limitations',
           'GDP measures output well but not overall well-being',
         ],
@@ -1988,8 +1988,8 @@ The LRAS curve is vertical at potential GDP because in the long run, all prices 
         importantPoints: [
           'LRAS is vertical at potential GDP',
           'In the long run, all prices and wages are flexible',
-          'Price level doesn't affect real output in the long run',
-          'LRAS represents the economy's productive capacity',
+          "Price level doesn't affect real output in the long run",
+          "LRAS represents the economy's productive capacity",
           'LRAS shifts when resources, technology, or institutions change',
         ],
       } as ArticleContent,

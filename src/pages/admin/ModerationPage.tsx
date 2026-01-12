@@ -123,11 +123,11 @@ export default function ModerationPage() {
   const loadPendingDiscussions = async () => {
     setLoadingDiscussions(true);
     try {
-      // Load discussions that are pending moderation (status = 'pending')
+      // Load discussions that are pending moderation (is_featured = false means not approved yet)
       const { data, error } = await supabase
         .from('forum_discussions')
         .select('*')
-        .eq('status', 'pending')
+        .eq('is_featured', false)
         .order('created_at', { ascending: false });
 
       if (error) throw error;
@@ -215,11 +215,10 @@ export default function ModerationPage() {
   const handleDiscussionModeration = async (discussionId: string, action: 'approve' | 'reject') => {
     try {
       if (action === 'approve') {
-        // Mark as approved: update both status and is_featured
+        // Mark as approved: set is_featured to true
         const { error } = await supabase
           .from('forum_discussions')
           .update({ 
-            status: 'approved',
             is_featured: true 
           })
           .eq('id', discussionId);
