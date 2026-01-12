@@ -49,11 +49,34 @@ export default function UserProfilePage() {
     setFollowingCount(following || 0);
   };
 
+  const loadCommentCount = async (targetUserId: string): Promise<number> => {
+    try {
+      const { count, error } = await supabase
+        .from('forum_replies' as any)
+        .select('*', { count: 'exact', head: true })
+        .eq('user_id', targetUserId)
+        .eq('is_approved', true);
+      
+      if (error) {
+        console.error('Error loading comment count:', error);
+        return 0;
+      }
+      
+      return count || 0;
+    } catch (error) {
+      console.error('Error calculating comment count:', error);
+      return 0;
+    }
+  };
+
   const loadProfile = async () => {
     if (!userId) return;
 
+    setLoading(true);
+
     // Check if viewing own profile
     if (currentUser && currentUser.id === userId && currentProfile) {
+      const commentCount = await loadCommentCount(currentUser.id);
       setProfile({
         id: currentUser.id,
         username: currentProfile.username || null,
@@ -62,8 +85,8 @@ export default function UserProfilePage() {
         avatar_url: currentProfile.avatar_url || null,
         reputation: currentProfile.reputation || 0,
         post_count: currentProfile.post_count || 0,
-        comment_count: currentProfile.comment_count || 0,
-        privacy_level: 'public',
+        comment_count: commentCount,
+        privacy_level: currentProfile.privacy_level || 'public',
       });
       // Fetch joined date from profiles table
       const { data: profileData } = await (supabase
@@ -93,7 +116,12 @@ export default function UserProfilePage() {
       }
 
       if (data) {
-        const displayName = data.display_name || data.username || null;
+        // Calculate comment count from forum_replies
+        const commentCount = await loadCommentCount(data.id);
+        
+        // Ensure display_name is set - use username or email as fallback
+        const displayName = data.display_name || data.username || `User ${data.id.slice(0, 8)}`;
+        
         setProfile({
           id: data.id,
           username: data.username || null,
@@ -102,7 +130,7 @@ export default function UserProfilePage() {
           avatar_url: data.avatar_url || null,
           reputation: data.reputation_score || 0,
           post_count: data.posts_count || 0,
-          comment_count: 0,
+          comment_count: commentCount,
           privacy_level: 'public',
         });
         // Use joined_at if available, otherwise fallback to created_at
@@ -120,6 +148,7 @@ export default function UserProfilePage() {
         try {
           const { data: authData } = await supabase.auth.admin.getUserById(userId);
           if (authData?.user) {
+            const commentCount = await loadCommentCount(userId);
             setProfile({
               id: userId,
               username: authData.user.user_metadata?.username || null,
@@ -128,7 +157,7 @@ export default function UserProfilePage() {
               avatar_url: authData.user.user_metadata?.avatar_url || null,
               reputation: 0,
               post_count: 0,
-              comment_count: 0,
+              comment_count: commentCount,
               privacy_level: 'public',
             });
             setJoinedAt(authData.user.created_at || null);
@@ -150,6 +179,7 @@ export default function UserProfilePage() {
         } catch (authError) {
           // If admin API is not available, fallback to basic profile
           console.warn('Could not fetch user from auth:', authError);
+          const commentCount = await loadCommentCount(userId);
           setProfile({
             id: userId,
             username: null,
@@ -158,7 +188,7 @@ export default function UserProfilePage() {
             avatar_url: null,
             reputation: 0,
             post_count: 0,
-            comment_count: 0,
+            comment_count: commentCount,
             privacy_level: 'public',
           });
           setJoinedAt(null);
@@ -167,6 +197,7 @@ export default function UserProfilePage() {
       await loadFollowStats(userId);
     } catch (error) {
       console.error('Error loading profile:', error);
+      const commentCount = await loadCommentCount(userId);
       setProfile({
         id: userId,
         username: null,
@@ -175,7 +206,7 @@ export default function UserProfilePage() {
         avatar_url: null,
         reputation: 0,
         post_count: 0,
-        comment_count: 0,
+        comment_count: commentCount,
         privacy_level: 'public',
       });
       setJoinedAt(null);

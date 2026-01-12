@@ -23,6 +23,8 @@ export function VideoPlayer({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -35,6 +37,13 @@ export function VideoPlayer({
     const handleTimeUpdate = () => {
       if (video.duration) {
         setProgress((video.currentTime / video.duration) * 100);
+        setCurrentTime(video.currentTime);
+        setDuration(video.duration);
+      }
+    };
+    const handleLoadedMetadata = () => {
+      if (video.duration) {
+        setDuration(video.duration);
       }
     };
     const handleEnded = () => {
@@ -50,6 +59,7 @@ export function VideoPlayer({
 
     video.addEventListener('loadstart', handleLoadStart);
     video.addEventListener('canplay', handleCanPlay);
+    video.addEventListener('loadedmetadata', handleLoadedMetadata);
     video.addEventListener('play', handlePlay);
     video.addEventListener('pause', handlePause);
     video.addEventListener('timeupdate', handleTimeUpdate);
@@ -59,6 +69,7 @@ export function VideoPlayer({
     return () => {
       video.removeEventListener('loadstart', handleLoadStart);
       video.removeEventListener('canplay', handleCanPlay);
+      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
       video.removeEventListener('play', handlePlay);
       video.removeEventListener('pause', handlePause);
       video.removeEventListener('timeupdate', handleTimeUpdate);
@@ -109,6 +120,14 @@ export function VideoPlayer({
     const x = e.clientX - rect.left;
     const percentage = x / rect.width;
     video.currentTime = percentage * video.duration;
+    setCurrentTime(video.currentTime);
+  };
+
+  const formatTime = (seconds: number): string => {
+    if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
   if (error) {
@@ -184,9 +203,9 @@ export function VideoPlayer({
             </Button>
 
             <div className="flex-1 text-xs text-white/80 px-2">
-              {videoRef.current && !isNaN(videoRef.current.duration) && (
+              {duration > 0 && (
                 <>
-                  {Math.floor(videoRef.current.currentTime)} / {Math.floor(videoRef.current.duration)}s
+                  {formatTime(currentTime)} / {formatTime(duration)}
                 </>
               )}
             </div>

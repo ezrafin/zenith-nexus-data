@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import { Building2, TrendingUp, Users, Award, ArrowUpDown, Globe, Search } from 'lucide-react';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useTranslation } from '@/hooks/useTranslation';
+import { supabase } from '@/integrations/supabase/client';
 
 type SortOption = 'alphabetical' | 'combined' | 'community' | 'expert';
 const ITEMS_PER_PAGE = 15;
@@ -41,12 +42,69 @@ export default function CompaniesPage() {
     return sortByTrust(filtered, sortBy);
   }, [selectedType, selectedRegion, sortBy, searchQuery]);
 
-  const stats = useMemo(() => ({
+  const [stats, setStats] = useState({
     total: organizations.length,
     regulated: organizations.filter(org => org.regulated).length,
-    avgCommunity: Math.round(organizations.reduce((sum, org) => sum + org.communityTrust, 0) / organizations.length),
-    avgExpert: Math.round(organizations.reduce((sum, org) => sum + org.expertTrust, 0) / organizations.length),
-  }), []);
+    avgCommunity: 0,
+    avgExpert: 0,
+  });
+
+  // Calculate average trust scores from real user evaluations in database
+  useEffect(() => {
+    async function calculateAverageTrust() {
+      try {
+        // Fetch all approved evaluations from database
+        const { data: evaluations, error } = await supabase
+          .from('company_evaluations')
+          .select('rating, is_approved')
+          .eq('is_approved', true);
+
+        if (error) {
+          console.error('Error fetching evaluations:', error);
+          // Fallback to static data if database query fails
+          setStats({
+            total: organizations.length,
+            regulated: organizations.filter(org => org.regulated).length,
+            avgCommunity: Math.round(organizations.reduce((sum, org) => sum + org.communityTrust, 0) / organizations.length),
+            avgExpert: Math.round(organizations.reduce((sum, org) => sum + org.expertTrust, 0) / organizations.length),
+          });
+          return;
+        }
+
+        if (evaluations && evaluations.length > 0) {
+          // Calculate average rating from user evaluations
+          const avgRating = evaluations.reduce((sum, eval) => sum + eval.rating, 0) / evaluations.length;
+          const roundedAvg = Math.round(avgRating);
+
+          // Use the same average for both community and expert trust
+          // (since database only has one rating field)
+          // If you want separate values, you'd need to add community_trust and expert_trust fields to company_evaluations table
+          setStats(prev => ({
+            ...prev,
+            avgCommunity: roundedAvg,
+            avgExpert: roundedAvg,
+          }));
+        } else {
+          // No evaluations yet, use static data as fallback
+          setStats(prev => ({
+            ...prev,
+            avgCommunity: Math.round(organizations.reduce((sum, org) => sum + org.communityTrust, 0) / organizations.length),
+            avgExpert: Math.round(organizations.reduce((sum, org) => sum + org.expertTrust, 0) / organizations.length),
+          }));
+        }
+      } catch (error) {
+        console.error('Error calculating average trust:', error);
+        // Fallback to static data on error
+        setStats(prev => ({
+          ...prev,
+          avgCommunity: Math.round(organizations.reduce((sum, org) => sum + org.communityTrust, 0) / organizations.length),
+          avgExpert: Math.round(organizations.reduce((sum, org) => sum + org.expertTrust, 0) / organizations.length),
+        }));
+      }
+    }
+
+    calculateAverageTrust();
+  }, []);
 
   // Pagination
   const totalPages = Math.ceil(filteredOrganizations.length / ITEMS_PER_PAGE);
