@@ -2011,7 +2011,7 @@ The LRAS curve is vertical at potential GDP because in the long run, all prices 
             id: 'practice-3-4-2',
             prompt: 'Explain how each of the following affects long-run aggregate supply: (a) Increase in population, (b) Improvement in education, (c) Increase in investment, (d) Discovery of new oil reserves.',
             hints: [
-              'These affect the economy's productive capacity',
+              "These affect the economy's productive capacity",
               'All shift LRAS right',
             ],
           },
