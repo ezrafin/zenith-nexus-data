@@ -141,7 +141,20 @@
     "pleaseSignInToBookmarkDiscussions": "Veuillez vous connecter pour enregistrer des discussions",
     "pleaseSignInToFollowDiscussions": "Veuillez vous connecter pour suivre des discussions",
     "followingDiscussion": "Suivre la discussion",
-    "unfollowedDiscussion": "Ne plus suivre la discussion"
+    "unfollowedDiscussion": "Ne plus suivre la discussion",
+    "failedToLoadPendingDiscussions": "Échec du chargement des discussions en attente",
+    "failedToLoadPendingReplies": "Échec du chargement des réponses en attente",
+    "failedToLoadPendingEvaluations": "Échec du chargement des évaluations en attente",
+    "discussionApproved": "Discussion approuvée",
+    "discussionRejectedDeleted": "Discussion rejetée et supprimée",
+    "replyApproved": "Réponse approuvée",
+    "replyRejectedDeleted": "Réponse rejetée et supprimée",
+    "evaluationApproved": "Évaluation approuvée",
+    "evaluationRejectedDeleted": "Évaluation rejetée et supprimée",
+    "failedToUpdateDiscussion": "Échec de la mise à jour de la discussion",
+    "failedToUpdateReply": "Échec de la mise à jour de la réponse",
+    "failedToUpdateEvaluation": "Échec de la mise à jour de l'évaluation",
+    "reviewSubmittedForModeration": "Avis soumis pour modération"
   },
   "errors": {
     "generic": "Une erreur s'est produite",
@@ -604,7 +617,14 @@
     "forum": "Forum",
     "analytics": "Analyses",
     "tickers": "Tickers",
-    "authors": "Auteurs"
+    "authors": "Auteurs",
+    "openAriaLabel": "Ouvrir la recherche globale (Cmd+K ou Ctrl+K)",
+    "closeAriaLabel": "Fermer la recherche",
+    "inputAriaLabel": "Champ de recherche",
+    "dialogTitle": "Recherche Globale",
+    "dialogDescription": "Rechercher parmi les entreprises, articles de presse, discussions du forum, tickers de marché et auteurs. Utilisez les filtres pour affiner les résultats.",
+    "dialogAriaLabel": "Dialogue de recherche globale",
+    "clearAriaLabel": "Effacer la recherche"
   },
   "footer": {
     "tagline": "Votre gardien sur les marchés mondiaux. Analyses professionnelles et données financières en temps réel.",

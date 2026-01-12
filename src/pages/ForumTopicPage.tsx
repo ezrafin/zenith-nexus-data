@@ -191,7 +191,7 @@ export default function ForumTopicPage() {
         action: 'post_reply',
       });
       
-      toast.success(t('toast.replyPendingModeration') || 'Reply submitted for moderation');
+      toast.success(t('toast.replyPendingModeration'));
       
       // Scroll to reply editor and focus it after a short delay to allow DOM update
       setTimeout(() => {

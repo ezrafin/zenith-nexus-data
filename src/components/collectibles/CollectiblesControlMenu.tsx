@@ -117,7 +117,7 @@ export function CollectiblesControlMenu() {
             </motion.button>
           </SheetTrigger>
 
-          <SheetContent
+          <SheetContent closeAriaLabel={t('buttons.close')}
             side="right"
             className="w-full sm:w-[400px] md:w-[500px] overflow-y-auto"
           >

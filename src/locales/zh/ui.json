@@ -141,7 +141,20 @@
     "pleaseSignInToBookmarkDiscussions": "请登录以收藏讨论",
     "pleaseSignInToFollowDiscussions": "请登录以关注讨论",
     "followingDiscussion": "正在关注讨论",
-    "unfollowedDiscussion": "已取消关注讨论"
+    "unfollowedDiscussion": "已取消关注讨论",
+    "failedToLoadPendingDiscussions": "加载待审核讨论失败",
+    "failedToLoadPendingReplies": "加载待审核回复失败",
+    "failedToLoadPendingEvaluations": "加载待审核评估失败",
+    "discussionApproved": "讨论已批准",
+    "discussionRejectedDeleted": "讨论已拒绝并删除",
+    "replyApproved": "回复已批准",
+    "replyRejectedDeleted": "回复已拒绝并删除",
+    "evaluationApproved": "评估已批准",
+    "evaluationRejectedDeleted": "评估已拒绝并删除",
+    "failedToUpdateDiscussion": "更新讨论失败",
+    "failedToUpdateReply": "更新回复失败",
+    "failedToUpdateEvaluation": "更新评估失败",
+    "reviewSubmittedForModeration": "评价已提交审核"
   },
   "errors": {
     "generic": "发生错误",
@@ -604,7 +617,14 @@
     "forum": "论坛",
     "analytics": "分析",
     "tickers": "代码",
-    "authors": "作者"
+    "authors": "作者",
+    "openAriaLabel": "打开全局搜索 (Cmd+K 或 Ctrl+K)",
+    "closeAriaLabel": "关闭搜索",
+    "inputAriaLabel": "搜索输入框",
+    "dialogTitle": "全局搜索",
+    "dialogDescription": "搜索公司、新闻文章、论坛讨论、市场代码和作者。使用筛选器缩小结果范围。",
+    "dialogAriaLabel": "全局搜索对话框",
+    "clearAriaLabel": "清除搜索"
   },
   "footer": {
     "tagline": "守护您在全球市场中的位置。专业分析与实时金融数据。",

@@ -141,7 +141,20 @@
     "pleaseSignInToBookmarkDiscussions": "Proszę się zalogować, aby zapisać dyskusje",
     "pleaseSignInToFollowDiscussions": "Proszę się zalogować, aby obserwować dyskusje",
     "followingDiscussion": "Obserwowanie dyskusji",
-    "unfollowedDiscussion": "Przestano obserwować dyskusję"
+    "unfollowedDiscussion": "Przestano obserwować dyskusję",
+    "failedToLoadPendingDiscussions": "Nie udało się załadować oczekujących dyskusji",
+    "failedToLoadPendingReplies": "Nie udało się załadować oczekujących odpowiedzi",
+    "failedToLoadPendingEvaluations": "Nie udało się załadować oczekujących ocen",
+    "discussionApproved": "Dyskusja zatwierdzona",
+    "discussionRejectedDeleted": "Dyskusja odrzucona i usunięta",
+    "replyApproved": "Odpowiedź zatwierdzona",
+    "replyRejectedDeleted": "Odpowiedź odrzucona i usunięta",
+    "evaluationApproved": "Ocena zatwierdzona",
+    "evaluationRejectedDeleted": "Ocena odrzucona i usunięta",
+    "failedToUpdateDiscussion": "Nie udało się zaktualizować dyskusji",
+    "failedToUpdateReply": "Nie udało się zaktualizować odpowiedzi",
+    "failedToUpdateEvaluation": "Nie udało się zaktualizować oceny",
+    "reviewSubmittedForModeration": "Recenzja przesłana do moderacji"
   },
   "errors": {
     "generic": "Wystąpił błąd",
@@ -604,7 +617,14 @@
     "forum": "Forum",
     "analytics": "Analizy",
     "tickers": "Tickery",
-    "authors": "Autorzy"
+    "authors": "Autorzy",
+    "openAriaLabel": "Otwórz wyszukiwanie globalne (Cmd+K lub Ctrl+K)",
+    "closeAriaLabel": "Zamknij wyszukiwanie",
+    "inputAriaLabel": "Pole wyszukiwania",
+    "dialogTitle": "Wyszukiwanie Globalne",
+    "dialogDescription": "Wyszukaj w firmach, artykułach prasowych, dyskusjach na forum, tickerach rynkowych i autorach. Użyj filtrów, aby zawęzić wyniki.",
+    "dialogAriaLabel": "Okno dialogowe wyszukiwania globalnego",
+    "clearAriaLabel": "Wyczyść wyszukiwanie"
   },
   "footer": {
     "tagline": "Twój strażnik na globalnych rynkach. Profesjonalne analizy i dane finansowe w czasie rzeczywistym.",

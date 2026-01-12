@@ -148,7 +148,20 @@
     "pleaseSignInToBookmarkDiscussions": "Por favor, inicia sesión para guardar discusiones",
     "pleaseSignInToFollowDiscussions": "Por favor, inicia sesión para seguir discusiones",
     "followingDiscussion": "Siguiendo discusión",
-    "unfollowedDiscussion": "Dejaste de seguir discusión"
+    "unfollowedDiscussion": "Dejaste de seguir discusión",
+    "failedToLoadPendingDiscussions": "Error al cargar discusiones pendientes",
+    "failedToLoadPendingReplies": "Error al cargar respuestas pendientes",
+    "failedToLoadPendingEvaluations": "Error al cargar evaluaciones pendientes",
+    "discussionApproved": "Discusión aprobada",
+    "discussionRejectedDeleted": "Discusión rechazada y eliminada",
+    "replyApproved": "Respuesta aprobada",
+    "replyRejectedDeleted": "Respuesta rechazada y eliminada",
+    "evaluationApproved": "Evaluación aprobada",
+    "evaluationRejectedDeleted": "Evaluación rechazada y eliminada",
+    "failedToUpdateDiscussion": "Error al actualizar discusión",
+    "failedToUpdateReply": "Error al actualizar respuesta",
+    "failedToUpdateEvaluation": "Error al actualizar evaluación",
+    "reviewSubmittedForModeration": "Reseña enviada para moderación"
   },
   "errors": {
     "generic": "Ocurrió un error",
@@ -604,7 +617,14 @@
     "forum": "Foro",
     "analytics": "Análisis",
     "tickers": "Tickers",
-    "authors": "Autores"
+    "authors": "Autores",
+    "openAriaLabel": "Abrir búsqueda global (Cmd+K o Ctrl+K)",
+    "closeAriaLabel": "Cerrar búsqueda",
+    "inputAriaLabel": "Campo de búsqueda",
+    "dialogTitle": "Búsqueda Global",
+    "dialogDescription": "Buscar en empresas, artículos de noticias, discusiones del foro, símbolos de mercado y autores. Use filtros para reducir los resultados.",
+    "dialogAriaLabel": "Diálogo de búsqueda global",
+    "clearAriaLabel": "Limpiar búsqueda"
   },
   "footer": {
     "tagline": "Tu guardián en los mercados globales. Análisis profesional y datos financieros en tiempo real.",

@@ -141,7 +141,20 @@
     "pleaseSignInToBookmarkDiscussions": "Пожалуйста, войдите, чтобы добавить обсуждения в закладки",
     "pleaseSignInToFollowDiscussions": "Пожалуйста, войдите, чтобы подписаться на обсуждения",
     "followingDiscussion": "Подписка на обсуждение",
-    "unfollowedDiscussion": "Отписка от обсуждения"
+    "unfollowedDiscussion": "Отписка от обсуждения",
+    "failedToLoadPendingDiscussions": "Не удалось загрузить ожидающие обсуждения",
+    "failedToLoadPendingReplies": "Не удалось загрузить ожидающие ответы",
+    "failedToLoadPendingEvaluations": "Не удалось загрузить ожидающие оценки",
+    "discussionApproved": "Обсуждение одобрено",
+    "discussionRejectedDeleted": "Обсуждение отклонено и удалено",
+    "replyApproved": "Ответ одобрен",
+    "replyRejectedDeleted": "Ответ отклонен и удален",
+    "evaluationApproved": "Оценка одобрена",
+    "evaluationRejectedDeleted": "Оценка отклонена и удалена",
+    "failedToUpdateDiscussion": "Не удалось обновить обсуждение",
+    "failedToUpdateReply": "Не удалось обновить ответ",
+    "failedToUpdateEvaluation": "Не удалось обновить оценку",
+    "reviewSubmittedForModeration": "Отзыв отправлен на модерацию"
   },
   "errors": {
     "generic": "Произошла ошибка",
@@ -605,7 +618,14 @@
     "forum": "Форум",
     "analytics": "Аналитика",
     "tickers": "Тикеры",
-    "authors": "Авторы"
+    "authors": "Авторы",
+    "openAriaLabel": "Открыть глобальный поиск (Cmd+K или Ctrl+K)",
+    "closeAriaLabel": "Закрыть поиск",
+    "inputAriaLabel": "Поле поиска",
+    "dialogTitle": "Глобальный поиск",
+    "dialogDescription": "Поиск по компаниям, новостным статьям, обсуждениям на форуме, тикерам рынка и авторам. Используйте фильтры для сужения результатов.",
+    "dialogAriaLabel": "Диалог глобального поиска",
+    "clearAriaLabel": "Очистить поиск"
   },
   "footer": {
     "tagline": "Ваш защитник на глобальных рынках. Профессиональная аналитика и финансовые данные в реальном времени.",

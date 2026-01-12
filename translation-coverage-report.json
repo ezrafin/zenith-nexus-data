@@ -1,0 +1,315 @@
+{
+  "generatedAt": "2026-01-12T09:29:06.669Z",
+  "summary": {
+    "totalNamespaces": 6,
+    "totalLanguages": 6,
+    "totalKeys": 1280,
+    "totalTranslations": 7680,
+    "coverage": {
+      "zh": 100,
+      "es": 100,
+      "ru": 100,
+      "de": 100,
+      "fr": 100,
+      "pl": 100
+    },
+    "overallCoverage": 100
+  },
+  "namespaces": {
+    "ui": {
+      "namespace": "ui",
+      "totalKeys": 783,
+      "languages": {
+        "zh": {
+          "exists": true,
+          "translatedKeys": 783,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 4
+        },
+        "es": {
+          "exists": true,
+          "translatedKeys": 783,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 4
+        },
+        "ru": {
+          "exists": true,
+          "translatedKeys": 783,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 5
+        },
+        "de": {
+          "exists": true,
+          "translatedKeys": 783,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 4
+        },
+        "fr": {
+          "exists": true,
+          "translatedKeys": 783,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 4
+        },
+        "pl": {
+          "exists": true,
+          "translatedKeys": 783,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 4
+        }
+      },
+      "coverage": 100
+    },
+    "forum": {
+      "namespace": "forum",
+      "totalKeys": 181,
+      "languages": {
+        "zh": {
+          "exists": true,
+          "translatedKeys": 181,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "es": {
+          "exists": true,
+          "translatedKeys": 181,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "ru": {
+          "exists": true,
+          "translatedKeys": 181,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "de": {
+          "exists": true,
+          "translatedKeys": 181,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "fr": {
+          "exists": true,
+          "translatedKeys": 181,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "pl": {
+          "exists": true,
+          "translatedKeys": 181,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        }
+      },
+      "coverage": 100
+    },
+    "profile": {
+      "namespace": "profile",
+      "totalKeys": 17,
+      "languages": {
+        "zh": {
+          "exists": true,
+          "translatedKeys": 17,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "es": {
+          "exists": true,
+          "translatedKeys": 17,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "ru": {
+          "exists": true,
+          "translatedKeys": 17,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "de": {
+          "exists": true,
+          "translatedKeys": 17,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "fr": {
+          "exists": true,
+          "translatedKeys": 17,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "pl": {
+          "exists": true,
+          "translatedKeys": 17,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        }
+      },
+      "coverage": 100
+    },
+    "analytics": {
+      "namespace": "analytics",
+      "totalKeys": 8,
+      "languages": {
+        "zh": {
+          "exists": true,
+          "translatedKeys": 8,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "es": {
+          "exists": true,
+          "translatedKeys": 8,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "ru": {
+          "exists": true,
+          "translatedKeys": 8,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "de": {
+          "exists": true,
+          "translatedKeys": 8,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "fr": {
+          "exists": true,
+          "translatedKeys": 8,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "pl": {
+          "exists": true,
+          "translatedKeys": 8,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        }
+      },
+      "coverage": 100
+    },
+    "education": {
+      "namespace": "education",
+      "totalKeys": 267,
+      "languages": {
+        "zh": {
+          "exists": true,
+          "translatedKeys": 267,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "es": {
+          "exists": true,
+          "translatedKeys": 267,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "ru": {
+          "exists": true,
+          "translatedKeys": 267,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "de": {
+          "exists": true,
+          "translatedKeys": 267,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "fr": {
+          "exists": true,
+          "translatedKeys": 267,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "pl": {
+          "exists": true,
+          "translatedKeys": 267,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        }
+      },
+      "coverage": 100
+    },
+    "common": {
+      "namespace": "common",
+      "totalKeys": 24,
+      "languages": {
+        "zh": {
+          "exists": true,
+          "translatedKeys": 24,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "es": {
+          "exists": true,
+          "translatedKeys": 24,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "ru": {
+          "exists": true,
+          "translatedKeys": 24,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "de": {
+          "exists": true,
+          "translatedKeys": 24,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "fr": {
+          "exists": true,
+          "translatedKeys": 24,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        },
+        "pl": {
+          "exists": true,
+          "translatedKeys": 24,
+          "missingKeys": 0,
+          "coverage": 100,
+          "orphanedKeys": 0
+        }
+      },
+      "coverage": 100
+    }
+  },
+  "recommendations": []
+}

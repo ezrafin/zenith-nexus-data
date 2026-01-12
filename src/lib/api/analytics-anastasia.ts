@@ -5636,76 +5636,76 @@ This article explores how Mexican equity markets are positioned, which factors d
 
 ### Market Structure
 
-Mexican equity market structure:
+The Bolsa Mexicana de Valores (BMV) is the primary equity market in Mexico, operating as a modern exchange integrated with international capital markets. Established in 1894, the exchange has evolved into a sophisticated market with strong regulation, good liquidity, and international recognition. The market's size, quality, and integration with North American markets make it attractive for international investors seeking Latin American exposure.
 
 **Bolsa Mexicana de Valores:**
-- **Market structure** – Mexican Stock Exchange.
-- **Listings** – number of listed companies.
-- **Liquidity** – market liquidity.
-- **Indices** – market indices.
+- **Market structure** – The BMV operates a main market with approximately 140-150 listed companies, including some of Mexico's largest and most successful companies. The exchange maintains strict listing requirements and strong regulatory oversight, ensuring high standards for listed companies. Trading is electronic, with modern clearing and settlement systems integrated with international infrastructure.
+- **Listings** – The exchange hosts approximately 140-150 listed companies across various sectors, with major companies in telecommunications, consumer, financials, industrials, and materials. The number of listings has remained relatively stable, with quality companies maintaining listings. Many companies are well-established with strong market positions.
+- **Liquidity** – Market liquidity is good for large-cap stocks, with daily trading volumes averaging $200-400 million, making it one of the more liquid markets in Latin America. Liquidity is concentrated in large-cap stocks, particularly those in major indices, but mid-cap stocks also have reasonable liquidity. This liquidity supports institutional investment and provides exit options.
+- **Indices** – The IPC (Índice de Precios y Cotizaciones) is the primary market benchmark, representing the largest and most liquid stocks. The index includes approximately 35 stocks and represents approximately 80% of total market capitalization. Sector-specific indices are well-developed, providing detailed sector tracking.
 
 **Market Characteristics:**
-- **Size** – market capitalization.
-- **Sector composition** – sector composition.
-- **Foreign ownership** – foreign ownership levels.
-- **Liquidity** – trading liquidity.
+- **Size** – Total market capitalization is approximately $400-500 billion, making it one of the larger markets in Latin America. The market's size reflects the presence of major companies, particularly in telecommunications, consumer, and financial services. Market capitalization has grown with economic development and corporate growth.
+- **Sector composition** – The market is well-diversified across sectors, with telecommunications (América Móvil) representing approximately 20-25%, consumer 15-20%, financials 15-20%, industrials 10-15%, and other sectors. This diversification provides exposure to multiple economic themes, though telecommunications remains dominant due to América Móvil's size.
+- **Foreign ownership** – Foreign ownership levels are significant, with international investors holding approximately 40-50% of free float for major stocks. Foreign participation reflects confidence in Mexican companies and markets, though ownership has fluctuated with economic conditions and policy developments. Foreign ownership provides liquidity and market depth.
+- **Liquidity** – Trading liquidity is good for large-cap stocks, supported by market size, institutional participation, and foreign investment. Liquidity is particularly strong for IPC constituents, enabling large trades with minimal price impact. This liquidity supports institutional investment and provides flexibility for portfolio management.
 
 **Indices:**
-- **IPC Index** – IPC index.
-- **Sector indices** – sector-specific indices.
-- **Benchmarks** – benchmark indices.
+- **IPC Index** – The IPC index is the primary market benchmark, including the largest and most liquid stocks. The index is market-capitalization weighted and rebalanced periodically. It serves as the main reference for market performance and is widely used by investors and fund managers.
+- **Sector indices** – Sector-specific indices are well-developed, including telecommunications, consumer, financials, industrials, and others. These indices provide detailed sector tracking and enable sector-specific investment strategies. Sector indices are widely used for benchmarking and portfolio construction.
+- **Benchmarks** – International index providers like MSCI and FTSE include Mexican stocks in their emerging market and Latin American indices, providing additional benchmarking options. Mexican stocks typically have meaningful weights in Latin American indices, reflecting market size and quality. This inclusion supports international investment flows.
 
 ### Economic Fundamentals
 
-Mexican economic fundamentals:
+Mexican economic fundamentals reflect a transformation driven by nearshoring trends, trade integration, and manufacturing capabilities. The economy benefits from strategic location, trade agreements, skilled workforce, and manufacturing expertise, positioning it well to benefit from supply chain diversification and nearshoring. Understanding these dynamics is crucial for evaluating investment opportunities and risks.
 
 **Nearshoring Trends:**
-- **Manufacturing relocation** – manufacturing relocation to Mexico.
-- **Supply chains** – supply chain diversification.
-- **Trade** – trade benefits.
-- **Investment** – foreign direct investment.
+- **Manufacturing relocation** – Manufacturing relocation to Mexico has accelerated, as companies seek to reduce supply chain risks, shorten lead times, and benefit from proximity to North American markets. This trend, accelerated by COVID-19 disruptions, trade tensions, and cost considerations, is driving significant foreign direct investment in manufacturing. Nearshoring is creating substantial opportunities in manufacturing, industrial real estate, and infrastructure.
+- **Supply chains** – Supply chain diversification is a key driver, as companies seek to reduce dependence on Asian manufacturing and create more resilient supply chains. Mexico's proximity to the United States, trade agreements, and manufacturing capabilities make it an attractive alternative. Supply chain diversification supports manufacturing investment and economic growth.
+- **Trade** – Trade benefits from nearshoring include increased exports, manufacturing investment, and economic activity. Mexico's trade with the United States has grown significantly, with manufacturing exports leading the way. Trade benefits support corporate earnings, employment, and economic growth. Nearshoring is creating a positive feedback loop of investment and growth.
+- **Investment** – Foreign direct investment is increasing, particularly in manufacturing, industrial real estate, and infrastructure. Investment is driven by nearshoring trends, trade benefits, and competitive advantages. Manufacturing investment is creating jobs, supporting economic growth, and driving demand for industrial space and infrastructure. Investment momentum is strong and expected to continue.
 
 **Trade Agreements:**
-- **USMCA** – USMCA trade agreement.
-- **Market access** – North American market access.
-- **Competitiveness** – competitive advantages.
-- **Benefits** – trade benefits.
+- **USMCA** – The USMCA (United States-Mexico-Canada Agreement) provides preferential trade access to North American markets, supporting manufacturing and exports. The agreement ensures tariff-free trade for qualifying goods, creating competitive advantages for Mexican manufacturers. USMCA benefits are significant, supporting manufacturing investment and export growth.
+- **Market access** – North American market access provides Mexican companies with access to a 500-million-person market, enabling growth and market expansion. This access supports manufacturing, exports, and economic activity. Market access is a key advantage supporting nearshoring and manufacturing investment.
+- **Competitiveness** – Competitive advantages include strategic location, trade agreements, skilled workforce, competitive costs, and manufacturing expertise. These advantages support manufacturing competitiveness and attract investment. Mexico's competitiveness is strong relative to Asian alternatives for North American markets.
+- **Benefits** – Trade benefits include increased exports, manufacturing investment, job creation, and economic growth. Trade integration with North America is a key economic strength, supporting long-term growth and investment opportunities. Trade benefits are substantial and expected to grow with nearshoring.
 
 **Economic Structure:**
-- **Manufacturing** – strong manufacturing base.
-- **Exports** – export-oriented economy.
-- **Services** – services sector.
-- **Growth** – growth potential.
+- **Manufacturing** – Strong manufacturing base includes automotive, electronics, aerospace, medical devices, and other sectors. Manufacturing represents approximately 20% of GDP and is a key export sector. Manufacturing capabilities, skilled workforce, and competitive costs support manufacturing competitiveness and investment. Manufacturing is a key strength and growth driver.
+- **Exports** – Export-oriented economy with exports representing approximately 40% of GDP. Major export destinations include the United States (approximately 80% of exports), Canada, and other markets. Export orientation provides growth opportunities and supports manufacturing investment. Exports are a key economic driver.
+- **Services** – Services sector is well-developed, including financial services, telecommunications, retail, and professional services. Services contribute significantly to GDP and employment, providing diversification beyond manufacturing. Services sector quality supports economic development and investment attractiveness.
+- **Growth** – Growth potential is supported by nearshoring trends, manufacturing investment, trade benefits, and economic fundamentals. GDP growth has been solid, averaging 2-3% annually, with potential for acceleration as nearshoring accelerates. Growth prospects are positive, supported by nearshoring momentum.
 
 ## Investment Opportunities
 
 ### Manufacturing Sector
 
-Manufacturing companies benefiting from nearshoring:
+Manufacturing companies are direct beneficiaries of nearshoring trends, as companies relocate production to Mexico to be closer to North American markets. This shift is driving significant investment, capacity expansion, and revenue growth for manufacturing companies. Automotive, electronics, aerospace, medical devices, and other manufacturing sectors are experiencing strong demand and investment growth.
 
 **Automotive:**
-- **Automotive manufacturing** – automotive manufacturing.
-- **Nearshoring** – nearshoring benefits.
-- **Investment** – manufacturing investment.
-- **Returns** – return potential.
+- **Automotive manufacturing** – Automotive manufacturing is a major sector, with Mexico being one of the largest automotive producers globally. Major automakers and suppliers have significant operations in Mexico, benefiting from nearshoring trends, trade agreements, and competitive costs. Automotive manufacturing represents a significant portion of manufacturing GDP and exports.
+- **Nearshoring** – Nearshoring benefits include increased investment, capacity expansion, and revenue growth as automakers and suppliers relocate production from Asia. Nearshoring is driven by supply chain resilience, lead time reduction, and cost considerations. Automotive sector is a key beneficiary of nearshoring trends.
+- **Investment** – Manufacturing investment is increasing significantly, with automakers and suppliers announcing new plants, expansions, and investments. Investment is driven by nearshoring trends, demand growth, and competitive advantages. Investment growth supports capacity expansion and revenue growth.
+- **Returns** – Return potential is attractive, supported by nearshoring-driven demand growth, capacity expansion, and operational efficiency. Automotive manufacturing companies can achieve solid profitability and growth as nearshoring accelerates. Returns are supported by strong fundamentals and growth drivers.
 
 **Electronics:**
-- **Electronics manufacturing** – electronics manufacturing.
-- **Nearshoring** – nearshoring trends.
-- **Investment** – investment growth.
-- **Returns** – return potential.
+- **Electronics manufacturing** – Electronics manufacturing is growing rapidly, with Mexico becoming a major electronics manufacturing hub. Companies are relocating electronics production from Asia to Mexico, benefiting from proximity, trade agreements, and competitive costs. Electronics manufacturing is a key growth sector.
+- **Nearshoring** – Nearshoring trends are driving significant investment and growth in electronics manufacturing, as companies seek to reduce supply chain risks and shorten lead times. Electronics companies are expanding operations in Mexico, creating opportunities for manufacturing companies and suppliers.
+- **Investment** – Investment growth is strong, with electronics companies announcing new facilities, expansions, and investments. Investment is driven by nearshoring trends, demand growth, and supply chain diversification. Investment growth supports capacity expansion and revenue growth.
+- **Returns** – Return potential is attractive, supported by nearshoring-driven demand, investment growth, and operational efficiency. Electronics manufacturing companies can achieve solid profitability and growth as nearshoring accelerates. Returns are supported by strong growth drivers.
 
 **Other Manufacturing:**
-- **Various manufacturing** – various manufacturing sectors.
-- **Nearshoring** – nearshoring opportunities.
-- **Growth** – growth potential.
-- **Returns** – return potential.
+- **Various manufacturing** – Various manufacturing sectors including aerospace, medical devices, appliances, and others are benefiting from nearshoring trends. These sectors are experiencing investment growth, capacity expansion, and revenue growth as companies relocate production. Manufacturing diversification supports growth opportunities.
+- **Nearshoring** – Nearshoring opportunities exist across multiple manufacturing sectors, as companies seek to diversify supply chains and reduce risks. Nearshoring is creating opportunities for manufacturing companies, suppliers, and service providers. Manufacturing sector benefits are broad-based.
+- **Growth** – Growth potential is significant across manufacturing sectors, supported by nearshoring trends, investment growth, and demand expansion. Manufacturing growth supports economic activity, employment, and corporate earnings. Growth prospects are positive across manufacturing sectors.
+- **Returns** – Return potential is attractive for well-positioned manufacturing companies, with nearshoring-driven demand, investment growth, and operational efficiency supporting returns. Manufacturing companies can achieve solid profitability and growth as nearshoring accelerates.
 
 **Investment Case:**
-- **Nearshoring** – direct nearshoring beneficiaries.
-- **Growth** – strong growth potential.
-- **Valuation** – valuations.
-- **Returns** – return potential.
+- **Nearshoring** – Direct nearshoring beneficiaries are well-positioned to benefit from manufacturing relocation, investment growth, and demand expansion. Nearshoring is a multi-year trend creating substantial opportunities. Manufacturing companies with nearshoring exposure offer attractive investment cases.
+- **Growth** – Strong growth potential is supported by nearshoring trends, investment growth, and capacity expansion. Manufacturing companies can achieve significant revenue and earnings growth as nearshoring accelerates. Growth prospects are positive and sustainable.
+- **Valuation** – Valuations can be attractive, particularly if nearshoring benefits are not fully reflected in current prices. Manufacturing companies may trade at reasonable valuations relative to growth prospects and profitability. Valuation opportunities exist for investors.
+- **Returns** – Return potential is attractive, supported by nearshoring-driven growth, investment expansion, and operational efficiency. Manufacturing companies can deliver solid returns as nearshoring accelerates. Returns are supported by strong fundamentals and growth drivers.
 
 ### Industrial Real Estate
 
@@ -5889,19 +5889,27 @@ Market evolution:
 
 ## Conclusion
 
-Mexican equity markets offer attractive opportunities driven by nearshoring trends, as companies relocate manufacturing to be closer to North American markets. This transformation is creating investment opportunities in manufacturing, industrial real estate, infrastructure, and consumer sectors. While security concerns, infrastructure gaps, and policy uncertainty create risks, the nearshoring momentum provides strong growth potential.
+Mexican equity markets offer compelling opportunities driven by nearshoring trends, as companies relocate manufacturing from Asia to be closer to North American markets. This transformation, accelerated by supply chain disruptions, trade tensions, and cost considerations, is creating substantial investment opportunities in manufacturing, industrial real estate, infrastructure, and consumer sectors. While security concerns, infrastructure gaps, and policy uncertainty create risks, the nearshoring momentum provides strong growth potential and attractive investment cases.
 
-For investors, Mexico requires understanding nearshoring trends, identifying beneficiaries, and managing risks. Success requires thematic focus on nearshoring, bottom-up stock selection, and strong risk management.
+The nearshoring transformation represents a multi-year trend that is reshaping Mexican manufacturing and creating significant investment opportunities. Manufacturing investment is increasing, industrial real estate is in high demand, infrastructure development is accelerating, and corporate earnings are improving in manufacturing and related sectors. This transformation is supported by Mexico's strategic location, trade agreements, skilled workforce, and manufacturing capabilities.
 
-The Mexican equity market will continue to evolve as nearshoring accelerates and infrastructure develops. Investors that successfully identify nearshoring beneficiaries while managing risks will be positioned to benefit from this transforming market.
+For investors, Mexico requires understanding nearshoring trends, identifying beneficiaries, and managing risks. Success requires thematic focus on nearshoring, bottom-up stock selection, and strong risk management. The market's transformation creates opportunities, but security, infrastructure, and policy risks require careful navigation and selective approach.
+
+The Mexican equity market will continue to evolve as nearshoring accelerates and infrastructure develops. Nearshoring momentum is expected to continue, driven by supply chain diversification, trade benefits, and competitive advantages. Infrastructure development will support manufacturing growth and economic activity. Investors that successfully identify nearshoring beneficiaries while managing risks will be positioned to benefit from this transforming market.
+
+**Investment Focus Areas:**
 
 Investors should focus on:
-- **Nearshoring exposure** – companies with nearshoring exposure.
-- **Quality** – quality companies with strong fundamentals.
-- **Risk management** – strong risk management.
-- **Thematic** – thematic focus on nearshoring.
+- **Nearshoring exposure** – Companies with direct nearshoring exposure, including manufacturing companies, industrial real estate developers, and infrastructure companies. These companies are positioned to benefit from manufacturing relocation, investment growth, and demand expansion. Nearshoring exposure is the key investment theme.
+- **Quality** – Quality companies with strong fundamentals, competitive advantages, and operational excellence. Quality companies are better positioned to navigate challenges and deliver returns. Quality is essential for success in Mexico's evolving market.
+- **Risk management** – Strong risk management of security, infrastructure, and policy risks. Careful position sizing, diversification, and monitoring are essential. Risk management is critical for navigating Mexico's challenges while capturing opportunities.
+- **Thematic** – Thematic focus on nearshoring, as this is a multi-year trend creating substantial opportunities. Thematic investing allows investors to capture nearshoring benefits across multiple sectors and companies. Thematic focus supports investment success.
 
-Mexico is experiencing a nearshoring transformation creating significant opportunities. Investors that successfully capture these trends will be positioned to benefit from this market transformation.`,
+**Market Positioning:**
+
+Mexico is experiencing a nearshoring transformation creating significant opportunities. The transformation is reshaping manufacturing, driving investment, and creating growth opportunities across multiple sectors. Investors that successfully capture these trends will be positioned to benefit from this market transformation.
+
+Mexican equity markets can provide attractive opportunities for investors focused on nearshoring themes. Manufacturing relocation, investment growth, and infrastructure development create opportunities, but security, infrastructure, and policy risks require careful management. Success requires understanding nearshoring trends, identifying beneficiaries, and managing risks effectively.`,
     date: formatDate(123),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -5941,70 +5949,70 @@ This article explores how Brazilian equity markets are positioned, which factors
 
 ### Market Structure
 
-Brazilian equity market structure:
+The B3 Stock Exchange (formerly BM&FBOVESPA) is one of the largest and most sophisticated equity markets in Latin America, with deep liquidity, strong regulation, and diverse listed companies. Established through the merger of São Paulo Stock Exchange and Brazilian Mercantile and Futures Exchange, B3 has evolved into a modern exchange with advanced trading systems, strong regulation, and international recognition. The market's size, liquidity, and quality make it attractive for international investors seeking Latin American exposure.
 
 **B3 Stock Exchange:**
-- **Market structure** – B3 market structure.
-- **Listings** – number of listed companies.
-- **Liquidity** – market liquidity.
-- **Indices** – market indices.
+- **Market structure** – B3 operates a main market with over 300 listed companies, including some of Latin America's largest and most successful companies. The exchange maintains strict listing requirements and strong regulatory oversight, ensuring high standards for listed companies. Trading is electronic, with modern clearing and settlement systems integrated with international infrastructure.
+- **Listings** – The exchange hosts over 300 listed companies across various sectors, with major companies in financials, consumer, commodities, utilities, and industrials. The number of listings has remained relatively stable, with quality companies maintaining listings. Many companies are well-established with strong market positions and regional or global operations.
+- **Liquidity** – Market liquidity is strong for large-cap stocks, with daily trading volumes averaging $1-2 billion, making it one of the most liquid markets in Latin America. Liquidity is concentrated in large-cap stocks, particularly those in major indices, but mid-cap stocks also have reasonable liquidity. This liquidity supports institutional investment and provides exit options.
+- **Indices** – The Ibovespa is the primary market benchmark, representing the largest and most liquid stocks. The index includes approximately 80-90 stocks and represents approximately 80% of total market capitalization. Sector-specific indices are well-developed, providing detailed sector tracking.
 
 **Market Characteristics:**
-- **Size** – large market capitalization.
-- **Sector composition** – sector composition.
-- **Foreign ownership** – foreign ownership levels.
-- **Liquidity** – trading liquidity.
+- **Size** – Total market capitalization is approximately $600-800 billion, making it one of the largest markets in Latin America and emerging markets. The market's size reflects the presence of major companies, particularly in financials, commodities, and consumer sectors. Market capitalization has been volatile, reflecting commodity price cycles and economic conditions.
+- **Sector composition** – The market is well-diversified across sectors, with financials representing approximately 25-30%, commodities 15-20%, consumer 15-20%, utilities 10-15%, and other sectors. This diversification provides exposure to multiple economic themes, though financials and commodities remain dominant due to Brazil's economic structure.
+- **Foreign ownership** – Foreign ownership levels are significant, with international investors holding approximately 40-50% of free float for major stocks. Foreign participation reflects confidence in Brazilian companies and markets, though ownership has fluctuated with economic conditions, currency movements, and policy developments. Foreign ownership provides liquidity and market depth.
+- **Liquidity** – Trading liquidity is strong for large-cap stocks, supported by market size, institutional participation, and foreign investment. Liquidity is particularly strong for Ibovespa constituents, enabling large trades with minimal price impact. This liquidity supports institutional investment and provides flexibility for portfolio management.
 
 **Indices:**
-- **Ibovespa** – Ibovespa index.
-- **Sector indices** – sector-specific indices.
-- **Benchmarks** – benchmark indices.
+- **Ibovespa** – The Ibovespa index is the primary market benchmark, including the largest and most liquid stocks. The index is market-capitalization weighted and rebalanced periodically. It serves as the main reference for market performance and is widely used by investors and fund managers.
+- **Sector indices** – Sector-specific indices are well-developed, including financials, commodities, consumer, utilities, and others. These indices provide detailed sector tracking and enable sector-specific investment strategies. Sector indices are widely used for benchmarking and portfolio construction.
+- **Benchmarks** – International index providers like MSCI and FTSE include Brazilian stocks in their emerging market and Latin American indices, providing additional benchmarking options. Brazilian stocks typically have meaningful weights in Latin American indices, reflecting market size and quality. This inclusion supports international investment flows.
 
 ### Economic Fundamentals
 
-Brazilian economic fundamentals:
+Brazilian economic fundamentals reflect a complex mix of reform progress, economic strengths, and persistent challenges. The economy benefits from reform agendas focused on fiscal discipline, market liberalization, and structural improvements. However, political volatility, fiscal pressures, and structural issues continue to create risks. Understanding these dynamics is crucial for evaluating investment opportunities and risks.
 
 **Reform Agenda:**
-- **Fiscal reforms** – fiscal discipline reforms.
-- **Market liberalization** – market liberalization.
-- **Structural improvements** – structural improvements.
-- **Progress** – reform progress.
+- **Fiscal reforms** – Fiscal discipline reforms have been implemented to address fiscal pressures, improve public finances, and restore market confidence. Reforms include spending controls, pension reform, and fiscal rules. Fiscal discipline is essential for economic stability and market confidence. Reform progress has been positive but uneven, with implementation challenges and political resistance.
+- **Market liberalization** – Market liberalization reforms have opened sectors to competition, improved efficiency, and attracted investment. Reforms include privatization, deregulation, and market opening. Liberalization has improved competitiveness and created investment opportunities. However, liberalization progress has been mixed, with some sectors remaining protected.
+- **Structural improvements** – Structural improvements include infrastructure investment, education reform, and business environment improvements. These improvements support long-term growth and competitiveness. However, structural improvements require sustained commitment and face implementation challenges. Progress has been gradual but positive.
+- **Progress** – Reform progress has been positive but uneven, with some reforms advancing while others face delays or reversals. Political volatility and resistance create uncertainty about reform sustainability. Reform progress is crucial for economic stability and investment attractiveness.
 
 **Economic Structure:**
-- **Large economy** – large domestic economy.
-- **Natural resources** – rich natural resources.
-- **Consumer market** – large consumer market.
-- **Growth** – growth potential.
+- **Large economy** – Large domestic economy with GDP exceeding $1.5 trillion makes Brazil one of the largest economies globally and the largest in Latin America. The economy's size provides scale, diversification, and resilience. Large domestic market supports consumer companies and reduces dependence on exports.
+- **Natural resources** – Rich natural resources including oil, iron ore, soybeans, coffee, and other commodities provide natural advantages and export opportunities. Brazil is a major global producer of several commodities, with world-class companies. Resource wealth supports exports, GDP, and corporate earnings.
+- **Consumer market** – Large consumer market with over 200 million people provides significant opportunities for consumer companies. Growing middle class, rising incomes, and urbanization support consumer spending growth. Consumer market size and growth potential are key economic strengths.
+- **Growth** – Growth potential is supported by large economy, natural resources, consumer market, and reform benefits. GDP growth has been volatile, averaging 1-2% annually, but potential exists for higher growth with reform progress and structural improvements. Growth prospects depend on reform sustainability and structural improvements.
 
 **Challenges:**
-- **Political volatility** – political volatility.
-- **Fiscal pressures** – fiscal pressures.
-- **Structural issues** – structural challenges.
-- **Uncertainty** – policy uncertainty.
+- **Political volatility** – Political volatility creates uncertainty about policy direction, reform sustainability, and economic management. Political instability has been a persistent challenge, affecting investor confidence and economic stability. Political volatility is a key risk factor requiring monitoring.
+- **Fiscal pressures** – Fiscal pressures from high government debt, budget deficits, and spending commitments create challenges for fiscal sustainability. Fiscal discipline is essential but faces political and social resistance. Fiscal pressures are a key constraint on economic policy and growth.
+- **Structural issues** – Structural challenges including infrastructure gaps, education limitations, and business environment issues constrain growth and competitiveness. Addressing structural issues requires sustained commitment and investment. Structural improvements are essential for long-term growth.
+- **Uncertainty** – Policy uncertainty from political volatility, reform reversals, and economic challenges creates risks for investors and businesses. Uncertainty affects investment decisions, economic activity, and market performance. Policy stability is important for investment attractiveness.
 
 ## Investment Opportunities
 
 ### Financial Sector
 
-Brazilian banking sector:
+The Brazilian banking sector offers attractive growth potential, supported by low banking penetration, credit growth opportunities, and economic development. The sector is dominated by major banks including Itaú Unibanco, Banco Bradesco, Banco do Brasil, and Santander Brasil, which are well-capitalized, profitable, and well-managed. Banking penetration remains below developed market levels, suggesting substantial growth potential as the economy develops and financial inclusion increases.
 
 **Banks:**
-- **Major banks** – major Brazilian banks.
-- **Growth potential** – growth potential.
-- **Profitability** – profitability levels.
-- **Capital** – capitalization.
+- **Major banks** – Major Brazilian banks including Itaú Unibanco, Banco Bradesco, Banco do Brasil, and Santander Brasil are well-established with strong franchises, competitive advantages, and solid fundamentals. These banks control significant market share and have demonstrated resilience through economic cycles. Banking sector quality is a key strength of Brazilian markets.
+- **Growth potential** – Growth potential is significant, as banking penetration (credit-to-GDP ratios) remains below developed market levels, suggesting room for expansion. Consumer credit, mortgage lending, and corporate lending all offer growth opportunities as the economy develops and financial inclusion increases. Growth is supported by rising incomes, economic development, and reform benefits.
+- **Profitability** – Profitability levels have been solid, with return on equity (ROE) averaging 15-20% for major banks, supported by healthy net interest margins, efficient operations, and strong asset quality. Profitability has been resilient despite economic volatility, with banks successfully maintaining returns through operational efficiency and risk management.
+- **Capital** – Capitalization is strong, with major banks maintaining Tier 1 capital ratios exceeding 15%, well above regulatory requirements. Strong capitalization provides resilience and supports lending capacity. The sector has successfully navigated stress tests and maintained capital strength through various economic cycles.
 
 **Characteristics:**
-- **Market penetration** – banking penetration.
-- **Credit growth** – credit growth potential.
-- **Returns** – return potential.
-- **Valuation** – valuations.
+- **Market penetration** – Banking penetration remains below developed market levels, suggesting substantial growth potential. Credit-to-GDP ratios are lower than Western European or North American levels, indicating room for expansion. Penetration growth will be supported by economic development, rising incomes, and financial inclusion initiatives.
+- **Credit growth** – Credit growth potential is significant, as banking penetration remains low and economic development creates demand for credit. Consumer credit, mortgages, and corporate lending all offer growth opportunities. Credit growth is supported by economic development, reform benefits, and financial inclusion.
+- **Returns** – Return potential is attractive, supported by growth, improving profitability, and reasonable valuations. Banks can achieve solid returns through credit expansion, operational efficiency, and market share gains. Dividend yields of 4-7% are common, with potential for growth as profitability improves.
+- **Valuation** – Valuations can be attractive, particularly if economic challenges have created market discounts. Banks may trade at reasonable valuations relative to growth prospects and profitability. Valuation opportunities exist for investors willing to accept economic and political risks.
 
 **Investment Case:**
-- **Growth** – growth potential.
-- **Penetration** – market penetration.
-- **Valuation** – valuations.
-- **Returns** – return potential.
+- **Growth** – Growth potential is significant, supported by low penetration, economic development, and credit expansion opportunities. The sector offers exposure to Brazil's economic growth and financial development. Growth prospects are attractive for long-term investors.
+- **Penetration** – Market penetration opportunities exist as banking services expand and financial inclusion increases. Penetration growth will be supported by economic development, rising incomes, and technology adoption. Penetration opportunities create long-term growth potential.
+- **Valuation** – Valuations can be attractive, particularly if economic challenges have created market discounts. Banks may trade at reasonable valuations relative to growth prospects and profitability. Valuation opportunities exist for investors willing to accept risks.
+- **Returns** – Return potential is solid, supported by growth, profitability, and reasonable valuations. Banks can deliver attractive risk-adjusted returns, particularly for long-term investors. Returns are supported by economic development and financial sector growth.
 
 ### Consumer Sector
 
@@ -6180,19 +6188,27 @@ Market evolution:
 
 ## Conclusion
 
-Brazilian equity markets offer opportunities in Latin America's largest economy, with reform benefits and sector-specific opportunities. While political volatility, fiscal pressures, and structural challenges create risks, selective sector focus and quality stock selection can identify attractive opportunities. Success requires understanding reform dynamics, sector opportunities, and risk management.
+Brazilian equity markets offer compelling opportunities in Latin America's largest economy, with reform benefits and sector-specific opportunities creating attractive investment cases. While political volatility, fiscal pressures, and structural challenges create risks, selective sector focus and quality stock selection can identify attractive opportunities. Success requires understanding reform dynamics, sector opportunities, and risk management.
 
-For investors, Brazil requires understanding reform agenda, sector opportunities, and risk factors. Success requires selective sector focus, bottom-up stock selection, and strong risk management.
+The Brazilian market is characterized by a large, diverse economy with significant opportunities in financials, consumer, commodities, and infrastructure sectors. Reform progress has been positive but uneven, creating both opportunities and risks. The economy's size, natural resources, and consumer market provide foundations for investment, while political volatility and structural challenges require careful navigation.
 
-The Brazilian equity market will continue to evolve as reforms progress and market development continues. Investors that successfully identify sector opportunities while managing risks will be positioned to benefit from this large but complex market.
+For investors, Brazil requires understanding reform agenda, sector opportunities, and risk factors. Success requires selective sector focus, bottom-up stock selection, and strong risk management. The market's size and diversity support investment, but political, fiscal, and structural risks require careful management and selective approach.
+
+The Brazilian equity market will continue to evolve as reforms progress and market development continues. Reform sustainability, fiscal discipline, and structural improvements will be crucial for long-term success. Companies will continue to adapt, with quality companies navigating challenges effectively. Investors that successfully identify sector opportunities while managing risks will be positioned to benefit from this large but complex market.
+
+**Investment Focus Areas:**
 
 Investors should focus on:
-- **Sector opportunities** – sectors with strong fundamentals.
-- **Quality companies** – quality companies with strong fundamentals.
-- **Risk management** – strong risk management.
-- **Selective approach** – selective sector and stock approach.
+- **Sector opportunities** – Sectors with strong fundamentals, growth potential, and reform benefits, including financials, consumer, commodities, and infrastructure. These sectors offer attractive opportunities with different risk-return profiles. Sector selection is crucial for success in Brazil's complex market.
+- **Quality companies** – Quality companies with strong fundamentals, competitive advantages, and operational excellence. These companies are better positioned to navigate challenges and deliver returns. Quality is essential for success in Brazil's volatile environment.
+- **Risk management** – Strong risk management of political, fiscal, currency, and structural risks. Careful position sizing, diversification, and monitoring are essential. Risk management is critical for navigating Brazil's challenges while capturing opportunities.
+- **Selective approach** – Highly selective approach focusing on sectors and companies with strong fundamentals, low risk exposure, and attractive valuations. Not all opportunities are equal, and selectivity is important for success. Selective approach supports risk-adjusted returns.
 
-Brazil offers opportunities but requires careful navigation of risks. Investors that successfully do this will find attractive opportunities in Latin America's largest economy.`,
+**Market Positioning:**
+
+Brazil offers compelling opportunities but requires careful navigation of challenges. The market provides exposure to Latin America's largest economy with reform benefits and sector opportunities, but political volatility, fiscal pressures, and structural challenges require careful management. Investors that successfully navigate challenges while capturing opportunities will find attractive risk-adjusted returns.
+
+Brazilian equity markets can provide attractive opportunities for selective investors willing to accept political, fiscal, and structural risks. Large economy, reform benefits, and sector opportunities create value, but challenges require careful management. Success requires understanding reform dynamics, sector opportunities, and selective investment approach.`,
     date: formatDate(124),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -6232,71 +6248,71 @@ This article explores how Indian equity markets are positioned, which structural
 
 ### Market Structure
 
-Indian equity market structure:
+India has two major stock exchanges: the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE), both operating as modern, sophisticated markets with deep liquidity, strong regulation, and international recognition. The exchanges have evolved into world-class markets with advanced trading systems, strong corporate governance, and diverse listed companies. The market's size, liquidity, and quality make it attractive for international investors seeking Asian growth exposure.
 
 **Stock Exchanges:**
-- **BSE and NSE** – Bombay and National Stock Exchanges.
-- **Listings** – number of listed companies.
-- **Liquidity** – deep market liquidity.
-- **Indices** – market indices.
+- **BSE and NSE** – The BSE (established 1875) and NSE (established 1992) are both major exchanges, with NSE being the larger by trading volume. Both exchanges maintain strict listing requirements, strong regulatory oversight, and modern trading infrastructure. The exchanges compete effectively, providing liquidity and market access. Both are well-integrated with international markets and recognized globally.
+- **Listings** – The exchanges host over 5,000 listed companies combined, making India one of the largest equity markets globally by number of listings. The large number of listings provides diversification opportunities but also requires careful stock selection. Many companies are well-established with strong market positions and growth potential.
+- **Liquidity** – Deep market liquidity is a key strength, with daily trading volumes averaging $5-10 billion, making India one of the most liquid markets in emerging markets. Liquidity is concentrated in large-cap stocks, particularly those in major indices, but mid-cap and small-cap stocks also have reasonable liquidity. This liquidity supports institutional investment and provides exit options.
+- **Indices** – Major indices include the Nifty 50 (NSE) and Sensex (BSE), both representing the largest and most liquid stocks. The Nifty 50 includes 50 stocks and represents approximately 65% of total market capitalization. The Sensex includes 30 stocks and represents approximately 40% of total market capitalization. Sector-specific indices are well-developed, providing detailed sector tracking.
 
 **Market Characteristics:**
-- **Size** – large market capitalization.
-- **Sector composition** – sector composition.
-- **Foreign ownership** – foreign ownership levels.
-- **Liquidity** – strong liquidity.
+- **Size** – Total market capitalization is approximately $3-4 trillion, making India one of the largest equity markets globally and the largest in South Asia. The market's size reflects the presence of major companies, economic growth, and market development. Market capitalization has grown significantly with economic development and corporate growth.
+- **Sector composition** – The market is well-diversified across sectors, with financials representing approximately 25-30%, technology 15-20%, consumer 10-15%, energy 8-12%, and other sectors. This diversification provides exposure to multiple economic themes and growth drivers. Sector composition reflects India's economic structure and development stage.
+- **Foreign ownership** – Foreign ownership levels are significant, with international investors holding approximately 20-25% of free float for major stocks. Foreign participation reflects confidence in Indian companies and markets, though ownership has fluctuated with economic conditions, policy developments, and global risk sentiment. Foreign ownership provides liquidity and market depth.
+- **Liquidity** – Strong liquidity is supported by market size, institutional participation, domestic savings, and foreign investment. Liquidity is particularly strong for Nifty 50 and Sensex constituents, enabling large trades with minimal price impact. This liquidity supports institutional investment and provides flexibility for portfolio management.
 
 **Indices:**
-- **Nifty 50** – Nifty 50 index.
-- **Sensex** – Sensex index.
-- **Sector indices** – sector-specific indices.
-- **Benchmarks** – benchmark indices.
+- **Nifty 50** – The Nifty 50 index is the primary market benchmark for NSE, including the largest and most liquid stocks. The index is market-capitalization weighted and rebalanced periodically. It serves as the main reference for market performance and is widely used by investors and fund managers globally.
+- **Sensex** – The Sensex index is the primary market benchmark for BSE, including 30 of the largest and most liquid stocks. The index is market-capitalization weighted and serves as a key reference for market performance. Both indices are widely followed and used for benchmarking.
+- **Sector indices** – Sector-specific indices are well-developed, including financials, technology, consumer, energy, and others. These indices provide detailed sector tracking and enable sector-specific investment strategies. Sector indices are widely used for benchmarking and portfolio construction.
+- **Benchmarks** – International index providers like MSCI and FTSE include Indian stocks in their emerging market and Asian indices, providing additional benchmarking options. Indian stocks typically have meaningful weights in emerging market indices, reflecting market size and quality. This inclusion supports international investment flows.
 
 ### Economic Fundamentals
 
-Indian economic fundamentals:
+Indian economic fundamentals reflect a structural growth story driven by favorable demographics, economic reforms, infrastructure development, and digital transformation. The economy benefits from a large and growing population, rising middle class, ongoing liberalization, and government focus on infrastructure and digitalization. Understanding these dynamics is crucial for evaluating investment opportunities and long-term growth potential.
 
 **Structural Drivers:**
-- **Demographics** – favorable demographics.
-- **Urbanization** – urbanization trends.
-- **Middle class** – growing middle class.
-- **Reforms** – economic reforms.
+- **Demographics** – Favorable demographics with a population exceeding 1.4 billion, median age of approximately 28 years, and a large working-age population provide a significant demographic dividend. The young population supports consumption growth, labor supply, and economic dynamism. Demographics are a key structural advantage supporting long-term growth.
+- **Urbanization** – Urbanization trends are accelerating, with urban population growing and creating demand for infrastructure, housing, and services. Urbanization drives productivity, consumption, and economic growth. Major cities are experiencing rapid development, creating opportunities in real estate, infrastructure, and consumer sectors.
+- **Middle class** – Growing middle class with rising incomes and purchasing power supports consumption growth and market expansion. The middle class is expanding rapidly, creating demand for consumer goods, services, and financial products. Middle class growth is a key driver of consumer sector opportunities.
+- **Reforms** – Economic reforms including GST implementation, bankruptcy code, labor reforms, and market liberalization have improved the business environment and supported growth. Reform progress has been positive, though implementation challenges exist. Reforms are essential for realizing growth potential.
 
 **Growth:**
-- **GDP growth** – strong GDP growth.
-- **Resilience** – economic resilience.
-- **Drivers** – growth drivers.
-- **Outlook** – growth outlook.
+- **GDP growth** – Strong GDP growth averaging 6-7% annually over the past decade, with potential for 7-8% growth as reforms progress and infrastructure develops. Growth has been resilient, with India maintaining strong growth even during global economic challenges. GDP growth supports corporate earnings and market performance.
+- **Resilience** – Economic resilience has been demonstrated through various challenges, with the economy maintaining growth despite external headwinds, policy changes, and structural adjustments. Resilience reflects domestic demand strength, policy flexibility, and economic fundamentals. Resilience supports long-term investment cases.
+- **Drivers** – Growth drivers include consumption growth, investment expansion, infrastructure development, and export growth. Multiple growth drivers provide diversification and sustainability. Growth drivers are structural and support long-term investment opportunities.
+- **Outlook** – Growth outlook is positive, with GDP growth expected to average 6-7% annually over the medium term, supported by structural drivers, reform benefits, and infrastructure investment. Growth prospects are attractive for long-term investors seeking exposure to Asian growth.
 
 **Reforms:**
-- **Economic liberalization** – economic liberalization.
-- **Infrastructure** – infrastructure focus.
-- **Digital** – digital transformation.
-- **Progress** – reform progress.
+- **Economic liberalization** – Economic liberalization including market opening, privatization, and deregulation has improved competitiveness and attracted investment. Liberalization has been gradual but positive, creating opportunities while maintaining stability. Continued liberalization supports growth and investment attractiveness.
+- **Infrastructure** – Infrastructure focus from government investment, public-private partnerships, and development initiatives supports economic growth and competitiveness. Infrastructure investment is a key priority, with significant capital allocated to transportation, energy, digital, and social infrastructure. Infrastructure development creates investment opportunities.
+- **Digital** – Digital transformation including digital payments, e-governance, and technology adoption is accelerating, improving efficiency and creating opportunities. Digital India initiatives support technology adoption and digital economy growth. Digital transformation is a key growth driver.
+- **Progress** – Reform progress has been positive, with significant reforms implemented and more planned. Reform sustainability and implementation effectiveness are crucial for long-term success. Reform progress supports growth and investment attractiveness.
 
 ## Investment Opportunities
 
 ### Financial Sector
 
-Indian banking and financial services:
+The Indian banking and financial services sector offers attractive growth potential, supported by low banking penetration, credit growth opportunities, and economic development. The sector includes major banks, non-bank financial services, insurance, and asset management companies. Banking penetration remains well below developed market levels, suggesting substantial growth potential as the economy develops and financial inclusion increases.
 
 **Banks:**
-- **Major banks** – major Indian banks.
-- **Growth potential** – strong growth potential.
-- **Penetration** – banking penetration.
-- **Returns** – return potential.
+- **Major banks** – Major Indian banks including State Bank of India, HDFC Bank, ICICI Bank, and Axis Bank are well-established with strong franchises, competitive advantages, and solid fundamentals. These banks control significant market share and have demonstrated resilience through economic cycles. Banking sector quality is a key strength of Indian markets.
+- **Growth potential** – Strong growth potential exists, as banking penetration (credit-to-GDP ratios) remains well below developed market levels, suggesting substantial room for expansion. Consumer credit, mortgage lending, and corporate lending all offer significant growth opportunities as the economy develops and financial inclusion increases. Growth is supported by rising incomes, economic development, and reform benefits.
+- **Penetration** – Banking penetration remains low, with credit-to-GDP ratios significantly below Western levels, indicating substantial growth potential. Penetration growth will be supported by economic development, rising incomes, financial inclusion initiatives, and technology adoption. Penetration opportunities create long-term growth potential.
+- **Returns** – Return potential is attractive, supported by growth, improving profitability, and reasonable valuations. Banks can achieve solid returns through credit expansion, operational efficiency, and market share gains. Dividend yields of 1-3% are common, with potential for growth as profitability improves.
 
 **Financial Services:**
-- **Non-bank financial** – non-bank financial services.
-- **Insurance** – insurance sector.
-- **Asset management** – asset management.
-- **Returns** – return potential.
+- **Non-bank financial** – Non-bank financial services including NBFCs, fintech, and specialized lenders are growing rapidly, providing credit and financial services to underserved segments. These companies benefit from market gaps, technology adoption, and regulatory support. Non-bank financial services offer growth opportunities and diversification.
+- **Insurance** – Insurance sector including life and general insurance is growing, supported by rising incomes, awareness, and regulatory support. Insurance penetration remains low, suggesting substantial growth potential. Insurance companies offer attractive growth prospects and defensive characteristics.
+- **Asset management** – Asset management industry is well-developed, with companies managing significant assets and benefiting from growing savings, financial inclusion, and market development. Asset management offers growth opportunities and recurring revenue models. Industry quality supports investment cases.
+- **Returns** – Return potential is attractive for well-positioned financial services companies, with growth, profitability, and market development supporting returns. Financial services companies can achieve solid returns through market expansion, operational efficiency, and competitive advantages. Returns are supported by structural growth drivers.
 
 **Investment Case:**
-- **Growth** – strong growth potential.
-- **Penetration** – market penetration.
-- **Valuation** – valuations.
-- **Returns** – return potential.
+- **Growth** – Strong growth potential is supported by low penetration, economic development, and credit expansion opportunities. The sector offers exposure to India's economic growth and financial development. Growth prospects are attractive for long-term investors.
+- **Penetration** – Market penetration opportunities exist as financial services expand and financial inclusion increases. Penetration growth will be supported by economic development, rising incomes, and technology adoption. Penetration opportunities create long-term growth potential.
+- **Valuation** – Valuations can be reasonable, though some companies trade at premiums reflecting growth prospects. Banks and financial services may trade at reasonable valuations relative to growth prospects and profitability. Valuation discipline is important given growth expectations.
+- **Returns** – Return potential is solid, supported by growth, profitability, and reasonable valuations. Financial services companies can deliver attractive risk-adjusted returns, particularly for long-term investors. Returns are supported by economic development and financial sector growth.
 
 ### Consumer Sector
 
@@ -6472,19 +6488,27 @@ Market evolution:
 
 ## Conclusion
 
-Indian equity markets offer exposure to one of the most attractive long-term growth stories in emerging markets, with structural drivers including demographics, reforms, and digital transformation. While valuations can be demanding and execution risks exist, the structural growth story remains compelling. Success requires careful stock selection, valuation discipline, and focus on quality companies with sustainable growth.
+Indian equity markets offer exposure to one of the most attractive long-term growth stories in emerging markets, with structural drivers including favorable demographics, economic reforms, infrastructure development, and digital transformation creating substantial investment opportunities. While valuations can be demanding and execution risks exist, the structural growth story remains compelling, supported by a large and growing population, rising middle class, and ongoing economic liberalization. Success requires careful stock selection, valuation discipline, and focus on quality companies with sustainable growth.
 
-For investors, India requires understanding structural growth drivers, identifying quality opportunities, and maintaining valuation discipline. Success requires selective approach, bottom-up stock selection, and strong risk management.
+The Indian market is characterized by a structural growth story with multiple tailwinds supporting long-term investment cases. Demographics, urbanization, middle class growth, and reforms provide foundations for sustained growth. The economy's size, diversity, and development stage create opportunities across multiple sectors. However, elevated valuations and execution risks require careful navigation and selective approach.
 
-The Indian equity market will continue to evolve as structural growth drivers play out and market development continues. Investors that successfully identify quality opportunities while maintaining valuation discipline will be positioned to benefit from this long-term growth story.
+For investors, India requires understanding structural growth drivers, identifying quality opportunities, and maintaining valuation discipline. Success requires selective approach, bottom-up stock selection, and strong risk management. The market's growth potential is attractive, but valuation discipline and quality focus are essential for success.
+
+The Indian equity market will continue to evolve as structural growth drivers play out and market development continues. Demographics, reforms, infrastructure, and digital transformation will support long-term growth. Companies will continue to adapt, with quality companies delivering sustainable growth. Investors that successfully identify quality opportunities while maintaining valuation discipline will be positioned to benefit from this long-term growth story.
+
+**Investment Focus Areas:**
 
 Investors should focus on:
-- **Quality growth** – quality companies with sustainable growth.
-- **Valuation discipline** – strict valuation discipline.
-- **Structural themes** – exposure to structural growth themes.
-- **Long-term** – long-term investment horizon.
+- **Quality growth** – Quality companies with sustainable growth, strong fundamentals, and competitive advantages. These companies are better positioned to deliver returns despite valuation concerns. Quality growth is essential for success in India's growth market.
+- **Valuation discipline** – Strict valuation discipline is crucial, as elevated valuations can create risks. Investors should focus on companies with reasonable valuations relative to growth prospects and profitability. Valuation discipline protects against downside risks.
+- **Structural themes** – Exposure to structural growth themes including demographics, consumption, infrastructure, and digital transformation. These themes provide sustainable growth drivers and long-term opportunities. Structural themes support investment cases.
+- **Long-term** – Long-term investment horizon, as structural growth drivers play out over years and decades. Short-term volatility can occur, but long-term fundamentals support returns. Patience and discipline are important for capturing value.
 
-India offers a compelling long-term growth story but requires discipline and selective approach. Investors that successfully navigate this will be positioned to benefit from one of the world's most attractive growth markets.`,
+**Market Positioning:**
+
+India offers a compelling long-term growth story but requires discipline and selective approach. The market provides exposure to one of the world's most attractive growth markets with structural drivers and quality companies, but elevated valuations and execution risks require careful management. Investors that successfully navigate this will be positioned to benefit from India's growth story.
+
+Indian equity markets can provide attractive opportunities for long-term investors willing to accept valuation risks and maintain discipline. Structural growth drivers, quality companies, and market development create value, but valuation discipline and quality focus are essential. Success requires understanding structural drivers, identifying quality opportunities, and maintaining valuation discipline.`,
     date: formatDate(125),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -6524,70 +6548,70 @@ This article explores how Indonesian equity markets are positioned, which demogr
 
 ### Market Structure
 
-Indonesian equity market structure:
+The Indonesia Stock Exchange (IDX) is the primary equity market in Indonesia, operating as a modern exchange with growing sophistication and international recognition. Established in 1912 and re-established in 1977, the exchange has evolved significantly, with improved regulation, infrastructure, and market development. The market's growth potential, demographic story, and resource wealth make it attractive for international investors seeking Southeast Asian exposure.
 
 **Indonesia Stock Exchange:**
-- **Market structure** – IDX market structure.
-- **Listings** – number of listed companies.
-- **Liquidity** – market liquidity.
-- **Indices** – market indices.
+- **Market structure** – The IDX operates a main market with approximately 700-800 listed companies, including some of Indonesia's largest and most successful companies. The exchange maintains listing requirements and regulatory oversight, ensuring standards for listed companies. Trading is electronic, with modern clearing and settlement systems, though market infrastructure continues to develop.
+- **Listings** – The exchange hosts approximately 700-800 listed companies across various sectors, with major companies in consumer, financials, resources, and infrastructure. The number of listings has grown significantly, reflecting market development and corporate growth. Many companies are well-established with strong market positions.
+- **Liquidity** – Market liquidity is moderate for large-cap stocks, with daily trading volumes averaging $500 million to $1 billion, making it one of the more liquid markets in Southeast Asia. Liquidity is concentrated in large-cap stocks, particularly those in major indices, but mid-cap stocks can have limited liquidity. This liquidity supports institutional investment but requires careful execution.
+- **Indices** – The IDX Composite is the primary market benchmark, representing the largest and most liquid stocks. The index includes approximately 500-600 stocks and represents approximately 80-90% of total market capitalization. Sector-specific indices are available, providing sector tracking capabilities.
 
 **Market Characteristics:**
-- **Size** – market capitalization.
-- **Sector composition** – sector composition.
-- **Foreign ownership** – foreign ownership levels.
-- **Liquidity** – trading liquidity.
+- **Size** – Total market capitalization is approximately $600-700 billion, making it one of the larger markets in Southeast Asia. The market's size reflects the presence of major companies, economic growth, and market development. Market capitalization has grown significantly with economic development and corporate growth.
+- **Sector composition** – The market is well-diversified across sectors, with consumer representing approximately 20-25%, financials 20-25%, resources 15-20%, infrastructure 10-15%, and other sectors. This diversification provides exposure to multiple economic themes, with consumer and financials reflecting demographic trends and economic development.
+- **Foreign ownership** – Foreign ownership levels are significant, with international investors holding approximately 30-40% of free float for major stocks. Foreign participation reflects confidence in Indonesian companies and markets, though ownership has fluctuated with economic conditions, currency movements, and policy developments. Foreign ownership provides liquidity and market depth.
+- **Liquidity** – Trading liquidity is moderate for large-cap stocks, supported by market size, institutional participation, and foreign investment. Liquidity is particularly strong for IDX Composite constituents, enabling reasonable trade sizes. However, liquidity for smaller stocks can be limited, requiring careful position sizing.
 
 **Indices:**
-- **IDX Composite** – IDX Composite index.
-- **Sector indices** – sector-specific indices.
-- **Benchmarks** – benchmark indices.
+- **IDX Composite** – The IDX Composite index is the primary market benchmark, including the largest and most liquid stocks. The index is market-capitalization weighted and rebalanced periodically. It serves as the main reference for market performance and is widely used by investors and fund managers.
+- **Sector indices** – Sector-specific indices are available, including consumer, financials, resources, and others. These indices provide sector tracking capabilities and enable sector-specific investment strategies. Sector indices are used for benchmarking and portfolio construction.
+- **Benchmarks** – International index providers like MSCI and FTSE include Indonesian stocks in their emerging market and Southeast Asian indices, providing additional benchmarking options. Indonesian stocks typically have meaningful weights in Southeast Asian indices, reflecting market size and quality. This inclusion supports international investment flows.
 
 ### Economic Fundamentals
 
-Indonesian economic fundamentals:
+Indonesian economic fundamentals reflect a compelling demographic growth story combined with rich natural resources and strategic location. The economy benefits from a very large and young population, growing middle class, urbanization trends, and abundant natural resources. Understanding these dynamics is crucial for evaluating investment opportunities and long-term growth potential.
 
 **Demographics:**
-- **Large population** – very large population.
-- **Young population** – young population.
-- **Middle class** – growing middle class.
-- **Urbanization** – urbanization trends.
+- **Large population** – Very large population exceeding 270 million makes Indonesia the fourth most populous country globally and the largest in Southeast Asia. This large population provides a significant domestic market, labor force, and growth potential. Population size supports consumer markets, manufacturing, and services, creating opportunities for domestic and international companies.
+- **Young population** – Young population with median age of approximately 30 years provides a significant demographic dividend. The young population supports consumption growth, labor supply, and economic dynamism. Youth demographics are a key structural advantage supporting long-term growth and consumer sector opportunities.
+- **Middle class** – Growing middle class with rising incomes and purchasing power supports consumption growth and market expansion. The middle class is expanding rapidly, creating demand for consumer goods, services, and financial products. Middle class growth is a key driver of consumer sector opportunities and economic development.
+- **Urbanization** – Urbanization trends are accelerating, with urban population growing and creating demand for infrastructure, housing, and services. Urbanization drives productivity, consumption, and economic growth. Major cities like Jakarta, Surabaya, and Bandung are experiencing rapid development, creating opportunities in real estate, infrastructure, and consumer sectors.
 
 **Growth:**
-- **GDP growth** – solid GDP growth.
-- **Resilience** – economic resilience.
-- **Drivers** – growth drivers.
-- **Outlook** – growth outlook.
+- **GDP growth** – Solid GDP growth averaging 5-6% annually over the past decade, with potential for 6-7% growth as infrastructure develops and reforms progress. Growth has been resilient, with Indonesia maintaining solid growth even during regional and global economic challenges. GDP growth supports corporate earnings and market performance.
+- **Resilience** – Economic resilience has been demonstrated through various challenges, with the economy maintaining growth despite external headwinds, commodity price volatility, and policy changes. Resilience reflects domestic demand strength, demographic advantages, and economic fundamentals. Resilience supports long-term investment cases.
+- **Drivers** – Growth drivers include consumption growth, investment expansion, infrastructure development, and export growth. Multiple growth drivers provide diversification and sustainability. Demographic trends, urbanization, and middle class growth are key structural drivers supporting long-term growth.
+- **Outlook** – Growth outlook is positive, with GDP growth expected to average 5-6% annually over the medium term, supported by demographic trends, infrastructure investment, and economic development. Growth prospects are attractive for long-term investors seeking exposure to Southeast Asian growth.
 
 **Resources:**
-- **Natural resources** – rich natural resources.
-- **Commodities** – commodity exports.
-- **Energy** – energy resources.
-- **Exports** – export-oriented.
+- **Natural resources** – Rich natural resources including oil, gas, coal, palm oil, rubber, and minerals provide natural advantages and export opportunities. Indonesia is a major global producer of several commodities, with world-class companies. Resource wealth supports exports, GDP, and corporate earnings, though commodity dependence creates volatility.
+- **Commodities** – Commodity exports including palm oil, coal, rubber, and minerals are significant, contributing to GDP and foreign exchange earnings. Commodity exports benefit from global demand and prices, though volatility creates economic challenges. Commodity sector is a key economic driver but creates cyclicality.
+- **Energy** – Energy resources including oil, gas, and coal provide energy security and export opportunities. Indonesia is a significant energy producer, though domestic consumption is growing. Energy sector offers investment opportunities and supports economic development.
+- **Exports** – Export-oriented economy with exports representing approximately 20-25% of GDP. Major export destinations include China, Japan, United States, and other Asian markets. Export orientation provides growth opportunities but also creates sensitivity to external demand and commodity prices.
 
 ## Investment Opportunities
 
 ### Consumer Sector
 
-Indonesian consumer market:
+The Indonesian consumer market represents one of the most attractive consumer growth stories in emerging markets, driven by favorable demographics, growing middle class, and urbanization trends. With a population exceeding 270 million and a rapidly expanding middle class, Indonesia offers substantial opportunities for consumer-oriented businesses. The market has shown strong growth and resilience, even during economic uncertainty.
 
 **Market:**
-- **Large market** – very large consumer market.
-- **Growth** – strong consumer spending growth.
-- **Middle class** – rapidly growing middle class.
-- **Urbanization** – urbanization benefits.
+- **Large market** – Very large consumer market with over 270 million people provides significant scale and growth potential. Consumer spending has grown consistently, averaging 5-6% annual growth over the past decade. The market benefits from large population, rising disposable incomes, and increasing consumer confidence. Market size and growth potential are key strengths.
+- **Growth** – Strong consumer spending growth has been robust, supported by demographic trends, rising incomes, urbanization, and middle class expansion. Real income growth has outpaced inflation, supporting purchasing power. Consumer confidence has remained relatively high, supporting spending even during economic uncertainty. Growth prospects are positive.
+- **Middle class** – Rapidly growing middle class with rising incomes and purchasing power supports consumption growth and market expansion. The middle class is expanding rapidly, creating demand for consumer goods, services, and financial products. Middle class growth is a key driver of consumer sector opportunities and economic development.
+- **Urbanization** – Urbanization benefits include higher incomes, greater access to retail, and different consumption patterns. Major cities like Jakarta, Surabaya, and Bandung have experienced rapid development of shopping centers, restaurants, and entertainment venues. Urban consumers are more brand-conscious and willing to pay premiums for quality.
 
 **Companies:**
-- **Retail** – retail companies.
-- **Food and beverage** – food and beverage.
-- **Consumer goods** – consumer goods.
-- **E-commerce** – e-commerce growth.
+- **Retail** – Retail sector includes major players in modern retail formats, traditional markets, and e-commerce. Modern retail formats have gained market share, with shopping centers and hypermarkets becoming more common. E-commerce has grown rapidly, though online penetration remains below developed market levels. Retail sector offers growth opportunities.
+- **Food and beverage** – Food and beverage sector includes companies with strong domestic brands, distribution networks, and consumer loyalty. The sector benefits from population size, rising incomes, and urbanization. Premiumization trends support growth in higher-margin products. Food and beverage sector offers stable growth.
+- **Consumer goods** – Consumer goods companies have built strong domestic brands and expanded regionally. These companies benefit from understanding local preferences, distribution networks, and competitive costs. Brand strength and market positions support profitability and returns. Consumer goods sector offers growth opportunities.
+- **E-commerce** – E-commerce growth has been rapid, with online retail sales increasing 20-30% annually. Major players include local platforms and international companies. The COVID-19 pandemic accelerated e-commerce adoption, and growth continues as infrastructure and logistics improve. E-commerce offers significant growth potential.
 
 **Investment Case:**
-- **Demographics** – favorable demographics.
-- **Growth** – strong consumer growth.
-- **Penetration** – market penetration.
-- **Returns** – return potential.
+- **Demographics** – Favorable demographics including large population, young age structure, and growing middle class support long-term consumer growth. Demographic trends are structural and sustainable, providing foundations for investment cases. Demographics are a key investment theme.
+- **Growth** – Strong consumer growth is supported by demographic trends, rising incomes, urbanization, and middle class expansion. Consumer spending growth is expected to continue, supporting revenue and earnings growth for consumer companies. Growth prospects are attractive for long-term investors.
+- **Penetration** – Market penetration opportunities exist across multiple categories, as Indonesian consumers adopt modern consumption patterns. Premium products, services, and experiences are gaining market share. E-commerce penetration remains below developed market levels, suggesting further growth potential.
+- **Returns** – Return potential is attractive for well-positioned consumer companies, with growth, margins, and market development supporting returns. Consumer companies can achieve solid profitability and growth as demographics and income trends play out. Returns are supported by structural growth drivers.
 
 ### Financial Sector
 
@@ -6769,19 +6793,27 @@ Market evolution:
 
 ## Conclusion
 
-Indonesian equity markets offer exposure to one of the most attractive demographic stories in emerging markets, with large and growing population, rising middle class, and urbanization trends creating substantial consumer growth opportunities. While infrastructure gaps, governance issues, and policy uncertainty create risks, the demographic growth story remains compelling. Success requires careful stock selection, focus on quality companies with sustainable growth, and strong risk management.
+Indonesian equity markets offer exposure to one of the most attractive demographic stories in emerging markets, with a large and growing population, rising middle class, and urbanization trends creating substantial consumer growth opportunities. Combined with rich natural resources, strategic location, and improving infrastructure, Indonesia offers compelling long-term investment opportunities. While infrastructure gaps, governance issues, and policy uncertainty create risks, the demographic growth story remains compelling, supported by structural drivers that are sustainable and long-term. Success requires careful stock selection, focus on quality companies with sustainable growth, and strong risk management.
 
-For investors, Indonesia requires understanding demographic drivers, identifying quality opportunities, and managing structural risks. Success requires selective approach, bottom-up stock selection, and strong risk management.
+The Indonesian market is characterized by a compelling demographic growth story with multiple tailwinds supporting long-term investment cases. Large population, young demographics, growing middle class, and urbanization provide foundations for sustained consumer growth. The economy's size, resources, and development stage create opportunities across multiple sectors. However, infrastructure gaps, governance concerns, and policy uncertainty require careful navigation and selective approach.
 
-The Indonesian equity market will continue to evolve as demographic trends play out and infrastructure develops. Investors that successfully identify quality opportunities while managing risks will be positioned to benefit from this demographic growth story.
+For investors, Indonesia requires understanding demographic drivers, identifying quality opportunities, and managing structural risks. Success requires selective approach, bottom-up stock selection, and strong risk management. The market's demographic potential is attractive, but infrastructure, governance, and policy risks require careful management.
+
+The Indonesian equity market will continue to evolve as demographic trends play out and infrastructure develops. Demographics, urbanization, and middle class growth will support long-term consumer growth. Infrastructure development will improve economic efficiency and competitiveness. Companies will continue to adapt, with quality companies delivering sustainable growth. Investors that successfully identify quality opportunities while managing risks will be positioned to benefit from this demographic growth story.
+
+**Investment Focus Areas:**
 
 Investors should focus on:
-- **Demographic themes** – exposure to demographic growth themes.
-- **Quality companies** – quality companies with sustainable growth.
-- **Risk management** – strong risk management of structural risks.
-- **Long-term** – long-term investment horizon.
+- **Demographic themes** – Exposure to demographic growth themes including consumption, urbanization, and middle class expansion. These themes provide sustainable growth drivers and long-term opportunities. Demographic themes are structural and support investment cases.
+- **Quality companies** – Quality companies with sustainable growth, strong fundamentals, and competitive advantages. These companies are better positioned to navigate challenges and deliver returns. Quality is essential for success in Indonesia's evolving market.
+- **Risk management** – Strong risk management of infrastructure, governance, policy, currency, and commodity risks. Careful position sizing, diversification, and monitoring are essential. Risk management is critical for navigating Indonesia's challenges while capturing opportunities.
+- **Long-term** – Long-term investment horizon, as demographic trends and infrastructure development play out over years and decades. Short-term volatility can occur, but long-term fundamentals support returns. Patience and discipline are important for capturing value.
 
-Indonesia offers a compelling demographic growth story but requires discipline and selective approach. Investors that successfully navigate this will be positioned to benefit from Southeast Asia's largest economy.`,
+**Market Positioning:**
+
+Indonesia offers a compelling demographic growth story but requires discipline and selective approach. The market provides exposure to Southeast Asia's largest economy with demographic tailwinds and consumer growth opportunities, but infrastructure gaps, governance concerns, and policy uncertainty require careful management. Investors that successfully navigate this will be positioned to benefit from one of Southeast Asia's most attractive growth markets.
+
+Indonesian equity markets can provide attractive opportunities for long-term investors willing to accept structural risks and maintain discipline. Demographic trends, consumer growth, and market development create value, but infrastructure, governance, and policy challenges require careful management. Success requires understanding demographic drivers, identifying quality opportunities, and managing structural risks effectively.`,
     date: formatDate(126),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -6821,69 +6853,69 @@ This article explores how Thai equity markets are positioned, which factors driv
 
 ### Market Structure
 
-Thai equity market structure:
+The Stock Exchange of Thailand (SET) is the primary equity market in Thailand, operating as a modern exchange with good liquidity, strong regulation, and diverse listed companies. Established in 1975, the exchange has evolved into a sophisticated market with advanced trading systems, strong corporate governance, and international recognition. The market's stability, quality, and tourism exposure make it attractive for international investors seeking Southeast Asian exposure.
 
 **Stock Exchange of Thailand:**
-- **Market structure** – SET market structure.
-- **Listings** – number of listed companies.
-- **Liquidity** – market liquidity.
-- **Indices** – market indices.
+- **Market structure** – The SET operates a main market with approximately 600-700 listed companies, including some of Thailand's largest and most successful companies. The exchange maintains strict listing requirements and strong regulatory oversight, ensuring high standards for listed companies. Trading is electronic, with modern clearing and settlement systems integrated with international infrastructure.
+- **Listings** – The exchange hosts approximately 600-700 listed companies across various sectors, with major companies in tourism, consumer, financials, energy, and industrials. The number of listings has grown significantly, reflecting market development and corporate growth. Many companies are well-established with strong market positions.
+- **Liquidity** – Market liquidity is good for large-cap stocks, with daily trading volumes averaging $1-2 billion, making it one of the more liquid markets in Southeast Asia. Liquidity is concentrated in large-cap stocks, particularly those in major indices, but mid-cap stocks also have reasonable liquidity. This liquidity supports institutional investment and provides exit options.
+- **Indices** – The SET Index is the primary market benchmark, representing the largest and most liquid stocks. The index includes approximately 200-300 stocks and represents approximately 80-90% of total market capitalization. Sector-specific indices are well-developed, providing detailed sector tracking.
 
 **Market Characteristics:**
-- **Size** – market capitalization.
-- **Sector composition** – sector composition.
-- **Foreign ownership** – foreign ownership levels.
-- **Liquidity** – trading liquidity.
+- **Size** – Total market capitalization is approximately $500-600 billion, making it one of the larger markets in Southeast Asia. The market's size reflects the presence of major companies, economic growth, and market development. Market capitalization has grown with economic development and corporate growth.
+- **Sector composition** – The market is well-diversified across sectors, with financials representing approximately 20-25%, energy 15-20%, consumer 15-20%, tourism 10-15%, and other sectors. This diversification provides exposure to multiple economic themes, though tourism remains important due to its economic significance.
+- **Foreign ownership** – Foreign ownership levels are significant, with international investors holding approximately 30-40% of free float for major stocks. Foreign participation reflects confidence in Thai companies and markets, though ownership has fluctuated with economic conditions, currency movements, and political developments. Foreign ownership provides liquidity and market depth.
+- **Liquidity** – Trading liquidity is good for large-cap stocks, supported by market size, institutional participation, and foreign investment. Liquidity is particularly strong for SET Index constituents, enabling reasonable trade sizes with minimal price impact. This liquidity supports institutional investment and provides flexibility for portfolio management.
 
 **Indices:**
-- **SET Index** – SET index.
-- **Sector indices** – sector-specific indices.
-- **Benchmarks** – benchmark indices.
+- **SET Index** – The SET Index is the primary market benchmark, including the largest and most liquid stocks. The index is market-capitalization weighted and rebalanced periodically. It serves as the main reference for market performance and is widely used by investors and fund managers.
+- **Sector indices** – Sector-specific indices are well-developed, including financials, energy, consumer, tourism, and others. These indices provide detailed sector tracking and enable sector-specific investment strategies. Sector indices are widely used for benchmarking and portfolio construction.
+- **Benchmarks** – International index providers like MSCI and FTSE include Thai stocks in their emerging market and Southeast Asian indices, providing additional benchmarking options. Thai stocks typically have meaningful weights in Southeast Asian indices, reflecting market size and quality. This inclusion supports international investment flows.
 
 ### Economic Fundamentals
 
-Thai economic fundamentals:
+Thai economic fundamentals reflect a relatively diversified economy with tourism as a major driver, combined with manufacturing, agriculture, and services sectors. The economy has shown resilience and stability, though political uncertainty and external dependence create challenges. Understanding these dynamics is crucial for evaluating investment opportunities and risks.
 
 **Tourism:**
-- **Tourism importance** – tourism as major economic driver.
-- **Recovery** – tourism recovery.
-- **Impact** – economic impact.
-- **Outlook** – tourism outlook.
+- **Tourism importance** – Tourism represents a major economic driver, contributing approximately 15-20% of GDP and supporting millions of jobs. Thailand is one of the world's most popular tourist destinations, attracting visitors from around the globe. Tourism supports hotels, restaurants, retail, transportation, and related services, making it a key economic sector.
+- **Recovery** – Tourism recovery has been strong following pandemic disruptions, with visitor numbers returning to pre-pandemic levels and continuing to grow. Recovery has been supported by pent-up demand, marketing efforts, and infrastructure improvements. Tourism recovery is driving economic growth and corporate earnings in tourism-exposed sectors.
+- **Impact** – Economic impact from tourism is significant, supporting employment, foreign exchange earnings, and corporate profitability. Tourism recovery is benefiting hotels, airlines, restaurants, retail, and related services. The sector's recovery is a key driver of economic growth and market performance.
+- **Outlook** – Tourism outlook is positive, with continued growth expected as travel normalizes and new markets develop. Long-term trends including rising Asian incomes, infrastructure improvements, and marketing efforts support tourism growth. Tourism remains a key economic driver and investment theme.
 
 **Economic Structure:**
-- **Diversified** – relatively diversified economy.
-- **Manufacturing** – manufacturing sector.
-- **Agriculture** – agricultural sector.
-- **Services** – services sector.
+- **Diversified** – Relatively diversified economy with multiple sectors including tourism, manufacturing, agriculture, and services providing economic resilience. Diversification reduces dependence on single sectors and supports stability. Economic diversification is a key strength supporting long-term growth.
+- **Manufacturing** – Manufacturing sector includes automotive, electronics, food processing, and other industries. Manufacturing benefits from competitive costs, skilled workforce, and export orientation. The sector contributes significantly to GDP and exports, providing diversification beyond tourism.
+- **Agriculture** – Agricultural sector includes rice, rubber, sugar, and other crops. Agriculture contributes to GDP, employment, and exports. The sector benefits from favorable climate, land resources, and export markets. Agricultural sector provides economic diversification and stability.
+- **Services** – Services sector is well-developed, including financial services, retail, telecommunications, and professional services. Services contribute significantly to GDP and employment, providing diversification and stability. Services sector quality supports economic development and investment attractiveness.
 
 **Challenges:**
-- **Political uncertainty** – political uncertainty.
-- **Currency** – currency volatility.
-- **Structural** – structural challenges.
-- **External** – external demand dependence.
+- **Political uncertainty** – Political uncertainty has been a persistent challenge, with periodic political instability affecting investor confidence and economic policy. Political developments can create volatility and uncertainty, impacting markets and economic activity. Political stability is important for investment attractiveness.
+- **Currency** – Currency volatility, particularly Thai baht movements, can impact foreign investors and export competitiveness. Baht strength can affect tourism competitiveness and export performance. Currency volatility requires careful management and hedging considerations.
+- **Structural** – Structural challenges including infrastructure gaps, education limitations, and productivity issues constrain growth and competitiveness. Addressing structural challenges requires sustained commitment and investment. Structural improvements are essential for long-term growth.
+- **External** – External demand dependence, particularly on tourism and exports, creates sensitivity to global economic conditions and travel patterns. External dependence can create volatility during global economic downturns or travel disruptions. Economic diversification helps reduce external dependence risks.
 
 ## Investment Opportunities
 
 ### Tourism Sector
 
-Tourism and hospitality recovery:
+The tourism and hospitality sector is a direct beneficiary of tourism recovery, as visitor numbers return to pre-pandemic levels and continue to grow. This recovery is driving revenue and earnings growth for hotels, airlines, restaurants, retail, and related services. The sector offers attractive opportunities for investors seeking exposure to Thailand's tourism recovery.
 
 **Companies:**
-- **Hotels** – hotel companies.
-- **Tourism services** – tourism service companies.
-- **Entertainment** – entertainment companies.
-- **Returns** – return potential.
+- **Hotels** – Hotel companies including major chains and resort operators are benefiting from tourism recovery, with occupancy rates and room rates improving significantly. Hotels are experiencing strong demand recovery, supporting revenue and earnings growth. Hotel companies offer direct exposure to tourism recovery.
+- **Tourism services** – Tourism service companies including tour operators, travel agencies, and transportation services are benefiting from tourism recovery. These companies provide essential services to tourists and benefit from increased visitor numbers. Tourism services offer growth opportunities as tourism recovers.
+- **Entertainment** – Entertainment companies including theme parks, shows, and attractions are benefiting from tourism recovery, with visitor numbers and spending increasing. Entertainment sector provides additional revenue streams for tourism-related businesses. Entertainment companies offer exposure to tourism recovery.
+- **Returns** – Return potential is attractive for well-positioned tourism companies, with recovery-driven revenue and earnings growth supporting returns. Tourism companies can achieve solid profitability and growth as tourism recovers. Returns are supported by strong recovery fundamentals.
 
 **Recovery:**
-- **Tourism recovery** – strong tourism recovery.
-- **Demand** – recovering demand.
-- **Earnings** – earnings recovery.
-- **Returns** – return potential.
+- **Tourism recovery** – Strong tourism recovery has been driven by pent-up demand, marketing efforts, and infrastructure improvements. Visitor numbers have returned to pre-pandemic levels and continue to grow, supporting sector performance. Recovery momentum is strong and expected to continue.
+- **Demand** – Recovering demand from both international and domestic tourists is supporting revenue growth across tourism sectors. Demand recovery is broad-based, benefiting hotels, restaurants, retail, and services. Demand fundamentals are positive and sustainable.
+- **Earnings** – Earnings recovery has been strong, with tourism-exposed companies reporting significant earnings growth as tourism recovers. Earnings recovery reflects revenue growth, operational leverage, and improved profitability. Earnings recovery supports investment cases.
+- **Returns** – Return potential is attractive, supported by recovery-driven earnings growth and reasonable valuations. Tourism companies can deliver solid returns as recovery continues. Returns are supported by strong recovery fundamentals and growth prospects.
 
 **Investment Case:**
-- **Recovery** – tourism recovery benefits.
-- **Valuation** – valuations.
-- **Returns** – return potential.
+- **Recovery** – Tourism recovery benefits are significant, with strong demand recovery supporting revenue and earnings growth. Recovery momentum is expected to continue, supporting long-term investment cases. Recovery is a key investment theme.
+- **Valuation** – Valuations can be reasonable, particularly if recovery benefits are not fully reflected in current prices. Tourism companies may trade at reasonable valuations relative to recovery prospects and profitability. Valuation opportunities exist for investors.
+- **Returns** – Return potential is attractive for well-positioned tourism companies, with recovery-driven growth supporting returns. Tourism companies can deliver solid returns as recovery continues and normalizes. Returns are supported by strong recovery fundamentals.
 
 ### Consumer Sector
 
@@ -7056,19 +7088,27 @@ Market evolution:
 
 ## Conclusion
 
-Thai equity markets offer opportunities driven by tourism recovery and sector-specific opportunities. While political uncertainty, currency volatility, and structural challenges create risks, the tourism recovery provides support for related sectors. Success requires careful sector selection, focus on recovery beneficiaries, and strong risk management.
+Thai equity markets offer compelling opportunities driven by tourism recovery and sector-specific opportunities across manufacturing, agriculture, and services. While political uncertainty, currency volatility, and structural challenges create risks, the tourism recovery provides strong support for related sectors and the broader economy. Success requires careful sector selection, focus on recovery beneficiaries, and strong risk management.
 
-For investors, Thailand requires understanding tourism dynamics, sector opportunities, and risk factors. Success requires selective sector focus, bottom-up stock selection, and strong risk management.
+The Thai market is characterized by a relatively diversified economy with tourism as a major driver, combined with manufacturing, agriculture, and services sectors providing economic resilience. Tourism recovery has been strong, supporting hotels, airlines, restaurants, retail, and related services. The economy's diversification and stability provide foundations for investment, while political uncertainty and external dependence require careful navigation.
 
-The Thai equity market will continue to evolve as tourism recovers and market development continues. Investors that successfully identify sector opportunities while managing risks will be positioned to benefit from this Southeast Asian market.
+For investors, Thailand requires understanding tourism dynamics, sector opportunities, and risk factors. Success requires selective sector focus, bottom-up stock selection, and strong risk management. The market's recovery potential is attractive, but political, currency, and structural risks require careful management.
+
+The Thai equity market will continue to evolve as tourism recovers and market development continues. Tourism recovery is expected to continue, supporting related sectors and economic growth. Market development and corporate growth will support long-term investment opportunities. Investors that successfully identify sector opportunities while managing risks will be positioned to benefit from this Southeast Asian market.
+
+**Investment Focus Areas:**
 
 Investors should focus on:
-- **Recovery themes** – exposure to tourism recovery.
-- **Sector opportunities** – sectors with strong fundamentals.
-- **Quality companies** – quality companies with strong fundamentals.
-- **Risk management** – strong risk management.
+- **Recovery themes** – Exposure to tourism recovery, including hotels, airlines, restaurants, retail, and related services. These sectors are direct beneficiaries of tourism recovery and offer attractive growth opportunities. Recovery themes are a key investment focus.
+- **Sector opportunities** – Sectors with strong fundamentals, growth potential, and recovery benefits, including tourism, consumer, manufacturing, and agriculture. These sectors offer different risk-return profiles and opportunities. Sector selection is crucial for success.
+- **Quality companies** – Quality companies with strong fundamentals, competitive advantages, and operational excellence. These companies are better positioned to navigate challenges and deliver returns. Quality is essential for success in Thailand's evolving market.
+- **Risk management** – Strong risk management of political, currency, tourism dependence, and external risks. Careful position sizing, diversification, and monitoring are essential. Risk management is critical for navigating Thailand's challenges while capturing opportunities.
 
-Thailand offers opportunities but requires careful navigation of risks. Investors that successfully do this will find attractive opportunities in Southeast Asia.`,
+**Market Positioning:**
+
+Thailand offers opportunities but requires careful navigation of risks. The market provides exposure to a recovering tourism economy with sector opportunities across multiple sectors, but political uncertainty, currency volatility, and structural challenges require careful management. Investors that successfully navigate this will find attractive opportunities in Southeast Asia.
+
+Thai equity markets can provide attractive opportunities for selective investors willing to accept political, currency, and structural risks. Tourism recovery, sector opportunities, and market development create value, but challenges require careful management. Success requires understanding tourism dynamics, sector opportunities, and selective investment approach.`,
     date: formatDate(127),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -7108,70 +7148,70 @@ This article explores how Philippine equity markets are positioned, which factor
 
 ### Market Structure
 
-Philippine equity market structure:
+The Philippine Stock Exchange (PSE) is the primary equity market in the Philippines, operating as a modern exchange with growing sophistication and international recognition. Established in 1927 and reorganized in 1992, the exchange has evolved significantly, with improved regulation, infrastructure, and market development. The market's growth potential, consumer story, and remittance economy make it attractive for international investors seeking Southeast Asian exposure.
 
 **Philippine Stock Exchange:**
-- **Market structure** – PSE market structure.
-- **Listings** – number of listed companies.
-- **Liquidity** – market liquidity.
-- **Indices** – market indices.
+- **Market structure** – The PSE operates a main market with approximately 270-280 listed companies, including some of the Philippines' largest and most successful companies. The exchange maintains listing requirements and regulatory oversight, ensuring standards for listed companies. Trading is electronic, with modern clearing and settlement systems, though market infrastructure continues to develop.
+- **Listings** – The exchange hosts approximately 270-280 listed companies across various sectors, with major companies in consumer, financials, real estate, telecommunications, and industrials. The number of listings has grown, reflecting market development and corporate growth. Many companies are well-established with strong market positions.
+- **Liquidity** – Market liquidity is moderate for large-cap stocks, with daily trading volumes averaging $200-400 million, making it one of the smaller but growing markets in Southeast Asia. Liquidity is concentrated in large-cap stocks, particularly those in major indices, but mid-cap stocks can have limited liquidity. This liquidity supports institutional investment but requires careful execution.
+- **Indices** – The PSEi (Philippine Stock Exchange Index) is the primary market benchmark, representing the largest and most liquid stocks. The index includes approximately 30 stocks and represents approximately 70-80% of total market capitalization. Sector-specific indices are available, providing sector tracking capabilities.
 
 **Market Characteristics:**
-- **Size** – market capitalization.
-- **Sector composition** – sector composition.
-- **Foreign ownership** – foreign ownership levels.
-- **Liquidity** – trading liquidity.
+- **Size** – Total market capitalization is approximately $250-300 billion, making it one of the smaller markets in Southeast Asia relative to economic size. The market's size reflects limited listings, low valuations, and market development stage. Market capitalization has grown with economic development and corporate growth.
+- **Sector composition** – The market is well-diversified across sectors, with consumer representing approximately 20-25%, financials 20-25%, real estate 15-20%, telecommunications 10-15%, and other sectors. This diversification provides exposure to multiple economic themes, with consumer and financials reflecting remittance-driven growth.
+- **Foreign ownership** – Foreign ownership levels are moderate, with international investors holding approximately 20-30% of free float for major stocks. Foreign participation reflects confidence in Philippine companies and markets, though ownership has fluctuated with economic conditions, currency movements, and policy developments. Foreign ownership provides liquidity and market depth.
+- **Liquidity** – Trading liquidity is moderate for large-cap stocks, supported by market size, institutional participation, and foreign investment. Liquidity is particularly strong for PSEi constituents, enabling reasonable trade sizes. However, liquidity for smaller stocks can be limited, requiring careful position sizing.
 
 **Indices:**
-- **PSEi Index** – PSEi index.
-- **Sector indices** – sector-specific indices.
-- **Benchmarks** – benchmark indices.
+- **PSEi Index** – The PSEi index is the primary market benchmark, including the largest and most liquid stocks. The index is market-capitalization weighted and rebalanced periodically. It serves as the main reference for market performance and is widely used by investors and fund managers.
+- **Sector indices** – Sector-specific indices are available, including consumer, financials, real estate, and others. These indices provide sector tracking capabilities and enable sector-specific investment strategies. Sector indices are used for benchmarking and portfolio construction.
+- **Benchmarks** – International index providers like MSCI and FTSE include Philippine stocks in their emerging market and Southeast Asian indices, providing additional benchmarking options. Philippine stocks typically have smaller weights in Southeast Asian indices due to market size, but inclusion supports international investment flows.
 
 ### Economic Fundamentals
 
-Philippine economic fundamentals:
+Philippine economic fundamentals reflect a unique remittance-driven economy combined with favorable demographics and consumer growth. The economy benefits significantly from remittances from overseas Filipino workers, which drive consumer spending and support economic growth. Understanding these dynamics is crucial for evaluating investment opportunities and long-term growth potential.
 
 **Remittances:**
-- **Remittance economy** – remittances as economic driver.
-- **Overseas workers** – overseas Filipino workers.
-- **Consumer spending** – remittance-driven consumer spending.
-- **Stability** – remittance stability.
+- **Remittance economy** – Remittances represent a major economic driver, contributing approximately 10% of GDP and supporting millions of families. The Philippines is one of the world's largest recipients of remittances, with over 10 million overseas Filipino workers sending money home. Remittances provide stable foreign exchange earnings and support consumer spending.
+- **Overseas workers** – Overseas Filipino workers (OFWs) are employed across the globe, with major destinations including Middle East, United States, Europe, and Asia. OFWs send remittances regularly, providing stable income streams for families. The large number of OFWs and their remittance contributions are key economic strengths.
+- **Consumer spending** – Remittance-driven consumer spending supports retail, food and beverage, consumer goods, and services sectors. Remittances provide disposable income for families, driving consumption and economic activity. Consumer spending growth is closely linked to remittance flows, making it relatively stable and resilient.
+- **Stability** – Remittance stability has been demonstrated through various economic cycles, with remittances showing resilience even during global economic downturns. Remittances provide a stable source of foreign exchange and consumer spending, supporting economic stability. Remittance stability is a key economic strength.
 
 **Demographics:**
-- **Large population** – large population.
-- **Young population** – young population.
-- **Middle class** – growing middle class.
-- **Urbanization** – urbanization trends.
+- **Large population** – Large population exceeding 110 million makes the Philippines one of the most populous countries globally and provides a significant domestic market. Population size supports consumer markets, manufacturing, and services, creating opportunities for domestic and international companies. Large population is a key economic strength.
+- **Young population** – Young population with median age of approximately 25 years provides a significant demographic dividend. The young population supports consumption growth, labor supply, and economic dynamism. Youth demographics are a key structural advantage supporting long-term growth and consumer sector opportunities.
+- **Middle class** – Growing middle class with rising incomes and purchasing power supports consumption growth and market expansion. The middle class is expanding rapidly, creating demand for consumer goods, services, and financial products. Middle class growth is a key driver of consumer sector opportunities and economic development.
+- **Urbanization** – Urbanization trends are accelerating, with urban population growing and creating demand for infrastructure, housing, and services. Urbanization drives productivity, consumption, and economic growth. Major cities like Manila, Cebu, and Davao are experiencing rapid development, creating opportunities in real estate, infrastructure, and consumer sectors.
 
 **Growth:**
-- **GDP growth** – solid GDP growth.
-- **Resilience** – economic resilience.
-- **Drivers** – growth drivers.
-- **Outlook** – growth outlook.
+- **GDP growth** – Solid GDP growth averaging 5-6% annually over the past decade, with potential for 6-7% growth as infrastructure develops and reforms progress. Growth has been resilient, with the Philippines maintaining solid growth even during regional and global economic challenges. GDP growth supports corporate earnings and market performance.
+- **Resilience** – Economic resilience has been demonstrated through various challenges, with the economy maintaining growth despite external headwinds, natural disasters, and policy changes. Resilience reflects domestic demand strength, remittance stability, and demographic advantages. Resilience supports long-term investment cases.
+- **Drivers** – Growth drivers include consumption growth, remittance flows, investment expansion, infrastructure development, and export growth. Multiple growth drivers provide diversification and sustainability. Remittances, demographics, and consumption are key structural drivers supporting long-term growth.
+- **Outlook** – Growth outlook is positive, with GDP growth expected to average 5-6% annually over the medium term, supported by remittances, demographic trends, infrastructure investment, and economic development. Growth prospects are attractive for long-term investors seeking exposure to Southeast Asian growth.
 
 ## Investment Opportunities
 
 ### Consumer Sector
 
-Philippine consumer market:
+The Philippine consumer market represents one of the most attractive consumer growth stories in Southeast Asia, driven by remittances, favorable demographics, growing middle class, and urbanization trends. With a population exceeding 110 million and strong remittance flows, the Philippines offers substantial opportunities for consumer-oriented businesses. The market has shown strong growth and resilience, even during economic uncertainty.
 
 **Market:**
-- **Large market** – large consumer market.
-- **Growth** – strong consumer spending growth.
-- **Remittances** – remittance-driven spending.
-- **Middle class** – growing middle class.
+- **Large market** – Large consumer market with over 110 million people provides significant scale and growth potential. Consumer spending has grown consistently, averaging 5-6% annual growth over the past decade. The market benefits from large population, remittance-driven spending, rising disposable incomes, and increasing consumer confidence. Market size and growth potential are key strengths.
+- **Growth** – Strong consumer spending growth has been robust, supported by remittance flows, demographic trends, rising incomes, urbanization, and middle class expansion. Remittances provide stable income streams for families, driving consumption and economic activity. Consumer confidence has remained relatively high, supporting spending even during economic uncertainty. Growth prospects are positive.
+- **Remittances** – Remittance-driven spending is a key characteristic, with remittances providing disposable income for millions of families. Remittance flows are relatively stable and resilient, supporting consistent consumer spending. Remittance-driven spending creates stable demand patterns and supports consumer sector growth.
+- **Middle class** – Growing middle class with rising incomes and purchasing power supports consumption growth and market expansion. The middle class is expanding rapidly, creating demand for consumer goods, services, and financial products. Middle class growth is a key driver of consumer sector opportunities and economic development.
 
 **Companies:**
-- **Retail** – retail companies.
-- **Food and beverage** – food and beverage.
-- **Consumer goods** – consumer goods.
-- **E-commerce** – e-commerce growth.
+- **Retail** – Retail sector includes major players in modern retail formats, traditional markets, and e-commerce. Modern retail formats have gained market share, with shopping centers and hypermarkets becoming more common. E-commerce has grown rapidly, though online penetration remains below developed market levels. Retail sector offers growth opportunities.
+- **Food and beverage** – Food and beverage sector includes companies with strong domestic brands, distribution networks, and consumer loyalty. The sector benefits from population size, remittance-driven spending, rising incomes, and urbanization. Premiumization trends support growth in higher-margin products. Food and beverage sector offers stable growth.
+- **Consumer goods** – Consumer goods companies have built strong domestic brands and expanded regionally. These companies benefit from understanding local preferences, distribution networks, and competitive costs. Brand strength and market positions support profitability and returns. Consumer goods sector offers growth opportunities.
+- **E-commerce** – E-commerce growth has been rapid, with online retail sales increasing 20-30% annually. Major players include local platforms and international companies. The COVID-19 pandemic accelerated e-commerce adoption, and growth continues as infrastructure and logistics improve. E-commerce offers significant growth potential.
 
 **Investment Case:**
-- **Remittances** – remittance support.
-- **Growth** – strong consumer growth.
-- **Demographics** – favorable demographics.
-- **Returns** – return potential.
+- **Remittances** – Remittance support provides stable income streams for families, driving consumption and supporting consumer sector growth. Remittances are relatively stable and resilient, creating predictable demand patterns. Remittance support is a key investment theme and competitive advantage.
+- **Growth** – Strong consumer growth is supported by remittances, demographic trends, rising incomes, urbanization, and middle class expansion. Consumer spending growth is expected to continue, supporting revenue and earnings growth for consumer companies. Growth prospects are attractive for long-term investors.
+- **Demographics** – Favorable demographics including large population, young age structure, and growing middle class support long-term consumer growth. Demographic trends are structural and sustainable, providing foundations for investment cases. Demographics are a key investment theme.
+- **Returns** – Return potential is attractive for well-positioned consumer companies, with growth, margins, and market development supporting returns. Consumer companies can achieve solid profitability and growth as remittances, demographics, and income trends play out. Returns are supported by structural growth drivers.
 
 ### Financial Sector
 
@@ -7350,19 +7390,27 @@ Market evolution:
 
 ## Conclusion
 
-Philippine equity markets offer exposure to an attractive consumer growth story driven by remittances, demographics, and urbanization. While infrastructure gaps, governance issues, and remittance dependence create risks, the consumer growth story remains compelling. Success requires careful stock selection, focus on quality companies with consumer exposure, and strong risk management.
+Philippine equity markets offer exposure to an attractive consumer growth story driven by remittances, favorable demographics, and urbanization trends. The unique remittance-driven economy, combined with a large and young population, growing middle class, and improving infrastructure, creates compelling investment opportunities, particularly in consumer and financial sectors. While infrastructure gaps, governance issues, and remittance dependence create risks, the consumer growth story remains compelling, supported by structural drivers that are sustainable and long-term. Success requires careful stock selection, focus on quality companies with consumer exposure, and strong risk management.
 
-For investors, the Philippines requires understanding remittance dynamics, consumer growth drivers, and risk factors. Success requires selective approach, bottom-up stock selection, and strong risk management.
+The Philippine market is characterized by a compelling consumer growth story with multiple tailwinds supporting long-term investment cases. Remittances provide stable income streams for millions of families, driving consumption and supporting economic growth. Large population, young demographics, growing middle class, and urbanization provide foundations for sustained consumer growth. The economy's remittance-driven nature creates unique opportunities and considerations for investors.
 
-The Philippine equity market will continue to evolve as consumer growth continues and infrastructure develops. Investors that successfully identify quality opportunities while managing risks will be positioned to benefit from this consumer growth story.
+For investors, the Philippines requires understanding remittance dynamics, consumer growth drivers, and risk factors. Success requires selective approach, bottom-up stock selection, and strong risk management. The market's consumer potential is attractive, but infrastructure, governance, and remittance dependence risks require careful management.
+
+The Philippine equity market will continue to evolve as consumer growth continues and infrastructure develops. Remittances, demographics, and urbanization will support long-term consumer growth. Infrastructure development will improve economic efficiency and competitiveness. Companies will continue to adapt, with quality companies delivering sustainable growth. Investors that successfully identify quality opportunities while managing risks will be positioned to benefit from this consumer growth story.
+
+**Investment Focus Areas:**
 
 Investors should focus on:
-- **Consumer themes** – exposure to consumer growth themes.
-- **Quality companies** – quality companies with consumer exposure.
-- **Risk management** – strong risk management of structural risks.
-- **Long-term** – long-term investment horizon.
+- **Consumer themes** – Exposure to consumer growth themes including remittance-driven spending, demographics, urbanization, and middle class expansion. These themes provide sustainable growth drivers and long-term opportunities. Consumer themes are structural and support investment cases.
+- **Quality companies** – Quality companies with consumer exposure, strong fundamentals, and competitive advantages. These companies are better positioned to navigate challenges and deliver returns. Quality is essential for success in the Philippines' evolving market.
+- **Risk management** – Strong risk management of infrastructure, governance, remittance dependence, currency, and fiscal risks. Careful position sizing, diversification, and monitoring are essential. Risk management is critical for navigating the Philippines' challenges while capturing opportunities.
+- **Long-term** – Long-term investment horizon, as consumer growth and infrastructure development play out over years and decades. Short-term volatility can occur, but long-term fundamentals support returns. Patience and discipline are important for capturing value.
 
-The Philippines offers a compelling consumer growth story but requires discipline and selective approach. Investors that successfully navigate this will be positioned to benefit from this remittance-driven consumer economy.`,
+**Market Positioning:**
+
+The Philippines offers a compelling consumer growth story but requires discipline and selective approach. The market provides exposure to a remittance-driven consumer economy with demographic tailwinds and growth opportunities, but infrastructure gaps, governance concerns, and remittance dependence require careful management. Investors that successfully navigate this will be positioned to benefit from this remittance-driven consumer economy.
+
+Philippine equity markets can provide attractive opportunities for long-term investors willing to accept structural risks and maintain discipline. Remittance-driven consumer growth, demographic trends, and market development create value, but infrastructure, governance, and remittance dependence challenges require careful management. Success requires understanding remittance dynamics, consumer growth drivers, and selective investment approach.`,
     date: formatDate(128),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),

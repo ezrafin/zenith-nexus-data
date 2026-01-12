@@ -148,7 +148,20 @@
     "pleaseSignInToBookmarkDiscussions": "Bitte melden Sie sich an, um Diskussionen zu speichern",
     "pleaseSignInToFollowDiscussions": "Bitte melden Sie sich an, um Diskussionen zu folgen",
     "followingDiscussion": "Diskussion folgen",
-    "unfollowedDiscussion": "Diskussion entfolgt"
+    "unfollowedDiscussion": "Diskussion entfolgt",
+    "failedToLoadPendingDiscussions": "Fehler beim Laden ausstehender Diskussionen",
+    "failedToLoadPendingReplies": "Fehler beim Laden ausstehender Antworten",
+    "failedToLoadPendingEvaluations": "Fehler beim Laden ausstehender Bewertungen",
+    "discussionApproved": "Diskussion genehmigt",
+    "discussionRejectedDeleted": "Diskussion abgelehnt und gelöscht",
+    "replyApproved": "Antwort genehmigt",
+    "replyRejectedDeleted": "Antwort abgelehnt und gelöscht",
+    "evaluationApproved": "Bewertung genehmigt",
+    "evaluationRejectedDeleted": "Bewertung abgelehnt und gelöscht",
+    "failedToUpdateDiscussion": "Fehler beim Aktualisieren der Diskussion",
+    "failedToUpdateReply": "Fehler beim Aktualisieren der Antwort",
+    "failedToUpdateEvaluation": "Fehler beim Aktualisieren der Bewertung",
+    "reviewSubmittedForModeration": "Bewertung zur Moderation eingereicht"
   },
   "errors": {
     "generic": "Ein Fehler ist aufgetreten",
@@ -604,7 +617,14 @@
     "forum": "Forum",
     "analytics": "Analysen",
     "tickers": "Ticker",
-    "authors": "Autoren"
+    "authors": "Autoren",
+    "openAriaLabel": "Globale Suche öffnen (Cmd+K oder Strg+K)",
+    "closeAriaLabel": "Suche schließen",
+    "inputAriaLabel": "Suchfeld",
+    "dialogTitle": "Globale Suche",
+    "dialogDescription": "Durchsuchen Sie Unternehmen, Nachrichtenartikel, Forumsdiskussionen, Marktticker und Autoren. Verwenden Sie Filter, um die Ergebnisse einzugrenzen.",
+    "dialogAriaLabel": "Dialog für globale Suche",
+    "clearAriaLabel": "Suche löschen"
   },
   "footer": {
     "tagline": "Ihr Wächter an den globalen Märkten. Professionelle Analysen und Finanzdaten in Echtzeit.",

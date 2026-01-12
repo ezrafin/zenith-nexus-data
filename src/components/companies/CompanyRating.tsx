@@ -154,7 +154,7 @@ export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
           });
 
         if (error) throw error;
-        toast.success(hasComment ? 'Review submitted for moderation' : t('toast.thankYouForEvaluation', { ns: 'ui' }));
+        toast.success(hasComment ? t('toast.reviewSubmittedForModeration', { ns: 'ui' }) : t('toast.thankYouForEvaluation', { ns: 'ui' }));
       }
 
       setShowCommentForm(false);

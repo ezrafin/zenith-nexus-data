@@ -156,7 +156,7 @@ export function ForumFilters({
               )}
             </Button>
           </SheetTrigger>
-          <SheetContent side="bottom" className="h-[80vh]">
+          <SheetContent side="bottom" className="h-[80vh]" closeAriaLabel={t('buttons.close', 'ui')}>
             <SheetHeader>
               <SheetTitle>{t('filters')}</SheetTitle>
             </SheetHeader>
@@ -177,7 +177,7 @@ export function ForumFilters({
               )}
             </Button>
           </SheetTrigger>
-          <SheetContent side="bottom" className="h-[80vh]">
+          <SheetContent side="bottom" className="h-[80vh]" closeAriaLabel={t('buttons.close', 'ui')}>
             <SheetHeader>
               <SheetTitle>{t('filters')}</SheetTitle>
             </SheetHeader>

@@ -84,7 +84,7 @@ export function ReportButton({ contentType, contentId, className }: ReportButton
           {t('actions.report')}
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent closeAriaLabel={t('buttons.close')}>
         <DialogHeader>
           <DialogTitle>{t('report.title')}</DialogTitle>
           <DialogDescription>

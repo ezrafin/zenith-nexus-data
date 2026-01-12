@@ -42,11 +42,11 @@ export function ActivityFeed() {
 
       const activitiesList: ActivityItem[] = [];
 
-      // Get recent discussions from followed users
+      // Get recent discussions from followed users (only approved)
       let postsQuery = supabase
         .from('forum_discussions')
         .select('id, title, created_at, author_name, user_id')
-        .eq('is_featured', true)
+        .eq('status', 'approved')
         .order('created_at', { ascending: false })
         .limit(shouldFilterByFollowing ? 20 : 10);
 

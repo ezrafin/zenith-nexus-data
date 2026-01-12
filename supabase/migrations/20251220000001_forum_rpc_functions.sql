@@ -45,6 +45,7 @@ BEGIN
   WHERE 
     (p_category IS NULL OR d.category = p_category)
     AND (p_cursor IS NULL OR d.created_at < p_cursor)
+    AND d.status = 'approved' -- Only show approved discussions
   ORDER BY 
     d.is_pinned DESC,
     d.created_at DESC
@@ -107,6 +108,7 @@ BEGIN
   FROM public.forum_discussions d
   WHERE 
     (p_category IS NULL OR d.category = p_category)
+    AND d.status = 'approved' -- Only show approved discussions
     AND d.created_at > NOW() - INTERVAL '90 days' -- Only consider recent topics
   ORDER BY 
     popularity_score DESC,

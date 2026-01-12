@@ -70,7 +70,7 @@ export async function fetchForumCategories(): Promise<ForumCategory[]> {
 export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[]> {
   try {
     // Join with profiles to get real avatar_url and display_name
-    // Only show featured (approved) discussions
+    // Only show approved discussions (status = 'approved')
     let query = supabase
       .from('forum_discussions')
       .select(`
@@ -81,7 +81,7 @@ export async function fetchForumTopics(categoryId?: string): Promise<ForumTopic[
           reputation_score
         )
       `)
-      .eq('is_featured', true)
+      .eq('status', 'approved')
       .order('is_pinned', { ascending: false })
       .order('created_at', { ascending: false });
     
@@ -221,7 +221,7 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
     const symbols = [...new Set(itemsData.map(i => i.symbol))];
     
     // Get discussions that mention these symbols in tags, with profile join
-    // Only show featured (approved) discussions
+    // Only show approved discussions (status = 'approved')
     const { data, error } = await supabase
       .from('forum_discussions')
       .select(`
@@ -232,7 +232,7 @@ export async function fetchDiscussionsForWatchlist(userId: string): Promise<Foru
           reputation_score
         )
       `)
-      .eq('is_featured', true)
+      .eq('status', 'approved')
       .overlaps('tags', symbols)
       .order('created_at', { ascending: false })
       .limit(20);

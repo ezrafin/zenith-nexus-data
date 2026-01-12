@@ -355,7 +355,7 @@ export function GlobalSearch() {
       <button
         onClick={() => setOpen(true)}
         className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground bg-secondary/50 border border-border/50 rounded-lg hover:bg-secondary hover:border-border transition-colors w-full lg:w-auto justify-center lg:justify-start min-h-[44px] touch-manipulation"
-        aria-label="Open global search (Cmd+K or Ctrl+K)"
+        aria-label={t('globalSearch.openAriaLabel', { defaultValue: 'Open global search (Cmd+K or Ctrl+K)' })}
         aria-haspopup="dialog"
       >
         <Search className="h-4 w-4" />
@@ -366,7 +366,7 @@ export function GlobalSearch() {
       </button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent 
+        <DialogContent closeAriaLabel={t('globalSearch.closeAriaLabel')} 
           className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[90vh] sm:max-h-[80vh] flex flex-col relative [&>button]:hidden w-[calc(100vw-2rem)] sm:w-full"
           style={{
             position: 'fixed',
@@ -374,20 +374,20 @@ export function GlobalSearch() {
             left: '50%',
             transform: 'translate(-50%, -50%)',
           }}
-          aria-label="Global search dialog"
+          aria-label={t('globalSearch.dialogAriaLabel', { defaultValue: 'Global search dialog' })}
           aria-describedby="search-description"
         >
           {/* Добавляем DialogTitle и DialogDescription для доступности */}
-          <DialogTitle className="sr-only">Global Search</DialogTitle>
+          <DialogTitle className="sr-only">{t('globalSearch.dialogTitle', { defaultValue: 'Global Search' })}</DialogTitle>
           <DialogDescription className="sr-only" id="search-description">
-            Search across companies, news articles, forum discussions, market tickers, and authors. Use filters to narrow results.
+            {t('globalSearch.dialogDescription', { defaultValue: 'Search across companies, news articles, forum discussions, market tickers, and authors. Use filters to narrow results.' })}
           </DialogDescription>
 
           {/* Кастомная кнопка закрытия с правильным позиционированием */}
           <button
             onClick={() => setOpen(false)}
             className="absolute right-3 top-3 z-50 flex items-center justify-center rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none h-8 w-8"
-            aria-label="Close search"
+            aria-label={t('globalSearch.closeAriaLabel', { defaultValue: 'Close search' })}
           >
             <X className="h-4 w-4" />
           </button>
@@ -403,7 +403,7 @@ export function GlobalSearch() {
                 placeholder={t('globalSearch.placeholder')}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                aria-label="Search input"
+                aria-label={t('globalSearch.inputAriaLabel', { defaultValue: 'Search input' })}
                 aria-describedby="search-description"
                 autoFocus
               />
@@ -411,7 +411,7 @@ export function GlobalSearch() {
                 <button 
                   onClick={() => setQuery('')} 
                   className="p-1 hover:bg-secondary rounded min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation"
-                  aria-label="Clear search"
+                  aria-label={t('globalSearch.clearAriaLabel', { defaultValue: 'Clear search' })}
                 >
                   <X className="h-4 w-4 text-muted-foreground" />
                 </button>

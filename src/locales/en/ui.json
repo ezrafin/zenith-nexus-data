@@ -148,7 +148,20 @@
     "removedFromBookmarks": "Removed from bookmarks",
     "pleaseSignInToFollowDiscussions": "Please sign in to follow discussions",
     "followingDiscussion": "Following discussion",
-    "unfollowedDiscussion": "Unfollowed discussion"
+    "unfollowedDiscussion": "Unfollowed discussion",
+    "failedToLoadPendingDiscussions": "Failed to load pending discussions",
+    "failedToLoadPendingReplies": "Failed to load pending replies",
+    "failedToLoadPendingEvaluations": "Failed to load pending evaluations",
+    "discussionApproved": "Discussion approved",
+    "discussionRejectedDeleted": "Discussion rejected and deleted",
+    "replyApproved": "Reply approved",
+    "replyRejectedDeleted": "Reply rejected and deleted",
+    "evaluationApproved": "Evaluation approved",
+    "evaluationRejectedDeleted": "Evaluation rejected and deleted",
+    "failedToUpdateDiscussion": "Failed to update discussion",
+    "failedToUpdateReply": "Failed to update reply",
+    "failedToUpdateEvaluation": "Failed to update evaluation",
+    "reviewSubmittedForModeration": "Review submitted for moderation"
   },
   "errors": {
     "generic": "An error occurred",
@@ -657,7 +670,14 @@
     "forum": "Forum",
     "analytics": "Analytics",
     "tickers": "Tickers",
-    "authors": "Authors"
+    "authors": "Authors",
+    "openAriaLabel": "Open global search (Cmd+K or Ctrl+K)",
+    "closeAriaLabel": "Close search",
+    "inputAriaLabel": "Search input",
+    "dialogTitle": "Global Search",
+    "dialogDescription": "Search across companies, news articles, forum discussions, market tickers, and authors. Use filters to narrow results.",
+    "dialogAriaLabel": "Global search dialog",
+    "clearAriaLabel": "Clear search"
   },
   "footer": {
     "tagline": "Your Guardian in Global Markets. Professional analytics and real-time financial data.",

@@ -123,18 +123,18 @@ export default function ModerationPage() {
   const loadPendingDiscussions = async () => {
     setLoadingDiscussions(true);
     try {
-      // Load discussions that are not featured (pending moderation)
+      // Load discussions that are pending moderation (status = 'pending')
       const { data, error } = await supabase
         .from('forum_discussions')
         .select('*')
-        .eq('is_featured', false)
+        .eq('status', 'pending')
         .order('created_at', { ascending: false });
 
       if (error) throw error;
       setPendingDiscussions((data || []) as unknown as PendingDiscussion[]);
     } catch (error) {
       console.error('Error loading pending discussions:', error);
-      toast.error('Failed to load pending discussions');
+      toast.error(t('toast.failedToLoadPendingDiscussions'));
     } finally {
       setLoadingDiscussions(false);
     }
@@ -170,7 +170,7 @@ export default function ModerationPage() {
       setPendingReplies(repliesWithTitles as PendingReply[]);
     } catch (error) {
       console.error('Error loading pending replies:', error);
-      toast.error('Failed to load pending replies');
+      toast.error(t('toast.failedToLoadPendingReplies'));
     } finally {
       setLoadingReplies(false);
     }
@@ -206,7 +206,7 @@ export default function ModerationPage() {
       setPendingEvaluations(evaluationsWithNames as PendingEvaluation[]);
     } catch (error) {
       console.error('Error loading pending evaluations:', error);
-      toast.error('Failed to load pending evaluations');
+      toast.error(t('toast.failedToLoadPendingEvaluations'));
     } finally {
       setLoadingEvaluations(false);
     }
@@ -215,13 +215,20 @@ export default function ModerationPage() {
   const handleDiscussionModeration = async (discussionId: string, action: 'approve' | 'reject') => {
     try {
       if (action === 'approve') {
-        // Mark as featured (approved)
+        // Mark as approved: update both status and is_featured
         const { error } = await supabase
           .from('forum_discussions')
-          .update({ is_featured: true })
+          .update({ 
+            status: 'approved',
+            is_featured: true 
+          })
           .eq('id', discussionId);
         if (error) throw error;
-        toast.success('Discussion approved');
+        
+        // Optimistically remove from pending list
+        setPendingDiscussions(prev => prev.filter(d => d.id !== discussionId));
+        
+        toast.success(t('toast.discussionApproved'));
       } else {
         // Delete rejected discussion
         const { error } = await supabase
@@ -229,11 +236,19 @@ export default function ModerationPage() {
           .delete()
           .eq('id', discussionId);
         if (error) throw error;
-        toast.success('Discussion rejected and deleted');
+        
+        // Optimistically remove from pending list
+        setPendingDiscussions(prev => prev.filter(d => d.id !== discussionId));
+        
+        toast.success(t('toast.discussionRejectedDeleted'));
       }
+      
+      // Reload to ensure consistency (but UI already updated optimistically)
       loadPendingDiscussions();
     } catch (error: any) {
-      toast.error(error.message || 'Failed to update discussion');
+      toast.error(error.message || t('toast.failedToUpdateDiscussion'));
+      // Reload on error to restore correct state
+      loadPendingDiscussions();
     }
   };
 
@@ -246,7 +261,11 @@ export default function ModerationPage() {
           .update({ is_approved: true })
           .eq('id', replyId);
         if (error) throw error;
-        toast.success('Reply approved');
+        
+        // Optimistically remove from pending list
+        setPendingReplies(prev => prev.filter(r => r.id !== replyId));
+        
+        toast.success(t('toast.replyApproved'));
       } else {
         // Delete rejected reply
         const { error } = await supabase
@@ -254,11 +273,19 @@ export default function ModerationPage() {
           .delete()
           .eq('id', replyId);
         if (error) throw error;
-        toast.success('Reply rejected and deleted');
+        
+        // Optimistically remove from pending list
+        setPendingReplies(prev => prev.filter(r => r.id !== replyId));
+        
+        toast.success(t('toast.replyRejectedDeleted'));
       }
+      
+      // Reload to ensure consistency (but UI already updated optimistically)
       loadPendingReplies();
     } catch (error: any) {
-      toast.error(error.message || 'Failed to update reply');
+      toast.error(error.message || t('toast.failedToUpdateReply'));
+      // Reload on error to restore correct state
+      loadPendingReplies();
     }
   };
 
@@ -271,7 +298,11 @@ export default function ModerationPage() {
           .update({ is_approved: true })
           .eq('id', evaluationId);
         if (error) throw error;
-        toast.success('Evaluation approved');
+        
+        // Optimistically remove from pending list
+        setPendingEvaluations(prev => prev.filter(e => e.id !== evaluationId));
+        
+        toast.success(t('toast.evaluationApproved'));
       } else {
         // Delete rejected evaluation
         const { error } = await supabase
@@ -279,11 +310,19 @@ export default function ModerationPage() {
           .delete()
           .eq('id', evaluationId);
         if (error) throw error;
-        toast.success('Evaluation rejected and deleted');
+        
+        // Optimistically remove from pending list
+        setPendingEvaluations(prev => prev.filter(e => e.id !== evaluationId));
+        
+        toast.success(t('toast.evaluationRejectedDeleted'));
       }
+      
+      // Reload to ensure consistency (but UI already updated optimistically)
       loadPendingEvaluations();
     } catch (error: any) {
-      toast.error(error.message || 'Failed to update evaluation');
+      toast.error(error.message || t('toast.failedToUpdateEvaluation'));
+      // Reload on error to restore correct state
+      loadPendingEvaluations();
     }
   };
 
