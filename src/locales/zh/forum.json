@@ -202,5 +202,12 @@
     "new": "新",
     "hot": "热门",
     "trending": "趋势"
+  },
+  "moderation": {
+    "pendingTitle": "讨论已提交审核",
+    "pendingMessage": "您的讨论已提交，正在等待审核。一旦管理员批准，它将出现在论坛上。",
+    "discussionTitle": "您的讨论：",
+    "backToForum": "返回论坛",
+    "createAnother": "创建另一个讨论"
   }
 }

@@ -1680,15 +1680,18 @@ For risk‑aware investors, understanding protocol mechanics is as important as 
 
 ### Funding Rates as a Sentiment Indicator
 
-Funding rates on on-chain perps reflect:
+Funding rates on on-chain perps reflect several key market dynamics:
 
-- The balance of long vs. short demand;
-- The cost of leverage for directional trades;
-- Market expectations around near‑term price moves.
+- **The balance of long vs. short demand** – When more traders want long exposure than short exposure, funding rates become positive as longs pay shorts to maintain the balance. Conversely, when short demand exceeds long demand, funding rates become negative as shorts pay longs.
+- **The cost of leverage for directional trades** – Funding rates directly impact the cost of maintaining leveraged positions. High positive funding rates make it expensive to hold long positions, while high negative funding rates make it expensive to hold short positions.
+- **Market expectations around near‑term price moves** – Funding rates can reflect market sentiment about short-term price direction. Extremely high funding rates may indicate excessive bullishness or bearishness that could reverse.
 
-Persistently positive funding implies:
+Persistently positive funding implies several market conditions:
 
-- Longs pay to hold exposure;
+- **Longs pay to hold exposure** – Traders holding long positions must pay funding fees to shorts, making it costly to maintain bullish positions over time. This can discourage excessive long positioning and help balance the market.
+- **Bullish sentiment** – Positive funding often indicates strong bullish sentiment and high demand for long exposure. However, extremely high funding rates can signal over-optimism that may be unsustainable.
+- **Potential for mean reversion** – When funding rates reach extreme levels, they can create opportunities for contrarian traders. High positive funding may indicate that the market is overextended to the upside, potentially creating short opportunities.
+- **Carry costs** – For long-term holders, persistent positive funding creates ongoing costs that reduce returns. This is particularly important for investors holding positions for extended periods.
 - Shorting can be profitable for basis traders if risk is controlled.
 
 Conversely, negative funding indicates:
@@ -1733,19 +1736,36 @@ Risk-conscious users should:
 
 ### Collateral, Liquidations, and Systemic Stability
 
+On-chain derivatives introduce unique considerations for collateral management and liquidations:
+
+**Collateral Requirements:**
+- **Over-collateralization** – Most on-chain derivatives require over-collateralization to protect against price volatility. This means traders must post more collateral than the value of their position, reducing capital efficiency but improving safety.
+- **Multi-asset collateral** – Many protocols accept multiple types of collateral, allowing traders to use various assets. This flexibility can improve capital efficiency but introduces complexity in risk management.
+- **Collateral composition** – The composition of collateral pools can impact protocol stability. Diversified collateral pools may be more stable than concentrated pools, but concentration can occur if certain assets become preferred.
+
+**Liquidation Mechanisms:**
+- **Automated liquidations** – On-chain liquidations are automated through smart contracts, which can be faster than manual liquidations but may lack flexibility during unusual market conditions.
+- **Liquidation cascades** – During extreme volatility, liquidations can cascade as falling prices trigger more liquidations, potentially amplifying market moves. This is a systemic risk that protocols must manage carefully.
+- **Liquidation incentives** – Protocols use incentives to encourage liquidators to participate, but these incentives must be balanced to ensure liquidations occur without creating excessive costs for traders.
+
+**Systemic Stability Considerations:**
+- **Protocol interdependencies** – On-chain derivatives protocols may be interconnected through shared collateral, oracles, or other mechanisms, creating systemic risks if one protocol fails. A failure in one protocol could impact others through shared dependencies, creating contagion risk.
+- **Oracle dependencies** – Most on-chain derivatives depend on oracles for price feeds. Oracle failures or manipulation can cause systemic issues across multiple protocols. A single oracle failure could impact many protocols simultaneously, creating systemic risk.
+- **Governance risks** – Protocol governance decisions can impact stability. Poor governance decisions or governance attacks can create systemic risks. Governance must balance flexibility with stability, and poor decisions can undermine protocol confidence.
+
 Collateral design is central to on-chain risk management:
 
-- Overcollateralization buffers against price shocks;
-- Diversified collateral baskets can reduce concentration risk;
-- Liquidation incentives must balance speed with market impact.
+- **Overcollateralization** buffers against price shocks by requiring traders to post more collateral than their position value. This provides a safety margin but reduces capital efficiency. The level of overcollateralization must balance safety with usability.
+- **Diversified collateral baskets** can reduce concentration risk by spreading risk across multiple asset types. However, diversification must be managed carefully to avoid introducing new risks from less liquid or less stable assets.
+- **Liquidation incentives** must balance speed with market impact. Incentives must be sufficient to encourage liquidators to participate, but not so high that they create excessive costs or market disruption.
 
 Under stress, poorly calibrated systems can:
 
-- Trigger cascading liquidations that exacerbate price moves;
-- Create bad‑debt holes if liquidations fail;
-- Force governance interventions that undermine confidence.
+- **Trigger cascading liquidations** that exacerbate price moves as liquidations trigger more liquidations in a downward spiral. This can amplify market volatility and create systemic instability.
+- **Create bad‑debt holes** if liquidations fail to cover losses, leaving protocols with unbacked liabilities. This can undermine protocol solvency and require emergency interventions.
+- **Force governance interventions** that undermine confidence if protocols must pause or modify operations during stress. Emergency interventions can create uncertainty and reduce trust in protocol stability.
 
-Protocols that simulate extreme scenarios and adapt parameters proactively are more likely to survive full market cycles.
+Protocols that simulate extreme scenarios and adapt parameters proactively are more likely to survive full market cycles. Stress testing and scenario analysis are essential for understanding protocol behavior under adverse conditions.
 
 ## Implications for Different Market Participants
 
@@ -1781,7 +1801,19 @@ They should:
 
 On-chain derivatives are becoming integral to how crypto volatility is generated, transferred, and priced. They bring derivatives infrastructure closer to the underlying assets, enabling new forms of transparency and composability—but also introducing unique risks tied to smart contracts, oracles, and protocol design.
 
-Investors and traders who understand both traditional derivatives concepts and on-chain microstructure are best positioned to navigate this evolving landscape. For them, on-chain derivatives are not just instruments of speculation, but building blocks for more sophisticated, risk‑aware participation in crypto markets over the long term.`,
+**Key Takeaways:**
+- **Market evolution** – On-chain derivatives are evolving from simple implementations to sophisticated systems that rival centralized exchanges in functionality. This evolution is creating new opportunities but also new risks that participants must understand.
+- **Volatility dynamics** – On-chain derivatives are changing how volatility is expressed and traded in crypto markets. Funding rates, basis relationships, and volatility surfaces are all influenced by on-chain mechanisms in ways that differ from traditional markets.
+- **Risk management** – Understanding and managing on-chain risks including smart contract risk, oracle risk, and protocol risk is essential for successful participation. These risks differ from traditional market risks and require specialized knowledge.
+- **Market structure** – On-chain derivatives are creating new market structures with different liquidity patterns, price discovery mechanisms, and risk transfer mechanisms. Understanding these structures is key to successful participation.
+
+**The Path Forward:**
+- **Technology improvement** will continue as protocols refine smart contract design, oracle mechanisms, and risk management systems. These improvements will make on-chain derivatives more reliable and efficient.
+- **Market maturation** will occur as protocols gain battle-tested experience through multiple market cycles. Protocols that survive and adapt will become more stable and reliable.
+- **Regulatory evolution** will shape the market as regulators develop frameworks for on-chain derivatives. Regulatory clarity will help institutional adoption but may also impose constraints.
+- **Institutional adoption** will likely increase as institutions become more comfortable with on-chain infrastructure and risk management. This will bring more capital and sophistication to the market.
+
+Investors and traders who understand both traditional derivatives concepts and on-chain microstructure are best positioned to navigate this evolving landscape. For them, on-chain derivatives are not just instruments of speculation, but building blocks for more sophisticated, risk‑aware participation in crypto markets over the long term. Success requires continuous learning, careful risk management, and adaptation to evolving market conditions.`,
     date: formatDate(2),
     author: 'Assunta Novak',
     authorAvatar: getAuthorAvatar('Assunta Novak'),
@@ -1886,18 +1918,19 @@ Institutional participation will depend heavily on clear answers to these questi
 
 ### Collateral and Leverage
 
-As RWA tokens integrate into DeFi:
+As RWA tokens integrate into DeFi, they create new opportunities and risks:
 
-- They can be used as **collateral** in lending protocols, enabling leverage on real‑world exposures;
-- They can back **stablecoins** or structured products that blend on‑chain and off‑chain risk.
+- **Collateral in lending protocols** – RWA tokens can be used as collateral in lending protocols, enabling leverage on real‑world exposures. This allows investors to borrow against tokenized assets, creating leverage while maintaining exposure to underlying real-world assets. However, this introduces additional risks including liquidation risk and smart contract risk.
+- **Stablecoin backing** – RWA tokens can back stablecoins or structured products that blend on‑chain and off‑chain risk. This creates new forms of stablecoins backed by real-world assets rather than crypto collateral. These stablecoins may offer different risk profiles than purely crypto-backed stablecoins.
+- **Composability benefits** – RWA tokens can be integrated into DeFi protocols, enabling composability and new financial products. This allows investors to use tokenized real-world assets in various DeFi applications, creating new yield opportunities and use cases.
 
-The design of risk parameters—loan‑to‑value ratios, liquidation thresholds, haircuts—must reflect:
+The design of risk parameters—loan‑to‑value ratios, liquidation thresholds, haircuts—must carefully reflect several factors:
 
-- The liquidity and price discovery of underlying assets;
-- Potential delays or frictions in converting RWAs back into cash during stress;
-- Jurisdictional and legal enforcement timelines.
+- **Liquidity and price discovery** – The liquidity and price discovery mechanisms for underlying assets must be considered. Real-world assets may have different liquidity characteristics than crypto assets, requiring different risk parameters. Price discovery may be slower or less transparent for some real-world assets.
+- **Conversion delays** – Potential delays or frictions in converting RWAs back into cash during stress must be accounted for. Unlike crypto assets that can be liquidated instantly, real-world assets may require time to convert to cash, creating additional risk during liquidations.
+- **Jurisdictional and legal enforcement** – Jurisdictional and legal enforcement timelines can vary significantly for different real-world assets. Some assets may be subject to complex legal processes that delay liquidation or recovery, requiring higher haircuts or more conservative risk parameters.
 
-Misalignment between on‑chain assumptions and off‑chain realities can create fragility in stress scenarios.
+Misalignment between on‑chain assumptions and off‑chain realities can create fragility in stress scenarios. Protocols that assume instant liquidity or perfect price discovery for real-world assets may face challenges during market stress when these assumptions break down. Careful risk management and conservative parameters are essential for RWA-based DeFi protocols.
 
 ### Yield Aggregation and Composability
 
@@ -1949,19 +1982,29 @@ Investors evaluating RWA tokens should consider:
 
 ### Portfolio Role and Risk Management
 
-RWA exposures can play different roles:
+RWA exposures can play different roles in crypto portfolios:
 
-- As **yield anchors** in stablecoin or cash‑equivalent strategies;
-- As **collateral** enhancing capital efficiency in DeFi;
-- As **credit exposures** with specific sector, duration, or geographic tilts.
+- **Yield anchors** in stablecoin or cash‑equivalent strategies – RWA tokens can provide stable, real-world yield in portfolios that need low volatility and predictable returns. This is particularly valuable in higher-rate environments where real-world yields are attractive relative to crypto-native yields.
+- **Collateral** enhancing capital efficiency in DeFi – RWA tokens can be used as collateral in DeFi protocols, enabling leverage while maintaining exposure to real-world assets. This can improve capital efficiency but introduces additional risks including liquidation risk and smart contract risk.
+- **Credit exposures** with specific sector, duration, or geographic tilts – RWA tokens can provide targeted exposure to specific credit sectors, durations, or geographies. This allows investors to construct portfolios with specific risk/return profiles that match their investment objectives.
 
-Position sizing and diversification should reflect the combined on‑chain and off‑chain risks, including tail scenarios where both markets are under stress.
+Position sizing and diversification should reflect the combined on‑chain and off‑chain risks, including tail scenarios where both markets are under stress. Investors should consider:
+
+- **Correlation risks** – How RWA tokens correlate with crypto assets during market stress. Some RWAs may provide diversification, while others may be correlated with crypto markets.
+- **Liquidity risks** – The liquidity characteristics of RWA tokens may differ from crypto assets, requiring different position sizing and risk management approaches.
+- **Concentration risks** – Over-concentration in specific RWA types, issuers, or protocols can create additional risks that should be managed through diversification.
 
 ## Conclusion
 
 Tokenized real‑world assets represent one of the most promising avenues for connecting crypto infrastructure to mainstream finance, especially in a higher‑rate environment where real‑world yields are attractive. But realizing this promise requires more than technical innovation; it demands robust legal structures, transparent risk management, and regulatory engagement.
 
-Investors who approach RWA opportunities with disciplined due diligence and a clear view of where yield comes from—and what risks underpin it—can harness this emerging asset class as a sustainable component of on‑chain portfolios, rather than a fleeting yield anomaly.`,
+**The Path Forward:**
+- **Technical maturity** will continue as protocols improve smart contract design, oracle robustness, and integration capabilities. Technical improvements will make RWA tokens more reliable and easier to use.
+- **Regulatory clarity** is essential for broader adoption. As regulators provide clearer guidance on tokenized securities and RWAs, institutional adoption will accelerate. Regulatory clarity will also help protect investors and ensure market integrity.
+- **Market development** will require time as new use cases emerge and existing use cases mature. Early adopters may face higher risks but also potential rewards as the market develops.
+- **Institutional adoption** will likely proceed gradually as institutions gain comfort with the technology, legal structures, and risk management. Pilot projects will lead to scaled deployments as confidence grows.
+
+Investors who approach RWA opportunities with disciplined due diligence and a clear view of where yield comes from—and what risks underpin it—can harness this emerging asset class as a sustainable component of on‑chain portfolios, rather than a fleeting yield anomaly. Success requires understanding both the opportunities and the risks, and maintaining realistic expectations about adoption timelines and market development.`,
     date: formatDate(1),
     author: 'Assunta Novak',
     authorAvatar: getAuthorAvatar('Assunta Novak'),
@@ -2183,9 +2226,21 @@ This article examines how higher real yields, tighter liquidity, and evolving ma
 
 Bitcoin, the world's first and largest cryptocurrency, has exhibited distinct cyclical patterns throughout its history. These cycles, characterized by periods of rapid appreciation followed by significant corrections, have created both opportunities and challenges for investors. Understanding Bitcoin's cyclical nature is essential for developing effective investment strategies and managing risk in this volatile asset class.
 
-Bitcoin cycles are driven by a combination of factors: supply dynamics through halving events, adoption trends, regulatory developments, macroeconomic conditions, and market psychology. Each cycle has unique characteristics, but historical patterns provide valuable insights for investors navigating this emerging asset class.
+Bitcoin cycles are driven by a combination of factors:
 
-For investors, Bitcoin cycles present both opportunities and risks. Cycles can create substantial returns during bull markets but also significant losses during bear markets. Success requires understanding cycle dynamics, managing risk appropriately, and maintaining long-term perspective despite short-term volatility.
+- **Supply dynamics** through halving events that reduce the rate of new Bitcoin creation
+- **Adoption trends** as more individuals and institutions adopt Bitcoin
+- **Regulatory developments** that can impact market sentiment and adoption
+- **Macroeconomic conditions** including inflation, interest rates, and economic uncertainty
+- **Market psychology** including fear, greed, and herd behavior that amplify price movements
+
+Each cycle has unique characteristics, but historical patterns provide valuable insights for investors navigating this emerging asset class.
+
+For investors, Bitcoin cycles present both opportunities and risks. Cycles can create substantial returns during bull markets but also significant losses during bear markets. Success requires:
+
+1. **Understanding cycle dynamics** including phase identification and historical patterns
+2. **Managing risk appropriately** through position sizing, diversification, and risk tolerance
+3. **Maintaining long-term perspective** despite short-term volatility and market noise
 
 ## Understanding Bitcoin Cycles
 
@@ -4245,7 +4300,15 @@ This article looks at crypto options through a structural lens. It compares how 
 
 ## Centralized Options Venues: Concentrated Liquidity, Concentrated Trust
 
-Most of the open interest in vanilla bitcoin and ether options still sits on a small number of centralized exchanges. These venues tend to look, at first glance, like their traditional counterparts. They list standardized contracts, offer series across strikes and maturities, and provide familiar greeks and risk views. Liquidity in the front expiries and near‑the‑money strikes can be deep, and institutional users appreciate the operational simplicity of a single venue, a single set of APIs, and a single risk engine.
+Most of the open interest in vanilla bitcoin and ether options still sits on a small number of centralized exchanges. These venues tend to look, at first glance, like their traditional counterparts. They offer several key advantages:
+
+- **Standardized contracts** with consistent terms and specifications across strikes and maturities
+- **Familiar greeks and risk views** that match traditional options trading interfaces
+- **Deep liquidity** in front expiries and near-the-money strikes, enabling large trades
+- **Operational simplicity** with a single venue, unified APIs, and integrated risk engine
+- **Cross-margining capabilities** that allow efficient use of collateral across products
+
+Liquidity in the front expiries and near‑the‑money strikes can be deep, and institutional users appreciate the operational simplicity of a single venue, a single set of APIs, and a single risk engine.
 
 The trade‑off is that this entire structure rests on the solvency and risk management of the exchange itself. Users post collateral into an omnibus system. They may see a detailed margin calculation, but they do not see the full distribution of positions across all participants, the stress scenarios the exchange uses, or the decisions taken in fast markets. When liquidations occur, they are orchestrated centrally. If they fail, losses can be socialized across other market participants, or in the worst case absorbed by the exchange’s own balance sheet – if it has one strong enough to carry them.
 
@@ -4255,7 +4318,23 @@ For investors, the key is to treat centralized options venues as a form of conce
 
 ## On-Chain Options Protocols: Transparency With Design Constraints
 
-On-chain options protocols start from a different set of assumptions. Smart contracts cannot rely on discretionary human risk managers, they must encode rules explicitly. They also face gas costs, latency, and oracle limitations that make traditional order‑book models expensive to operate on general‑purpose blockchains. As a result, many protocols have gravitated toward various flavors of pooled or automated market making.
+On-chain options protocols start from a different set of assumptions. Smart contracts cannot rely on discretionary human risk managers, they must encode rules explicitly. They also face several technical constraints:
+
+- **Gas costs** that make frequent updates and complex operations expensive
+- **Blockchain latency** that limits real-time price updates and order matching
+- **Oracle limitations** that require careful design to ensure accurate price feeds
+- **Smart contract immutability** that makes bug fixes and upgrades challenging
+
+These constraints make traditional order‑book models expensive to operate on general‑purpose blockchains. As a result, many protocols have gravitated toward various flavors of pooled or automated market making.
+
+### Automated Market Making Models
+
+On-chain options protocols typically use one of several automated market making approaches:
+
+- **Liquidity pools** where providers contribute capital to a shared pool that takes the other side of options trades
+- **Vault-based systems** where capital is managed in structured vaults with defined risk parameters
+- **Algorithmic pricing** that sets option prices based on mathematical models and external data feeds
+- **Governance-controlled parameters** where key settings are adjusted through decentralized governance
 
 In a typical design, liquidity providers contribute capital to a vault or pool that takes the other side of options buyers in some structured way. Premiums and, in some cases, funding fees accrue to the pool, while losses are socialized across its LPs. Parameters such as strike ladders, expiries, and implied volatility curves are either set by governance, adjusted by algorithms, or inferred from external feeds. This architecture is flexible in theory, but it introduces a different category of risk: the risk that the model embedded in the pool diverges from realized market conditions.
 
@@ -4266,6 +4345,22 @@ That said, on-chain options have genuine advantages. Collateral is visible; posi
 ## Comparing Margin, Liquidity, and Failure Modes
 
 The contrast between centralized and on-chain options markets becomes sharpest when looking at how they handle three core questions: where margin comes from, how liquidity forms, and what happens when things break.
+
+### Margin and Collateral Models
+
+**Centralized venues** use a promise-based margin system:
+
+- Margin is backed by a mix of user collateral, risk engine calculations, and exchange capital
+- Cross-margining allows efficient use of collateral across multiple positions
+- Portfolio margin can reduce margin requirements for diversified portfolios
+- Margin calls and liquidations are managed centrally by the exchange
+
+**On-chain protocols** use a more literal collateral model:
+
+- Collateral sits directly in smart contracts, visible on-chain
+- Rules for collateral use and seizure are encoded in smart contracts
+- No hidden credit or cross-product guarantees
+- Liquidations are executed automatically according to contract rules
 
 On centralized venues, margin is a promise backed by a mix of collateral, a risk engine, and the exchange’s own capital. Cross‑margining and portfolio margin can make books appear lighter from the user’s perspective, but someone is implicitly writing a guarantee that losses will be covered. In DeFi, margin is more literal: collateral sits in contracts, and the rules for its use and seizure are visible. This reduces ambiguity, but does not eliminate model risk; if parameters are wrong, the wrong users will lose money, even if the system as a whole behaves as coded.
 

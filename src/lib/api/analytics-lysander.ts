@@ -2268,7 +2268,14 @@ The yield curve's importance stems from its ability to synthesize information fr
 
 Yield curves can take various shapes: normal (upward sloping), inverted (downward sloping), flat, or humped. Each shape reflects different economic conditions and market expectations. A normal curve suggests healthy economic growth and moderate inflation expectations. An inverted curve often signals economic concerns and expectations of future rate cuts. A flat curve may indicate uncertainty or transition periods. A humped curve can reflect uncertainty about different time horizons.
 
-For fixed income investors, yield curve analysis informs critical decisions including duration positioning, sector allocation, and maturity selection. Different curve environments favor different strategies, and understanding these dynamics helps investors position portfolios appropriately and manage risk effectively. The yield curve is not just an indicator—it's a tool for portfolio construction and risk management.
+For fixed income investors, yield curve analysis informs critical decisions including:
+
+- **Duration positioning**: Determining the appropriate portfolio duration based on curve shape and expected rate movements
+- **Sector allocation**: Allocating across different fixed income sectors based on curve dynamics and relative value
+- **Maturity selection**: Choosing specific maturities that offer the best risk-adjusted returns given curve shape
+- **Risk management**: Using curve analysis to identify and manage interest rate risk, curve risk, and other portfolio risks
+
+Different curve environments favor different strategies, and understanding these dynamics helps investors position portfolios appropriately and manage risk effectively. The yield curve is not just an indicator—it's a tool for portfolio construction and risk management.
 
 This article explores yield curve analysis in depth, examining how different curve shapes emerge, what they signal about economic conditions, and how investors can use this information to optimize portfolio positioning and manage risk across various market environments.
 
@@ -2276,7 +2283,14 @@ This article explores yield curve analysis in depth, examining how different cur
 
 Yield curves plot bond yields against their maturities, typically for government bonds of similar credit quality to eliminate credit risk as a variable. The curve's shape reflects market expectations about future interest rates, inflation, economic growth, and risk premia. Understanding how these factors combine to create different curve shapes is fundamental to yield curve analysis.
 
-The most commonly analyzed yield curve is the government bond curve (such as U.S. Treasuries), as it represents the risk-free rate structure and serves as a benchmark for other fixed income instruments. However, yield curves exist for other sectors as well, including investment-grade credit, high yield, and various securitized products. Each sector's curve reflects both the underlying government curve and sector-specific factors such as credit spreads, liquidity premia, and structural features.
+The most commonly analyzed yield curve is the government bond curve (such as U.S. Treasuries), as it represents the risk-free rate structure and serves as a benchmark for other fixed income instruments. However, yield curves exist for other sectors as well, including:
+
+1. **Investment-grade credit curves**: Reflect government curve plus credit spreads that vary by maturity
+2. **High-yield curves**: Show higher spreads and different shapes due to credit risk considerations
+3. **Securitized product curves**: Include mortgage-backed securities, asset-backed securities, and other structured products
+4. **Municipal bond curves**: Reflect tax-exempt status and different risk characteristics
+
+Each sector's curve reflects both the underlying government curve and sector-specific factors such as credit spreads, liquidity premia, and structural features.
 
 ### Normal Yield Curve
 

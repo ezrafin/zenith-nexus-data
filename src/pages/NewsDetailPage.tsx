@@ -167,11 +167,11 @@ export default function NewsDetailPage() {
             </span>
           </div>
 
-          <div className="flex items-start justify-between gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <h1 className="heading-lg flex-1">{news.title}</h1>
-            <div className="flex items-center gap-2 flex-shrink-0">
+            <div className="flex items-center gap-2 flex-shrink-0 w-full sm:w-auto">
               <BookmarkButton contentType="article" contentId={news.id} />
-              <Button variant="outline" size="sm" onClick={handleShare}>
+              <Button variant="outline" size="sm" onClick={handleShare} className="min-h-[44px] flex-1 sm:flex-initial">
                 <Share2 className="h-4 w-4 mr-2" />
                 {t('common.share')}
               </Button>

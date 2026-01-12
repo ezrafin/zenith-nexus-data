@@ -133,10 +133,7 @@ const App = () => {
             <Toaster />
             <Sonner />
             <BrowserRouter>
-              {/* Skip to main content link for accessibility */}
-              <a href="#main-content" className="skip-to-main">
-                Skip to main content
-              </a>
+              {/* Skip to main content link is handled in Layout component */}
               <Suspense fallback={<LoadingScreen />}>
                 <ErrorBoundary>
                   <AnimatedRoutesWrapper>

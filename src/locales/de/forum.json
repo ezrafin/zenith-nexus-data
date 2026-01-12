@@ -23,7 +23,28 @@
   "follow": "Folgen",
   "unfollow": "Entfolgen",
   "share": "Teilen",
-  "report": "Melden",
+  "report": {
+    "title": "Inhalt melden",
+    "description": "Helfen Sie uns, eine sichere und respektvolle Community zu erhalten, indem Sie unangemessene Inhalte melden.",
+    "reasonLabel": "Grund für die Meldung",
+    "reasonPlaceholder": "Wählen Sie einen Grund",
+    "detailsLabel": "Zusätzliche Details (optional)",
+    "detailsPlaceholder": "Geben Sie zusätzliche Informationen an...",
+    "cancel": "Abbrechen",
+    "submitting": "Wird gesendet...",
+    "submit": "Meldung absenden",
+    "pleaseSelectReason": "Bitte wählen Sie einen Grund aus",
+    "submitted": "Meldung gesendet. Vielen Dank, dass Sie uns helfen, unsere Community sicher zu halten.",
+    "failedToSubmit": "Meldung konnte nicht gesendet werden",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Belästigung oder Mobbing",
+      "misinformation": "Fehlinformationen",
+      "inappropriate": "Unangemessener Inhalt",
+      "copyright": "Urheberrechtsverletzung",
+      "other": "Sonstiges"
+    }
+  },
   "noDiscussions": "Noch keine Diskussionen",
   "beFirstToStart": "Seien Sie der Erste, der eine Diskussion startet",
   "newDiscussion": "Neue Diskussion",
@@ -37,7 +58,12 @@
   "community": "Community",
   "forumTitle": "Forum",
   "forumDescription": "Diskutieren Sie Anlagestrategien, teilen Sie Erfahrungen und analysieren Sie Märkte mit der Community",
-  "categories": "Kategorien",
+  "categories": {
+    "clearFilter": "Filter löschen",
+    "trendingTopics": "Trending Diskussionen",
+    "viewAllTrending": "Alle Trending anzeigen →",
+    "noTrendingTopics": "Derzeit keine Trending-Themen"
+  },
   "errorLoadingCategories": "Fehler beim Laden der Kategorien",
   "tryAgain": "Erneut versuchen",
   "topics": "Themen",
@@ -160,28 +186,6 @@
     "showPreview": "Vorschau anzeigen",
     "emptyPreview": "Vorschau erscheint hier, wenn Sie zu tippen beginnen"
   },
-  "report": {
-    "title": "Inhalt melden",
-    "description": "Helfen Sie uns, eine sichere und respektvolle Community zu erhalten, indem Sie unangemessene Inhalte melden.",
-    "reasonLabel": "Grund für die Meldung",
-    "reasonPlaceholder": "Wählen Sie einen Grund",
-    "detailsLabel": "Zusätzliche Details (optional)",
-    "detailsPlaceholder": "Geben Sie zusätzliche Informationen an...",
-    "cancel": "Abbrechen",
-    "submitting": "Wird gesendet...",
-    "submit": "Meldung absenden",
-    "pleaseSelectReason": "Bitte wählen Sie einen Grund aus",
-    "submitted": "Meldung gesendet. Vielen Dank, dass Sie uns helfen, unsere Community sicher zu halten.",
-    "failedToSubmit": "Meldung konnte nicht gesendet werden",
-    "reasons": {
-      "spam": "Spam",
-      "harassment": "Belästigung oder Mobbing",
-      "misinformation": "Fehlinformationen",
-      "inappropriate": "Unangemessener Inhalt",
-      "copyright": "Urheberrechtsverletzung",
-      "other": "Sonstiges"
-    }
-  },
   "topicPage": {
     "topicNotFound": "Thema nicht gefunden",
     "backToForum": "Zurück zum Forum",
@@ -191,16 +195,17 @@
     "views": "Aufrufe",
     "likes": "Likes"
   },
-  "categories": {
-    "clearFilter": "Filter löschen",
-    "trendingTopics": "Trending Diskussionen",
-    "viewAllTrending": "Alle Trending anzeigen →",
-    "noTrendingTopics": "Derzeit keine Trending-Themen"
-  },
   "featured": {
     "title": "Empfohlen",
     "new": "Neu",
     "hot": "Heiß",
     "trending": "Trending"
+  },
+  "moderation": {
+    "pendingTitle": "Diskussion zur Überprüfung eingereicht",
+    "pendingMessage": "Ihre Diskussion wurde eingereicht und wartet auf Moderation. Sie wird im Forum erscheinen, sobald ein Administrator sie genehmigt.",
+    "discussionTitle": "Ihre Diskussion:",
+    "backToForum": "Zurück zum Forum",
+    "createAnother": "Weitere Diskussion erstellen"
   }
 }

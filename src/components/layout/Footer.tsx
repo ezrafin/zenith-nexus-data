@@ -114,7 +114,7 @@ export function Footer() {
           
           {/* Navigation sections in a single row on desktop */}
           <div className="lg:col-span-3">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 justify-items-center sm:justify-items-start">
               {/* Content */}
               <motion.div 
                 className="text-center"
@@ -127,7 +127,7 @@ export function Footer() {
                 <ul className="space-y-3">
                   {footerLinks.content.map((link, index) => <motion.li 
                     key={link.href}
-                    className="h-6 flex items-center justify-center"
+                    className="min-h-[44px] flex items-center justify-center sm:justify-start"
                     initial={prefersReducedMotion() ? {} : { opacity: 0, x: -10 }}
                     whileInView={prefersReducedMotion() ? {} : { opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -136,7 +136,7 @@ export function Footer() {
                       delay: prefersReducedMotion() ? 0 : (index * STAGGER.fast) / 1000,
                     }}
                   >
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors min-h-[44px] flex items-center">
                         {link.name}
                       </Link>
                     </motion.li>)}
@@ -147,8 +147,8 @@ export function Footer() {
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.markets')}</h3>
                 <ul className="space-y-3">
-                  {footerLinks.markets.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2">
+                  {footerLinks.markets.map(link => <li key={link.href} className="min-h-[44px] flex items-center justify-center sm:justify-start">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2 min-h-[44px]">
                         <link.icon className="h-3.5 w-3.5 flex-shrink-0" />
                         <span>{link.name}</span>
                       </Link>
@@ -160,8 +160,8 @@ export function Footer() {
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.education')}</h3>
                 <ul className="space-y-3">
-                  {footerLinks.education.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2">
+                  {footerLinks.education.map(link => <li key={link.href} className="min-h-[44px] flex items-center justify-center sm:justify-start">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2 min-h-[44px]">
                         <link.icon className="h-3.5 w-3.5 flex-shrink-0" />
                         <span>{link.name}</span>
                       </Link>
@@ -173,8 +173,8 @@ export function Footer() {
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.community')}</h3>
                 <ul className="space-y-3">
-                  {footerLinks.community.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {footerLinks.community.map(link => <li key={link.href} className="min-h-[44px] flex items-center justify-center sm:justify-start">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors min-h-[44px] flex items-center">
                         {link.name}
                       </Link>
                     </li>)}
@@ -185,8 +185,8 @@ export function Footer() {
               <div className="text-center">
                 <h3 className="text-sm font-semibold mb-4">{t('navigation.legal')}</h3>
                 <ul className="space-y-3">
-                  {footerLinks.legal.map(link => <li key={link.href} className="h-6 flex items-center justify-center">
-                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {footerLinks.legal.map(link => <li key={link.href} className="min-h-[44px] flex items-center justify-center sm:justify-start">
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors min-h-[44px] flex items-center">
                         {link.name}
                       </Link>
                     </li>)}

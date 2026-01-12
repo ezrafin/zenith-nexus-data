@@ -147,7 +147,7 @@ export default function MarketsPage() {
                   key={tab.type}
                   to={`/markets/${tab.type}`}
                   className={cn(
-                    'px-4 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap flex items-center',
+                    'px-4 py-2.5 rounded-md text-sm font-medium transition-colors whitespace-nowrap flex items-center min-h-[44px]',
                     marketType === tab.type
                       ? 'bg-primary text-primary-foreground'
                       : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
@@ -161,19 +161,20 @@ export default function MarketsPage() {
 
           {/* Search Filter */}
           <div className="mb-6">
-            <div className="relative max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <div className="relative max-w-md w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
               <Input
                 type="text"
                 placeholder={t('marketsPage.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-10"
+                className="pl-10 pr-10 w-full min-h-[44px]"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center text-muted-foreground hover:text-foreground"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center text-muted-foreground hover:text-foreground min-h-[44px] min-w-[44px]"
+                  aria-label="Clear search"
                 >
                   <X className="h-4 w-4" />
                 </button>

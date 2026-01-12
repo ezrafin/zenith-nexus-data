@@ -284,7 +284,7 @@ export default function CreateDiscussionPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="symbol">{t('form.symbolLabel')}</Label>
                 <Input
@@ -336,13 +336,13 @@ export default function CreateDiscussionPage() {
               </p>
               </div>
 
-              <div className="flex items-center justify-end gap-4">
-                <Link to="/forum">
-                  <Button type="button" variant="outline" disabled={submitting}>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-4">
+                <Link to="/forum" className="w-full sm:w-auto">
+                  <Button type="button" variant="outline" disabled={submitting} className="w-full sm:w-auto min-h-[44px]">
                     {t('buttons.cancel', 'ui')}
                   </Button>
                 </Link>
-                <Button type="submit" disabled={submitting}>
+                <Button type="submit" disabled={submitting} className="w-full sm:w-auto min-h-[44px]">
                   <Send className="mr-2 h-4 w-4" />
                   {submitting ? t('buttons.submit', 'ui') : t('createDiscussion')}
                 </Button>

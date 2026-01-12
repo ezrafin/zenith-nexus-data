@@ -202,7 +202,11 @@ export function Header() {
                  {/* Desktop Navigation */}
                  <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label="Main navigation">
             {navigation.map(item => item.children ? <div key={item.name} className="relative" onMouseEnter={() => setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)}>
-                  <button className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
+                  <button 
+                    className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 min-h-[44px] ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}
+                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    onTouchStart={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                  >
                     {item.name}
                     <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                   </button>
@@ -441,7 +445,7 @@ export function Header() {
           animate={prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0 }}
           exit={prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: '-100%' }}
           transition={transitions.normal}
-          className="lg:hidden fixed inset-0 top-16 bg-background/95 backdrop-blur-xl border-b border-border h-[calc(100vh-4rem)] overflow-y-auto z-50"
+          className="lg:hidden fixed inset-0 top-16 md:top-20 bg-background/95 backdrop-blur-xl border-b border-border h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] overflow-y-auto z-50"
           role="navigation"
           aria-label="Mobile navigation">
             <div className="container-wide py-4 space-y-1">
@@ -454,12 +458,12 @@ export function Header() {
                       {item.name}
                     </div>
                     <div className="pl-4 space-y-1">
-                      {item.children.map(child => <Link key={child.href} to={child.href} onClick={() => setMobileMenuOpen(false)} className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-colors ${isActive(child.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
-                          <child.icon className="h-4 w-4 text-primary" />
+                      {item.children.map(child => <Link key={child.href} to={child.href} onClick={() => setMobileMenuOpen(false)} className={`flex items-center gap-3 px-4 py-3 text-sm rounded-lg transition-colors min-h-[44px] ${isActive(child.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
+                          <child.icon className="h-4 w-4 text-primary flex-shrink-0" />
                           {child.name}
                         </Link>)}
                     </div>
-                  </div> : <Link key={item.name} to={item.href} onClick={() => setMobileMenuOpen(false)} className={`block px-4 py-2 text-sm rounded-lg transition-colors ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
+                  </div> :                   <Link key={item.name} to={item.href} onClick={() => setMobileMenuOpen(false)} className={`block px-4 py-3 text-sm rounded-lg transition-colors min-h-[44px] flex items-center ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
                     {item.name}
                   </Link>)}
               <div className="pt-4 px-4 space-y-2">

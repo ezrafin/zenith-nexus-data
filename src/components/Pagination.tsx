@@ -50,19 +50,20 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
   if (totalPages <= 1) return null;
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-8">
+    <div className="flex items-center justify-center gap-2 mt-8 flex-wrap">
       <Button
         variant="outline"
         size="sm"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="gap-1"
+        className="gap-1 min-h-[44px] px-3 sm:px-4"
       >
         <ChevronLeft className="h-4 w-4" />
-        {t('pagination.previous')}
+        <span className="hidden sm:inline">{t('pagination.previous')}</span>
+        <span className="sm:hidden">{t('pagination.prev') || 'Prev'}</span>
       </Button>
 
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 overflow-x-auto sm:overflow-visible">
         {getPageNumbers().map((page, index) => (
           typeof page === 'number' ? (
             <Button
@@ -70,12 +71,12 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
               variant={currentPage === page ? 'default' : 'outline'}
               size="sm"
               onClick={() => onPageChange(page)}
-              className="w-9 h-9 p-0"
+              className="min-w-[44px] min-h-[44px] p-0"
             >
               {page}
             </Button>
           ) : (
-            <span key={index} className="px-2 text-muted-foreground">
+            <span key={index} className="px-2 text-muted-foreground flex items-center min-h-[44px]">
               {page}
             </span>
           )
@@ -87,9 +88,10 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
         size="sm"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="gap-1"
+        className="gap-1 min-h-[44px] px-3 sm:px-4"
       >
-        {t('pagination.next')}
+        <span className="hidden sm:inline">{t('pagination.next')}</span>
+        <span className="sm:hidden">{t('pagination.nextShort') || 'Next'}</span>
         <ChevronRight className="h-4 w-4" />
       </Button>
     </div>

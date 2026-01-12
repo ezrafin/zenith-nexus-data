@@ -139,8 +139,6 @@
     "reportMarkedResolved": "报告已标记为已解决",
     "failedToLoadReports": "加载报告失败",
     "pleaseSignInToBookmarkDiscussions": "请登录以收藏讨论",
-    "addedToBookmarks": "已添加到书签",
-    "removedFromBookmarks": "已从书签中移除",
     "pleaseSignInToFollowDiscussions": "请登录以关注讨论",
     "followingDiscussion": "正在关注讨论",
     "unfollowedDiscussion": "已取消关注讨论"
@@ -151,7 +149,17 @@
     "failedToPost": "发布失败",
     "failedToUpdate": "更新失败",
     "failedToDelete": "删除失败",
-    "failedToCreate": "创建失败"
+    "failedToCreate": "创建失败",
+    "system": {
+      "networkError": "无法连接到服务器。请检查您的互联网连接并重试。",
+      "validationError": "您提供的信息无效。请检查并重试。",
+      "authenticationError": "请登录以继续。",
+      "authorizationError": "您没有执行此操作的权限。",
+      "notFoundError": "找不到请求的资源。",
+      "serverError": "服务器错误。请稍后再试。",
+      "unexpectedError": "发生意外错误。请重试。",
+      "unknownError": "出了点问题。请重试。"
+    }
   },
   "messages": {
     "loading": "加载中...",
@@ -359,35 +367,23 @@
     "ctaContact": "联系销售"
   },
   "careersPage": {
-    "badge": "招聘",
+    "badge": "职业",
     "heroTitle": "加入我们的团队",
-    "heroSubtitle": "帮助我们让专业级金融数据触手可及。我们在打造投资分析的未来。",
+    "heroSubtitle": "构建金融教育和市场分析的未来",
     "positionsTitle": "开放职位",
-    "ctaTitle": "对我们的使命感兴趣？",
-    "ctaSubtitle": "我们一直在寻找 IT 和金融领域的人才。发送简历，我们会在合适机会联系你。",
-    "ctaButton": "发送简历",
+    "posDesigner": "我们正在寻找一位有才华的产品设计师加入我们在卢加诺的团队。你将致力于为我们的金融平台设计直观的用户体验。",
     "typeLabel": "类型",
-    "posDesigner": "为投资工具设计直观的用户体验。",
+    "fullTime": "全职",
+    "fulltime": "全职",
+    "partTime": "兼职",
+    "parttime": "兼职",
+    "contract": "合同",
+    "internship": "实习",
+    "ctaTitle": "没有看到合适的职位？",
+    "ctaSubtitle": "我们一直在寻找有才华的人才。发送你的简历，我们会为未来的机会记住你。",
+    "ctaButton": "立即申请",
     "form": {
-      "title": "职位申请",
-      "fullName": "姓名",
-      "fullNamePlaceholder": "输入您的全名",
-      "phone": "电话号码",
-      "phonePlaceholder": "+86 138 0000 0000",
-      "email": "邮箱（可选）",
-      "emailPlaceholder": "your@email.com",
-      "cv": "简历",
-      "cvPlaceholder": "点击上传简历（PDF, DOC, DOCX）",
-      "cvHint": "最大文件大小：10MB。格式：PDF, DOC, DOCX",
-      "links": "链接（可选）",
-      "linksPlaceholder": "https://github.com/username",
-      "addLink": "添加另一个链接",
-      "cancel": "取消",
-      "submit": "提交申请",
-      "submitting": "提交中...",
-      "success": "申请已成功提交！",
-      "error": "提交失败。请重试。",
-      "fileTooLarge": "文件太大。最大10MB。"
+      "title": "工作申请"
     }
   },
   "authorsPage": {
@@ -536,39 +532,6 @@
     "tabActivity": "动态",
     "activityTitle": "动态"
   },
-  "advertisePage": {
-    "badge": "广告",
-    "heroTitle": "触达严肃的投资者",
-    "heroSubtitle": "将您的品牌与我们高度参与的投资者、交易员和金融专业人士受众相连。",
-    "statsVisitors": "月访客",
-    "statsPageViews": "页面浏览",
-    "statsSubscribers": "新闻订阅者",
-    "statsHnwi": "高净值受众",
-    "solutionsTitle": "广告方案",
-    "solutionsSubtitle": "从多种广告选项中选择，满足您的营销目标。",
-    "formatDisplayTitle": "展示广告",
-    "formatDisplayDesc": "全站多尺寸、多格式的高级横幅位。",
-    "formatDisplayPrice": "起价 $15 CPM",
-    "formatSponsoredTitle": "赞助内容",
-    "formatSponsoredDesc": "原生文章和研究报告，自然融入内容。",
-    "formatSponsoredPrice": "起价 $5,000",
-    "formatNewsletterTitle": "Newsletter 赞助",
-    "formatNewsletterDesc": "通过专属或推荐位触达我们的邮件受众。",
-    "formatNewsletterPrice": "起价 $2,500",
-    "formatCustomTitle": "定制活动",
-    "formatCustomDesc": "根据您的营销目标定制的广告方案。",
-    "formatCustomPrice": "价格面议",
-    "audienceTitle": "我们的受众",
-    "audienceSubtitle": "财务素养高、主动管理投资的读者。",
-    "audiencePoint1": "平均投资组合：$500K+",
-    "audiencePoint2": "70% 每周做出投资决策",
-    "audiencePoint3": "60% 为金融专业人士",
-    "audiencePoint4": "平均会话时长：8 分钟",
-    "ctaTitle": "索取媒体手册",
-    "ctaSubtitle": "下载媒体手册或与我们的广告团队沟通。",
-    "ctaDownload": "下载媒体手册",
-    "ctaContact": "联系销售"
-  },
   "home": {
     "heroTitleLine1": "守护您在",
     "heroTitleLine2": "全球市场中的位置",
@@ -658,7 +621,8 @@
     "closeMenu": "关闭菜单",
     "openMenu": "打开菜单",
     "bookmark": "书签",
-    "bookmarked": "已收藏"
+    "bookmarked": "已收藏",
+    "skipToMainContent": "跳转到主要内容"
   },
   "articles": {
     "keyTakeaways": "要点总结",
@@ -689,6 +653,7 @@
     "banks": "银行",
     "wealthManagers": "财富管理公司",
     "pensionFunds": "养老基金",
+    "exchange": "交易所",
     "allRegions": "所有地区",
     "northAmerica": "北美",
     "europe": "欧洲",
@@ -714,7 +679,8 @@
     "user": "用户",
     "users": "用户",
     "yourRating": "您对此公司的评分",
-    "regulatedBy": "监管机构：{{regulators}}"
+    "regulatedBy": "监管机构：{{regulators}}",
+    "exchange": "交易所"
   },
   "videoFilters": {
     "searchPlaceholder": "搜索视频...",
@@ -734,7 +700,7 @@
   },
   "billCollection": {
     "title": "硬币收集",
-    "description": "收集全部 42 枚硬币！",
+    "description": "收集 41 枚硬币，即可在我们合作伙伴的投资计划中获得 50 欧元的折扣。\n收集最后一枚传奇硬币，即可免费解锁投资者课程。",
     "subtitle": "通过探索平台收集全部 42 枚硬币。跟踪您的进度并查看已收集的硬币。",
     "progress": "进度",
     "complete": "完成",
@@ -826,12 +792,6 @@
   "pagination": {
     "previous": "上一页",
     "next": "下一页"
-  },
-  "careersPage": {
-    "fullTime": "全职",
-    "partTime": "兼职",
-    "contract": "合同",
-    "internship": "实习"
   },
   "cookieBanner": {
     "title": "我们使用 Cookie",
@@ -945,25 +905,5 @@
     "visibilityPublic": "公开 - 任何人都可以查看",
     "visibilityFriends": "朋友 - 仅关注用户",
     "visibilityPrivate": "私密 - 仅你自己"
-  },
-  "careersPage": {
-    "badge": "职业",
-    "heroTitle": "加入我们的团队",
-    "heroSubtitle": "构建金融教育和市场分析的未来",
-    "positionsTitle": "开放职位",
-    "posDesigner": "我们正在寻找一位有才华的产品设计师加入我们在卢加诺的团队。你将致力于为我们的金融平台设计直观的用户体验。",
-    "typeLabel": "类型",
-    "fullTime": "全职",
-    "fulltime": "全职",
-    "partTime": "兼职",
-    "parttime": "兼职",
-    "contract": "合同",
-    "internship": "实习",
-    "ctaTitle": "没有看到合适的职位？",
-    "ctaSubtitle": "我们一直在寻找有才华的人才。发送你的简历，我们会为未来的机会记住你。",
-    "ctaButton": "立即申请",
-    "form": {
-      "title": "工作申请"
-    }
   }
 }

@@ -135,7 +135,7 @@ export function CollectiblesControlMenu() {
                     <Trophy className="h-6 w-6 text-primary" />
                     {t('billCollection.title')}
                   </h2>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-sm text-muted-foreground mt-1 whitespace-pre-line">
                     {t('billCollection.description')}
                   </p>
                 </div>

@@ -1,0 +1,602 @@
+{
+  "ui": {
+    "namespace": "ui",
+    "languages": {
+      "zh": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [
+          "toast.notifyMe",
+          "toast.joinWaitlist",
+          "careersPage.fullTime",
+          "careersPage.partTime"
+        ],
+        "identicalToEnglish": [
+          "auth.emailPlaceholderExample",
+          "notFound.title",
+          "contactPage.emailSupport",
+          "contactPage.officeLine1",
+          "contactPage.placeholderEmail",
+          "contactPage.bugReport.pageUrlPlaceholder",
+          "emailSubscription.badge"
+        ]
+      },
+      "es": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [
+          "toast.notifyMe",
+          "toast.joinWaitlist",
+          "careersPage.fullTime",
+          "careersPage.partTime"
+        ],
+        "identicalToEnglish": [
+          "navigation.legal",
+          "notFound.title",
+          "contactPage.emailTitle",
+          "contactPage.emailSupport",
+          "contactPage.officeLine1",
+          "contactPage.labelEmail",
+          "contactPage.bugReport.pageUrlPlaceholder",
+          "watchlistPage.seoTitle",
+          "bookmarksPage.tabsVideo",
+          "emailSubscription.badge",
+          "marketTable.sevenDays",
+          "globalSearch.tickers",
+          "companiesPage.global",
+          "organizationCard.aum",
+          "organizationCard.established",
+          "billCollection.billNames.profile_other_visit",
+          "achievements.points",
+          "achievements.items.popular.name"
+        ]
+      },
+      "ru": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [
+          "toast.notifyMe",
+          "toast.joinWaitlist",
+          "settings.loading",
+          "careersPage.fullTime",
+          "careersPage.partTime"
+        ],
+        "identicalToEnglish": [
+          "auth.emailPlaceholderExample",
+          "auth.usernamePlaceholder",
+          "notFound.title",
+          "contactPage.emailTitle",
+          "contactPage.emailSupport",
+          "contactPage.officeLine1",
+          "contactPage.labelEmail",
+          "contactPage.placeholderEmail",
+          "contactPage.bugReport.pageUrlPlaceholder",
+          "communityPage.heroTitle",
+          "watchlistPage.seoTitle",
+          "organizationCard.aum"
+        ]
+      },
+      "de": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [
+          "toast.notifyMe",
+          "toast.joinWaitlist",
+          "careersPage.fullTime",
+          "careersPage.partTime"
+        ],
+        "identicalToEnglish": [
+          "navigation.community",
+          "navigation.forum",
+          "labels.name",
+          "labels.tags",
+          "notFound.title",
+          "advertisePage.formatSponsoredTitle",
+          "contactPage.emailSupport",
+          "contactPage.officeLine1",
+          "contactPage.labelName",
+          "contactPage.bugReport.pageUrlPlaceholder",
+          "communityPage.badge",
+          "communityPage.heroTitle",
+          "watchlistPage.seoTitle",
+          "watchlistPage.newWatchlistLabel",
+          "bookmarksPage.tabsNews",
+          "bookmarksPage.tabsForum",
+          "bookmarksPage.tabsVideo",
+          "homeNewsSection.badge",
+          "emailSubscription.badge",
+          "marketTable.symbol",
+          "marketTable.name",
+          "trendingContent.title",
+          "globalSearch.forum",
+          "companiesPage.regionPlaceholder",
+          "companiesPage.global",
+          "organizationCard.broker",
+          "organizationCard.bank",
+          "organizationCard.aum",
+          "organizationCard.community",
+          "videoFilters.tagsLabel",
+          "marketWidget.live",
+          "billCollection.billNames.analytics_read",
+          "billCollection.billNames.education_visit",
+          "topicStatus.trending",
+          "achievements.items.guru.name",
+          "profilePage.reputation"
+        ]
+      },
+      "fr": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [
+          "toast.notifyMe",
+          "toast.joinWaitlist",
+          "careersPage.fullTime",
+          "careersPage.partTime"
+        ],
+        "identicalToEnglish": [
+          "navigation.forum",
+          "navigation.indices",
+          "navigation.crypto",
+          "buttons.menu",
+          "labels.description",
+          "settings.notifications",
+          "newsPage.filterIndices",
+          "newsPage.filterCrypto",
+          "notFound.title",
+          "marketsPage.indicesTitle",
+          "aboutPage.valueExcellenceTitle",
+          "contactPage.emailTitle",
+          "contactPage.emailSupport",
+          "contactPage.officeLine1",
+          "contactPage.labelEmail",
+          "contactPage.labelMessage",
+          "contactPage.bugReport.pageUrlPlaceholder",
+          "careersPage.typeLabel",
+          "watchlistPage.seoTitle",
+          "watchlistPage.marketType.indices",
+          "watchlistPage.marketType.crypto",
+          "bookmarksPage.tabsForum",
+          "emailSubscription.badge",
+          "marketTable.volume",
+          "marketTable.actions",
+          "globalSearch.forum",
+          "globalSearch.tickers",
+          "common.source",
+          "companiesPage.europe",
+          "organizationCard.aum",
+          "organizationCard.expert",
+          "videoFilters.tagsLabel",
+          "achievements.rarity.rare",
+          "achievements.points"
+        ]
+      },
+      "pl": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [
+          "toast.notifyMe",
+          "toast.joinWaitlist",
+          "careersPage.fullTime",
+          "careersPage.partTime"
+        ],
+        "identicalToEnglish": [
+          "navigation.forum",
+          "buttons.menu",
+          "notFound.title",
+          "contactPage.emailTitle",
+          "contactPage.emailSupport",
+          "contactPage.officeLine1",
+          "contactPage.labelEmail",
+          "contactPage.bugReport.pageUrlPlaceholder",
+          "bookmarksPage.tabsForum",
+          "emailSubscription.badge",
+          "marketTable.symbol",
+          "marketTable.sevenDays",
+          "globalSearch.forum",
+          "companiesPage.regionPlaceholder",
+          "organizationCard.broker",
+          "organizationCard.bank",
+          "organizationCard.aum",
+          "billCollection.billNames.alert_create",
+          "billCollection.billNames.education_visit",
+          "topicStatus.trending",
+          "achievements.items.guru.name"
+        ]
+      }
+    },
+    "summary": {
+      "totalKeys": 763,
+      "missingKeys": {},
+      "emptyStrings": {},
+      "orphanedKeys": {
+        "zh": 4,
+        "es": 4,
+        "ru": 5,
+        "de": 4,
+        "fr": 4,
+        "pl": 4
+      },
+      "identicalToEnglish": {
+        "zh": 7,
+        "es": 18,
+        "ru": 12,
+        "de": 36,
+        "fr": 34,
+        "pl": 21
+      }
+    }
+  },
+  "forum": {
+    "namespace": "forum",
+    "languages": {
+      "zh": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "form.assetTypeEtf"
+        ]
+      },
+      "es": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "report.reasons.spam",
+          "form.assetTypeEtf",
+          "achievements.tabsSocial"
+        ]
+      },
+      "ru": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "form.assetTypeEtf"
+        ]
+      },
+      "de": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "report.reasons.spam",
+          "community",
+          "forumTitle",
+          "form.symbolLabel",
+          "form.assetTypeIndex",
+          "form.assetTypeEtf",
+          "achievements.tabsForum",
+          "leaderboard.tabReputation",
+          "leaderboard.labelReputation",
+          "featured.trending"
+        ]
+      },
+      "fr": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "date",
+          "report.reasons.spam",
+          "forumTitle",
+          "discussions",
+          "discussionsCount",
+          "form.assetTypeCrypto",
+          "form.assetTypeEtf",
+          "achievements.tabsForum",
+          "achievements.tabsSocial",
+          "achievements.pointsSuffix"
+        ]
+      },
+      "pl": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "report.reasons.spam",
+          "forumTitle",
+          "form.assetTypeEtf",
+          "achievements.tabsForum"
+        ]
+      }
+    },
+    "summary": {
+      "totalKeys": 181,
+      "missingKeys": {},
+      "emptyStrings": {},
+      "orphanedKeys": {},
+      "identicalToEnglish": {
+        "zh": 1,
+        "es": 3,
+        "ru": 1,
+        "de": 10,
+        "fr": 10,
+        "pl": 4
+      }
+    }
+  },
+  "profile": {
+    "namespace": "profile",
+    "languages": {
+      "zh": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "es": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "ru": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "de": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "stats.reputation"
+        ]
+      },
+      "fr": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "pl": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      }
+    },
+    "summary": {
+      "totalKeys": 17,
+      "missingKeys": {},
+      "emptyStrings": {},
+      "orphanedKeys": {},
+      "identicalToEnglish": {
+        "de": 1
+      }
+    }
+  },
+  "analytics": {
+    "namespace": "analytics",
+    "languages": {
+      "zh": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "es": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "ru": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "de": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "fr": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "pl": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      }
+    },
+    "summary": {
+      "totalKeys": 8,
+      "missingKeys": {},
+      "emptyStrings": {},
+      "orphanedKeys": {},
+      "identicalToEnglish": {}
+    }
+  },
+  "education": {
+    "namespace": "education",
+    "languages": {
+      "zh": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "es": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "courses.video",
+          "course.portfolio-management.module.pm-module-6.lesson.pm-lesson-6-3.title",
+          "course.advanced-trading.module.at-module-2.lesson.at-lesson-2-2.title"
+        ]
+      },
+      "ru": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "de": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "learningHub.title",
+          "learningHub.articlesInCategory",
+          "courses.video",
+          "courses.miniQuiz",
+          "courses.quiz",
+          "course.portfolio-management.module.pm-module-6.lesson.pm-lesson-6-3.title",
+          "course.risk-management.module.rm-module-3.lesson.rm-lesson-3-4.title",
+          "course.advanced-trading.module.at-module-2.lesson.at-lesson-2-2.title",
+          "course.advanced-trading.module.at-module-5.lesson.at-lesson-5-1.title"
+        ]
+      },
+      "fr": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "learningHub.difficultyExpert",
+          "learningHub.articlesCount",
+          "learningHub.articlesCountSingle",
+          "advanced.difficultyExpert",
+          "courses.modules",
+          "courses.quiz",
+          "courses.questions",
+          "courses.module",
+          "course.portfolio-management.module.pm-module-6.lesson.pm-lesson-6-3.title",
+          "course.advanced-trading.module.at-module-2.lesson.at-lesson-2-2.title"
+        ]
+      },
+      "pl": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "courses.quiz",
+          "course.portfolio-management.module.pm-module-6.lesson.pm-lesson-6-3.title"
+        ]
+      }
+    },
+    "summary": {
+      "totalKeys": 267,
+      "missingKeys": {},
+      "emptyStrings": {},
+      "orphanedKeys": {},
+      "identicalToEnglish": {
+        "es": 3,
+        "de": 9,
+        "fr": 10,
+        "pl": 2
+      }
+    }
+  },
+  "common": {
+    "namespace": "common",
+    "languages": {
+      "zh": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": []
+      },
+      "es": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "error",
+          "no",
+          "ok"
+        ]
+      },
+      "ru": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "ok"
+        ]
+      },
+      "de": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "ok"
+        ]
+      },
+      "fr": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "ok"
+        ]
+      },
+      "pl": {
+        "exists": true,
+        "missingKeys": [],
+        "emptyStrings": [],
+        "orphanedKeys": [],
+        "identicalToEnglish": [
+          "ok"
+        ]
+      }
+    },
+    "summary": {
+      "totalKeys": 24,
+      "missingKeys": {},
+      "emptyStrings": {},
+      "orphanedKeys": {},
+      "identicalToEnglish": {
+        "es": 3,
+        "ru": 1,
+        "de": 1,
+        "fr": 1,
+        "pl": 1
+      }
+    }
+  }
+}

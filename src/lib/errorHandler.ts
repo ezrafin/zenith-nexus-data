@@ -73,7 +73,7 @@ class ErrorHandler {
         originalError: error,
         context,
         retryable: true,
-        userMessage: 'Unable to connect to the server. Please check your internet connection and try again.',
+        userMessage: 'errors.system.networkError', // Translation key - will be translated by useErrorHandler
       };
     }
 
@@ -88,7 +88,7 @@ class ErrorHandler {
           originalError: error,
           context,
           retryable: false,
-          userMessage: 'The information you provided is invalid. Please check and try again.',
+          userMessage: 'errors.system.validationError', // Translation key
         };
       }
 
@@ -99,7 +99,7 @@ class ErrorHandler {
           originalError: error,
           context,
           retryable: false,
-          userMessage: 'Please sign in to continue.',
+          userMessage: 'errors.system.authenticationError', // Translation key
         };
       }
 
@@ -110,7 +110,7 @@ class ErrorHandler {
           originalError: error,
           context,
           retryable: false,
-          userMessage: 'You do not have permission to perform this action.',
+          userMessage: 'errors.system.authorizationError', // Translation key
         };
       }
 
@@ -121,7 +121,7 @@ class ErrorHandler {
           originalError: error,
           context,
           retryable: false,
-          userMessage: 'The requested resource could not be found.',
+          userMessage: 'errors.system.notFoundError', // Translation key
         };
       }
 
@@ -132,7 +132,7 @@ class ErrorHandler {
           originalError: error,
           context,
           retryable: true,
-          userMessage: 'A server error occurred. Please try again later.',
+          userMessage: 'errors.system.serverError', // Translation key
         };
       }
     }
@@ -145,7 +145,7 @@ class ErrorHandler {
         originalError: error,
         context,
         retryable: false,
-        userMessage: 'An unexpected error occurred. Please try again.',
+        userMessage: 'errors.system.unexpectedError', // Translation key
       };
     }
 
@@ -156,7 +156,7 @@ class ErrorHandler {
       originalError: error,
       context,
       retryable: false,
-      userMessage: 'Something went wrong. Please try again.',
+      userMessage: 'errors.system.unknownError', // Translation key
     };
   }
 

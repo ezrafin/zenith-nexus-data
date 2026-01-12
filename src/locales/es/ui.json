@@ -146,8 +146,6 @@
     "reportMarkedResolved": "Reporte marcado como resuelto",
     "failedToLoadReports": "Error al cargar reportes",
     "pleaseSignInToBookmarkDiscussions": "Por favor, inicia sesión para guardar discusiones",
-    "addedToBookmarks": "Añadido a favoritos",
-    "removedFromBookmarks": "Eliminado de favoritos",
     "pleaseSignInToFollowDiscussions": "Por favor, inicia sesión para seguir discusiones",
     "followingDiscussion": "Siguiendo discusión",
     "unfollowedDiscussion": "Dejaste de seguir discusión"
@@ -158,7 +156,17 @@
     "failedToPost": "Error al publicar",
     "failedToUpdate": "Error al actualizar",
     "failedToDelete": "Error al eliminar",
-    "failedToCreate": "Error al crear"
+    "failedToCreate": "Error al crear",
+    "system": {
+      "networkError": "No se puede conectar al servidor. Por favor, verifique su conexión a Internet e intente nuevamente.",
+      "validationError": "La información que proporcionó no es válida. Por favor, verifique e intente nuevamente.",
+      "authenticationError": "Por favor, inicie sesión para continuar.",
+      "authorizationError": "No tiene permiso para realizar esta acción.",
+      "notFoundError": "No se pudo encontrar el recurso solicitado.",
+      "serverError": "Ocurrió un error en el servidor. Por favor, intente más tarde.",
+      "unexpectedError": "Ocurrió un error inesperado. Por favor, intente nuevamente.",
+      "unknownError": "Algo salió mal. Por favor, intente nuevamente."
+    }
   },
   "messages": {
     "loading": "Cargando...",
@@ -367,34 +375,22 @@
   },
   "careersPage": {
     "badge": "Carreras",
-    "heroTitle": "Únete a nuestro equipo",
-    "heroSubtitle": "Ayúdanos a democratizar el acceso a datos financieros profesionales. Construimos el futuro del análisis de inversiones.",
-    "positionsTitle": "Vacantes",
-    "ctaTitle": "¿Te interesa nuestra misión?",
-    "ctaSubtitle": "Siempre buscamos talento en IT y Finanzas. Envíanos tu CV y te tendremos en cuenta.",
-    "ctaButton": "Enviar tu CV",
+    "heroTitle": "Únete a Nuestro Equipo",
+    "heroSubtitle": "Construye el futuro de la educación financiera y el análisis de mercados",
+    "positionsTitle": "Posiciones Abiertas",
+    "posDesigner": "Buscamos un diseñador de productos talentoso para unirse a nuestro equipo en Lugano. Trabajarás diseñando experiencias de usuario intuitivas para nuestra plataforma financiera.",
     "typeLabel": "Tipo",
-    "posDesigner": "Diseña experiencias de usuario intuitivas para nuestras herramientas.",
+    "fullTime": "Tiempo completo",
+    "fulltime": "Tiempo completo",
+    "partTime": "Medio tiempo",
+    "parttime": "Medio tiempo",
+    "contract": "Contrato",
+    "internship": "Prácticas",
+    "ctaTitle": "¿No ves un rol que se ajuste?",
+    "ctaSubtitle": "Siempre estamos buscando personas talentosas. Envíanos tu currículum y te tendremos en cuenta para futuras oportunidades.",
+    "ctaButton": "Aplicar Ahora",
     "form": {
-      "title": "Solicitud de Empleo",
-      "fullName": "Nombre Completo",
-      "fullNamePlaceholder": "Ingresa tu nombre completo",
-      "phone": "Número de Teléfono",
-      "phonePlaceholder": "+34 612 345 678",
-      "email": "Email (opcional)",
-      "emailPlaceholder": "tu@email.com",
-      "cv": "CV / Currículum",
-      "cvPlaceholder": "Clic para subir CV (PDF, DOC, DOCX)",
-      "cvHint": "Tamaño máximo: 10MB. Formatos: PDF, DOC, DOCX",
-      "links": "Enlaces (opcional)",
-      "linksPlaceholder": "https://github.com/usuario",
-      "addLink": "Agregar otro enlace",
-      "cancel": "Cancelar",
-      "submit": "Enviar Solicitud",
-      "submitting": "Enviando...",
-      "success": "¡Solicitud enviada exitosamente!",
-      "error": "Error al enviar. Por favor intenta de nuevo.",
-      "fileTooLarge": "Archivo muy grande. Máximo 10MB."
+      "title": "Solicitud de Trabajo"
     }
   },
   "authorsPage": {
@@ -543,39 +539,6 @@
     "tabActivity": "Actividad",
     "activityTitle": "Actividad"
   },
-  "advertisePage": {
-    "badge": "Publicidad",
-    "heroTitle": "Llega a inversores serios",
-    "heroSubtitle": "Conecta tu marca con nuestra audiencia altamente comprometida de inversores, traders y profesionales.",
-    "statsVisitors": "Visitantes mensuales",
-    "statsPageViews": "Vistas de página",
-    "statsSubscribers": "Suscriptores del boletín",
-    "statsHnwi": "Público de alto patrimonio",
-    "solutionsTitle": "Soluciones publicitarias",
-    "solutionsSubtitle": "Elige entre nuestras opciones para cumplir tus objetivos de marketing.",
-    "formatDisplayTitle": "Publicidad display",
-    "formatDisplayDesc": "Ubicaciones premium de banners en varios tamaños y formatos.",
-    "formatDisplayPrice": "Desde $15 CPM",
-    "formatSponsoredTitle": "Contenido patrocinado",
-    "formatSponsoredDesc": "Artículos y reportes nativos que se integran de forma natural.",
-    "formatSponsoredPrice": "Desde $5,000",
-    "formatNewsletterTitle": "Patrocinios de newsletter",
-    "formatNewsletterDesc": "Llega a nuestra audiencia de email con espacios dedicados o destacados.",
-    "formatNewsletterPrice": "Desde $2,500",
-    "formatCustomTitle": "Campañas a medida",
-    "formatCustomDesc": "Soluciones personalizadas según tus objetivos.",
-    "formatCustomPrice": "Precios personalizados",
-    "audienceTitle": "Nuestra audiencia",
-    "audienceSubtitle": "Lectores financieramente sofisticados que gestionan activamente sus inversiones.",
-    "audiencePoint1": "Cartera promedio: $500K+",
-    "audiencePoint2": "70% toma decisiones de inversión semanalmente",
-    "audiencePoint3": "60% son profesionales financieros",
-    "audiencePoint4": "Duración media de sesión: 8 minutos",
-    "ctaTitle": "Solicita el Media Kit",
-    "ctaSubtitle": "Descarga nuestro media kit o habla con el equipo comercial.",
-    "ctaDownload": "Descargar Media Kit",
-    "ctaContact": "Contactar ventas"
-  },
   "marketTable": {
     "symbol": "Símbolo",
     "name": "Nombre",
@@ -658,7 +621,8 @@
     "closeMenu": "Cerrar menú",
     "openMenu": "Abrir menú",
     "bookmark": "Marcar",
-    "bookmarked": "Marcado"
+    "bookmarked": "Marcado",
+    "skipToMainContent": "Saltar al contenido principal"
   },
   "articles": {
     "keyTakeaways": "Puntos clave",
@@ -695,7 +659,8 @@
     "asiaPacific": "Asia Pacífico",
     "middleEastAfrica": "Medio Oriente y África",
     "latinAmerica": "América Latina",
-    "global": "Global"
+    "global": "Global",
+    "exchange": "Intercambio"
   },
   "organizationCard": {
     "broker": "Corredor",
@@ -714,7 +679,8 @@
     "user": "usuario",
     "users": "usuarios",
     "yourRating": "Tu calificación para esta empresa",
-    "regulatedBy": "Regulado por: {{regulators}}"
+    "regulatedBy": "Regulado por: {{regulators}}",
+    "exchange": "Intercambio"
   },
   "videoFilters": {
     "searchPlaceholder": "Buscar videos...",
@@ -734,7 +700,7 @@
   },
   "billCollection": {
     "title": "Colección de Monedas",
-    "description": "¡Recolecta las 42 monedas!",
+    "description": "Recolecta 41 monedas y recibe un descuento de €50 en el programa de inversión de nuestro socio.\nRecolecta la moneda legendaria final para desbloquear acceso gratuito al curso de inversores.",
     "subtitle": "Recolecta las 42 monedas explorando la plataforma. Rastrea tu progreso y visualiza las monedas recolectadas.",
     "progress": "Progreso",
     "complete": "completado",
@@ -826,12 +792,6 @@
   "pagination": {
     "previous": "Anterior",
     "next": "Siguiente"
-  },
-  "careersPage": {
-    "fullTime": "Tiempo Completo",
-    "partTime": "Medio Tiempo",
-    "contract": "Contrato",
-    "internship": "Prácticas"
   },
   "cookieBanner": {
     "title": "Usamos cookies",
@@ -945,25 +905,5 @@
     "visibilityPublic": "Público - Cualquiera puede ver",
     "visibilityFriends": "Amigos - Solo usuarios seguidos",
     "visibilityPrivate": "Privado - Solo tú"
-  },
-  "careersPage": {
-    "badge": "Carreras",
-    "heroTitle": "Únete a Nuestro Equipo",
-    "heroSubtitle": "Construye el futuro de la educación financiera y el análisis de mercados",
-    "positionsTitle": "Posiciones Abiertas",
-    "posDesigner": "Buscamos un diseñador de productos talentoso para unirse a nuestro equipo en Lugano. Trabajarás diseñando experiencias de usuario intuitivas para nuestra plataforma financiera.",
-    "typeLabel": "Tipo",
-    "fullTime": "Tiempo completo",
-    "fulltime": "Tiempo completo",
-    "partTime": "Medio tiempo",
-    "parttime": "Medio tiempo",
-    "contract": "Contrato",
-    "internship": "Prácticas",
-    "ctaTitle": "¿No ves un rol que se ajuste?",
-    "ctaSubtitle": "Siempre estamos buscando personas talentosas. Envíanos tu currículum y te tendremos en cuenta para futuras oportunidades.",
-    "ctaButton": "Aplicar Ahora",
-    "form": {
-      "title": "Solicitud de Trabajo"
-    }
   }
 }

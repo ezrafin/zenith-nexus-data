@@ -156,7 +156,17 @@
     "failedToPost": "Failed to post",
     "failedToUpdate": "Failed to update",
     "failedToDelete": "Failed to delete",
-    "failedToCreate": "Failed to create"
+    "failedToCreate": "Failed to create",
+    "system": {
+      "networkError": "Unable to connect to the server. Please check your internet connection and try again.",
+      "validationError": "The information you provided is invalid. Please check and try again.",
+      "authenticationError": "Please sign in to continue.",
+      "authorizationError": "You do not have permission to perform this action.",
+      "notFoundError": "The requested resource could not be found.",
+      "serverError": "A server error occurred. Please try again later.",
+      "unexpectedError": "An unexpected error occurred. Please try again.",
+      "unknownError": "Something went wrong. Please try again."
+    }
   },
   "messages": {
     "loading": "Loading...",
@@ -664,7 +674,8 @@
     "closeMenu": "Close menu",
     "openMenu": "Open menu",
     "bookmark": "Bookmark",
-    "bookmarked": "Bookmarked"
+    "bookmarked": "Bookmarked",
+    "skipToMainContent": "Skip to main content"
   },
   "articles": {
     "keyTakeaways": "Key Takeaways",
@@ -759,7 +770,7 @@
   },
   "billCollection": {
     "title": "Coin Collection",
-    "description": "Collect all 42 coins!",
+    "description": "Collect 41 coins and receive a €50 discount on our partner's investment program.\nCollect the final legendary coin to unlock free access to the investor course.",
     "subtitle": "Collect all 42 coins by exploring the platform. Track your progress and view collected coins.",
     "progress": "Progress",
     "complete": "complete",

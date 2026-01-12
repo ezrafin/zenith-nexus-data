@@ -3747,7 +3747,21 @@ Environmental, Social, and Governance (ESG) factors have become increasingly imp
 
 ESG integration represents a fundamental shift in how investors evaluate companies and construct portfolios. Rather than treating ESG as a separate consideration, integration embeds ESG factors throughout the investment process, recognizing that ESG issues can materially impact company performance, risk profiles, and long-term value creation.
 
-For investors, ESG integration offers potential benefits: improved risk management, identification of opportunities, and alignment with stakeholder values. However, ESG integration also presents challenges: data quality, measurement difficulties, and the need for specialized expertise. Success requires understanding ESG frameworks, data sources, and integration methodologies.
+For investors, ESG integration offers potential benefits:
+
+- **Improved risk management** by identifying and addressing ESG-related risks before they materialize
+- **Identification of opportunities** through companies that are well-positioned for sustainability trends
+- **Alignment with stakeholder values** including clients, beneficiaries, and broader society
+- **Potential for enhanced returns** through better risk-adjusted performance over the long term
+
+However, ESG integration also presents challenges:
+
+- **Data quality issues** with inconsistent reporting and limited standardization across companies
+- **Measurement difficulties** as many ESG factors are qualitative and difficult to quantify
+- **Need for specialized expertise** requiring ESG knowledge and analytical capabilities
+- **Methodological complexity** in determining which ESG factors are material and how to weight them
+
+Success requires understanding ESG frameworks, data sources, and integration methodologies.
 
 ## Understanding ESG Factors
 

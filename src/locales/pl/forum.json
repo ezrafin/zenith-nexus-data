@@ -23,7 +23,28 @@
   "follow": "Obserwuj",
   "unfollow": "Przestań obserwować",
   "share": "Udostępnij",
-  "report": "Zgłoś",
+  "report": {
+    "title": "Zgłoś treść",
+    "description": "Pomóż nam utrzymać bezpieczną i szanującą społeczność, zgłaszając nieodpowiednią treść.",
+    "reasonLabel": "Powód zgłoszenia",
+    "reasonPlaceholder": "Wybierz powód",
+    "detailsLabel": "Dodatkowe szczegóły (opcjonalnie)",
+    "detailsPlaceholder": "Podaj dodatkowe informacje...",
+    "cancel": "Anuluj",
+    "submitting": "Wysyłanie...",
+    "submit": "Wyślij zgłoszenie",
+    "pleaseSelectReason": "Proszę wybrać powód",
+    "submitted": "Zgłoszenie wysłane. Dziękujemy za pomoc w utrzymaniu bezpieczeństwa naszej społeczności.",
+    "failedToSubmit": "Nie udało się wysłać zgłoszenia",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Nękanie lub zastraszanie",
+      "misinformation": "Dezinformacja",
+      "inappropriate": "Nieodpowiednia treść",
+      "copyright": "Naruszenie praw autorskich",
+      "other": "Inne"
+    }
+  },
   "noDiscussions": "Brak dyskusji",
   "beFirstToStart": "Bądź pierwszy i rozpocznij dyskusję",
   "newDiscussion": "Nowa dyskusja",
@@ -37,7 +58,12 @@
   "community": "Społeczność",
   "forumTitle": "Forum",
   "forumDescription": "Dyskutuj o strategiach inwestycyjnych, dziel się doświadczeniami i analizuj rynki ze społecznością",
-  "categories": "Kategorie",
+  "categories": {
+    "clearFilter": "Wyczyść filtr",
+    "trendingTopics": "Popularne dyskusje",
+    "viewAllTrending": "Zobacz wszystkie popularne →",
+    "noTrendingTopics": "Obecnie brak popularnych tematów"
+  },
   "errorLoadingCategories": "Błąd ładowania kategorii",
   "tryAgain": "Spróbuj ponownie",
   "topics": "tematów",
@@ -160,28 +186,6 @@
     "showPreview": "Pokaż podgląd",
     "emptyPreview": "Podgląd pojawi się tutaj, gdy zaczniesz pisać"
   },
-  "report": {
-    "title": "Zgłoś treść",
-    "description": "Pomóż nam utrzymać bezpieczną i szanującą społeczność, zgłaszając nieodpowiednią treść.",
-    "reasonLabel": "Powód zgłoszenia",
-    "reasonPlaceholder": "Wybierz powód",
-    "detailsLabel": "Dodatkowe szczegóły (opcjonalnie)",
-    "detailsPlaceholder": "Podaj dodatkowe informacje...",
-    "cancel": "Anuluj",
-    "submitting": "Wysyłanie...",
-    "submit": "Wyślij zgłoszenie",
-    "pleaseSelectReason": "Proszę wybrać powód",
-    "submitted": "Zgłoszenie wysłane. Dziękujemy za pomoc w utrzymaniu bezpieczeństwa naszej społeczności.",
-    "failedToSubmit": "Nie udało się wysłać zgłoszenia",
-    "reasons": {
-      "spam": "Spam",
-      "harassment": "Nękanie lub zastraszanie",
-      "misinformation": "Dezinformacja",
-      "inappropriate": "Nieodpowiednia treść",
-      "copyright": "Naruszenie praw autorskich",
-      "other": "Inne"
-    }
-  },
   "topicPage": {
     "topicNotFound": "Temat nie znaleziony",
     "backToForum": "Powrót do forum",
@@ -191,16 +195,17 @@
     "views": "wyświetlenia",
     "likes": "polubienia"
   },
-  "categories": {
-    "clearFilter": "Wyczyść filtr",
-    "trendingTopics": "Popularne dyskusje",
-    "viewAllTrending": "Zobacz wszystkie popularne →",
-    "noTrendingTopics": "Obecnie brak popularnych tematów"
-  },
   "featured": {
     "title": "Polecane",
     "new": "Nowe",
     "hot": "Gorące",
     "trending": "Popularne"
+  },
+  "moderation": {
+    "pendingTitle": "Dyskusja przesłana do przeglądu",
+    "pendingMessage": "Twoja dyskusja została przesłana i oczekuje na moderację. Pojawi się na forum po zatwierdzeniu przez administratora.",
+    "discussionTitle": "Twoja dyskusja:",
+    "backToForum": "Wróć do forum",
+    "createAnother": "Utwórz kolejną dyskusję"
   }
 }

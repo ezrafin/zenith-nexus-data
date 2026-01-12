@@ -109,11 +109,11 @@ export function BugReportForm({ onClose }: BugReportFormProps) {
         />
       </div>
 
-      <div className="flex gap-3 pt-4">
-        <Button type="button" variant="outline" onClick={onClose} className="flex-1">
+      <div className="flex flex-col sm:flex-row gap-3 pt-4">
+        <Button type="button" variant="outline" onClick={onClose} className="flex-1 min-h-[44px]">
           {t('contactPage.bugReport.cancel')}
         </Button>
-        <Button type="submit" disabled={isSubmitting} className="flex-1">
+        <Button type="submit" disabled={isSubmitting} className="flex-1 min-h-[44px]">
           {isSubmitting ? (
             <>
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />

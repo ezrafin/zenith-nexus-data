@@ -111,7 +111,7 @@ export default function AnalyticsPage() {
                   size="sm"
                   onClick={() => handleFilterChange(filter.value)}
                   className={cn(
-                    'whitespace-nowrap',
+                    'whitespace-nowrap min-h-[44px]',
                     activeFilter === filter.value && 'bg-primary text-primary-foreground'
                   )}
                 >
@@ -130,7 +130,7 @@ export default function AnalyticsPage() {
                 size="sm"
                 onClick={() => handleAuthorChange(null)}
                 className={cn(
-                  'whitespace-nowrap',
+                  'whitespace-nowrap min-h-[44px]',
                   activeAuthor === null && 'bg-primary text-primary-foreground'
                 )}
               >
@@ -143,18 +143,18 @@ export default function AnalyticsPage() {
                   size="sm"
                   onClick={() => handleAuthorChange(author.display_name)}
                   className={cn(
-                    'whitespace-nowrap flex items-center gap-2',
+                    'whitespace-nowrap flex items-center gap-2 min-h-[44px]',
                     activeAuthor === author.display_name && 'bg-primary text-primary-foreground'
                   )}
                 >
-                  <Avatar className="h-5 w-5">
+                  <Avatar className="h-5 w-5 flex-shrink-0">
                     <AvatarImage src={author.avatar_url || undefined} alt={author.display_name} />
                     <AvatarFallback className="text-[10px]">
                       {getInitials(author.display_name)}
                     </AvatarFallback>
                   </Avatar>
-                  {author.display_name}
-                  <span className="text-xs opacity-70">({authorCounts[author.display_name] || 0})</span>
+                  <span className="truncate max-w-[120px] sm:max-w-none">{author.display_name}</span>
+                  <span className="text-xs opacity-70 flex-shrink-0">({authorCounts[author.display_name] || 0})</span>
                 </Button>
               ))}
             </div>

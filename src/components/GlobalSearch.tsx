@@ -367,7 +367,7 @@ export function GlobalSearch() {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent 
-          className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[80vh] flex flex-col relative [&>button]:hidden"
+          className="overflow-hidden p-0 shadow-lg max-w-2xl max-h-[90vh] sm:max-h-[80vh] flex flex-col relative [&>button]:hidden w-[calc(100vw-2rem)] sm:w-full"
           style={{
             position: 'fixed',
             top: '50%',

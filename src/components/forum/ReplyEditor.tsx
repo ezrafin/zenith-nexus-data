@@ -135,14 +135,14 @@ export function ReplyEditor({
   return (
     <form onSubmit={handleSubmit} className={cn('space-y-4', className)}>
       {/* Toolbar */}
-      <div className="flex items-center gap-1 p-2 border border-border rounded-lg bg-secondary/30 flex-wrap">
+      <div className="flex items-center gap-1 p-2 border border-border rounded-lg bg-secondary/30 flex-wrap overflow-x-auto sm:overflow-visible">
         {/* Text formatting */}
         <Button
           type="button"
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('**', '**')}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('bold', { ns: 'ui' }) + ' (Ctrl+B)'}
         >
           <Bold className="h-4 w-4" />
@@ -152,7 +152,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('*', '*')}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('italic', { ns: 'ui' }) + ' (Ctrl+I)'}
         >
           <Italic className="h-4 w-4" />
@@ -162,7 +162,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('~~', '~~')}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('strikethrough', { ns: 'ui' })}
         >
           <Strikethrough className="h-4 w-4" />
@@ -176,7 +176,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('> ', '', true)}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('quote', { ns: 'ui' })}
         >
           <Quote className="h-4 w-4" />
@@ -186,7 +186,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('`', '`')}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('inlineCode', { ns: 'ui' })}
         >
           <Code className="h-4 w-4" />
@@ -196,7 +196,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('```\n', '\n```', true)}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('codeBlock', { ns: 'ui' })}
         >
           <FileCode className="h-4 w-4" />
@@ -210,7 +210,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('- ', '', true)}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('bulletList', { ns: 'ui' })}
         >
           <List className="h-4 w-4" />
@@ -220,7 +220,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('1. ', '', true)}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('numberedList', { ns: 'ui' })}
         >
           <ListOrdered className="h-4 w-4" />
@@ -234,7 +234,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('[', '](url)')}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('insertLink', { ns: 'ui' })}
         >
           <LinkIcon className="h-4 w-4" />
@@ -244,7 +244,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => insertMarkdown('## ', '', true)}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={t('heading', { ns: 'ui' })}
         >
           <Heading2 className="h-4 w-4" />
@@ -258,7 +258,7 @@ export function ReplyEditor({
           variant="ghost"
           size="sm"
           onClick={() => setShowPreview(!showPreview)}
-          className="h-8 w-8 p-0"
+          className="h-9 w-9 sm:h-8 sm:w-8 p-0 flex-shrink-0"
           title={showPreview ? t('editor.hidePreview') : t('editor.showPreview')}
         >
           {showPreview ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}

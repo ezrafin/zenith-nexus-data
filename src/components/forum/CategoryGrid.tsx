@@ -94,9 +94,10 @@ export function CategoryGrid({ categories, selectedCategoryId, onCategoryClick }
             <button
               onClick={() => handleClick(category.id)}
               className={cn(
-                'w-full p-4 rounded-xl border-2 transition-all duration-300 text-left group',
+                'w-full p-3 sm:p-4 rounded-xl border-2 transition-all duration-300 text-left group min-h-[120px] sm:min-h-[140px]',
                 'hover:scale-105 hover:shadow-lg hover:shadow-primary/5',
                 'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
+                'active:scale-95',
                 isSelected
                   ? `${colors.bg} ${colors.border} border-2 shadow-md`
                   : 'bg-card border-border/60 hover:border-primary/30'

@@ -23,7 +23,28 @@
   "follow": "Seguir",
   "unfollow": "Dejar de seguir",
   "share": "Compartir",
-  "report": "Reportar",
+  "report": {
+    "title": "Reportar contenido",
+    "description": "Ayúdanos a mantener una comunidad segura y respetuosa reportando contenido inapropiado.",
+    "reasonLabel": "Razón del reporte",
+    "reasonPlaceholder": "Selecciona una razón",
+    "detailsLabel": "Detalles adicionales (opcional)",
+    "detailsPlaceholder": "Proporciona información adicional...",
+    "cancel": "Cancelar",
+    "submitting": "Enviando...",
+    "submit": "Enviar reporte",
+    "pleaseSelectReason": "Por favor, selecciona una razón",
+    "submitted": "Reporte enviado. Gracias por ayudarnos a mantener nuestra comunidad segura.",
+    "failedToSubmit": "Error al enviar reporte",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Acoso o intimidación",
+      "misinformation": "Desinformación",
+      "inappropriate": "Contenido inapropiado",
+      "copyright": "Violación de derechos de autor",
+      "other": "Otro"
+    }
+  },
   "noDiscussions": "Aún no hay discusiones",
   "beFirstToStart": "Sé el primero en iniciar una discusión",
   "newDiscussion": "Nueva discusión",
@@ -37,7 +58,12 @@
   "community": "Comunidad",
   "forumTitle": "Foro",
   "forumDescription": "Discute estrategias de inversión, comparte experiencias y analiza mercados con la comunidad",
-  "categories": "Categorías",
+  "categories": {
+    "clearFilter": "Limpiar filtro",
+    "trendingTopics": "Discusiones populares",
+    "viewAllTrending": "Ver todas las populares →",
+    "noTrendingTopics": "No hay temas populares en este momento"
+  },
   "errorLoadingCategories": "Error al cargar categorías",
   "tryAgain": "Intentar de nuevo",
   "topics": "temas",
@@ -160,28 +186,6 @@
     "showPreview": "Mostrar vista previa",
     "emptyPreview": "La vista previa aparecerá aquí cuando comiences a escribir"
   },
-  "report": {
-    "title": "Reportar contenido",
-    "description": "Ayúdanos a mantener una comunidad segura y respetuosa reportando contenido inapropiado.",
-    "reasonLabel": "Razón del reporte",
-    "reasonPlaceholder": "Selecciona una razón",
-    "detailsLabel": "Detalles adicionales (opcional)",
-    "detailsPlaceholder": "Proporciona información adicional...",
-    "cancel": "Cancelar",
-    "submitting": "Enviando...",
-    "submit": "Enviar reporte",
-    "pleaseSelectReason": "Por favor, selecciona una razón",
-    "submitted": "Reporte enviado. Gracias por ayudarnos a mantener nuestra comunidad segura.",
-    "failedToSubmit": "Error al enviar reporte",
-    "reasons": {
-      "spam": "Spam",
-      "harassment": "Acoso o intimidación",
-      "misinformation": "Desinformación",
-      "inappropriate": "Contenido inapropiado",
-      "copyright": "Violación de derechos de autor",
-      "other": "Otro"
-    }
-  },
   "topicPage": {
     "topicNotFound": "Tema no encontrado",
     "backToForum": "Volver al foro",
@@ -191,16 +195,17 @@
     "views": "vistas",
     "likes": "me gusta"
   },
-  "categories": {
-    "clearFilter": "Limpiar filtro",
-    "trendingTopics": "Discusiones populares",
-    "viewAllTrending": "Ver todas las populares →",
-    "noTrendingTopics": "No hay temas populares en este momento"
-  },
   "featured": {
     "title": "Destacado",
     "new": "Nuevo",
     "hot": "Popular",
     "trending": "Tendencia"
+  },
+  "moderation": {
+    "pendingTitle": "Discusión enviada para revisión",
+    "pendingMessage": "Su discusión ha sido enviada y está pendiente de moderación. Aparecerá en el foro una vez que un administrador la apruebe.",
+    "discussionTitle": "Su discusión:",
+    "backToForum": "Volver al foro",
+    "createAnother": "Crear otra discusión"
   }
 }
