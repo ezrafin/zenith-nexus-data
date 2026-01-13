@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
-import { UserPlus, UserCheck, TrendingUp, FileText, MessageSquare } from 'lucide-react';
+import { UserPlus, UserCheck, TrendingUp, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { UserAvatar } from '@/components/user/UserAvatar';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
-import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
 import { supabase } from '@/integrations/supabase/client';
-import { useUserFollow } from '@/hooks/useUserFollow';
 
 interface Author {
   id: string;
@@ -31,35 +29,27 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
 
   useEffect(() => {
     const loadAuthors = async () => {
-      if (!user) {
-        setLoading(false);
-        return;
-      }
-
       try {
         // Get top users by reputation_score or posts_count
         const { data: profiles, error: profilesError } = await supabase
           .from('profiles')
           .select('id, username, display_name, avatar_url, bio, reputation_score, posts_count')
-          .neq('id', user.id) // Exclude current user
-          .not('reputation_score', 'is', null)
-          .order('reputation_score', { ascending: false })
-          .limit(limit * 2); // Get more to filter out already following
+          .order('reputation_score', { ascending: false, nullsFirst: false })
+          .limit(limit);
 
-        if (profilesError) throw profilesError;
+        if (profilesError) {
+          console.error('Error loading profiles:', profilesError);
+          setLoading(false);
+          return;
+        }
 
-        // Get list of users current user is following
-        const { data: following, error: followingError } = await supabase
-          .from('user_follows' as any)
-          .select('following_id')
-          .eq('follower_id', user.id);
+        // Filter out current user if logged in
+        const filteredProfiles = user 
+          ? (profiles || []).filter((p: any) => p.id !== user.id)
+          : (profiles || []);
 
-        if (followingError) throw followingError;
-
-        const followingIds = new Set((following || []).map((f: any) => f.following_id));
-
-        // Map profiles to authors and filter
-        const mappedAuthors: Author[] = (profiles || [])
+        // Map profiles to authors
+        const mappedAuthors: Author[] = filteredProfiles
           .map((profile: any) => ({
             id: profile.id,
             username: profile.username,
@@ -68,34 +58,21 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
             bio: profile.bio,
             reputation: profile.reputation_score || 0,
             post_count: profile.posts_count || 0,
-            comment_count: 0, // Not available in profiles table
-            is_following: followingIds.has(profile.id),
+            comment_count: 0,
+            is_following: false, // Simplified - no follow tracking for now
           }))
-          .slice(0, limit); // Take only the requested limit
+          .slice(0, limit);
 
         setAuthors(mappedAuthors);
       } catch (error) {
         console.error('Error loading authors:', error);
-        toast.error(t('errors.failedToLoad', 'Failed to load authors'));
       } finally {
         setLoading(false);
       }
     };
 
     loadAuthors();
-  }, [user, limit, t]);
-
-  if (!user) {
-    return (
-      <div className={cn('premium-card p-6 text-center', className)}>
-        <UserPlus className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-        <p className="text-muted-foreground mb-2">{t('followAuthors.signInToFollow')}</p>
-        <Link to="/auth/login" className="text-primary hover:underline text-sm">
-          {t('buttons.signIn')}
-        </Link>
-      </div>
-    );
-  }
+  }, [user, limit]);
 
   if (loading) {
     return (
@@ -114,6 +91,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
   if (authors.length === 0) {
     return (
       <div className={cn('premium-card p-6 text-center', className)}>
+        <UserPlus className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
         <p className="text-muted-foreground">{t('followAuthors.noAuthorsFound')}</p>
       </div>
     );
@@ -141,47 +119,37 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
           };
 
           return (
-            <AuthorFollowItem
+            <AuthorCard
               key={author.id}
               author={author}
               profile={profile}
-              onFollowChange={(isFollowing) => {
-                setAuthors((prev) =>
-                  prev.map((a) =>
-                    a.id === author.id ? { ...a, is_following: isFollowing } : a
-                  )
-                );
-              }}
+              showFollowButton={!!user}
             />
           );
         })}
       </div>
+      
+      {!user && (
+        <div className="text-center pt-2">
+          <Link to="/auth/login" className="text-primary hover:underline text-sm">
+            {t('buttons.signIn')} {t('followAuthors.signInToFollow')}
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
 
-function AuthorFollowItem({
+function AuthorCard({
   author,
   profile,
-  onFollowChange,
+  showFollowButton,
 }: {
   author: Author;
   profile: any;
-  onFollowChange: (isFollowing: boolean) => void;
+  showFollowButton: boolean;
 }) {
   const { t } = useTranslation({ namespace: 'ui' });
-  const { isFollowing, loading, toggleFollow } = useUserFollow(author.id);
-
-  const handleToggle = async () => {
-    const previousState = isFollowing;
-    onFollowChange(!previousState); // Optimistic update
-    try {
-      await toggleFollow();
-    } catch (error) {
-      // Revert on error
-      onFollowChange(previousState);
-    }
-  };
 
   return (
     <div className="p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-all">
@@ -207,25 +175,19 @@ function AuthorFollowItem({
             </span>
           </div>
         </div>
-        <Button
-          variant={isFollowing ? 'outline' : 'default'}
-          size="sm"
-          onClick={handleToggle}
-          disabled={loading}
-          className="flex-shrink-0 self-center"
-        >
-          {isFollowing ? (
-            <>
-              <UserCheck className="h-3 w-3 mr-1" />
-              {t('followAuthors.following')}
-            </>
-          ) : (
-            <>
+        {showFollowButton && (
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="flex-shrink-0 self-center"
+          >
+            <Link to={`/users/${author.id}`}>
               <UserPlus className="h-3 w-3 mr-1" />
-              {t('followAuthors.follow')}
-            </>
-          )}
-        </Button>
+              {t('followAuthors.viewProfile', 'View')}
+            </Link>
+          </Button>
+        )}
       </div>
     </div>
   );
