@@ -215,13 +215,10 @@ export default function ModerationPage() {
   const handleDiscussionModeration = async (discussionId: string, action: 'approve' | 'reject') => {
     try {
       if (action === 'approve') {
-        // Mark as approved: update status to 'approved' and set is_featured to true
+        // Mark as approved: set is_featured to true
         const { error } = await supabase
           .from('forum_discussions')
-          .update({ 
-            status: 'approved',
-            is_featured: true 
-          })
+          .update({ is_featured: true })
           .eq('id', discussionId);
         if (error) throw error;
         
@@ -230,12 +227,10 @@ export default function ModerationPage() {
         
         toast.success(t('toast.discussionApproved'));
       } else {
-        // Mark as rejected: update status to 'rejected' (don't delete, so user can see it)
+        // Reject: delete the discussion
         const { error } = await supabase
           .from('forum_discussions')
-          .update({ 
-            status: 'rejected'
-          })
+          .delete()
           .eq('id', discussionId);
         if (error) throw error;
         
