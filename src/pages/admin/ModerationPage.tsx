@@ -216,33 +216,42 @@ export default function ModerationPage() {
     try {
       if (action === 'approve') {
         // Mark as approved: set is_featured to true
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('forum_discussions')
           .update({ is_featured: true })
-          .eq('id', discussionId);
+          .eq('id', discussionId)
+          .select(); // Select to verify update succeeded
+        
         if (error) throw error;
         
-        // Optimistically remove from pending list
+        // Check if update actually affected any rows
+        if (!data || data.length === 0) {
+          throw new Error('Update failed: No rows affected. Check RLS policies.');
+        }
+        
+        // Only update UI if update was successful
         setPendingDiscussions(prev => prev.filter(d => d.id !== discussionId));
         
         toast.success(t('toast.discussionApproved'));
+        
+        // Don't reload immediately - rely on optimistic update
+        // Only reload if there's a concern about consistency
       } else {
         // Reject: delete the discussion
         const { error } = await supabase
           .from('forum_discussions')
           .delete()
           .eq('id', discussionId);
+        
         if (error) throw error;
         
-        // Optimistically remove from pending list
+        // Only update UI if delete was successful
         setPendingDiscussions(prev => prev.filter(d => d.id !== discussionId));
         
         toast.success(t('toast.discussionRejectedDeleted'));
       }
-      
-      // Reload to ensure consistency (but UI already updated optimistically)
-      loadPendingDiscussions();
     } catch (error: any) {
+      console.error('Moderation error:', error);
       toast.error(error.message || t('toast.failedToUpdateDiscussion'));
       // Reload on error to restore correct state
       loadPendingDiscussions();
@@ -253,33 +262,45 @@ export default function ModerationPage() {
     try {
       if (action === 'approve') {
         // Mark as approved
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('forum_replies')
           .update({ is_approved: true })
-          .eq('id', replyId);
+          .eq('id', replyId)
+          .select(); // Select to verify update succeeded
+        
         if (error) throw error;
         
-        // Optimistically remove from pending list
+        // Check if update actually affected any rows
+        if (!data || data.length === 0) {
+          throw new Error('Update failed: No rows affected. Check RLS policies.');
+        }
+        
+        // Only update UI if update was successful
         setPendingReplies(prev => prev.filter(r => r.id !== replyId));
         
         toast.success(t('toast.replyApproved'));
       } else {
         // Mark as rejected: set is_approved to false
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('forum_replies')
           .update({ is_approved: false })
-          .eq('id', replyId);
+          .eq('id', replyId)
+          .select(); // Select to verify update succeeded
+        
         if (error) throw error;
         
-        // Optimistically remove from pending list
+        // Check if update actually affected any rows
+        if (!data || data.length === 0) {
+          throw new Error('Update failed: No rows affected. Check RLS policies.');
+        }
+        
+        // Only update UI if update was successful
         setPendingReplies(prev => prev.filter(r => r.id !== replyId));
         
         toast.success(t('toast.replyRejectedDeleted'));
       }
-      
-      // Reload to ensure consistency (but UI already updated optimistically)
-      loadPendingReplies();
     } catch (error: any) {
+      console.error('Moderation error:', error);
       toast.error(error.message || t('toast.failedToUpdateReply'));
       // Reload on error to restore correct state
       loadPendingReplies();
@@ -290,13 +311,20 @@ export default function ModerationPage() {
     try {
       if (action === 'approve') {
         // Mark as approved
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('company_evaluations')
           .update({ is_approved: true })
-          .eq('id', evaluationId);
+          .eq('id', evaluationId)
+          .select(); // Select to verify update succeeded
+        
         if (error) throw error;
         
-        // Optimistically remove from pending list
+        // Check if update actually affected any rows
+        if (!data || data.length === 0) {
+          throw new Error('Update failed: No rows affected. Check RLS policies.');
+        }
+        
+        // Only update UI if update was successful
         setPendingEvaluations(prev => prev.filter(e => e.id !== evaluationId));
         
         toast.success(t('toast.evaluationApproved'));
@@ -306,17 +334,16 @@ export default function ModerationPage() {
           .from('company_evaluations')
           .delete()
           .eq('id', evaluationId);
+        
         if (error) throw error;
         
-        // Optimistically remove from pending list
+        // Only update UI if delete was successful
         setPendingEvaluations(prev => prev.filter(e => e.id !== evaluationId));
         
         toast.success(t('toast.evaluationRejectedDeleted'));
       }
-      
-      // Reload to ensure consistency (but UI already updated optimistically)
-      loadPendingEvaluations();
     } catch (error: any) {
+      console.error('Moderation error:', error);
       toast.error(error.message || t('toast.failedToUpdateEvaluation'));
       // Reload on error to restore correct state
       loadPendingEvaluations();

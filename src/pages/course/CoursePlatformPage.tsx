@@ -99,6 +99,55 @@ export default function CoursePlatformPage() {
     return { unitIndex: -1, lessonIndex: -1 };
   }, [selectedLesson, course.units]);
 
+  // Generate videoId and find next video for prefetching
+  const { videoId, nextVideoUrl } = useMemo(() => {
+    if (!selectedContentItem || selectedContentItem.type !== 'video' || unitIndex < 0 || lessonIndex < 0) {
+      return { videoId: undefined, nextVideoUrl: undefined };
+    }
+
+    const videoContent = selectedContentItem as VideoContent;
+    const currentVideoId = `${course.id}-u${unitIndex + 1}-l${lessonIndex + 1}-v${videoContent.videoIndex + 1}`;
+    
+    // Find next video in the same lesson or next lesson
+    let nextVideo: VideoContent | undefined;
+    let nextVideoUnitIndex = unitIndex;
+    let nextVideoLessonIndex = lessonIndex;
+    
+    // First, check if there's a next video in the same lesson
+    const currentLesson = course.units[unitIndex]?.lessons[lessonIndex];
+    if (currentLesson) {
+      const currentVideoIndex = currentLesson.contentItems.findIndex(item => item.id === videoContent.id);
+      if (currentVideoIndex >= 0) {
+        // Look for next video in same lesson
+        for (let i = currentVideoIndex + 1; i < currentLesson.contentItems.length; i++) {
+          if (currentLesson.contentItems[i].type === 'video') {
+            nextVideo = currentLesson.contentItems[i] as VideoContent;
+            break;
+          }
+        }
+      }
+      
+      // If no next video in same lesson, check next lesson
+      if (!nextVideo) {
+        const nextLessonIndex = lessonIndex + 1;
+        if (nextLessonIndex < course.units[unitIndex].lessons.length) {
+          const nextLesson = course.units[unitIndex].lessons[nextLessonIndex];
+          const firstVideo = nextLesson.contentItems.find(item => item.type === 'video') as VideoContent | undefined;
+          if (firstVideo) {
+            nextVideo = firstVideo;
+            nextVideoLessonIndex = nextLessonIndex;
+          }
+        }
+      }
+    }
+
+    const nextUrl = nextVideo 
+      ? getVideoContentUrl(course.id, nextVideoUnitIndex, nextVideoLessonIndex, nextVideo)
+      : undefined;
+
+    return { videoId: currentVideoId, nextVideoUrl: nextUrl };
+  }, [selectedContentItem, course.id, unitIndex, lessonIndex, course.units]);
+
   const markComplete = async () => {
     if (selectedLesson && !completedLessons.includes(selectedLesson.id)) {
       const updatedLessons = [...completedLessons, selectedLesson.id];
@@ -422,6 +471,8 @@ export default function CoursePlatformPage() {
                           src={getVideoContentUrl(course.id, unitIndex, lessonIndex, selectedContentItem)}
                           title={selectedContentItem.title || selectedLesson.title}
                           className="aspect-video"
+                          videoId={videoId}
+                          nextVideoUrl={nextVideoUrl}
                           onError={(error) => {
                             console.error('Video loading error:', error);
                           }}
