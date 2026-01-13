@@ -142,11 +142,14 @@ export function VideoPlayer({
   }
 
   return (
-    <div className={`relative group ${className}`}>
+    <div className={`relative group ${className}`} style={{ overflow: 'hidden' }}>
       <video
         ref={videoRef}
         src={src}
         className="w-full h-full object-contain bg-black rounded-lg"
+        style={{
+          clipPath: 'inset(0 0 5% 0)' // Crop bottom 5% of video
+        }}
         playsInline
         preload="metadata"
       >
