@@ -7,6 +7,8 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { LegendaryBillSpawn } from '@/components/collectibles/LegendaryBillSpawn';
 import { MarkdownContent } from '@/components/content/MarkdownContent';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { useMemo } from 'react';
 
 export default function ArticleDetailPage() {
   const { t } = useTranslation({ namespace: 'education' });
@@ -56,8 +58,23 @@ export default function ArticleDetailPage() {
     }
   };
 
+  const seoTitle = useMemo(() => {
+    if (!article) return 'Article Not Found';
+    return `${article.title} - Investment Guide | INVESTOPATRONUS`;
+  }, [article]);
+
+  const seoDescription = useMemo(() => {
+    if (!article) return 'The article you are looking for does not exist.';
+    const excerpt = article.content?.substring(0, 150) || article.title;
+    return `${excerpt}... Learn more about investing and financial markets with INVESTOPATRONUS.`;
+  }, [article]);
+
   return (
     <Layout>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+      />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           {/* Back link */}

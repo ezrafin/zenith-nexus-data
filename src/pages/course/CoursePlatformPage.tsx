@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { VideoPlayer } from '@/components/education/VideoPlayer';
 import { getVideoContentUrl } from '@/lib/r2VideoUtils';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function CoursePlatformPage() {
   const { t } = useTranslation({ namespace: 'education' });
@@ -192,8 +193,20 @@ export default function CoursePlatformPage() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const seoTitle = useMemo(() => {
+    return `${course.title} - Online Course | INVESTOPATRONUS`;
+  }, [course.title]);
+
+  const seoDescription = useMemo(() => {
+    return `Learn ${course.title.toLowerCase()} with our comprehensive online course. Access video lessons, interactive quizzes, and expert content to master ${course.description.toLowerCase()}.`;
+  }, [course.title, course.description]);
+
   return (
     <Layout>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+      />
       <div className="pt-20 pb-8 min-h-screen">
         {/* Mobile Navigation */}
         <div className="lg:hidden mb-4 px-4">

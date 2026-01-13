@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { authors } from '@/data/authors';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function AuthorsPage() {
   const { t } = useTranslation({ namespace: 'ui' });
@@ -23,6 +24,10 @@ export default function AuthorsPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Financial Market Analysts & Expert Authors"
+        description="Meet our team of professional financial analysts and market experts. Discover in-depth analysis, research reports, and expert insights from experienced financial professionals."
+      />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           <div className="max-w-3xl mx-auto text-center mb-12">

@@ -6,6 +6,7 @@ import { getEducationCoursePath } from '@/lib/educationRoutes';
 import { advancedArticles } from '@/data/educationArticles';
 import { ArticleCard } from '@/components/education/ArticleCard';
 import { useTranslation } from '@/hooks/useTranslation';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const categories = [
   { name: 'Technical Analysis', count: 18 },
@@ -64,6 +65,10 @@ export default function AdvancedArticlesPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Advanced Investment Strategies & Analysis"
+        description="Master advanced investment techniques with in-depth articles on technical analysis, options trading, quantitative strategies, portfolio theory, derivatives, and risk management."
+      />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           <div className="max-w-3xl mx-auto text-center mb-12">

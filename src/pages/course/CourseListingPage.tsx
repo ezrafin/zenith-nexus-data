@@ -10,6 +10,10 @@ export default function CourseListingPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Investment Academy - Online Finance Courses"
+        description="Enroll in comprehensive finance and economics courses. Learn macroeconomics, microeconomics, finance & markets, and personal finance through structured courses with video lessons and quizzes."
+      />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           {/* Header */}

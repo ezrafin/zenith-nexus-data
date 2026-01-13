@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { UserAvatar } from '@/components/user/UserAvatar';
@@ -16,6 +16,7 @@ import { Breadcrumbs } from '@/components/navigation/Breadcrumbs';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 import { useTranslation } from '@/hooks/useTranslation';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function UserProfilePage() {
   const { t, language } = useTranslation({ namespace: 'profile' });
@@ -278,6 +279,10 @@ export default function UserProfilePage() {
 
   return (
     <Layout>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+      />
       <div className="section-spacing">
         <div className="container-wide max-w-4xl">
           <Breadcrumbs pageTitle={profile.display_name || profile.username || t('page.title')} />

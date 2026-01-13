@@ -14,6 +14,11 @@ const NotFound = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Page Not Found - 404"
+        description="The page you're looking for doesn't exist. Return to INVESTOPATRONUS homepage to explore financial markets, news, analytics, and educational resources."
+        noindex={true}
+      />
       <div className="section-spacing">
         <div className="container-narrow text-center">
           <h1 className="heading-xl mb-4">{t("notFound.title")}</h1>

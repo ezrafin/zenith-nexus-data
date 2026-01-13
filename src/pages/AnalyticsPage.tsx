@@ -10,6 +10,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { authors } from '@/data/authors';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const ITEMS_PER_PAGE = 15;
 

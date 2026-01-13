@@ -11,6 +11,7 @@ import { AlertCircle, Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useTranslation } from '@/hooks/useTranslation';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 type MarketType = 'indices' | 'stocks' | 'commodities' | 'crypto' | 'currencies';
 
@@ -127,8 +128,34 @@ export default function MarketsPage() {
     ? filteredData 
     : top40Data;
 
+  const seoTitle = useMemo(() => {
+    const titles: Record<MarketType, string> = {
+      indices: 'Stock Market Indices - Real-time Data & Analysis',
+      stocks: 'Stock Market - Live Prices & Market Data',
+      commodities: 'Commodities Market - Prices & Trading Data',
+      crypto: 'Cryptocurrency Market - Live Prices & Analysis',
+      currencies: 'Forex Market - Currency Exchange Rates',
+    };
+    return titles[marketType];
+  }, [marketType]);
+
+  const seoDescription = useMemo(() => {
+    const descriptions: Record<MarketType, string> = {
+      indices: 'Track major stock market indices with real-time data, charts, and comprehensive analysis. Monitor global market performance and trends.',
+      stocks: 'Access live stock prices, market data, and detailed company information. Track your favorite stocks and discover investment opportunities.',
+      commodities: 'Monitor commodity prices including gold, oil, and agricultural products. Get real-time data and market insights for trading decisions.',
+      crypto: 'Stay updated with cryptocurrency prices, market caps, and trading volumes. Track Bitcoin, Ethereum, and other digital assets in real-time.',
+      currencies: 'Get real-time foreign exchange rates and currency market data. Track major currency pairs and forex market trends.',
+    };
+    return descriptions[marketType];
+  }, [marketType]);
+
   return (
     <Layout>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+      />
       <section className="section-spacing">
         <div className="container-wide">
           <div className="mb-10">

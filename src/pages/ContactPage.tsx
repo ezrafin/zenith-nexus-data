@@ -11,6 +11,7 @@ import { BugReportForm } from '@/components/contact/BugReportForm';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function ContactPage() {
   // Bill collection: info_page_visit

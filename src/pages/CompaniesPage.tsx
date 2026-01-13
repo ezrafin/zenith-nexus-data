@@ -11,6 +11,7 @@ import { Building2, TrendingUp, Users, Award, ArrowUpDown, Globe, Search } from 
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useTranslation } from '@/hooks/useTranslation';
 import { supabase } from '@/integrations/supabase/client';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 type SortOption = 'alphabetical' | 'combined' | 'community' | 'expert';
 const ITEMS_PER_PAGE = 15;
@@ -133,6 +134,10 @@ export default function CompaniesPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Financial Organizations & Companies Directory"
+        description="Explore trusted financial organizations, brokers, exchanges, and financial institutions. Find regulated companies with expert trust ratings and community reviews."
+      />
       <section ref={sectionRef} className="section-spacing">
         <div className="container-wide">
           {/* Header */}

@@ -13,6 +13,7 @@ import { Save, Bell, Lock, Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function SettingsPage() {
   // Bill collection: settings_visit
@@ -140,6 +141,10 @@ export default function SettingsPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Account Settings"
+        description="Manage your account settings, notifications, language preferences, and security options. Customize your INVESTOPATRONUS experience to match your needs."
+      />
       <div className="section-spacing">
         <div className="container-wide max-w-4xl">
           <h1 className="heading-lg mb-8">{t('settings.title')}</h1>

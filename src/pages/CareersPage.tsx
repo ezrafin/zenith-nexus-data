@@ -6,6 +6,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { JobApplicationForm } from '@/components/careers/JobApplicationForm';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const positions = [
   {
@@ -31,6 +32,10 @@ export default function CareersPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Careers - Join Our Team"
+        description="Join INVESTOPATRONUS and help shape the future of financial analytics. Explore career opportunities in fintech, data analysis, product design, and more. Build innovative solutions for global markets."
+      />
       <div className="pt-24 pb-16">
         {/* Hero */}
         <section className="container-wide section-spacing-sm">

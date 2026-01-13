@@ -1,8 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function TermsPage() {
   return (
     <Layout>
+      <SEOHead
+        title="Terms of Service"
+        description="Read the Terms of Service for INVESTOPATRONUS. Understand the rules, guidelines, and conditions for using our financial analytics platform and services."
+      />
       <div className="pt-24 pb-16">
         <section className="container-narrow section-spacing-sm">
           <div className="text-center mb-12">

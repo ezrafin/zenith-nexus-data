@@ -1,8 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function DisclaimerPage() {
   return (
     <Layout>
+      <SEOHead
+        title="Investment Disclaimer"
+        description="Important investment disclaimer and risk warnings for INVESTOPATRONUS. Understand that our content is for educational purposes only and does not constitute financial advice."
+      />
       <div className="pt-24 pb-16">
         <section className="container-narrow section-spacing-sm">
           <div className="text-center mb-12">

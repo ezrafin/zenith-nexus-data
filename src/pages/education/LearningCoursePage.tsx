@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { useTranslation } from '@/hooks/useTranslation';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const courseModules = [
   { title: 'Introduction to Financial Markets', lessons: 8, duration: '2 hours' },

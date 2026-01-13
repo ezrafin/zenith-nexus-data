@@ -2,6 +2,7 @@ import { Layout } from '@/components/layout/Layout';
 import { Target, Users, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function AdvertisePage() {
   const { t } = useTranslation({ namespace: 'ui' });
@@ -42,6 +43,10 @@ export default function AdvertisePage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Advertising & Partnerships"
+        description="Reach a highly engaged audience of investors and financial professionals. Discover advertising opportunities, sponsored content, and partnership programs with INVESTOPATRONUS."
+      />
       <div className="pt-24 pb-16">
         {/* Hero */}
         <section className="container-wide section-spacing-sm">

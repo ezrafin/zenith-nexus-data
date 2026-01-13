@@ -1,8 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function PrivacyPage() {
   return (
     <Layout>
+      <SEOHead
+        title="Privacy Policy"
+        description="Learn how INVESTOPATRONUS protects your privacy and handles your personal information. Understand our data collection, usage, and security practices."
+      />
       <div className="pt-24 pb-16">
         <section className="container-narrow section-spacing-sm">
           <div className="text-center mb-12">

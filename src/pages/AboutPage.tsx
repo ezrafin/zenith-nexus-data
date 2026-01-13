@@ -33,6 +33,10 @@ export default function AboutPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="About INVESTOPATRONUS - Your Guardian in Global Markets"
+        description="Learn about INVESTOPATRONUS, a professional financial analytics platform providing real-time market data, expert insights, and comprehensive investment resources. Discover our mission, values, and commitment to empowering investors."
+      />
       <div className="pt-24 pb-16">
         {/* Hero */}
         <section className="container-wide section-spacing-sm">

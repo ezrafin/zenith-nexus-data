@@ -11,6 +11,7 @@ import { toast } from 'sonner';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getLocaleForLanguage } from '@/lib/i18n';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const ITEMS_PER_PAGE = 15;
 export default function NewsPage() {
@@ -132,6 +133,10 @@ export default function NewsPage() {
   const totalPages = Math.ceil(news.length / ITEMS_PER_PAGE);
   const paginatedNews = news.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
   return <Layout>
+      <SEOHead
+        title="Financial News & Market Updates"
+        description="Stay informed with the latest financial news, market updates, and economic insights. Get real-time news covering stocks, indices, crypto, commodities, and political events affecting global markets."
+      />
       <section ref={sectionRef} className="section-spacing">
         <div className="container-wide">
           <div className="mb-10">

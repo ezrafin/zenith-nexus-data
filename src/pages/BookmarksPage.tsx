@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useTranslation } from '@/hooks/useTranslation';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useCollectibleBills } from '@/hooks/useCollectibleBills';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 interface BookmarkItem {
   id: string;
@@ -167,6 +168,10 @@ export default function BookmarksPage() {
   if (!user) {
     return (
       <Layout>
+        <SEOHead
+          title="My Bookmarks"
+          description="Access your saved articles, news, forum topics, and analytics. Manage your bookmarks and quickly return to your favorite content on INVESTOPATRONUS."
+        />
         <div className="min-h-[80vh] flex items-center justify-center">
           <div className="text-center">
             <h1 className="heading-lg mb-4">{t('bookmarksPage.signedOutTitle')}</h1>
@@ -182,6 +187,10 @@ export default function BookmarksPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="My Bookmarks"
+        description="Access your saved articles, news, forum topics, and analytics. Manage your bookmarks and quickly return to your favorite content on INVESTOPATRONUS."
+      />
       <div className="section-spacing">
         <div className="container-wide max-w-4xl">
           <h1 className="heading-lg mb-8">{t('bookmarksPage.title')}</h1>

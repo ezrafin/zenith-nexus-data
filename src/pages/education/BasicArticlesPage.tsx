@@ -6,6 +6,7 @@ import { getEducationAdvancedArticlesPath } from '@/lib/educationRoutes';
 import { basicArticles } from '@/data/educationArticles';
 import { ArticleCard } from '@/components/education/ArticleCard';
 import { useTranslation } from '@/hooks/useTranslation';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const categories = [
   { name: 'Getting Started', count: 15 },
@@ -64,6 +65,10 @@ export default function BasicArticlesPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Beginner Investment Articles & Guides"
+        description="Learn the fundamentals of investing with our beginner-friendly articles. Covering stock basics, investment terms, risk management, portfolio basics, and account types for new investors."
+      />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           <div className="max-w-3xl mx-auto text-center mb-12">

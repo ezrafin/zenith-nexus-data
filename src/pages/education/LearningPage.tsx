@@ -12,6 +12,7 @@ import {
 import { basicArticles, advancedArticles, allArticles } from '@/data/educationArticles';
 import { ArticleCard } from '@/components/education/ArticleCard';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 // Category names used across basic and advanced articles
 const categoryNames = [
@@ -67,6 +68,10 @@ export default function LearningPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Financial Education & Learning Resources"
+        description="Access comprehensive financial education resources, courses, articles, and video tutorials. Learn investing, trading, and financial markets from beginner to advanced levels."
+      />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">
           <div className="max-w-3xl mx-auto text-center mb-12">

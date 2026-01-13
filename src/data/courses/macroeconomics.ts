@@ -148,7 +148,60 @@ Economics studies how societies allocate scarce resources. Scarcity forces choic
         id: 'macroecon-u1-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Introduction to macroeconomics',
-        questions: [],
+        questions: [
+          {
+            id: 'quiz-1-1-1',
+            question: 'What is the best definition of economics?',
+            options: [
+              "The study of how governments make decisions regarding public policy",
+              "The study of financial markets and how to invest in stocks and other financial assets",
+              "The study of human society",
+              "The study of how society's scarce resources are allocated",
+              "The study of how businesses make money"
+            ],
+            correctAnswer: 3,
+            explanation: "Economics is the study of how society's scarce resources are allocated. It examines how individuals, businesses, and governments make choices when resources are limited."
+          },
+          {
+            id: 'quiz-1-1-2',
+            question: 'Which of the following best captures the idea of the fundamental economic problem?',
+            options: [
+              "Limited resources and unlimited wants",
+              "Infinite resources and limited wants",
+              "Limited wants and limited resources",
+              "Unlimited resources and unlimited wants",
+              "Lack of demand for limited resources"
+            ],
+            correctAnswer: 0,
+            explanation: "The fundamental economic problem is scarcity - the fact that resources are limited while human wants are unlimited. This forces us to make choices about how to use resources efficiently."
+          },
+          {
+            id: 'quiz-1-1-3',
+            question: 'Which of the following are characteristics of a scarce resource?',
+            options: [
+              "The resource is in demand, but there is no supply of it",
+              "There is a fixed quantity of the resource available but no demand for it",
+              "There is limited supply of a resource with no demand for that resource",
+              "The resource has unlimited supply and limited demand",
+              "There is a demand for that resource with limited supply"
+            ],
+            correctAnswer: 4,
+            explanation: "A scarce resource is characterized by limited supply combined with demand for that resource. Scarcity exists when there is both demand and limited availability."
+          },
+          {
+            id: 'quiz-1-1-4',
+            question: 'Which of the following describes a normative statement?',
+            options: [
+              "Rooted in the theories of classical economics",
+              "Based on real world examples",
+              "Based purely on the facts and data",
+              "Rooted in the theories of Keynesian economics",
+              "Subjective and value based"
+            ],
+            correctAnswer: 4,
+            explanation: "Normative statements are subjective and value-based claims that express opinions about 'what ought to be.' They involve value judgments, unlike positive statements which are factual and can be tested."
+          }
+        ],
       } as QuizContent,
     ],
   },
@@ -256,7 +309,60 @@ The PPC illustrates maximum production possibilities and trade-offs. Opportunity
         id: 'macroecon-u1-l2-quiz',
         type: 'quiz',
         title: 'Opportunity cost and the PPC',
-        questions: [],
+        questions: [
+          {
+            id: 'quiz-1-2-1',
+            question: 'Opportunity cost is crucial in economics because it underpins the concept of scarcity and resource allocation. Opportunity cost is best described by which of the following statements?',
+            options: [
+              "the value of the next best option given up when making a decision",
+              "the monetary cost of any economic transaction",
+              "the tradeoffs faced when choosing how to use a scarce resource",
+              "the cost a buyer sees for something they want",
+              "the price to a consumer of a good or service"
+            ],
+            correctAnswer: 0,
+            explanation: "Opportunity cost is the value of the next best alternative that you forgo when you make a choice. It represents what you give up to get something else."
+          },
+          {
+            id: 'quiz-1-2-2',
+            question: 'Opportunity cost is the value of the next best alternative that you forgo when you make a choice. All of the following are part of the opportunity costs of going to college EXCEPT',
+            options: [
+              "the money spent on tuition",
+              "interest payments on student loans",
+              "money spent on textbooks",
+              "foregone wages given up to attend college",
+              "money spent on clothes"
+            ],
+            correctAnswer: 4,
+            explanation: "Opportunity costs of going to college include explicit costs like tuition, textbooks, and interest on student loans, as well as implicit costs like foregone wages. Money spent on clothes is a general living expense and not directly an opportunity cost of choosing to attend college over an alternative."
+          },
+          {
+            id: 'quiz-1-2-3',
+            question: 'Which of the following is an accurate representation of economic growth?',
+            options: [
+              "An increase in human resources that aren't used.",
+              "Any increase in output of goods or services when an economy starts at a point inside its PPC.",
+              "An increase in both the potential and actual level of output of goods and services over time.",
+              "An increase in capital available without any increase in production.",
+              "An increase in the amount of money circulating in the economy."
+            ],
+            correctAnswer: 2,
+            explanation: "Economic growth is fundamentally defined as an increase in the productive capacity of an economy (potential output, represented by an outward shift of the Production Possibilities Curve - PPC) and typically results in an increase in the actual output of goods and services over time."
+          },
+          {
+            id: 'quiz-1-2-4',
+            question: 'Consider a Production Possibilities Curve (PPC) that is bowed outward (concave to the origin) for two goods, Good L and Good M. What does the shape of the PPC say about the production of these two goods?',
+            options: [
+              "Goods L and M require identical resources to produce.",
+              "There is zero opportunity cost in terms of Good L given up as output of Good M increases.",
+              "Goods L and M require similar resources to produce.",
+              "The opportunity cost of Good M decreases in terms of the amount of L given up as output of M increases.",
+              "Goods L and M require very different resources to produce."
+            ],
+            correctAnswer: 4,
+            explanation: "The bowed-out shape of the PPC indicates increasing opportunity cost, meaning that as more of one good (e.g., Good M) is produced, an increasingly larger amount of the other good (Good L) must be given up. This typically occurs when resources are not perfectly interchangeable or adaptable between the production of the two goods, implying they require very different resources."
+          }
+        ],
       } as QuizContent,
     ],
   },
@@ -401,7 +507,60 @@ Comparative advantage (lower opportunity cost) is the basis for beneficial trade
         id: 'macroecon-u1-l3-quiz',
         type: 'quiz',
         title: 'Comparative advantage and the gains from trade',
-        questions: [],
+        questions: [
+          {
+            id: 'quiz-1-3-1',
+            question: 'Which of the following statements is true about specialization and trade?',
+            options: [
+              "A country should specialize in and export the good for which it has absolute advantage.",
+              "A country should specialize in and import the good for which it has comparative advantage.",
+              "A country should specialize in and import the good for which it has absolute advantage.",
+              "A country should specialize in and export the good for which they have comparative advantage.",
+              "A country should specialize in and export a good for which they have both comparative and absolute advantage"
+            ],
+            correctAnswer: 3,
+            explanation: "According to the principle of comparative advantage, countries benefit from trade by specializing in and exporting goods for which they have a lower opportunity cost, even if another country has an absolute advantage in producing that good."
+          },
+          {
+            id: 'quiz-1-3-2',
+            question: 'Consider the following table showing the time it takes for Martha and Dave to make tacos and cakes:\n\nTime to make a taco:\n- Martha: 10 minutes\n- Dave: 15 minutes\n\nTime to make a cake:\n- Martha: 20 minutes\n- Dave: 30 minutes\n\nWhich person has a comparative advantage in the production of tacos and cakes?',
+            options: [
+              "Both have a comparative advantage in producing both goods.",
+              "Neither person has comparative advantage in producing either good.",
+              "They both have a comparative advantage in producing tacos; neither person has a comparative advantage in producing cakes.",
+              "Dave has a comparative advantage in producing both goods.",
+              "Martha has a comparative advantage in producing both goods."
+            ],
+            correctAnswer: 1,
+            explanation: "Martha's opportunity cost: 1 Taco = 0.5 cakes (10/20), 1 Cake = 2 tacos (20/10). Dave's opportunity cost: 1 Taco = 0.5 cakes (15/30), 1 Cake = 2 tacos (30/15). Both have identical opportunity costs for both goods, so neither person has a comparative advantage in producing either good."
+          },
+          {
+            id: 'quiz-1-3-3',
+            question: 'Alex and Ella are completing a project for class together that requires them to complete worksheets and write essays. Consider the following table:\n\nTime to complete Worksheets:\n- Ella: 1 hour\n- Alex: 1 hour\n\nTime to complete Essays:\n- Ella: 2 hours\n- Alex: 3 hours\n\nWho has absolute advantage in each good?',
+            options: [
+              "Alex has absolute advantage in essays and Ella has absolute advantage in worksheets",
+              "Ella has absolute advantage in essays and Alex has absolute advantage in worksheets",
+              "Both have absolute advantage in both goods.",
+              "Ella has absolute advantage in essays, but neither has absolute advantage in worksheets",
+              "Alex has absolute advantage in essays, but neither has absolute advantage in worksheets"
+            ],
+            correctAnswer: 3,
+            explanation: "Absolute advantage means being able to produce a good using fewer inputs (less time in this case). Ella takes 1 hour for worksheets and Alex takes 1 hour, so neither has an absolute advantage in worksheets. Ella takes 2 hours for essays and Alex takes 3 hours, so Ella has an absolute advantage in essays. Therefore, Ella has an absolute advantage in essays, but neither has an absolute advantage in worksheets."
+          },
+          {
+            id: 'quiz-1-3-4',
+            question: 'Consider a Production Possibilities Curve (PPC) for two countries, A and B, producing Boats and Umbrellas:\n\nCountry A\'s PPC: Can produce a maximum of 10 Boats (if no Umbrellas) or 5 Umbrellas (if no Boats).\nCountry B\'s PPC: Can produce a maximum of 8 Boats (if no Umbrellas) or 8 Umbrellas (if no Boats).\n\nCountry A\'s opportunity cost: 1 Boat = 0.5 Umbrellas, 1 Umbrella = 2 Boats\nCountry B\'s opportunity cost: 1 Boat = 1 Umbrella, 1 Umbrella = 1 Boat\n\nWhich of the following exchange prices for boats would result in gains from trade for these two countries?',
+            options: [
+              "3/5 umbrella per boat",
+              "1/3 umbrella per boat",
+              "One umbrella per boat",
+              "2.5 umbrellas per boat",
+              "1/4 umbrella per boat"
+            ],
+            correctAnswer: 0,
+            explanation: "For mutually beneficial trade, the exchange price for a boat must be between Country A's opportunity cost for a boat (0.5 Umbrellas) and Country B's opportunity cost for a boat (1 Umbrella). Country A will sell boats if the price is greater than 0.5 Umbrellas. Country B will buy boats if the price is less than 1 Umbrella. The price 3/5 = 0.6 umbrellas per boat falls within this range (0.5 < 0.6 < 1), resulting in gains from trade for both countries."
+          }
+        ],
       } as QuizContent,
     ],
   },
@@ -517,7 +676,60 @@ The law of demand shows the inverse relationship between price and quantity. Dem
         id: 'macroecon-u1-l4-quiz',
         type: 'quiz',
         title: 'Demand',
-        questions: [],
+        questions: [
+          {
+            id: 'quiz-1-4-1',
+            question: 'Pam considers t-shirts and gym classes to be complementary goods. How will Pam react if the price of gym classes increases?',
+            options: [
+              "Her quantity demanded of gym classes won't change, and her demand for t-shirts will increase.",
+              "Her quantity demanded of gym classes will increase, and her demand for t-shirts will increase.",
+              "Her quantity demanded of gym classes will increase, and her demand for t-shirts will decrease.",
+              "Her quantity demanded of gym classes will decrease, and her demand for t-shirts will decrease.",
+              "Her quantity demanded of gym classes will decrease, and her demand for t-shirts will be unaffected."
+            ],
+            correctAnswer: 3,
+            explanation: "When the price of gym classes increases, Pam's quantity demanded of gym classes will decrease (movement along the demand curve). Since t-shirts and gym classes are complementary goods, a decrease in demand for gym classes will cause a decrease in demand for t-shirts (shift of the demand curve for t-shirts to the left)."
+          },
+          {
+            id: 'quiz-1-4-2',
+            question: 'Consider the following demand curve graph:\n\nTwo demand curves are shown: D1 (left curve) and D2 (right curve).\n\nPoints on D1:\n- Point S at (Q=2, P=7)\n- Point U at (Q=6, P=3)\n\nPoints on D2:\n- Point R at (Q=5, P=7)\n- Point T at (Q=9, P=3)\n\nD2 represents a rightward shift from D1, indicating an increase in demand.\n\nWhich of the following movements would represent an increase in the demand for a good?',
+            options: [
+              "From R to S",
+              "From S to R",
+              "From S to U",
+              "From R to T",
+              "From T to U"
+            ],
+            correctAnswer: 1,
+            explanation: "An increase in demand is represented by a rightward shift of the entire demand curve. Movement from S (on D1 at Q=2, P=7) to R (on D2 at Q=5, P=7) shows an increase in quantity demanded at the same price, which signifies a rightward shift of the demand curve, hence an increase in demand. Movements along a single curve (like S to U or R to T) represent changes in quantity demanded, not changes in demand."
+          },
+          {
+            id: 'quiz-1-4-3',
+            question: 'Economists have observed that when average incomes increase, purchases of fast food tends to decline. Based on this information, what can we definitely say about fast food?',
+            options: [
+              "Demand for fast food is upward sloping",
+              "Fast food has no substitutes",
+              "The price of a complement to fast food has risen",
+              "Fast food is an inferior good",
+              "Fast food is a normal good"
+            ],
+            correctAnswer: 3,
+            explanation: "An inferior good is defined as a good for which demand decreases as income increases. Since purchases of fast food decline when incomes increase, fast food is an inferior good. Normal goods have demand that increases with income."
+          },
+          {
+            id: 'quiz-1-4-4',
+            question: 'Meeps and Blops are two goods that are related to each other. When the price of Meeps goes down, the demand for Blops goes down. Based only on the information given here, what kind of goods are Meeps and Blops?',
+            options: [
+              "normal goods",
+              "superior goods",
+              "substitutes",
+              "inferior goods",
+              "complements"
+            ],
+            correctAnswer: 2,
+            explanation: "When the price of one good (Meeps) goes down, and the demand for the other good (Blops) also goes down, these goods are substitutes. When the price of a substitute decreases, consumers switch to the cheaper substitute, reducing demand for the other good. If they were complements, a decrease in the price of one would increase demand for the other."
+          }
+        ],
       } as QuizContent,
     ],
   },
@@ -742,13 +954,61 @@ const unit2Lessons: Lesson[] = [
       {
         id: 'macroecon-u2-l1-video-1',
         type: 'video',
-        title: 'Gross Domestic Product (The circular flow and GDP)',
+        title: 'Circular flow of income and expenditures',
         videoIndex: 0,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-2',
+        type: 'video',
+        title: 'Parsing gross domestic product',
+        videoIndex: 1,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-3',
+        type: 'video',
+        title: 'More on final and intermediate GDP contributions',
+        videoIndex: 2,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-4',
+        type: 'video',
+        title: 'Investment and consumption',
+        videoIndex: 3,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-5',
+        type: 'video',
+        title: 'Income and expenditure views of GDP',
+        videoIndex: 4,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-6',
+        type: 'video',
+        title: 'Value added approach to calculating GDP',
+        videoIndex: 5,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-7',
+        type: 'video',
+        title: 'Components of GDP',
+        videoIndex: 6,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-8',
+        type: 'video',
+        title: 'Expenditure approach to calculating GDP examples',
+        videoIndex: 7,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l1-video-9',
+        type: 'video',
+        title: 'Examples of accounting for GDP',
+        videoIndex: 8,
       } as VideoContent,
       {
         id: 'macroecon-u2-l1-article',
         type: 'article',
-        title: 'Learn: Gross Domestic Product (The circular flow and GDP)',
+        title: 'Lesson summary: The circular flow and GDP',
         content: `# Gross Domestic Product: The Circular Flow and GDP
 
 ## Circular flow of income and expenditures
@@ -870,7 +1130,7 @@ The circular flow shows how money and resources move through an economy. GDP mea
       {
         id: 'macroecon-u2-l1-practice',
         type: 'practice',
-        title: 'Practice: The circular flow model and GDP',
+        title: 'The circular flow model and GDP',
         exercises: [
           {
             id: 'practice-2-1-1',
@@ -898,12 +1158,6 @@ The circular flow shows how money and resources move through an economy. GDP mea
           },
         ],
       } as PracticeContent,
-      {
-        id: 'macroecon-u2-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Gross Domestic Product',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -918,24 +1172,10 @@ The circular flow shows how money and resources move through an economy. GDP mea
         videoIndex: 0,
       } as VideoContent,
       {
-        id: 'macroecon-u2-l2-article',
+        id: 'macroecon-u2-l2-article-1',
         type: 'article',
-        title: 'Learn: Limitations of GDP',
-        content: `# Limitations of GDP
-
-## Limitations of GDP
-
-GDP has several important limitations as a measure of economic well-being:
-
-1. **Doesn't measure non-market activities**: Unpaid work (household chores, childcare) isn't counted
-2. **Doesn't account for quality of life**: Environmental quality, leisure time, health aren't measured
-3. **Doesn't reflect income distribution**: GDP can grow while inequality increases
-4. **Doesn't account for negative externalities**: Pollution, resource depletion aren't subtracted
-5. **Doesn't measure informal economy**: Underground economy activities aren't included
-6. **Doesn't account for depreciation**: GDP is "gross," not accounting for capital wear and tear
-7. **Doesn't measure sustainability**: Doesn't show if growth is sustainable long-term
-
-## Beyond GDP: other ways to measure the economy
+        title: 'Beyond GDP: other ways to measure the economy',
+        content: `# Beyond GDP: Other Ways to Measure the Economy
 
 Alternative measures include:
 
@@ -951,7 +1191,19 @@ Alternative measures include:
 
 **Happy Planet Index**: Measures sustainable well-being
 
-## How well GDP measures the well-being of society
+These alternative measures attempt to address the limitations of GDP by incorporating factors such as environmental sustainability, social well-being, and quality of life indicators.`,
+        importantPoints: [
+          'Alternative measures like HDI and GPI address GDP limitations',
+          'Green GDP adjusts for environmental costs',
+          'GNP includes income from abroad',
+          'NDP accounts for capital depreciation',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l2-article-2',
+        type: 'article',
+        title: 'How well GDP measures the well-being of society',
+        content: `# How Well GDP Measures the Well-Being of Society
 
 GDP is a good measure of:
 - Economic output and production
@@ -968,21 +1220,46 @@ GDP is NOT a good measure of:
 
 A country can have high GDP but poor quality of life, or vice versa.
 
-## Lesson summary: The limitations of GDP
+GDP has several important limitations as a measure of economic well-being:
 
-GDP measures economic output but has significant limitations. It doesn't capture non-market activities, quality of life, income distribution, environmental costs, or sustainability. Alternative measures like HDI, GPI, and Green GDP attempt to address these limitations.`,
+1. **Doesn't measure non-market activities**: Unpaid work (household chores, childcare) isn't counted
+2. **Doesn't account for quality of life**: Environmental quality, leisure time, health aren't measured
+3. **Doesn't reflect income distribution**: GDP can grow while inequality increases
+4. **Doesn't account for negative externalities**: Pollution, resource depletion aren't subtracted
+5. **Doesn't measure informal economy**: Underground economy activities aren't included
+6. **Doesn't account for depreciation**: GDP is "gross," not accounting for capital wear and tear
+7. **Doesn't measure sustainability**: Doesn't show if growth is sustainable long-term`,
         importantPoints: [
           "GDP doesn't measure non-market activities or quality of life",
           "GDP doesn't reflect income distribution or negative externalities",
           "GDP doesn't account for informal economy or sustainability",
-          'Alternative measures like HDI and GPI address GDP limitations',
           'GDP measures output well but not overall well-being',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l2-article-3',
+        type: 'article',
+        title: 'Lesson summary: The limitations of GDP',
+        content: `# Lesson Summary: The Limitations of GDP
+
+GDP measures economic output but has significant limitations. It doesn't capture non-market activities, quality of life, income distribution, environmental costs, or sustainability. Alternative measures like HDI, GPI, and Green GDP attempt to address these limitations.
+
+## Key Takeaways
+
+- GDP is a good measure of economic output and production
+- GDP does not measure overall well-being, quality of life, or environmental sustainability
+- Alternative measures like HDI, GPI, and Green GDP provide more comprehensive views of economic performance
+- A country can have high GDP but poor quality of life, or vice versa`,
+        importantPoints: [
+          'GDP measures output but has significant limitations',
+          'Alternative measures address GDP limitations',
+          'GDP does not capture well-being or sustainability',
         ],
       } as ArticleContent,
       {
         id: 'macroecon-u2-l2-practice',
         type: 'practice',
-        title: 'Practice: Limitations of GDP',
+        title: 'Limitations of GDP',
         exercises: [
           {
             id: 'practice-2-2-1',
@@ -1010,12 +1287,6 @@ GDP measures economic output but has significant limitations. It doesn't capture
           },
         ],
       } as PracticeContent,
-      {
-        id: 'macroecon-u2-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Limitations of GDP',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1026,16 +1297,24 @@ GDP measures economic output but has significant limitations. It doesn't capture
       {
         id: 'macroecon-u2-l3-video-1',
         type: 'video',
-        title: 'Unemployment',
+        title: 'Unemployment rate primer',
         videoIndex: 0,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l3-video-2',
+        type: 'video',
+        title: 'Natural, cyclical, structural, and frictional unemployment rates',
+        videoIndex: 1,
       } as VideoContent,
       {
         id: 'macroecon-u2-l3-article',
         type: 'article',
-        title: 'Learn: Unemployment',
-        content: `# Unemployment
+        title: 'Lesson summary: Unemployment',
+        content: `# Lesson Summary: Unemployment
 
-## Unemployment rate primer
+The unemployment rate measures job seekers as a percentage of the labor force. Unemployment types include frictional (job transitions), structural (skills mismatch), and cyclical (economic downturns). The natural rate is frictional + structural unemployment. Full employment means zero cyclical unemployment.
+
+## Unemployment Rate Primer
 
 The **unemployment rate** measures the percentage of the labor force that is unemployed but actively seeking work.
 
@@ -1047,7 +1326,7 @@ Formula: Unemployment Rate = (Number of Unemployed / Labor Force) × 100
 
 Important: The unemployment rate doesn't include discouraged workers or underemployed workers.
 
-## Natural, cyclical, structural, and frictional unemployment rates
+## Natural, Cyclical, Structural, and Frictional Unemployment Rates
 
 **Frictional unemployment**: Short-term unemployment due to people moving between jobs or entering the labor force. This is normal and healthy.
 
@@ -1057,11 +1336,7 @@ Important: The unemployment rate doesn't include discouraged workers or underemp
 
 **Natural rate of unemployment**: The sum of frictional and structural unemployment. This is the "normal" unemployment rate when the economy is at full employment.
 
-**Full employment**: When cyclical unemployment = 0. The economy can still have frictional and structural unemployment.
-
-## Lesson summary: Unemployment
-
-The unemployment rate measures job seekers as a percentage of the labor force. Unemployment types include frictional (job transitions), structural (skills mismatch), and cyclical (economic downturns). The natural rate is frictional + structural unemployment. Full employment means zero cyclical unemployment.`,
+**Full employment**: When cyclical unemployment = 0. The economy can still have frictional and structural unemployment.`,
         importantPoints: [
           'Unemployment rate = (Unemployed / Labor Force) × 100',
           'Frictional unemployment is normal job transitions',
@@ -1071,9 +1346,9 @@ The unemployment rate measures job seekers as a percentage of the labor force. U
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u2-l3-practice',
+        id: 'macroecon-u2-l3-practice-1',
         type: 'practice',
-        title: 'Practice: Types of unemployment and the natural rate of unemployment, Unemployment',
+        title: 'Types of unemployment and the natural rate of unemployment',
         exercises: [
           {
             id: 'practice-2-3-1',
@@ -1086,13 +1361,6 @@ The unemployment rate measures job seekers as a percentage of the labor force. U
           },
           {
             id: 'practice-2-3-2',
-            prompt: 'Calculate the unemployment rate: Labor force = 150 million, Employed = 142 million, Unemployed = 8 million.',
-            hints: [
-              'Unemployment rate = (Unemployed / Labor Force) × 100',
-            ],
-          },
-          {
-            id: 'practice-2-3-3',
             prompt: 'Explain the difference between the natural rate of unemployment and the actual unemployment rate. What does it mean when actual unemployment is above or below the natural rate?',
             hints: [
               'Natural rate = frictional + structural',
@@ -1102,11 +1370,19 @@ The unemployment rate measures job seekers as a percentage of the labor force. U
         ],
       } as PracticeContent,
       {
-        id: 'macroecon-u2-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Unemployment',
-        questions: [],
-      } as QuizContent,
+        id: 'macroecon-u2-l3-practice-2',
+        type: 'practice',
+        title: 'Unemployment',
+        exercises: [
+          {
+            id: 'practice-2-3-3',
+            prompt: 'Calculate the unemployment rate: Labor force = 150 million, Employed = 142 million, Unemployed = 8 million.',
+            hints: [
+              'Unemployment rate = (Unemployed / Labor Force) × 100',
+            ],
+          },
+        ],
+      } as PracticeContent,
     ],
   },
   {
@@ -1117,103 +1393,68 @@ The unemployment rate measures job seekers as a percentage of the labor force. U
       {
         id: 'macroecon-u2-l4-video-1',
         type: 'video',
-        title: 'Inflation (Price indices and inflation)',
+        title: 'Introduction to inflation',
         videoIndex: 0,
       } as VideoContent,
       {
-        id: 'macroecon-u2-l4-article',
+        id: 'macroecon-u2-l4-video-2',
+        type: 'video',
+        title: 'Actual CPI-U basket of goods',
+        videoIndex: 1,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l4-video-3',
+        type: 'video',
+        title: 'Inflation data',
+        videoIndex: 2,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l4-video-4',
+        type: 'video',
+        title: 'Deflation',
+        videoIndex: 3,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l4-video-5',
+        type: 'video',
+        title: 'Example question calculating CPI and inflation',
+        videoIndex: 4,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l4-video-6',
+        type: 'video',
+        title: 'Stagflation',
+        videoIndex: 5,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l4-video-7',
+        type: 'video',
+        title: 'Deflationary spiral',
+        videoIndex: 6,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l4-article-1',
         type: 'article',
-        title: 'Learn: Inflation (Price indices and inflation)',
-        content: `# Inflation: Price Indices and Inflation
-
-## Introduction to inflation
-
-**Inflation** is a sustained increase in the general price level of goods and services in an economy over time.
-
-**Deflation** is a sustained decrease in the general price level.
-
-**Disinflation** is a decrease in the inflation rate (prices still rising, but more slowly).
-
-Inflation reduces the purchasing power of money - each dollar buys fewer goods and services.
-
-## Actual CPI-U basket of goods
-
-The **Consumer Price Index (CPI)** measures changes in the price level of a basket of consumer goods and services.
-
-**CPI-U** (Consumer Price Index for All Urban Consumers) tracks prices for urban consumers, representing about 93% of the U.S. population.
-
-The basket includes:
-- Food and beverages
-- Housing
-- Apparel
-- Transportation
-- Medical care
-- Recreation
-- Education and communication
-- Other goods and services
-
-The basket is updated periodically to reflect changing consumption patterns.
-
-## Inflation data
-
-Inflation is typically measured as the percentage change in a price index:
-
-Inflation Rate = [(CPI Current Year - CPI Previous Year) / CPI Previous Year] × 100
-
-Example: If CPI was 100 last year and 103 this year:
-Inflation = [(103 - 100) / 100] × 100 = 3%
-
-## Deflation
-
-**Deflation** is a sustained decrease in the general price level (negative inflation).
-
-Causes:
-- Decreased aggregate demand
-- Increased aggregate supply
-- Reduced money supply
-
-Effects:
-- Increases real value of debt (debt deflation)
-- Can lead to deflationary spiral
-- Reduces spending (people wait for lower prices)
-
-## Example question calculating CPI and inflation
-
-Example: Base year basket costs $100. Current year same basket costs $110.
-
-CPI (base year) = 100
-CPI (current year) = ($110 / $100) × 100 = 110
-
-Inflation = [(110 - 100) / 100] × 100 = 10%
-
-## Stagflation
-
-**Stagflation** is the combination of:
-- Stagnant economic growth (or recession)
-- High unemployment
-- High inflation
-
-This is problematic because typical policies to fight inflation (reduce spending) worsen unemployment, and policies to reduce unemployment (increase spending) worsen inflation.
-
-## Deflationary spiral
-
-A **deflationary spiral** occurs when:
-1. Prices fall
-2. Consumers delay purchases (expecting lower prices)
-3. Demand decreases further
-4. Prices fall more
-5. Cycle continues
-
-This can lead to severe economic contraction and is difficult to escape.
-
-## Tracking inflation
+        title: 'Tracking inflation',
+        content: `# Tracking Inflation
 
 Inflation is tracked using various price indices:
 - **CPI**: Consumer Price Index (consumer goods)
 - **PPI**: Producer Price Index (wholesale prices)
 - **GDP Deflator**: Broader measure including all GDP components
 
-## How changes in the cost of living are measured
+Each index serves different purposes and provides insights into different aspects of price changes in the economy.`,
+        importantPoints: [
+          'CPI tracks consumer prices',
+          'PPI tracks wholesale prices',
+          'GDP Deflator is a broader measure',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l4-article-2',
+        type: 'article',
+        title: 'How changes in the cost of living are measured',
+        content: `# How Changes in the Cost of Living are Measured
 
 The CPI measures changes in the cost of living by:
 1. Selecting a representative basket of goods and services
@@ -1224,9 +1465,17 @@ The CPI measures changes in the cost of living by:
 Limitations:
 - May not reflect individual consumption patterns
 - Doesn't account for quality changes
-- Substitution bias (people buy cheaper alternatives)
-
-## How the United States and other countries experience inflation
+- Substitution bias (people buy cheaper alternatives)`,
+        importantPoints: [
+          'CPI uses a representative basket of goods',
+          'Limitations include substitution bias and quality changes',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l4-article-3',
+        type: 'article',
+        title: 'How the United States and other countries experience inflation',
+        content: `# How the United States and Other Countries Experience Inflation
 
 Inflation rates vary by country and over time:
 - **Hyperinflation**: Extremely high inflation (e.g., Zimbabwe, 2000s)
@@ -1234,9 +1483,18 @@ Inflation rates vary by country and over time:
 - **Low inflation**: Near 0-2% (many developed countries)
 - **Deflation**: Negative inflation (Japan, 1990s-2000s)
 
-Central banks typically target 2% inflation as optimal for economic growth.
-
-## The confusion over inflation and deflation
+Central banks typically target 2% inflation as optimal for economic growth.`,
+        importantPoints: [
+          'Inflation rates vary by country',
+          'Central banks typically target 2% inflation',
+          'Hyperinflation and deflation are extreme cases',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l4-article-4',
+        type: 'article',
+        title: 'The confusion over inflation',
+        content: `# The Confusion Over Inflation
 
 Common misconceptions:
 - Inflation doesn't mean all prices rise (some may fall)
@@ -1244,13 +1502,31 @@ Common misconceptions:
 - Low inflation is generally preferred to deflation
 - Moderate inflation can encourage spending and investment
 
-## Lesson summary: Price indices and inflation
+Understanding these nuances helps clarify how inflation affects the economy and individual purchasing power.`,
+        importantPoints: [
+          "Inflation doesn't mean all prices rise",
+          "Deflation isn't always bad",
+          'Moderate inflation can encourage spending',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l4-article-5',
+        type: 'article',
+        title: 'Lesson summary: Price indices and inflation',
+        content: `# Lesson Summary: Price Indices and Inflation
 
-Inflation is a sustained increase in the general price level. CPI measures consumer price changes using a basket of goods. Inflation reduces purchasing power. Deflation can be dangerous, leading to deflationary spirals. Stagflation combines stagnation with inflation. Central banks typically target moderate inflation (around 2%).`,
+Inflation is a sustained increase in the general price level. CPI measures consumer price changes using a basket of goods. Inflation reduces purchasing power. Deflation can be dangerous, leading to deflationary spirals. Stagflation combines stagnation with inflation. Central banks typically target moderate inflation (around 2%).
+
+## Key Concepts
+
+- **Inflation**: Sustained increase in general price level
+- **Deflation**: Sustained decrease in general price level
+- **CPI**: Consumer Price Index measures consumer price changes
+- **Stagflation**: Combination of stagnation and high inflation
+- **Deflationary spiral**: Dangerous cycle of falling prices and reduced demand`,
         importantPoints: [
           'Inflation is a sustained increase in the general price level',
           'CPI measures changes in consumer prices using a basket of goods',
-          'Inflation rate = [(CPI current - CPI previous) / CPI previous] × 100',
           'Deflation can lead to deflationary spirals',
           'Stagflation combines stagnation with high inflation',
         ],
@@ -1258,7 +1534,7 @@ Inflation is a sustained increase in the general price level. CPI measures consu
       {
         id: 'macroecon-u2-l4-practice',
         type: 'practice',
-        title: 'Practice: The Consumer Price Index (CPI)',
+        title: 'The Consumer Price Index (CPI)',
         exercises: [
           {
             id: 'practice-2-4-1',
@@ -1288,12 +1564,6 @@ Inflation is a sustained increase in the general price level. CPI measures consu
           },
         ],
       } as PracticeContent,
-      {
-        id: 'macroecon-u2-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Inflation',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1304,16 +1574,18 @@ Inflation is a sustained increase in the general price level. CPI measures consu
       {
         id: 'macroecon-u2-l5-video-1',
         type: 'video',
-        title: 'Costs of Inflation',
+        title: 'Winners and losers from inflation and deflation',
         videoIndex: 0,
       } as VideoContent,
       {
         id: 'macroecon-u2-l5-article',
         type: 'article',
-        title: 'Learn: Costs of Inflation',
-        content: `# Costs of Inflation
+        title: 'Lesson summary: The costs of inflation',
+        content: `# Lesson Summary: The Costs of Inflation
 
-## Winners and losers from inflation and deflation
+Inflation redistributes wealth from lenders to borrowers and from savers to spenders. It hurts fixed-income earners and those holding cash. Deflation has opposite effects but can be more dangerous, leading to economic contraction. Moderate, predictable inflation is generally preferred to deflation.
+
+## Winners and Losers from Inflation and Deflation
 
 **Winners from inflation**:
 - **Borrowers**: Repay loans with dollars worth less than when borrowed
@@ -1334,11 +1606,7 @@ Inflation is a sustained increase in the general price level. CPI measures consu
 **Losers from deflation**:
 - **Borrowers**: Repay loans with dollars worth more
 - **Businesses**: Falling prices reduce profits
-- **Workers**: Often leads to wage cuts and unemployment
-
-## Lesson summary: The costs of inflation
-
-Inflation redistributes wealth from lenders to borrowers and from savers to spenders. It hurts fixed-income earners and those holding cash. Deflation has opposite effects but can be more dangerous, leading to economic contraction. Moderate, predictable inflation is generally preferred to deflation.`,
+- **Workers**: Often leads to wage cuts and unemployment`,
         importantPoints: [
           'Inflation benefits borrowers and hurts lenders',
           'Inflation reduces purchasing power of savings and fixed incomes',
@@ -1350,7 +1618,7 @@ Inflation redistributes wealth from lenders to borrowers and from savers to spen
       {
         id: 'macroecon-u2-l5-practice',
         type: 'practice',
-        title: 'Practice: The costs of inflation',
+        title: 'The costs of inflation',
         exercises: [
           {
             id: 'practice-2-5-1',
@@ -1378,12 +1646,6 @@ Inflation redistributes wealth from lenders to borrowers and from savers to spen
           },
         ],
       } as PracticeContent,
-      {
-        id: 'macroecon-u2-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Costs of Inflation',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1394,47 +1656,26 @@ Inflation redistributes wealth from lenders to borrowers and from savers to spen
       {
         id: 'macroecon-u2-l6-video-1',
         type: 'video',
-        title: 'Real vs. nominal GDP',
+        title: 'Real GDP and nominal GDP',
         videoIndex: 0,
       } as VideoContent,
       {
-        id: 'macroecon-u2-l6-article',
+        id: 'macroecon-u2-l6-video-2',
+        type: 'video',
+        title: 'GDP deflator',
+        videoIndex: 1,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l6-video-3',
+        type: 'video',
+        title: 'Example calculating real GDP with a deflator',
+        videoIndex: 2,
+      } as VideoContent,
+      {
+        id: 'macroecon-u2-l6-article-1',
         type: 'article',
-        title: 'Learn: Real vs. nominal GDP',
-        content: `# Real vs. Nominal GDP
-
-## Real GDP and nominal GDP
-
-**Nominal GDP**: GDP measured in current prices (prices of the year being measured). It includes both quantity and price changes.
-
-**Real GDP**: GDP measured in constant prices (prices of a base year). It shows only quantity changes, removing the effect of inflation.
-
-Real GDP is the better measure of actual economic growth because it isolates changes in production from changes in prices.
-
-## GDP deflator
-
-The **GDP deflator** is a price index that measures the average price level of all goods and services included in GDP.
-
-Formula: GDP Deflator = (Nominal GDP / Real GDP) × 100
-
-The GDP deflator:
-- Uses current year quantities (unlike CPI which uses fixed basket)
-- Includes all GDP components (not just consumer goods)
-- Is broader than CPI
-
-## Example calculating real GDP with a deflator
-
-Example:
-- Nominal GDP (Year 2) = $12,000
-- GDP Deflator (Year 2) = 120
-- Base year = Year 1 (deflator = 100)
-
-Real GDP (Year 2) = (Nominal GDP / GDP Deflator) × 100
-Real GDP = ($12,000 / 120) × 100 = $10,000
-
-This shows that in Year 2, output was worth $10,000 in Year 1 prices.
-
-## Adjusting nominal values to real values
+        title: 'Adjusting nominal values to real values',
+        content: `# Adjusting Nominal Values to Real Values
 
 To convert nominal to real:
 Real Value = (Nominal Value / Price Index) × 100
@@ -1444,21 +1685,55 @@ Nominal Value = (Real Value × Price Index) / 100
 
 This adjustment removes the effect of inflation, allowing comparison across time periods.
 
-## Lesson summary: Real vs. nominal GDP
+## Key Concepts
 
-Nominal GDP uses current prices; real GDP uses constant base-year prices. Real GDP measures actual production changes, removing inflation effects. The GDP deflator converts between nominal and real GDP. Real GDP is the preferred measure for comparing economic growth over time.`,
+- **Nominal values**: Measured in current prices
+- **Real values**: Measured in constant (base year) prices
+- **Price index**: Used to adjust for inflation
+- **Purpose**: Compare economic values across different time periods`,
+        importantPoints: [
+          'Real value = (Nominal value / Price index) × 100',
+          'This adjustment removes inflation effects',
+          'Allows comparison across time periods',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l6-article-2',
+        type: 'article',
+        title: 'Lesson summary: Real vs. nominal GDP',
+        content: `# Lesson Summary: Real vs. Nominal GDP
+
+Nominal GDP uses current prices; real GDP uses constant base-year prices. Real GDP measures actual production changes, removing inflation effects. The GDP deflator converts between nominal and real GDP. Real GDP is the preferred measure for comparing economic growth over time.
+
+## Real GDP and Nominal GDP
+
+**Nominal GDP**: GDP measured in current prices (prices of the year being measured). It includes both quantity and price changes.
+
+**Real GDP**: GDP measured in constant prices (prices of a base year). It shows only quantity changes, removing the effect of inflation.
+
+Real GDP is the better measure of actual economic growth because it isolates changes in production from changes in prices.
+
+## GDP Deflator
+
+The **GDP deflator** is a price index that measures the average price level of all goods and services included in GDP.
+
+Formula: GDP Deflator = (Nominal GDP / Real GDP) × 100
+
+The GDP deflator:
+- Uses current year quantities (unlike CPI which uses fixed basket)
+- Includes all GDP components (not just consumer goods)
+- Is broader than CPI`,
         importantPoints: [
           'Nominal GDP uses current prices; real GDP uses constant prices',
           'Real GDP removes inflation effects to show actual production changes',
           'GDP deflator = (Nominal GDP / Real GDP) × 100',
           'Real GDP is better for measuring economic growth',
-          'Real value = (Nominal value / Price index) × 100',
         ],
       } as ArticleContent,
       {
         id: 'macroecon-u2-l6-practice',
         type: 'practice',
-        title: 'Practice: Real vs. nominal GDP',
+        title: 'Real vs. nominal GDP',
         exercises: [
           {
             id: 'practice-2-6-1',
@@ -1485,12 +1760,6 @@ Nominal GDP uses current prices; real GDP uses constant base-year prices. Real G
           },
         ],
       } as PracticeContent,
-      {
-        id: 'macroecon-u2-l6-quiz',
-        type: 'quiz',
-        title: 'Quiz: Real vs. nominal GDP',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1501,16 +1770,26 @@ Nominal GDP uses current prices; real GDP uses constant base-year prices. Real G
       {
         id: 'macroecon-u2-l7-video-1',
         type: 'video',
-        title: 'Business cycles',
+        title: 'The business cycle',
         videoIndex: 0,
       } as VideoContent,
       {
-        id: 'macroecon-u2-l7-article',
+        id: 'macroecon-u2-l7-article-1',
         type: 'article',
-        title: 'Learn: Business cycles',
-        content: `# Business Cycles
+        title: 'Tracking real GDP over time',
+        content: `# Tracking Real GDP Over Time
 
-## The business cycle
+Real GDP growth over time shows:
+- **Long-term trend**: Upward slope showing economic growth
+- **Cyclical fluctuations**: Short-term ups and downs around the trend
+- **Volatility**: How much the economy fluctuates
+
+A healthy economy shows:
+- Positive long-term growth trend
+- Relatively small, infrequent recessions
+- Quick recovery from downturns
+
+## The Business Cycle
 
 The **business cycle** describes the fluctuations in economic activity over time. It consists of alternating periods of expansion and contraction.
 
@@ -1540,23 +1819,29 @@ The **business cycle** describes the fluctuations in economic activity over time
    - Low inflation
    - Economy below capacity
 
-The cycle then repeats.
+The cycle then repeats.`,
+        importantPoints: [
+          'Real GDP shows long-term growth trend with cyclical fluctuations',
+          'Business cycle has four phases: expansion, peak, contraction, trough',
+          'A healthy economy shows positive long-term growth with small, infrequent recessions',
+        ],
+      } as ArticleContent,
+      {
+        id: 'macroecon-u2-l7-article-2',
+        type: 'article',
+        title: 'Lesson summary: Business cycles',
+        content: `# Lesson Summary: Business Cycles
 
-## Tracking real GDP over time
+The business cycle consists of expansion, peak, contraction (recession), and trough phases. Real GDP fluctuates around a long-term growth trend. Understanding business cycles helps predict economic conditions and inform policy decisions.
 
-Real GDP growth over time shows:
-- **Long-term trend**: Upward slope showing economic growth
-- **Cyclical fluctuations**: Short-term ups and downs around the trend
-- **Volatility**: How much the economy fluctuates
+## Key Concepts
 
-A healthy economy shows:
-- Positive long-term growth trend
-- Relatively small, infrequent recessions
-- Quick recovery from downturns
-
-## Lesson summary: Business cycles
-
-The business cycle consists of expansion, peak, contraction (recession), and trough phases. Real GDP fluctuates around a long-term growth trend. Understanding business cycles helps predict economic conditions and inform policy decisions.`,
+- **Expansion**: Period of economic growth with increasing GDP and employment
+- **Peak**: Highest point of economic activity
+- **Contraction (Recession)**: Period of economic decline (2+ quarters of negative GDP growth)
+- **Trough**: Lowest point of economic activity
+- **Long-term trend**: Upward slope showing overall economic growth
+- **Cyclical fluctuations**: Short-term ups and downs around the trend`,
         importantPoints: [
           'Business cycle has four phases: expansion, peak, contraction, trough',
           'Recession is defined as two consecutive quarters of negative GDP growth',
@@ -1568,7 +1853,7 @@ The business cycle consists of expansion, peak, contraction (recession), and tro
       {
         id: 'macroecon-u2-l7-practice',
         type: 'practice',
-        title: 'Practice: Business cycles',
+        title: 'Business cycles',
         exercises: [
           {
             id: 'practice-2-7-1',
@@ -1596,12 +1881,6 @@ The business cycle consists of expansion, peak, contraction (recession), and tro
           },
         ],
       } as PracticeContent,
-      {
-        id: 'macroecon-u2-l7-quiz',
-        type: 'quiz',
-        title: 'Quiz: Business cycles',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
