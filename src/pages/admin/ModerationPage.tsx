@@ -5,7 +5,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
-import { Shield, Trash2, Lock, Pin, CheckCircle, XCircle, MessageCircle, Star, MessageSquare } from 'lucide-react';
+import { Shield, Trash2, Lock, Pin, CheckCircle, XCircle, MessageCircle, Star, MessageSquare, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -192,14 +192,17 @@ export default function ModerationPage() {
 
       if (error) throw error;
 
-      // Get user names for each evaluation
+      // Get user names for each evaluation - include username as fallback
       const userIds = [...new Set((data || []).map((e: any) => e.user_id))];
       const { data: profiles } = await supabase
         .from('profiles')
-        .select('id, display_name')
+        .select('id, display_name, username')
         .in('id', userIds);
 
-      const profileMap = new Map((profiles || []).map(p => [p.id, p.display_name]));
+      const profileMap = new Map((profiles || []).map(p => [
+        p.id, 
+        p.display_name || p.username || 'Anonymous'
+      ]));
 
       const evaluationsWithNames = (data || []).map((evaluation: any) => ({
         ...evaluation,
@@ -657,6 +660,27 @@ export default function ModerationPage() {
 
             {/* Replies Tab */}
             <TabsContent value="replies" className="mt-6">
+              {pendingReplies.length > 0 && (
+                <div className="mb-4 flex justify-end">
+                  <Button
+                    onClick={handleApproveAllReplies}
+                    disabled={approvingAllReplies || pendingReplies.length === 0}
+                    variant="default"
+                  >
+                    {approvingAllReplies ? (
+                      <>
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        Approving...
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle className="h-4 w-4 mr-2" />
+                        Approve All Replies ({pendingReplies.length})
+                      </>
+                    )}
+                  </Button>
+                </div>
+              )}
               {loadingReplies ? (
                 <div className="space-y-4">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -721,6 +745,27 @@ export default function ModerationPage() {
 
             {/* Evaluations Tab */}
             <TabsContent value="evaluations" className="mt-6">
+              {pendingEvaluations.length > 0 && (
+                <div className="mb-4 flex justify-end">
+                  <Button
+                    onClick={handleApproveAllEvaluations}
+                    disabled={approvingAllEvaluations || pendingEvaluations.length === 0}
+                    variant="default"
+                  >
+                    {approvingAllEvaluations ? (
+                      <>
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        Approving...
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle className="h-4 w-4 mr-2" />
+                        Approve All Company Reviews ({pendingEvaluations.length})
+                      </>
+                    )}
+                  </Button>
+                </div>
+              )}
               {loadingEvaluations ? (
                 <div className="space-y-4">
                   {Array.from({ length: 5 }).map((_, i) => (

@@ -50,11 +50,13 @@ export function CompanyRating({ companySlug, className }: CompanyRatingProps) {
 
   const loadEvaluations = async () => {
     try {
-      // Fetch all evaluations for this company
+      // Fetch only approved evaluations for this company
+      // RLS policy should also filter, but explicit filter ensures correctness
       const { data: evals, error } = await supabase
         .from('company_evaluations')
         .select('*')
         .eq('company_slug', companySlug)
+        .eq('is_approved', true)
         .order('created_at', { ascending: false });
 
       if (error) throw error;

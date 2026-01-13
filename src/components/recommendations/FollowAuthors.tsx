@@ -1,20 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
-import { UserPlus, UserCheck, TrendingUp, FileText } from 'lucide-react';
+import { UserPlus, TrendingUp, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { UserAvatar } from '@/components/user/UserAvatar';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
-import { supabase } from '@/integrations/supabase/client';
+import { useAnalytics } from '@/hooks/useAnalytics';
+import { authors } from '@/data/authors';
 
 interface Author {
   id: string;
   username: string | null;
-  display_name: string | null;
+  display_name: string;
   avatar_url: string | null;
-  bio: string | null;
+  bio: string;
   reputation: number;
   post_count: number;
   comment_count: number;
@@ -24,55 +25,38 @@ interface Author {
 export function FollowAuthors({ className, limit = 5 }: { className?: string; limit?: number }) {
   const { user } = useUser();
   const { t } = useTranslation({ namespace: 'ui' });
-  const [authors, setAuthors] = useState<Author[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { data: articles = [], isLoading } = useAnalytics({ type: undefined });
 
-  useEffect(() => {
-    const loadAuthors = async () => {
-      try {
-        // Get top users by reputation_score or posts_count
-        const { data: profiles, error: profilesError } = await supabase
-          .from('profiles')
-          .select('id, username, display_name, avatar_url, bio, reputation_score, posts_count')
-          .order('reputation_score', { ascending: false, nullsFirst: false })
-          .limit(limit);
-
-        if (profilesError) {
-          console.error('Error loading profiles:', profilesError);
-          setLoading(false);
-          return;
-        }
-
-        // Filter out current user if logged in
-        const filteredProfiles = user 
-          ? (profiles || []).filter((p: any) => p.id !== user.id)
-          : (profiles || []);
-
-        // Map profiles to authors
-        const mappedAuthors: Author[] = filteredProfiles
-          .map((profile: any) => ({
-            id: profile.id,
-            username: profile.username,
-            display_name: profile.display_name,
-            avatar_url: profile.avatar_url,
-            bio: profile.bio,
-            reputation: profile.reputation_score || 0,
-            post_count: profile.posts_count || 0,
-            comment_count: 0,
-            is_following: false, // Simplified - no follow tracking for now
-          }))
-          .slice(0, limit);
-
-        setAuthors(mappedAuthors);
-      } catch (error) {
-        console.error('Error loading authors:', error);
-      } finally {
-        setLoading(false);
+  // Calculate article counts per author dynamically (same logic as AuthorsPage)
+  const authorCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    articles.forEach((article) => {
+      if (article.author) {
+        counts[article.author] = (counts[article.author] || 0) + 1;
       }
-    };
+    });
+    return counts;
+  }, [articles]);
 
-    loadAuthors();
-  }, [user, limit]);
+  // Get top authors sorted by article count (from /authors page)
+  const topAuthors = useMemo(() => {
+    return authors
+      .map((author) => ({
+        id: author.id,
+        username: author.username,
+        display_name: author.display_name,
+        avatar_url: author.avatar_url,
+        bio: author.bio,
+        reputation: author.reputation,
+        post_count: authorCounts[author.display_name] || 0,
+        comment_count: author.comment_count,
+        is_following: false,
+      }))
+      .sort((a, b) => b.post_count - a.post_count) // Sort by article count descending
+      .slice(0, limit); // Get top N
+  }, [authorCounts, limit]);
+
+  const loading = isLoading;
 
   if (loading) {
     return (
@@ -88,7 +72,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
     );
   }
 
-  if (authors.length === 0) {
+  if (topAuthors.length === 0) {
     return (
       <div className={cn('premium-card p-6 text-center', className)}>
         <UserPlus className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
@@ -105,7 +89,7 @@ export function FollowAuthors({ className, limit = 5 }: { className?: string; li
       </div>
 
       <div className="space-y-3">
-        {authors.map((author) => {
+        {topAuthors.map((author) => {
           const profile = {
             id: author.id,
             username: author.username,
