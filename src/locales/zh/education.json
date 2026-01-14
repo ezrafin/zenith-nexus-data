@@ -124,6 +124,12 @@
     "moduleTestReview": "复习材料后再试一次",
     "module": "模块",
     "unit": "单元",
+    "previous": "上一题",
+    "next": "下一题",
+    "questionXOfY": "第 {{current}} 题，共 {{total}} 题",
+    "quizCompleted": "测验完成！",
+    "masteryCheckCompleted": "掌握度检查完成！",
+    "examCompleted": "考试完成！",
     "seoCourseTitle": "{{title}} - 在线课程 | INVESTOPATRONUS",
     "seoCourseDescription": "通过我们的综合在线课程学习 {{title}}。访问视频课程、互动测验和专家内容，掌握 {{description}}。"
   },
@@ -486,6 +492,22 @@
           }
         }
       }
+    },
+    "macroeconomics": {
+      "title": "宏观经济学",
+      "description": "全面研究宏观经济原理、政策及其对全球经济的影响"
+    },
+    "microeconomics": {
+      "title": "微观经济学",
+      "description": "研究个体经济单位及其决策过程"
+    },
+    "finance-markets": {
+      "title": "金融与市场",
+      "description": "全面研究金融市场、工具和投资策略"
+    },
+    "economics-personal-finance": {
+      "title": "经济学与个人理财",
+      "description": "通过经济原理理解个人理财"
     }
   },
   "learningCourse": {

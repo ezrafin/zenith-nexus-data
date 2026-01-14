@@ -124,6 +124,12 @@
     "moduleTestReview": "Révisez le matériel et réessayez",
     "module": "Module",
     "unit": "Unité",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "questionXOfY": "Question {{current}} sur {{total}}",
+    "quizCompleted": "Quiz terminé !",
+    "masteryCheckCompleted": "Vérification de maîtrise terminée !",
+    "examCompleted": "Examen terminé !",
     "seoCourseTitle": "{{title}} - Cours en Ligne | INVESTOPATRONUS",
     "seoCourseDescription": "Apprenez {{title}} avec notre cours en ligne complet. Accédez à des leçons vidéo, des quiz interactifs et du contenu d'expert pour maîtriser {{description}}."
   },
@@ -216,6 +222,22 @@
         "rm-module-4": { "title": "Psychologie de l'Investissement", "lesson": { "rm-lesson-4-1": { "title": "Biais Psychologiques Courants" }, "rm-lesson-4-2": { "title": "Surmonter la Peur et l'Avarice" }, "rm-lesson-4-3": { "title": "Trading Émotionnel" }, "rm-lesson-4-4": { "title": "Développer la Discipline" } } },
         "rm-module-5": { "title": "Pratique de Gestion des Risques", "lesson": { "rm-lesson-5-1": { "title": "Risque de Portefeuille" }, "rm-lesson-5-2": { "title": "Gestion de Corrélation" }, "rm-lesson-5-3": { "title": "Tests de Stress" } } }
       }
+    },
+    "macroeconomics": {
+      "title": "Macroéconomie",
+      "description": "Étude complète des principes macroéconomiques, des politiques et de leur impact sur les économies mondiales"
+    },
+    "microeconomics": {
+      "title": "Microéconomie",
+      "description": "Étude des unités économiques individuelles et de leurs processus de prise de décision"
+    },
+    "finance-markets": {
+      "title": "Finance et Marchés",
+      "description": "Étude complète des marchés financiers, des instruments et des stratégies d'investissement"
+    },
+    "economics-personal-finance": {
+      "title": "Économie et Finances Personnelles",
+      "description": "Comprendre les finances personnelles à travers les principes économiques"
     }
   },
   "learningCourse": {

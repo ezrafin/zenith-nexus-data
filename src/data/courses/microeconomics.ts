@@ -4,7 +4,6 @@ import type {
   Lesson,
   VideoContent,
   ArticleContent,
-  PracticeContent,
   QuizContent,
 } from '../courseTypes';
 
@@ -167,40 +166,6 @@ Economics studies how societies allocate scarce resources. Scarcity forces choic
         ],
       } as ArticleContent,
       {
-        id: 'micro-u1-l1-practice',
-        type: 'practice',
-        title: 'Practice: Scarcity',
-        exercises: [
-          {
-            id: 'practice-1-1-1',
-            prompt: 'Explain why scarcity exists even in wealthy societies. Give examples of scarce resources in a rich country.',
-            hints: [
-              'Scarcity is about limited resources vs. unlimited wants',
-              'Time is always scarce',
-              'Even abundant resources require choices',
-            ],
-          },
-          {
-            id: 'practice-1-1-2',
-            prompt: 'Identify the four factors of production used to produce a smartphone. For each factor, explain its role and what payment it receives.',
-            hints: [
-              'Land: raw materials (minerals, rare earth elements)',
-              'Labor: workers who assemble and design',
-              'Capital: factories, machinery, equipment',
-              'Entrepreneurship: innovation and organization',
-            ],
-          },
-          {
-            id: 'practice-1-1-3',
-            prompt: 'Classify each statement as positive or normative: (a) "The unemployment rate is 6%", (b) "The government should create more jobs", (c) "Raising the minimum wage increases unemployment".',
-            hints: [
-              'Positive: describes what is (can be tested)',
-              'Normative: describes what should be (value judgment)',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u1-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Introduction to economics',
@@ -329,41 +294,6 @@ Economics studies how societies allocate scarce resources. Scarcity forces choic
           'Economic systems differ in how they allocate resources',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u1-l2-practice',
-        type: 'practice',
-        title: 'Practice: Resource allocation and economic systems',
-        exercises: [
-          {
-            id: 'practice-1-2-1',
-            prompt: 'Explain why property rights are essential for a market system to function. What happens when property rights are weak?',
-            hints: [
-              'Property rights enable voluntary exchange',
-              'Provide incentives to invest',
-              'Weak rights lead to conflict and inefficiency',
-            ],
-          },
-          {
-            id: 'practice-1-2-2',
-            prompt: 'Draw and explain the circular flow model. Show both the real flow and the money flow between households and firms.',
-            hints: [
-              'Real flow: resources and goods/services',
-              'Money flow: payments',
-              'Households supply resources, demand goods',
-              'Firms demand resources, supply goods',
-            ],
-          },
-          {
-            id: 'practice-1-2-3',
-            prompt: 'Compare and contrast a market economy and a command economy. How do they differ in answering the three economic questions?',
-            hints: [
-              'Market: individuals decide, prices coordinate',
-              'Command: government decides, central planning',
-              'Different use of incentives',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u1-l2-quiz',
         type: 'quiz',
@@ -570,40 +500,6 @@ The law of demand states that price and quantity demanded are inversely related.
         ],
       } as ArticleContent,
       {
-        id: 'micro-u2-l1-practice',
-        type: 'practice',
-        title: 'Practice: Demand and the law of demand',
-        exercises: [
-          {
-            id: 'practice-2-1-1',
-            prompt: 'Explain the law of demand. Why do demand curves slope downward? Use both substitution and income effects in your explanation.',
-            hints: [
-              'Price and quantity are inversely related',
-              'Substitution effect: switch to alternatives',
-              'Income effect: purchasing power changes',
-            ],
-          },
-          {
-            id: 'practice-2-1-2',
-            prompt: 'If the price of coffee increases, what happens to the demand for tea? What happens to the demand for coffee? Explain the difference.',
-            hints: [
-              'Tea is a substitute for coffee',
-              'Demand for tea increases (shift)',
-              'Quantity demanded of coffee decreases (movement along curve)',
-            ],
-          },
-          {
-            id: 'practice-2-1-3',
-            prompt: 'Classify each good as normal or inferior and explain: (a) Restaurant meals, (b) Generic brand cereal, (c) Public transportation for a high-income earner.',
-            hints: [
-              'Normal: demand increases with income',
-              'Inferior: demand decreases with income',
-              'Depends on income level and preferences',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u2-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Demand',
@@ -725,40 +621,6 @@ The law of supply states that price and quantity supplied are directly related. 
           'Change in supply = shift of curve; change in quantity supplied = movement along curve',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u2-l2-practice',
-        type: 'practice',
-        title: 'Practice: Supply and the law of supply',
-        exercises: [
-          {
-            id: 'practice-2-2-1',
-            prompt: 'Explain the law of supply. Why do supply curves slope upward?',
-            hints: [
-              'Price and quantity are directly related',
-              'Higher prices provide profit incentives',
-              'Can cover higher production costs',
-            ],
-          },
-          {
-            id: 'practice-2-2-2',
-            prompt: 'Distinguish between a change in supply and a change in quantity supplied. Give an example of each.',
-            hints: [
-              'Change in supply: shift of entire curve',
-              'Change in quantity supplied: movement along curve',
-              'Only price causes movement along curve',
-            ],
-          },
-          {
-            id: 'practice-2-2-3',
-            prompt: 'Show on a supply-demand diagram what happens when the price of inputs (e.g., wages) increases. Explain the effect on supply.',
-            hints: [
-              'Higher input prices increase costs',
-              'Supply curve shifts left',
-              'Less quantity supplied at each price',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u2-l2-quiz',
         type: 'quiz',
@@ -885,41 +747,6 @@ Market equilibrium occurs where quantity demanded equals quantity supplied. At e
           'Supply increase → Lower price, higher quantity',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u2-l3-practice',
-        type: 'practice',
-        title: 'Practice: Market equilibrium and disequilibrium, Changes in equilibrium',
-        exercises: [
-          {
-            id: 'practice-2-3-1',
-            prompt: 'Define market equilibrium. What happens when the market is not in equilibrium? Explain shortages and surpluses.',
-            hints: [
-              'Equilibrium: Qd = Qs',
-              'Shortage: Qd > Qs, price below equilibrium',
-              'Surplus: Qs > Qd, price above equilibrium',
-            ],
-          },
-          {
-            id: 'practice-2-3-2',
-            prompt: 'Use the four-step process to analyze what happens to equilibrium price and quantity when consumer income increases (assume a normal good).',
-            hints: [
-              'Step 1: Affects demand',
-              'Step 2: Demand increases (shifts right)',
-              'Step 3: New equilibrium at higher price and quantity',
-              'Step 4: Both price and quantity increase',
-            ],
-          },
-          {
-            id: 'practice-2-3-3',
-            prompt: 'What happens to equilibrium price and quantity when both demand and supply increase? Explain why the effect on price may be ambiguous.',
-            hints: [
-              'Both shifts increase quantity (clear)',
-              'Demand increase raises price, supply increase lowers price',
-              'Net effect on price depends on relative magnitudes',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u2-l3-quiz',
         type: 'quiz',
@@ -1209,49 +1036,6 @@ const unit3Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'micro-u3-l1-practice',
-        type: 'practice',
-        title: 'Practice: Price Elasticity of Demand and its Determinants, Determinants of price elasticity and the total revenue rule',
-        exercises: [
-          {
-            id: 'practice-3-1-1',
-            prompt: 'Using the midpoint method, calculate the price elasticity of demand when price increases from $10 to $12 and quantity decreases from 100 to 80 units.',
-            hints: [
-              'Use midpoint formula: average of Q and P',
-              'Calculate % change in Q and % change in P',
-              'Elasticity = %ΔQ / %ΔP',
-            ],
-          },
-          {
-            id: 'practice-3-1-2',
-            prompt: 'Explain how each of the following affects price elasticity of demand: (a) availability of substitutes, (b) proportion of income spent, (c) time horizon.',
-            hints: [
-              'More substitutes → more elastic',
-              'Larger proportion of income → more elastic',
-              'Longer time → more elastic',
-            ],
-          },
-          {
-            id: 'practice-3-1-3',
-            prompt: 'If demand is elastic and a firm raises its price, what happens to total revenue? Explain using the relationship between price and quantity effects.',
-            hints: [
-              'Elastic: quantity effect dominates',
-              'Price increase → large quantity decrease',
-              'TR decreases',
-            ],
-          },
-          {
-            id: 'practice-3-1-4',
-            prompt: 'Why do governments often tax goods with inelastic demand? Use the relationship between elasticity and tax revenue to explain.',
-            hints: [
-              'Inelastic demand: quantity doesn\'t fall much',
-              'Tax revenue = tax × quantity',
-              'More revenue from inelastic goods',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u3-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Price Elasticity of Demand',
@@ -1378,49 +1162,6 @@ Where:
           'Supply elasticity helps predict how markets adjust to changes',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u3-l2-practice',
-        type: 'practice',
-        title: 'Practice: Price Elasticity of Supply and its Determinants',
-        exercises: [
-          {
-            id: 'practice-3-2-1',
-            prompt: 'Calculate the price elasticity of supply when price increases from $20 to $24 and quantity supplied increases from 50 to 70 units using the midpoint method.',
-            hints: [
-              'Use midpoint formula',
-              'Calculate % change in Qs and % change in P',
-              'Elasticity = %ΔQs / %ΔP',
-            ],
-          },
-          {
-            id: 'practice-3-2-2',
-            prompt: 'Explain why supply is typically more elastic in the long run than in the short run. Give an example.',
-            hints: [
-              'Short run: fixed capacity, limited inputs',
-              'Long run: can adjust all inputs, enter/exit market',
-              'Example: manufacturing, agriculture',
-            ],
-          },
-          {
-            id: 'practice-3-2-3',
-            prompt: 'How does storage capacity affect price elasticity of supply? Compare a good that can be stored (like grain) with one that cannot (like fresh flowers).',
-            hints: [
-              'Storage allows inventory adjustment',
-              'Can store → more elastic (can hold or release)',
-              'Can\'t store → inelastic (must sell immediately)',
-            ],
-          },
-          {
-            id: 'practice-3-2-4',
-            prompt: 'Why might the supply of digital products (like software) be more elastic than the supply of handcrafted goods?',
-            hints: [
-              'Digital: easy to reproduce, low marginal cost',
-              'Handcrafted: requires time, skill, materials',
-              'Technology affects production flexibility',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u3-l2-quiz',
         type: 'quiz',
@@ -1559,49 +1300,6 @@ Where:
           'Substitutes: Ec > 0; complements: Ec < 0',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u3-l3-practice',
-        type: 'practice',
-        title: 'Practice: Income Elasticity of Demand, Cross-Price Elasticity of Demand',
-        exercises: [
-          {
-            id: 'practice-3-3-1',
-            prompt: 'Calculate income elasticity of demand when income increases by 10% and quantity demanded increases by 15%. Is this a normal or inferior good? Luxury or necessity?',
-            hints: [
-              'Ei = %ΔQd / %ΔI',
-              'Positive = normal good',
-              'Ei > 1 = luxury',
-            ],
-          },
-          {
-            id: 'practice-3-3-2',
-            prompt: 'If the price of coffee increases by 20% and the quantity demanded of tea increases by 10%, what is the cross-price elasticity? Are coffee and tea substitutes or complements?',
-            hints: [
-              'Ec = %ΔQd tea / %ΔP coffee',
-              'Positive = substitutes',
-              'Negative = complements',
-            ],
-          },
-          {
-            id: 'practice-3-3-3',
-            prompt: 'Classify each good based on income elasticity: (a) Restaurant meals (Ei = 1.5), (b) Generic cereal (Ei = -0.3), (c) Basic food (Ei = 0.4).',
-            hints: [
-              'Ei > 1: luxury',
-              'Ei < 0: inferior',
-              '0 < Ei < 1: necessity',
-            ],
-          },
-          {
-            id: 'practice-3-3-4',
-            prompt: 'If the cross-price elasticity between cars and gasoline is -0.8, what does this tell you about the relationship between these goods?',
-            hints: [
-              'Negative = complements',
-              'Magnitude shows strength',
-              'Strong complement relationship',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u3-l3-quiz',
         type: 'quiz',
@@ -1758,49 +1456,6 @@ const unit4Lessons: Lesson[] = [
           'Competitive equilibrium maximizes total surplus (allocative efficiency)',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u4-l1-practice',
-        type: 'practice',
-        title: 'Practice: Consumer and Producer Surplus and Allocative Efficiency',
-        exercises: [
-          {
-            id: 'practice-4-1-1',
-            prompt: 'Calculate consumer surplus if the demand curve is P = 100 - 2Q, the market price is $40, and the equilibrium quantity is 30 units.',
-            hints: [
-              'Consumer surplus = area below demand, above price',
-              'Triangle: ½ × base × height',
-              'Base = quantity, height = max price - market price',
-            ],
-          },
-          {
-            id: 'practice-4-1-2',
-            prompt: 'Explain why the demand curve can be interpreted as a marginal benefit curve. How does this relate to consumer surplus?',
-            hints: [
-              'Demand shows willingness to pay',
-              'Willingness to pay = marginal benefit',
-              'Consumer surplus = benefit - price',
-            ],
-          },
-          {
-            id: 'practice-4-1-3',
-            prompt: 'Show on a supply-demand diagram the areas representing consumer surplus and producer surplus. Explain why total surplus is maximized at equilibrium.',
-            hints: [
-              'CS: below demand, above price',
-              'PS: above supply, below price',
-              'Equilibrium maximizes total area',
-            ],
-          },
-          {
-            id: 'practice-4-1-4',
-            prompt: 'What is allocative efficiency? Why does competitive market equilibrium achieve allocative efficiency?',
-            hints: [
-              'Allocative efficiency = maximum total surplus',
-              'At equilibrium: MB = MC',
-              'All beneficial trades occur',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u4-l1-quiz',
         type: 'quiz',
@@ -2054,51 +1709,6 @@ const unit4Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'micro-u4-l2-practice',
-        type: 'practice',
-        title: 'Practice: Price and quantity controls, The effect of government interventions on surplus, Tax Incidence and Deadweight Loss',
-        exercises: [
-          {
-            id: 'practice-4-2-1',
-            prompt: 'Show on a supply-demand diagram the effects of a price ceiling. Identify consumer surplus, producer surplus, and deadweight loss. Explain why deadweight loss occurs.',
-            hints: [
-              'Price ceiling below equilibrium',
-              'Creates shortage',
-              'Reduces quantity',
-              'Deadweight loss = lost trades',
-            ],
-          },
-          {
-            id: 'practice-4-2-2',
-            prompt: 'If a $3 tax is imposed on a good and consumers pay $2.50 while producers receive $0.50 less, who bears more of the tax burden? What does this tell you about elasticities?',
-            hints: [
-              'Consumers pay more → demand more inelastic',
-              'Producers pay less → supply more elastic',
-              'More inelastic side bears more burden',
-            ],
-          },
-          {
-            id: 'practice-4-2-3',
-            prompt: 'Compare the deadweight loss from a tax when demand is perfectly inelastic versus when demand is perfectly elastic. Explain the difference.',
-            hints: [
-              'Perfectly inelastic: no quantity change, no DWL',
-              'Perfectly elastic: large quantity change, large DWL',
-              'DWL depends on quantity response',
-            ],
-          },
-          {
-            id: 'practice-4-2-4',
-            prompt: 'How do price controls reallocate surplus? Use rent control as an example to explain the transfer of surplus from landlords to tenants.',
-            hints: [
-              'Price ceiling transfers surplus',
-              'Landlords lose (lower price)',
-              'Tenants who get housing gain',
-              'But overall surplus decreases (DWL)',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u4-l2-quiz',
         type: 'quiz',
         title: 'Quiz: Market Interventions and Deadweight Loss',
@@ -2216,52 +1826,6 @@ const unit4Lessons: Lesson[] = [
           'Trade analysis requires comparing surpluses with and without trade',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u4-l3-practice',
-        type: 'practice',
-        title: 'Practice: International trade and public policy',
-        exercises: [
-          {
-            id: 'practice-4-3-1',
-            prompt: 'If the world price of a good is $10 and the domestic equilibrium price is $15, what happens when the country opens to trade? Calculate consumer surplus, producer surplus, and total surplus with and without trade.',
-            hints: [
-              'World price < domestic → import',
-              'Price falls to $10',
-              'Consumer surplus increases',
-              'Producer surplus decreases',
-              'Total surplus increases (gains from trade)',
-            ],
-          },
-          {
-            id: 'practice-4-3-2',
-            prompt: 'Show on a supply-demand diagram the effects of a tariff. Identify the areas representing consumer surplus, producer surplus, government revenue, and deadweight loss.',
-            hints: [
-              'Tariff increases price above world price',
-              'Reduces imports',
-              'Creates two deadweight loss triangles',
-              'Government gains tariff revenue',
-            ],
-          },
-          {
-            id: 'practice-4-3-3',
-            prompt: 'Who gains and who loses from free trade? Who gains and who loses from a tariff? Explain using the concepts of consumer and producer surplus.',
-            hints: [
-              'Free trade: consumers gain (import case), producers lose',
-              'Tariff: producers gain, consumers lose',
-              'Overall: free trade increases total surplus',
-            ],
-          },
-          {
-            id: 'practice-4-3-4',
-            prompt: 'Explain the two sources of deadweight loss from a tariff. Why does a tariff reduce economic efficiency?',
-            hints: [
-              'Production inefficiency: domestic production above world cost',
-              'Consumption inefficiency: consumption below world benefit',
-              'Both create deadweight loss',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u4-l3-quiz',
         type: 'quiz',
@@ -2396,49 +1960,6 @@ Where:
         ],
       } as ArticleContent,
       {
-        id: 'micro-u5-l1-practice',
-        type: 'practice',
-        title: 'Practice: Total Utility and Marginal Utility',
-        exercises: [
-          {
-            id: 'practice-5-1-1',
-            prompt: 'Calculate marginal utility for each unit consumed if total utility is: 1 unit = 10, 2 units = 18, 3 units = 24, 4 units = 28. Does this demonstrate the law of diminishing marginal utility?',
-            hints: [
-              'MU = ΔTU / ΔQ',
-              'Calculate change in TU for each additional unit',
-              'Diminishing MU: MU decreases as Q increases',
-            ],
-          },
-          {
-            id: 'practice-5-1-2',
-            prompt: 'Explain the law of diminishing marginal utility. Give a real-world example and show how it affects consumption decisions.',
-            hints: [
-              'MU decreases as consumption increases',
-              'First unit provides most satisfaction',
-              'Example: food, entertainment',
-            ],
-          },
-          {
-            id: 'practice-5-1-3',
-            prompt: 'If MU of good A is 20 and price is $4, and MU of good B is 15 and price is $3, is the consumer maximizing utility? If not, what should they do?',
-            hints: [
-              'Calculate MU/P for each good',
-              'MU/P should be equal for utility maximization',
-              'Buy more of good with higher MU/P',
-            ],
-          },
-          {
-            id: 'practice-5-1-4',
-            prompt: 'How can a demand curve be derived from utility maximization? Explain the process of how a price change leads to a quantity change.',
-            hints: [
-              'Price change affects MU/P',
-              'Consumer adjusts quantity to restore equality',
-              'Lower price → higher quantity',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u5-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Introduction to consumer theory; total utility and marginal utility',
@@ -2531,50 +2052,6 @@ Final allocation:
           'This method guarantees maximum utility given budget',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u5-l2-practice',
-        type: 'practice',
-        title: 'Practice: Utility Maximization',
-        exercises: [
-          {
-            id: 'practice-5-2-1',
-            prompt: 'Given a budget of $30, Good X (P=$3) with MU: 1st=15, 2nd=12, 3rd=9, 4th=6, and Good Y (P=$5) with MU: 1st=20, 2nd=15, 3rd=10, find the utility-maximizing combination.',
-            hints: [
-              'Calculate MU/P for each unit',
-              'Rank by MU/P',
-              'Allocate budget starting with highest MU/P',
-              'Verify MU/P equal and budget exhausted',
-            ],
-          },
-          {
-            id: 'practice-5-2-2',
-            prompt: 'Explain why a consumer should continue buying a good as long as its MU/P is higher than other goods, even if its MU is decreasing.',
-            hints: [
-              'MU/P measures utility per dollar',
-              'As long as MU/P is highest, it\'s best use of money',
-              'MU decreases but still best option',
-            ],
-          },
-          {
-            id: 'practice-5-2-3',
-            prompt: 'If MU/P for good A is 5 and MU/P for good B is 4, is the consumer maximizing utility? What should they do?',
-            hints: [
-              'MU/P should be equal',
-              'Buy more A, less B',
-              'Continue until equal',
-            ],
-          },
-          {
-            id: 'practice-5-2-4',
-            prompt: 'Show that when MU/P is equal for all goods and the budget is exhausted, total utility is maximized. Use an example with two goods.',
-            hints: [
-              'If MU/P unequal, can increase utility by reallocating',
-              'When equal, no reallocation can increase utility',
-              'Budget exhausted means all money used efficiently',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u5-l2-quiz',
         type: 'quiz',
@@ -2725,55 +2202,6 @@ Final allocation:
           'Different preferences lead to different indifference curve shapes',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u5-l3-practice',
-        type: 'practice',
-        title: 'Practice: Utility maximization with indifference curves',
-        exercises: [
-          {
-            id: 'practice-5-3-1',
-            prompt: 'Draw a budget line for a consumer with $60 budget, where good X costs $3 and good Y costs $4. What is the slope? What do the intercepts represent?',
-            hints: [
-              'Budget line: Px×Qx + Py×Qy = Budget',
-              'Slope = -Px/Py',
-              'Intercepts = Budget/Px and Budget/Py',
-            ],
-          },
-          {
-            id: 'practice-5-3-2',
-            prompt: 'Explain why indifference curves are convex to the origin. How does this relate to diminishing marginal rate of substitution?',
-            hints: [
-              'Convex = bowed inward',
-              'MRS decreases along curve',
-              'Due to diminishing marginal utility',
-            ],
-          },
-          {
-            id: 'practice-5-3-3',
-            prompt: 'Show graphically why the optimal consumption point is where the indifference curve is tangent to the budget line. What happens at other points?',
-            hints: [
-              'Tangency = highest indifference curve on budget line',
-              'Other points on lower curves',
-              'MRS = price ratio at tangency',
-            ],
-          },
-          {
-            id: 'practice-5-3-4',
-            prompt: 'Compare indifference curves for perfect substitutes and perfect complements. Give examples of each and explain why their shapes differ.',
-            hints: [
-              'Perfect substitutes: straight line, constant MRS',
-              'Perfect complements: L-shaped, fixed proportions',
-              'Examples: brands vs. left/right shoes',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'micro-u5-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Utility maximization with indifference curves',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -2851,40 +2279,6 @@ Where:
           'MP and AP relationships determine optimal input levels',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u6-l1-practice',
-        type: 'practice',
-        title: 'Practice: The production function',
-        exercises: [
-          {
-            id: 'practice-6-1-1',
-            prompt: 'Calculate marginal product and average product if total product is: 1 worker = 10 units, 2 workers = 22 units, 3 workers = 30 units, 4 workers = 36 units. Does this demonstrate diminishing marginal returns?',
-            hints: [
-              'MP = ΔTP / ΔL',
-              'AP = TP / L',
-              'Diminishing returns: MP decreases',
-            ],
-          },
-          {
-            id: 'practice-6-1-2',
-            prompt: 'Explain the law of diminishing marginal returns. Why does marginal product eventually decrease?',
-            hints: [
-              'Fixed inputs constrain production',
-              'Overcrowding, coordination problems',
-              'Initially may increase due to specialization',
-            ],
-          },
-          {
-            id: 'practice-6-1-3',
-            prompt: 'If marginal product is greater than average product, what happens to average product? Explain using the relationship between MP and AP.',
-            hints: [
-              'When MP > AP, AP increases',
-              'MP pulls AP up',
-              'When MP < AP, AP decreases',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u6-l1-quiz',
         type: 'quiz',
@@ -3089,50 +2483,6 @@ Where:
         ],
       } as ArticleContent,
       {
-        id: 'micro-u6-l2-practice',
-        type: 'practice',
-        title: 'Practice: Short-run production costs: foundational concepts, Short-run production costs',
-        exercises: [
-          {
-            id: 'practice-6-2-1',
-            prompt: 'Calculate MC, AVC, and ATC if FC = $100 and VC = $50 at Q=10, $90 at Q=20, $150 at Q=30. Show the relationships between these costs.',
-            hints: [
-              'MC = ΔVC / ΔQ',
-              'AVC = VC / Q',
-              'ATC = (FC + VC) / Q',
-            ],
-          },
-          {
-            id: 'practice-6-2-2',
-            prompt: 'Explain why MC intersects AVC and ATC at their minimum points. Use the relationship between marginal and average values.',
-            hints: [
-              'When MC < average, average decreases',
-              'When MC > average, average increases',
-              'When MC = average, average is at minimum',
-            ],
-          },
-          {
-            id: 'practice-6-2-3',
-            prompt: 'If fixed costs increase, what happens to MC, AVC, and ATC? Explain why.',
-            hints: [
-              'MC = ΔVC / ΔQ (doesn\'t depend on FC)',
-              'AVC = VC / Q (doesn\'t depend on FC)',
-              'ATC = (FC + VC) / Q (depends on FC)',
-            ],
-          },
-          {
-            id: 'practice-6-2-4',
-            prompt: 'Draw cost curves (MC, AVC, ATC, AFC) and explain their relationships. Show where MC intersects the average curves.',
-            hints: [
-              'MC is U-shaped',
-              'AVC and ATC are U-shaped',
-              'MC intersects at minimums',
-              'AFC always decreases',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u6-l2-quiz',
         type: 'quiz',
         title: 'Quiz: Production and costs in the short run',
@@ -3238,49 +2588,6 @@ Where:
           'Minimum efficient scale affects market structure',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u6-l3-practice',
-        type: 'practice',
-        title: 'Practice: Long-run production costs',
-        exercises: [
-          {
-            id: 'practice-6-3-1',
-            prompt: 'Explain the relationship between the long-run average total cost curve and short-run average total cost curves. Why is LRATC the envelope?',
-            hints: [
-              'LRATC shows minimum cost for each output',
-              'Each point tangent to a short-run ATC',
-              'Firm chooses optimal input combination',
-            ],
-          },
-          {
-            id: 'practice-6-3-2',
-            prompt: 'What are economies and diseconomies of scale? Give examples of each and explain what causes them.',
-            hints: [
-              'Economies: decreasing LRATC',
-              'Diseconomies: increasing LRATC',
-              'Causes: specialization, coordination problems',
-            ],
-          },
-          {
-            id: 'practice-6-3-3',
-            prompt: 'What is minimum efficient scale? How does it affect market structure and the number of firms in an industry?',
-            hints: [
-              'MES: output where LRATC minimized',
-              'Large MES relative to market → few firms',
-              'Small MES relative to market → many firms',
-            ],
-          },
-          {
-            id: 'practice-6-3-4',
-            prompt: 'Draw a long-run average total cost curve showing economies of scale, constant returns, and diseconomies of scale. Label the minimum efficient scale.',
-            hints: [
-              'U-shaped or L-shaped curve',
-              'Decreasing (economies), flat (constant), increasing (diseconomies)',
-              'MES at minimum point',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u6-l3-quiz',
         type: 'quiz',
@@ -3391,40 +2698,6 @@ Where:
         ],
       } as ArticleContent,
       {
-        id: 'micro-u6-l4-practice',
-        type: 'practice',
-        title: 'Practice: Types of profit',
-        exercises: [
-          {
-            id: 'practice-6-4-1',
-            prompt: 'Calculate accounting profit and economic profit if revenue is $200,000, explicit costs are $150,000, and the owner could earn $60,000 working elsewhere.',
-            hints: [
-              'Accounting profit = Revenue - Explicit costs',
-              'Economic profit = Revenue - (Explicit + Implicit costs)',
-              'Implicit cost = forgone salary',
-            ],
-          },
-          {
-            id: 'practice-6-4-2',
-            prompt: 'Explain the difference between explicit and implicit costs. Give examples of each and explain why economic profit uses both.',
-            hints: [
-              'Explicit: actual payments',
-              'Implicit: opportunity costs',
-              'Economic profit accounts for all costs',
-            ],
-          },
-          {
-            id: 'practice-6-4-3',
-            prompt: 'Why is economic profit zero in long-run competitive equilibrium? What does this mean for accounting profit?',
-            hints: [
-              'Entry/exit until economic profit = 0',
-              'Accounting profit = opportunity cost (normal profit)',
-              'Firms still earn return on capital',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u6-l4-quiz',
         type: 'quiz',
         title: 'Quiz: Types of profit',
@@ -3509,50 +2782,6 @@ Given:
           'Systematic approach: find MR, MC, set equal, find Q and P',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u6-l5-practice',
-        type: 'practice',
-        title: 'Practice: Profit maximization',
-        exercises: [
-          {
-            id: 'practice-6-5-1',
-            prompt: 'If MR = 50 - 2Q and MC = 10 + 3Q, find the profit-maximizing output. Calculate total revenue, total cost, and profit at this output.',
-            hints: [
-              'Set MR = MC',
-              'Solve for Q',
-              'Find P from demand (if given)',
-              'Calculate TR and TC',
-            ],
-          },
-          {
-            id: 'practice-6-5-2',
-            prompt: 'Explain why a firm should produce more if MR > MC and produce less if MR < MC. Use the concept of marginal analysis.',
-            hints: [
-              'MR > MC: additional unit adds to profit',
-              'MR < MC: additional unit reduces profit',
-              'MR = MC: profit maximized',
-            ],
-          },
-          {
-            id: 'practice-6-5-3',
-            prompt: 'Show on a graph the profit-maximizing output. Label MR, MC, ATC, price, and profit. Explain how to find each.',
-            hints: [
-              'MR = MC determines Q',
-              'Price from demand at Q',
-              'Profit = (P - ATC) × Q',
-            ],
-          },
-          {
-            id: 'practice-6-5-4',
-            prompt: 'If a firm is producing where MR < MC, is it maximizing profit? What should it do?',
-            hints: [
-              'MR < MC: producing too much',
-              'Reduce output',
-              'Continue until MR = MC',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u6-l5-quiz',
         type: 'quiz',
@@ -3670,51 +2899,6 @@ Given:
           'Industry cost structure affects long-run supply curve',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u6-l6-practice',
-        type: 'practice',
-        title: 'Practice: Firms\' Short-Run Decisions to Produce and Long-Run Decisions to Enter or Exit a Market',
-        exercises: [
-          {
-            id: 'practice-6-6-1',
-            prompt: 'If price is $10, AVC is $8, and ATC is $12, should the firm shut down in the short run? Should it exit in the long run? Explain.',
-            hints: [
-              'Short run: compare P to AVC',
-              'Long run: compare P to ATC',
-              'P > AVC: continue in short run',
-              'P < ATC: exit in long run',
-            ],
-          },
-          {
-            id: 'practice-6-6-2',
-            prompt: 'Explain why economic profit is zero in long-run competitive equilibrium. What happens if profit is positive or negative?',
-            hints: [
-              'Positive profit: firms enter',
-              'Negative profit: firms exit',
-              'Entry/exit until profit = 0',
-            ],
-          },
-          {
-            id: 'practice-6-6-3',
-            prompt: 'Compare the short-run shut-down rule and the long-run exit rule. Why are they different?',
-            hints: [
-              'Short run: fixed costs sunk',
-              'Long run: all costs variable',
-              'Short run: compare to AVC',
-              'Long run: compare to ATC',
-            ],
-          },
-          {
-            id: 'practice-6-6-4',
-            prompt: 'How does the industry cost structure (constant, increasing, decreasing costs) affect the long-run supply curve? Give examples.',
-            hints: [
-              'Constant: horizontal supply',
-              'Increasing: upward sloping',
-              'Decreasing: downward sloping (rare)',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u6-l6-quiz',
         type: 'quiz',
@@ -3897,49 +3081,6 @@ const unit7Lessons: Lesson[] = [
           'Long-run supply depends on industry cost structure',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u7-l1-practice',
-        type: 'practice',
-        title: 'Practice: Perfect competition foundational concepts, Perfect competition in the short run and long run, Increasing, decreasing, and constant cost industries, Efficiency and perfect competition',
-        exercises: [
-          {
-            id: 'practice-7-1-1',
-            prompt: 'List and explain the four characteristics of perfect competition. Why are firms price takers in perfect competition?',
-            hints: [
-              'Many buyers/sellers, identical products, free entry/exit, perfect information',
-              'No single firm can influence price',
-              'Must accept market price',
-            ],
-          },
-          {
-            id: 'practice-7-1-2',
-            prompt: 'Show on a graph how a perfectly competitive firm determines output. Explain why P = MC at the profit-maximizing output.',
-            hints: [
-              'Horizontal demand at market price',
-              'MC curve determines quantity',
-              'P = MR = MC',
-            ],
-          },
-          {
-            id: 'practice-7-1-3',
-            prompt: 'Explain why economic profit is zero in long-run competitive equilibrium. What happens if profit is positive or negative?',
-            hints: [
-              'Entry if profit > 0',
-              'Exit if profit < 0',
-              'Process continues until profit = 0',
-            ],
-          },
-          {
-            id: 'practice-7-1-4',
-            prompt: 'Compare constant cost, increasing cost, and decreasing cost industries. How does each affect the long-run supply curve?',
-            hints: [
-              'Constant: horizontal supply',
-              'Increasing: upward sloping',
-              'Decreasing: downward sloping (rare)',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u7-l1-quiz',
         type: 'quiz',
@@ -4134,50 +3275,6 @@ const unit7Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'micro-u7-l2-practice',
-        type: 'practice',
-        title: 'Practice: Imperfect competition, Monopoly, Efficiency and monopolies',
-        exercises: [
-          {
-            id: 'practice-7-2-1',
-            prompt: 'Explain why marginal revenue is less than price for a monopolist. Use a numerical example to illustrate.',
-            hints: [
-              'To sell more, must lower price',
-              'Lower price applies to all units',
-              'MR = P - loss on previous units',
-            ],
-          },
-          {
-            id: 'practice-7-2-2',
-            prompt: 'Show on a graph how a monopolist determines price and output. Compare to perfect competition. Identify deadweight loss.',
-            hints: [
-              'MR = MC determines output',
-              'Price from demand curve',
-              'P > MC (inefficient)',
-              'Deadweight loss triangle',
-            ],
-          },
-          {
-            id: 'practice-7-2-3',
-            prompt: 'Why can a monopoly earn economic profit in the long run while a perfectly competitive firm cannot?',
-            hints: [
-              'Barriers to entry',
-              'No competition',
-              'Can maintain P > ATC',
-            ],
-          },
-          {
-            id: 'practice-7-2-4',
-            prompt: 'Calculate deadweight loss from monopoly if demand is P = 100 - Q, MC = 20, and the monopolist produces 30 units. Compare to competitive output.',
-            hints: [
-              'Competitive: P = MC, find Q',
-              'Monopoly: MR = MC, find Q',
-              'Deadweight loss = triangle area',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u7-l2-quiz',
         type: 'quiz',
         title: 'Quiz: Monopoly',
@@ -4245,49 +3342,6 @@ const unit7Lessons: Lesson[] = [
           'Perfect discrimination: no deadweight loss, all surplus to producer',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u7-l3-practice',
-        type: 'practice',
-        title: 'Practice: Price discrimination',
-        exercises: [
-          {
-            id: 'practice-7-3-1',
-            prompt: 'What conditions are necessary for price discrimination? Explain why each is required.',
-            hints: [
-              'Market power',
-              'Different elasticities',
-              'No arbitrage',
-            ],
-          },
-          {
-            id: 'practice-7-3-2',
-            prompt: 'Compare first-degree, second-degree, and third-degree price discrimination. Give examples of each.',
-            hints: [
-              'First: perfect, each customer pays max WTP',
-              'Second: quantity-based',
-              'Third: group-based',
-            ],
-          },
-          {
-            id: 'practice-7-3-3',
-            prompt: 'How does perfect price discrimination affect consumer surplus, producer surplus, and deadweight loss?',
-            hints: [
-              'All consumer surplus captured',
-              'No deadweight loss',
-              'Maximum profit',
-            ],
-          },
-          {
-            id: 'practice-7-3-4',
-            prompt: 'In third-degree price discrimination, why does the monopolist charge a higher price to the group with more inelastic demand?',
-            hints: [
-              'Inelastic: less responsive to price',
-              'Can charge higher price',
-              'MR equal across groups',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u7-l3-quiz',
         type: 'quiz',
@@ -4371,49 +3425,6 @@ const unit7Lessons: Lesson[] = [
           'Entry/exit drives profit to zero',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u7-l4-practice',
-        type: 'practice',
-        title: 'Practice: Monopolistic competition',
-        exercises: [
-          {
-            id: 'practice-7-4-1',
-            prompt: 'Compare monopolistic competition to perfect competition and monopoly. What are the similarities and differences?',
-            hints: [
-              'Many firms like perfect competition',
-              'Differentiated products like monopoly',
-              'Free entry/exit like perfect competition',
-            ],
-          },
-          {
-            id: 'practice-7-4-2',
-            prompt: 'Explain why monopolistic competition is inefficient in the long run. Why does this inefficiency persist?',
-            hints: [
-              'P > MC: allocative inefficiency',
-              'Not at minimum ATC: productive inefficiency',
-              'But product variety provides benefits',
-            ],
-          },
-          {
-            id: 'practice-7-4-3',
-            prompt: 'Show on a graph the long-run equilibrium for a monopolistically competitive firm. Why is there excess capacity?',
-            hints: [
-              'P = ATC, but not at minimum',
-              'Demand tangent to ATC',
-              'Excess capacity: could produce more efficiently',
-            ],
-          },
-          {
-            id: 'practice-7-4-4',
-            prompt: 'How does the entry of new firms affect an existing monopolistically competitive firm? Show the adjustment process.',
-            hints: [
-              'Entry shifts demand left',
-              'Profit decreases',
-              'Continues until profit = 0',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u7-l4-quiz',
         type: 'quiz',
@@ -4542,49 +3553,6 @@ const unit7Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'micro-u7-l5-practice',
-        type: 'practice',
-        title: 'Practice: Game Theory',
-        exercises: [
-          {
-            id: 'practice-7-5-1',
-            prompt: 'Set up a prisoners\' dilemma game for two firms deciding whether to charge high or low prices. Find the Nash equilibrium and explain why it occurs.',
-            hints: [
-              'Create payoff matrix',
-              'Find dominant strategies',
-              'Nash equilibrium: both choose dominant strategy',
-            ],
-          },
-          {
-            id: 'practice-7-5-2',
-            prompt: 'Explain why cartels are difficult to maintain. Use game theory and the prisoners\' dilemma to explain.',
-            hints: [
-              'Incentive to cheat',
-              'Prisoners\' dilemma structure',
-              'Nash equilibrium is both cheat',
-            ],
-          },
-          {
-            id: 'practice-7-5-3',
-            prompt: 'What is Nash equilibrium? Find the Nash equilibrium in a game where Firm A and Firm B can choose to advertise or not advertise.',
-            hints: [
-              'Nash: best response to others\' strategies',
-              'Find best responses for each player',
-              'Nash: where best responses intersect',
-            ],
-          },
-          {
-            id: 'practice-7-5-4',
-            prompt: 'Compare oligopoly to other market structures. Why is strategic behavior important in oligopoly?',
-            hints: [
-              'Few firms: actions affect others',
-              'Must consider competitors\' responses',
-              'Game theory needed',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u7-l5-quiz',
         type: 'quiz',
         title: 'Quiz: Oligopoly and game theory',
@@ -4697,49 +3665,6 @@ Where:
         ],
       } as ArticleContent,
       {
-        id: 'micro-u8-l1-practice',
-        type: 'practice',
-        title: 'Practice: Introduction to Factor Markets',
-        exercises: [
-          {
-            id: 'practice-8-1-1',
-            prompt: 'Calculate marginal revenue product if marginal product is 5 units and price is $10 (perfect competition). How many workers should be hired if the wage is $40?',
-            hints: [
-              'MRP = P × MP (in perfect competition)',
-              'Hire until MRP = wage',
-              'MRP = 10 × 5 = 50',
-            ],
-          },
-          {
-            id: 'practice-8-1-2',
-            prompt: 'Explain why the marginal revenue product curve is the firm\'s demand curve for labor. Why is it downward sloping?',
-            hints: [
-              'MRP shows value of additional worker',
-              'Firm hires until MRP = wage',
-              'Downward sloping due to diminishing MP',
-            ],
-          },
-          {
-            id: 'practice-8-1-3',
-            prompt: 'Explain the labor-leisure tradeoff. How do income and substitution effects determine the labor supply curve?',
-            hints: [
-              'Tradeoff between work (income) and leisure',
-              'Income effect: higher wage may reduce work',
-              'Substitution effect: higher wage increases work',
-            ],
-          },
-          {
-            id: 'practice-8-1-4',
-            prompt: 'Why might the labor supply curve bend backward at very high wages? Use income and substitution effects to explain.',
-            hints: [
-              'At high wages, income effect may dominate',
-              'Higher income → leisure is normal good → work less',
-              'Substitution effect still encourages work',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u8-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Introduction to factor markets',
@@ -4829,49 +3754,6 @@ Where:
         ],
       } as ArticleContent,
       {
-        id: 'micro-u8-l2-practice',
-        type: 'practice',
-        title: 'Practice: Changes in factor demand and supply',
-        exercises: [
-          {
-            id: 'practice-8-2-1',
-            prompt: 'Explain how to derive the market demand curve for labor from individual firm demand curves. Use a diagram.',
-            hints: [
-              'Market demand = sum of individual demands',
-              'At each wage, add quantities',
-              'Horizontal summation',
-            ],
-          },
-          {
-            id: 'practice-8-2-2',
-            prompt: 'What factors shift the labor supply curve? Give examples and explain the direction of the shift.',
-            hints: [
-              'Population, preferences, non-wage income',
-              'Opportunities elsewhere, immigration',
-              'Show direction of shift',
-            ],
-          },
-          {
-            id: 'practice-8-2-3',
-            prompt: 'What factors shift the labor demand curve? Explain how each affects marginal revenue product.',
-            hints: [
-              'Output price, technology, other input prices',
-              'Number of firms',
-              'Affect MRP = MR × MP',
-            ],
-          },
-          {
-            id: 'practice-8-2-4',
-            prompt: 'Show on a supply-demand diagram what happens to wages and employment when: (a) output price increases, (b) immigration increases.',
-            hints: [
-              'Output price increase → demand shifts right',
-              'Immigration increase → supply shifts right',
-              'Show effects on wage and employment',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u8-l2-quiz',
         type: 'quiz',
         title: 'Quiz: Changes in factor demand and supply',
@@ -4949,49 +3831,6 @@ Given:
         ],
       } as ArticleContent,
       {
-        id: 'micro-u8-l3-practice',
-        type: 'practice',
-        title: 'Practice: Profit-maximizing behavior in perfectly competitive factor markets',
-        exercises: [
-          {
-            id: 'practice-8-3-1',
-            prompt: 'If MP of labor is 8, wage is $16, MP of capital is 12, and rental rate is $24, is the firm cost-minimizing? If not, what should it do?',
-            hints: [
-              'Calculate MP/W for each input',
-              'Should be equal for cost minimization',
-              'If not equal, adjust input mix',
-            ],
-          },
-          {
-            id: 'practice-8-3-2',
-            prompt: 'Explain the cost minimization rule. Why should marginal product per dollar be equal for all inputs?',
-            hints: [
-              'MP/W should be equal',
-              'If not, can reduce cost by reallocating',
-              'Equal MP per dollar minimizes cost',
-            ],
-          },
-          {
-            id: 'practice-8-3-3',
-            prompt: 'Show that profit maximization requires both MRP = input price and cost minimization. Use an example with labor and capital.',
-            hints: [
-              'MRP = W for labor',
-              'MRP = R for capital',
-              'Also need MP/W = MP/R',
-            ],
-          },
-          {
-            id: 'practice-8-3-4',
-            prompt: 'If a firm is not cost-minimizing, how can it reduce costs while producing the same output?',
-            hints: [
-              'Reallocate inputs',
-              'Use more of input with higher MP per dollar',
-              'Continue until MP per dollar equal',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'micro-u8-l3-quiz',
         type: 'quiz',
         title: 'Quiz: Optimal choice of factors in perfectly competitive factor markets',
@@ -5065,49 +3904,6 @@ Given:
           'Minimum wage may increase employment in monopsony',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u8-l4-practice',
-        type: 'practice',
-        title: 'Practice: Monopsonistic Markets',
-        exercises: [
-          {
-            id: 'practice-8-4-1',
-            prompt: 'Explain why marginal factor cost (MFC) is greater than the wage in a monopsony. Use a numerical example.',
-            hints: [
-              'Must raise wage for all workers',
-              'MFC = wage + increase for previous workers',
-              'MFC > wage',
-            ],
-          },
-          {
-            id: 'practice-8-4-2',
-            prompt: 'Compare employment and wages in a monopsony versus a perfectly competitive labor market. Show on a graph.',
-            hints: [
-              'Monopsony: MRP = MFC, but MFC > wage',
-              'Competitive: MRP = wage',
-              'Monopsony hires less and pays less',
-            ],
-          },
-          {
-            id: 'practice-8-4-3',
-            prompt: 'How does a minimum wage affect a monopsony? Can it increase both wages and employment? Explain.',
-            hints: [
-              'Monopsony underemploys',
-              'Minimum wage can force more hiring',
-              'May increase both wages and employment',
-            ],
-          },
-          {
-            id: 'practice-8-4-4',
-            prompt: 'Why is the effect of minimum wage different in monopsony versus perfect competition?',
-            hints: [
-              'Competition: creates surplus, reduces employment',
-              'Monopsony: may increase employment',
-              'Different market structures',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'micro-u8-l4-quiz',
         type: 'quiz',
@@ -5363,57 +4159,6 @@ const unit9Lessons: Lesson[] = [
           'Innovation is a positive externality requiring support',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u9-l1-practice',
-        type: 'practice',
-        title: 'Practice: Externalities',
-        exercises: [
-          {
-            id: 'practice-9-1-1',
-            prompt: 'Show on a supply-demand diagram the effect of a negative externality. Identify the market equilibrium, efficient equilibrium, and deadweight loss.',
-            hints: [
-              'MSC above supply curve',
-              'Market: MPC = demand',
-              'Efficient: MSC = demand',
-              'Deadweight loss triangle',
-            ],
-          },
-          {
-            id: 'practice-9-1-2',
-            prompt: 'Explain how a Pigouvian tax can correct a negative externality. Use pollution as an example.',
-            hints: [
-              'Tax = external cost',
-              'Shifts supply up',
-              'Internalizes externality',
-              'Moves to efficient quantity',
-            ],
-          },
-          {
-            id: 'practice-9-1-3',
-            prompt: 'Compare command-and-control regulation with market-oriented environmental tools. What are the advantages of market-oriented tools?',
-            hints: [
-              'Command: rules and standards',
-              'Market: taxes, cap-and-trade',
-              'Market tools more flexible and cost-effective',
-            ],
-          },
-          {
-            id: 'practice-9-1-4',
-            prompt: 'Why does the private sector underinvest in innovation? What policies can address this?',
-            hints: [
-              'Positive externality',
-              'Spillovers, uncertainty, time',
-              'Patents, subsidies, public funding',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'micro-u9-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Externalities',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -5532,59 +4277,6 @@ const unit9Lessons: Lesson[] = [
           'Common resources: rival but non-excludable (tragedy of commons)',
         ],
       } as ArticleContent,
-      {
-        id: 'micro-u9-l2-practice',
-        type: 'practice',
-        title: 'Practice: Public and private goods',
-        exercises: [
-          {
-            id: 'practice-9-2-1',
-            prompt: 'Classify each good as private, public, common resource, or natural monopoly: (a) Cable TV, (b) Fish in ocean, (c) National defense, (d) Ice cream.',
-            hints: [
-              'Private: rival + excludable',
-              'Public: non-rival + non-excludable',
-              'Common: rival + non-excludable',
-              'Natural monopoly: non-rival + excludable',
-            ],
-          },
-          {
-            id: 'practice-9-2-2',
-            prompt: 'Explain the tragedy of the commons. Why do common resources get overused? Give an example and suggest solutions.',
-            hints: [
-              'No ownership, shared cost',
-              'Incentive to overuse',
-              'Examples: fishing, forests',
-              'Solutions: property rights, regulation',
-            ],
-          },
-          {
-            id: 'practice-9-2-3',
-            prompt: 'What is the free-rider problem? Why does it prevent private provision of public goods?',
-            hints: [
-              'Benefit without paying',
-              'No incentive to pay',
-              'Market underprovides',
-              'Government provision needed',
-            ],
-          },
-          {
-            id: 'practice-9-2-4',
-            prompt: 'Explain why public goods are underprovided by markets. How does government solve this problem?',
-            hints: [
-              'Free-rider problem',
-              'No private incentive to provide',
-              'Government funds through taxes',
-              'Forces payment',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'micro-u9-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: The four types of goods: private goods, public goods, common resources, and natural monopolies',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];

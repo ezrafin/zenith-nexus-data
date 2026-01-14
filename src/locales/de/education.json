@@ -124,6 +124,12 @@
     "moduleTestReview": "Wiederholen Sie den Stoff und versuchen Sie es erneut",
     "module": "Modul",
     "unit": "Einheit",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "questionXOfY": "Frage {{current}} von {{total}}",
+    "quizCompleted": "Quiz abgeschlossen!",
+    "masteryCheckCompleted": "Kompetenzprüfung abgeschlossen!",
+    "examCompleted": "Prüfung abgeschlossen!",
     "seoCourseTitle": "{{title}} - Online-Kurs | INVESTOPATRONUS",
     "seoCourseDescription": "Lerne {{title}} mit unserem umfassenden Online-Kurs. Zugang zu Videolektionen, interaktiven Quizzen und Experteninhalten, um {{description}} zu meistern."
   },
@@ -216,6 +222,22 @@
         "rm-module-4": { "title": "Anlagepsychologie", "lesson": { "rm-lesson-4-1": { "title": "Häufige psychologische Vorurteile" }, "rm-lesson-4-2": { "title": "Angst und Gier überwinden" }, "rm-lesson-4-3": { "title": "Emotionales Trading" }, "rm-lesson-4-4": { "title": "Disziplin aufbauen" } } },
         "rm-module-5": { "title": "Risikomanagement-Praxis", "lesson": { "rm-lesson-5-1": { "title": "Portfoliorisiko" }, "rm-lesson-5-2": { "title": "Korrelationsmanagement" }, "rm-lesson-5-3": { "title": "Stresstests" } } }
       }
+    },
+    "macroeconomics": {
+      "title": "Makroökonomie",
+      "description": "Umfassende Untersuchung makroökonomischer Prinzipien, Politiken und ihrer Auswirkungen auf die Weltwirtschaft"
+    },
+    "microeconomics": {
+      "title": "Mikroökonomie",
+      "description": "Untersuchung einzelner wirtschaftlicher Einheiten und ihrer Entscheidungsprozesse"
+    },
+    "finance-markets": {
+      "title": "Finanzen und Märkte",
+      "description": "Umfassende Untersuchung der Finanzmärkte, Instrumente und Anlagestrategien"
+    },
+    "economics-personal-finance": {
+      "title": "Wirtschaft und persönliche Finanzen",
+      "description": "Verständnis der persönlichen Finanzen durch wirtschaftliche Prinzipien"
     }
   },
   "learningCourse": {

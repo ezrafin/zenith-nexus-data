@@ -124,6 +124,12 @@
     "moduleTestReview": "Revisa el material e intenta de nuevo",
     "module": "Módulo",
     "unit": "Unidad",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "questionXOfY": "Pregunta {{current}} de {{total}}",
+    "quizCompleted": "¡Cuestionario completado!",
+    "masteryCheckCompleted": "¡Verificación de dominio completada!",
+    "examCompleted": "¡Examen completado!",
     "seoCourseTitle": "{{title}} - Curso Online | INVESTOPATRONUS",
     "seoCourseDescription": "Aprende {{title}} con nuestro curso online completo. Accede a lecciones en video, cuestionarios interactivos y contenido experto para dominar {{description}}."
   },
@@ -216,6 +222,22 @@
         "rm-module-4": { "title": "Psicología de la Inversión", "lesson": { "rm-lesson-4-1": { "title": "Sesgos Psicológicos Comunes" }, "rm-lesson-4-2": { "title": "Superando el Miedo y la Codicia" }, "rm-lesson-4-3": { "title": "Trading Emocional" }, "rm-lesson-4-4": { "title": "Construyendo Disciplina" } } },
         "rm-module-5": { "title": "Práctica de Gestión de Riesgos", "lesson": { "rm-lesson-5-1": { "title": "Riesgo del Portafolio" }, "rm-lesson-5-2": { "title": "Gestión de Correlación" }, "rm-lesson-5-3": { "title": "Pruebas de Estrés" } } }
       }
+    },
+    "macroeconomics": {
+      "title": "Macroeconomía",
+      "description": "Estudio integral de los principios macroeconómicos, políticas y su impacto en las economías globales"
+    },
+    "microeconomics": {
+      "title": "Microeconomía",
+      "description": "Estudio de las unidades económicas individuales y sus procesos de toma de decisiones"
+    },
+    "finance-markets": {
+      "title": "Finanzas y Mercados",
+      "description": "Estudio integral de los mercados financieros, instrumentos y estrategias de inversión"
+    },
+    "economics-personal-finance": {
+      "title": "Economía y Finanzas Personales",
+      "description": "Comprensión de las finanzas personales a través de principios económicos"
     }
   },
   "learningCourse": {

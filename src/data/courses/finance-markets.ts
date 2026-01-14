@@ -4,7 +4,6 @@ import type {
   Lesson,
   VideoContent,
   ArticleContent,
-  PracticeContent,
   QuizContent,
 } from '../courseTypes';
 
@@ -74,44 +73,6 @@ Where:
           'Compound interest grows faster than simple interest',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u1-l1-practice',
-        type: 'practice',
-        title: 'Practice: Compound interest basics',
-        exercises: [
-          {
-            id: 'practice-1-1-1',
-            prompt: 'Calculate the final amount if you invest $5,000 at 8% annual interest compounded annually for 5 years.',
-            hints: [
-              'Use formula: A = P(1 + r)^n',
-              'P = 5000, r = 0.08, n = 5',
-            ],
-          },
-          {
-            id: 'practice-1-1-2',
-            prompt: 'Using the rule of 72, estimate how long it takes to double your money at 9% interest. Compare to the exact calculation.',
-            hints: [
-              'Rule of 72: 72 / 9 = 8 years',
-              'Exact: solve 2 = (1.09)^n',
-            ],
-          },
-          {
-            id: 'practice-1-1-3',
-            prompt: 'Explain the difference between simple and compound interest. Why does compound interest grow faster?',
-            hints: [
-              'Simple: interest only on principal',
-              'Compound: interest on principal + interest',
-              'Compound grows faster due to interest on interest',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u1-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Compound interest basics',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -188,48 +149,6 @@ Where:
           'Formula: A = P(1 + r/n)^(nt)',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u1-l2-practice',
-        type: 'practice',
-        title: 'Practice: Interest basics',
-        exercises: [
-          {
-            id: 'practice-1-2-1',
-            prompt: 'Calculate the final amount for $2,000 invested at 6% annual interest, compounded: (a) annually, (b) quarterly, (c) monthly, for 3 years.',
-            hints: [
-              'Use formula: A = P(1 + r/n)^(nt)',
-              'For annual: n = 1',
-              'For quarterly: n = 4',
-              'For monthly: n = 12',
-            ],
-          },
-          {
-            id: 'practice-1-2-2',
-            prompt: 'Explain why more frequent compounding leads to higher returns. Use an example.',
-            hints: [
-              'Interest earns interest',
-              'More frequent = interest added more often',
-              'Example: monthly vs. annual',
-            ],
-          },
-          {
-            id: 'practice-1-2-3',
-            prompt: 'What factors determine the interest rate? Explain why lenders charge interest.',
-            hints: [
-              'Time value of money',
-              'Risk',
-              'Opportunity cost',
-              'Inflation',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u1-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Interest basics',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -343,47 +262,6 @@ Where n = number of compounding periods per year
           'Payday loans: very high interest, should be avoided',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u1-l3-practice',
-        type: 'practice',
-        title: 'Practice: Credit cards and loans',
-        exercises: [
-          {
-            id: 'practice-1-3-1',
-            prompt: 'Calculate the effective APR if the stated APR is 18% compounded monthly. Why is it higher than the APR?',
-            hints: [
-              'EAR = (1 + APR/n)^n - 1',
-              'n = 12 for monthly',
-              'Compounding increases effective rate',
-            ],
-          },
-          {
-            id: 'practice-1-3-2',
-            prompt: 'Explain the roles of different institutions in the credit card system. How do they make money?',
-            hints: [
-              'Issuing bank: extends credit, earns interest',
-              'Merchant: pays interchange fee',
-              'Networks: set fees, process transactions',
-            ],
-          },
-          {
-            id: 'practice-1-3-3',
-            prompt: 'Why are payday loans so expensive? What are the risks and alternatives?',
-            hints: [
-              'High risk, no credit check',
-              'Very high interest rates',
-              'Can trap in debt cycle',
-              'Alternatives: personal loans, credit unions',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u1-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Credit cards and loans',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -459,46 +337,6 @@ Where:
           'Continuous compounding gives maximum growth',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u1-l4-practice',
-        type: 'practice',
-        title: 'Practice: Continuous compound interest and e',
-        exercises: [
-          {
-            id: 'practice-1-4-1',
-            prompt: 'Calculate the final amount for $3,000 invested at 8% annual interest, compounded continuously for 5 years.',
-            hints: [
-              'Use formula: A = Pe^(rt)',
-              'P = 3000, r = 0.08, t = 5',
-              'e ≈ 2.71828',
-            ],
-          },
-          {
-            id: 'practice-1-4-2',
-            prompt: 'Explain what e represents. How does it relate to compound interest?',
-            hints: [
-              'e = limit of (1 + 1/n)^n',
-              'Represents continuous compounding',
-              'Maximum growth possible',
-            ],
-          },
-          {
-            id: 'practice-1-4-3',
-            prompt: 'Compare continuous compounding to monthly compounding. Why is continuous slightly better?',
-            hints: [
-              'Continuous: A = Pe^(rt)',
-              'Monthly: A = P(1 + r/12)^(12t)',
-              'More frequent = more growth',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u1-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Continuous compound interest and e',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -604,54 +442,6 @@ Where:
           'DCF: discounts all future cash flows to present',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u1-l5-practice',
-        type: 'practice',
-        title: 'Practice: Present value',
-        exercises: [
-          {
-            id: 'practice-1-5-1',
-            prompt: 'Calculate the present value of $5,000 received in 3 years if the discount rate is 8%.',
-            hints: [
-              'Use formula: PV = FV / (1 + r)^n',
-              'FV = 5000, r = 0.08, n = 3',
-            ],
-          },
-          {
-            id: 'practice-1-5-2',
-            prompt: 'Calculate the present value of cash flows: $500 in year 1, $1,000 in year 2, $1,500 in year 3, at 10% discount rate.',
-            hints: [
-              'PV = sum of individual PVs',
-              'PV = C₁/(1+r) + C₂/(1+r)² + C₃/(1+r)³',
-            ],
-          },
-          {
-            id: 'practice-1-5-3',
-            prompt: 'Explain the time value of money. Why is money today worth more than money in the future?',
-            hints: [
-              'Can invest and earn returns',
-              'Inflation reduces purchasing power',
-              'Risk and uncertainty',
-              'Opportunity cost',
-            ],
-          },
-          {
-            id: 'practice-1-5-4',
-            prompt: 'What is discounted cash flow? How is it used in investment analysis?',
-            hints: [
-              'DCF: discounts future cash flows',
-              'Used to value investments',
-              'Applications: stocks, bonds, capital budgeting',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u1-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Present value',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -714,48 +504,6 @@ Where:
           'Serious consequences: credit damage, long-term effects',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u1-l6-practice',
-        type: 'practice',
-        title: 'Practice: Personal bankruptcy',
-        exercises: [
-          {
-            id: 'practice-1-6-1',
-            prompt: 'Compare Chapter 7 and Chapter 13 bankruptcy. What are the key differences?',
-            hints: [
-              'Chapter 7: liquidation, quick',
-              'Chapter 13: reorganization, repayment',
-              'Different eligibility requirements',
-            ],
-          },
-          {
-            id: 'practice-1-6-2',
-            prompt: 'What are the consequences of filing for bankruptcy? Why should it be a last resort?',
-            hints: [
-              'Credit score damage',
-              'Stays on credit report 7-10 years',
-              'Difficulty getting credit',
-              'May affect employment, housing',
-            ],
-          },
-          {
-            id: 'practice-1-6-3',
-            prompt: 'What assets are typically exempt in Chapter 7 bankruptcy? Why are exemptions important?',
-            hints: [
-              'Homestead exemption',
-              'Retirement accounts',
-              'Personal property',
-              'Allows fresh start',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u1-l6-quiz',
-        type: 'quiz',
-        title: 'Quiz: Personal bankruptcy',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -854,46 +602,6 @@ const unit2Lessons: Lesson[] = [
           'Home equity loans use home as collateral',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u2-l1-practice',
-        type: 'practice',
-        title: 'Practice: Home equity and personal balance sheets',
-        exercises: [
-          {
-            id: 'practice-2-1-1',
-            prompt: 'Create a personal balance sheet. List your assets, liabilities, and calculate your equity.',
-            hints: [
-              'Assets: what you own',
-              'Liabilities: what you owe',
-              'Equity = Assets - Liabilities',
-            ],
-          },
-          {
-            id: 'practice-2-1-2',
-            prompt: 'Calculate home equity if home value is $400,000 and mortgage balance is $250,000. How can equity increase?',
-            hints: [
-              'Equity = Value - Mortgage',
-              'Increases through appreciation',
-              'Increases through principal payments',
-            ],
-          },
-          {
-            id: 'practice-2-1-3',
-            prompt: 'What are the risks and benefits of home equity loans? When might they be appropriate?',
-            hints: [
-              'Benefit: access to funds',
-              'Risk: home is collateral',
-              'Appropriate for: home improvements, debt consolidation',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u2-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Home equity and personal balance sheets',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1004,47 +712,6 @@ const unit2Lessons: Lesson[] = [
           'Detailed analysis requires comparing all costs',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u2-l2-practice',
-        type: 'practice',
-        title: 'Practice: Renting vs. buying a home',
-        exercises: [
-          {
-            id: 'practice-2-2-1',
-            prompt: 'Compare the advantages and disadvantages of renting versus buying a home. When might each be better?',
-            hints: [
-              'Renting: flexibility, no maintenance',
-              'Buying: equity, tax benefits',
-              'Consider: time horizon, financial situation',
-            ],
-          },
-          {
-            id: 'practice-2-2-2',
-            prompt: 'What happens when housing depreciates? Explain negative equity and its consequences.',
-            hints: [
-              'Home value decreases',
-              'Negative equity: owe more than worth',
-              'Consequences: can\'t sell, foreclosure risk',
-            ],
-          },
-          {
-            id: 'practice-2-2-3',
-            prompt: 'Perform a break-even analysis for renting vs. buying. What factors should be considered?',
-            hints: [
-              'Compare all costs',
-              'Time horizon',
-              'Appreciation/depreciation',
-              'Opportunity cost of down payment',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u2-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Renting vs. buying a home',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1214,55 +881,6 @@ Where:
           'Mortgage payments calculated using geometric series',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u2-l3-practice',
-        type: 'practice',
-        title: 'Practice: Mortgages',
-        exercises: [
-          {
-            id: 'practice-2-3-1',
-            prompt: 'Calculate the monthly mortgage payment for a $250,000 loan at 5% annual interest for 30 years.',
-            hints: [
-              'Use formula: M = P × [r(1+r)^n] / [(1+r)^n - 1]',
-              'r = annual rate / 12',
-              'n = years × 12',
-            ],
-          },
-          {
-            id: 'practice-2-3-2',
-            prompt: 'Compare fixed-rate mortgages and ARMs. What are the advantages and risks of each?',
-            hints: [
-              'Fixed: stable, predictable',
-              'ARM: lower initial rate, but risky',
-              'Consider: time horizon, rate expectations',
-            ],
-          },
-          {
-            id: 'practice-2-3-3',
-            prompt: 'What is a short sale? When might it be appropriate? What are the consequences?',
-            hints: [
-              'Sell for less than mortgage',
-              'When: underwater, can\'t pay',
-              'Consequences: credit damage, tax implications',
-            ],
-          },
-          {
-            id: 'practice-2-3-4',
-            prompt: 'Explain balloon payment mortgages. What are the risks and when might they be used?',
-            hints: [
-              'Large final payment',
-              'Lower initial payments',
-              'Risk: need funds or refinance',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u2-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Mortgages',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1385,55 +1003,6 @@ Where:
           'Mortgage escrow: holds tax/insurance payments',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u2-l4-practice',
-        type: 'practice',
-        title: 'Practice: Home buying process',
-        exercises: [
-          {
-            id: 'practice-2-4-1',
-            prompt: 'Explain the difference between title and deed. What types of ownership exist?',
-            hints: [
-              'Title: ownership',
-              'Deed: document',
-              'Types: fee simple, joint tenancy, etc.',
-            ],
-          },
-          {
-            id: 'practice-2-4-2',
-            prompt: 'What is title insurance? Why is it important? What does it cover?',
-            hints: [
-              'Protects against title defects',
-              'Covers: liens, forged documents, errors',
-              'One-time premium',
-            ],
-          },
-          {
-            id: 'practice-2-4-3',
-            prompt: 'What should be included in an offer on a home? What contingencies are important?',
-            hints: [
-              'Price, earnest money, closing date',
-              'Contingencies: inspection, financing, appraisal',
-              'Inclusions: what stays with property',
-            ],
-          },
-          {
-            id: 'practice-2-4-4',
-            prompt: 'Explain the different types of escrow in real estate. How do they protect buyers and sellers?',
-            hints: [
-              'Transaction escrow: holds earnest money',
-              'Mortgage escrow: holds tax/insurance',
-              'Protects both parties',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u2-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Home buying process',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -1541,46 +1110,6 @@ const unit3Lessons: Lesson[] = [
           'CPI: primary measure of consumer inflation',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u3-l1-practice',
-        type: 'practice',
-        title: 'Practice: Inflation basics',
-        exercises: [
-          {
-            id: 'practice-3-1-1',
-            prompt: 'Define inflation. How does it differ from a temporary price increase?',
-            hints: [
-              'Sustained increase in general price level',
-              'Affects overall prices, not individual',
-              'Measured over time',
-            ],
-          },
-          {
-            id: 'practice-3-1-2',
-            prompt: 'What is the Consumer Price Index (CPI)? How is it calculated and what are its uses?',
-            hints: [
-              'Measures average change in consumer prices',
-              'Basket of goods, weighted by importance',
-              'Used to measure inflation, adjust wages',
-            ],
-          },
-          {
-            id: 'practice-3-1-3',
-            prompt: 'Explain how inflation affects consumers, savers, and borrowers differently.',
-            hints: [
-              'Consumers: can buy less',
-              'Savers: value decreases',
-              'Borrowers: real debt decreases',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u3-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Inflation basics',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1682,47 +1211,6 @@ const unit3Lessons: Lesson[] = [
           'Each scenario has different causes and consequences',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u3-l2-practice',
-        type: 'practice',
-        title: 'Practice: Inflation scenarios',
-        exercises: [
-          {
-            id: 'practice-3-2-1',
-            prompt: 'Why is moderate inflation (2-3%) considered beneficial in a healthy economy?',
-            hints: [
-              'Encourages spending',
-              'Allows wage adjustments',
-              'Prevents deflation',
-              'Gives central bank flexibility',
-            ],
-          },
-          {
-            id: 'practice-3-2-2',
-            prompt: 'What is stagflation? Why is it particularly problematic for policymakers?',
-            hints: [
-              'High inflation + high unemployment + low growth',
-              'Policy tradeoffs',
-              'No easy solution',
-            ],
-          },
-          {
-            id: 'practice-3-2-3',
-            prompt: 'Explain hyperinflation. What causes it and what are the consequences?',
-            hints: [
-              'Extremely rapid inflation',
-              'Causes: money printing, loss of confidence',
-              'Consequences: economic collapse',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u3-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Inflation scenarios',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1802,45 +1290,6 @@ const unit3Lessons: Lesson[] = [
           'Real return shows actual purchasing power',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u3-l3-practice',
-        type: 'practice',
-        title: 'Practice: Real and nominal return',
-        exercises: [
-          {
-            id: 'practice-3-3-1',
-            prompt: 'Calculate the real return if nominal return is 10% and inflation is 4%. Use both the approximate and precise formulas.',
-            hints: [
-              'Approximate: Real = Nominal - Inflation',
-              'Precise: Real = [(1+Nominal)/(1+Inflation)] - 1',
-            ],
-          },
-          {
-            id: 'practice-3-3-2',
-            prompt: 'Why is real return more important than nominal return for investors?',
-            hints: [
-              'Shows actual purchasing power',
-              'Accounts for inflation',
-              'Real return determines wealth growth',
-            ],
-          },
-          {
-            id: 'practice-3-3-3',
-            prompt: 'If you earn 6% nominal return but inflation is 5%, what is your real return? Are you better off?',
-            hints: [
-              'Real return = 6% - 5% = 1%',
-              'Positive real return means purchasing power increases',
-              'But very small gain',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u3-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Real and nominal return',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -1937,46 +1386,6 @@ const unit3Lessons: Lesson[] = [
           'Capacity utilization affects inflation/deflation pressures',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u3-l4-practice',
-        type: 'practice',
-        title: 'Practice: Capacity utilization and inflation',
-        exercises: [
-          {
-            id: 'practice-3-4-1',
-            prompt: 'Explain how capacity utilization affects a firm\'s ability to respond to demand changes and pricing decisions.',
-            hints: [
-              'Low utilization: easy to increase, prices stable',
-              'High utilization: hard to increase, prices rise',
-              'Full utilization: cannot increase, prices rise',
-            ],
-          },
-          {
-            id: 'practice-3-4-2',
-            prompt: 'How does capacity utilization relate to inflation and deflation?',
-            hints: [
-              'Low utilization: deflation risk',
-              'High utilization: inflation risk',
-              'Full utilization: inflation',
-            ],
-          },
-          {
-            id: 'practice-3-4-3',
-            prompt: 'Why did the 2009 stimulus not cause inflation? Use capacity utilization to explain.',
-            hints: [
-              'Low capacity utilization at time',
-              'Excess capacity',
-              'Could increase production without price pressure',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u3-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Capacity utilization and inflation',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -2088,46 +1497,6 @@ Where:
           'Dangerous: increases real debt, encourages hoarding',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u3-l5-practice',
-        type: 'practice',
-        title: 'Practice: Deflation',
-        exercises: [
-          {
-            id: 'practice-3-5-1',
-            prompt: 'What is deflation? How does it differ from disinflation?',
-            hints: [
-              'Deflation: prices fall',
-              'Disinflation: inflation rate decreases',
-              'Deflation is negative inflation',
-            ],
-          },
-          {
-            id: 'practice-3-5-2',
-            prompt: 'Explain how deflation can occur despite increases in money supply. Use the equation of exchange.',
-            hints: [
-              'M × V = P × Y',
-              'If V falls faster than M rises, P can fall',
-              'If Y grows faster than M, P can fall',
-            ],
-          },
-          {
-            id: 'practice-3-5-3',
-            prompt: 'What is a deflationary spiral? Why is it dangerous and hard to stop?',
-            hints: [
-              'Self-reinforcing cycle',
-              'Falling prices → delayed purchases → lower demand',
-              'Hard to stop, can lead to depression',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u3-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Deflation',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -2307,55 +1676,6 @@ const unit4Lessons: Lesson[] = [
           'Marriage penalty: married couples may pay more',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u4-l1-practice',
-        type: 'practice',
-        title: 'Practice: Personal taxes',
-        exercises: [
-          {
-            id: 'practice-4-1-1',
-            prompt: 'Calculate tax for income of $75,000 using tax brackets: 10% on first $10,000, 12% on next $30,000, 22% on next $50,000. What is the marginal and effective tax rate?',
-            hints: [
-              'Calculate tax for each bracket',
-              'Marginal rate: rate on last dollar',
-              'Effective rate: total tax / income',
-            ],
-          },
-          {
-            id: 'practice-4-1-2',
-            prompt: 'Explain the difference between tax deductions and tax credits. How does each reduce taxes?',
-            hints: [
-              'Deduction: reduces taxable income',
-              'Credit: reduces tax directly',
-              'Credit is usually more valuable',
-            ],
-          },
-          {
-            id: 'practice-4-1-3',
-            prompt: 'What is the Alternative Minimum Tax? Who does it affect and why does it exist?',
-            hints: [
-              'Parallel tax system',
-              'Ensures minimum tax payment',
-              'Affects high earners with many deductions',
-            ],
-          },
-          {
-            id: 'practice-4-1-4',
-            prompt: 'Explain the marriage penalty. When does it occur and when might there be a marriage bonus?',
-            hints: [
-              'Occurs when both spouses earn similar',
-              'Combined income pushes into higher bracket',
-              'Bonus when one earns much more',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u4-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Personal taxes',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -2448,46 +1768,6 @@ const unit4Lessons: Lesson[] = [
           'Raises fairness and efficiency questions',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u4-l2-practice',
-        type: 'practice',
-        title: 'Practice: Corporate taxation',
-        exercises: [
-          {
-            id: 'practice-4-2-1',
-            prompt: 'Explain what a corporation is and how limited liability works. What are the advantages and disadvantages?',
-            hints: [
-              'Separate legal entity',
-              'Limited liability protects owners',
-              'Advantage: protection, disadvantage: double taxation',
-            ],
-          },
-          {
-            id: 'practice-4-2-2',
-            prompt: 'What is double taxation? Is it fair? Explain the arguments for and against.',
-            hints: [
-              'Corporate tax + personal tax on dividends',
-              'Against: taxes same income twice',
-              'For: price of limited liability',
-            ],
-          },
-          {
-            id: 'practice-4-2-3',
-            prompt: 'How do companies use transfer pricing and tax havens to reduce taxes? Is this ethical?',
-            hints: [
-              'Manipulate prices between related companies',
-              'Shift profits to low-tax countries',
-              'Raises fairness concerns',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u4-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Corporate taxation',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -2593,46 +1873,6 @@ const unit5Lessons: Lesson[] = [
           'Accrual required for large businesses (GAAP)',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u5-l1-practice',
-        type: 'practice',
-        title: 'Practice: Cash versus accrual accounting',
-        exercises: [
-          {
-            id: 'practice-5-1-1',
-            prompt: 'A business sells $5,000 of goods in December but receives payment in January. It pays $3,000 for inventory in November. Show the difference between cash and accrual accounting.',
-            hints: [
-              'Cash: revenue in January, expense in November',
-              'Accrual: revenue and expense in December',
-              'Accrual matches revenue with expenses',
-            ],
-          },
-          {
-            id: 'practice-5-1-2',
-            prompt: 'What are the advantages and disadvantages of cash versus accrual accounting?',
-            hints: [
-              'Cash: simple, but doesn\'t match',
-              'Accrual: matches, but more complex',
-              'Consider accuracy vs. simplicity',
-            ],
-          },
-          {
-            id: 'practice-5-1-3',
-            prompt: 'Why is accrual accounting required for large businesses? What principle does it follow?',
-            hints: [
-              'GAAP requirements',
-              'Matching principle',
-              'Better reflects performance',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u5-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Cash versus accrual accounting',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -2745,77 +1985,6 @@ const unit5Lessons: Lesson[] = [
           'Fair value: current market price vs. historical cost',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u5-l2-practice',
-        type: 'practice',
-        title: 'Practice: Interpreting the Balance Sheet, Interpreting the Income Statement',
-        exercises: [
-          {
-            id: 'practice-5-2-1',
-            prompt: 'Explain the relationship between the balance sheet and income statement. How does net income affect the balance sheet?',
-            hints: [
-              'Net income flows to retained earnings',
-              'Retained earnings is part of equity',
-              'Equity = Assets - Liabilities',
-            ],
-          },
-          {
-            id: 'practice-5-2-2',
-            prompt: 'A company has net income of $50,000, but accounts receivable increased by $10,000. What is the operating cash flow? Explain.',
-            hints: [
-              'Increase in receivables means cash not received yet',
-              'Subtract from net income',
-              'Operating cash flow = $50,000 - $10,000 = $40,000',
-            ],
-          },
-          {
-            id: 'practice-5-2-3',
-            prompt: 'What are the three sections of the cash flow statement? Give examples of items in each section.',
-            hints: [
-              'Operating: day-to-day operations',
-              'Investing: buying/selling assets',
-              'Financing: borrowing, equity',
-            ],
-          },
-          {
-            id: 'practice-5-2-4',
-            prompt: 'Compare fair value accounting and historical cost accounting. What are the advantages and disadvantages of each?',
-            hints: [
-              'Fair value: current value, but volatile',
-              'Historical cost: stable, but outdated',
-              'Different uses for different assets',
-            ],
-          },
-          {
-            id: 'practice-5-2-5',
-            prompt: 'If accounts payable increases by $5,000, how does this affect cash flow? Why?',
-            hints: [
-              'Increase in payables = haven\'t paid yet',
-              'Add to net income',
-              'More cash than income',
-            ],
-          },
-          {
-            id: 'practice-5-2-6',
-            prompt: 'A company shows net income of $100,000 but negative operating cash flow. What could cause this?',
-            hints: [
-              'Non-cash expenses (depreciation)',
-              'Changes in working capital',
-              'Revenue not collected, expenses not paid',
-            ],
-          },
-          {
-            id: 'practice-5-2-7',
-            prompt: 'Explain how to read a balance sheet. What does it tell you about a company\'s financial position?',
-            hints: [
-              'Assets: what company owns',
-              'Liabilities: what company owes',
-              'Equity: net worth',
-              'Assets = Liabilities + Equity',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'finance-u5-l2-quiz',
         type: 'quiz',
@@ -2930,55 +2099,6 @@ const unit5Lessons: Lesson[] = [
           'Smooths expenses and matches with revenue',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u5-l3-practice',
-        type: 'practice',
-        title: 'Practice: Depreciation and amortization',
-        exercises: [
-          {
-            id: 'practice-5-3-1',
-            prompt: 'A company buys equipment for $50,000 with a 5-year useful life. Calculate straight-line depreciation. Why is this better than expensing all in year 1?',
-            hints: [
-              'Depreciation = Cost / Useful life',
-              'Smooths expenses',
-              'Matches expense with usage',
-            ],
-          },
-          {
-            id: 'practice-5-3-2',
-            prompt: 'If net income is $20,000 and depreciation is $8,000, what is the operating cash flow? Explain why cash flow is higher than income.',
-            hints: [
-              'Add depreciation back',
-              'Depreciation is non-cash expense',
-              'Cash flow = $20,000 + $8,000 = $28,000',
-            ],
-          },
-          {
-            id: 'practice-5-3-3',
-            prompt: 'What is the difference between depreciation and amortization? Give examples of each.',
-            hints: [
-              'Depreciation: tangible assets',
-              'Amortization: intangible assets',
-              'Both allocate cost over time',
-            ],
-          },
-          {
-            id: 'practice-5-3-4',
-            prompt: 'Why does expensing a long-lived asset in one year lead to inconsistent performance? How does depreciation solve this?',
-            hints: [
-              'Expensing: large loss in one year',
-              'Depreciation: spreads over useful life',
-              'Smooths performance',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u5-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Depreciation and amortization',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -3055,37 +2175,6 @@ const unit6Lessons: Lesson[] = [
           'Bonds: lower risk, fixed return',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l1-practice',
-        type: 'practice',
-        title: 'Practice: Introduction to stocks',
-        exercises: [
-          {
-            id: 'practice-6-1-1',
-            prompt: 'What does it mean to buy a company\'s stock? What rights do you have as a shareholder?',
-            hints: [
-              'Ownership share',
-              'Voting rights, dividend rights',
-              'Residual claim on assets',
-            ],
-          },
-          {
-            id: 'practice-6-1-2',
-            prompt: 'Compare stocks and bonds. What are the key differences in terms of risk, return, and rights?',
-            hints: [
-              'Stocks: ownership, higher risk/reward',
-              'Bonds: lending, lower risk, fixed return',
-              'Different priorities in bankruptcy',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u6-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Introduction to stocks',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -3180,45 +2269,6 @@ const unit6Lessons: Lesson[] = [
           'Controversial but serves market functions',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l2-practice',
-        type: 'practice',
-        title: 'Practice: Shorting stock',
-        exercises: [
-          {
-            id: 'practice-6-2-1',
-            prompt: 'Explain how short selling works. Use an example with specific numbers.',
-            hints: [
-              'Borrow, sell, wait, buy back, return',
-              'Profit if price falls',
-              'Show calculation',
-            ],
-          },
-          {
-            id: 'practice-6-2-2',
-            prompt: 'What are the risks of short selling? Why is the loss potential unlimited?',
-            hints: [
-              'Price can rise indefinitely',
-              'Margin calls',
-              'Forced buy-in',
-            ],
-          },
-          {
-            id: 'practice-6-2-3',
-            prompt: 'Is short selling bad? Discuss the arguments for and against.',
-            hints: [
-              'Against: can harm companies, volatility',
-              'For: liquidity, price discovery, efficiency',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u6-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Shorting stock',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -3310,45 +2360,6 @@ const unit6Lessons: Lesson[] = [
           'Market cap = Share price × Shares outstanding',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l3-practice',
-        type: 'practice',
-        title: 'Practice: Understanding company statements and capital structure',
-        exercises: [
-          {
-            id: 'practice-6-3-1',
-            prompt: 'Calculate gross profit, operating profit, and net profit if revenue is $1,000,000, COGS is $600,000, operating expenses are $200,000, interest is $50,000, and taxes are $60,000.',
-            hints: [
-              'Gross profit = Revenue - COGS',
-              'Operating profit = Gross profit - Operating expenses',
-              'Net profit = Operating profit - Interest - Taxes',
-            ],
-          },
-          {
-            id: 'practice-6-3-2',
-            prompt: 'What is market capitalization? Calculate market cap if share price is $75 and there are 5 million shares outstanding.',
-            hints: [
-              'Market cap = Price × Shares',
-              'Shows total market value',
-            ],
-          },
-          {
-            id: 'practice-6-3-3',
-            prompt: 'Compare all-equity and all-debt capital structures. What are the advantages and disadvantages of each?',
-            hints: [
-              'All equity: lower risk, no tax benefits',
-              'All debt: tax benefits, but high risk',
-              'Mixed: balance',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u6-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Understanding company statements and capital structure',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -3532,53 +2543,6 @@ const unit6Lessons: Lesson[] = [
           'EBITDA: operating performance before financing/accounting effects',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l4-practice',
-        type: 'practice',
-        title: 'Practice: Corporate metrics and valuation',
-        exercises: [
-          {
-            id: 'practice-6-4-1',
-            prompt: 'Calculate EPS if net income is $20 million and there are 8 million shares outstanding. Then calculate P/E if share price is $40.',
-            hints: [
-              'EPS = Net income / Shares',
-              'P/E = Price / EPS',
-            ],
-          },
-          {
-            id: 'practice-6-4-2',
-            prompt: 'What is ROA? Calculate ROA if net income is $10 million and total assets are $100 million. What does this tell you?',
-            hints: [
-              'ROA = Net income / Assets',
-              'Shows asset efficiency',
-              'Higher is better',
-            ],
-          },
-          {
-            id: 'practice-6-4-3',
-            prompt: 'Calculate enterprise value if market cap is $500 million, debt is $200 million, and cash is $50 million.',
-            hints: [
-              'EV = Market cap + Debt - Cash',
-              'Shows total company value',
-            ],
-          },
-          {
-            id: 'practice-6-4-4',
-            prompt: 'What is EBITDA? Why is it used in valuation? Calculate EBITDA if operating profit is $30 million, depreciation is $5 million, and amortization is $2 million.',
-            hints: [
-              'EBITDA = Operating profit + Depreciation + Amortization',
-              'Shows operating performance',
-              'Excludes financing/accounting effects',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u6-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Corporate metrics and valuation',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -3767,55 +2731,6 @@ const unit6Lessons: Lesson[] = [
           'Chapter 7: liquidation; Chapter 11: restructuring',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l5-practice',
-        type: 'practice',
-        title: 'Practice: Life of a company – from birth to death',
-        exercises: [
-          {
-            id: 'practice-6-5-1',
-            prompt: 'Describe the stages of company funding from startup to IPO. What happens at each stage?',
-            hints: [
-              'Bootstrapping → Angels → VC → IPO',
-              'Each stage provides capital',
-              'Each stage dilutes ownership',
-            ],
-          },
-          {
-            id: 'practice-6-5-2',
-            prompt: 'What is an IPO? What are the benefits and costs of going public?',
-            hints: [
-              'First public sale of stock',
-              'Benefits: capital, liquidity',
-              'Costs: fees, regulation, scrutiny',
-            ],
-          },
-          {
-            id: 'practice-6-5-3',
-            prompt: 'Compare equity and debt financing. When might each be preferred?',
-            hints: [
-              'Equity: no repayment, dilutes',
-              'Debt: must repay, keeps ownership',
-              'Consider: cash flow, ownership, risk',
-            ],
-          },
-          {
-            id: 'practice-6-5-4',
-            prompt: 'What is the difference between Chapter 7 and Chapter 11 bankruptcy?',
-            hints: [
-              'Chapter 7: liquidation, company ends',
-              'Chapter 11: restructuring, company continues',
-              'Different outcomes',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u6-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Life of a company – from birth to death',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -3864,37 +2779,6 @@ const unit6Lessons: Lesson[] = [
           'Ownership % decreases but company value may increase',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l6-practice',
-        type: 'practice',
-        title: 'Practice: Dilution',
-        exercises: [
-          {
-            id: 'practice-6-6-1',
-            prompt: 'You own 500 shares out of 5,000 (10%). The company issues 2,500 new shares. What is your new ownership percentage? Is this dilution?',
-            hints: [
-              'New total: 7,500 shares',
-              'Your ownership: 500 / 7,500 = 6.67%',
-              'Diluted from 10% to 6.67%',
-            ],
-          },
-          {
-            id: 'practice-6-6-2',
-            prompt: 'When does stock dilution occur? Give examples and explain why it happens.',
-            hints: [
-              'New equity financing',
-              'Employee stock options',
-              'Convertible securities',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u6-l6-quiz',
-        type: 'quiz',
-        title: 'Quiz: Dilution',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -3984,40 +2868,6 @@ const unit6Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'finance-u6-l7-practice',
-        type: 'practice',
-        title: 'Practice: Mergers and acquisitions',
-        exercises: [
-          {
-            id: 'practice-6-7-1',
-            prompt: 'Explain how a stock acquisition works. What are the advantages and disadvantages compared to cash acquisition?',
-            hints: [
-              'Acquirer issues shares',
-              'Exchanges for target shares',
-              'No cash needed, but dilutes',
-            ],
-          },
-          {
-            id: 'practice-6-7-2',
-            prompt: 'What typically happens to target and acquirer stock prices after an acquisition is announced? Why?',
-            hints: [
-              'Target: rises (premium)',
-              'Acquirer: may fall (premium, risk)',
-              'Market expectations',
-            ],
-          },
-          {
-            id: 'practice-6-7-3',
-            prompt: 'What is merger arbitrage? How does it work and what are the risks?',
-            hints: [
-              'Profit from acquisition spreads',
-              'Buy target, wait for deal',
-              'Risk: deal may not close',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'finance-u6-l7-quiz',
         type: 'quiz',
         title: 'Quiz: Mergers and acquisitions',
@@ -4079,32 +2929,6 @@ const unit6Lessons: Lesson[] = [
           'Tax benefits from interest deduction',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l8-practice',
-        type: 'practice',
-        title: 'Practice: Leveraged buy-outs',
-        exercises: [
-          {
-            id: 'practice-6-8-1',
-            prompt: 'What is a leveraged buyout? How does it work and why do private equity firms use this strategy?',
-            hints: [
-              'Buy with mostly debt',
-              'High leverage amplifies returns',
-              'Tax benefits',
-            ],
-          },
-          {
-            id: 'practice-6-8-2',
-            prompt: 'What are the risks of LBOs? Why can high leverage be dangerous?',
-            hints: [
-              'High debt burden',
-              'Interest payments',
-              'Default risk',
-              'Amplifies both returns and losses',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'finance-u6-l8-quiz',
         type: 'quiz',
@@ -4254,40 +3078,6 @@ const unit6Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'finance-u6-l9-practice',
-        type: 'practice',
-        title: 'Practice: Bonds',
-        exercises: [
-          {
-            id: 'practice-6-9-1',
-            prompt: 'Explain the inverse relationship between bond prices and interest rates. Use an example.',
-            hints: [
-              'Rates rise → prices fall',
-              'Rates fall → prices rise',
-              'Example with specific numbers',
-            ],
-          },
-          {
-            id: 'practice-6-9-2',
-            prompt: 'What is a yield curve? Explain normal, inverted, and flat yield curves. What do they indicate?',
-            hints: [
-              'Graph of yields vs. maturity',
-              'Normal: upward (healthy)',
-              'Inverted: downward (recession signal)',
-            ],
-          },
-          {
-            id: 'practice-6-9-3',
-            prompt: 'Why do longer-term bonds typically have higher yields than short-term bonds?',
-            hints: [
-              'Time risk',
-              'Inflation expectations',
-              'Liquidity',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'finance-u6-l9-quiz',
         type: 'quiz',
         title: 'Quiz: Bonds',
@@ -4359,31 +3149,6 @@ const unit6Lessons: Lesson[] = [
           'Chapter 11 allows company to survive',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u6-l10-practice',
-        type: 'practice',
-        title: 'Practice: Corporate bankruptcy',
-        exercises: [
-          {
-            id: 'practice-6-10-1',
-            prompt: 'Compare Chapter 7 and Chapter 11 bankruptcy. What happens in each and what is the outcome?',
-            hints: [
-              'Chapter 7: liquidation, ends',
-              'Chapter 11: restructuring, continues',
-              'Different processes and outcomes',
-            ],
-          },
-          {
-            id: 'practice-6-10-2',
-            prompt: 'In bankruptcy, who gets paid first? Explain the priority of claims.',
-            hints: [
-              'Secured creditors first',
-              'Then unsecured creditors',
-              'Stockholders last (usually nothing)',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'finance-u6-l10-quiz',
         type: 'quiz',
@@ -4506,41 +3271,6 @@ const unit7Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'finance-u7-l1-practice',
-        type: 'practice',
-        title: 'Practice: Mutual funds and ETFs',
-        exercises: [
-          {
-            id: 'practice-7-1-1',
-            prompt: 'Compare open-ended and closed-end mutual funds. What are the key differences?',
-            hints: [
-              'Open-ended: can create/redeem shares',
-              'Closed-end: fixed shares, trades on exchange',
-              'Different pricing mechanisms',
-            ],
-          },
-          {
-            id: 'practice-7-1-2',
-            prompt: 'What are the advantages of ETFs over traditional mutual funds?',
-            hints: [
-              'Intraday trading',
-              'Lower fees',
-              'Tax efficiency',
-              'Transparency',
-            ],
-          },
-          {
-            id: 'practice-7-1-3',
-            prompt: 'What is a Ponzi scheme? What are the red flags to watch for?',
-            hints: [
-              'Fraudulent scheme',
-              'Uses new money to pay old',
-              'Red flags: guaranteed returns, pressure',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'finance-u7-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Mutual funds and ETFs',
@@ -4629,40 +3359,6 @@ const unit7Lessons: Lesson[] = [
         ],
       } as ArticleContent,
       {
-        id: 'finance-u7-l2-practice',
-        type: 'practice',
-        title: 'Practice: Retirement accounts: IRAs and 401ks',
-        exercises: [
-          {
-            id: 'practice-7-2-1',
-            prompt: 'Compare Traditional and Roth IRAs. When might each be better?',
-            hints: [
-              'Traditional: deduction now, taxes later',
-              'Roth: taxes now, tax-free later',
-              'Consider: current vs. future tax rate',
-            ],
-          },
-          {
-            id: 'practice-7-2-2',
-            prompt: 'What is a 401(k)? What are the advantages over IRAs?',
-            hints: [
-              'Employer-sponsored',
-              'Higher contribution limits',
-              'Employer matching',
-            ],
-          },
-          {
-            id: 'practice-7-2-3',
-            prompt: 'Explain the tax treatment of Traditional IRA, Roth IRA, and 401(k).',
-            hints: [
-              'Traditional: deduct now, tax later',
-              'Roth: tax now, tax-free later',
-              '401(k): similar to Traditional',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'finance-u7-l2-quiz',
         type: 'quiz',
         title: 'Quiz: Retirement accounts: IRAs and 401ks',
@@ -4718,37 +3414,6 @@ const unit7Lessons: Lesson[] = [
           'No cash value, lower cost than permanent',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u7-l3-practice',
-        type: 'practice',
-        title: 'Practice: Life insurance',
-        exercises: [
-          {
-            id: 'practice-7-3-1',
-            prompt: 'What is term life insurance? How does it differ from permanent life insurance?',
-            hints: [
-              'Term: coverage for period',
-              'Permanent: lifetime coverage with cash value',
-              'Term: lower cost, no cash value',
-            ],
-          },
-          {
-            id: 'practice-7-3-2',
-            prompt: 'What factors affect life insurance premiums? Explain how death probability affects pricing.',
-            hints: [
-              'Age, health, coverage amount',
-              'Higher death probability → higher premium',
-              'Term length',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u7-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Life insurance',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -4876,56 +3541,6 @@ const unit7Lessons: Lesson[] = [
           'Different from VC and private equity',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u7-l4-practice',
-        type: 'practice',
-        title: 'Practice: Hedge funds',
-        exercises: [
-          {
-            id: 'practice-7-4-1',
-            prompt: 'What is a hedge fund? How does it differ from mutual funds?',
-            hints: [
-              'Private, less regulated',
-              'For wealthy investors',
-              'Can use leverage, derivatives',
-              'Higher fees',
-            ],
-          },
-          {
-            id: 'practice-7-4-2',
-            prompt: 'Explain the "2 and 20" fee structure. Calculate total fees on a $50 million fund that earns 15% return.',
-            hints: [
-              'Management: 2% of assets',
-              'Performance: 20% of profits',
-              'Calculate both fees',
-            ],
-          },
-          {
-            id: 'practice-7-4-3',
-            prompt: 'Compare hedge funds, venture capital, and private equity. What are the key differences?',
-            hints: [
-              'Hedge funds: public markets, liquid',
-              'VC: startups, illiquid',
-              'PE: buy companies, illiquid',
-            ],
-          },
-          {
-            id: 'practice-7-4-4',
-            prompt: 'What is a long-short strategy? How does it work?',
-            hints: [
-              'Buy some stocks, sell others short',
-              'Profit from both directions',
-              'Market neutral',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u7-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Hedge funds',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -5060,55 +3675,6 @@ const unit7Lessons: Lesson[] = [
           'Wealth destruction: many factors can reduce wealth',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u7-l5-practice',
-        type: 'practice',
-        title: 'Practice: Investment and consumption',
-        exercises: [
-          {
-            id: 'practice-7-5-1',
-            prompt: 'Explain the risk-return tradeoff. Why must investors take risk to earn higher returns?',
-            hints: [
-              'Higher risk → higher return',
-              'No free lunch',
-              'Safe investments have lower returns',
-            ],
-          },
-          {
-            id: 'practice-7-5-2',
-            prompt: 'What is human capital? How should it influence investment decisions?',
-            hints: [
-              'Ability to earn income',
-              'Young: more human capital, can take risk',
-              'Older: less human capital, be conservative',
-            ],
-          },
-          {
-            id: 'practice-7-5-3',
-            prompt: 'Compare investment and consumption. How should you balance them?',
-            hints: [
-              'Investment: creates future value',
-              'Consumption: current enjoyment',
-              'Balance depends on goals, income',
-            ],
-          },
-          {
-            id: 'practice-7-5-4',
-            prompt: 'What factors can destroy wealth? How can you protect against them?',
-            hints: [
-              'Excessive consumption, poor investments',
-              'High fees, taxes, inflation',
-              'Invest wisely, minimize costs',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u7-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Investment and consumption',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -5446,46 +4012,6 @@ const unit8Lessons: Lesson[] = [
           'Fed funds rate: key monetary policy tool',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l1-practice',
-        type: 'practice',
-        title: 'Practice: Banking and money',
-        exercises: [
-          {
-            id: 'practice-8-1-1',
-            prompt: 'Explain how fractional reserve banking works. If reserve ratio is 10%, what is the money multiplier?',
-            hints: [
-              'Banks hold fraction as reserves',
-              'Lend out the rest',
-              'Multiplier = 1 / reserve ratio',
-            ],
-          },
-          {
-            id: 'practice-8-1-2',
-            prompt: 'How do open market operations work? Show how buying securities affects money supply and interest rates.',
-            hints: [
-              'Buy securities → inject money',
-              'More money → lower interest rates',
-              'Sell securities → opposite',
-            ],
-          },
-          {
-            id: 'practice-8-1-3',
-            prompt: 'What is the Fed funds rate? How does the Fed influence it and why is it important?',
-            hints: [
-              'Rate banks charge each other',
-              'Fed uses tools to set target',
-              'Affects entire economy',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Banking and money',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -5587,46 +4113,6 @@ const unit8Lessons: Lesson[] = [
           'Risks: inflation, asset bubbles',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l2-practice',
-        type: 'practice',
-        title: 'Practice: Quantitative easing',
-        exercises: [
-          {
-            id: 'practice-8-2-1',
-            prompt: 'What is quantitative easing? When is it used and how does it work?',
-            hints: [
-              'Large-scale asset purchases',
-              'Used when rates near zero',
-              'Lowers long-term rates',
-            ],
-          },
-          {
-            id: 'practice-8-2-2',
-            prompt: 'Compare normal open market operations with quantitative easing. What are the differences?',
-            hints: [
-              'Normal: small-scale, short-term',
-              'QE: large-scale, long-term',
-              'Different targets and scale',
-            ],
-          },
-          {
-            id: 'practice-8-2-3',
-            prompt: 'What are the risks and benefits of quantitative easing?',
-            hints: [
-              'Benefits: stimulates economy',
-              'Risks: inflation, asset bubbles',
-              'Difficult to exit',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Quantitative easing',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -5798,55 +4284,6 @@ const unit8Lessons: Lesson[] = [
           'Moral hazard: bailouts create future risk-taking',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l3-practice',
-        type: 'practice',
-        title: 'Practice: 2008 bank bailout',
-        exercises: [
-          {
-            id: 'practice-8-3-1',
-            prompt: 'Explain the difference between liquidity and solvency crises. Why is this distinction important?',
-            hints: [
-              'Liquidity: temporary, can\'t meet obligations',
-              'Solvency: fundamental, liabilities > assets',
-              'Different policy responses',
-            ],
-          },
-          {
-            id: 'practice-8-3-2',
-            prompt: 'What is systemic risk? Why did it justify government bailouts in 2008?',
-            hints: [
-              'Failure threatens entire system',
-              'Interconnected financial system',
-              'Credit freeze affects economy',
-            ],
-          },
-          {
-            id: 'practice-8-3-3',
-            prompt: 'What was TARP? How did it evolve and what did it accomplish?',
-            hints: [
-              'Troubled Asset Relief Program',
-              'Started as asset purchases',
-              'Became capital injections',
-            ],
-          },
-          {
-            id: 'practice-8-3-4',
-            prompt: 'What is moral hazard? How did the 2008 bailouts create it, and how can it be mitigated?',
-            hints: [
-              'Protection encourages risk',
-              'Banks may take more risk',
-              'Regulation, capital requirements',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: 2008 bank bailout',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -5914,37 +4351,6 @@ const unit8Lessons: Lesson[] = [
           'Part of comprehensive response',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l4-practice',
-        type: 'practice',
-        title: 'Practice: Geithner plan',
-        exercises: [
-          {
-            id: 'practice-8-4-1',
-            prompt: 'What was the Geithner plan? How did it work and what were its goals?',
-            hints: [
-              'Public-private partnership',
-              'Buy troubled assets',
-              'Remove from bank balance sheets',
-            ],
-          },
-          {
-            id: 'practice-8-4-2',
-            prompt: 'What challenges did the Geithner plan face? Why was it controversial?',
-            hints: [
-              'Pricing assets',
-              'Attracting private capital',
-              'Political opposition',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Geithner plan',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6064,46 +4470,6 @@ const unit8Lessons: Lesson[] = [
           'Carry trade: interest rate arbitrage with currency risk',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l5-practice',
-        type: 'practice',
-        title: 'Practice: Foreign exchange and trade',
-        exercises: [
-          {
-            id: 'practice-8-5-1',
-            prompt: 'How do exchange rates affect international trade? Use an example.',
-            hints: [
-              'Strong currency: expensive exports',
-              'Weak currency: cheap exports',
-              'Affects trade balance',
-            ],
-          },
-          {
-            id: 'practice-8-5-2',
-            prompt: 'Explain the American-Chinese debt loop. How did it work and what were the effects?',
-            hints: [
-              'US buys goods → China gets dollars',
-              'China buys Treasuries → dollars return',
-              'Creates circular flow',
-            ],
-          },
-          {
-            id: 'practice-8-5-3',
-            prompt: 'What is a carry trade? How does it work and what are the risks?',
-            hints: [
-              'Borrow low rate, invest high rate',
-              'Currency risk',
-              'Exchange rate changes can eliminate gains',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Foreign exchange and trade',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6231,46 +4597,6 @@ const unit8Lessons: Lesson[] = [
           'Floating exchange would reduce imbalances',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l6-practice',
-        type: 'practice',
-        title: 'Practice: Chinese currency and U.S. debt',
-        exercises: [
-          {
-            id: 'practice-8-6-1',
-            prompt: 'Why did China peg its currency to the dollar? What were the effects?',
-            hints: [
-              'Maintain export advantage',
-              'Accumulated reserves',
-              'Financed US deficit',
-            ],
-          },
-          {
-            id: 'practice-8-6-2',
-            prompt: 'What would happen if China allowed its currency to float? How would it affect both countries?',
-            hints: [
-              'Yuan would appreciate',
-              'China: exports more expensive',
-              'US: exports cheaper, but borrowing costs rise',
-            ],
-          },
-          {
-            id: 'practice-8-6-3',
-            prompt: 'Explain the relationship between Chinese trade surplus, foreign reserves, and US Treasury purchases.',
-            hints: [
-              'Trade surplus → dollar accumulation',
-              'Buy Treasuries to maintain peg',
-              'Finances US deficit',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l6-quiz',
-        type: 'quiz',
-        title: 'Quiz: Chinese currency and U.S. debt',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6349,46 +4675,6 @@ const unit8Lessons: Lesson[] = [
           'Contagion risk worried Europe',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l7-practice',
-        type: 'practice',
-        title: 'Practice: 2011-2012 Greek debt crisis',
-        exercises: [
-          {
-            id: 'practice-8-7-1',
-            prompt: 'What caused the Greek debt crisis? How did austerity measures affect the situation?',
-            hints: [
-              'High debt, deficits, recession',
-              'Austerity deepened recession',
-              'Political and social challenges',
-            ],
-          },
-          {
-            id: 'practice-8-7-2',
-            prompt: 'Why was "Grexit" (Greece leaving the Euro) considered? What would be the consequences?',
-            hints: [
-              'Could devalue currency',
-              'Regain monetary policy',
-              'But very disruptive',
-            ],
-          },
-          {
-            id: 'practice-8-7-3',
-            prompt: 'Why was Europe worried about the Greek crisis? What was the contagion risk?',
-            hints: [
-              'Could spread to other countries',
-              'Threatens Eurozone',
-              'Systemic risk',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l7-quiz',
-        type: 'quiz',
-        title: 'Quiz: 2011-2012 Greek debt crisis',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6522,55 +4808,6 @@ const unit8Lessons: Lesson[] = [
           'Cryptographic security: hashing and digital signatures',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u8-l8-practice',
-        type: 'practice',
-        title: 'Practice: Bitcoin',
-        exercises: [
-          {
-            id: 'practice-8-8-1',
-            prompt: 'What is Bitcoin? How does it differ from traditional currencies?',
-            hints: [
-              'Digital, decentralized',
-              'No central authority',
-              'Blockchain technology',
-            ],
-          },
-          {
-            id: 'practice-8-8-2',
-            prompt: 'Explain how proof of work secures the Bitcoin network. What is mining?',
-            hints: [
-              'Miners solve problems',
-              'Validates transactions',
-              'Prevents fraud',
-            ],
-          },
-          {
-            id: 'practice-8-8-3',
-            prompt: 'What is a blockchain? How does it provide security and transparency?',
-            hints: [
-              'Public ledger',
-              'Blocks linked together',
-              'Immutable, transparent',
-            ],
-          },
-          {
-            id: 'practice-8-8-4',
-            prompt: 'How does Bitcoin\'s limited supply (21 million) affect its value? Compare to fiat currencies.',
-            hints: [
-              'Fixed supply vs. unlimited',
-              'Scarcity',
-              'Deflationary vs. inflationary',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u8-l8-quiz',
-        type: 'quiz',
-        title: 'Quiz: Bitcoin',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -6788,55 +5025,6 @@ const unit9Lessons: Lesson[] = [
           'Writing options: limited profit, large loss potential',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l1-practice',
-        type: 'practice',
-        title: 'Practice: Put and call options',
-        exercises: [
-          {
-            id: 'practice-9-1-1',
-            prompt: 'What is a call option? How does it differ from buying the stock directly?',
-            hints: [
-              'Right to buy at strike price',
-              'Leverage, limited risk',
-              'Premium cost',
-            ],
-          },
-          {
-            id: 'practice-9-1-2',
-            prompt: 'Compare buying a put option with shorting the stock. What are the advantages and disadvantages?',
-            hints: [
-              'Put: limited risk, unlimited profit potential',
-              'Short: unlimited risk, limited profit',
-              'Both provide leverage',
-            ],
-          },
-          {
-            id: 'practice-9-1-3',
-            prompt: 'What is put-call parity? How can violations create arbitrage opportunities?',
-            hints: [
-              'Relationship between put, call, stock, bond',
-              'If violated, arbitrage exists',
-              'Execute trades to lock profit',
-            ],
-          },
-          {
-            id: 'practice-9-1-4',
-            prompt: 'What is a protective put? How does it act as insurance?',
-            hints: [
-              'Buy put to protect stock position',
-              'If stock falls, put gains offset losses',
-              'Like insurance premium',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Put and call options',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7068,55 +5256,6 @@ const unit9Lessons: Lesson[] = [
           'Arbitrage keeps prices aligned',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l2-practice',
-        type: 'practice',
-        title: 'Practice: Forward and futures contracts',
-        exercises: [
-          {
-            id: 'practice-9-2-1',
-            prompt: 'Compare forward and futures contracts. What are the key differences?',
-            hints: [
-              'Forward: customized, OTC',
-              'Futures: standardized, exchange-traded',
-              'Different credit risk, liquidity',
-            ],
-          },
-          {
-            id: 'practice-9-2-2',
-            prompt: 'Explain futures margin mechanics. What is initial margin, maintenance margin, and marking to market?',
-            hints: [
-              'Margin: collateral',
-              'Daily settlement',
-              'Margin calls if too low',
-            ],
-          },
-          {
-            id: 'practice-9-2-3',
-            prompt: 'What is contango? What is backwardation? What do they indicate?',
-            hints: [
-              'Contango: future > spot',
-              'Backwardation: future < spot',
-              'Reflect costs, expectations',
-            ],
-          },
-          {
-            id: 'practice-9-2-4',
-            prompt: 'How does arbitrage keep futures prices aligned with spot prices? Give an example.',
-            hints: [
-              'If futures too high: buy spot, sell future',
-              'If futures too low: sell spot, buy future',
-              'Arbitrage eliminates differences',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Forward and futures contracts',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7187,46 +5326,6 @@ const unit9Lessons: Lesson[] = [
           'Risks: prepayment, default, interest rate',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l3-practice',
-        type: 'practice',
-        title: 'Practice: Mortgage-backed securities',
-        exercises: [
-          {
-            id: 'practice-9-3-1',
-            prompt: 'What is a mortgage-backed security? How does it work?',
-            hints: [
-              'Pool of mortgages',
-              'Securities backed by payments',
-              'Transforms illiquid to liquid',
-            ],
-          },
-          {
-            id: 'practice-9-3-2',
-            prompt: 'What are tranches? How do they work in MBS?',
-            hints: [
-              'Different risk classes',
-              'Senior: first paid, lower risk',
-              'Junior: last paid, higher risk',
-            ],
-          },
-          {
-            id: 'practice-9-3-3',
-            prompt: 'What are the main risks of MBS? Explain each.',
-            hints: [
-              'Prepayment: early payments',
-              'Default: non-payment',
-              'Interest rate: affects prepayments',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Mortgage-backed securities',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7284,46 +5383,6 @@ const unit9Lessons: Lesson[] = [
           'Played role in 2008 crisis',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l4-practice',
-        type: 'practice',
-        title: 'Practice: Collateralized debt obligations',
-        exercises: [
-          {
-            id: 'practice-9-4-1',
-            prompt: 'What is a CDO? How does it differ from MBS?',
-            hints: [
-              'Backed by pool of debt',
-              'Can include bonds, loans, MBS',
-              'Similar tranche structure',
-            ],
-          },
-          {
-            id: 'practice-9-4-2',
-            prompt: 'Explain the tranche structure of CDOs. What are equity, mezzanine, and senior tranches?',
-            hints: [
-              'Equity: highest risk, first losses',
-              'Mezzanine: medium risk',
-              'Senior: lowest risk, last losses',
-            ],
-          },
-          {
-            id: 'practice-9-4-3',
-            prompt: 'What are the main risks of CDOs? Why were they problematic in 2008?',
-            hints: [
-              'Default, correlation risk',
-              'Complexity, liquidity',
-              'Correlation underestimated',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Collateralized debt obligations',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7413,46 +5472,6 @@ const unit9Lessons: Lesson[] = [
           'Systemic risk: can amplify crises',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l5-practice',
-        type: 'practice',
-        title: 'Practice: Credit default swaps',
-        exercises: [
-          {
-            id: 'practice-9-5-1',
-            prompt: 'What is a credit default swap? How does it work?',
-            hints: [
-              'Insurance against default',
-              'Buyer pays premium',
-              'Seller pays if default',
-            ],
-          },
-          {
-            id: 'practice-9-5-2',
-            prompt: 'What are the main uses of CDS? Give examples.',
-            hints: [
-              'Hedging: protect bond holdings',
-              'Speculation: bet on default',
-              'Arbitrage: exploit prices',
-            ],
-          },
-          {
-            id: 'practice-9-5-3',
-            prompt: 'Why were CDS called "financial weapons of mass destruction"? What risks do they pose?',
-            hints: [
-              'Complexity, counterparty risk',
-              'Systemic risk',
-              'Amplify crises',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: Credit default swaps',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7514,46 +5533,6 @@ const unit9Lessons: Lesson[] = [
           'Risks: counterparty, basis, market',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l6-practice',
-        type: 'practice',
-        title: 'Practice: Interest rate swaps',
-        exercises: [
-          {
-            id: 'practice-9-6-1',
-            prompt: 'What is an interest rate swap? How does it work?',
-            hints: [
-              'Exchange fixed for floating',
-              'Exchange interest payments',
-              'Not principal',
-            ],
-          },
-          {
-            id: 'practice-9-6-2',
-            prompt: 'Why would a company use an interest rate swap? Give an example.',
-            hints: [
-              'Convert fixed to floating',
-              'Hedge interest rate risk',
-              'Lower costs than refinancing',
-            ],
-          },
-          {
-            id: 'practice-9-6-3',
-            prompt: 'What are the risks of interest rate swaps?',
-            hints: [
-              'Counterparty risk',
-              'Basis risk',
-              'Market risk',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l6-quiz',
-        type: 'quiz',
-        title: 'Quiz: Interest rate swaps',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7610,46 +5589,6 @@ const unit9Lessons: Lesson[] = [
           'Reflects market expectations',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u9-l7-practice',
-        type: 'practice',
-        title: 'Practice: Black-Scholes formula',
-        exercises: [
-          {
-            id: 'practice-9-7-1',
-            prompt: 'What is the Black-Scholes formula? What are its inputs and what does it calculate?',
-            hints: [
-              'Model for option pricing',
-              'Inputs: price, strike, time, rate, volatility',
-              'Output: theoretical option price',
-            ],
-          },
-          {
-            id: 'practice-9-7-2',
-            prompt: 'What is implied volatility? How is it calculated and what does it represent?',
-            hints: [
-              'Volatility from market prices',
-              'Use Black-Scholes in reverse',
-              'Market expectations',
-            ],
-          },
-          {
-            id: 'practice-9-7-3',
-            prompt: 'Why is implied volatility important? How can it be used in trading?',
-            hints: [
-              'Reflects market expectations',
-              'Compare to historical volatility',
-              'Trading decisions',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u9-l7-quiz',
-        type: 'quiz',
-        title: 'Quiz: Black-Scholes formula',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -7721,46 +5660,6 @@ const unit10Lessons: Lesson[] = [
           'Stimulus: cost per job analysis',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u10-l1-practice',
-        type: 'practice',
-        title: 'Practice: Unemployment',
-        exercises: [
-          {
-            id: 'practice-10-1-1',
-            prompt: 'What are the different types of unemployment? Explain each.',
-            hints: [
-              'Frictional: between jobs',
-              'Structural: skills mismatch',
-              'Cyclical: economic downturn',
-            ],
-          },
-          {
-            id: 'practice-10-1-2',
-            prompt: 'How is the unemployment rate calculated? What are its limitations?',
-            hints: [
-              'Unemployed / Labor force',
-              'Doesn\'t count discouraged workers',
-              'May not reflect true conditions',
-            ],
-          },
-          {
-            id: 'practice-10-1-3',
-            prompt: 'How can you analyze the effectiveness of stimulus spending?',
-            hints: [
-              'Cost per job',
-              'Total spending / jobs created',
-              'Evaluate efficiency',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u10-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Unemployment',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7821,37 +5720,6 @@ const unit10Lessons: Lesson[] = [
           'Policy and financial factors',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u10-l2-practice',
-        type: 'practice',
-        title: 'Practice: Housing price conundrum',
-        exercises: [
-          {
-            id: 'practice-10-2-1',
-            prompt: 'What factors contributed to the housing price increases? Explain each.',
-            hints: [
-              'Low interest rates',
-              'Easy credit, speculation',
-              'Supply constraints',
-            ],
-          },
-          {
-            id: 'practice-10-2-2',
-            prompt: 'How did government policies and financial innovation affect housing prices?',
-            hints: [
-              'Tax incentives',
-              'Financial innovation',
-              'Global capital flows',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u10-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: Housing price conundrum',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7967,55 +5835,6 @@ const unit10Lessons: Lesson[] = [
           'Massive wealth destruction',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u10-l3-practice',
-        type: 'practice',
-        title: 'Practice: Credit crisis',
-        exercises: [
-          {
-            id: 'practice-10-3-1',
-            prompt: 'How did the housing bubble lead to the credit crisis?',
-            hints: [
-              'Housing prices fell',
-              'Defaults increased',
-              'Financial system stressed',
-            ],
-          },
-          {
-            id: 'practice-10-3-2',
-            prompt: 'How did MBS and CDOs amplify the crisis?',
-            hints: [
-              'MBS lost value when mortgages defaulted',
-              'CDOs concentrated risk',
-              'Underestimated correlation',
-            ],
-          },
-          {
-            id: 'practice-10-3-3',
-            prompt: 'What role did credit default swaps play in the crisis?',
-            hints: [
-              'Created systemic risk',
-              'AIG collapse',
-              'Threatened entire system',
-            ],
-          },
-          {
-            id: 'practice-10-3-4',
-            prompt: 'What was the impact of wealth destruction?',
-            hints: [
-              'Massive losses',
-              'Long recovery',
-              'Lessons learned',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u10-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: Credit crisis',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -8187,55 +6006,6 @@ const unit10Lessons: Lesson[] = [
           'Comprehensive response needed',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u10-l4-practice',
-        type: 'practice',
-        title: 'Practice: Paulson bailout',
-        exercises: [
-          {
-            id: 'practice-10-4-1',
-            prompt: 'What was TARP? How did it evolve and what did it accomplish?',
-            hints: [
-              'Troubled Asset Relief Program',
-              'Started as asset purchases',
-              'Became capital injections',
-            ],
-          },
-          {
-            id: 'practice-10-4-2',
-            prompt: 'Why was systemic risk a justification for the bailout?',
-            hints: [
-              'Failure threatens entire system',
-              'Interconnected financial system',
-              'Credit freeze affects economy',
-            ],
-          },
-          {
-            id: 'practice-10-4-3',
-            prompt: 'What is moral hazard? How did the bailout create it, and how can it be mitigated?',
-            hints: [
-              'Protection encourages risk',
-              'Banks may take more risk',
-              'Regulation, capital requirements',
-            ],
-          },
-          {
-            id: 'practice-10-4-4',
-            prompt: 'What comprehensive measures were needed to address the crisis?',
-            hints: [
-              'Bailouts, stimulus',
-              'Monetary policy',
-              'Regulatory reform',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u10-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Paulson bailout',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -8369,55 +6139,6 @@ const unit10Lessons: Lesson[] = [
           'Contagion risk worried Europe',
         ],
       } as ArticleContent,
-      {
-        id: 'finance-u10-l5-practice',
-        type: 'practice',
-        title: 'Practice: European Union',
-        exercises: [
-          {
-            id: 'practice-10-5-1',
-            prompt: 'What is the European Union? What are its key features?',
-            hints: [
-              'Economic and political union',
-              'Single market, free movement',
-              'Common policies, Euro',
-            ],
-          },
-          {
-            id: 'practice-10-5-2',
-            prompt: 'What was Brexit? What were the implications?',
-            hints: [
-              'UK leaving EU',
-              'Major political event',
-              'Economic implications',
-            ],
-          },
-          {
-            id: 'practice-10-5-3',
-            prompt: 'What caused the Greek debt crisis? How did austerity measures affect it?',
-            hints: [
-              'High debt, deficits',
-              'Austerity deepened recession',
-              'Political and social challenges',
-            ],
-          },
-          {
-            id: 'practice-10-5-4',
-            prompt: 'Why was Europe worried about Greece? What was the contagion risk?',
-            hints: [
-              'Could spread to other countries',
-              'Threatens Eurozone',
-              'Systemic risk',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'finance-u10-l5-quiz',
-        type: 'quiz',
-        title: 'Quiz: European Union',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];

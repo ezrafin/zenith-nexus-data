@@ -114,37 +114,6 @@ Economics studies how societies allocate scarce resources. Scarcity forces choic
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u1-l1-practice',
-        type: 'practice',
-        title: 'Practice: Introduction to scarcity and the economic way of thinking',
-        exercises: [
-          {
-            id: 'practice-1-1-1',
-            prompt: 'Explain why scarcity exists and how it affects economic decision-making.',
-            hints: [
-              'Consider the relationship between limited resources and unlimited wants',
-              'Think about how scarcity forces choices',
-            ],
-          },
-          {
-            id: 'practice-1-1-2',
-            prompt: 'Distinguish between a positive and normative statement. Provide examples of each.',
-            hints: [
-              'Positive statements can be tested; normative statements express values',
-              'Look for words like "should" or "ought" in normative statements',
-            ],
-          },
-          {
-            id: 'practice-1-1-3',
-            prompt: 'Compare and contrast command and market economies. What are the advantages and disadvantages of each?',
-            hints: [
-              'Consider who makes decisions in each system',
-              'Think about efficiency, innovation, and equity',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u1-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Introduction to macroeconomics',
@@ -828,7 +797,7 @@ The law of supply shows the direct relationship between price and quantity suppl
           },
           {
             id: 'q2',
-            question: 'Which of the following statements accurately describes how an event will impact supply?',
+            prompt: 'Which of the following statements accurately describes how an event will impact supply?',
             options: [
               'An increase in costs of production will cause an increase in the supply curve',
               'An increase in demand will cause an increase in supply',
@@ -841,7 +810,7 @@ The law of supply shows the direct relationship between price and quantity suppl
           },
           {
             id: 'q3',
-            question: 'Which of the following best describes the law of supply?',
+            prompt: 'Which of the following best describes the law of supply?',
             options: [
               'Legal authorities regulate markets',
               'Producers sell the same amount of a good no matter its price',
@@ -854,7 +823,7 @@ The law of supply shows the direct relationship between price and quantity suppl
           },
           {
             id: 'q4',
-            question: 'Coffee bean merchants notice that coffee prices are at a historic low today, but they expect the price of coffee beans to increase in the next six months. How will the expectation of an increase in future prices most likely affect the supply of coffee beans on the market today?',
+            prompt: 'Coffee bean merchants notice that coffee prices are at a historic low today, but they expect the price of coffee beans to increase in the next six months. How will the expectation of an increase in future prices most likely affect the supply of coffee beans on the market today?',
             options: [
               'Supply will decrease',
               'Supply will increase',
@@ -954,47 +923,6 @@ Market equilibrium occurs when quantity demanded equals quantity supplied. Equil
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u1-l6-practice',
-        type: 'practice',
-        title: 'Markets',
-        exercises: [
-          {
-            id: 'practice-1-6-1',
-            prompt: 'Draw a market with demand and supply curves. Label the equilibrium price and quantity. Show what happens when demand increases.',
-            hints: [
-              'Equilibrium is where curves intersect',
-              'Demand increase shifts curve right',
-              'New equilibrium has higher price and quantity',
-            ],
-          },
-          {
-            id: 'practice-1-6-2',
-            prompt: 'Explain the difference between a shortage and a surplus. Show each on a supply and demand diagram.',
-            hints: [
-              'Shortage: quantity demanded > quantity supplied (below equilibrium)',
-              'Surplus: quantity supplied > quantity demanded (above equilibrium)',
-            ],
-          },
-          {
-            id: 'practice-1-6-3',
-            prompt: 'If both demand and supply increase, what can you say definitively about the change in equilibrium quantity? What about price?',
-            hints: [
-              'Both shifts increase quantity',
-              'Price change depends on which shift is larger',
-            ],
-          },
-          {
-            id: 'practice-1-6-4',
-            prompt: 'Analyze what happens to equilibrium price and quantity when: (a) Demand increases and supply decreases, (b) Demand decreases and supply increases, (c) Both demand and supply increase.',
-            hints: [
-              'Consider the direction each shift moves price and quantity',
-              'When shifts oppose, one outcome is definite',
-              'When shifts align, one outcome is definite',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u1-l6-quiz',
         type: 'quiz',
         title: 'Markets',
@@ -1014,7 +942,7 @@ Market equilibrium occurs when quantity demanded equals quantity supplied. Equil
           },
           {
             id: 'q2',
-            question: 'Shampoo and conditioner are complementary goods. What happens to the price and quantity of conditioner if the price of shampoo decreases?',
+            prompt: 'Shampoo and conditioner are complementary goods. What happens to the price and quantity of conditioner if the price of shampoo decreases?',
             options: [
               'Price decreases; quantity increases',
               'Price decreases; quantity decreases',
@@ -1027,7 +955,7 @@ Market equilibrium occurs when quantity demanded equals quantity supplied. Equil
           },
           {
             id: 'q3',
-            question: 'The graph shows the market for cheese with supply curve S1, initial demand curve D1 (equilibrium E1 at price Py and quantity QB), and new demand curve D2 after a decrease in demand (equilibrium E2 at price Px and quantity QA). Which of the following statements about the decrease in demand shown in the graph is correct?',
+            prompt: 'The graph shows the market for cheese with supply curve S1, initial demand curve D1 (equilibrium E1 at price Py and quantity QB), and new demand curve D2 after a decrease in demand (equilibrium E2 at price Px and quantity QA). Which of the following statements about the decrease in demand shown in the graph is correct?',
             options: [
               'The new equilibrium is P = Px and Q = QA',
               'The new equilibrium is E2',
@@ -1226,37 +1154,6 @@ The circular flow shows how money and resources move through an economy. GDP mea
           'GDP can be calculated using expenditure, income, or value-added approaches',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l1-practice',
-        type: 'practice',
-        title: 'The circular flow model and GDP',
-        exercises: [
-          {
-            id: 'practice-2-1-1',
-            prompt: 'Draw and explain the circular flow model, showing the flow of money and resources between households and firms.',
-            hints: [
-              'Show product market and factor market',
-              'Money flows opposite to goods/services',
-            ],
-          },
-          {
-            id: 'practice-2-1-2',
-            prompt: 'Classify each as a final or intermediate good: (a) Bread sold to consumers, (b) Flour sold to a bakery, (c) A new car sold to a family, (d) Steel sold to an auto manufacturer.',
-            hints: [
-              'Final goods go to end users',
-              'Intermediate goods are used in production',
-            ],
-          },
-          {
-            id: 'practice-2-1-3',
-            prompt: 'Calculate GDP using the expenditure approach: C = $8,000, I = $1,500, G = $2,000, X = $1,200, M = $1,800.',
-            hints: [
-              'GDP = C + I + G + (X - M)',
-              'Net exports = X - M',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
   {
@@ -1355,37 +1252,6 @@ GDP measures economic output but has significant limitations. It doesn't capture
           'GDP does not capture well-being or sustainability',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l2-practice',
-        type: 'practice',
-        title: 'Limitations of GDP',
-        exercises: [
-          {
-            id: 'practice-2-2-1',
-            prompt: 'List five activities that contribute to well-being but are not counted in GDP. Explain why each is excluded.',
-            hints: [
-              'Think about unpaid work',
-              'Consider leisure and quality of life',
-            ],
-          },
-          {
-            id: 'practice-2-2-2',
-            prompt: 'Explain how GDP could increase while overall well-being decreases. Provide specific examples.',
-            hints: [
-              'Consider environmental costs',
-              'Think about income inequality',
-            ],
-          },
-          {
-            id: 'practice-2-2-3',
-            prompt: 'Compare GDP and HDI as measures of economic performance. What does each measure, and what are their strengths and weaknesses?',
-            hints: [
-              'GDP focuses on output',
-              'HDI includes broader well-being indicators',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
   {
@@ -1444,44 +1310,6 @@ Important: The unemployment rate doesn't include discouraged workers or underemp
           'Natural rate = Frictional + Structural unemployment',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l3-practice-1',
-        type: 'practice',
-        title: 'Types of unemployment and the natural rate of unemployment',
-        exercises: [
-          {
-            id: 'practice-2-3-1',
-            prompt: 'Classify each as frictional, structural, or cyclical unemployment: (a) A recent college graduate looking for first job, (b) A factory worker laid off due to automation, (c) A construction worker unemployed during a recession, (d) A person quitting to find a better job.',
-            hints: [
-              'Frictional: job transitions',
-              'Structural: skills mismatch',
-              'Cyclical: economic downturn',
-            ],
-          },
-          {
-            id: 'practice-2-3-2',
-            prompt: 'Explain the difference between the natural rate of unemployment and the actual unemployment rate. What does it mean when actual unemployment is above or below the natural rate?',
-            hints: [
-              'Natural rate = frictional + structural',
-              'Actual rate includes cyclical unemployment',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u2-l3-practice-2',
-        type: 'practice',
-        title: 'Unemployment',
-        exercises: [
-          {
-            id: 'practice-2-3-3',
-            prompt: 'Calculate the unemployment rate: Labor force = 150 million, Employed = 142 million, Unemployed = 8 million.',
-            hints: [
-              'Unemployment rate = (Unemployed / Labor Force) × 100',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
   {
@@ -1630,39 +1458,6 @@ Inflation is a sustained increase in the general price level. CPI measures consu
           'Stagflation combines stagnation with high inflation',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l4-practice',
-        type: 'practice',
-        title: 'The Consumer Price Index (CPI)',
-        exercises: [
-          {
-            id: 'practice-2-4-1',
-            prompt: 'Calculate the CPI and inflation rate: Base year basket = $200, Current year basket = $220.',
-            hints: [
-              'CPI (base) = 100',
-              'CPI (current) = (Current cost / Base cost) × 100',
-              'Inflation = [(CPI current - CPI base) / CPI base] × 100',
-            ],
-          },
-          {
-            id: 'practice-2-4-2',
-            prompt: 'Explain the difference between inflation, deflation, and disinflation. Provide examples of each.',
-            hints: [
-              'Inflation: prices rising',
-              'Deflation: prices falling',
-              'Disinflation: inflation rate decreasing',
-            ],
-          },
-          {
-            id: 'practice-2-4-3',
-            prompt: 'What is stagflation and why is it problematic? How does it differ from normal inflation?',
-            hints: [
-              'Stagflation = stagnation + inflation',
-              'Policies to fix one problem worsen the other',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
   {
@@ -1714,37 +1509,6 @@ Inflation redistributes wealth from lenders to borrowers and from savers to spen
           'Moderate, predictable inflation is generally preferred',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l5-practice',
-        type: 'practice',
-        title: 'The costs of inflation',
-        exercises: [
-          {
-            id: 'practice-2-5-1',
-            prompt: 'Explain who wins and who loses from inflation. Provide specific examples for each group.',
-            hints: [
-              'Consider borrowers vs lenders',
-              'Think about savers and fixed-income earners',
-            ],
-          },
-          {
-            id: 'practice-2-5-2',
-            prompt: 'If you have a fixed-rate mortgage and inflation increases, are you better or worse off? Explain why.',
-            hints: [
-              'You repay with dollars worth less',
-              'Your real debt decreases',
-            ],
-          },
-          {
-            id: 'practice-2-5-3',
-            prompt: 'Compare the effects of inflation and deflation on the economy. Why do economists generally prefer moderate inflation to deflation?',
-            hints: [
-              'Deflation can cause economic contraction',
-              'Moderate inflation encourages spending',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
   {
@@ -1829,36 +1593,6 @@ The GDP deflator:
           'Real GDP is better for measuring economic growth',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l6-practice',
-        type: 'practice',
-        title: 'Real vs. nominal GDP',
-        exercises: [
-          {
-            id: 'practice-2-6-1',
-            prompt: 'Calculate real GDP: Nominal GDP = $15,000, GDP Deflator = 125 (base year = 100).',
-            hints: [
-              'Real GDP = (Nominal GDP / GDP Deflator) × 100',
-            ],
-          },
-          {
-            id: 'practice-2-6-2',
-            prompt: 'Explain why real GDP is a better measure of economic growth than nominal GDP. Provide an example.',
-            hints: [
-              'Real GDP removes price changes',
-              'Nominal GDP includes both quantity and price changes',
-            ],
-          },
-          {
-            id: 'practice-2-6-3',
-            prompt: 'If nominal GDP increases by 5% and the GDP deflator increases by 2%, what is the real GDP growth rate?',
-            hints: [
-              'Real GDP growth ≈ Nominal GDP growth - Inflation',
-              'Or use the formula with deflator',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
   {
@@ -1949,37 +1683,6 @@ The business cycle consists of expansion, peak, contraction (recession), and tro
           'Contractions feature decline, unemployment, and falling prices',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u2-l7-practice',
-        type: 'practice',
-        title: 'Business cycles',
-        exercises: [
-          {
-            id: 'practice-2-7-1',
-            prompt: 'Draw and label the four phases of the business cycle. Explain what happens to GDP, unemployment, and prices in each phase.',
-            hints: [
-              'Start with expansion, then peak, contraction, trough',
-              'GDP and unemployment move in opposite directions',
-            ],
-          },
-          {
-            id: 'practice-2-7-2',
-            prompt: 'What is a recession? How is it different from a depression?',
-            hints: [
-              'Recession: 2+ quarters of negative GDP growth',
-              'Depression: severe, prolonged recession',
-            ],
-          },
-          {
-            id: 'practice-2-7-3',
-            prompt: 'Explain the difference between the long-term growth trend and cyclical fluctuations in real GDP.',
-            hints: [
-              'Long-term trend shows overall growth',
-              'Cyclical fluctuations are short-term ups and downs',
-            ],
-          },
-        ],
-      } as PracticeContent,
     ],
   },
 ];
@@ -2052,38 +1755,6 @@ Aggregate demand shows total spending at different price levels. AD = C + I + G 
           'Expansionary policies shift AD right; contractionary policies shift AD left',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u3-l1-practice',
-        type: 'practice',
-        title: 'Practice: Aggregate Demand',
-        exercises: [
-          {
-            id: 'practice-3-1-1',
-            prompt: 'Draw an aggregate demand curve and explain why it slopes downward. Identify the three effects that cause this slope.',
-            hints: [
-              'Price level on vertical axis, real GDP on horizontal',
-              'Three effects: wealth, interest rate, foreign trade',
-            ],
-          },
-          {
-            id: 'practice-3-1-2',
-            prompt: 'Explain how each of the following would affect aggregate demand: (a) Increase in consumer confidence, (b) Increase in interest rates, (c) Increase in government spending, (d) Appreciation of the domestic currency.',
-            hints: [
-              'Consumer confidence affects consumption',
-              'Interest rates affect investment',
-              'Currency appreciation affects net exports',
-            ],
-          },
-          {
-            id: 'practice-3-1-3',
-            prompt: 'Distinguish between movement along the AD curve and shifts of the AD curve. What causes each?',
-            hints: [
-              'Price level changes cause movement along the curve',
-              'Other factors shift the curve',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u3-l1-quiz',
         type: 'quiz',
@@ -2172,38 +1843,6 @@ MPC is the fraction of additional income spent. The spending multiplier = 1 / (1
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u3-l2-practice',
-        type: 'practice',
-        title: 'Practice: Expenditure and Tax Multipliers',
-        exercises: [
-          {
-            id: 'practice-3-2-1',
-            prompt: 'Calculate the spending multiplier and tax multiplier if MPC = 0.75. If government spending increases by $200, what is the total change in GDP?',
-            hints: [
-              'Spending multiplier = 1 / (1 - MPC)',
-              'Tax multiplier = -MPC / (1 - MPC)',
-              'Change in GDP = Initial change × Multiplier',
-            ],
-          },
-          {
-            id: 'practice-3-2-2',
-            prompt: 'Explain why the tax multiplier is smaller in absolute value than the spending multiplier.',
-            hints: [
-              'Taxes affect disposable income, not direct spending',
-              'Some of the tax cut is saved, not spent',
-            ],
-          },
-          {
-            id: 'practice-3-2-3',
-            prompt: 'If MPC = 0.8 and the government increases both spending and taxes by $100, what is the net effect on GDP?',
-            hints: [
-              'This is the balanced budget multiplier',
-              'Net effect equals the change in spending',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u3-l2-quiz',
         type: 'quiz',
         title: 'Quiz: Multipliers',
@@ -2273,38 +1912,6 @@ The SRAS curve slopes upward because wages and prices are sticky in the short ru
           'Supply shocks can shift SRAS left (adverse) or right (favorable)',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u3-l3-practice',
-        type: 'practice',
-        title: 'Practice: Short-run aggregate supply',
-        exercises: [
-          {
-            id: 'practice-3-3-1',
-            prompt: 'Draw a short-run aggregate supply curve and explain why it slopes upward. What assumptions about wages and prices underlie this slope?',
-            hints: [
-              'SRAS slopes upward',
-              'Assumes sticky wages and prices',
-            ],
-          },
-          {
-            id: 'practice-3-3-2',
-            prompt: 'Explain how each of the following affects short-run aggregate supply: (a) Increase in oil prices, (b) Improvement in technology, (c) Increase in minimum wage, (d) Favorable weather for agriculture.',
-            hints: [
-              'Oil prices affect input costs',
-              'Technology affects productivity',
-              'Wages affect production costs',
-            ],
-          },
-          {
-            id: 'practice-3-3-3',
-            prompt: 'What is a supply shock? Give examples of positive and negative supply shocks and explain how each affects SRAS.',
-            hints: [
-              'Supply shocks are unexpected events affecting production',
-              'Positive shocks increase SRAS; negative shocks decrease SRAS',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u3-l3-quiz',
         type: 'quiz',
@@ -2376,38 +1983,6 @@ The LRAS curve is vertical at potential GDP because in the long run, all prices 
           'LRAS shifts when resources, technology, or institutions change',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u3-l4-practice',
-        type: 'practice',
-        title: 'Practice: Long-run aggregate supply',
-        exercises: [
-          {
-            id: 'practice-3-4-1',
-            prompt: 'Draw a long-run aggregate supply curve and explain why it is vertical. What does this imply about the relationship between price level and output in the long run?',
-            hints: [
-              'LRAS is vertical',
-              'All prices adjust in the long run',
-              'Output depends on resources, not price level',
-            ],
-          },
-          {
-            id: 'practice-3-4-2',
-            prompt: 'Explain how each of the following affects long-run aggregate supply: (a) Increase in population, (b) Improvement in education, (c) Increase in investment, (d) Discovery of new oil reserves.',
-            hints: [
-              "These affect the economy's productive capacity",
-              'All shift LRAS right',
-            ],
-          },
-          {
-            id: 'practice-3-4-3',
-            prompt: 'What is potential GDP? How does it differ from actual GDP?',
-            hints: [
-              'Potential GDP is full-employment output',
-              'Actual GDP can be above or below potential',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u3-l4-quiz',
         type: 'quiz',
@@ -2496,38 +2071,6 @@ Short-run equilibrium is where AD intersects SRAS. Long-run equilibrium is where
           'Long-run equilibrium occurs at potential GDP with natural unemployment',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u3-l5-practice',
-        type: 'practice',
-        title: 'Practice: Equilibrium in the AD-AS model',
-        exercises: [
-          {
-            id: 'practice-3-5-1',
-            prompt: 'Draw an AD-AS model showing AD, SRAS, and LRAS. Label short-run equilibrium, long-run equilibrium, and potential GDP.',
-            hints: [
-              'AD slopes down, SRAS slopes up, LRAS is vertical',
-              'Long-run equilibrium is where all three intersect',
-            ],
-          },
-          {
-            id: 'practice-3-5-2',
-            prompt: 'Explain the difference between a recessionary gap and an inflationary gap. Show each on an AD-AS diagram.',
-            hints: [
-              'Recessionary gap: AD/SRAS intersection left of LRAS',
-              'Inflationary gap: AD/SRAS intersection right of LRAS',
-            ],
-          },
-          {
-            id: 'practice-3-5-3',
-            prompt: 'What conditions must be met for the economy to be in long-run equilibrium?',
-            hints: [
-              'All three curves must intersect',
-              'Economy at potential GDP',
-              'Unemployment at natural rate',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u3-l5-quiz',
         type: 'quiz',
@@ -2646,37 +2189,6 @@ AD shifts change both price and output in the same direction. SRAS shifts change
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u3-l6-practice',
-        type: 'practice',
-        title: 'Practice: Changes in the AD-AS model in the short run',
-        exercises: [
-          {
-            id: 'practice-3-6-1',
-            prompt: 'Show on an AD-AS diagram what happens when aggregate demand increases. What happens to price level and real GDP?',
-            hints: [
-              'AD shifts right',
-              'Both price and output increase',
-            ],
-          },
-          {
-            id: 'practice-3-6-2',
-            prompt: 'Explain the difference between demand-pull and cost-push inflation. Show each on an AD-AS diagram.',
-            hints: [
-              'Demand-pull: AD increases',
-              'Cost-push: SRAS decreases',
-            ],
-          },
-          {
-            id: 'practice-3-6-3',
-            prompt: 'If both AD and SRAS increase, what can you say definitively about the change in output? What about price level?',
-            hints: [
-              'Both shifts increase output',
-              'Price change depends on relative magnitudes',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u3-l6-quiz',
         type: 'quiz',
         title: 'Quiz: Changes in the AD-AS model',
@@ -2744,39 +2256,6 @@ The economy self-adjusts to potential GDP in the long run. Recessionary gaps lea
           'Adjustment can be slow, justifying policy intervention',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u3-l7-practice',
-        type: 'practice',
-        title: 'Practice: Long-run self-adjustment in the AD-AS model',
-        exercises: [
-          {
-            id: 'practice-3-7-1',
-            prompt: 'Explain the process of long-run self-adjustment from a recessionary gap. Show this on an AD-AS diagram.',
-            hints: [
-              'Start with AD/SRAS intersection left of LRAS',
-              'Wages fall, SRAS shifts right',
-              'Economy returns to potential GDP',
-            ],
-          },
-          {
-            id: 'practice-3-7-2',
-            prompt: 'Explain the process of long-run self-adjustment from an inflationary gap. Show this on an AD-AS diagram.',
-            hints: [
-              'Start with AD/SRAS intersection right of LRAS',
-              'Wages rise, SRAS shifts left',
-              'Economy returns to potential GDP',
-            ],
-          },
-          {
-            id: 'practice-3-7-3',
-            prompt: 'Why might the self-adjustment process be slow? What are the implications for economic policy?',
-            hints: [
-              'Wages and prices may be sticky',
-              'Policy can speed up adjustment',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u3-l7-quiz',
         type: 'quiz',
@@ -2864,37 +2343,6 @@ Fiscal policy uses government spending and taxes to influence AD. Expansionary p
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u3-l8-practice',
-        type: 'practice',
-        title: 'Practice: Fiscal policy',
-        exercises: [
-          {
-            id: 'practice-3-8-1',
-            prompt: 'If the economy is in a recessionary gap, what fiscal policy actions should the government take? Show the effect on an AD-AS diagram.',
-            hints: [
-              'Increase spending or cut taxes',
-              'AD shifts right',
-            ],
-          },
-          {
-            id: 'practice-3-8-2',
-            prompt: 'Calculate the required change in government spending to close a $400 billion recessionary gap if MPC = 0.75.',
-            hints: [
-              'Spending multiplier = 1 / (1 - MPC)',
-              'Required spending = Output gap / Multiplier',
-            ],
-          },
-          {
-            id: 'practice-3-8-3',
-            prompt: 'Compare the effectiveness of a tax cut versus a spending increase for closing a recessionary gap. Which has a larger impact and why?',
-            hints: [
-              'Spending multiplier > Tax multiplier',
-              'Some tax cuts may be saved',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u3-l8-quiz',
         type: 'quiz',
         title: 'Quiz: Fiscal policy',
@@ -2970,38 +2418,6 @@ Automatic stabilizers are government programs that automatically stabilize the e
           'They provide timely, automatic counter-cyclical effects',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u3-l9-practice',
-        type: 'practice',
-        title: 'Practice: Automatic stabilizers',
-        exercises: [
-          {
-            id: 'practice-3-9-1',
-            prompt: 'Explain how unemployment insurance acts as an automatic stabilizer during both recessions and expansions.',
-            hints: [
-              'During recession: more benefits paid',
-              'During expansion: fewer benefits paid',
-            ],
-          },
-          {
-            id: 'practice-3-9-2',
-            prompt: 'How do progressive income taxes automatically stabilize the economy?',
-            hints: [
-              'Tax revenue changes automatically with income',
-              'During recession: lower taxes',
-              'During expansion: higher taxes',
-            ],
-          },
-          {
-            id: 'practice-3-9-3',
-            prompt: 'Compare automatic stabilizers to discretionary fiscal policy. What are the advantages and disadvantages of each?',
-            hints: [
-              'Automatic: timely, no political delay',
-              'Discretionary: can target specific problems',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u3-l9-quiz',
         type: 'quiz',
@@ -3129,38 +2545,6 @@ Interest is the price of borrowing money. Bonds are debt instruments with fixed 
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u4-l1-practice',
-        type: 'practice',
-        title: 'Practice: Financial assets',
-        exercises: [
-          {
-            id: 'practice-4-1-1',
-            prompt: 'Explain the inverse relationship between bond prices and interest rates. Use an example to illustrate.',
-            hints: [
-              'When interest rates rise, existing bonds become less attractive',
-              'Bond prices must fall to compete with new bonds',
-            ],
-          },
-          {
-            id: 'practice-4-1-2',
-            prompt: 'Compare and contrast bonds and stocks. What are the key differences in terms of risk, return, and ownership?',
-            hints: [
-              'Bonds = debt, Stocks = equity',
-              'Bonds = fixed returns, Stocks = variable returns',
-            ],
-          },
-          {
-            id: 'practice-4-1-3',
-            prompt: 'If you buy a company\'s stock, what rights and potential returns do you receive?',
-            hints: [
-              'Ownership stake',
-              'Dividends and capital gains',
-              'Voting rights (for common stock)',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u4-l1-quiz',
         type: 'quiz',
         title: 'Quiz: Financial assets',
@@ -3261,37 +2645,6 @@ Nominal return is the stated return; real return adjusts for inflation. Real ret
           'Indexing adjusts payments for inflation but has limitations',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u4-l2-practice',
-        type: 'practice',
-        title: 'Practice: Nominal vs. real interest rates',
-        exercises: [
-          {
-            id: 'practice-4-2-1',
-            prompt: 'Calculate the real interest rate if the nominal interest rate is 7% and inflation is 3%.',
-            hints: [
-              'Real rate ≈ Nominal rate - Inflation rate',
-              'Or use Fisher equation for exact calculation',
-            ],
-          },
-          {
-            id: 'practice-4-2-2',
-            prompt: 'If you earn a 4% nominal return on a savings account and inflation is 5%, what is your real return? Are you gaining or losing purchasing power?',
-            hints: [
-              'Real return = Nominal - Inflation',
-              'Negative real return means losing purchasing power',
-            ],
-          },
-          {
-            id: 'practice-4-2-3',
-            prompt: 'Explain why investors care about real returns rather than nominal returns. Provide an example.',
-            hints: [
-              'Real returns show purchasing power',
-              'Nominal returns can be misleading with inflation',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u4-l2-quiz',
         type: 'quiz',
@@ -3437,40 +2790,6 @@ Money supply is measured as M0, M1, and M2. Money serves as medium of exchange, 
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u4-l3-practice',
-        type: 'practice',
-        title: 'Practice: Definition, measurement, and functions of money',
-        exercises: [
-          {
-            id: 'practice-4-3-1',
-            prompt: 'Explain the four functions of money and provide examples of each.',
-            hints: [
-              'Medium of exchange: used for transactions',
-              'Unit of account: measure of value',
-              'Store of value: holds value over time',
-              'Standard of deferred payment: future payments',
-            ],
-          },
-          {
-            id: 'practice-4-3-2',
-            prompt: 'Distinguish between M0, M1, and M2. What components does each include?',
-            hints: [
-              'M0: currency and reserves',
-              'M1: M0 plus checkable deposits',
-              'M2: M1 plus savings and time deposits',
-            ],
-          },
-          {
-            id: 'practice-4-3-3',
-            prompt: 'Compare commodity money and fiat money. What are the advantages and disadvantages of each?',
-            hints: [
-              'Commodity money has intrinsic value',
-              'Fiat money relies on government backing',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u4-l3-quiz',
         type: 'quiz',
         title: 'Quiz: Definition, measurement, and functions of money',
@@ -3604,39 +2923,6 @@ Fractional reserve banking allows banks to hold only a fraction of deposits as r
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u4-l4-practice',
-        type: 'practice',
-        title: 'Practice: Introduction to fractional reserve banking, The money multiplier and the expansion of the money supply',
-        exercises: [
-          {
-            id: 'practice-4-4-1',
-            prompt: 'Explain how a bank creates money in a fractional reserve system. Use a numerical example with a 10% reserve requirement.',
-            hints: [
-              'Bank receives deposit',
-              'Holds required reserves',
-              'Lends excess reserves',
-              'Process continues',
-            ],
-          },
-          {
-            id: 'practice-4-4-2',
-            prompt: 'Calculate the money multiplier if the reserve requirement is 20%. If a bank receives a $5000 deposit, what is the maximum increase in money supply?',
-            hints: [
-              'Money multiplier = 1 / Reserve requirement',
-              'Maximum increase = Initial deposit × Multiplier',
-            ],
-          },
-          {
-            id: 'practice-4-4-3',
-            prompt: 'Compare fractional reserve banking and full reserve banking. What are the advantages and disadvantages of each?',
-            hints: [
-              'Fractional reserve: enables money creation but has risks',
-              'Full reserve: no money creation but safer',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u4-l4-quiz',
         type: 'quiz',
         title: 'Quiz: Banking and the expansion of the money supply',
@@ -3724,39 +3010,6 @@ The demand for money is downward sloping (higher interest rates reduce money dem
           'The money market connects monetary policy to interest rates',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u4-l5-practice',
-        type: 'practice',
-        title: 'Practice: The money market: foundational concepts',
-        exercises: [
-          {
-            id: 'practice-4-5-1',
-            prompt: 'Draw the money market showing money supply and demand curves. Label the equilibrium interest rate and quantity of money.',
-            hints: [
-              'Interest rate on vertical axis',
-              'Quantity of money on horizontal axis',
-              'Supply is vertical (set by central bank)',
-              'Demand slopes downward',
-            ],
-          },
-          {
-            id: 'practice-4-5-2',
-            prompt: 'Explain why the demand for money is downward sloping. What is the opportunity cost of holding money?',
-            hints: [
-              'Higher interest rates = higher opportunity cost',
-              'People hold less money when rates are high',
-            ],
-          },
-          {
-            id: 'practice-4-5-3',
-            prompt: 'What happens to the equilibrium interest rate when the money supply increases? Show this on a money market diagram.',
-            hints: [
-              'Money supply curve shifts right',
-              'Interest rate falls',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u4-l5-quiz',
         type: 'quiz',
@@ -3851,38 +3104,6 @@ Monetary policy uses money supply and interest rates to influence the economy. T
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u4-l6-practice',
-        type: 'practice',
-        title: 'Practice: Monetary policy: foundational concepts, Changes in the money market',
-        exercises: [
-          {
-            id: 'practice-4-6-1',
-            prompt: 'Explain how the central bank uses open market operations to conduct expansionary monetary policy. Show the effect on the money market.',
-            hints: [
-              'Buying securities increases money supply',
-              'Money supply curve shifts right',
-              'Interest rate falls',
-            ],
-          },
-          {
-            id: 'practice-4-6-2',
-            prompt: 'Compare expansionary and contractionary monetary policy. When would each be used?',
-            hints: [
-              'Expansionary: fight recessions',
-              'Contractionary: fight inflation',
-            ],
-          },
-          {
-            id: 'practice-4-6-3',
-            prompt: 'How does monetary policy affect aggregate demand? Trace the transmission mechanism.',
-            hints: [
-              'Monetary policy → Interest rates → Investment → AD',
-              'Also affects net exports through exchange rates',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u4-l6-quiz',
         type: 'quiz',
         title: 'Quiz: Monetary policy',
@@ -3969,40 +3190,6 @@ The loanable funds market shows supply (saving) and demand (investment) for fund
           'Changes in saving or investment shift the curves',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u4-l7-practice',
-        type: 'practice',
-        title: 'Practice: The market for loanable funds, Changes in the market for loanable funds',
-        exercises: [
-          {
-            id: 'practice-4-7-1',
-            prompt: 'Draw the loanable funds market showing supply and demand curves. Label the equilibrium interest rate and quantity.',
-            hints: [
-              'Interest rate on vertical axis',
-              'Quantity of loanable funds on horizontal axis',
-              'Supply slopes up, demand slopes down',
-            ],
-          },
-          {
-            id: 'practice-4-7-2',
-            prompt: 'Explain how a government budget deficit affects the loanable funds market. Show this on a diagram.',
-            hints: [
-              'Budget deficit reduces public saving',
-              'Supply of loanable funds decreases',
-              'Interest rate rises',
-            ],
-          },
-          {
-            id: 'practice-4-7-3',
-            prompt: 'If investment demand increases, what happens to the equilibrium interest rate and quantity of loanable funds?',
-            hints: [
-              'Demand curve shifts right',
-              'Interest rate rises',
-              'Quantity increases',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u4-l7-quiz',
         type: 'quiz',
@@ -4091,38 +3278,6 @@ Present value shows the current worth of future money. Money today is worth more
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u4-l8-practice',
-        type: 'practice',
-        title: 'Practice: Interest rates and the time value of money',
-        exercises: [
-          {
-            id: 'practice-4-8-1',
-            prompt: 'Calculate the present value of $5000 received in 3 years if the interest rate is 6%.',
-            hints: [
-              'PV = FV / (1 + r)^n',
-              'PV = $5000 / (1.06)^3',
-            ],
-          },
-          {
-            id: 'practice-4-8-2',
-            prompt: 'Explain why $100 today is worth more than $100 in one year. What is the opportunity cost of waiting?',
-            hints: [
-              'Money can earn interest',
-              'Inflation reduces purchasing power',
-              'Opportunity cost is the interest that could be earned',
-            ],
-          },
-          {
-            id: 'practice-4-8-3',
-            prompt: 'If you have the choice between receiving $1000 today or $1100 in one year, which should you choose if the interest rate is 8%?',
-            hints: [
-              'Calculate present value of $1100',
-              'Compare to $1000 today',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u4-l8-quiz',
         type: 'quiz',
         title: 'Quiz: Interest rates and the time value of money',
@@ -4186,40 +3341,6 @@ Fiscal and monetary policy can work together or conflict. Coordinated policies a
           'Policy coordination requires communication between institutions',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u5-l1-practice',
-        type: 'practice',
-        title: 'Practice: Fiscal and monetary policy actions in the short run',
-        exercises: [
-          {
-            id: 'practice-5-1-1',
-            prompt: 'Explain how expansionary fiscal policy and expansionary monetary policy work together. Show the combined effect on aggregate demand.',
-            hints: [
-              'Both shift AD right',
-              'Combined effect is stronger',
-              'Show on AD-AS diagram',
-            ],
-          },
-          {
-            id: 'practice-5-1-2',
-            prompt: 'What happens when expansionary fiscal policy is combined with contractionary monetary policy? Explain the conflicting effects.',
-            hints: [
-              'Fiscal policy increases AD',
-              'Monetary policy decreases AD',
-              'Net effect depends on relative magnitudes',
-            ],
-          },
-          {
-            id: 'practice-5-1-3',
-            prompt: 'Why is policy coordination important? What are the benefits and challenges?',
-            hints: [
-              'Coordination can be more effective',
-              'Requires communication',
-              'Can avoid conflicts',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u5-l1-quiz',
         type: 'quiz',
@@ -4296,40 +3417,6 @@ The short-run Phillips Curve shows a trade-off between inflation and unemploymen
           'No long-run trade-off between inflation and unemployment',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u5-l2-practice',
-        type: 'practice',
-        title: 'Practice: The Phillips curve: foundational concepts, The Phillips curve: linking changes in the AD-AS model to the Phillips curve',
-        exercises: [
-          {
-            id: 'practice-5-2-1',
-            prompt: 'Draw a short-run Phillips Curve and explain the trade-off it represents. Why does this trade-off exist?',
-            hints: [
-              'SRPC slopes downward',
-              'Shows inflation-unemployment trade-off',
-              'Based on sticky wages/prices',
-            ],
-          },
-          {
-            id: 'practice-5-2-2',
-            prompt: 'Explain how an increase in aggregate demand affects both the AD-AS model and the Phillips Curve. Show the connection.',
-            hints: [
-              'AD increase → Higher price level and output',
-              'Corresponds to movement along SRPC',
-              'Lower unemployment, higher inflation',
-            ],
-          },
-          {
-            id: 'practice-5-2-3',
-            prompt: 'What is the difference between the short-run and long-run Phillips Curve? Why is the long-run curve vertical?',
-            hints: [
-              'Short-run: trade-off exists',
-              'Long-run: no trade-off',
-              'Wages and prices adjust in long run',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u5-l2-quiz',
         type: 'quiz',
@@ -4440,38 +3527,6 @@ The quantity theory states that money supply growth causes inflation (if V and Y
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u5-l3-practice',
-        type: 'practice',
-        title: 'Practice: Money growth and inflation',
-        exercises: [
-          {
-            id: 'practice-5-3-1',
-            prompt: 'Using the quantity theory of money, explain what happens to the price level if the money supply increases by 5% while velocity and output remain constant.',
-            hints: [
-              'M × V = P × Y',
-              'If M increases and V, Y constant, P must increase',
-            ],
-          },
-          {
-            id: 'practice-5-3-2',
-            prompt: 'Explain how a decrease in the velocity of money could cause deflation even if the money supply is increasing.',
-            hints: [
-              'Velocity = (P × Y) / M',
-              'If V falls faster than M rises, P can fall',
-            ],
-          },
-          {
-            id: 'practice-5-3-3',
-            prompt: 'Why do central banks typically target 2% inflation rather than 0%? What are the benefits of moderate inflation?',
-            hints: [
-              'Prevents deflation',
-              'Encourages spending',
-              'Allows real wage adjustments',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u5-l3-quiz',
         type: 'quiz',
         title: 'Quiz: Money Growth and Inflation',
@@ -4547,41 +3602,6 @@ Crowding out occurs when government spending reduces private spending, typically
           'Monetary accommodation can reduce crowding out',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u5-l4-practice',
-        type: 'practice',
-        title: 'Practice: Crowding out',
-        exercises: [
-          {
-            id: 'practice-5-4-1',
-            prompt: 'Explain the mechanism of crowding out. Show how increased government spending can reduce private investment.',
-            hints: [
-              'Government borrowing increases',
-              'Demand for loanable funds increases',
-              'Interest rates rise',
-              'Investment decreases',
-            ],
-          },
-          {
-            id: 'practice-5-4-2',
-            prompt: 'Show crowding out on a loanable funds market diagram. What happens to interest rates and investment?',
-            hints: [
-              'Government borrowing shifts demand right',
-              'Interest rate rises',
-              'Investment decreases',
-            ],
-          },
-          {
-            id: 'practice-5-4-3',
-            prompt: 'Under what conditions is crowding out most likely to occur? How can it be reduced?',
-            hints: [
-              'Near full employment',
-              'Fixed money supply',
-              'Monetary accommodation can help',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u5-l4-quiz',
         type: 'quiz',
@@ -4674,38 +3694,6 @@ Budget deficits occur when spending exceeds revenue. National debt is accumulate
           'Sustainable debt requires GDP growth to outpace debt growth',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u5-l5-practice',
-        type: 'practice',
-        title: 'Practice: Deficits and debts',
-        exercises: [
-          {
-            id: 'practice-5-5-1',
-            prompt: 'Explain the difference between a budget deficit and national debt. How are they related?',
-            hints: [
-              'Deficit is annual',
-              'Debt is accumulated',
-              'Debt = sum of past deficits',
-            ],
-          },
-          {
-            id: 'practice-5-5-2',
-            prompt: 'Calculate the debt-to-GDP ratio if national debt is $20 trillion and GDP is $25 trillion. Is this sustainable?',
-            hints: [
-              'Debt-to-GDP = (Debt / GDP) × 100',
-              'Consider if GDP growth exceeds debt growth',
-            ],
-          },
-          {
-            id: 'practice-5-5-3',
-            prompt: 'What are the short-run benefits and long-run concerns of government deficits?',
-            hints: [
-              'Short-run: can stimulate economy',
-              'Long-run: debt burden, reduced flexibility',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u5-l5-quiz',
         type: 'quiz',
@@ -4807,39 +3795,6 @@ Economic growth is the increase in real GDP over time. Growth comes from increas
           'Sustainable growth balances economic, environmental, and social factors',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u5-l6-practice',
-        type: 'practice',
-        title: 'Practice: Economic growth',
-        exercises: [
-          {
-            id: 'practice-5-6-1',
-            prompt: 'Calculate the economic growth rate if real GDP was $20 trillion last year and $21 trillion this year.',
-            hints: [
-              'Growth rate = [(GDP current - GDP previous) / GDP previous] × 100',
-            ],
-          },
-          {
-            id: 'practice-5-6-2',
-            prompt: 'List and explain the main sources of long-run economic growth. How does each shift the LRAS curve?',
-            hints: [
-              'Resources (labor, capital)',
-              'Technology',
-              'Human capital',
-              'All shift LRAS right',
-            ],
-          },
-          {
-            id: 'practice-5-6-3',
-            prompt: 'Distinguish between long-run economic growth and short-run economic fluctuations. Why is this distinction important?',
-            hints: [
-              'Long-run: trend, potential GDP',
-              'Short-run: business cycle, actual GDP',
-              'Different policies for each',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u5-l6-quiz',
         type: 'quiz',
@@ -4953,38 +3908,6 @@ The balance of payments records all international transactions. Current account 
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u6-l1-practice',
-        type: 'practice',
-        title: 'Practice: The balance of payments',
-        exercises: [
-          {
-            id: 'practice-6-1-1',
-            prompt: 'Explain what the current account includes. What does a current account deficit mean?',
-            hints: [
-              'Current account = trade + income + transfers',
-              'Deficit means payments > receipts',
-            ],
-          },
-          {
-            id: 'practice-6-1-2',
-            prompt: 'Why must the current account and capital account balance? Use the accounting identity to explain.',
-            hints: [
-              'Every transaction has two sides',
-              'Current Account + Capital Account = 0',
-            ],
-          },
-          {
-            id: 'practice-6-1-3',
-            prompt: 'If a country has a current account deficit of $100 billion, what must be true about its capital account? Explain using the personal budget analogy.',
-            hints: [
-              'Current account + Capital account = 0',
-              'Deficit must be financed',
-              'Like spending more than you earn',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u6-l1-quiz',
         type: 'quiz',
         title: 'Quiz: The balance of payments',
@@ -5078,39 +4001,6 @@ Exchange rate is the price of one currency in terms of another. Currencies can a
           'Real exchange rate adjusts for price levels',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u6-l2-practice',
-        type: 'practice',
-        title: 'Practice: Exchange rates',
-        exercises: [
-          {
-            id: 'practice-6-2-1',
-            prompt: 'If the exchange rate changes from 1 USD = 0.85 EUR to 1 USD = 0.90 EUR, has the dollar appreciated or depreciated? Explain.',
-            hints: [
-              'Appreciation = can buy more foreign currency',
-              'Depreciation = can buy less foreign currency',
-            ],
-          },
-          {
-            id: 'practice-6-2-2',
-            prompt: 'List factors that would increase the demand for US dollars in the foreign exchange market.',
-            hints: [
-              'Foreigners want US goods',
-              'Foreigners want to invest in US',
-              'Higher US interest rates',
-            ],
-          },
-          {
-            id: 'practice-6-2-3',
-            prompt: 'What is the difference between nominal and real exchange rates? Why does the real exchange rate matter?',
-            hints: [
-              'Nominal = market rate',
-              'Real = adjusted for price levels',
-              'Real rate determines competitiveness',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u6-l2-quiz',
         type: 'quiz',
@@ -5276,40 +4166,6 @@ The forex market is where currencies are traded. Supply and demand determine exc
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u6-l3-practice',
-        type: 'practice',
-        title: 'Practice: The foreign exchange market',
-        exercises: [
-          {
-            id: 'practice-6-3-1',
-            prompt: 'Draw supply and demand curves for US dollars. Show what happens when foreign demand for US goods increases.',
-            hints: [
-              'Demand curve shifts right',
-              'Equilibrium exchange rate rises',
-              'USD appreciates',
-            ],
-          },
-          {
-            id: 'practice-6-3-2',
-            prompt: 'Explain how a central bank can use foreign reserves to prevent its currency from depreciating.',
-            hints: [
-              'Sell foreign reserves',
-              'Buy domestic currency',
-              'Increases demand for domestic currency',
-            ],
-          },
-          {
-            id: 'practice-6-3-3',
-            prompt: 'What is a speculative attack? How did it contribute to the Thai financial crisis?',
-            hints: [
-              'Large-scale selling of currency',
-              'Self-fulfilling depreciation',
-              'Exhausts reserves',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u6-l3-quiz',
         type: 'quiz',
         title: 'Quiz: The foreign exchange market',
@@ -5451,39 +4307,6 @@ Many factors shift currency supply and demand. Higher interest rates, exports, a
         ],
       } as ArticleContent,
       {
-        id: 'macroecon-u6-l4-practice',
-        type: 'practice',
-        title: 'Practice: Effect of changes in policies and economic conditions on the foreign exchange market',
-        exercises: [
-          {
-            id: 'practice-6-4-1',
-            prompt: 'Show on a supply-demand diagram what happens to the exchange rate when a country raises its interest rates. Explain the mechanism.',
-            hints: [
-              'Higher interest rates attract foreign capital',
-              'Demand for currency increases',
-              'Currency appreciates',
-            ],
-          },
-          {
-            id: 'practice-6-4-2',
-            prompt: 'How does expansionary monetary policy affect the exchange rate? Show both the interest rate effect and the inflation effect.',
-            hints: [
-              'Lower interest rates → Capital outflows → Depreciation',
-              'Higher inflation → Further depreciation',
-            ],
-          },
-          {
-            id: 'practice-6-4-3',
-            prompt: 'Explain why expansionary fiscal policy might have mixed effects on the exchange rate.',
-            hints: [
-              'Increases imports → Depreciation',
-              'Increases interest rates → Appreciation',
-              'Net effect depends on relative magnitudes',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
         id: 'macroecon-u6-l4-quiz',
         type: 'quiz',
         title: 'Quiz: Effect of changes in policies and economic conditions on the foreign exchange market',
@@ -5587,41 +4410,6 @@ Real interest rate differentials drive international capital flows. Higher real 
           'Impossible trinity: can\'t have fixed rate, independent monetary policy, and free capital flows',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u6-l5-practice',
-        type: 'practice',
-        title: 'Practice: Changes in the foreign exchange markets and net exports',
-        exercises: [
-          {
-            id: 'practice-6-5-1',
-            prompt: 'Explain how an increase in real interest rates affects capital flows and the exchange rate.',
-            hints: [
-              'Attracts foreign investment',
-              'Capital inflows increase',
-              'Currency appreciates',
-            ],
-          },
-          {
-            id: 'practice-6-5-2',
-            prompt: 'Show how currency appreciation affects net exports. Use the relationship between exchange rates and trade.',
-            hints: [
-              'Appreciation makes exports more expensive',
-              'Makes imports cheaper',
-              'Net exports decrease',
-            ],
-          },
-          {
-            id: 'practice-6-5-3',
-            prompt: 'What is the impossible trinity? Why can\'t a country have all three: fixed exchange rate, independent monetary policy, and free capital flows?',
-            hints: [
-              'Fixed rate requires intervention',
-              'Independent monetary policy changes interest rates',
-              'Free capital flows respond to interest rates',
-              'These conflict with fixed rate',
-            ],
-          },
-        ],
-      } as PracticeContent,
       {
         id: 'macroecon-u6-l5-quiz',
         type: 'quiz',
@@ -5729,45 +4517,6 @@ Then: Yd = Y - tY = Y(1 - t)
           'With proportional taxes, MPC out of total income is lower',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u7-l1-practice',
-        type: 'practice',
-        title: 'Practice: The consumption function',
-        exercises: [
-          {
-            id: 'practice-7-1-1',
-            prompt: 'If the consumption function is C = 100 + 0.8Yd, what is autonomous consumption and the MPC? If disposable income is $1,000, what is consumption?',
-            hints: [
-              'Autonomous consumption is the constant term',
-              'MPC is the coefficient of Yd',
-              'Substitute Yd = 1000 into the equation',
-            ],
-          },
-          {
-            id: 'practice-7-1-2',
-            prompt: 'Explain the difference between marginal propensity to consume (MPC) and average propensity to consume (APC). Why does APC decrease as income increases?',
-            hints: [
-              'MPC = change in consumption / change in income',
-              'APC = total consumption / total income',
-              'Autonomous consumption is fixed',
-            ],
-          },
-          {
-            id: 'practice-7-1-3',
-            prompt: 'If the tax rate is 20% and MPC = 0.9, what is the marginal propensity to consume out of total income? Show your calculation.',
-            hints: [
-              'Disposable income = Y(1 - t)',
-              'MPC out of total income = MPC × (1 - t)',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u7-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: The consumption function',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -5895,45 +4644,6 @@ Or: Multiplier = 1 / MPS (where MPS = 1 - MPC is the marginal propensity to save
           'Economy adjusts through inventory changes',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u7-l2-practice',
-        type: 'practice',
-        title: 'Practice: The Keynesian cross',
-        exercises: [
-          {
-            id: 'practice-7-2-1',
-            prompt: 'Draw a Keynesian cross diagram. Show what happens to equilibrium output when government spending increases. Explain the adjustment process.',
-            hints: [
-              'AE curve shifts up',
-              'New equilibrium at higher output',
-              'Adjustment through inventory changes',
-            ],
-          },
-          {
-            id: 'practice-7-2-2',
-            prompt: 'If MPC = 0.75, what is the multiplier? If government spending increases by $200, what is the change in equilibrium output?',
-            hints: [
-              'Multiplier = 1 / (1 - MPC)',
-              'ΔY = Multiplier × ΔG',
-            ],
-          },
-          {
-            id: 'practice-7-2-3',
-            prompt: 'Why is the tax multiplier smaller (in absolute value) than the government spending multiplier? Calculate both if MPC = 0.8.',
-            hints: [
-              'Tax multiplier = -MPC / (1 - MPC)',
-              'Spending multiplier = 1 / (1 - MPC)',
-              'Taxes affect disposable income, not total spending directly',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u7-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: The Keynesian cross',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6074,46 +4784,6 @@ Where S is saving.
           'IS-LM intersection determines both output and interest rate',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u7-l3-practice',
-        type: 'practice',
-        title: 'Practice: IS-LM',
-        exercises: [
-          {
-            id: 'practice-7-3-1',
-            prompt: 'Explain why the IS curve is downward sloping. Use the relationship between interest rates, investment, and equilibrium output.',
-            hints: [
-              'Higher interest rates reduce investment',
-              'Lower investment reduces aggregate expenditure',
-              'Lower AE reduces equilibrium output',
-            ],
-          },
-          {
-            id: 'practice-7-3-2',
-            prompt: 'Draw an IS-LM diagram. Show what happens when the money supply increases. Explain the adjustment process.',
-            hints: [
-              'LM curve shifts right',
-              'New equilibrium: Lower interest rate, higher output',
-              'Lower interest rate increases investment',
-            ],
-          },
-          {
-            id: 'practice-7-3-3',
-            prompt: 'Using the IS-LM model, explain why an increase in government spending leads to both higher output and higher interest rates. What is crowding out?',
-            hints: [
-              'IS curve shifts right',
-              'Higher output increases money demand',
-              'Higher interest rate reduces investment (crowding out)',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u7-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: IS-LM',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6312,48 +4982,6 @@ Where S is saving.
           'Keynesian view: Markets may not self-adjust, government intervention needed',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u7-l4-practice',
-        type: 'practice',
-        title: 'Practice: Keynesian economics and its critiques',
-        exercises: [
-          {
-            id: 'practice-7-4-1',
-            prompt: 'Compare and contrast Say\'s Law and Keynes\' Law. How do they differ in their views of how markets work?',
-            hints: [
-              'Say\'s Law: Supply creates demand',
-              'Keynes\' Law: Demand creates supply',
-              'Different views on market adjustment',
-            ],
-          },
-          {
-            id: 'practice-7-4-2',
-            prompt: 'What are the main risks and criticisms of Keynesian economic policy? Discuss at least three.',
-            hints: [
-              'Inflation risk',
-              'Crowding out',
-              'Budget deficits',
-              'Time lags',
-            ],
-          },
-          {
-            id: 'practice-7-4-3',
-            prompt: 'Explain the Keynesian perspective on the Phillips Curve. How does this differ from the long-run view?',
-            hints: [
-              'Short-run trade-off exists',
-              'Can reduce unemployment with inflation',
-              'Long-run: No trade-off',
-              'Expectations matter',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u7-l4-quiz',
-        type: 'quiz',
-        title: 'Quiz: Keynesian economics and its critiques',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];
@@ -6498,46 +5126,6 @@ This analysis examines income and wealth inequality in the United States, provid
           'Tax policy changes reduced progressivity',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u8-l1-practice',
-        type: 'practice',
-        title: 'Practice: Analysis of income inequality in the United States',
-        exercises: [
-          {
-            id: 'practice-8-1-1',
-            prompt: 'Describe the trends in income inequality in the US since 1980. How have different income groups fared?',
-            hints: [
-              'Top 1%: significant growth',
-              'Middle class: stagnation',
-              'Bottom: minimal growth',
-            ],
-          },
-          {
-            id: 'practice-8-1-2',
-            prompt: 'Compare income inequality in the US to other developed countries. What factors might explain the differences?',
-            hints: [
-              'US has higher inequality',
-              'Tax systems differ',
-              'Social safety nets differ',
-            ],
-          },
-          {
-            id: 'practice-8-1-3',
-            prompt: 'How have tax policy changes in the post-war era contributed to income inequality?',
-            hints: [
-              'Tax cuts at top',
-              'Reduced progressivity',
-              'Less redistribution',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u8-l1-quiz',
-        type: 'quiz',
-        title: 'Quiz: Analysis of income inequality in the United States',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -6812,47 +5400,6 @@ If r > g:
           'Historical data shows r typically exceeds g',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u8-l2-practice',
-        type: 'practice',
-        title: 'Practice: National income and inequality',
-        exercises: [
-          {
-            id: 'practice-8-2-1',
-            prompt: 'Explain the difference between wealth and income. Why is this distinction important for understanding inequality?',
-            hints: [
-              'Wealth is stock, income is flow',
-              'Wealth can generate income',
-              'Inequality in wealth vs. income',
-            ],
-          },
-          {
-            id: 'practice-8-2-2',
-            prompt: 'What is Piketty\'s r > g thesis? How does this relationship contribute to inequality?',
-            hints: [
-              'r = return on capital',
-              'g = economic growth',
-              'When r > g, capital income grows faster',
-            ],
-          },
-          {
-            id: 'practice-8-2-3',
-            prompt: 'Under what conditions might inequality not increase even when r > g?',
-            hints: [
-              'Progressive taxation',
-              'High savings by middle class',
-              'Strong social mobility',
-              'Public investment in education',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u8-l2-quiz',
-        type: 'quiz',
-        title: 'Quiz: National income and inequality',
-        questions: [],
-      } as QuizContent,
     ],
   },
   {
@@ -7166,46 +5713,6 @@ The 2008 Financial Crisis was the most severe economic crisis since the Great De
           'TARP injected capital, but created moral hazard',
         ],
       } as ArticleContent,
-      {
-        id: 'macroecon-u8-l3-practice',
-        type: 'practice',
-        title: 'Practice: The 2008 Financial Crisis',
-        exercises: [
-          {
-            id: 'practice-8-3-1',
-            prompt: 'Explain the difference between a liquidity crisis and a solvency crisis. Why is this distinction important for policy?',
-            hints: [
-              'Liquidity: temporary, can\'t meet obligations',
-              'Solvency: fundamental, liabilities > assets',
-              'Different policy responses needed',
-            ],
-          },
-          {
-            id: 'practice-8-3-2',
-            prompt: 'What is systemic risk? Why did it justify government bailouts in 2008?',
-            hints: [
-              'Failure of one institution threatens system',
-              'Interconnected financial system',
-              'Credit freeze affects real economy',
-            ],
-          },
-          {
-            id: 'practice-8-3-3',
-            prompt: 'What is moral hazard? How did the 2008 bailouts create moral hazard, and how can it be mitigated?',
-            hints: [
-              'Protection encourages risky behavior',
-              'Banks may take more risk if bailed out',
-              'Regulation, capital requirements, stress tests',
-            ],
-          },
-        ],
-      } as PracticeContent,
-      {
-        id: 'macroecon-u8-l3-quiz',
-        type: 'quiz',
-        title: 'Quiz: The 2008 Financial Crisis',
-        questions: [],
-      } as QuizContent,
     ],
   },
 ];

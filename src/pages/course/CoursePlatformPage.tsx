@@ -2,14 +2,15 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { getCourseById, getAllCourses } from '@/data/courses';
-import type { Course, Lesson, ContentItem, VideoContent, ArticleContent, QuizContent, MasteryCheckContent } from '@/data/courseTypes';
+import type { Course, Lesson, ContentItem, VideoContent, ArticleContent, QuizContent, MasteryCheckContent, QuizQuestion } from '@/data/courseTypes';
+import { collectAllQuizQuestions, selectRandomQuestions } from '@/utils/courseUtils';
 import { MarkdownContent } from '@/components/content/MarkdownContent';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useUser } from '@/context/UserContext';
 import { supabase } from '@/integrations/supabase/client';
 import { 
   ChevronDown, ChevronRight, Play, CheckCircle, Clock, 
-  BookOpen, Award, Lightbulb, ArrowRight, Lock, ArrowLeft, FileText, Target
+  BookOpen, Award, Lightbulb, ArrowRight, Lock, ArrowLeft, FileText, Target, ChevronLeft
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getCourseListingPath } from '@/lib/educationRoutes';
@@ -53,7 +54,11 @@ export default function CoursePlatformPage() {
   const [selectedUnit, setSelectedUnit] = useState<typeof course.units[0] | undefined>(undefined);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>({});
   const [finalExamAnswers, setFinalExamAnswers] = useState<Record<string, number>>({});
+  const [finalExamQuestions, setFinalExamQuestions] = useState<QuizQuestion[]>([]);
   const [masteryCheckAnswers, setMasteryCheckAnswers] = useState<Record<string, number>>({});
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentMasteryQuestionIndex, setCurrentMasteryQuestionIndex] = useState(0);
+  const [currentExamQuestionIndex, setCurrentExamQuestionIndex] = useState(0);
 
   const toggleUnit = (unitId: string) => {
     setExpandedUnits(prev => 
@@ -172,6 +177,7 @@ export default function CoursePlatformPage() {
     setSelectedLesson(undefined);
     setSelectedContentItem(undefined);
     setMasteryCheckAnswers({});
+    setCurrentMasteryQuestionIndex(0); // Reset to first question
   };
 
   const handleMasteryCheckAnswer = (questionId: string, answerIndex: number) => {
@@ -185,6 +191,7 @@ export default function CoursePlatformPage() {
       setShowFinalExam(false);
       setShowMasteryCheck(false);
       setQuizAnswers({});
+      setCurrentQuestionIndex(0); // Reset to first question
     } else {
       setShowQuiz(false);
       setShowFinalExam(false);
@@ -258,6 +265,9 @@ export default function CoursePlatformPage() {
                               setShowQuiz(false);
                               setShowFinalExam(false);
                               setShowMasteryCheck(false);
+                              setCurrentQuestionIndex(0);
+                              setCurrentMasteryQuestionIndex(0);
+                              setCurrentExamQuestionIndex(0);
                               setMobileMenuOpen(false);
                             }}
                             className={`w-full flex items-center gap-2 p-2 rounded-lg text-left text-xs transition-colors ${
@@ -294,11 +304,17 @@ export default function CoursePlatformPage() {
                 ))}
                 <button
                   onClick={() => {
+                    // Collect all quiz questions and randomly select 20
+                    const allQuestions = collectAllQuizQuestions(course);
+                    const selectedQuestions = selectRandomQuestions(allQuestions, 20);
+                    setFinalExamQuestions(selectedQuestions);
                     setShowFinalExam(true);
                     setShowQuiz(false);
                     setShowMasteryCheck(false);
                     setSelectedLesson(undefined);
                     setSelectedContentItem(undefined);
+                    setCurrentExamQuestionIndex(0);
+                    setFinalExamAnswers({});
                     setMobileMenuOpen(false);
                   }}
                   className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm font-medium hover:bg-secondary/50 mt-2"
@@ -374,7 +390,10 @@ export default function CoursePlatformPage() {
                             setSelectedContentItem(lesson.contentItems[0]);
                             setShowQuiz(false); 
                             setShowFinalExam(false); 
-                            setShowMasteryCheck(false); 
+                            setShowMasteryCheck(false);
+                            setCurrentQuestionIndex(0);
+                            setCurrentMasteryQuestionIndex(0);
+                            setCurrentExamQuestionIndex(0);
                           }}
                           className={`w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm transition-colors ${
                             selectedLesson?.id === lesson.id 
@@ -409,11 +428,17 @@ export default function CoursePlatformPage() {
               <div className="mt-4 p-3 border-t border-border">
                 <button 
                   onClick={() => { 
+                    // Collect all quiz questions and randomly select 20
+                    const allQuestions = collectAllQuizQuestions(course);
+                    const selectedQuestions = selectRandomQuestions(allQuestions, 20);
+                    setFinalExamQuestions(selectedQuestions);
                     setShowFinalExam(true); 
                     setShowQuiz(false); 
                     setShowMasteryCheck(false); 
                     setSelectedLesson(undefined); 
                     setSelectedContentItem(undefined); 
+                    setCurrentExamQuestionIndex(0);
+                    setFinalExamAnswers({});
                   }}
                   className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm font-medium hover:bg-secondary/50"
                 >
@@ -503,35 +528,78 @@ export default function CoursePlatformPage() {
                     )}
 
                     {/* Article Content */}
-                    {selectedContentItem.type === 'article' && (
-                      <>
-                        <div className="glass-card p-6">
-                          <h2 className="heading-sm mb-4 flex items-center gap-2">
-                            <BookOpen className="h-5 w-5 text-primary" />
-                            {selectedContentItem.title || t('courses.article')}
-                          </h2>
-                          <div className="prose prose-sm prose-invert max-w-none">
-                            <MarkdownContent content={selectedContentItem.content} />
-                          </div>
-                        </div>
-                        {selectedContentItem.importantPoints && selectedContentItem.importantPoints.length > 0 && (
-                          <div className="glass-card p-6 border-l-4 border-yellow-500">
+                    {selectedContentItem.type === 'article' && (() => {
+                      const unit = course.units.find(u => u.lessons.some(l => l.id === selectedLesson.id));
+                      const articleContent = selectedContentItem as ArticleContent;
+                      
+                      // Try to get translated content
+                      const titleKey = `course.${course.id}.unit.${unit?.id}.lesson.${selectedLesson.id}.contentItem.${selectedContentItem.id}.title`;
+                      const contentKey = `course.${course.id}.unit.${unit?.id}.lesson.${selectedLesson.id}.contentItem.${selectedContentItem.id}.content`;
+                      const importantPointsKey = `course.${course.id}.unit.${unit?.id}.lesson.${selectedLesson.id}.contentItem.${selectedContentItem.id}.importantPoints`;
+                      
+                      const translatedTitle = t(titleKey);
+                      const translatedContent = t(contentKey);
+                      const translatedImportantPoints = t(importantPointsKey);
+                      
+                      // Use translation if it exists and is different from the key, otherwise use original
+                      const finalTitle = translatedTitle !== titleKey ? translatedTitle : (selectedContentItem.title || t('courses.article'));
+                      const finalContent = translatedContent !== contentKey ? translatedContent : articleContent.content;
+                      
+                      // Handle importantPoints - check if translation exists and is valid
+                      let importantPointsArray: string[] = [];
+                      if (translatedImportantPoints !== importantPointsKey) {
+                        // Translation exists
+                        if (Array.isArray(translatedImportantPoints)) {
+                          importantPointsArray = translatedImportantPoints;
+                        } else if (typeof translatedImportantPoints === 'string') {
+                          try {
+                            const parsed = JSON.parse(translatedImportantPoints);
+                            if (Array.isArray(parsed)) {
+                              importantPointsArray = parsed;
+                            } else {
+                              importantPointsArray = articleContent.importantPoints || [];
+                            }
+                          } catch {
+                            importantPointsArray = articleContent.importantPoints || [];
+                          }
+                        } else {
+                          importantPointsArray = articleContent.importantPoints || [];
+                        }
+                      } else {
+                        // No translation, use original
+                        importantPointsArray = articleContent.importantPoints || [];
+                      }
+                      
+                      return (
+                        <>
+                          <div className="glass-card p-6">
                             <h2 className="heading-sm mb-4 flex items-center gap-2">
-                              <Lightbulb className="h-5 w-5 text-yellow-500" />
-                              {t('courses.keyPoints')}
+                              <BookOpen className="h-5 w-5 text-primary" />
+                              {finalTitle}
                             </h2>
-                            <ul className="space-y-2">
-                              {selectedContentItem.importantPoints.map((point, index) => (
-                                <li key={index} className="flex items-start gap-2 text-sm">
-                                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
+                            <div className="prose prose-sm prose-invert max-w-none">
+                              <MarkdownContent content={finalContent} />
+                            </div>
                           </div>
-                        )}
-                      </>
-                    )}
+                          {importantPointsArray.length > 0 && (
+                            <div className="glass-card p-6 border-l-4 border-yellow-500">
+                              <h2 className="heading-sm mb-4 flex items-center gap-2">
+                                <Lightbulb className="h-5 w-5 text-yellow-500" />
+                                {t('courses.keyPoints')}
+                              </h2>
+                              <ul className="space-y-2">
+                                {importantPointsArray.map((point, index) => (
+                                  <li key={index} className="flex items-start gap-2 text-sm">
+                                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                                    {point}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </>
+                      );
+                    })()}
 
                     {/* Practice Content */}
                     {selectedContentItem.type === 'practice' && (
@@ -558,78 +626,150 @@ export default function CoursePlatformPage() {
             )}
 
             {/* Mastery Check View */}
-            {showMasteryCheck && selectedUnit && selectedUnit.masteryCheck && !showQuiz && !showFinalExam && (
-              <div className="max-w-2xl mx-auto space-y-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="heading-md">{t('courses.masteryCheck')}</h2>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {t(`course.${course.id}.unit.${selectedUnit.id}.title`) || selectedUnit.title}
-                    </p>
-                  </div>
-                  <Button variant="outline" onClick={() => { setShowMasteryCheck(false); setSelectedUnit(undefined); }}>
-                    {t('courses.backToCourse')}
-                  </Button>
-                </div>
-
-                {selectedUnit.masteryCheck.questions.map((question, qIndex) => (
-                  <div key={question.id} className="glass-card p-6">
-                    <p className="font-medium mb-4">{qIndex + 1}. {question.question}</p>
-                    <div className="space-y-2">
-                      {question.options.map((option, oIndex) => (
-                        <button
-                          key={oIndex}
-                          onClick={() => handleMasteryCheckAnswer(question.id, oIndex)}
-                          className={`w-full text-left p-3 rounded-lg border transition-colors ${
-                            masteryCheckAnswers[question.id] === oIndex
-                              ? masteryCheckAnswers[question.id] === question.correctAnswer
-                                ? 'border-green-500 bg-green-500/10'
-                                : 'border-red-500 bg-red-500/10'
-                              : 'border-border hover:border-primary/50'
-                          }`}
-                        >
-                          {option}
-                        </button>
-                      ))}
-                    </div>
-                    {masteryCheckAnswers[question.id] !== undefined && masteryCheckAnswers[question.id] === question.correctAnswer && question.explanation && (
-                      <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
-                        {question.explanation}
+            {showMasteryCheck && selectedUnit && selectedUnit.masteryCheck && !showQuiz && !showFinalExam && (() => {
+              const questions = selectedUnit.masteryCheck.questions;
+              const currentQuestion = questions[currentMasteryQuestionIndex];
+              const hasAnswer = currentQuestion && masteryCheckAnswers[currentQuestion.id] !== undefined;
+              const isCorrectAnswer = currentQuestion && hasAnswer && masteryCheckAnswers[currentQuestion.id] === currentQuestion.correctAnswer;
+              const canGoNext = isCorrectAnswer;
+              const isLastQuestion = currentMasteryQuestionIndex === questions.length - 1;
+              const allQuestionsAnswered = Object.keys(masteryCheckAnswers).length === questions.length;
+              
+              return (
+                <div className="max-w-2xl mx-auto space-y-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h2 className="heading-md">{t('courses.masteryCheck')}</h2>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {t(`course.${course.id}.unit.${selectedUnit.id}.title`) || selectedUnit.title}
                       </p>
-                    )}
+                    </div>
+                    <Button variant="outline" onClick={() => { 
+                      setShowMasteryCheck(false); 
+                      setCurrentMasteryQuestionIndex(0);
+                      setSelectedUnit(undefined); 
+                    }}>
+                      {t('courses.backToCourse')}
+                    </Button>
                   </div>
-                ))}
 
-                {/* Mastery Check Results */}
-                {Object.keys(masteryCheckAnswers).length === selectedUnit.masteryCheck.questions.length && (
-                  <div className="glass-card p-6 border-l-4 border-primary">
-                    <h3 className="heading-sm mb-4">{t('courses.masteryCheckResults', { defaultValue: 'Mastery Check Results' })}</h3>
-                    {(() => {
-                      const correct = selectedUnit.masteryCheck.questions.filter(
-                        q => masteryCheckAnswers[q.id] === q.correctAnswer
-                      ).length;
-                      const percentage = Math.round((correct / selectedUnit.masteryCheck.questions.length) * 100);
-                      const passed = percentage >= selectedUnit.masteryCheck.passRate;
-                      return (
-                        <div className="space-y-4">
-                          <div className="text-center">
-                            <div className="text-3xl font-bold mb-2">{percentage}%</div>
-                            <div className="text-sm text-muted-foreground">
-                              {correct} {t('courses.outOf')} {selectedUnit.masteryCheck.questions.length} {t('courses.correct')}
+                  {!allQuestionsAnswered && (
+                    <>
+                      {/* Question Counter */}
+                      {currentQuestion && (
+                        <div className="text-sm text-muted-foreground text-center">
+                          {t('courses.questionXOfY', { 
+                            current: currentMasteryQuestionIndex + 1, 
+                            total: questions.length,
+                            defaultValue: `Question ${currentMasteryQuestionIndex + 1} of ${questions.length}`
+                          })}
+                        </div>
+                      )}
+
+                      {/* Current Question */}
+                      {currentQuestion && (
+                        <div className="glass-card p-6">
+                          <p className="font-medium mb-4">{currentQuestion.question}</p>
+                          <div className="space-y-2">
+                            {currentQuestion.options.map((option, oIndex) => {
+                              const isSelected = masteryCheckAnswers[currentQuestion.id] === oIndex;
+                              const isCorrect = oIndex === currentQuestion.correctAnswer;
+                              
+                              return (
+                                <button
+                                  key={oIndex}
+                                  onClick={() => {
+                                    if (!hasAnswer || isCorrect) {
+                                      handleMasteryCheckAnswer(currentQuestion.id, oIndex);
+                                    }
+                                  }}
+                                  disabled={hasAnswer && !isCorrect && !isSelected}
+                                  className={`w-full text-left p-3 rounded-lg border transition-colors ${
+                                    isSelected
+                                      ? isCorrect
+                                        ? 'border-green-500 bg-green-500/10'
+                                        : 'border-red-500 bg-red-500/10'
+                                      : isCorrect && hasAnswer
+                                        ? 'border-green-500/50 bg-green-500/5'
+                                        : 'border-border hover:border-primary/50'
+                                  } ${hasAnswer && !isCorrect && !isSelected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                >
+                                  {option}
+                                </button>
+                              );
+                            })}
+                          </div>
+                          {hasAnswer && isCorrectAnswer && currentQuestion.explanation && (
+                            <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
+                              {currentQuestion.explanation}
+                            </p>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Navigation Buttons */}
+                      <div className="flex items-center justify-between gap-4">
+                        <Button
+                          variant="outline"
+                          onClick={() => setCurrentMasteryQuestionIndex(Math.max(0, currentMasteryQuestionIndex - 1))}
+                          disabled={currentMasteryQuestionIndex === 0}
+                          className="flex items-center gap-2"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                          {t('courses.previous', { defaultValue: 'Previous' })}
+                        </Button>
+                        
+                        {!isLastQuestion && (
+                          <Button
+                            onClick={() => setCurrentMasteryQuestionIndex(Math.min(questions.length - 1, currentMasteryQuestionIndex + 1))}
+                            disabled={!canGoNext}
+                            className="flex items-center gap-2"
+                          >
+                            {t('courses.next', { defaultValue: 'Next' })}
+                            <ArrowRight className="h-4 w-4" />
+                          </Button>
+                        )}
+                        
+                        {isLastQuestion && canGoNext && (
+                          <div className="text-sm text-muted-foreground">
+                            {t('courses.masteryCheckCompleted', { defaultValue: 'Mastery Check completed!' })}
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  )}
+
+                  {/* Mastery Check Results */}
+                  {allQuestionsAnswered && (
+                    <div className="glass-card p-6 border-l-4 border-primary">
+                      <h3 className="heading-sm mb-4">{t('courses.masteryCheckResults', { defaultValue: 'Mastery Check Results' })}</h3>
+                      {(() => {
+                        const correct = questions.filter(
+                          q => masteryCheckAnswers[q.id] === q.correctAnswer
+                        ).length;
+                        const percentage = Math.round((correct / questions.length) * 100);
+                        const passed = percentage >= selectedUnit.masteryCheck.passRate;
+                        return (
+                          <div className="space-y-4">
+                            <div className="text-center">
+                              <div className="text-3xl font-bold mb-2">{percentage}%</div>
+                              <div className="text-sm text-muted-foreground">
+                                {correct} {t('courses.outOf')} {questions.length} {t('courses.correct')}
+                              </div>
+                            </div>
+                            <div className={`text-center p-4 rounded-lg ${passed ? 'bg-green-500/10 border border-green-500/20' : 'bg-yellow-500/10 border border-yellow-500/20'}`}>
+                              <p className={`font-semibold ${passed ? 'text-green-400' : 'text-yellow-400'}`}>
+                                {passed ? t('courses.masteryCheckPassed', { defaultValue: 'Mastery Check Passed!' }) : t('courses.masteryCheckReview', { defaultValue: `Review the material and try again. Pass rate: ${selectedUnit.masteryCheck.passRate}%` })}
+                              </p>
                             </div>
                           </div>
-                          <div className={`text-center p-4 rounded-lg ${passed ? 'bg-green-500/10 border border-green-500/20' : 'bg-yellow-500/10 border border-yellow-500/20'}`}>
-                            <p className={`font-semibold ${passed ? 'text-green-400' : 'text-yellow-400'}`}>
-                              {passed ? t('courses.masteryCheckPassed', { defaultValue: 'Mastery Check Passed!' }) : t('courses.masteryCheckReview', { defaultValue: `Review the material and try again. Pass rate: ${selectedUnit.masteryCheck.passRate}%` })}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })()}
-                  </div>
-                )}
-              </div>
-            )}
+                        );
+                      })()}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
 
             {/* Quiz View */}
             {showQuiz && selectedLesson && selectedContentItem && selectedContentItem.type === 'quiz' && !showFinalExam && !showMasteryCheck && (() => {
@@ -642,135 +782,304 @@ export default function CoursePlatformPage() {
                   break;
                 }
               }
+              
+              const quizContent = selectedContentItem as QuizContent;
+              const questions = quizContent.questions || [];
+              const currentQuestion = questions[currentQuestionIndex];
+              const hasAnswer = currentQuestion && quizAnswers[currentQuestion.id] !== undefined;
+              const isCorrectAnswer = currentQuestion && hasAnswer && quizAnswers[currentQuestion.id] === currentQuestion.correctAnswer;
+              const canGoNext = isCorrectAnswer;
+              const isLastQuestion = currentQuestionIndex === questions.length - 1;
+              
               return (
                 <div className="max-w-2xl mx-auto space-y-6">
                   <div className="flex items-center justify-between">
                     <h2 className="heading-md">{selectedContentItem.title || `${t('courses.quiz')} ${lessonNumber}`}</h2>
-                    <Button variant="outline" onClick={() => { setShowQuiz(false); setSelectedContentItem(selectedLesson.contentItems.find(item => item.type !== 'quiz') || selectedLesson.contentItems[0]); }}>
+                    <Button variant="outline" onClick={() => { 
+                      setShowQuiz(false); 
+                      setCurrentQuestionIndex(0);
+                      setSelectedContentItem(selectedLesson.contentItems.find(item => item.type !== 'quiz') || selectedLesson.contentItems[0]); 
+                    }}>
                       {t('courses.backToLesson')}
                     </Button>
                   </div>
 
-                {selectedContentItem.questions.map((question, qIndex) => (
-                  <div key={question.id} className="glass-card p-6">
-                    <p className="font-medium mb-4">{qIndex + 1}. {question.question}</p>
-                    <div className="space-y-2">
-                      {question.options.map((option, oIndex) => {
-                        const isSelected = quizAnswers[question.id] === oIndex;
-                        const isCorrect = oIndex === question.correctAnswer;
-                        const showExplanation = isSelected && isCorrect && question.optionExplanations && question.optionExplanations[oIndex];
-                        
-                        return (
-                          <div key={oIndex} className="space-y-1">
-                            <button
-                              onClick={() => handleQuizAnswer(question.id, oIndex)}
-                              className={`w-full text-left p-3 rounded-lg border transition-colors ${
-                                isSelected
-                                  ? isCorrect
-                                    ? 'border-green-500 bg-green-500/10'
-                                    : 'border-red-500 bg-red-500/10'
-                                  : 'border-border hover:border-primary/50'
-                              }`}
-                            >
-                              {option}
-                            </button>
-                            {showExplanation && (
-                              <p className={`text-sm p-3 rounded-lg ml-2 ${
-                                isCorrect 
-                                  ? 'text-green-700 dark:text-green-400 bg-green-500/10' 
-                                  : 'text-red-700 dark:text-red-400 bg-red-500/10'
-                              }`}>
-                                {question.optionExplanations?.[oIndex]}
-                              </p>
-                            )}
-                          </div>
-                        );
+                  {/* Question Counter */}
+                  {currentQuestion && (
+                    <div className="text-sm text-muted-foreground text-center">
+                      {t('courses.questionXOfY', { 
+                        current: currentQuestionIndex + 1, 
+                        total: questions.length,
+                        defaultValue: `Question ${currentQuestionIndex + 1} of ${questions.length}`
                       })}
                     </div>
-                    {quizAnswers[question.id] !== undefined && quizAnswers[question.id] === question.correctAnswer && question.explanation && !question.optionExplanations && (
-                      <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
-                        {question.explanation}
-                      </p>
+                  )}
+
+                  {/* Current Question */}
+                  {currentQuestion && (
+                    <div className="glass-card p-6">
+                      <p className="font-medium mb-4">{currentQuestion.question}</p>
+                      <div className="space-y-2">
+                        {currentQuestion.options.map((option, oIndex) => {
+                          const isSelected = quizAnswers[currentQuestion.id] === oIndex;
+                          const isCorrect = oIndex === currentQuestion.correctAnswer;
+                          const showExplanation = isSelected && isCorrect && currentQuestion.optionExplanations && currentQuestion.optionExplanations[oIndex];
+                          
+                          return (
+                            <div key={oIndex} className="space-y-1">
+                              <button
+                                onClick={() => {
+                                  if (!hasAnswer || isCorrect) {
+                                    handleQuizAnswer(currentQuestion.id, oIndex);
+                                  }
+                                }}
+                                disabled={hasAnswer && !isCorrect && !isSelected}
+                                className={`w-full text-left p-3 rounded-lg border transition-colors ${
+                                  isSelected
+                                    ? isCorrect
+                                      ? 'border-green-500 bg-green-500/10'
+                                      : 'border-red-500 bg-red-500/10'
+                                    : isCorrect && hasAnswer
+                                      ? 'border-green-500/50 bg-green-500/5'
+                                      : 'border-border hover:border-primary/50'
+                                } ${hasAnswer && !isCorrect && !isSelected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                              >
+                                {option}
+                              </button>
+                              {showExplanation && (
+                                <p className={`text-sm p-3 rounded-lg ml-2 ${
+                                  isCorrect 
+                                    ? 'text-green-700 dark:text-green-400 bg-green-500/10' 
+                                    : 'text-red-700 dark:text-red-400 bg-red-500/10'
+                                }`}>
+                                  {currentQuestion.optionExplanations?.[oIndex]}
+                                </p>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                      {hasAnswer && isCorrectAnswer && currentQuestion.explanation && !currentQuestion.optionExplanations && (
+                        <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
+                          {currentQuestion.explanation}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Navigation Buttons */}
+                  <div className="flex items-center justify-between gap-4">
+                    <Button
+                      variant="outline"
+                      onClick={() => setCurrentQuestionIndex(Math.max(0, currentQuestionIndex - 1))}
+                      disabled={currentQuestionIndex === 0}
+                      className="flex items-center gap-2"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                      {t('courses.previous', { defaultValue: 'Previous' })}
+                    </Button>
+                    
+                    {!isLastQuestion && (
+                      <Button
+                        onClick={() => setCurrentQuestionIndex(Math.min(questions.length - 1, currentQuestionIndex + 1))}
+                        disabled={!canGoNext}
+                        className="flex items-center gap-2"
+                      >
+                        {t('courses.next', { defaultValue: 'Next' })}
+                        <ArrowRight className="h-4 w-4" />
+                      </Button>
+                    )}
+                    
+                    {isLastQuestion && canGoNext && (
+                      <div className="text-sm text-muted-foreground">
+                        {t('courses.quizCompleted', { defaultValue: 'Quiz completed!' })}
+                      </div>
                     )}
                   </div>
-                ))}
                 </div>
               );
             })()}
 
             {/* Final Exam View */}
-            {showFinalExam && !showMasteryCheck && (
-              <div className="max-w-2xl mx-auto space-y-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="heading-md">{t('courses.finalExam')}</h2>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {t('courses.passRate')}: {course.finalExamPassRate}% • {t('courses.questions', { count: course.finalExam.length })}
-                    </p>
-                  </div>
-                  <Button variant="outline" onClick={() => setShowFinalExam(false)}>
-                    {t('courses.backToCourse')}
-                  </Button>
-                </div>
-
-                {course.finalExam.map((question, qIndex) => (
-                  <div key={question.id} className="glass-card p-6">
-                    <p className="font-medium mb-4">{qIndex + 1}. {question.question}</p>
-                    <div className="space-y-2">
-                      {question.options.map((option, oIndex) => (
-                        <button
-                          key={oIndex}
-                          onClick={() => setFinalExamAnswers({ ...finalExamAnswers, [question.id]: oIndex })}
-                          className={`w-full text-left p-3 rounded-lg border transition-colors ${
-                            finalExamAnswers[question.id] === oIndex
-                              ? finalExamAnswers[question.id] === question.correctAnswer
-                                ? 'border-green-500 bg-green-500/10'
-                                : 'border-red-500 bg-red-500/10'
-                              : 'border-border hover:border-primary/50'
-                          }`}
-                        >
-                          {option}
-                        </button>
-                      ))}
-                    </div>
-                    {finalExamAnswers[question.id] !== undefined && finalExamAnswers[question.id] === question.correctAnswer && question.explanation && (
-                      <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
-                        {question.explanation}
+            {showFinalExam && !showMasteryCheck && (() => {
+              const questions = finalExamQuestions;
+              
+              // Handle edge case: no questions available
+              if (questions.length === 0) {
+                return (
+                  <div className="max-w-2xl mx-auto space-y-6">
+                    <div className="glass-card p-6">
+                      <h2 className="heading-md mb-4">{t('courses.finalExam')}</h2>
+                      <p className="text-muted-foreground">
+                        {t('courses.noQuestionsAvailable', { defaultValue: 'No quiz questions are available for the final exam. Please complete the course quizzes first.' })}
                       </p>
-                    )}
+                      <Button 
+                        variant="outline" 
+                        onClick={() => {
+                          setShowFinalExam(false);
+                          setCurrentExamQuestionIndex(0);
+                        }}
+                        className="mt-4"
+                      >
+                        {t('courses.backToCourse')}
+                      </Button>
+                    </div>
                   </div>
-                ))}
+                );
+              }
+              
+              const currentQuestion = questions[currentExamQuestionIndex];
+              const hasAnswer = currentQuestion && finalExamAnswers[currentQuestion.id] !== undefined;
+              const isCorrectAnswer = currentQuestion && hasAnswer && finalExamAnswers[currentQuestion.id] === currentQuestion.correctAnswer;
+              const canGoNext = isCorrectAnswer;
+              const isLastQuestion = currentExamQuestionIndex === questions.length - 1;
+              const allQuestionsAnswered = Object.keys(finalExamAnswers).length === questions.length;
+              
+              return (
+                <div className="max-w-2xl mx-auto space-y-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h2 className="heading-md">{t('courses.finalExam')}</h2>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {t('courses.passRate')}: {course.finalExamPassRate}% • {t('courses.questions', { count: questions.length })}
+                      </p>
+                    </div>
+                    <Button variant="outline" onClick={() => {
+                      setShowFinalExam(false);
+                      setCurrentExamQuestionIndex(0);
+                    }}>
+                      {t('courses.backToCourse')}
+                    </Button>
+                  </div>
 
-                {/* Exam Results */}
-                {Object.keys(finalExamAnswers).length === course.finalExam.length && (
-                  <div className="glass-card p-6 border-l-4 border-primary">
-                    <h3 className="heading-sm mb-4">{t('courses.examResults')}</h3>
-                    {(() => {
-                      const correct = course.finalExam.filter(
-                        q => finalExamAnswers[q.id] === q.correctAnswer
-                      ).length;
-                      const percentage = Math.round((correct / course.finalExam.length) * 100);
-                      const passed = percentage >= course.finalExamPassRate;
-                      return (
-                        <div className="space-y-4">
-                          <div className="text-center">
-                            <div className="text-3xl font-bold mb-2">{percentage}%</div>
-                            <div className="text-sm text-muted-foreground">
-                              {correct} {t('courses.outOf')} {course.finalExam.length} {t('courses.correct')}
+                  {!allQuestionsAnswered && (
+                    <>
+                      {/* Question Counter */}
+                      {currentQuestion && (
+                        <div className="text-sm text-muted-foreground text-center">
+                          {t('courses.questionXOfY', { 
+                            current: currentExamQuestionIndex + 1, 
+                            total: questions.length,
+                            defaultValue: `Question ${currentExamQuestionIndex + 1} of ${questions.length}`
+                          })}
+                        </div>
+                      )}
+
+                      {/* Current Question */}
+                      {currentQuestion && (
+                        <div className="glass-card p-6">
+                          <p className="font-medium mb-4">{currentQuestion.question}</p>
+                          <div className="space-y-2">
+                            {currentQuestion.options.map((option, oIndex) => {
+                              const isSelected = finalExamAnswers[currentQuestion.id] === oIndex;
+                              const isCorrect = oIndex === currentQuestion.correctAnswer;
+                              const showExplanation = isSelected && isCorrect && currentQuestion.optionExplanations && currentQuestion.optionExplanations[oIndex];
+                              
+                              return (
+                                <div key={oIndex} className="space-y-1">
+                                  <button
+                                    onClick={() => {
+                                      if (!hasAnswer || isCorrect) {
+                                        setFinalExamAnswers({ ...finalExamAnswers, [currentQuestion.id]: oIndex });
+                                      }
+                                    }}
+                                    disabled={hasAnswer && !isCorrect && !isSelected}
+                                    className={`w-full text-left p-3 rounded-lg border transition-colors ${
+                                      isSelected
+                                        ? isCorrect
+                                          ? 'border-green-500 bg-green-500/10'
+                                          : 'border-red-500 bg-red-500/10'
+                                        : isCorrect && hasAnswer
+                                          ? 'border-green-500/50 bg-green-500/5'
+                                          : 'border-border hover:border-primary/50'
+                                    } ${hasAnswer && !isCorrect && !isSelected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                  >
+                                    {option}
+                                  </button>
+                                  {showExplanation && (
+                                    <p className={`text-sm p-3 rounded-lg ml-2 ${
+                                      isCorrect 
+                                        ? 'text-green-700 dark:text-green-400 bg-green-500/10' 
+                                        : 'text-red-700 dark:text-red-400 bg-red-500/10'
+                                    }`}>
+                                      {currentQuestion.optionExplanations?.[oIndex]}
+                                    </p>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                          {hasAnswer && isCorrectAnswer && currentQuestion.explanation && !currentQuestion.optionExplanations && (
+                            <p className="mt-4 text-sm text-muted-foreground p-3 bg-secondary/50 rounded-lg">
+                              {currentQuestion.explanation}
+                            </p>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Navigation Buttons */}
+                      <div className="flex items-center justify-between gap-4">
+                        <Button
+                          variant="outline"
+                          onClick={() => setCurrentExamQuestionIndex(Math.max(0, currentExamQuestionIndex - 1))}
+                          disabled={currentExamQuestionIndex === 0}
+                          className="flex items-center gap-2"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                          {t('courses.previous', { defaultValue: 'Previous' })}
+                        </Button>
+                        
+                        {!isLastQuestion && (
+                          <Button
+                            onClick={() => setCurrentExamQuestionIndex(Math.min(questions.length - 1, currentExamQuestionIndex + 1))}
+                            disabled={!canGoNext}
+                            className="flex items-center gap-2"
+                          >
+                            {t('courses.next', { defaultValue: 'Next' })}
+                            <ArrowRight className="h-4 w-4" />
+                          </Button>
+                        )}
+                        
+                        {isLastQuestion && canGoNext && (
+                          <div className="text-sm text-muted-foreground">
+                            {t('courses.examCompleted', { defaultValue: 'Exam completed!' })}
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  )}
+
+                  {/* Exam Results */}
+                  {allQuestionsAnswered && (
+                    <div className="glass-card p-6 border-l-4 border-primary">
+                      <h3 className="heading-sm mb-4">{t('courses.examResults')}</h3>
+                      {(() => {
+                        const correct = questions.filter(
+                          q => finalExamAnswers[q.id] === q.correctAnswer
+                        ).length;
+                        const percentage = Math.round((correct / questions.length) * 100);
+                        const passed = percentage >= course.finalExamPassRate;
+                        return (
+                          <div className="space-y-4">
+                            <div className="text-center">
+                              <div className="text-3xl font-bold mb-2">{percentage}%</div>
+                              <div className="text-sm text-muted-foreground">
+                                {correct} {t('courses.outOf')} {questions.length} {t('courses.correct')}
+                              </div>
+                            </div>
+                            <div className={`text-center p-4 rounded-lg ${passed ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'}`}>
+                              <p className={`font-semibold ${passed ? 'text-green-400' : 'text-red-400'}`}>
+                                {passed ? t('courses.congratulations') : t('courses.needToPass', { rate: course.finalExamPassRate })}
+                              </p>
                             </div>
                           </div>
-                          <div className={`text-center p-4 rounded-lg ${passed ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'}`}>
-                            <p className={`font-semibold ${passed ? 'text-green-400' : 'text-red-400'}`}>
-                              {passed ? t('courses.congratulations') : t('courses.needToPass', { rate: course.finalExamPassRate })}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })()}
-                  </div>
-                )}
-              </div>
-            )}
+                        );
+                      })()}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
           </main>
         </div>
       </div>

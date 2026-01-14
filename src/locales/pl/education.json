@@ -124,6 +124,12 @@
     "moduleTestReview": "Przejrzyj materiał i spróbuj ponownie",
     "module": "Moduł",
     "unit": "Jednostka",
+    "previous": "Poprzednie",
+    "next": "Następne",
+    "questionXOfY": "Pytanie {{current}} z {{total}}",
+    "quizCompleted": "Quiz zakończony!",
+    "masteryCheckCompleted": "Sprawdzenie opanowania zakończone!",
+    "examCompleted": "Egzamin zakończony!",
     "seoCourseTitle": "{{title}} - Kurs Online | INVESTOPATRONUS",
     "seoCourseDescription": "Ucz się {{title}} z naszym kompleksowym kursem online. Dostęp do lekcji wideo, interaktywnych quizów i eksperckich treści, aby opanować {{description}}."
   },
@@ -692,7 +698,15 @@
                   "title": "Gospodarka nakazowa i rynkowa"
                 },
                 "macroecon-u1-l1-article": {
-                  "title": "Poznaj: Wprowadzenie do makroekonomii"
+                  "title": "Poznaj: Wprowadzenie do makroekonomii",
+                  "content": "# Wprowadzenie do makroekonomii\n\n## Wprowadzenie do ekonomii\n\nEkonomia to nauka o tym, jak społeczeństwa alokują ograniczone zasoby, aby zaspokoić nieograniczone potrzeby i pragnienia. Bada wybory, które podejmują jednostki, przedsiębiorstwa i rządy, gdy zasoby są ograniczone.\n\n## Niedobór\n\nNiedobór to fundamentalny problem ekonomiczny. Istnieje, ponieważ zasoby są ograniczone, podczas gdy ludzkie potrzeby są nieograniczone. To zmusza nas do podejmowania wyborów dotyczących efektywnego wykorzystania zasobów.\n\nKluczowe punkty dotyczące niedoboru:\n- Zasoby są skończone (ziemia, praca, kapitał, przedsiębiorczość)\n- Potrzeby i pragnienia są nieskończone\n- Każdy wybór wiąże się z kosztem alternatywnym\n- Niedobór dotyka wszystkich, od jednostek po całe narody\n\n## Stwierdzenia normatywne i pozytywne\n\n**Stwierdzenia pozytywne** to obiektywne, oparte na faktach twierdzenia, które można przetestować i zweryfikować. Opisują \"co jest\".\n\nPrzykłady:\n- \"Bezrobocie wzrosło o 2% w ostatnim kwartale\"\n- \"Stopa inflacji wynosi 3%\"\n\n**Stwierdzenia normatywne** to subiektywne, oparte na wartościach twierdzenia, które wyrażają opinie o \"tym, co powinno być\".\n\nPrzykłady:\n- \"Rząd powinien zmniejszyć bezrobocie\"\n- \"Inflacja jest zbyt wysoka\"\n\n## Modele ekonomiczne\n\nModele ekonomiczne to uproszczone reprezentacje rzeczywistości używane do rozumienia, wyjaśniania i przewidywania zachowań ekonomicznych. Pomagają ekonomistom:\n- Skupiać się na kluczowych relacjach\n- Dokonywać prognoz\n- Testować teorie\n- Rozumieć złożone systemy\n\nModele wykorzystują założenia do uproszczenia rzeczywistości, czyniąc je użytecznymi, ale nie idealnymi reprezentacjami.\n\n## Gospodarki nakazowe i rynkowe\n\n**Gospodarka nakazowa** (gospodarka planowana):\n- Rząd podejmuje wszystkie decyzje ekonomiczne\n- Planowanie centralne określa co, jak i dla kogo produkować\n- Przykłady: Historyczny Związek Radziecki, Korea Północna\n\n**Gospodarka rynkowa** (wolny rynek):\n- Jednostki i przedsiębiorstwa podejmują decyzje ekonomiczne\n- Ceny określane przez podaż i popyt\n- Przykłady: Stany Zjednoczone, większość rozwiniętych krajów\n\nWiększość nowoczesnych gospodarek to **gospodarki mieszane**, łączące elementy obu systemów.\n\n## Podsumowanie lekcji: Wprowadzenie do makroekonomii\n\nEkonomia bada, jak społeczeństwa alokują ograniczone zasoby. Niedobór wymusza wybory, a każdy wybór ma koszt alternatywny. Modele ekonomiczne pomagają nam rozumieć złożone systemy. Gospodarki mogą być zorganizowane jako nakazowe, rynkowe lub mieszane systemy.",
+                  "importantPoints": [
+                    "Ekonomia bada, jak społeczeństwa alokują ograniczone zasoby",
+                    "Niedobór to fundamentalny problem ekonomiczny",
+                    "Stwierdzenia pozytywne są oparte na faktach; stwierdzenia normatywne to sądy wartościujące",
+                    "Modele ekonomiczne upraszczają rzeczywistość, aby pomóc nam rozumieć złożone systemy",
+                    "Gospodarki nakazowe są centralnie planowane; gospodarki rynkowe polegają na indywidualnych decyzjach"
+                  ]
                 },
                 "macroecon-u1-l1-practice": {
                   "title": "Praktyka: Wprowadzenie do niedoboru i ekonomicznego sposobu myślenia"
@@ -709,7 +723,15 @@
                   "title": "Koszt alternatywny i krzywa możliwości produkcyjnych"
                 },
                 "macroecon-u1-l2-article": {
-                  "title": "Poznaj: Koszt alternatywny i krzywa możliwości produkcyjnych"
+                  "title": "Poznaj: Koszt alternatywny i krzywa możliwości produkcyjnych",
+                  "content": "# Koszt alternatywny i krzywa możliwości produkcyjnych\n\n## Krzywa możliwości produkcyjnych\n\nKrzywa możliwości produkcyjnych (KMP) pokazuje maksymalne kombinacje dwóch dóbr lub usług, które gospodarka może wyprodukować, gdy wszystkie zasoby są w pełni i efektywnie wykorzystane.\n\nKluczowe charakterystyki:\n- Pokazuje kompromisy między produkcją różnych dóbr\n- Punkty na krzywej reprezentują efektywną produkcję\n- Punkty wewnątrz krzywej reprezentują nieefektywną produkcję\n- Punkty poza krzywą są nieosiągalne przy obecnych zasobach\n\n## Koszt alternatywny\n\nKoszt alternatywny to wartość następnej najlepszej alternatywy, z której trzeba zrezygnować przy podejmowaniu decyzji. To to, czym poświęcasz, aby uzyskać coś innego.\n\nPrzykład: Jeśli wybierasz studiowanie ekonomii przez 2 godziny zamiast pracy, koszt alternatywny to zarobki, które mógłbyś uzyskać.\n\n## Rosnący koszt alternatywny\n\nGdy koszt alternatywny rośnie wraz z produkcją większej ilości jednego dobra, KMP wygina się na zewnątrz (wklęsła do początku układu). Dzieje się tak, ponieważ:\n- Zasoby nie są idealnie adaptowalne\n- Niektóre zasoby lepiej nadają się do produkcji jednego dobra niż drugiego\n- W miarę zmiany produkcji trzeba używać mniej odpowiednich zasobów\n\n## KMP dla rosnącego, malejącego i stałego kosztu alternatywnego\n\n**Rosnący koszt alternatywny** (wygina się na zewnątrz):\n- Najbardziej realistyczny scenariusz\n- Zasoby są wyspecjalizowane\n- Koszt alternatywny rośnie wraz ze wzrostem produkcji\n\n**Stały koszt alternatywny** (linia prosta):\n- Zasoby są idealnie adaptowalne\n- Koszt alternatywny pozostaje stały\n- Mniej realistyczne, ale przydatne do analizy\n\n**Malejący koszt alternatywny** (wygina się do wewnątrz):\n- Rzadko w praktyce\n- Wystąpiłby, gdyby zasoby stawały się bardziej efektywne przy specjalizacji\n\n## Krzywa możliwości produkcyjnych jako model gospodarki kraju\n\nKMP może reprezentować:\n- Możliwości produkcyjne kraju\n- Kompromisy między różnymi sektorami (np. dobra konsumpcyjne vs. dobra kapitałowe)\n- Wzrost gospodarczy (przesunięcie na zewnątrz)\n- Spadek gospodarczy (przesunięcie do wewnątrz)\n- Efektywność i nieefektywność\n\n## Podsumowanie lekcji: Koszt alternatywny i KMP\n\nKMP ilustruje maksymalne możliwości produkcyjne i kompromisy. Koszt alternatywny to to, czym poświęcasz, aby uzyskać coś innego. Większość KMP pokazuje rosnący koszt alternatywny, tworząc krzywą wygiętą na zewnątrz. KMP jest użytecznym modelem do zrozumienia wyborów ekonomicznych i ograniczeń.",
+                  "importantPoints": [
+                    "KMP pokazuje maksymalne kombinacje produkcji przy pełnym wykorzystaniu zasobów",
+                    "Koszt alternatywny to wartość następnej najlepszej alternatywy",
+                    "Rosnący koszt alternatywny tworzy KMP wygiętą na zewnątrz",
+                    "Punkty na krzywej są efektywne; punkty wewnątrz są nieefektywne",
+                    "KMP może modelować możliwości produkcyjne i kompromisy kraju"
+                  ]
                 },
                 "macroecon-u1-l2-practice": {
                   "title": "Praktyka: Koszt alternatywny i KMP"
@@ -726,7 +748,15 @@
                   "title": "Przewaga komparatywna i korzyści z handlu"
                 },
                 "macroecon-u1-l3-article": {
-                  "title": "Poznaj: Przewaga komparatywna i korzyści z handlu"
+                  "title": "Poznaj: Przewaga komparatywna i korzyści z handlu",
+                  "content": "# Przewaga komparatywna i korzyści z handlu\n\n## Przewaga komparatywna, specjalizacja i korzyści z handlu\n\n**Przewaga komparatywna** występuje, gdy kraj (lub jednostka) może wyprodukować dobro przy niższych kosztach alternatywnych niż inny kraj. To podstawa korzystnej wymiany handlowej.\n\n**Specjalizacja** oznacza skupienie produkcji na dobrach, w których masz przewagę komparatywną.\n\n**Korzyści z handlu** występują, gdy kraje specjalizują się i handlują, pozwalając obu konsumować więcej, niż mogłyby wyprodukować samodzielnie.\n\n## Przewaga komparatywna i przewaga absolutna\n\n**Przewaga absolutna**: Zdolność do produkcji większej ilości dobra przy użyciu tych samych zasobów (lub tej samej ilości przy użyciu mniejszych zasobów).\n\n**Przewaga komparatywna**: Zdolność do produkcji dobra przy niższych kosztach alternatywnych.\n\nWażne: Kraj może mieć przewagę absolutną w obu dobrach, ale nadal korzystać z handlu, jeśli ma przewagę komparatywną w jednym dobru.\n\n## Koszt alternatywny i przewaga komparatywna przy użyciu tabeli produkcji\n\nPrzy użyciu tabel produkcji (pokazujących, ile każdy kraj może wyprodukować):\n\n1. Oblicz koszt alternatywny dla każdego dobra w każdym kraju\n2. Kraj z niższym kosztem alternatywnym ma przewagę komparatywną\n3. Ten kraj powinien specjalizować się w tym dobru\n\nPrzykład:\n- Kraj A: 10 pszenicy lub 5 tkaniny\n- Kraj B: 8 pszenicy lub 4 tkaniny\n\nKoszt alternatywny kraju A: 1 pszenica = 0,5 tkaniny; 1 tkanina = 2 pszenice\nKoszt alternatywny kraju B: 1 pszenica = 0,5 tkaniny; 1 tkanina = 2 pszenice\n\nW tym przypadku koszty alternatywne są równe, więc nie ma korzyści z handlu.\n\n## Warunki handlu i korzyści z handlu\n\n**Warunki handlu** to stosunek, według którego kraje wymieniają dobra. Musi on znajdować się między kosztami alternatywnymi obu krajów, aby handel był korzystny.\n\nJeśli warunki handlu są:\n- Równe kosztowi alternatywnemu kraju: Brak korzyści dla tego kraju\n- Między kosztami alternatywnymi: Oba kraje zyskują\n- Poza kosztami alternatywnymi: Jeden kraj traci\n\n## Podejście oparte na nakładach do określania przewagi komparatywnej\n\nPrzy użyciu tabel nakładów (pokazujących zasoby potrzebne do wyprodukowania jednej jednostki):\n\n1. Oblicz produkcję na jednostkę nakładu dla każdego dobra w każdym kraju\n2. Znajdź stosunek produkcji\n3. Kraj z wyższym stosunkiem ma przewagę komparatywną\n\nNiższe wymagania dotyczące nakładów oznaczają wyższą produktywność i przewagę komparatywną.\n\n## Kiedy nie ma korzyści z handlu\n\nHandel nie przynosi korzyści, gdy:\n- Koszty alternatywne są identyczne\n- Jeden kraj ma przewagę absolutną i komparatywną we wszystkim (rzadko)\n- Bariery handlowe uniemożliwiają korzystną wymianę\n- Koszty transportu przekraczają korzyści\n\n## Przykład pracy przewagi komparatywnej\n\n**Kraj X**: Może wyprodukować 20 samochodów lub 40 komputerów\n**Kraj Y**: Może wyprodukować 10 samochodów lub 30 komputerów\n\nKoszt alternatywny kraju X: 1 samochód = 2 komputery; 1 komputer = 0,5 samochodu\nKoszt alternatywny kraju Y: 1 samochód = 3 komputery; 1 komputer = 0,33 samochodu\n\nKraj X ma przewagę komparatywną w komputerach (niższy koszt alternatywny: 0,5 < 0,33)\nKraj Y ma przewagę komparatywną w samochodach (niższy koszt alternatywny: 3 < 2)\n\nOba kraje korzystają ze specjalizacji i handlu.\n\n## Podsumowanie lekcji: Przewaga komparatywna i korzyści z handlu\n\nPrzewaga komparatywna (niższy koszt alternatywny) jest podstawą korzystnej wymiany handlowej. Kraje powinny specjalizować się w dobrach, w których mają przewagę komparatywną. Warunki handlu muszą znajdować się między kosztami alternatywnymi, aby oba zyskały. Handel zwiększa całkowitą światową produkcję i konsumpcję.",
+                  "importantPoints": [
+                    "Przewaga komparatywna opiera się na koszcie alternatywnym, a nie na przewadze absolutnej",
+                    "Kraje korzystają ze specjalizacji w dobrach, w których mają przewagę komparatywną",
+                    "Warunki handlu muszą znajdować się między kosztami alternatywnymi, aby oba kraje zyskały",
+                    "Handel zwiększa całkowitą światową produkcję i konsumpcję",
+                    "Nawet kraje z przewagą absolutną we wszystkim mogą korzystać z handlu"
+                  ]
                 },
                 "macroecon-u1-l3-practice": {
                   "title": "Praktyka: Przewaga komparatywna i korzyści z handlu"
@@ -743,7 +773,15 @@
                   "title": "Popyt"
                 },
                 "macroecon-u1-l4-article": {
-                  "title": "Poznaj: Popyt"
+                  "title": "Poznaj: Popyt",
+                  "content": "# Popyt\n\n## Prawo popytu\n\n**Prawo popytu** stwierdza, że przy pozostałych czynnikach niezmienionych, wraz ze wzrostem ceny dobra ilość popytu maleje, a wraz ze spadkiem ceny ilość popytu rośnie.\n\nTworzy to opadającą krzywą popytu, pokazującą odwrotną zależność między ceną a ilością popytu.\n\n## Cena powiązanych produktów a popyt\n\n**Dobra substytucyjne**: Dobra, które mogą być używane zamiast siebie. Gdy cena substytutu rośnie, popyt na oryginalne dobro zwiększa się.\n\nPrzykład: Jeśli cena kawy rośnie, popyt na herbatę zwiększa się.\n\n**Dobra komplementarne**: Dobra używane razem. Gdy cena dobra komplementarnego rośnie, popyt na oryginalne dobro maleje.\n\nPrzykład: Jeśli cena benzyny rośnie, popyt na samochody maleje.\n\n## Zmiana oczekiwanych przyszłych cen a popyt\n\nJeśli konsumenci oczekują wzrostu cen w przyszłości, bieżący popyt rośnie (kup teraz, zanim ceny wzrosną).\n\nJeśli konsumenci oczekują spadku cen w przyszłości, bieżący popyt maleje (czekać na niższe ceny).\n\n## Zmiany w dochodach, populacji lub preferencjach\n\n**Zmiany dochodów**:\n- **Dobra normalne**: Popyt rośnie wraz ze wzrostem dochodu\n- **Dobra niższego rzędu**: Popyt maleje wraz ze wzrostem dochodu\n\n**Zmiany populacji**: Więcej ludzi oznacza większy popyt (przesunięcie w prawo), mniej ludzi oznacza mniejszy popyt (przesunięcie w lewo).\n\n**Preferencje/smaki**: Zmiany w tym, co ludzie lubią, wpływają na popyt. Pozytywne zmiany zwiększają popyt; negatywne zmiany zmniejszają popyt.\n\n## Dobra normalne i niższego rzędu\n\n**Dobra normalne**: Dobra, dla których popyt rośnie wraz ze wzrostem dochodu. Większość dóbr to dobra normalne.\n\nPrzykłady: Samochody, posiłki w restauracjach, wakacje\n\n**Dobra niższego rzędu**: Dobra, dla których popyt maleje wraz ze wzrostem dochodu. Ludzie kupują mniej, ponieważ mogą sobie pozwolić na lepsze alternatywy.\n\nPrzykłady: Marki generyczne, transport publiczny (dla niektórych), makarony instant\n\n## Zmiana popytu a zmiana ilości popytu\n\n**Zmiana ilości popytu**: Ruch wzdłuż krzywej popytu spowodowany zmianą ceny. Pokazuje się to jako ruch od jednego punktu do drugiego na tej samej krzywej.\n\n**Zmiana popytu**: Przesunięcie całej krzywej popytu spowodowane czynnikami innymi niż cena (dochód, preferencje, ceny powiązanych dóbr, oczekiwania, populacja). Krzywa przesuwa się w lewo (spadek) lub w prawo (wzrost).\n\nKluczowe rozróżnienie: Zmiany cen powodują ruch wzdłuż krzywej; inne czynniki powodują przesunięcie krzywej.\n\n## Podsumowanie lekcji: Popyt i determinanty popytu\n\nPrawo popytu pokazuje odwrotną zależność między ceną a ilością. Popyt jest wpływany przez ceny powiązanych dóbr (substytutów i komplementów), dochód, populację, preferencje i oczekiwania. Dobra normalne rosną z dochodem; dobra niższego rzędu maleją. Rozróżniaj ruch wzdłuż krzywej (zmiana ceny) i przesunięcia krzywej (inne czynniki).",
+                  "importantPoints": [
+                    "Prawo popytu pokazuje odwrotną zależność między ceną a ilością popytu",
+                    "Dobra substytucyjne konkurują; dobra komplementarne są używane razem",
+                    "Oczekiwane przyszłe ceny wpływają na bieżący popyt",
+                    "Dobra normalne rosną z dochodem; dobra niższego rzędu maleją",
+                    "Zmiany cen powodują ruch wzdłuż krzywej; inne czynniki przesuwają krzywą"
+                  ]
                 },
                 "macroecon-u1-l4-practice": {
                   "title": "Praktyka: Popyt"
@@ -760,7 +798,15 @@
                   "title": "Podaż"
                 },
                 "macroecon-u1-l5-article": {
-                  "title": "Poznaj: Podaż"
+                  "title": "Poznaj: Podaż",
+                  "content": "# Podaż\n\n## Prawo podaży\n\n**Prawo podaży** stwierdza, że przy pozostałych czynnikach niezmienionych, wraz ze wzrostem ceny dobra ilość podaży rośnie, a wraz ze spadkiem ceny ilość podaży maleje.\n\nTworzy to wznoszącą się krzywą podaży, pokazującą bezpośrednią zależność między ceną a ilością podaży.\n\nProducenci są gotowi dostarczać więcej przy wyższych cenach, ponieważ:\n- Wyższe ceny oznaczają wyższe zyski\n- Staje się opłacalne produkowanie większej liczby jednostek\n- Wyższe ceny mogą uzasadnić wyższe koszty produkcji\n\n## Czynniki wpływające na podaż\n\nCzynniki, które przesuwają krzywą podaży (zmieniają podaż):\n\n1. **Ceny nakładów**: Wyższe koszty nakładów zmniejszają podaż (przesunięcie w lewo); niższe koszty zwiększają podaż (przesunięcie w prawo)\n\n2. **Technologia**: Lepsza technologia zwiększa podaż (przesunięcie w prawo), czyniąc produkcję bardziej efektywną\n\n3. **Liczba sprzedawców**: Więcej sprzedawców zwiększa podaż (przesunięcie w prawo); mniej sprzedawców zmniejsza podaż (przesunięcie w lewo)\n\n4. **Oczekiwania**: Jeśli producenci oczekują wyższych przyszłych cen, mogą zmniejszyć bieżącą podaż (przesunięcie w lewo), aby sprzedać później\n\n5. **Polityka rządowa**: Podatki zmniejszają podaż (przesunięcie w lewo); subsydia zwiększają podaż (przesunięcie w prawo)\n\n6. **Warunki naturalne**: Pogoda, katastrofy itp. mogą wpływać na podaż dóbr rolnych i dóbr z zasobów naturalnych\n\n## Zmiana podaży a zmiana ilości podaży\n\n**Zmiana ilości podaży**: Ruch wzdłuż krzywej podaży spowodowany zmianą ceny. Pokazuje się to jako ruch od jednego punktu do drugiego na tej samej krzywej.\n\n**Zmiana podaży**: Przesunięcie całej krzywej podaży spowodowane czynnikami innymi niż cena (koszty nakładów, technologia, liczba sprzedawców, oczekiwania, polityka rządowa). Krzywa przesuwa się w lewo (spadek) lub w prawo (wzrost).\n\nKluczowe rozróżnienie: Zmiany cen powodują ruch wzdłuż krzywej; inne czynniki powodują przesunięcie krzywej.\n\n## Podsumowanie lekcji: Podaż i jej determinanty\n\nPrawo podaży pokazuje bezpośrednią zależność między ceną a ilością podaży. Podaż jest wpływana przez ceny nakładów, technologię, liczbę sprzedawców, oczekiwania i politykę rządową. Rozróżniaj ruch wzdłuż krzywej (zmiana ceny) i przesunięcia krzywej (inne czynniki).",
+                  "importantPoints": [
+                    "Prawo podaży pokazuje bezpośrednią zależność między ceną a ilością podaży",
+                    "Wyższe koszty nakładów zmniejszają podaż; lepsza technologia zwiększa podaż",
+                    "Więcej sprzedawców zwiększa podaż; mniej sprzedawców zmniejsza podaż",
+                    "Zmiany cen powodują ruch wzdłuż krzywej; inne czynniki przesuwają krzywą",
+                    "Polityka rządowa (podatki, subsydia) wpływa na podaż"
+                  ]
                 },
                 "macroecon-u1-l5-practice": {
                   "title": "Praktyka: Podaż"
@@ -777,7 +823,15 @@
                   "title": "Rynki"
                 },
                 "macroecon-u1-l6-article": {
-                  "title": "Poznaj: Rynki"
+                  "title": "Poznaj: Rynki",
+                  "content": "# Rynki\n\n## Równowaga rynkowa\n\n**Równowaga rynkowa** występuje, gdy ilość popytu równa się ilości podaży przy określonej cenie. To punkt, w którym przecinają się krzywe popytu i podaży.\n\nPrzy równowadze:\n- Ilość popytu = Ilość podaży\n- Brak niedoboru lub nadwyżki\n- Cena jest stabilna (brak presji na zmianę)\n- Rynek się oczyszcza (wszystkie dobra są sprzedane)\n\nCena równowagi nazywana jest również \"ceną oczyszczającą rynek\".\n\n## Zmiany równowagi rynkowej\n\nRównowaga zmienia się, gdy krzywa popytu lub krzywa podaży przesuwa się:\n\n**Przesunięcia popytu**:\n- Wzrost popytu (przesunięcie w prawo) → Wyższa cena równowagi i ilość\n- Spadek popytu (przesunięcie w lewo) → Niższa cena równowagi i ilość\n\n**Przesunięcia podaży**:\n- Wzrost podaży (przesunięcie w prawo) → Niższa cena równowagi, większa ilość\n- Spadek podaży (przesunięcie w lewo) → Wyższa cena równowagi, mniejsza ilość\n\n## Zmiany ceny i ilości równowagi przy zmianach popytu i podaży\n\nGdy obie krzywe przesuwają się jednocześnie:\n\n**Obie rosną**:\n- Popyt ↑ i Podaż ↑ → Ilość zdecydowanie rośnie\n- Zmiana ceny jest niejednoznaczna (zależy od wielkości przesunięć)\n\n**Obie maleją**:\n- Popyt ↓ i Podaż ↓ → Ilość zdecydowanie maleje\n- Zmiana ceny jest niejednoznaczna\n\n**Popyt rośnie, Podaż maleje**:\n- Cena zdecydowanie rośnie\n- Zmiana ilości jest niejednoznaczna\n\n**Popyt maleje, Podaż rośnie**:\n- Cena zdecydowanie maleje\n- Zmiana ilości jest niejednoznaczna\n\n## Podsumowanie lekcji: Równowaga rynkowa, nierównowaga i zmiany równowagi\n\nRównowaga rynkowa występuje, gdy ilość popytu równa się ilości podaży. Równowaga zmienia się przy przesunięciach popytu lub podaży. Gdy obie krzywe przesuwają się, jedna zmienna (cena lub ilość) zmienia się zdecydowanie, a druga jest niejednoznaczna, w zależności od względnej wielkości przesunięć.",
+                  "importantPoints": [
+                    "Równowaga występuje, gdy ilość popytu równa się ilości podaży",
+                    "Przy równowadze rynek się oczyszcza bez niedoboru lub nadwyżki",
+                    "Przesunięcia popytu wpływają na cenę i ilość w tym samym kierunku",
+                    "Przesunięcia podaży wpływają na cenę i ilość w przeciwnych kierunkach",
+                    "Gdy obie krzywe przesuwają się, jeden wynik jest określony, drugi niejednoznaczny"
+                  ]
                 },
                 "macroecon-u1-l6-practice": {
                   "title": "Praktyka: Równowaga i nierównowaga rynkowa, Zmiany równowagi"
@@ -800,7 +854,15 @@
                   "title": "Produkt Krajowy Brutto (Obieg okrężny i PKB)"
                 },
                 "macroecon-u2-l1-article": {
-                  "title": "Poznaj: Produkt Krajowy Brutto (Obieg okrężny i PKB)"
+                  "title": "Poznaj: Produkt Krajowy Brutto (Obieg okrężny i PKB)",
+                  "content": "# Produkt Krajowy Brutto: Obieg okrężny i PKB\n\n## Obieg okrężny dochodów i wydatków\n\n**Model obiegu okrężnego** pokazuje, jak pieniądze, dobra i usługi przepływają przez gospodarkę między gospodarstwami domowymi a firmami.\n\nKluczowe komponenty:\n- **Gospodarstwa domowe**: Dostarczają czynniki produkcji (praca, ziemia, kapitał) i otrzymują dochód\n- **Firmy**: Używają czynników produkcji do wytwarzania dóbr i usług, płacą dochód gospodarstwom domowym\n- **Rynek produktów**: Gdzie sprzedawane są dobra i usługi\n- **Rynek czynników**: Gdzie kupowane i sprzedawane są czynniki produkcji\n\nPieniądze płyną w jednym kierunku; dobra, usługi i czynniki płyną w przeciwnym kierunku.\n\n## Analiza produktu krajowego brutto\n\n**Produkt Krajowy Brutto (PKB)** to całkowita wartość rynkowa wszystkich dóbr i usług finalnych wytworzonych w granicach kraju w określonym okresie czasu.\n\nKluczowe terminy:\n- **Brutto**: Całkowite, przed uwzględnieniem amortyzacji\n- **Krajowy**: W granicach kraju (niezależnie od własności)\n- **Produkt**: Dobra i usługi finalne\n\n## Więcej o wkładach finalnych i pośrednich w PKB\n\n**Dobra finalne**: Dobra sprzedawane użytkownikom końcowym (konsumentom, przedsiębiorstwom, rządowi, zagranicznym nabywcom). Są one liczone w PKB.\n\n**Dobra pośrednie**: Dobra używane w produkcji innych dóbr. NIE są one liczone w PKB, aby uniknąć podwójnego liczenia.\n\nPrzykład: Samochód sprzedany konsumentowi jest finalny; stal użyta do wyprodukowania samochodu jest pośrednia.\n\n## Inwestycje i konsumpcja\n\n**Konsumpcja (C)**: Wydatki gospodarstw domowych na dobra i usługi (z wyjątkiem nowego budownictwa mieszkaniowego).\n\n**Inwestycje (I)**: Wydatki na dobra kapitałowe, które będą używane w przyszłej produkcji:\n- Inwestycje biznesowe (maszyny, sprzęt, budynki)\n- Inwestycje mieszkaniowe (nowe budownictwo mieszkaniowe)\n- Inwestycje w zapasy (zmiany w niesprzedanych dobrach)\n\nUwaga: Inwestycje w ekonomii ≠ inwestycje finansowe (akcje, obligacje).\n\n## Podejścia dochodowe i wydatkowe do PKB\n\nPKB można zmierzyć na dwa sposoby, i powinny być równe:\n\n**Podejście wydatkowe**: PKB = C + I + G + (X - M)\n- C = Konsumpcja\n- I = Inwestycje\n- G = Wydatki rządowe\n- X = Eksport\n- M = Import\n- (X - M) = Eksport netto\n\n**Podejście dochodowe**: PKB = Płace + Czynsz + Odsetki + Zysk\n\nOba podejścia powinny dać tę samą wartość PKB.\n\n## Podejście wartości dodanej do obliczania PKB\n\n**Wartość dodana** = Wartość produkcji - Wartość nakładów pośrednich\n\nPKB = Suma wartości dodanej na każdym etapie produkcji\n\nTo pozwala uniknąć podwójnego liczenia dóbr pośrednich, licząc tylko wartość dodaną na każdym etapie.\n\n## Komponenty PKB\n\nPKB ma cztery główne komponenty:\n\n1. **Konsumpcja (C)**: Największy komponent, wydatki gospodarstw domowych\n2. **Inwestycje (I)**: Inwestycje biznesowe i mieszkaniowe\n3. **Wydatki rządowe (G)**: Zakupy rządowe (nie transfery)\n4. **Eksport netto (X - M)**: Eksport minus import\n\n## Przykłady obliczania PKB podejściem wydatkowym\n\nPrzykład obliczenia:\n- Konsumpcja: $10,000\n- Inwestycje: $2,000\n- Wydatki rządowe: $3,000\n- Eksport: $1,500\n- Import: $2,000\n\nPKB = C + I + G + (X - M)\nPKB = $10,000 + $2,000 + $3,000 + ($1,500 - $2,000)\nPKB = $14,500\n\n## Przykłady rozliczania PKB\n\nWażne zasady:\n- Liczyć tylko dobra i usługi finalne\n- Liczyć dobra wytworzone w bieżącym okresie\n- Liczyć produkcję w granicach kraju\n- Nie liczyć dóbr pośrednich\n- Nie liczyć używanych dóbr (już policzone, gdy były nowe)\n- Nie liczyć transakcji finansowych\n- Nie liczyć płatności transferowych\n\n## Pomiar rozmiaru gospodarki: produkt krajowy brutto\n\nPKB jest podstawową miarą rozmiaru i produkcji gospodarczej kraju. Pomaga:\n- Porównywać wyniki gospodarcze między krajami\n- Śledzić wzrost gospodarczy w czasie\n- Informować decyzje polityczne\n- Mierzyć standard życia (z ograniczeniami)\n\n## Podsumowanie lekcji: Obieg okrężny i PKB\n\nObieg okrężny pokazuje, jak pieniądze i zasoby poruszają się przez gospodarkę. PKB mierzy całkowitą produkcję, używając podejść wydatkowych, dochodowych lub wartości dodanej. PKB = C + I + G + (X - M). Liczone są tylko dobra finalne, aby uniknąć podwójnego liczenia.",
+                  "importantPoints": [
+                    "Model obiegu okrężnego pokazuje przepływ pieniędzy i zasobów między gospodarstwami domowymi a firmami",
+                    "PKB mierzy całkowitą produkcję dóbr i usług finalnych w granicach kraju",
+                    "Liczone są tylko dobra finalne; dobra pośrednie są wykluczone",
+                    "PKB = C + I + G + (X - M) przy użyciu podejścia wydatkowego",
+                    "PKB można obliczyć, używając podejść wydatkowych, dochodowych lub wartości dodanej"
+                  ]
                 },
                 "macroecon-u2-l1-practice": {
                   "title": "Praktyka: Model obiegu okrężnego i PKB"
@@ -817,7 +879,15 @@
                   "title": "Ograniczenia PKB"
                 },
                 "macroecon-u2-l2-article": {
-                  "title": "Poznaj: Ograniczenia PKB"
+                  "title": "Poznaj: Ograniczenia PKB",
+                  "content": "# Ograniczenia PKB\n\n## Czego PKB nie mierzy\n\nPKB ma ważne ograniczenia i nie mierzy:\n\n1. **Jakość życia**: PKB nie uwzględnia zdrowia, edukacji, szczęścia, czasu wolnego\n2. **Rozkład dochodów**: PKB nie pokazuje, jak dochód jest rozłożony między ludźmi\n3. **Działalność nierynkowa**: Praca domowa, wolontariat, barter nie są uwzględnione\n4. **Negatywne efekty zewnętrzne**: Zanieczyszczenie, wyczerpywanie zasobów nie są odejmowane\n5. **Gospodarka nieformalna**: Działalność nielegalna i unikanie podatków nie są uwzględnione\n6. **Zrównoważony rozwój**: PKB nie pokazuje, czy obecny poziom produkcji można utrzymać\n\n## Alternatywne miary dobrobytu\n\n**Wskaźnik Rozwoju Społecznego (HDI)**: Uwzględnia dochód, edukację i zdrowie\n\n**Genuine Progress Indicator (GPI)**: Koryguje PKB o czynniki negatywne\n\n**Indeks szczęścia**: Mierzy subiektywne dobrostan\n\n**Ślad ekologiczny**: Mierzy wpływ na środowisko\n\nTe miary pomagają uzyskać pełniejszy obraz ekonomicznego i społecznego dobrobytu.\n\n## Podsumowanie lekcji: Ograniczenia PKB\n\nPKB mierzy produkcję, ale ma znaczące ograniczenia. Nie uwzględnia jakości życia, rozkładu dochodów, działalności nierynkowej ani zrównoważonego rozwoju. Alternatywne miary pomagają rozwiązać te ograniczenia i dać pełniejszy obraz dobrobytu.",
+                  "importantPoints": [
+                    "PKB nie mierzy jakości życia ani dobrobytu",
+                    "PKB nie pokazuje rozkładu dochodów",
+                    "Działalność nierynkowa nie jest uwzględniona w PKB",
+                    "PKB nie uwzględnia negatywnych efektów zewnętrznych",
+                    "Alternatywne miary pomagają rozwiązać ograniczenia PKB"
+                  ]
                 },
                 "macroecon-u2-l2-practice": {
                   "title": "Praktyka: Ograniczenia PKB"
@@ -834,7 +904,15 @@
                   "title": "Bezrobocie"
                 },
                 "macroecon-u2-l3-article": {
-                  "title": "Poznaj: Bezrobocie"
+                  "title": "Poznaj: Bezrobocie",
+                  "content": "# Podsumowanie lekcji: Bezrobocie\n\nStopa bezrobocia mierzy poszukujących pracy jako procent siły roboczej. Typy bezrobocia obejmują frykcyjne (przejścia między pracami), strukturalne (niedopasowanie umiejętności) i cykliczne (spadki gospodarcze). Naturalna stopa to bezrobocie frykcyjne + strukturalne. Pełne zatrudnienie oznacza zerowe bezrobocie cykliczne.\n\n## Podstawy stopy bezrobocia\n\n**Stopa bezrobocia** mierzy procent siły roboczej, który jest bezrobotny, ale aktywnie poszukuje pracy.\n\nWzór: Stopa bezrobocia = (Liczba bezrobotnych / Siła robocza) × 100\n\n**Siła robocza** = Zatrudnieni + Bezrobotni (aktywnie poszukujący pracy)\n\n**Poza siłą roboczą**: Ludzie, którzy nie pracują i nie poszukują pracy (studenci, emeryci, zniechęceni pracownicy)\n\nWażne: Stopa bezrobocia nie obejmuje zniechęconych pracowników ani niepełnozatrudnionych pracowników.\n\n## Naturalna, cykliczna, strukturalna i frykcyjna stopa bezrobocia\n\n**Bezrobocie frykcyjne**: Krótkoterminowe bezrobocie spowodowane przejściem ludzi między pracami lub wejściem do siły roboczej. To jest normalne i zdrowe.\n\n**Bezrobocie strukturalne**: Długoterminowe bezrobocie spowodowane niedopasowaniem umiejętności lub zmianami w gospodarce (np. technologia zastępująca pracowników). Umiejętności pracowników nie odpowiadają dostępnym miejscom pracy.\n\n**Bezrobocie cykliczne**: Bezrobocie spowodowane spadkami gospodarczymi (recesjami). To typ, który polityka monetarna i fiskalna próbuje zmniejszyć.\n\n**Naturalna stopa bezrobocia**: Suma bezrobocia frykcyjnego i strukturalnego. To \"normalna\" stopa bezrobocia, gdy gospodarka jest w pełnym zatrudnieniu.\n\n**Pełne zatrudnienie**: Gdy bezrobocie cykliczne = 0. Gospodarka nadal może mieć bezrobocie frykcyjne i strukturalne.",
+                  "importantPoints": [
+                    "Stopa bezrobocia = (Bezrobotni / Siła robocza) × 100",
+                    "Bezrobocie frykcyjne to normalne przejścia między pracami",
+                    "Bezrobocie strukturalne wynika z niedopasowania umiejętności",
+                    "Bezrobocie cykliczne jest spowodowane spadkami gospodarczymi",
+                    "Naturalna stopa = Bezrobocie frykcyjne + Strukturalne"
+                  ]
                 },
                 "macroecon-u2-l3-practice": {
                   "title": "Praktyka: Typy bezrobocia i naturalna stopa bezrobocia, Bezrobocie"
@@ -849,6 +927,51 @@
               "contentItem": {
                 "macroecon-u2-l4-video-1": {
                   "title": "Inflacja (Indeksy cen i inflacja)"
+                },
+                "macroecon-u2-l4-article-1": {
+                  "title": "Śledzenie inflacji",
+                  "content": "# Śledzenie inflacji\n\nInflacja jest śledzona przy użyciu różnych indeksów cen:\n- **CPI**: Indeks cen konsumenckich (dobra konsumenckie)\n- **PPI**: Indeks cen producentów (ceny hurtowe)\n- **Deflator PKB**: Szersza miara obejmująca wszystkie komponenty PKB\n\nKażdy indeks służy różnym celom i dostarcza informacji o różnych aspektach zmian cen w gospodarce.",
+                  "importantPoints": [
+                    "CPI śledzi ceny konsumenckie",
+                    "PPI śledzi ceny hurtowe",
+                    "Deflator PKB jest szerszą miarą"
+                  ]
+                },
+                "macroecon-u2-l4-article-2": {
+                  "title": "Jak mierzone są zmiany kosztów utrzymania",
+                  "content": "# Jak mierzone są zmiany kosztów utrzymania\n\nCPI mierzy zmiany kosztów utrzymania poprzez:\n1. Wybór reprezentatywnego koszyka dóbr i usług\n2. Śledzenie cen przedmiotów w koszyku\n3. Obliczanie ważonych średnich zmian cen\n4. Porównanie z okresem bazowym\n\nOgraniczenia:\n- Może nie odzwierciedlać indywidualnych wzorców konsumpcji\n- Nie uwzględnia zmian jakości\n- Błąd substytucji (ludzie kupują tańsze alternatywy)",
+                  "importantPoints": [
+                    "CPI używa reprezentatywnego koszyka dóbr",
+                    "Ograniczenia obejmują błąd substytucji i zmiany jakości"
+                  ]
+                },
+                "macroecon-u2-l4-article-3": {
+                  "title": "Jak Stany Zjednoczone i inne kraje doświadczają inflacji",
+                  "content": "# Jak Stany Zjednoczone i inne kraje doświadczają inflacji\n\nStopy inflacji różnią się w zależności od kraju i czasu:\n- **Hiperinflacja**: Niezwykle wysoka inflacja (np. Zimbabwe, lata 2000)\n- **Umiarkowana inflacja**: 2-5% rocznie (typowy cel dla wielu krajów)\n- **Niska inflacja**: Około 0-2% (wiele krajów rozwiniętych)\n- **Deflacja**: Ujemna inflacja (Japonia, lata 1990-2000)\n\nBanki centralne zazwyczaj celują w inflację 2% jako optymalną dla wzrostu gospodarczego.",
+                  "importantPoints": [
+                    "Stopy inflacji różnią się w zależności od kraju",
+                    "Banki centralne zazwyczaj celują w inflację 2%",
+                    "Hiperinflacja i deflacja to skrajne przypadki"
+                  ]
+                },
+                "macroecon-u2-l4-article-4": {
+                  "title": "Zamieszanie wokół inflacji",
+                  "content": "# Zamieszanie wokół inflacji\n\nPowszechne nieporozumienia:\n- Inflacja nie oznacza, że wszystkie ceny rosną (niektóre mogą spadać)\n- Deflacja nie zawsze jest zła (jeśli spowodowana wzrostem produktywności)\n- Niska inflacja jest zazwyczaj preferowana do deflacji\n- Umiarkowana inflacja może zachęcać do wydatków i inwestycji\n\nZrozumienie tych niuansów pomaga wyjaśnić, jak inflacja wpływa na gospodarkę i indywidualną siłę nabywczą.",
+                  "importantPoints": [
+                    "Inflacja nie oznacza, że wszystkie ceny rosną",
+                    "Deflacja nie zawsze jest zła",
+                    "Umiarkowana inflacja może zachęcać do wydatków"
+                  ]
+                },
+                "macroecon-u2-l4-article-5": {
+                  "title": "Podsumowanie lekcji: Indeksy cen i inflacja",
+                  "content": "# Podsumowanie lekcji: Indeksy cen i inflacja\n\nInflacja to trwały wzrost ogólnego poziomu cen. CPI mierzy zmiany cen konsumenckich, używając koszyka dóbr. Inflacja zmniejsza siłę nabywczą. Deflacja może być niebezpieczna, prowadząc do spirali deflacyjnych. Stagflacja łączy stagnację z inflacją. Banki centralne zazwyczaj celują w umiarkowaną inflację (około 2%).\n\n## Kluczowe koncepcje\n\n- **Inflacja**: Trwały wzrost ogólnego poziomu cen\n- **Deflacja**: Trwały spadek ogólnego poziomu cen\n- **CPI**: Indeks cen konsumenckich mierzy zmiany cen konsumenckich\n- **Stagflacja**: Połączenie stagnacji i wysokiej inflacji\n- **Spirala deflacyjna**: Niebezpieczny cykl spadających cen i zmniejszonego popytu",
+                  "importantPoints": [
+                    "Inflacja to trwały wzrost ogólnego poziomu cen",
+                    "CPI mierzy zmiany cen konsumenckich, używając koszyka dóbr",
+                    "Deflacja może prowadzić do spirali deflacyjnych",
+                    "Stagflacja łączy stagnację z wysoką inflacją"
+                  ]
                 },
                 "macroecon-u2-l4-article": {
                   "title": "Poznaj: Inflacja (Indeksy cen i inflacja)"
@@ -868,7 +991,15 @@
                   "title": "Koszty inflacji"
                 },
                 "macroecon-u2-l5-article": {
-                  "title": "Poznaj: Koszty inflacji"
+                  "title": "Poznaj: Koszty inflacji",
+                  "content": "# Podsumowanie lekcji: Koszty inflacji\n\nInflacja redystrybuuje bogactwo od pożyczkodawców do pożyczkobiorców i od oszczędzających do wydających. Szkodzi zarabiającym stały dochód i tym, którzy trzymają gotówkę. Deflacja ma przeciwny efekt, ale może być bardziej niebezpieczna, prowadząc do skurczenia gospodarczego. Umiarkowana, przewidywalna inflacja jest zazwyczaj preferowana do deflacji.\n\n## Zwycięzcy i przegrani od inflacji i deflacji\n\n**Zwycięzcy od inflacji**:\n- **Pożyczkobiorcy**: Spłacają pożyczki dolarami wartymi mniej niż gdy pożyczali\n- **Ludzie z długiem o stałej stopie procentowej**: Posiadacze hipotek korzystają\n- **Właściciele aktywów**: Nieruchomości, akcje mogą wzrosnąć w wartości nominalnej\n\n**Przegrani od inflacji**:\n- **Pożyczkodawcy**: Otrzymują spłatę dolarami wartymi mniej niż gdy pożyczali\n- **Oszczędzający**: Pieniądze tracą siłę nabywczą\n- **Zarabiający stały dochód**: Płace/emerytury nie nadążają za cenami\n- **Ludzie trzymający gotówkę**: Gotówka traci wartość\n\n**Zwycięzcy od deflacji**:\n- **Pożyczkodawcy**: Otrzymują spłatę dolarami wartymi więcej\n- **Oszczędzający**: Pieniądze zyskują siłę nabywczą\n- **Zarabiający stały dochód**: Siła nabywcza wzrasta\n\n**Przegrani od deflacji**:\n- **Pożyczkobiorcy**: Spłacają pożyczki dolarami wartymi więcej\n- **Przedsiębiorstwa**: Spadające ceny zmniejszają zyski\n- **Pracownicy**: Często prowadzi do obniżek płac i bezrobocia",
+                  "importantPoints": [
+                    "Inflacja korzyści pożyczkobiorcom i szkodzi pożyczkodawcom",
+                    "Inflacja zmniejsza siłę nabywczą oszczędności i stałych dochodów",
+                    "Deflacja korzyści pożyczkodawcom, ale może spowodować skurczenie gospodarcze",
+                    "Inflacja redystrybuuje bogactwo między różnymi grupami",
+                    "Umiarkowana, przewidywalna inflacja jest zazwyczaj preferowana"
+                  ]
                 },
                 "macroecon-u2-l5-practice": {
                   "title": "Praktyka: The costs of inflation"
@@ -883,6 +1014,16 @@
               "contentItem": {
                 "macroecon-u2-l6-video-1": {
                   "title": "Realny a nominalny PKB"
+                },
+                "macroecon-u2-l6-article-2": {
+                  "title": "Podsumowanie lekcji: Realny a nominalny PKB",
+                  "content": "# Podsumowanie lekcji: Realny a nominalny PKB\n\nNominalny PKB używa cen bieżących; realny PKB używa stałych cen roku bazowego. Realny PKB mierzy faktyczne zmiany produkcji, usuwając efekty inflacji. Deflator PKB konwertuje między nominalnym a realnym PKB. Realny PKB jest preferowaną miarą do porównywania wzrostu gospodarczego w czasie.\n\n## Realny PKB i nominalny PKB\n\n**Nominalny PKB**: PKB mierzony w cenach bieżących (cenach roku, który jest mierzony). Obejmuje zarówno zmiany ilości, jak i zmiany cen.\n\n**Realny PKB**: PKB mierzony w cenach stałych (cenach roku bazowego). Pokazuje tylko zmiany ilości, usuwając efekt inflacji.\n\nRealny PKB jest lepszą miarą faktycznego wzrostu gospodarczego, ponieważ izoluje zmiany w produkcji od zmian w cenach.\n\n## Deflator PKB\n\n**Deflator PKB** to indeks cen, który mierzy średni poziom cen wszystkich dóbr i usług włączonych do PKB.\n\nWzór: Deflator PKB = (Nominalny PKB / Realny PKB) × 100\n\nDeflator PKB:\n- Używa ilości roku bieżącego (w przeciwieństwie do CPI, który używa stałego koszyka)\n- Obejmuje wszystkie komponenty PKB (nie tylko dobra konsumenckie)\n- Jest szerszy niż CPI",
+                  "importantPoints": [
+                    "Nominalny PKB używa cen bieżących; realny PKB używa cen stałych",
+                    "Realny PKB usuwa efekty inflacji, aby pokazać faktyczne zmiany produkcji",
+                    "Deflator PKB = (Nominalny PKB / Realny PKB) × 100",
+                    "Realny PKB jest lepszy do mierzenia wzrostu gospodarczego"
+                  ]
                 },
                 "macroecon-u2-l6-article": {
                   "title": "Poznaj: Realny a nominalny PKB"
@@ -900,6 +1041,17 @@
               "contentItem": {
                 "macroecon-u2-l7-video-1": {
                   "title": "Cykle koniunkturalne"
+                },
+                "macroecon-u2-l7-article-2": {
+                  "title": "Podsumowanie lekcji: Cykle koniunkturalne",
+                  "content": "# Podsumowanie lekcji: Cykle koniunkturalne\n\nCykl koniunkturalny składa się z faz ekspansji, szczytu, skurczenia (recesji) i dna. Realny PKB waha się wokół długoterminowego trendu wzrostu. Zrozumienie cykli koniunkturalnych pomaga przewidywać warunki gospodarcze i informować decyzje polityczne.\n\n## Kluczowe koncepcje\n\n- **Ekspansja**: Okres wzrostu gospodarczego ze wzrastającym PKB i zatrudnieniem\n- **Szczyt**: Najwyższy punkt aktywności gospodarczej\n- **Skurczenie (Recesja)**: Okres spadku gospodarczego (2+ kwartały ujemnego wzrostu PKB)\n- **Dno**: Najniższy punkt aktywności gospodarczej\n- **Długoterminowy trend**: Wznoszący się nachylenie pokazujące ogólny wzrost gospodarczy\n- **Wahania cykliczne**: Krótkoterminowe wzloty i upadki wokół trendu",
+                  "importantPoints": [
+                    "Cykl koniunkturalny ma cztery fazy: ekspansja, szczyt, skurczenie, dno",
+                    "Recesja jest definiowana jako dwa kolejne kwartały ujemnego wzrostu PKB",
+                    "Realny PKB pokazuje długoterminowy trend wzrostu z wahaniami cyklicznymi",
+                    "Ekspansje charakteryzują się wzrostem, zatrudnieniem i rosnącymi cenami",
+                    "Skurczenia charakteryzują się spadkiem, bezrobociem i spadającymi cenami"
+                  ]
                 },
                 "macroecon-u2-l7-article": {
                   "title": "Poznaj: Cykle koniunkturalne"
@@ -925,7 +1077,15 @@
                   "title": "Popyt zagregowany"
                 },
                 "macroecon-u3-l1-article": {
-                  "title": "Poznaj: Popyt zagregowany"
+                  "title": "Poznaj: Popyt zagregowany",
+                  "content": "# Popyt zagregowany\n\n## Popyt zagregowany\n\n**Popyt zagregowany (AD)** to całkowita ilość dóbr i usług, którą gospodarstwa domowe, przedsiębiorstwa, rząd i zagraniczni nabywcy są gotowi i zdolni zakupić przy różnych poziomach cen.\n\nKrzywa AD pokazuje związek między poziomem cen a ilością realnego PKB, na który jest popyt.\n\n**Komponenty AD** (te same co PKB):\n- **C**: Wydatki konsumpcyjne gospodarstw domowych\n- **I**: Wydatki inwestycyjne przedsiębiorstw\n- **G**: Wydatki rządowe na dobra i usługi\n- **X - M**: Eksport netto (eksport minus import)\n\nAD = C + I + G + (X - M)\n\nKrzywa AD opada, ponieważ:\n1. **Efekt bogactwa**: Wyższe ceny zmniejszają realne bogactwo, zmniejszając konsumpcję\n2. **Efekt stopy procentowej**: Wyższe ceny zwiększają popyt na pieniądz, podnosząc stopy procentowe, zmniejszając inwestycje\n3. **Efekt handlu zagranicznego**: Wyższe ceny krajowe czynią eksport droższym, a import tańszym, zmniejszając eksport netto\n\n## Przesunięcia popytu zagregowanego\n\nKrzywa AD przesuwa się, gdy zmieniają się czynniki inne niż poziom cen:\n\n**Czynniki zwiększające AD (przesunięcie w prawo)**:\n- Wzrost konsumpcji (wyższy dochód, bogactwo, zaufanie)\n- Wzrost inwestycji (niższe stopy procentowe, optymistyczne oczekiwania)\n- Wzrost wydatków rządowych\n- Wzrost eksportu netto (słabsza waluta, wzrost dochodów zagranicznych)\n- Ekspansywna polityka monetarna (obniża stopy procentowe)\n- Ekspansywna polityka fiskalna (zwiększa wydatki lub obniża podatki)\n\n**Czynniki zmniejszające AD (przesunięcie w lewo)**:\n- Spadek konsumpcji\n- Spadek inwestycji\n- Spadek wydatków rządowych\n- Spadek eksportu netto\n- Restrykcyjna polityka monetarna\n- Restrykcyjna polityka fiskalna\n\n## Podsumowanie lekcji: Popyt zagregowany\n\nPopyt zagregowany pokazuje całkowite wydatki przy różnych poziomach cen. AD = C + I + G + (X - M). Krzywa AD opada z powodu efektów bogactwa, stopy procentowej i handlu zagranicznego. Krzywa przesuwa się, gdy konsumpcja, inwestycje, wydatki rządowe lub eksport netto zmieniają się z powodów innych niż poziom cen.",
+                  "importantPoints": [
+                    "Popyt zagregowany to całkowite wydatki na dobra i usługi przy różnych poziomach cen",
+                    "AD = C + I + G + (X - M)",
+                    "Krzywa AD opada z powodu efektów bogactwa, stopy procentowej i handlu zagranicznego",
+                    "AD przesuwa się, gdy komponenty zmieniają się z powodów innych niż poziom cen",
+                    "Polityka ekspansywna przesuwa AD w prawo; polityka restrykcyjna przesuwa AD w lewo"
+                  ]
                 },
                 "macroecon-u3-l1-practice": {
                   "title": "Praktyka: Popyt zagregowany"
@@ -942,7 +1102,15 @@
                   "title": "Mnożniki"
                 },
                 "macroecon-u3-l2-article": {
-                  "title": "Poznaj: Mnożniki"
+                  "title": "Poznaj: Mnożniki",
+                  "content": "# Mnożniki\n\n## KPP i mnożnik\n\n**Krańcowa skłonność do konsumpcji (KPP)** to część dodatkowego dochodu, która jest wydawana na konsumpcję.\n\nKPP = Zmiana konsumpcji / Zmiana dochodu\n\n**Krańcowa skłonność do oszczędzania (KSO)** to część dodatkowego dochodu, która jest oszczędzana.\n\nKSO = Zmiana oszczędności / Zmiana dochodu\n\nKPP + KSO = 1 (cały dodatkowy dochód jest albo konsumowany, albo oszczędzany)\n\n**Efekt mnożnikowy** pokazuje, jak początkowa zmiana wydatków prowadzi do większej zmiany PKB.\n\n**Mnożnik wydatków** = 1 / (1 - KPP) = 1 / KSO\n\nMnożnik działa, ponieważ:\n1. Początkowe wydatki zwiększają dochód\n2. Odbiorcy wydają część tego dochodu (na podstawie KPP)\n3. Te wydatki stają się dochodem dla innych\n4. Proces trwa, tworząc reakcję łańcuchową\n\nPrzykład: Jeśli KPP = 0,8, to mnożnik = 1 / (1 - 0,8) = 1 / 0,2 = 5\nWzrost wydatków o $100 prowadzi do wzrostu PKB o $500.\n\n## Wersja matematyczna KPP i mnożnika (opcjonalnie)\n\nMnożnik wydatków może być wyprowadzony matematycznie:\n\nMnożnik = 1 / (1 - KPP)\n\nTo wynika z nieskończonego szeregu geometrycznego:\n1 + KPP + KPP² + KPP³ + ... = 1 / (1 - KPP)\n\nKażda runda wydatków staje się mniejsza (pomnożona przez KPP), ale całkowity efekt to suma wszystkich rund.\n\n## Mnożnik podatkowy, KPP i KSO\n\n**Mnożnik podatkowy** pokazuje efekt zmiany podatków na PKB.\n\nMnożnik podatkowy = -KPP / (1 - KPP) = -KPP / KSO\n\nMnożnik podatkowy jest:\n- Ujemny (podatki zmniejszają PKB)\n- Mniejszy w wartości bezwzględnej niż mnożnik wydatków (ponieważ podatki wpływają na dochód do dyspozycji, a nie na bezpośrednie wydatki)\n\nPrzykład: Jeśli KPP = 0,8, mnożnik podatkowy = -0,8 / 0,2 = -4\nObniżka podatków o $100 prowadzi do wzrostu PKB o $400.\n\n**Mnożnik zrównoważonego budżetu**: Gdy wydatki rządowe i podatki rosną o tę samą kwotę, efekt netto na PKB równa się zmianie wydatków (mnożnik = 1).\n\n## Podsumowanie lekcji: Mnożniki wydatków i podatków\n\nKPP to część dodatkowego dochodu, która jest wydawana. Mnożnik wydatków = 1 / (1 - KPP) pokazuje, jak początkowe zmiany wydatków są wzmacniane. Mnożnik podatkowy = -KPP / (1 - KPP) jest mniejszy i ujemny. Mnożniki wyjaśniają, jak małe zmiany polityki mogą mieć duże efekty gospodarcze.",
+                  "importantPoints": [
+                    "KPP to część dodatkowego dochodu wydawana na konsumpcję",
+                    "Mnożnik wydatków = 1 / (1 - KPP) = 1 / KSO",
+                    "Mnożnik podatkowy = -KPP / (1 - KPP)",
+                    "Mnożnik podatkowy jest mniejszy niż mnożnik wydatków",
+                    "Mnożniki pokazują, jak zmiany wydatków są wzmacniane przez gospodarkę"
+                  ]
                 },
                 "macroecon-u3-l2-practice": {
                   "title": "Praktyka: Mnożniki wydatków i podatków"
@@ -976,7 +1144,15 @@
                   "title": "Długoterminowa podaż zagregowana"
                 },
                 "macroecon-u3-l4-article": {
-                  "title": "Poznaj: Długoterminowa podaż zagregowana"
+                  "title": "Poznaj: Długoterminowa podaż zagregowana",
+                  "content": "# Długoterminowa podaż zagregowana\n\n## Długoterminowa podaż zagregowana\n\n**Długoterminowa podaż zagregowana (LRAS)** pokazuje całkowitą ilość dóbr i usług, którą można wyprodukować, gdy wszystkie zasoby są w pełni wykorzystane i wszystkie ceny (w tym płace) w pełni się dostosowały.\n\nKrzywa LRAS jest pionowa, ponieważ:\n- W długim okresie wszystkie ceny i płace są elastyczne\n- Zmiany poziomu cen nie wpływają na realną produkcję\n- Produkcja jest określana przez dostępne zasoby (praca, kapitał, technologia), a nie poziom cen\n- Gospodarka produkuje na poziomie potencjalnej produkcji (pełne zatrudnienie)\n\n**Potencjalny PKB** (lub PKB przy pełnym zatrudnieniu) to poziom produkcji, gdy:\n- Wszystkie zasoby są w pełni wykorzystane\n- Bezrobocie jest na naturalnym poziomie\n- Gospodarka działa na pełną moc\n\n## Przesunięcia długoterminowej podaży zagregowanej\n\nLRAS przesuwa się, gdy zmienia się zdolność produkcyjna gospodarki:\n\n**Czynniki zwiększające LRAS (przesunięcie w prawo)**:\n- Wzrost ilości pracy (wzrost populacji, imigracja)\n- Wzrost ilości kapitału (inwestycje, akumulacja kapitału)\n- Poprawa technologii\n- Wzrost kapitału ludzkiego (edukacja, szkolenia)\n- Odkrycie nowych zasobów\n- Poprawa instytucjonalna (lepsze prawa własności, mniej korupcji)\n\n**Czynniki zmniejszające LRAS (przesunięcie w lewo)**:\n- Spadek ilości pracy\n- Spadek ilości kapitału (amortyzacja, wojna)\n- Spadek technologii (rzadko)\n- Spadek kapitału ludzkiego\n- Wyczerpywanie zasobów\n- Pogorszenie instytucjonalne\n\n## Podsumowanie lekcji: Długoterminowa podaż zagregowana\n\nKrzywa LRAS jest pionowa na poziomie potencjalnego PKB, ponieważ w długim okresie wszystkie ceny się dostosowują, a produkcja zależy tylko od dostępnych zasobów. LRAS reprezentuje zdolność produkcyjną gospodarki. Przesuwa się, gdy zmieniają się zasoby, technologia lub instytucje.",
+                  "importantPoints": [
+                    "LRAS jest pionowa na poziomie potencjalnego PKB",
+                    "W długim okresie wszystkie ceny i płace są elastyczne",
+                    "Poziom cen nie wpływa na realną produkcję w długim okresie",
+                    "LRAS reprezentuje zdolność produkcyjną gospodarki",
+                    "LRAS przesuwa się, gdy zmieniają się zasoby, technologia lub instytucje"
+                  ]
                 },
                 "macroecon-u3-l4-practice": {
                   "title": "Praktyka: Długoterminowa podaż zagregowana"
@@ -993,7 +1169,15 @@
                   "title": "Równowaga w modelu AD-AS"
                 },
                 "macroecon-u3-l5-article": {
-                  "title": "Poznaj: Równowaga w modelu AD-AS"
+                  "title": "Poznaj: Równowaga w modelu AD-AS",
+                  "content": "# Równowaga w modelu AD-AS\n\n## Równowaga krótkookresowa i długookresowa oraz cykl koniunkturalny\n\n**Równowaga krótkookresowa** występuje tam, gdzie AD przecina SRAS. To określa:\n- Poziom cen\n- Realny PKB\n- Poziom zatrudnienia\n\nGospodarka może być:\n- **Przy pełnym zatrudnieniu**: AD przecina SRAS na poziomie potencjalnego PKB\n- **W luce recesyjnej**: Faktyczny PKB < Potencjalny PKB (bezrobocie powyżej naturalnego poziomu)\n- **W luce inflacyjnej**: Faktyczny PKB > Potencjalny PKB (bezrobocie poniżej naturalnego poziomu)\n\n**Równowaga długookresowa** występuje tam, gdzie AD, SRAS i LRAS wszystkie się przecinają. W tym punkcie:\n- Gospodarka jest na poziomie potencjalnego PKB\n- Bezrobocie jest na naturalnym poziomie\n- Wszystkie ceny w pełni się dostosowały\n- Brak presji na dalsze zmiany cen\n\nCykl koniunkturalny odzwierciedla ruchy między równowagą krótkookresową i długookresową.\n\n## Krzywe popytu zagregowanego i podaży zagregowanej\n\n**Model AD-AS** łączy:\n- **Krzywa AD**: Opadająca, pokazuje całkowite wydatki\n- **Krzywa SRAS**: Wznosząca się, pokazuje produkcję krótkookresową\n- **Krzywa LRAS**: Pionowa, pokazuje potencjalną produkcję\n\nRazem te krzywe określają:\n- Równowagowy poziom cen\n- Równowagowy realny PKB\n- Czy gospodarka jest na, powyżej czy poniżej poziomu potencjalnego\n\n## Interpretacja modelu popytu zagregowanego/podaży zagregowanej\n\n**Gdy AD przecina SRAS na lewo od LRAS**:\n- Luka recesyjna\n- Faktyczny PKB < Potencjalny PKB\n- Bezrobocie > Naturalny poziom\n- Presja w dół na ceny\n\n**Gdy AD przecina SRAS na prawo od LRAS**:\n- Luka inflacyjna\n- Faktyczny PKB > Potencjalny PKB\n- Bezrobocie < Naturalny poziom\n- Presja w górę na ceny\n\n**Gdy AD przecina SRAS na LRAS**:\n- Równowaga długookresowa\n- Faktyczny PKB = Potencjalny PKB\n- Bezrobocie = Naturalny poziom\n- Stabilne ceny\n\n## Podsumowanie lekcji: Równowaga w modelu AD-AS\n\nRównowaga krótkookresowa to miejsce, gdzie AD przecina SRAS. Równowaga długookresowa to miejsce, gdzie wszystkie trzy krzywe się przecinają. Gospodarka może być w luce recesyjnej (poniżej potencjalnego), luce inflacyjnej (powyżej potencjalnego) lub przy pełnym zatrudnieniu. Model pokazuje, jak określane są poziom cen i produkcja.",
+                  "importantPoints": [
+                    "Równowaga krótkookresowa to miejsce, gdzie AD przecina SRAS",
+                    "Równowaga długookresowa to miejsce, gdzie AD, SRAS i LRAS wszystkie się przecinają",
+                    "Luka recesyjna: Faktyczny PKB < Potencjalny PKB",
+                    "Luka inflacyjna: Faktyczny PKB > Potencjalny PKB",
+                    "Równowaga długookresowa występuje na poziomie potencjalnego PKB z naturalnym bezrobociem"
+                  ]
                 },
                 "macroecon-u3-l5-practice": {
                   "title": "Praktyka: Równowaga w modelu AD-AS"
@@ -1010,7 +1194,15 @@
                   "title": "Zmiany w modelu AD-AS w krótkim okresie"
                 },
                 "macroecon-u3-l6-article": {
-                  "title": "Poznaj: Zmiany w modelu AD-AS w krótkim okresie"
+                  "title": "Poznaj: Zmiany w modelu AD-AS w krótkim okresie",
+                  "content": "# Zmiany w modelu AD-AS w krótkim okresie\n\n## Przesunięcia popytu zagregowanego\n\nGdy AD przesuwa się:\n- **AD rośnie (przesunięcie w prawo)**: Wyższy poziom cen, wyższy realny PKB\n- **AD maleje (przesunięcie w lewo)**: Niższy poziom cen, niższy realny PKB\n\nW krótkim okresie przesunięcia AD powodują zmianę zarówno ceny, jak i produkcji w tym samym kierunku.\n\n## Inflacja ciągniona przez popyt za Johnsona\n\n**Inflacja ciągniona przez popyt** występuje, gdy popyt zagregowany rośnie szybciej niż podaż zagregowana, podciągając ceny w górę.\n\nPrzykład: Podczas administracji Johnsona (lata 60.) zwiększone wydatki rządowe (wojna w Wietnamie, programy Wielkiego Społeczeństwa) zwiększyły AD, prowadząc do inflacji, podczas gdy gospodarka była już bliska pełnego zatrudnienia.\n\nTo pokazuje, jak ekspansywna polityka fiskalna może powodować inflację, gdy gospodarka jest już na pełnej mocy lub bliska tego.\n\n## Realny PKB napędzający cenę\n\nW krótkim okresie zmiany realnego PKB (produkcji) mogą napędzać zmiany poziomu cen:\n- Gdy produkcja rośnie ponad potencjalną, firmy napotykają ograniczenia mocy\n- Podnoszą ceny, aby racjonować ograniczoną produkcję\n- To tworzy presję w górę na ceny\n\nZależność między produkcją a cenami zależy od tego, gdzie gospodarka znajduje się względem potencjalnego PKB.\n\n## Inflacja pchana przez koszty\n\n**Inflacja pchana przez koszty** (inflacja po stronie podaży) występuje, gdy podaż zagregowana maleje, pchając ceny w górę, podczas gdy produkcja spada.\n\nPrzyczyny:\n- Wzrost cen nakładów (ropa, płace, surowce)\n- Niekorzystne szoki podażowe\n- Wzrost kosztów produkcji\n\nRezultat: Wyższy poziom cen, niższy realny PKB (stagflacja)\n\nPrzykład: Szoki cen ropy z lat 70. zwiększyły koszty produkcji, przesuwając SRAS w lewo, powodując zarówno inflację, jak i recesję.\n\n## Przesunięcia podaży zagregowanej\n\nGdy SRAS przesuwa się:\n- **SRAS rośnie (przesunięcie w prawo)**: Niższy poziom cen, wyższy realny PKB\n- **SRAS maleje (przesunięcie w lewo)**: Wyższy poziom cen, niższy realny PKB\n\nPrzesunięcia podaży powodują ruch ceny i produkcji w przeciwnych kierunkach.\n\n## Przesunięcia w modelu AD/AS\n\nPołączone efekty, gdy zarówno AD, jak i SRAS przesuwają się:\n\n**Oba rosną**:\n- Produkcja zdecydowanie rośnie\n- Zmiana ceny jest niejednoznaczna\n\n**Oba maleją**:\n- Produkcja zdecydowanie maleje\n- Zmiana ceny jest niejednoznaczna\n\n**AD rośnie, SRAS maleje**:\n- Cena zdecydowanie rośnie\n- Zmiana produkcji jest niejednoznaczna\n\n**AD maleje, SRAS rośnie**:\n- Cena zdecydowanie maleje\n- Zmiana produkcji jest niejednoznaczna\n\n## Jak model AD/AS uwzględnia wzrost, bezrobocie i inflację\n\n**Wzrost gospodarczy**: Pokazany przesunięciem LRAS w prawo (wzrost potencjalnego PKB)\n\n**Bezrobocie**:\n- Powyżej naturalnego poziomu, gdy faktyczny PKB < potencjalny PKB\n- Poniżej naturalnego poziomu, gdy faktyczny PKB > potencjalny PKB\n\n**Inflacja**:\n- Ciągniona przez popyt: AD rośnie szybciej niż SRAS\n- Pchana przez koszty: SRAS maleje\n- Występuje, gdy faktyczny PKB > potencjalny PKB (luka inflacyjna)\n\nModel pokazuje, jak te zmienne makroekonomiczne są ze sobą powiązane.\n\n## Podsumowanie lekcji: Zmiany w modelu AD-AS w krótkim okresie\n\nPrzesunięcia AD zmieniają zarówno cenę, jak i produkcję w tym samym kierunku. Przesunięcia SRAS zmieniają cenę i produkcję w przeciwnych kierunkach. Inflacja ciągniona przez popyt występuje, gdy AD rośnie; inflacja pchana przez koszty występuje, gdy SRAS maleje. Model pokazuje, jak wzrost, bezrobocie i inflacja są określane przez interakcje AD i AS.",
+                  "importantPoints": [
+                    "Przesunięcia AD zmieniają cenę i produkcję w tym samym kierunku",
+                    "Przesunięcia SRAS zmieniają cenę i produkcję w przeciwnych kierunkach",
+                    "Inflacja ciągniona przez popyt: AD rośnie szybciej niż podaż",
+                    "Inflacja pchana przez koszty: SRAS maleje (szok podażowy)",
+                    "Model pokazuje, jak wzrost, bezrobocie i inflacja są ze sobą powiązane"
+                  ]
                 },
                 "macroecon-u3-l6-practice": {
                   "title": "Praktyka: Zmiany w modelu AD-AS w krótkim okresie"
@@ -1027,7 +1219,15 @@
                   "title": "Długoterminowa samoregulacja"
                 },
                 "macroecon-u3-l7-article": {
-                  "title": "Poznaj: Długoterminowa samoregulacja"
+                  "title": "Poznaj: Długoterminowa samoregulacja",
+                  "content": "# Długoterminowa samoregulacja\n\n## Długoterminowa samoregulacja\n\n**Długoterminowa samoregulacja** to proces, w którym gospodarka automatycznie wraca do potencjalnego PKB bez interwencji rządu.\n\n**Korekta luki recesyjnej**:\n1. Faktyczny PKB < Potencjalny PKB (bezrobocie > naturalny poziom)\n2. Wysokie bezrobocie wywiera presję w dół na płace\n3. Niższe płace zmniejszają koszty produkcji\n4. SRAS przesuwa się w prawo\n5. Poziom cen spada, produkcja rośnie\n6. Gospodarka wraca do potencjalnego PKB\n\n**Korekta luki inflacyjnej**:\n1. Faktyczny PKB > Potencjalny PKB (bezrobocie < naturalny poziom)\n2. Niskie bezrobocie wywiera presję w górę na płace\n3. Wyższe płace zwiększają koszty produkcji\n4. SRAS przesuwa się w lewo\n5. Poziom cen rośnie, produkcja maleje\n6. Gospodarka wraca do potencjalnego PKB\n\n**Kluczowe założenie**: Płace i ceny są elastyczne w długim okresie, umożliwiając automatyczną korektę.\n\n## Szybkość korekty\n\nSzybkość samoregulacji zależy od:\n- Jak szybko dostosowują się płace i ceny\n- Elastyczności rynku pracy\n- Oczekiwań pracowników i firm\n- Czynników instytucjonalnych\n\nW rzeczywistości korekta może być wolna, dlatego rządy często używają polityki fiskalnej i monetarnej, aby przyspieszyć proces.\n\n## Podsumowanie lekcji: Długoterminowa samoregulacja w modelu AD-AS\n\nGospodarka samoreguluje się do potencjalnego PKB w długim okresie. Luki recesyjne prowadzą do spadku płac i cen, przesuwając SRAS w prawo. Luki inflacyjne prowadzą do wzrostu płac i cen, przesuwając SRAS w lewo. To zakłada elastyczne płace i ceny. Korekta może być wolna, uzasadniając interwencję polityczną.",
+                  "importantPoints": [
+                    "Gospodarka automatycznie wraca do potencjalnego PKB w długim okresie",
+                    "Luki recesyjne powodują spadek płac/cen, przesuwając SRAS w prawo",
+                    "Luki inflacyjne powodują wzrost płac/cen, przesuwając SRAS w lewo",
+                    "Samoregulacja zakłada elastyczne płace i ceny",
+                    "Korekta może być wolna, uzasadniając interwencję polityczną"
+                  ]
                 },
                 "macroecon-u3-l7-practice": {
                   "title": "Praktyka: Długoterminowa samoregulacja w modelu AD-AS"
@@ -1044,7 +1244,15 @@
                   "title": "Polityka fiskalna"
                 },
                 "macroecon-u3-l8-article": {
-                  "title": "Poznaj: Polityka fiskalna"
+                  "title": "Poznaj: Polityka fiskalna",
+                  "content": "# Polityka fiskalna\n\n## Polityka fiskalna do rozwiązania luk produkcyjnych\n\n**Polityka fiskalna** to wykorzystanie wydatków rządowych i opodatkowania do wpływania na gospodarkę.\n\n**Ekspansywna polityka fiskalna** (aby zamknąć lukę recesyjną):\n- Zwiększenie wydatków rządowych\n- Obniżenie podatków\n- Oba zwiększają popyt zagregowany\n- Przesuwają AD w prawo, zwiększając produkcję i poziom cen\n\n**Restrykcyjna polityka fiskalna** (aby zamknąć lukę inflacyjną):\n- Zmniejszenie wydatków rządowych\n- Zwiększenie podatków\n- Oba zmniejszają popyt zagregowany\n- Przesuwają AD w lewo, zmniejszając produkcję i poziom cen\n\n## Obliczanie zmiany wydatków lub podatków w celu zamknięcia luk produkcyjnych\n\nAby zamknąć lukę recesyjną:\n- Oblicz lukę produkcyjną: Potencjalny PKB - Faktyczny PKB\n- Określ wymaganą zmianę AD\n- Użyj mnożnika, aby znaleźć wymaganą zmianę wydatków lub podatków\n\n**Używając mnożnika wydatków**:\nWymagana zmiana wydatków = Luka produkcyjna / Mnożnik wydatków\n\n**Używając mnożnika podatkowego**:\nWymagana zmiana podatków = Luka produkcyjna / |Mnożnik podatkowy|\n\nUwaga: Zmiany podatków mają przeciwny znak (obniż podatki, aby zwiększyć AD).\n\nPrzykład: Luka produkcyjna = $500 mld, KPP = 0,8\n- Mnożnik wydatków = 5\n- Wymagany wzrost wydatków = $500 / 5 = $100 mld\n- Mnożnik podatkowy = -4\n- Wymagana obniżka podatków = $500 / 4 = $125 mld\n\n## Dźwignia podatkowa polityki fiskalnej\n\nPodatki wpływają na gospodarkę poprzez:\n1. **Bezpośredni efekt na dochód do dyspozycji**: Niższe podatki zwiększają dochód do dyspozycji, zwiększając konsumpcję\n2. **Efekt mnożnikowy**: Początkowy wzrost konsumpcji prowadzi do dalszych wydatków\n3. **Efekty zachęty**: Niższe podatki mogą zachęcać do pracy i inwestycji\n\n**Obniżki podatków a wzrost wydatków**:\n- Oba zwiększają AD\n- Wzrost wydatków ma większy natychmiastowy wpływ (większy mnożnik)\n- Obniżki podatków mogą być oszczędzane (zmniejszając efekt mnożnikowy)\n- Obniżki podatków mogą mieć korzyści po stronie podaży (zachęcać do pracy/inwestycji)\n\n## Podsumowanie lekcji: Polityka fiskalna\n\nPolityka fiskalna wykorzystuje wydatki rządowe i podatki do wpływania na AD. Polityka ekspansywna zwiększa AD, aby zamknąć luki recesyjne; polityka restrykcyjna zmniejsza AD, aby zamknąć luki inflacyjne. Wymagana zmiana polityki zależy od luki produkcyjnej i mnożnika. Zarówno zmiany wydatków, jak i zmiany podatków mogą być skuteczne, z różnymi kompromisami.",
+                  "importantPoints": [
+                    "Polityka fiskalna wykorzystuje wydatki rządowe i podatki do wpływania na AD",
+                    "Polityka ekspansywna zwiększa AD; polityka restrykcyjna zmniejsza AD",
+                    "Wymagana zmiana = Luka produkcyjna / Mnożnik",
+                    "Mnożnik wydatków jest większy niż mnożnik podatkowy",
+                    "Obniżki podatków i wzrost wydatków wpływają na AD, ale mają różne efekty"
+                  ]
                 },
                 "macroecon-u3-l8-practice": {
                   "title": "Praktyka: Polityka fiskalna"
@@ -1061,7 +1269,15 @@
                   "title": "Automatyczne stabilizatory"
                 },
                 "macroecon-u3-l9-article": {
-                  "title": "Poznaj: Automatyczne stabilizatory"
+                  "title": "Poznaj: Automatyczne stabilizatory",
+                  "content": "# Automatyczne stabilizatory\n\n## Automatyczne stabilizatory\n\n**Automatyczne stabilizatory** to programy rządowe, które automatycznie zwiększają wydatki lub zmniejszają podatki podczas spadków gospodarczych oraz zmniejszają wydatki lub zwiększają podatki podczas wzrostów gospodarczych, bez wyraźnych działań legislacyjnych.\n\n**Jak działają**:\n- Podczas recesji: Automatycznie zwiększają płatności transferowe i zmniejszają pobór podatków\n- Podczas wzrostów: Automatycznie zmniejszają płatności transferowe i zwiększają pobór podatków\n- Automatycznie stabilizują gospodarkę\n\n**Przykłady automatycznych stabilizatorów**:\n\n1. **Ubezpieczenie od bezrobocia**:\n   - Recesja: Więcej bezrobotnych → Więcej świadczeń → Zwiększa AD\n   - Wzrost: Mniej bezrobotnych → Mniej świadczeń → Zmniejsza AD\n\n2. **Progresywne podatki dochodowe**:\n   - Recesja: Dochody spadają → Ludzie przechodzą do niższych przedziałów podatkowych → Wpływy podatkowe spadają → Zwiększa dochód do dyspozycji\n   - Wzrost: Dochody rosną → Ludzie przechodzą do wyższych przedziałów podatkowych → Wpływy podatkowe rosną → Zmniejsza dochód do dyspozycji\n\n3. **Programy pomocy społecznej** (karty żywnościowe, Medicaid):\n   - Recesja: Więcej ludzi się kwalifikuje → Więcej wydatków → Zwiększa AD\n   - Wzrost: Mniej ludzi się kwalifikuje → Mniej wydatków → Zmniejsza AD\n\n4. **Podatki korporacyjne**:\n   - Recesja: Zyski spadają → Wpływy podatkowe spadają → Zwiększa zyski po opodatkowaniu (nieznacznie)\n   - Wzrost: Zyski rosną → Wpływy podatkowe rosną → Zmniejsza zyski po opodatkowaniu\n\n## Zalety automatycznych stabilizatorów\n\n- **Terminowość**: Działają natychmiast, bez opóźnień legislacyjnych\n- **Automatyczność**: Nie wymagają decyzji politycznych\n- **Przeciwcykliczne**: Automatycznie kompensują wahania gospodarcze\n- **Zmniejszają zmienność**: Wygładzają cykle koniunkturalne\n\n## Ograniczenia\n\n- **Mogą być niewystarczające**: Mogą nie w pełni zamknąć duże luki produkcyjne\n- **Mogą tworzyć deficyty**: Automatyczny wzrost wydatków podczas recesji\n- **Brak precyzyjnego dostrojenia**: Nie mogą celować w konkretne problemy\n\n## Podsumowanie lekcji: Automatyczne stabilizatory\n\nAutomatyczne stabilizatory to programy rządowe, które automatycznie stabilizują gospodarkę bez wyraźnych działań. Zwiększają wydatki/zmniejszają podatki podczas recesji oraz zmniejszają wydatki/zwiększają podatki podczas wzrostów. Przykłady obejmują ubezpieczenie od bezrobocia, progresywne podatki i programy pomocy społecznej. Zapewniają terminowe, automatyczne efekty przeciwcykliczne, ale mogą być niewystarczające dla dużych problemów gospodarczych.",
+                  "importantPoints": [
+                    "Automatyczne stabilizatory działają bez wyraźnych działań legislacyjnych",
+                    "Zwiększają wydatki/zmniejszają podatki podczas recesji",
+                    "Zmniejszają wydatki/zwiększają podatki podczas wzrostów",
+                    "Przykłady: ubezpieczenie od bezrobocia, progresywne podatki, pomoc społeczna",
+                    "Zapewniają terminowe, automatyczne efekty przeciwcykliczne"
+                  ]
                 },
                 "macroecon-u3-l9-practice": {
                   "title": "Praktyka: Automatyczne stabilizatory"
@@ -1084,7 +1300,15 @@
                   "title": "Aktywa finansowe"
                 },
                 "macroecon-u4-l1-article": {
-                  "title": "Poznaj: Aktywa finansowe"
+                  "title": "Poznaj: Aktywa finansowe",
+                  "content": "# Aktywa finansowe\n\n## Wprowadzenie do odsetek\n\n**Odsetki** to cena płacona za pożyczenie pieniędzy lub zwrot zarobiony na pożyczeniu pieniędzy.\n\n**Stopa procentowa** jest wyrażona jako procent kwoty głównej (pożyczonej/pożyczonej kwoty) na okres.\n\nKluczowe koncepcje:\n- **Kwota główna**: Oryginalna kwota pożyczona lub zainwestowana\n- **Odsetki**: Koszt pożyczki lub zwrot z pożyczki\n- **Odsetki proste**: Odsetki obliczane tylko od kwoty głównej\n- **Odsetki składane**: Odsetki obliczane od kwoty głównej plus naliczone odsetki\n\nStopy procentowe odzwierciedlają:\n- Wartość czasową pieniądza (pieniądze dzisiaj są warte więcej niż pieniądze jutro)\n- Ryzyko (wyższe ryzyko = wyższa stopa procentowa)\n- Oczekiwania inflacyjne\n- Podaż i popyt na środki pożyczkowe\n\n## Wprowadzenie do obligacji\n\n**Obligacja** to instrument dłużny, w którym inwestor pożycza pieniądze podmiotowi (rządowi, korporacji) na określony okres po stałej lub zmiennej stopie procentowej.\n\n**Charakterystyka obligacji**:\n- **Wartość nominalna (wartość par)**: Kwota zwrócona w terminie zapadalności\n- **Stopa kuponowa**: Roczna płatność odsetkowa jako procent wartości nominalnej\n- **Data zapadalności**: Kiedy obligacja jest zwracana\n- **Emitent**: Podmiot pożyczający pieniądze\n\n**Typy obligacji**:\n- **Obligacje rządowe**: Emitowane przez rządy (obligacje skarbowe, obligacje komunalne)\n- **Obligacje korporacyjne**: Emitowane przez korporacje\n- **Obligacje zerokuponowe**: Bez okresowych odsetek, sprzedawane z dyskontem\n\n## Związek między cenami obligacji a stopami procentowymi\n\n**Zależność odwrotna**: Ceny obligacji i stopy procentowe poruszają się w przeciwnych kierunkach.\n\nGdy stopy procentowe rosną:\n- Istniejące obligacje z niższymi stopami kuponowymi stają się mniej atrakcyjne\n- Ceny obligacji spadają, aby uczynić je konkurencyjnymi z nowymi obligacjami\n\nGdy stopy procentowe spadają:\n- Istniejące obligacje z wyższymi stopami kuponowymi stają się bardziej atrakcyjne\n- Ceny obligacji rosną\n\n**Przykład**: Obligacja płacąca 5% odsetek staje się mniej wartościowa, gdy nowe obligacje płacą 7%. Jej cena musi spaść, aby dać 7% nowym nabywcom.\n\n## Co oznacza kupno akcji firmy\n\n**Akcja** (udział) reprezentuje własność w korporacji.\n\n**Własność akcji**:\n- **Kapitał własny**: Udział we własności firmy\n- **Dywidendy**: Część zysków firmy wypłacana akcjonariuszom (jeśli ogłoszona)\n- **Zyski kapitałowe**: Zysk ze sprzedaży akcji po wyższej cenie niż zakupiona\n- **Prawo głosu**: Prawo do głosowania w sprawach korporacyjnych (dla akcji zwykłych)\n\n**Charakterystyka akcji**:\n- **Akcje zwykłe**: Prawo głosu, zmienne dywidendy\n- **Akcje uprzywilejowane**: Stałe dywidendy, priorytet w likwidacji, zwykle bez prawa głosu\n- **Cena akcji**: Określana przez podaż i popyt na rynku akcji\n- **Kapitalizacja rynkowa**: Całkowita wartość wszystkich akcji firmy\n\n## Obligacje a akcje\n\n**Obligacje**:\n- Instrument dłużny (pożyczka)\n- Stałe płatności odsetkowe\n- Zwrot kwoty głównej w terminie zapadalności\n- Niższe ryzyko (jeśli emitent jest wiarygodny)\n- Wierzyciele mają priorytet w bankructwie\n- Brak udziału we własności\n\n**Akcje**:\n- Instrument kapitałowy (własność)\n- Zmienne dywidendy (lub ich brak)\n- Brak daty zapadalności\n- Wyższe ryzyko i potencjalny zwrot\n- Akcjonariusze są pozostałymi roszczeniami\n- Udział we własności z prawem głosu\n\n**Kluczowe różnice**:\n- Obligacje = pożyczanie pieniędzy; Akcje = posiadanie części firmy\n- Obligacje = stałe zwroty; Akcje = zmienne zwroty\n- Obligacje = niższe ryzyko; Akcje = wyższe ryzyko\n- Obligacje = priorytet w bankructwie; Akcje = ostatnie w kolejce\n\n## Podsumowanie lekcji: Aktywa finansowe\n\nOdsetki to cena pożyczenia pieniędzy. Obligacje to instrumenty dłużne ze stałymi płatnościami. Ceny obligacji i stopy procentowe poruszają się odwrotnie. Akcje reprezentują własność w firmach ze zmiennymi zwrotami. Obligacje mają niższe ryzyko ze stałymi zwrotami; akcje mają wyższe ryzyko z potencjałem wyższych zwrotów.",
+                  "importantPoints": [
+                    "Odsetki to cena płacona za pożyczenie pieniędzy",
+                    "Obligacje to instrumenty dłużne ze stałymi płatnościami odsetkowymi",
+                    "Ceny obligacji i stopy procentowe poruszają się w przeciwnych kierunkach",
+                    "Akcje reprezentują własność w firmach",
+                    "Obligacje mają niższe ryzyko; akcje mają wyższe ryzyko i potencjalny zwrot"
+                  ]
                 },
                 "macroecon-u4-l1-practice": {
                   "title": "Praktyka: Aktywa finansowe"
@@ -1101,7 +1325,15 @@
                   "title": "Nominalne a realne stopy procentowe"
                 },
                 "macroecon-u4-l2-article": {
-                  "title": "Poznaj: Nominalne a realne stopy procentowe"
+                  "title": "Poznaj: Nominalne a realne stopy procentowe",
+                  "content": "# Nominalne a realne stopy procentowe\n\n## Realny i nominalny zwrot\n\n**Zwrot nominalny** to zwrot z inwestycji bez korekty o inflację. To podana stopa procentowa.\n\n**Zwrot realny** to zwrot skorygowany o inflację. Pokazuje faktyczną siłę nabywczą.\n\nWzór: Zwrot realny = Zwrot nominalny - Stopa inflacji\n\nPrzykład: Jeśli zarabiasz 5% zwrotu nominalnego, a inflacja wynosi 2%, twój zwrot realny wynosi 3%.\n\n## Obliczanie zwrotu realnego w dolarach zeszłego roku\n\nAby obliczyć zwrot realny w kategoriach siły nabywczej zeszłego roku:\n\nZwrot realny = [(1 + Zwrot nominalny) / (1 + Stopa inflacji)] - 1\n\nLub w przybliżeniu: Zwrot realny ≈ Zwrot nominalny - Stopa inflacji\n\nPrzykład:\n- Zwrot nominalny: 6%\n- Inflacja: 3%\n- Zwrot realny = [(1,06) / (1,03)] - 1 = 0,0291 = 2,91%\n\n## Obliczenia odsetek nominalnych, realnych i inflacji\n\n**Stopa procentowa nominalna**: Podana stopa procentowa (nie skorygowana o inflację)\n\n**Stopa procentowa realna**: Stopa procentowa nominalna minus stopa inflacji\n\n**Równanie Fishera**: (1 + Stopa nominalna) = (1 + Stopa realna) × (1 + Stopa inflacji)\n\nDla małych wartości upraszcza się do:\nStopa nominalna ≈ Stopa realna + Stopa inflacji\n\nPrzekształcenie:\nStopa realna ≈ Stopa nominalna - Stopa inflacji\n\n## Związek między zwrotami nominalnymi i realnymi a inflacją\n\n**Kluczowe zależności**:\n- Zwrot realny = Zwrot nominalny - Inflacja\n- Jeśli inflacja > zwrot nominalny, zwrot realny jest ujemny (utrata siły nabywczej)\n- Jeśli inflacja = zwrot nominalny, zwrot realny = 0 (utrzymanie siły nabywczej)\n- Jeśli inflacja < zwrot nominalny, zwrot realny jest dodatni (zysk siły nabywczej)\n\n**Dlaczego to ważne**:\n- Inwestorzy dbają o zwrot realny (siła nabywcza)\n- Pożyczkodawcy muszą pobierać wystarczająco, aby pokryć inflację plus pożądany zwrot realny\n- Pożyczkobiorcy korzystają z inflacji, jeśli stopy nominalne nie dostosowują się w pełni\n\n## Indeksowanie i jego ograniczenia\n\n**Indeksowanie** (indeksowanie inflacyjne) koryguje płatności o inflację, aby utrzymać wartość realną.\n\n**Przykłady**:\n- **TIPS** (Skarbowe papiery wartościowe chronione przed inflacją): Obligacje z kwotą główną skorygowaną o inflację\n- **COLA** (Korekty kosztów utrzymania): Płatności z ubezpieczenia społecznego skorygowane o inflację\n- **Płace indeksowane**: Płace, które automatycznie dostosowują się do inflacji\n\n**Ograniczenia**:\n- Indeks może nie odzwierciedlać faktycznych kosztów utrzymania jednostki\n- Problemy z pomiarem indeksów inflacji\n- Opóźnienie czasowe w korektach\n- Może nie uwzględniać zmian jakości\n\n## Podsumowanie lekcji: Nominalne a realne stopy procentowe\n\nZwrot nominalny to podany zwrot; zwrot realny koryguje o inflację. Zwrot realny = Zwrot nominalny - Inflacja. Równanie Fishera wiąże stopy nominalne, realne i inflacyjne. Zwroty realne mają znaczenie dla siły nabywczej. Indeksowanie koryguje płatności o inflację, ale ma ograniczenia.",
+                  "importantPoints": [
+                    "Zwrot nominalny to podany zwrot; zwrot realny koryguje o inflację",
+                    "Zwrot realny = Zwrot nominalny - Stopa inflacji",
+                    "Zwroty realne pokazują faktyczną siłę nabywczą",
+                    "Równanie Fishera: (1 + Nominalna) = (1 + Realna) × (1 + Inflacja)",
+                    "Indeksowanie koryguje płatności o inflację, ale ma ograniczenia"
+                  ]
                 },
                 "macroecon-u4-l2-practice": {
                   "title": "Praktyka: Nominalne a realne stopy procentowe"
@@ -1118,7 +1350,15 @@
                   "title": "Definicja, pomiar i funkcje pieniądza"
                 },
                 "macroecon-u4-l3-article": {
-                  "title": "Poznaj: Definicja, pomiar i funkcje pieniądza"
+                  "title": "Poznaj: Definicja, pomiar i funkcje pieniądza",
+                  "content": "# Definicja, pomiar i funkcje pieniądza\n\n## Podaż pieniądza: M0, M1 i M2\n\nPodaż pieniądza jest mierzona na różne sposoby:\n\n**M0 (Baza monetarna)**:\n- Waluta w obiegu\n- Rezerwy trzymane przez banki w banku centralnym\n- Najbardziej płynna, najwęższa miara\n\n**M1 (Pieniądz wąski)**:\n- Waluta w obiegu\n- Depozyty czekowe (depozyty na żądanie)\n- Czeki podróżne\n- Najbardziej płynne aktywa używane do transakcji\n\n**M2 (Pieniądz szeroki)**:\n- M1 plus\n- Depozyty oszczędnościowe\n- Małe depozyty terminowe\n- Fundusze rynku pieniężnego\n- Szersza miara obejmująca quasi-pieniądz\n\nM2 > M1 > M0 (każda obejmuje poprzednią plus dodatkowe komponenty)\n\n## Funkcje pieniądza\n\nPieniądz pełni cztery główne funkcje:\n\n1. **Środek wymiany**: Używany do kupna i sprzedaży dóbr i usług\n   - Eliminuje potrzebę barteru\n   - Ułatwia handel\n\n2. **Jednostka rozliczeniowa**: Standardowa miara wartości\n   - Ceny podawane w kategoriach pieniężnych\n   - Pozwala na porównanie wartości\n\n3. **Środek przechowywania wartości**: Przechowuje wartość w czasie\n   - Można oszczędzać pieniądze na przyszłe użycie\n   - Inflacja zmniejsza tę funkcję\n\n4. **Standard odroczonych płatności**: Używany do przyszłych płatności\n   - Kontrakty określają płatności w pieniądzu\n   - Pożyczki spłacane w pieniądzu\n\n## Standard odroczonych płatności i prawny środek płatniczy\n\n**Standard odroczonych płatności**: Pieniądz jest używany do rozliczania długów i dokonywania przyszłych płatności. Kontrakty określają kwoty w kategoriach pieniężnych.\n\n**Prawny środek płatniczy**: Waluta, która musi być przyjęta do zapłaty długów. Rządy deklarują, co jest prawnym środkiem płatniczym.\n\nW USA:\n- Banknoty Rezerwy Federalnej są prawnym środkiem płatniczym\n- Prywatne przedsiębiorstwa mogą odmówić gotówki (z pewnymi wyjątkami)\n- Prawa dotyczące prawnych środków płatniczych zapewniają przyjęcie pieniądza do długów\n\n## Pieniądz towarowy a pieniądz fiducjarny\n\n**Pieniądz towarowy**: Pieniądz, który ma wartość wewnętrzną (wartość jako towar sam w sobie).\n\nPrzykłady:\n- Złote monety (wartość jako złoto)\n- Srebrne monety\n- Papierosy w więzieniach\n\n**Pieniądz fiducjarny**: Pieniądz, który nie ma wartości wewnętrznej, ale jest akceptowany, ponieważ:\n- Rząd deklaruje go prawnym środkiem płatniczym\n- Ludzie ufają, że będzie akceptowany\n- Wspierany zdolnością rządu do opodatkowania\n\nPrzykłady:\n- Współczesna waluta papierowa\n- Waluta cyfrowa\n\nWiększość współczesnych pieniędzy to pieniądz fiducjarny.\n\n## Gdy funkcje pieniądza załamują się: Hiperinflacja\n\nPodczas hiperinflacji pieniądz traci swoje funkcje:\n- **Środek wymiany**: Ludzie odmawiają przyjęcia pieniądza, używają barteru\n- **Jednostka rozliczeniowa**: Ceny zmieniają się zbyt szybko, aby być znaczące\n- **Środek przechowywania wartości**: Pieniądz szybko traci wartość\n- **Standard odroczonych płatności**: Kontrakty stają się bezsensowne\n\nLudzie przechodzą na:\n- Walutę zagraniczną\n- Barter\n- Towary (złoto, żywność)\n\n## Hiperinflacja\n\n**Hiperinflacja** to niezwykle szybka inflacja (zwykle >50% miesięcznie).\n\n**Przyczyny**:\n- Nadmierne drukowanie pieniędzy\n- Utrata zaufania do waluty\n- Deficyty rządowe finansowane drukowaniem pieniędzy\n\n**Efekty**:\n- Pieniądz staje się bezwartościowy\n- Załamanie gospodarcze\n- Niepokoje społeczne\n- Powrót do barteru lub waluty zagranicznej\n\n**Przykłady**:\n- Niemcy (lata 20.): Ceny podwajały się co kilka dni\n- Zimbabwe (lata 2000): Inflacja osiągnęła miliony procent\n- Wenezuela (lata 2010): Hiperinflacja zniszczyła gospodarkę\n\n## Podsumowanie lekcji: Definicja, pomiar i funkcje pieniądza\n\nPodaż pieniądza jest mierzona jako M0, M1 i M2. Pieniądz służy jako środek wymiany, jednostka rozliczeniowa, środek przechowywania wartości i standard odroczonych płatności. Pieniądz towarowy ma wartość wewnętrzną; pieniądz fiducjarny jest akceptowany na mocy dekretu rządowego. Hiperinflacja niszczy funkcje pieniądza, powodując załamanie gospodarcze.",
+                  "importantPoints": [
+                    "Podaż pieniądza mierzona jako M0 (najwęższa), M1 i M2 (najszersza)",
+                    "Pieniądz pełni cztery funkcje: środek wymiany, jednostka rozliczeniowa, środek przechowywania wartości, standard odroczonych płatności",
+                    "Pieniądz towarowy ma wartość wewnętrzną; pieniądz fiducjarny jest wspierany przez rząd",
+                    "Hiperinflacja niszczy funkcje pieniądza",
+                    "Prawny środek płatniczy to waluta, która musi być przyjęta do długów"
+                  ]
                 },
                 "macroecon-u4-l3-practice": {
                   "title": "Praktyka: Definicja, pomiar i funkcje pieniądza"
@@ -1135,7 +1375,15 @@
                   "title": "Bankowość i ekspansja podaży pieniądza"
                 },
                 "macroecon-u4-l4-article": {
-                  "title": "Poznaj: Bankowość i ekspansja podaży pieniądza"
+                  "title": "Poznaj: Bankowość i ekspansja podaży pieniądza",
+                  "content": "# Bankowość i ekspansja podaży pieniądza\n\n## Przegląd bankowości z rezerwami cząstkowymi\n\n**Bankowość z rezerwami cząstkowymi** to system, w którym banki trzymają tylko część depozytów jako rezerwy i pożyczają resztę.\n\n**Kluczowe cechy**:\n- Banki nie trzymają 100% depozytów\n- Rezerwy stanowią część depozytów\n- Banki tworzą pieniądze poprzez pożyczanie\n- System umożliwia ekspansję podaży pieniądza\n\n**Wymagania dotyczące rezerw**: Minimalna część depozytów, którą banki muszą trzymać jako rezerwy (ustawiana przez bank centralny).\n\n## Tworzenie pieniądza w systemie z rezerwami cząstkowymi\n\nBanki tworzą pieniądze poprzez proces pożyczania:\n\n1. Bank otrzymuje depozyt (np. $1000)\n2. Bank trzyma wymagane rezerwy (np. 10% = $100)\n3. Bank pożycza nadwyżkowe rezerwy (np. $900)\n4. Pożyczkobiorca wydaje pożyczkę\n5. Pieniądze trafiają do innego banku\n6. Proces się powtarza\n\n**Mnożnik pieniądza**: Pokazuje, o ile zwiększa się podaż pieniądza z początkowego depozytu.\n\nMnożnik pieniądza = 1 / Wymagania dotyczące rezerw\n\nPrzykład: Jeśli wymagania dotyczące rezerw = 10%, mnożnik = 1 / 0,10 = 10\nDepozyt $1000 może stworzyć do $10,000 w podaży pieniądza.\n\n## Słabości bankowości z rezerwami cząstkowymi\n\n**Problemy**:\n1. **Runy bankowe**: Jeśli wielu deponentów wycofuje się jednocześnie, bank może nie mieć wystarczających rezerw\n2. **Ryzyko płynności**: Banki mogą nie być w stanie sprostać żądaniom wycofania\n3. **Ryzyko kredytowe**: Pożyczkobiorcy mogą nie spłacić pożyczek\n4. **Ryzyko systemowe**: Niepowodzenie jednego banku może wpłynąć na inne\n5. **Ryzyko moralne**: Banki mogą podejmować nadmierne ryzyko, wiedząc, że depozyty są ubezpieczone\n\n**Ochrona**:\n- Ubezpieczenie depozytów (FDIC w USA)\n- Wymagania dotyczące rezerw\n- Bank centralny jako pożyczkodawca ostatniej instancji\n- Regulacje bankowe\n\n## Bankowość z pełnymi rezerwami\n\n**Bankowość z pełnymi rezerwami** wymaga, aby banki trzymały 100% depozytów jako rezerwy.\n\n**Charakterystyka**:\n- Brak tworzenia pieniądza poprzez pożyczanie\n- Banki działają tylko jako bezpieczne przechowalnie\n- Brak ryzyka runów bankowych\n- Mniejszy potencjał kryzysów finansowych\n\n**Wady**:\n- Brak tworzenia kredytu\n- Mniejszy potencjał wzrostu gospodarczego\n- Banki nie mogą zarabiać odsetek na pożyczkach\n- Wyższe koszty bankowe\n\n## Prosta rachunkowość z rezerwami cząstkowymi (część 1)\n\n**Podstawy bilansu banku**:\n\n**Aktywa**:\n- Rezerwy (gotówka + depozyty w banku centralnym)\n- Pożyczki\n- Papiery wartościowe\n\n**Pasywa**:\n- Depozyty\n- Pożyczki\n\n**Kapitał własny**:\n- Kapitał (aktywa - pasywa)\n\nGdy bank udziela pożyczki:\n- Aktywa rosną (pożyczka)\n- Pasywa rosną (utworzony depozyt)\n\n## Prosta rachunkowość z rezerwami cząstkowymi (część 2)\n\n**Przykład**: Bank otrzymuje depozyt $1000, wymagania dotyczące rezerw = 10%\n\n**Początkowy stan**:\n- Aktywa: Rezerwy $1000\n- Pasywa: Depozyty $1000\n\n**Po udzieleniu pożyczki $900**:\n- Aktywa: Rezerwy $100, Pożyczki $900\n- Pasywa: Depozyty $1000\n\n**Podaż pieniądza**: Oryginalne $1000 + $900 pożyczka = $1900\n\nPożyczka $900 staje się depozytem gdzie indziej, kontynuując proces.\n\n## Podsumowanie lekcji: Bankowość i ekspansja podaży pieniądza\n\nBankowość z rezerwami cząstkowymi pozwala bankom trzymać tylko część depozytów jako rezerwy. Banki tworzą pieniądze poprzez pożyczanie. Mnożnik pieniądza pokazuje, jak depozyty rozszerzają podaż pieniądza. Bankowość z rezerwami cząstkowymi ma ryzyka (runy bankowe, płynność), ale umożliwia tworzenie kredytu. Bankowość z pełnymi rezerwami eliminuje te ryzyka, ale zapobiega tworzeniu pieniądza.",
+                  "importantPoints": [
+                    "Bankowość z rezerwami cząstkowymi pozwala bankom pożyczać większość depozytów",
+                    "Banki tworzą pieniądze poprzez proces pożyczania",
+                    "Mnożnik pieniądza = 1 / Wymagania dotyczące rezerw",
+                    "Bankowość z rezerwami cząstkowymi ma ryzyka, ale umożliwia tworzenie kredytu",
+                    "Bankowość z pełnymi rezerwami zapobiega tworzeniu pieniądza, ale eliminuje ryzyko runów bankowych"
+                  ]
                 },
                 "macroecon-u4-l4-practice": {
                   "title": "Praktyka: Wprowadzenie do bankowości z rezerwą cząstkową, Mnożnik pieniężny i ekspansja podaży pieniądza"
@@ -1152,7 +1400,15 @@
                   "title": "Rynek pieniężny"
                 },
                 "macroecon-u4-l5-article": {
-                  "title": "Poznaj: Rynek pieniężny"
+                  "title": "Poznaj: Rynek pieniężny",
+                  "content": "# Rynek pieniężny\n\n## Krzywa popytu na pieniądz na rynku pieniężnym\n\n**Popyt na pieniądz** to ilość pieniądza, którą ludzie chcą trzymać.\n\n**Powody trzymania pieniądza**:\n1. **Popyt transakcyjny**: Potrzeba pieniądza na codzienne zakupy\n2. **Popyt przezornościowy**: Trzymanie pieniądza na nieprzewidziane wydatki\n3. **Popyt spekulacyjny**: Trzymanie pieniądza, aby skorzystać z możliwości inwestycyjnych\n\n**Krzywa popytu na pieniądz**:\n- **Opadająca**: Wraz ze wzrostem stóp procentowych koszt alternatywny trzymania pieniądza rośnie\n- Ludzie trzymają mniej pieniądza (więcej inwestują), gdy stopy procentowe są wysokie\n- Ludzie trzymają więcej pieniądza (mniej inwestują), gdy stopy procentowe są niskie\n\n**Czynniki wpływające na popyt na pieniądz**:\n- **Dochód**: Wyższy dochód → Więcej transakcji → Więcej popytu na pieniądz\n- **Poziom cen**: Wyższe ceny → Potrzeba więcej pieniądza na te same transakcje\n- **Stopy procentowe**: Wyższe stopy → Wyższy koszt alternatywny → Mniej popytu na pieniądz\n\n## Równowaga nominalnych stóp procentowych na rynku pieniężnym\n\n**Równowaga rynku pieniężnego** występuje tam, gdzie podaż pieniądza równa się popytowi na pieniądz.\n\n**Równowagowa stopa procentowa**: Stopa procentowa, przy której ilość podaży pieniądza równa się ilości popytu na pieniądz.\n\n**Jak osiąga się równowagę**:\n- Jeśli stopa procentowa jest zbyt wysoka: Podaż pieniądza > Popyt na pieniądz → Stopa procentowa spada\n- Jeśli stopa procentowa jest zbyt niska: Popyt na pieniądz > Podaż pieniądza → Stopa procentowa rośnie\n- Przy równowadze: Podaż pieniądza = Popyt na pieniądz → Stopa procentowa jest stabilna\n\n## Podaż i popyt na pieniądz wpływające na stopy procentowe\n\n**Gdy podaż pieniądza rośnie** (przesunięcie w prawo):\n- Więcej pieniądza dostępne\n- Stopa procentowa spada\n- Ilość pieniądza rośnie\n\n**Gdy podaż pieniądza maleje** (przesunięcie w lewo):\n- Mniej pieniądza dostępne\n- Stopa procentowa rośnie\n- Ilość pieniądza maleje\n\n**Gdy popyt na pieniądz rośnie** (przesunięcie w prawo):\n- Więcej popytu na pieniądz\n- Stopa procentowa rośnie\n- Ilość pieniądza rośnie\n\n**Gdy popyt na pieniądz maleje** (przesunięcie w lewo):\n- Mniej popytu na pieniądz\n- Stopa procentowa spada\n- Ilość pieniądza maleje\n\n## Podsumowanie lekcji: Rynek pieniężny\n\nPopyt na pieniądz ma opadający kształt (wyższe stopy procentowe zmniejszają popyt na pieniądz). Równowaga rynku pieniężnego występuje tam, gdzie podaż równa się popytowi, określając stopę procentową. Zmiany w podaży lub popycie na pieniądz przesuwają równowagową stopę procentową. Rynek pieniężny łączy politykę monetarną ze stopami procentowymi.",
+                  "importantPoints": [
+                    "Popyt na pieniądz ma opadający kształt (odwrotna zależność ze stopami procentowymi)",
+                    "Równowaga rynku pieniężnego określa stopę procentową",
+                    "Wzrost podaży pieniądza obniża stopy procentowe",
+                    "Wzrost popytu na pieniądz podnosi stopy procentowe",
+                    "Rynek pieniężny łączy politykę monetarną ze stopami procentowymi"
+                  ]
                 },
                 "macroecon-u4-l5-practice": {
                   "title": "Praktyka: Rynek pieniężny: podstawowe koncepcje"
@@ -1169,7 +1425,15 @@
                   "title": "Polityka monetarna"
                 },
                 "macroecon-u4-l6-article": {
-                  "title": "Poznaj: Polityka monetarna"
+                  "title": "Poznaj: Polityka monetarna",
+                  "content": "# Polityka monetarna\n\n## Narzędzia polityki monetarnej\n\n**Polityka monetarna** to wykorzystanie podaży pieniądza i stóp procentowych do wpływania na gospodarkę, prowadzona przez bank centralny.\n\n**Narzędzia polityki monetarnej**:\n\n1. **Operacje otwartego rynku**:\n   - Kupno/sprzedaż rządowych papierów wartościowych\n   - Kupno → Zwiększa rezerwy → Zwiększa podaż pieniądza\n   - Sprzedaż → Zmniejsza rezerwy → Zmniejsza podaż pieniądza\n\n2. **Wymagania dotyczące rezerw**:\n   - Zmiana części depozytów, którą banki muszą trzymać\n   - Niższe wymagania → Więcej pożyczek → Więcej podaży pieniądza\n   - Wyższe wymagania → Mniej pożyczek → Mniej podaży pieniądza\n\n3. **Stopa dyskontowa**:\n   - Stopa procentowa, którą bank centralny pobiera od banków za pożyczki\n   - Niższa stopa → Więcej pożyczek → Więcej podaży pieniądza\n   - Wyższa stopa → Mniej pożyczek → Mniej podaży pieniądza\n\n4. **Odsetki od rezerw**:\n   - Stopa płacona od rezerw bankowych trzymanych w banku centralnym\n   - Wyższa stopa → Banki trzymają więcej rezerw → Mniej podaży pieniądza\n   - Niższa stopa → Banki pożyczają więcej → Więcej podaży pieniądza\n\n## Polityka monetarna ekspansywna a restrykcyjna\n\n**Polityka monetarna ekspansywna** (łatwe pieniądze):\n- Zwiększenie podaży pieniądza\n- Obniżenie stóp procentowych\n- Używana do walki z recesjami\n- Stymuluje wydatki i inwestycje\n\n**Polityka monetarna restrykcyjna** (ciasne pieniądze):\n- Zmniejszenie podaży pieniądza\n- Podniesienie stóp procentowych\n- Używana do walki z inflacją\n- Zmniejsza wydatki i inwestycje\n\n## Polityka monetarna i fiskalna\n\n**Polityka monetarna**:\n- Prowadzona przez bank centralny\n- Wpływa na podaż pieniądza i stopy procentowe\n- Szybka do wdrożenia\n- Wpływa na inwestycje i eksport netto\n\n**Polityka fiskalna**:\n- Prowadzona przez rząd\n- Wpływa na wydatki rządowe i podatki\n- Wolniejsza do wdrożenia (wymaga ustawodawstwa)\n- Wpływa na konsumpcję i wydatki rządowe\n\n**Koordynacja**: Obie mogą być używane razem lub niezależnie do osiągnięcia celów gospodarczych.\n\n## Podsumowanie lekcji: Polityka monetarna\n\nPolityka monetarna wykorzystuje podaż pieniądza i stopy procentowe do wpływania na gospodarkę. Narzędzia obejmują operacje otwartego rynku, wymagania dotyczące rezerw, stopę dyskontową i odsetki od rezerw. Polityka ekspansywna zwiększa podaż pieniądza do walki z recesjami; polityka restrykcyjna zmniejsza podaż pieniądza do walki z inflacją. Polityka monetarna i fiskalna mogą działać razem lub niezależnie.",
+                  "importantPoints": [
+                    "Polityka monetarna jest prowadzona przez bank centralny",
+                    "Główne narzędzia: operacje otwartego rynku, wymagania dotyczące rezerw, stopa dyskontowa",
+                    "Polityka ekspansywna zwiększa podaż pieniądza do walki z recesjami",
+                    "Polityka restrykcyjna zmniejsza podaż pieniądza do walki z inflacją",
+                    "Polityka monetarna wpływa na stopy procentowe, które wpływają na inwestycje i AD"
+                  ]
                 },
                 "macroecon-u4-l6-practice": {
                   "title": "Praktyka: Polityka monetarna: podstawowe koncepcje, Zmiany na rynku pieniężnym"
@@ -1186,7 +1450,15 @@
                   "title": "Rynek funduszy pożyczkowych"
                 },
                 "macroecon-u4-l7-article": {
-                  "title": "Poznaj: Rynek funduszy pożyczkowych"
+                  "title": "Poznaj: Rynek funduszy pożyczkowych",
+                  "content": "# Rynek funduszy pożyczkowych\n\n## Rynek funduszy pożyczkowych\n\n**Rynek funduszy pożyczkowych** pokazuje podaż i popyt na fundusze pożyczkowe (pieniądze dostępne do pożyczenia).\n\n**Popyt na fundusze pożyczkowe**:\n- Pochodzi od pożyczkobiorców (firmy, gospodarstwa domowe, rząd)\n- Opadający: Wyższe stopy procentowe → Mniej pożyczek\n- Reprezentuje wydatki inwestycyjne\n\n**Podaż funduszy pożyczkowych**:\n- Pochodzi od oszczędzających (gospodarstwa domowe, firmy, rząd)\n- Wznoszący: Wyższe stopy procentowe → Więcej oszczędności\n- Reprezentuje oszczędności krajowe\n\n**Równowaga**: Tam, gdzie podaż i popyt się przecinają, określając:\n- Równowagową stopę procentową\n- Równowagową ilość funduszy pożyczkowych\n\n## Oszczędności krajowe i inwestycje\n\n**Oszczędności krajowe** = Oszczędności prywatne + Oszczędności publiczne\n\n**Oszczędności prywatne** = Y - T - C (Dochód - Podatki - Konsumpcja)\n\n**Oszczędności publiczne** = T - G (Podatki - Wydatki rządowe)\n- Nadwyżka budżetowa: Oszczędności publiczne > 0\n- Deficyt budżetowy: Oszczędności publiczne < 0\n\n**Inwestycje** = Wydatki na dobra kapitałowe\n\n**Równość**: W zamkniętej gospodarce Oszczędności krajowe = Inwestycje\n\nRynek funduszy pożyczkowych zapewnia tę równość:\n- Podaż funduszy pożyczkowych = Oszczędności krajowe\n- Popyt na fundusze pożyczkowe = Inwestycje\n- Równowaga zapewnia S = I\n\n## Czynniki wpływające na podaż i popyt\n\n**Podaż funduszy pożyczkowych (oszczędności) rośnie, gdy**:\n- Dochód rośnie\n- Podatki maleją (zwiększa dochód do dyspozycji)\n- Rząd ma nadwyżkę (oszczędności publiczne rosną)\n- Zachęty do oszczędzania rosną\n\n**Popyt na fundusze pożyczkowe (inwestycje) rośnie, gdy**:\n- Oczekiwane zwroty z inwestycji rosną\n- Zaufanie biznesowe rośnie\n- Technologia się poprawia\n- Zachęty podatkowe do inwestycji rosną\n\n## Podsumowanie lekcji: Rynek funduszy pożyczkowych\n\nRynek funduszy pożyczkowych pokazuje podaż (oszczędności) i popyt (inwestycje) na fundusze. Równowaga określa stopę procentową i ilość funduszy. Oszczędności krajowe równają się inwestycjom w równowadze. Zmiany w oszczędnościach lub inwestycjach przesuwają krzywe, zmieniając stopę procentową.",
+                  "importantPoints": [
+                    "Rynek funduszy pożyczkowych pokazuje podaż (oszczędności) i popyt (inwestycje)",
+                    "Równowaga określa stopę procentową i ilość funduszy",
+                    "Oszczędności krajowe = Oszczędności prywatne + Oszczędności publiczne",
+                    "W równowadze Oszczędności krajowe = Inwestycje",
+                    "Zmiany w oszczędnościach lub inwestycjach przesuwają krzywe"
+                  ]
                 },
                 "macroecon-u4-l7-practice": {
                   "title": "Praktyka: Rynek funduszy pożyczkowych, Zmiany na rynku funduszy pożyczkowych"
@@ -1203,7 +1475,15 @@
                   "title": "Stopy procentowe i wartość czasowa pieniądza"
                 },
                 "macroecon-u4-l8-article": {
-                  "title": "Poznaj: Stopy procentowe i wartość czasowa pieniądza"
+                  "title": "Poznaj: Stopy procentowe i wartość czasowa pieniądza",
+                  "content": "# Stopy procentowe i wartość czasowa pieniądza\n\n## Wprowadzenie do wartości bieżącej\n\n**Wartość bieżąca (PV)** to obecna wartość przyszłej sumy pieniędzy, zdyskontowana przy danej stopie procentowej.\n\n**Wartość czasowa pieniądza**: Pieniądze dzisiaj są warte więcej niż ta sama kwota w przyszłości, ponieważ:\n- Pieniądze mogą zarabiać odsetki\n- Inflacja zmniejsza przyszłą siłę nabywczą\n- Niepewność co do przyszłości\n\n**Wzór wartości bieżącej**:\nPV = FV / (1 + r)^n\n\nGdzie:\n- PV = Wartość bieżąca\n- FV = Wartość przyszła\n- r = Stopa procentowa (stopa dyskontowa)\n- n = Liczba okresów\n\nPrzykład: $1000 otrzymane za 2 lata przy 5% odsetkach:\nPV = $1000 / (1,05)^2 = $1000 / 1,1025 = $907,03\n\n## Wartość bieżąca 2\n\n**Wartość bieżąca wielu przepływów pieniężnych**:\n- Oblicz PV każdej przyszłej płatności\n- Zsumuj wszystkie wartości bieżące\n\n**Wartość bieżąca renty** (równe płatności):\nPV = PMT × [(1 - (1 + r)^-n) / r]\n\nGdzie:\n- PMT = Płatność za okres\n- r = Stopa procentowa\n- n = Liczba okresów\n\n**Wartość bieżąca netto (NPV)**: Wartość bieżąca wszystkich przepływów pieniężnych (wpływy i wypływy) z inwestycji.\n\nNPV = PV wpływów - PV wypływów\n\n**Zasada decyzyjna**: Inwestuj, jeśli NPV > 0 (projekt dodaje wartość)\n\n## Zastosowania wartości bieżącej\n\n**Wycenianie obligacji**: Cena obligacji równa się wartości bieżącej wszystkich przyszłych płatności kuponowych plus wartość nominalna.\n\n**Decyzje inwestycyjne**: Porównaj wartość bieżącą zwrotów z początkowym kosztem.\n\n**Obliczenia pożyczek**: Określ płatności pożyczki na podstawie wartości bieżącej kwoty pożyczki.\n\n**Wycena**: Oceń aktywa, firmy lub projekty, używając wartości bieżącej oczekiwanych przepływów pieniężnych.\n\n## Podsumowanie lekcji: Stopy procentowe i wartość czasowa pieniądza\n\nWartość bieżąca pokazuje obecną wartość przyszłych pieniędzy. Pieniądze dzisiaj są warte więcej niż pieniądze jutro. PV = FV / (1 + r)^n. Wartość bieżąca jest używana do wyceniania obligacji, decyzji inwestycyjnych i wyceny. Wyższe stopy procentowe zmniejszają wartość bieżącą.",
+                  "importantPoints": [
+                    "Wartość bieżąca to obecna wartość przyszłych pieniędzy",
+                    "Pieniądze dzisiaj są warte więcej niż pieniądze jutro",
+                    "PV = FV / (1 + r)^n",
+                    "Wartość bieżąca jest używana do wyceniania obligacji, decyzji inwestycyjnych i wyceny",
+                    "Wyższe stopy procentowe zmniejszają wartość bieżącą"
+                  ]
                 },
                 "macroecon-u4-l8-practice": {
                   "title": "Praktyka: Stopy procentowe i wartość czasowa pieniądza"
@@ -1226,7 +1506,15 @@
                   "title": "Działania polityki fiskalnej i monetarnej w krótkim okresie"
                 },
                 "macroecon-u5-l1-article": {
-                  "title": "Poznaj: Działania polityki fiskalnej i monetarnej w krótkim okresie"
+                  "title": "Poznaj: Działania polityki fiskalnej i monetarnej w krótkim okresie",
+                  "content": "# Działania polityki fiskalnej i monetarnej w krótkim okresie\n\n## Polityka fiskalna i monetarna równolegle\n\n**Polityka fiskalna i monetarna** mogą być używane razem lub niezależnie do wpływania na gospodarkę.\n\n**Gdy polityki działają razem** (skoordynowane):\n- Obie ekspansywne: Silna stymulacja (np. wzrost wydatków + obniżenie stóp procentowych)\n- Obie restrykcyjne: Silne ograniczenie (np. zmniejszenie wydatków + podniesienie stóp procentowych)\n- Mogą być bardzo skuteczne, ale ryzyko przesadzenia\n\n**Gdy polityki działają przeciwko sobie** (konfliktowe):\n- Ekspansywna fiskalna + Restrykcyjna monetarna: Mieszane efekty\n- Restrykcyjna fiskalna + Ekspansywna monetarna: Mieszane efekty\n- Mogą się neutralizować lub tworzyć niepewność\n\n**Koordynacja polityki**:\n- Może być bardziej skuteczna przy koordynacji\n- Wymaga komunikacji między rządem a bankiem centralnym\n- Może uniknąć konfliktów polityki\n\n**Efekty krótkookresowe**:\n- Obie polityki wpływają na popyt zagregowany\n- Polityka fiskalna: Bezpośredni wpływ na AD poprzez wydatki/podatki\n- Polityka monetarna: Pośredni wpływ poprzez stopy procentowe → inwestycje/eksport netto\n- Połączone efekty zależą od względnych wielkości\n\n## Podsumowanie lekcji: Działania polityki fiskalnej i monetarnej w krótkim okresie\n\nPolityka fiskalna i monetarna mogą działać razem lub konfliktować. Skoordynowane polityki są bardziej skuteczne. Obie wpływają na popyt zagregowany w krótkim okresie. Polityka fiskalna ma bezpośrednie efekty; polityka monetarna działa poprzez stopy procentowe. Koordynacja polityki wymaga komunikacji między rządem a bankiem centralnym.",
+                  "importantPoints": [
+                    "Polityka fiskalna i monetarna mogą być skoordynowane lub konfliktować",
+                    "Skoordynowane polityki są bardziej skuteczne",
+                    "Obie wpływają na popyt zagregowany w krótkim okresie",
+                    "Polityka fiskalna ma bezpośrednie efekty; polityka monetarna działa poprzez stopy procentowe",
+                    "Koordynacja polityki wymaga komunikacji między instytucjami"
+                  ]
                 },
                 "macroecon-u5-l1-practice": {
                   "title": "Praktyka: Działania polityki fiskalnej i monetarnej w krótkim okresie"
@@ -1243,7 +1531,15 @@
                   "title": "Krzywa Phillipsa"
                 },
                 "macroecon-u5-l2-article": {
-                  "title": "Poznaj: Krzywa Phillipsa"
+                  "title": "Poznaj: Krzywa Phillipsa",
+                  "content": "# Krzywa Phillipsa\n\n## Krzywa Phillipsa\n\n**Krzywa Phillipsa** pokazuje związek między inflacją a bezrobociem.\n\n**Krótkookresowa krzywa Phillipsa (SRPC)**:\n- Opadająca\n- Pokazuje kompromis między inflacją a bezrobociem\n- Niższe bezrobocie → Wyższa inflacja\n- Wyższe bezrobocie → Niższa inflacja\n\n**Kluczowy wgląd**: W krótkim okresie istnieje kompromis między inflacją a bezrobociem.\n\n**Długookresowa krzywa Phillipsa (LRPC)**:\n- Pionowa na naturalnej stopie bezrobocia\n- Brak kompromisu w długim okresie\n- Bezrobocie wraca do naturalnej stopy niezależnie od inflacji\n\n## Zmiany w modelu AD-AS i krzywa Phillipsa\n\n**Połączenie między AD-AS a krzywą Phillipsa**:\n- Model AD-AS pokazuje poziom cen i produkcję\n- Krzywa Phillipsa pokazuje inflację i bezrobocie\n- Są powiązane przez cykl koniunkturalny\n\n**Gdy AD rośnie** (model AD-AS):\n- Poziom cen rośnie (inflacja)\n- Produkcja rośnie\n- Bezrobocie maleje\n- Ruch wzdłuż SRPC (w górę i w lewo)\n\n**Gdy AD maleje** (model AD-AS):\n- Poziom cen spada (dezinflacja/deflacja)\n- Produkcja maleje\n- Bezrobocie rośnie\n- Ruch wzdłuż SRPC (w dół i w prawo)\n\n**Gdy SRAS się zmienia**:\n- Przesuwa SRPC\n- Szok podażowy przesuwa SRPC w górę (stagflacja) lub w dół\n\n## Podsumowanie lekcji: Krzywa Phillipsa\n\nKrótkowookresowa krzywa Phillipsa pokazuje kompromis między inflacją a bezrobociem. Długookresowa krzywa Phillipsa jest pionowa na naturalnej stopie bezrobocia. Zmiany w AD-AS odpowiadają ruchom wzdłuż SRPC. Szoki podażowe przesuwają SRPC. W długim okresie nie ma kompromisu między inflacją a bezrobociem.",
+                  "importantPoints": [
+                    "Krótkookresowa krzywa Phillipsa pokazuje kompromis między inflacją a bezrobociem",
+                    "Długookresowa krzywa Phillipsa jest pionowa na naturalnej stopie bezrobocia",
+                    "Zmiany AD powodują ruch wzdłuż SRPC",
+                    "Szoki podażowe przesuwają SRPC",
+                    "Brak długookresowego kompromisu między inflacją a bezrobociem"
+                  ]
                 },
                 "macroecon-u5-l2-practice": {
                   "title": "Praktyka: Krzywa Phillipsa: podstawowe koncepcje, Krzywa Phillipsa: powiązanie zmian w modelu AD-AS z krzywą Phillipsa"
@@ -1260,7 +1556,15 @@
                   "title": "Wzrost podaży pieniądza i inflacja"
                 },
                 "macroecon-u5-l3-article": {
-                  "title": "Poznaj: Wzrost podaży pieniądza i inflacja"
+                  "title": "Poznaj: Wzrost podaży pieniądza i inflacja",
+                  "content": "# Wzrost podaży pieniądza i inflacja\n\n## Teoria ilościowa pieniądza\n\n**Teoria ilościowa pieniądza** stwierdza, że podaż pieniądza bezpośrednio wpływa na poziom cen.\n\n**Równanie wymiany**: M × V = P × Y\n\nGdzie:\n- M = Podaż pieniądza\n- V = Prędkość obiegu pieniądza (jak często pieniądze zmieniają ręce)\n- P = Poziom cen\n- Y = Realna produkcja (PKB)\n\n**Teoria ilościowa**: Jeśli V i Y są stałe, to:\n- Wzrost M → Wzrost P (inflacja)\n- Wzrost podaży pieniądza powoduje inflację\n\n**Pogląd klasyczny**: \"Inflacja jest zawsze i wszędzie zjawiskiem monetarnym\" (Milton Friedman)\n\n## Prędkość obiegu pieniądza, a nie ilość, napędza ceny\n\n**Prędkość obiegu pieniądza (V)** to średnia liczba razy, gdy dolar jest wydawany rocznie.\n\nV = (P × Y) / M\n\n**Jeśli prędkość się zmienia**:\n- Wzrost V → Wzrost P (nawet jeśli M jest stała)\n- Spadek V → Spadek P\n\n**Prędkość może się zmieniać z powodu**:\n- Technologii płatności (karty kredytowe, płatności cyfrowe)\n- Innowacji finansowych\n- Oczekiwań dotyczących inflacji\n- Stóp procentowych (wyższe stopy → mniej pieniądza trzymanego → wyższa prędkość)\n\n**Kluczowy wgląd**: Zmiany prędkości mogą wpływać na ceny niezależnie od podaży pieniądza.\n\n## Deflacja pomimo wzrostu podaży pieniądza\n\n**Dlaczego deflacja może wystąpić pomimo wzrostu podaży pieniądza**:\n\n1. **Prędkość maleje szybciej niż rośnie podaż pieniądza**\n   - Jeśli V spada bardziej niż M rośnie, P może spaść\n\n2. **Wzrost produkcji przekracza wzrost podaży pieniądza**\n   - Jeśli Y rośnie szybciej niż M, P może spaść (deflacja)\n\n3. **Pułapka płynności**\n   - Ludzie gromadzą pieniądze zamiast wydawać\n   - Prędkość załamuje się\n   - Wzrost podaży pieniądza nie przekłada się na wydatki\n\n4. **Kryzys finansowy**\n   - Zamrożenie kredytu zmniejsza prędkość\n   - Podaż pieniądza rośnie, ale nie krąży\n\nPrzykład: Wielki Kryzys, Japonia lata 1990-2000\n\n## Umiarkowana inflacja w dobrej gospodarce\n\n**Umiarkowana inflacja** (2-3% rocznie) może wystąpić w zdrowej gospodarce, gdy:\n- Podaż pieniądza rośnie nieco szybciej niż produkcja\n- Prędkość jest stabilna\n- Gospodarka rośnie\n- Bank centralny celuje w umiarkowaną inflację\n\n**Dlaczego umiarkowana inflacja jest preferowana**:\n- Zachęca do wydatków (pieniądze tracą wartość, jeśli są trzymane)\n- Pozwala na realne dostosowania płac\n- Zapobiega deflacji (która może być niebezpieczna)\n- Daje bankowi centralnemu możliwość obniżenia realnych stóp procentowych\n\n**Cele banku centralnego**: Większość banków centralnych celuje w 2% inflację jako optymalną.\n\n## Podsumowanie lekcji: Wzrost podaży pieniądza i inflacja\n\nTeoria ilościowa stwierdza, że wzrost podaży pieniądza powoduje inflację (jeśli V i Y są stałe). Zmiany prędkości mogą również napędzać ceny. Deflacja może wystąpić pomimo wzrostu pieniądza, jeśli prędkość spada lub produkcja rośnie szybciej. Umiarkowana inflacja w rosnącej gospodarce jest normalna i często celowana przez banki centralne.",
+                  "importantPoints": [
+                    "Teoria ilościowa: M × V = P × Y",
+                    "Wzrost podaży pieniądza powoduje inflację, jeśli V i Y są stałe",
+                    "Zmiany prędkości mogą napędzać ceny niezależnie",
+                    "Deflacja może wystąpić, jeśli prędkość spada lub produkcja rośnie szybciej niż pieniądz",
+                    "Umiarkowana inflacja (2-3%) jest normalna w zdrowych gospodarkach"
+                  ]
                 },
                 "macroecon-u5-l3-practice": {
                   "title": "Praktyka: Wzrost podaży pieniądza i inflacja"
@@ -1277,7 +1581,15 @@
                   "title": "Efekt wypierania"
                 },
                 "macroecon-u5-l4-article": {
-                  "title": "Poznaj: Efekt wypierania"
+                  "title": "Poznaj: Efekt wypierania",
+                  "content": "# Efekt wypierania\n\n## Efekt wypierania\n\n**Efekt wypierania** występuje, gdy zwiększone wydatki rządowe zmniejszają wydatki sektora prywatnego.\n\n**Mechanizm**:\n1. Rząd zwiększa wydatki (ekspansywna polityka fiskalna)\n2. Rząd pożycza, aby sfinansować wydatki\n3. Zwiększony popyt na środki pożyczkowe\n4. Stopy procentowe rosną\n5. Wyższe stopy procentowe zmniejszają inwestycje prywatne\n6. Wydatki prywatne są \"wypierane\"\n\n**Typy wypierania**:\n- **Wypieranie finansowe**: Pożyczki rządowe podnoszą stopy procentowe, zmniejszając inwestycje\n- **Wypieranie zasobów**: Rząd wykorzystuje zasoby, które byłyby wykorzystane przez sektor prywatny\n\n## Kiedy występuje wypieranie\n\n**Wypieranie jest bardziej prawdopodobne, gdy**:\n- Gospodarka jest bliska pełnego zatrudnienia\n- Podaż pieniądza jest stała (brak dostosowania monetarnego)\n- Wydatki rządowe są finansowane pożyczkami (nie podatkami)\n- Gospodarka jest zamknięta (brak przepływów kapitału zagranicznego)\n\n**Wypieranie jest mniej prawdopodobne, gdy**:\n- Gospodarka ma znaczące bezrobocie\n- Bank centralny dostosowuje się (zwiększa podaż pieniądza)\n- Wydatki rządowe są finansowane podatkami\n- Gospodarka jest otwarta (kapitał zagraniczny może napływać)\n\n## Zakres wypierania\n\n**Pełne wypieranie**: Wydatki prywatne maleją o pełną kwotę wzrostu wydatków rządowych. Efekt netto na AD = 0.\n\n**Częściowe wypieranie**: Wydatki prywatne maleją o mniej niż wzrastają wydatki rządowe. Efekt netto na AD jest dodatni, ale mniejszy.\n\n**Brak wypierania**: Wydatki prywatne niezmienione. Pełny efekt mnożnikowy.\n\nW praktyce wypieranie jest zwykle częściowe, nie pełne.\n\n## Podsumowanie lekcji: Efekt wypierania\n\nEfekt wypierania występuje, gdy wydatki rządowe zmniejszają wydatki prywatne, zazwyczaj poprzez wyższe stopy procentowe. Jest bardziej prawdopodobne przy pełnym zatrudnieniu ze stałą podażą pieniądza. Efekt wypierania może być pełny, częściowy lub nieobecny w zależności od warunków gospodarczych. Dostosowanie monetarne może zmniejszyć efekt wypierania.",
+                  "importantPoints": [
+                    "Efekt wypierania występuje, gdy wydatki rządowe zmniejszają wydatki prywatne",
+                    "Mechanizm: Pożyczki rządowe → Wyższe stopy procentowe → Mniej inwestycji",
+                    "Bardziej prawdopodobne przy pełnym zatrudnieniu ze stałą podażą pieniądza",
+                    "Może być pełny, częściowy lub nieobecny",
+                    "Dostosowanie monetarne może zmniejszyć efekt wypierania"
+                  ]
                 },
                 "macroecon-u5-l4-practice": {
                   "title": "Praktyka: Efekt wypierania"
@@ -1294,7 +1606,15 @@
                   "title": "Deficyty i długi"
                 },
                 "macroecon-u5-l5-article": {
-                  "title": "Poznaj: Deficyty i długi"
+                  "title": "Poznaj: Deficyty i długi",
+                  "content": "# Deficyty i długi\n\n## Deficyty i dług\n\n**Deficyt budżetowy**: Gdy wydatki rządowe przekraczają wpływy podatkowe w danym roku.\n\nDeficyt = G - T (Wydatki rządowe - Podatki)\n\n**Nadwyżka budżetowa**: Gdy wpływy podatkowe przekraczają wydatki rządowe.\n\nNadwyżka = T - G\n\n**Dług krajowy**: Całkowita skumulowana kwota, którą rząd jest winien z przeszłych deficytów.\n\nDług = Suma wszystkich przeszłych deficytów minus nadwyżki\n\n**Kluczowe rozróżnienie**:\n- **Deficyt**: Zmienna przepływowa (rocznie)\n- **Dług**: Zmienna zasobowa (skumulowana w czasie)\n\n## Przyczyny deficytów\n\n**Deficyty występują, gdy**:\n- Wydatki rządowe rosną (wojny, programy, infrastruktura)\n- Wpływy podatkowe maleją (recesje, obniżki podatków)\n- Oba występują jednocześnie\n\n**Typy deficytów**:\n- **Deficyt cykliczny**: Z powodu spadków gospodarczych (automatyczne stabilizatory)\n- **Deficyt strukturalny**: Z powodu wyborów politycznych (wydatki > podatki przy pełnym zatrudnieniu)\n\n## Efekty deficytów i długu\n\n**Efekty krótkookresowe**:\n- Deficyty mogą stymulować gospodarkę (zwiększać AD)\n- Mogą pomóc podczas recesji\n- Mogą wypierać inwestycje prywatne\n\n**Obawy długookresowe**:\n- **Obsługa długu**: Płatności odsetkowe od długu\n- **Przyszłe obciążenie podatkowe**: Przyszłe pokolenia płacą za obecne wydatki\n- **Zmniejszona elastyczność**: Mniej miejsca na przyszłą politykę fiskalną\n- **Wypieranie**: Wyższe stopy procentowe zmniejszają inwestycje\n- **Ryzyko niewypłacalności**: Jeśli dług staje się niezrównoważony\n\n## Stosunek długu do PKB\n\n**Stosunek długu do PKB** = (Dług krajowy / PKB) × 100\n\nTen stosunek pokazuje dług względem rozmiaru gospodarki.\n\n**Dlaczego to ważne**:\n- Wyższy stosunek = Wyższe obciążenie długiem\n- Zrównoważony, jeśli PKB rośnie szybciej niż dług\n- Problematyczny, jeśli dług rośnie szybciej niż PKB\n\n**Kontekst historyczny**: Wiele krajów ma wysokie stosunki długu do PKB i funkcjonuje normalnie, ale bardzo wysokie stosunki mogą być problematyczne.\n\n## Podsumowanie lekcji: Deficyty i długi\n\nDeficyty budżetowe występują, gdy wydatki przekraczają dochody. Dług krajowy to skumulowane deficyty. Deficyty mogą stymulować gospodarkę krótkoterminowo, ale tworzą obawy długoterminowe. Stosunek długu do PKB mierzy obciążenie długiem. Zrównoważony dług wymaga, aby wzrost PKB wyprzedzał wzrost długu.",
+                  "importantPoints": [
+                    "Deficyt jest roczny (przepływ); dług jest skumulowany (zasób)",
+                    "Deficyty mogą stymulować gospodarkę, ale tworzą dług",
+                    "Stosunek długu do PKB mierzy obciążenie długiem",
+                    "Obawy długookresowe obejmują obsługę długu i zmniejszoną elastyczność",
+                    "Zrównoważony dług wymaga, aby wzrost PKB wyprzedzał wzrost długu"
+                  ]
                 },
                 "macroecon-u5-l5-practice": {
                   "title": "Praktyka: Deficyty i długi"
@@ -1311,7 +1631,15 @@
                   "title": "Wzrost gospodarczy"
                 },
                 "macroecon-u5-l6-article": {
-                  "title": "Poznaj: Wzrost gospodarczy"
+                  "title": "Poznaj: Wzrost gospodarczy",
+                  "content": "# Wzrost gospodarczy\n\n## Zrozumienie wzrostu gospodarczego\n\n**Wzrost gospodarczy** to wzrost realnego PKB (lub realnego PKB na mieszkańca) w czasie.\n\n**Tempo wzrostu**: Procentowa zmiana realnego PKB z jednego okresu do następnego.\n\nTempo wzrostu = [(PKB Bieżący - PKB Poprzedni) / PKB Poprzedni] × 100\n\n**Wzrost na mieszkańca**: Wzrost PKB na osobę, uwzględniający zmiany populacji.\n\n## Źródła wzrostu gospodarczego\n\n**Czynniki, które zwiększają potencjalny PKB (przesuwają LRAS w prawo)**:\n\n1. **Wzrost ilości zasobów**:\n   - Więcej pracy (wzrost populacji, imigracja, uczestnictwo w sile roboczej)\n   - Więcej kapitału (inwestycje, akumulacja kapitału)\n   - Więcej zasobów naturalnych (odkrycia)\n\n2. **Wzrost jakości zasobów**:\n   - Kapitał ludzki (edukacja, szkolenia, umiejętności)\n   - Technologia (innowacje, badania i rozwój)\n   - Lepsze instytucje (prawa własności, rządy prawa)\n\n3. **Poprawa produktywności**:\n   - Lepsza technologia\n   - Lepsza organizacja\n   - Korzyści skali\n\n## Wzrost długookresowy a wahania krótkookresowe\n\n**Wzrost długookresowy**: Trendowy wzrost potencjalnego PKB (LRAS przesuwa się w prawo)\n- Określany przez zasoby, technologię, instytucje\n- Stosunkowo stabilny w czasie\n- Klucz do poprawy standardów życia\n\n**Wahania krótkookresowe**: Ruchy cyklu koniunkturalnego wokół trendu\n- Recesje i ekspansje\n- Tymczasowe odchylenia od potencjalnego\n- Nie wpływają na długookresowy trend wzrostu\n\n## Znaczenie wzrostu gospodarczego\n\n**Korzyści ze wzrostu**:\n- Wyższe standardy życia\n- Więcej dóbr i usług dostępnych\n- Może zmniejszyć ubóstwo\n- Pozwala na usługi publiczne bez podnoszenia podatków\n- Poprawia jakość życia\n\n**Koszty wzrostu**:\n- Degradacja środowiska\n- Wyczerpywanie zasobów\n- Nierówności dochodowe mogą wzrosnąć\n- Zakłócenia społeczne z powodu szybkich zmian\n\n## Zrównoważony wzrost\n\n**Zrównoważony wzrost** równoważy:\n- Rozwój gospodarczy\n- Ochronę środowiska\n- Sprawiedliwość społeczną\n\n**Zielony wzrost**: Wzrost gospodarczy, który jest zrównoważony środowiskowo.\n\n## Podsumowanie lekcji: Wzrost gospodarczy\n\nWzrost gospodarczy to wzrost realnego PKB w czasie. Wzrost pochodzi ze wzrostu ilości/jakości zasobów, technologii i produktywności. Wzrost długookresowy (trend) różni się od wahań krótkookresowych (cykl koniunkturalny). Wzrost poprawia standardy życia, ale musi być zrównoważony z obawami środowiskowymi i społecznymi. Zrównoważony wzrost uwzględnia czynniki ekonomiczne, środowiskowe i społeczne.",
+                  "importantPoints": [
+                    "Wzrost gospodarczy to wzrost realnego PKB w czasie",
+                    "Wzrost pochodzi z zasobów, technologii i produktywności",
+                    "Wzrost długookresowy (trend) różni się od wahań krótkookresowych",
+                    "Wzrost poprawia standardy życia",
+                    "Zrównoważony wzrost równoważy czynniki ekonomiczne, środowiskowe i społeczne"
+                  ]
                 },
                 "macroecon-u5-l6-practice": {
                   "title": "Praktyka: Wzrost gospodarczy"
@@ -1334,7 +1662,15 @@
                   "title": "Bilans płatniczy"
                 },
                 "macroecon-u6-l1-article": {
-                  "title": "Poznaj: Bilans płatniczy"
+                  "title": "Poznaj: Bilans płatniczy",
+                  "content": "# Bilans płatniczy\n\n## Bilans płatniczy: Rachunek bieżący\n\n**Bilans płatniczy (BOP)** rejestruje wszystkie transakcje ekonomiczne między krajem a resztą świata.\n\n**Rachunek bieżący** obejmuje:\n- **Bilans handlowy**: Eksport - Import dóbr i usług\n- **Dochód netto**: Dochód z inwestycji zagranicznych - Dochód wypłacony cudzoziemcom\n- **Transfery netto**: Transfery jednostronne (pomoc, przekazy pieniężne, darowizny)\n\n**Saldo rachunku bieżącego**:\n- **Nadwyżka**: Gdy wpływy > wypływy (kraj otrzymuje więcej niż płaci)\n- **Deficyt**: Gdy wypływy > wpływy (kraj płaci więcej niż otrzymuje)\n\n**Bilans handlowy** (część rachunku bieżącego):\n- **Nadwyżka handlowa**: Eksport > Import\n- **Deficyt handlowy**: Import > Eksport\n\n## Bilans płatniczy: Rachunek kapitałowy\n\n**Rachunek kapitałowy** (zwany także Rachunkiem finansowym) obejmuje:\n- **Bezpośrednie inwestycje zagraniczne (BIZ)**: Inwestycje w aktywa materialne za granicą\n- **Inwestycje portfelowe**: Inwestycje w akcje, obligacje, papiery wartościowe\n- **Inne inwestycje**: Pożyczki bankowe, depozyty walutowe\n- **Aktywa rezerwowe**: Rezerwy walutowe banku centralnego\n\n**Saldo rachunku kapitałowego**:\n- **Nadwyżka**: Napływ kapitału > Odpływ kapitału (cudzoziemcy inwestują więcej w kraju)\n- **Deficyt**: Odpływ kapitału > Napływ kapitału (kraj inwestuje więcej za granicą)\n\n## Dane o bilansie płatniczym Chin i USA\n\n**Chiny**:\n- Duża nadwyżka rachunku bieżącego (eksport > import)\n- Deficyt rachunku kapitałowego (odpływ kapitału)\n- Gromadzą rezerwy zagraniczne (szczególnie dolary amerykańskie)\n\n**Stany Zjednoczone**:\n- Duży deficyt rachunku bieżącego (import > eksport)\n- Nadwyżka rachunku kapitałowego (napływ kapitału)\n- Cudzoziemcy inwestują w aktywa USA\n\n**Kluczowa relacja**: Nadwyżka Chin finansuje deficyt USA.\n\n## Dlaczego rachunek bieżący i kapitałowy się równoważą\n\n**Podstawowa tożsamość**: Rachunek bieżący + Rachunek kapitałowy = 0\n\n**Dlaczego muszą się równoważyć**:\n- Każda transakcja ma dwie strony\n- Jeśli kupujesz dobra zagraniczne (deficyt rachunku bieżącego), musisz zapłacić kapitałem (nadwyżka rachunku kapitałowego)\n- Jeśli eksportujesz dobra (nadwyżka rachunku bieżącego), otrzymujesz kapitał (deficyt rachunku kapitałowego)\n\n**Tożsamość księgowa**:\nSaldo rachunku bieżącego + Saldo rachunku kapitałowego = 0\n\nJeśli rachunek bieżący jest w deficycie, rachunek kapitałowy musi być w nadwyżce (i odwrotnie).\n\n## Używanie budżetu osoby do zrozumienia bilansu płatniczego\n\n**Analogia z budżetem osobistym**:\n- **Rachunek bieżący**: Twoje dochody i wydatki (pensja, wydatki)\n- **Rachunek kapitałowy**: Twoje pożyczki i oszczędności (kredyty, konta oszczędnościowe)\n\n**Jeśli wydajesz więcej niż zarabiasz** (deficyt rachunku bieżącego):\n- Musisz pożyczać lub używać oszczędności (nadwyżka rachunku kapitałowego)\n- Wpadasz w długi\n\n**Jeśli zarabiasz więcej niż wydajesz** (nadwyżka rachunku bieżącego):\n- Oszczędzasz lub pożyczasz pieniądze (deficyt rachunku kapitałowego)\n- Gromadzisz aktywa\n\n**Ta sama logika dotyczy krajów**: Kraj z deficytem handlowym musi go sfinansować napływem kapitału.\n\n## Podsumowanie lekcji: Bilans płatniczy\n\nBilans płatniczy rejestruje wszystkie transakcje międzynarodowe. Rachunek bieżący obejmuje handel, dochody i transfery. Rachunek kapitałowy obejmuje przepływy inwestycyjne. Rachunek bieżący i kapitałowy muszą się równoważyć do zera (tożsamość księgowa). Deficyt rachunku bieżącego musi być finansowany nadwyżką rachunku kapitałowego. Kraje z nadwyżką handlową gromadzą aktywa zagraniczne.",
+                  "importantPoints": [
+                    "Bilans płatniczy rejestruje wszystkie transakcje międzynarodowe",
+                    "Rachunek bieżący = handel + dochody + transfery",
+                    "Rachunek kapitałowy = przepływy inwestycyjne",
+                    "Rachunek bieżący + Rachunek kapitałowy = 0 (muszą się równoważyć)",
+                    "Deficyt handlowy musi być finansowany napływem kapitału"
+                  ]
                 },
                 "macroecon-u6-l1-practice": {
                   "title": "Praktyka: Bilans płatniczy"
@@ -1351,7 +1687,15 @@
                   "title": "Kursy walutowe"
                 },
                 "macroecon-u6-l2-article": {
-                  "title": "Poznaj: Kursy walutowe"
+                  "title": "Poznaj: Kursy walutowe",
+                  "content": "# Kursy walutowe\n\n## Wprowadzenie do kursów walutowych\n\n**Kurs walutowy** to cena jednej waluty wyrażona w innej walucie.\n\n**Przykład**: 1 USD = 0.85 EUR oznacza, że 1 dolar amerykański równa się 0.85 euro.\n\n**Dwa sposoby wyrażania kursów walutowych**:\n- **Kurs bezpośredni**: Cena waluty zagranicznej w walucie krajowej (np. 1.18 USD za EUR)\n- **Kurs pośredni**: Cena waluty krajowej w walucie zagranicznej (np. 0.85 EUR za USD)\n\n**Aprecjacja**: Waluta staje się bardziej wartościowa (może kupić więcej waluty zagranicznej)\n- Przykład: USD aprecjonuje się z 0.85 EUR do 0.90 EUR\n\n**Deprecjacja**: Waluta staje się mniej wartościowa (może kupić mniej waluty zagranicznej)\n- Przykład: USD deprecjonuje się z 0.85 EUR do 0.80 EUR\n\n## Typy systemów kursów walutowych\n\n**Kurs stały**: Rząd/bank centralny utrzymuje określony kurs\n- Wymaga interwencji na rynku walutowym\n- Używa rezerw zagranicznych do utrzymania kursu\n\n**Kurs płynny**: Kurs określany przez podaż i popyt rynkowy\n- Brak interwencji rządu\n- Kurs waha się swobodnie\n\n**Kurs płynny zarządzany**: Połączenie obu\n- Głównie określany przez rynek, ale z okazjonalną interwencją\n\n## Czynniki wpływające na kursy walutowe\n\n**Popyt na walutę** (zwiększa się, gdy):\n- Cudzoziemcy chcą kupować dobra kraju (eksport)\n- Cudzoziemcy chcą inwestować w kraju (napływ kapitału)\n- Spekulanci oczekują aprecjacji waluty\n\n**Podaż waluty** (zwiększa się, gdy):\n- Mieszkańcy kraju chcą kupować dobra zagraniczne (import)\n- Mieszkańcy kraju chcą inwestować za granicą (odpływ kapitału)\n- Spekulanci oczekują deprecjacji waluty\n\n**Inne czynniki**:\n- Różnice stóp procentowych\n- Różnice inflacji\n- Wzrost gospodarczy\n- Stabilność polityczna\n- Polityka banku centralnego\n\n## Kursy realne a nominalne\n\n**Kurs nominalny**: Rzeczywisty kurs rynkowy (np. 1 USD = 0.85 EUR)\n\n**Kurs realny**: Kurs nominalny skorygowany o poziomy cen\n- Kurs realny = (Kurs nominalny × Ceny krajowe) / Ceny zagraniczne\n- Mierzy siłę nabywczą\n\n**Dlaczego kurs realny ma znaczenie**: Określa rzeczywistą konkurencyjność eksportu.\n\n## Podsumowanie lekcji: Kursy walutowe\n\nKurs walutowy to cena jednej waluty wyrażona w innej. Waluty mogą aprecjonować się (zwiększać wartość) lub deprecjonować się (zmniejszać wartość). Kursy walutowe mogą być stałe, płynne lub zarządzane. Podaż i popyt określają kursy płynne. Kursy realne korygują się o poziomy cen i mierzą prawdziwą konkurencyjność.",
+                  "importantPoints": [
+                    "Kurs walutowy to cena jednej waluty wyrażona w innej",
+                    "Aprecjacja = waluta staje się bardziej wartościowa",
+                    "Deprecjacja = waluta staje się mniej wartościowa",
+                    "Podaż i popyt określają kursy płynne",
+                    "Kurs realny koryguje się o poziomy cen"
+                  ]
                 },
                 "macroecon-u6-l2-practice": {
                   "title": "Praktyka: Kursy walutowe"
@@ -1368,7 +1712,15 @@
                   "title": "Rynek walutowy"
                 },
                 "macroecon-u6-l3-article": {
-                  "title": "Poznaj: Rynek walutowy"
+                  "title": "Poznaj: Rynek walutowy",
+                  "content": "# Rynek walutowy\n\n## Wprowadzenie do wymiany walut\n\n**Rynek walutowy (forex)** to miejsce, gdzie kupuje się i sprzedaje waluty.\n\n**Uczestnicy**:\n- Banki i instytucje finansowe\n- Banki centralne\n- Korporacje (do handlu)\n- Inwestorzy i spekulanci\n- Rządy\n\n**Charakterystyka rynku**:\n- Największy rynek finansowy na świecie\n- Działa 24/7 globalnie\n- Wysoka płynność\n- Bardzo konkurencyjny (wielu kupujących i sprzedających)\n\n## Krzywe podaży i popytu na rynku walutowym\n\n**Popyt na walutę** (np. popyt na USD):\n- Krzywa opadająca\n- Gdy cena USD spada (deprecjonuje się), popyt na USD rośnie\n- Tańszy USD czyni dobra amerykańskie tańszymi dla cudzoziemców\n\n**Podaż waluty** (np. podaż USD):\n- Krzywa wznosząca się\n- Gdy cena USD rośnie (aprecjonuje się), podaż USD rośnie\n- Bardziej wartościowy USD czyni dobra zagraniczne tańszymi dla Amerykanów\n\n**Równowaga**: Punkt przecięcia podaży i popytu określa kurs walutowy.\n\n**Przesunięcia popytu** (zwiększają się, gdy):\n- Popyt zagraniczny na dobra amerykańskie rośnie\n- Inwestycje zagraniczne w USA rosną\n- Stopy procentowe USA rosną względem stóp zagranicznych\n\n**Przesunięcia podaży** (zwiększają się, gdy):\n- Popyt USA na dobra zagraniczne rośnie\n- Inwestycje USA za granicą rosną\n- Stopy procentowe zagraniczne rosną względem stóp USA\n\n## Gromadzenie rezerw walutowych\n\n**Rezerwy walutowe**: Posiadanie walut zagranicznych przez banki centralne.\n\n**Dlaczego gromadzić rezerwy**:\n- **Interwencja**: Aby wpływać na kurs walutowy\n- **Stabilność**: Aby utrzymać stały kurs walutowy\n- **Płynność**: Aby spełnić zobowiązania zagraniczne\n- **Zaufanie**: Aby pokazać zdolność do obrony waluty\n\n**Jak gromadzić**:\n- Kupować walutę zagraniczną (sprzedawać walutę krajową)\n- Otrzymywać walutę zagraniczną z eksportu\n- Pożyczać w walucie zagranicznej\n\n**Koszty trzymania rezerw**:\n- Koszt alternatywny (można inwestować gdzie indziej)\n- Ryzyko walutowe (rezerwy mogą stracić wartość)\n\n## Używanie rezerw do stabilizacji waluty\n\n**Aby zapobiec deprecjacji** (spadkowi waluty):\n- Bank centralny sprzedaje rezerwy zagraniczne\n- Kupuje walutę krajową\n- Zwiększa popyt na walutę krajową\n- Podnosi kurs walutowy\n\n**Aby zapobiec aprecjacji** (wzrostowi waluty):\n- Bank centralny kupuje rezerwy zagraniczne\n- Sprzedaje walutę krajową\n- Zwiększa podaż waluty krajowej\n- Obniża kurs walutowy\n\n**Utrzymanie stałego kursu walutowego**:\n- Wymaga wystarczających rezerw\n- Musi interweniować, gdy kurs odbiega od celu\n- Może być kosztowne, jeśli presja rynkowa jest silna\n\n## Atak spekulacyjny na walutę\n\n**Atak spekulacyjny**: Sprzedaż waluty na dużą skalę przez spekulantów oczekujących deprecjacji.\n\n**Mechanizm**:\n1. Spekulanci oczekują deprecjacji waluty\n2. Sprzedają walutę (zwiększają podaż)\n3. To powoduje deprecjację (samospełniające się proroctwo)\n4. Bank centralny próbuje bronić, używając rezerw\n5. Jeśli rezerwy się wyczerpią, waluta upada\n\n**Wyzwalacze**:\n- Duży deficyt rachunku bieżącego\n- Wysoka inflacja\n- Niepewność polityczna\n- Utrata zaufania do rządu/banku centralnego\n\n**Ochrona**:\n- Duże rezerwy\n- Podniesienie stóp procentowych\n- Kontrola walutowa\n- Porzucenie stałego kursu (dewaluacja)\n\n## Podsumowanie lekcji: Rynek walutowy\n\nRynek walutowy to miejsce, gdzie wymienia się waluty. Popyt i podaż określają kursy walutowe. Banki centralne gromadzą rezerwy do interwencji i stabilizacji. Ataki spekulacyjne mogą zniszczyć walutę, jeśli rezerwy są niewystarczające. Utrzymanie stałego kursu wymaga znacznych rezerw i może być kosztowne.",
+                  "importantPoints": [
+                    "Rynek walutowy to największy rynek finansowy na świecie",
+                    "Popyt i podaż określają kursy walutowe",
+                    "Banki centralne gromadzą rezerwy do interwencji",
+                    "Ataki spekulacyjne mogą zniszczyć walutę",
+                    "Utrzymanie stałego kursu wymaga dużych rezerw"
+                  ]
                 },
                 "macroecon-u6-l3-practice": {
                   "title": "Praktyka: Rynek walutowy"
@@ -1385,7 +1737,15 @@
                   "title": "Wpływ zmian w polityce i warunkach ekonomicznych na rynek walutowy"
                 },
                 "macroecon-u6-l4-article": {
-                  "title": "Poznaj: Wpływ zmian w polityce i warunkach ekonomicznych na rynek walutowy"
+                  "title": "Poznaj: Wpływ zmian w polityce i warunkach ekonomicznych na rynek walutowy",
+                  "content": "# Wpływ zmian w polityce i warunkach ekonomicznych na rynek walutowy\n\n## Przyczyny przesunięć krzywych podaży i popytu waluty\n\n**Czynniki, które przesuwają popyt na walutę** (zwiększają popyt → waluta aprecjonuje się):\n\n1. **Wzrost zagranicznego popytu na eksport**:\n   - Cudzoziemcy potrzebują waluty do zakupu dóbr\n   - Krzywa popytu przesuwa się w prawo\n   - Waluta aprecjonuje się\n\n2. **Wzrost inwestycji zagranicznych**:\n   - Cudzoziemcy potrzebują waluty do inwestycji\n   - Krzywa popytu przesuwa się w prawo\n   - Waluta aprecjonuje się\n\n3. **Wyższe stopy procentowe** (względem innych krajów):\n   - Przyciąga kapitał zagraniczny\n   - Krzywa popytu przesuwa się w prawo\n   - Waluta aprecjonuje się\n\n4. **Wyższe oczekiwane zyski**:\n   - Spekulanci kupują walutę\n   - Krzywa popytu przesuwa się w prawo\n   - Waluta aprecjonuje się\n\n5. **Wzrost gospodarczy**:\n   - Przyciąga inwestycje\n   - Krzywa popytu przesuwa się w prawo\n   - Waluta aprecjonuje się\n\n**Czynniki, które przesuwają podaż waluty** (zwiększają podaż → waluta deprecjonuje się):\n\n1. **Wzrost popytu na import**:\n   - Mieszkańcy potrzebują waluty zagranicznej\n   - Podaż waluty krajowej rośnie\n   - Krzywa podaży przesuwa się w prawo\n   - Waluta deprecjonuje się\n\n2. **Wzrost inwestycji zagranicznych mieszkańców**:\n   - Mieszkańcy potrzebują waluty zagranicznej\n   - Podaż waluty krajowej rośnie\n   - Waluta deprecjonuje się\n\n3. **Niższe stopy procentowe** (względem innych krajów):\n   - Kapitał odpływa\n   - Krzywa podaży przesuwa się w prawo\n   - Waluta deprecjonuje się\n\n4. **Niższe oczekiwane zyski**:\n   - Spekulanci sprzedają walutę\n   - Krzywa podaży przesuwa się w prawo\n   - Waluta deprecjonuje się\n\n5. **Inflacja**:\n   - Zmniejsza konkurencyjność\n   - Krzywa podaży przesuwa się w prawo\n   - Waluta deprecjonuje się\n\n## Efekty polityki fiskalnej\n\n**Polityka fiskalna ekspansywna** (zwiększenie wydatków, obniżenie podatków):\n- Zwiększa dochody i import\n- Zwiększa podaż waluty\n- Waluta deprecjonuje się\n- ALE: Również zwiększa stopy procentowe (jeśli finansowana pożyczkami)\n- Wyższe stopy procentowe zwiększają popyt\n- Efekt netto zależy od względnych wielkości\n\n**Polityka fiskalna restrykcyjna**:\n- Zmniejsza dochody i import\n- Zmniejsza podaż waluty\n- Waluta aprecjonuje się\n- ALE: Również zmniejsza stopy procentowe\n- Niższe stopy procentowe zmniejszają popyt\n- Efekt netto zależy od względnych wielkości\n\n## Efekty polityki monetarnej\n\n**Polityka monetarna ekspansywna** (zwiększenie podaży pieniądza, obniżenie stóp procentowych):\n- Niższe stopy procentowe → Odpływ kapitału\n- Podaż waluty rośnie\n- Waluta deprecjonuje się\n- Również: Wyższa inflacja → Dalsza deprecjacja\n\n**Polityka monetarna restrykcyjna** (zmniejszenie podaży pieniądza, podniesienie stóp procentowych):\n- Wyższe stopy procentowe → Napływ kapitału\n- Popyt na walutę rośnie\n- Waluta aprecjonuje się\n- Również: Niższa inflacja → Dalsza aprecjacja\n\n## Inne warunki ekonomiczne\n\n**Inflacja**:\n- Zmniejsza konkurencyjność\n- Zwiększa podaż waluty\n- Waluta deprecjonuje się\n\n**Wzrost gospodarczy**:\n- Może przyciągać inwestycje (aprecjacja)\n- Może zwiększać import (deprecjacja)\n- Efekt netto zależy od względnych wielkości\n\n**Stabilność polityczna**:\n- Stabilność przyciąga inwestycje (aprecjacja)\n- Niepewność powoduje ucieczkę kapitału (deprecjacja)\n\n## Podsumowanie lekcji: Wpływ zmian w polityce i warunkach ekonomicznych na rynek walutowy\n\nWiele czynników przesuwa popyt i podaż waluty. Wyższe stopy procentowe, eksport i inwestycje zwiększają popyt (aprecjacja). Wyższy import, niższe stopy procentowe i inflacja zwiększają podaż (deprecjacja). Polityka fiskalna ma mieszane efekty. Polityka monetarna wyraźnie wpływa na kursy walutowe poprzez stopy procentowe. Warunki ekonomiczne, takie jak wzrost, inflacja i stabilność, również mają znaczenie.",
+                  "importantPoints": [
+                    "Wiele czynników przesuwa popyt i podaż waluty",
+                    "Wyższe stopy procentowe → Aprecjacja waluty",
+                    "Wyższy import → Deprecjacja waluty",
+                    "Polityka monetarna wpływa na kursy walutowe poprzez stopy procentowe",
+                    "Polityka fiskalna ma mieszane efekty w zależności od względnych wielkości"
+                  ]
                 },
                 "macroecon-u6-l4-practice": {
                   "title": "Praktyka: Wpływ zmian w polityce i warunkach ekonomicznych na rynek walutowy"
@@ -1402,7 +1762,15 @@
                   "title": "Realne stopy procentowe i międzynarodowe przepływy kapitału"
                 },
                 "macroecon-u6-l5-article": {
-                  "title": "Poznaj: Changes in the foreign exchange markets and net exports"
+                  "title": "Poznaj: Zmiany na rynkach walutowych i eksport netto",
+                  "content": "# Realne stopy procentowe i międzynarodowe przepływy kapitału\n\n## Wprowadzenie do wymiany walut i handlu\n\n**Międzynarodowe przepływy kapitału** to przepływy pieniędzy przez granice w celu inwestycji.\n\n**Realna stopa procentowa** = Nominalna stopa procentowa - Poziom inflacji\n\n**Kluczowa relacja**: Różnice realnych stóp procentowych napędzają międzynarodowe przepływy kapitału.\n\n**Przepływy kapitału**:\n- **Napływ**: Cudzoziemcy inwestują w kraju (popyt na walutę rośnie)\n- **Odpływ**: Mieszkańcy inwestują za granicą (podaż waluty rośnie)\n\n## Realne stopy procentowe i przepływy kapitału\n\n**Wyższe realne stopy procentowe** (względem innych krajów):\n- Przyciągają inwestycje zagraniczne\n- Napływ kapitału rośnie\n- Popyt na walutę rośnie\n- Waluta aprecjonuje się\n\n**Niższe realne stopy procentowe** (względem innych krajów):\n- Zniechęcają inwestycje zagraniczne\n- Odpływ kapitału rośnie\n- Podaż waluty rośnie\n- Waluta deprecjonuje się\n\n**Realne a nominalne stopy**:\n- Inwestorzy dbają o realne zyski (siła nabywcza)\n- Realna stopa = Stopa nominalna - Inflacja\n- Wysoka stopa nominalna z wysoką inflacją = Niska stopa realna\n\n## Kursy walutowe i eksport netto\n\n**Gdy waluta aprecjonuje się**:\n- Dobra krajowe stają się droższe dla cudzoziemców\n- Dobra zagraniczne stają się tańsze dla mieszkańców\n- Eksport maleje\n- Import rośnie\n- Eksport netto maleje (bilans handlowy pogarsza się)\n\n**Gdy waluta deprecjonuje się**:\n- Dobra krajowe stają się tańsze dla cudzoziemców\n- Dobra zagraniczne stają się droższe dla mieszkańców\n- Eksport rośnie\n- Import maleje\n- Eksport netto rośnie (bilans handlowy poprawia się)\n\n**Efekt krzywej J**:\n- Początkowo: Deprecjacja może pogorszyć bilans handlowy (kontrakty w walucie zagranicznej)\n- Ostatecznie: Bilans handlowy poprawia się (efekt wolumenu dominuje)\n\n## Implikacje polityczne\n\n**Polityka monetarna**:\n- Niższe stopy procentowe → Waluta deprecjonuje się → Eksport netto rośnie\n- Wyższe stopy procentowe → Waluta aprecjonuje się → Eksport netto maleje\n\n**Polityka fiskalna**:\n- Ekspansywna → Wyższe stopy procentowe → Waluta aprecjonuje się → Eksport netto maleje\n- To kompensuje część efektu ekspansywnego\n\n**Kompromisy**:\n- Nie można jednocześnie mieć:\n  - Stałego kursu walutowego\n  - Niezależnej polityki monetarnej\n  - Swobodnych przepływów kapitału\n- Trzeba wybrać dwa (niemożliwa trójca)\n\n## Podsumowanie lekcji: Zmiany na rynkach walutowych i eksport netto\n\nRóżnice realnych stóp procentowych napędzają międzynarodowe przepływy kapitału. Wyższe realne stopy przyciągają kapitał (aprecjacja). Niższe realne stopy powodują odpływ kapitału (deprecjacja). Aprecjacja waluty zmniejsza eksport netto. Deprecjacja waluty zwiększa eksport netto. Polityka monetarna i fiskalna wpływają na kursy walutowe, a tym samym na bilanse handlowe. Niemożliwa trójca ogranicza opcje polityczne.",
+                  "importantPoints": [
+                    "Różnice realnych stóp procentowych napędzają przepływy kapitału",
+                    "Wyższe realne stopy → Napływ kapitału → Aprecjacja waluty",
+                    "Aprecjacja waluty → Niższy eksport netto",
+                    "Deprecjacja waluty → Wyższy eksport netto",
+                    "Niemożliwa trójca: nie można mieć stałego kursu, niezależnej polityki monetarnej i swobodnych przepływów kapitału"
+                  ]
                 },
                 "macroecon-u6-l5-practice": {
                   "title": "Praktyka: Zmiany na rynkach walutowych i eksport netto"

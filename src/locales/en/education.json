@@ -130,7 +130,13 @@
     "masteryCheckReview": "Review the material and try again. Pass rate: {{rate}}%",
     "module": "Module",
     "unit": "Unit",
-    "practiceComingSoon": "Practice exercises coming soon"
+    "practiceComingSoon": "Practice exercises coming soon",
+    "previous": "Previous",
+    "next": "Next",
+    "questionXOfY": "Question {{current}} of {{total}}",
+    "quizCompleted": "Quiz completed!",
+    "masteryCheckCompleted": "Mastery Check completed!",
+    "examCompleted": "Exam completed!"
   },
   "course": {
     "investment-fundamentals": {
@@ -697,7 +703,15 @@
                   "title": "Command and market economies"
                 },
                 "macroecon-u1-l1-article": {
-                  "title": "Learn: Introduction to macroeconomics"
+                  "title": "Learn: Introduction to macroeconomics",
+                  "content": "# Introduction to Macroeconomics\n\n## Introduction to economics\n\nEconomics is the study of how societies allocate scarce resources to satisfy unlimited wants and needs. It examines the choices individuals, businesses, and governments make when resources are limited.\n\n## Scarcity\n\nScarcity is the fundamental economic problem. It exists because resources are limited while human wants are unlimited. This forces us to make choices about how to use resources efficiently.\n\nKey points about scarcity:\n- Resources are finite (land, labor, capital, entrepreneurship)\n- Wants and needs are infinite\n- Every choice involves an opportunity cost\n- Scarcity affects everyone, from individuals to entire nations\n\n## Normative and positive statements\n\n**Positive statements** are objective, fact-based claims that can be tested and verified. They describe \"what is.\"\n\nExamples:\n- \"Unemployment increased by 2% last quarter\"\n- \"The inflation rate is 3%\"\n\n**Normative statements** are subjective, value-based claims that express opinions about \"what ought to be.\"\n\nExamples:\n- \"The government should reduce unemployment\"\n- \"Inflation is too high\"\n\n## Economic models\n\nEconomic models are simplified representations of reality used to understand, explain, and predict economic behavior. They help economists:\n- Focus on key relationships\n- Make predictions\n- Test theories\n- Understand complex systems\n\nModels use assumptions to simplify reality, making them useful but not perfect representations.\n\n## Command and market economies\n\n**Command economy** (planned economy):\n- Government makes all economic decisions\n- Central planning determines what, how, and for whom to produce\n- Examples: Historical Soviet Union, North Korea\n\n**Market economy** (free market):\n- Individuals and businesses make economic decisions\n- Prices determined by supply and demand\n- Examples: United States, most developed countries\n\nMost modern economies are **mixed economies**, combining elements of both systems.\n\n## Lesson summary: Introduction to Macroeconomics\n\nEconomics studies how societies allocate scarce resources. Scarcity forces choices, and every choice has an opportunity cost. Economic models help us understand complex systems. Economies can be organized as command, market, or mixed systems.",
+                  "importantPoints": [
+                    "Economics studies how societies allocate scarce resources",
+                    "Scarcity is the fundamental economic problem",
+                    "Positive statements are factual; normative statements are value judgments",
+                    "Economic models simplify reality to help us understand complex systems",
+                    "Command economies are centrally planned; market economies rely on individual decisions"
+                  ]
                 },
                 "macroecon-u1-l1-practice": {
                   "title": "Practice: Introduction to scarcity and the economic way of thinking"
@@ -714,7 +728,15 @@
                   "title": "Opportunity cost and the Production Possibilities Curve"
                 },
                 "macroecon-u1-l2-article": {
-                  "title": "Learn: Opportunity cost and the Production Possibilities Curve"
+                  "title": "Learn: Opportunity cost and the Production Possibilities Curve",
+                  "content": "# Opportunity Cost and the Production Possibilities Curve\n\n## Production possibilities curve\n\nThe Production Possibilities Curve (PPC) shows the maximum combinations of two goods or services an economy can produce when all resources are fully and efficiently employed.\n\nKey characteristics:\n- Shows trade-offs between producing different goods\n- Points on the curve represent efficient production\n- Points inside the curve represent inefficient production\n- Points outside the curve are unattainable with current resources\n\n## Opportunity cost\n\nOpportunity cost is the value of the next best alternative that must be given up when making a choice. It's what you sacrifice to get something else.\n\nExample: If you choose to study economics for 2 hours instead of working, the opportunity cost is the wages you could have earned.\n\n## Increasing opportunity cost\n\nWhen opportunity cost increases as more of one good is produced, the PPC is bowed outward (concave to the origin). This occurs because:\n- Resources are not perfectly adaptable\n- Some resources are better suited for producing one good than another\n- As production shifts, less suitable resources must be used\n\n## PPCs for increasing, decreasing and constant opportunity cost\n\n**Increasing opportunity cost** (bowed outward):\n- Most realistic scenario\n- Resources are specialized\n- Opportunity cost rises as production increases\n\n**Constant opportunity cost** (straight line):\n- Resources are perfectly adaptable\n- Opportunity cost remains constant\n- Less realistic but useful for analysis\n\n**Decreasing opportunity cost** (bowed inward):\n- Rare in practice\n- Would occur if resources become more efficient when specialized\n\n## Production Possibilities Curve as a model of a country's economy\n\nThe PPC can represent:\n- A country's production capacity\n- Trade-offs between different sectors (e.g., consumer goods vs. capital goods)\n- Economic growth (shifts outward)\n- Economic decline (shifts inward)\n- Efficiency and inefficiency\n\n## Lesson summary: Opportunity cost and the PPC\n\nThe PPC illustrates maximum production possibilities and trade-offs. Opportunity cost is what you give up to get something else. Most PPCs show increasing opportunity cost, creating a bowed-outward curve. The PPC is a useful model for understanding economic choices and constraints.",
+                  "importantPoints": [
+                    "The PPC shows maximum production combinations when resources are fully employed",
+                    "Opportunity cost is the value of the next best alternative",
+                    "Increasing opportunity cost creates a bowed-outward PPC",
+                    "Points on the curve are efficient; points inside are inefficient",
+                    "The PPC can model a country's production possibilities and trade-offs"
+                  ]
                 },
                 "macroecon-u1-l2-practice": {
                   "title": "Practice: Opportunity cost and the PPC"
@@ -731,7 +753,15 @@
                   "title": "Comparative advantage and the gains from trade"
                 },
                 "macroecon-u1-l3-article": {
-                  "title": "Learn: Comparative advantage and the gains from trade"
+                  "title": "Learn: Comparative advantage and the gains from trade",
+                  "content": "# Comparative Advantage and the Gains from Trade\n\n## Comparative advantage, specialization, and gains from trade\n\n**Comparative advantage** occurs when a country (or individual) can produce a good at a lower opportunity cost than another country. This is the basis for beneficial trade.\n\n**Specialization** means focusing production on goods where you have a comparative advantage.\n\n**Gains from trade** occur when countries specialize and trade, allowing both to consume more than they could produce alone.\n\n## Comparative advantage and absolute advantage\n\n**Absolute advantage**: The ability to produce more of a good with the same resources (or the same amount with fewer resources).\n\n**Comparative advantage**: The ability to produce a good at a lower opportunity cost.\n\nImportant: A country can have an absolute advantage in both goods but still benefit from trade if it has a comparative advantage in one good.\n\n## Opportunity cost and comparative advantage using an output table\n\nWhen using output tables (showing how much each country can produce):\n\n1. Calculate opportunity cost for each good in each country\n2. The country with the lower opportunity cost has the comparative advantage\n3. That country should specialize in that good\n\nExample:\n- Country A: 10 wheat or 5 cloth\n- Country B: 8 wheat or 4 cloth\n\nCountry A's opportunity cost: 1 wheat = 0.5 cloth; 1 cloth = 2 wheat\nCountry B's opportunity cost: 1 wheat = 0.5 cloth; 1 cloth = 2 wheat\n\nIn this case, opportunity costs are equal, so no gains from trade.\n\n## Terms of trade and the gains from trade\n\n**Terms of trade** is the ratio at which countries exchange goods. It must fall between the opportunity costs of both countries for trade to be beneficial.\n\nIf terms of trade are:\n- Equal to a country's opportunity cost: No gain for that country\n- Between opportunity costs: Both countries gain\n- Outside opportunity costs: One country loses\n\n## Input approach to determining comparative advantage\n\nWhen using input tables (showing resources needed to produce one unit):\n\n1. Calculate output per unit of input for each good in each country\n2. Find the ratio of outputs\n3. The country with the higher ratio has the comparative advantage\n\nLower input requirements mean higher productivity and comparative advantage.\n\n## When there aren't gains from trade\n\nTrade doesn't provide gains when:\n- Opportunity costs are identical\n- One country has an absolute and comparative advantage in everything (rare)\n- Trade barriers prevent beneficial exchange\n- Transportation costs exceed gains\n\n## Comparative advantage worked example\n\n**Country X**: Can produce 20 cars or 40 computers\n**Country Y**: Can produce 10 cars or 30 computers\n\nCountry X opportunity cost: 1 car = 2 computers; 1 computer = 0.5 cars\nCountry Y opportunity cost: 1 car = 3 computers; 1 computer = 0.33 cars\n\nCountry X has comparative advantage in computers (lower opportunity cost: 0.5 < 0.33)\nCountry Y has comparative advantage in cars (lower opportunity cost: 3 < 2)\n\nBoth countries benefit by specializing and trading.\n\n## Lesson summary: Comparative advantage and gains from trade\n\nComparative advantage (lower opportunity cost) is the basis for beneficial trade. Countries should specialize in goods where they have a comparative advantage. Terms of trade must fall between opportunity costs for both to benefit. Trade increases total world production and consumption.",
+                  "importantPoints": [
+                    "Comparative advantage is based on opportunity cost, not absolute advantage",
+                    "Countries benefit from specializing in goods where they have comparative advantage",
+                    "Terms of trade must be between opportunity costs for both countries to gain",
+                    "Trade increases total world production and consumption",
+                    "Even countries with absolute advantage in everything can benefit from trade"
+                  ]
                 },
                 "macroecon-u1-l3-practice": {
                   "title": "Practice: Comparative advantage and the gains from trade"
@@ -748,7 +778,15 @@
                   "title": "Demand"
                 },
                 "macroecon-u1-l4-article": {
-                  "title": "Learn: Demand"
+                  "title": "Learn: Demand",
+                  "content": "# Demand\n\n## Law of demand\n\nThe **law of demand** states that, all else equal, as the price of a good increases, the quantity demanded decreases, and as the price decreases, the quantity demanded increases.\n\nThis creates a downward-sloping demand curve, showing the inverse relationship between price and quantity demanded.\n\n## Price of related products and demand\n\n**Substitute goods**: Goods that can be used in place of each other. When the price of a substitute increases, demand for the original good increases.\n\nExample: If the price of coffee rises, demand for tea increases.\n\n**Complementary goods**: Goods used together. When the price of a complement increases, demand for the original good decreases.\n\nExample: If the price of gasoline rises, demand for cars decreases.\n\n## Change in expected future prices and demand\n\nIf consumers expect prices to rise in the future, current demand increases (buy now before prices go up).\n\nIf consumers expect prices to fall in the future, current demand decreases (wait for lower prices).\n\n## Changes in income, population, or preferences\n\n**Income changes**:\n- **Normal goods**: Demand increases as income increases\n- **Inferior goods**: Demand decreases as income increases\n\n**Population changes**: More people means more demand (shift right), fewer people means less demand (shift left).\n\n**Preferences/tastes**: Changes in what people like affect demand. Positive changes increase demand; negative changes decrease demand.\n\n## Normal and inferior goods\n\n**Normal goods**: Goods for which demand increases as income increases. Most goods are normal goods.\n\nExamples: Cars, restaurant meals, vacations\n\n**Inferior goods**: Goods for which demand decreases as income increases. People buy less as they can afford better alternatives.\n\nExamples: Generic brands, public transportation (for some), instant noodles\n\n## Change in demand versus change in quantity demanded\n\n**Change in quantity demanded**: Movement along the demand curve caused by a change in price. This is shown as movement from one point to another on the same curve.\n\n**Change in demand**: Shift of the entire demand curve caused by factors other than price (income, preferences, prices of related goods, expectations, population). The curve shifts left (decrease) or right (increase).\n\nKey distinction: Price changes cause movement along the curve; other factors cause the curve to shift.\n\n## Lesson summary: Demand and the determinants of demand\n\nThe law of demand shows the inverse relationship between price and quantity. Demand is affected by prices of related goods (substitutes and complements), income, population, preferences, and expectations. Normal goods increase with income; inferior goods decrease. Distinguish between movement along the curve (price change) and shifts of the curve (other factors).",
+                  "importantPoints": [
+                    "The law of demand shows an inverse relationship between price and quantity demanded",
+                    "Substitute goods compete; complementary goods are used together",
+                    "Expected future prices affect current demand",
+                    "Normal goods increase with income; inferior goods decrease",
+                    "Price changes cause movement along the curve; other factors shift the curve"
+                  ]
                 },
                 "macroecon-u1-l4-practice": {
                   "title": "Practice: Demand"
@@ -765,7 +803,15 @@
                   "title": "Supply"
                 },
                 "macroecon-u1-l5-article": {
-                  "title": "Learn: Supply"
+                  "title": "Learn: Supply",
+                  "content": "# Supply\n\n## Law of supply\n\nThe **law of supply** states that, all else equal, as the price of a good increases, the quantity supplied increases, and as the price decreases, the quantity supplied decreases.\n\nThis creates an upward-sloping supply curve, showing the direct relationship between price and quantity supplied.\n\nProducers are willing to supply more at higher prices because:\n- Higher prices mean higher profits\n- It becomes profitable to produce more units\n- Higher prices can justify higher production costs\n\n## Factors affecting supply\n\nFactors that shift the supply curve (change supply):\n\n1. **Input prices**: Higher input costs decrease supply (shift left); lower costs increase supply (shift right)\n\n2. **Technology**: Better technology increases supply (shift right) by making production more efficient\n\n3. **Number of sellers**: More sellers increase supply (shift right); fewer sellers decrease supply (shift left)\n\n4. **Expectations**: If producers expect higher future prices, they may decrease current supply (shift left) to sell later\n\n5. **Government policies**: Taxes decrease supply (shift left); subsidies increase supply (shift right)\n\n6. **Natural conditions**: Weather, disasters, etc. can affect supply of agricultural and natural resource goods\n\n## Change in supply versus change in quantity supplied\n\n**Change in quantity supplied**: Movement along the supply curve caused by a change in price. This is shown as movement from one point to another on the same curve.\n\n**Change in supply**: Shift of the entire supply curve caused by factors other than price (input costs, technology, number of sellers, expectations, government policies). The curve shifts left (decrease) or right (increase).\n\nKey distinction: Price changes cause movement along the curve; other factors cause the curve to shift.\n\n## Lesson summary: Supply and its determinants\n\nThe law of supply shows the direct relationship between price and quantity supplied. Supply is affected by input prices, technology, number of sellers, expectations, and government policies. Distinguish between movement along the curve (price change) and shifts of the curve (other factors).",
+                  "importantPoints": [
+                    "The law of supply shows a direct relationship between price and quantity supplied",
+                    "Higher input costs decrease supply; better technology increases supply",
+                    "More sellers increase supply; fewer sellers decrease supply",
+                    "Price changes cause movement along the curve; other factors shift the curve",
+                    "Government policies (taxes, subsidies) affect supply"
+                  ]
                 },
                 "macroecon-u1-l5-practice": {
                   "title": "Practice: Supply"
@@ -782,7 +828,15 @@
                   "title": "Markets"
                 },
                 "macroecon-u1-l6-article": {
-                  "title": "Learn: Markets"
+                  "title": "Learn: Markets",
+                  "content": "# Markets\n\n## Market equilibrium\n\n**Market equilibrium** occurs when the quantity demanded equals the quantity supplied at a particular price. This is the point where the demand and supply curves intersect.\n\nAt equilibrium:\n- Quantity demanded = Quantity supplied\n- No shortage or surplus\n- Price is stable (no pressure to change)\n- Market clears (all goods are sold)\n\nThe equilibrium price is also called the \"market-clearing price.\"\n\n## Changes in market equilibrium\n\nEquilibrium changes when either the demand curve or supply curve shifts:\n\n**Demand shifts**:\n- Increase in demand (shift right) → Higher equilibrium price and quantity\n- Decrease in demand (shift left) → Lower equilibrium price and quantity\n\n**Supply shifts**:\n- Increase in supply (shift right) → Lower equilibrium price, higher quantity\n- Decrease in supply (shift left) → Higher equilibrium price, lower quantity\n\n## Changes in equilibrium price and quantity when supply and demand change\n\nWhen both curves shift simultaneously:\n\n**Both increase**:\n- Demand ↑ and Supply ↑ → Quantity definitely increases\n- Price change is ambiguous (depends on magnitude of shifts)\n\n**Both decrease**:\n- Demand ↓ and Supply ↓ → Quantity definitely decreases\n- Price change is ambiguous\n\n**Demand increases, Supply decreases**:\n- Price definitely increases\n- Quantity change is ambiguous\n\n**Demand decreases, Supply increases**:\n- Price definitely decreases\n- Quantity change is ambiguous\n\n## Lesson summary: Market equilibrium, disequilibrium, and changes in equilibrium\n\nMarket equilibrium occurs when quantity demanded equals quantity supplied. Equilibrium changes when demand or supply shifts. When both shift, one variable (price or quantity) changes definitely while the other is ambiguous, depending on the relative magnitude of the shifts.",
+                  "importantPoints": [
+                    "Equilibrium occurs when quantity demanded equals quantity supplied",
+                    "At equilibrium, the market clears with no shortage or surplus",
+                    "Demand shifts affect both price and quantity in the same direction",
+                    "Supply shifts affect price and quantity in opposite directions",
+                    "When both curves shift, one outcome is definite, the other is ambiguous"
+                  ]
                 },
                 "macroecon-u1-l6-practice": {
                   "title": "Practice: Market equilibrium and disequilibrium, Changes in equilibrium"
@@ -805,7 +859,15 @@
                   "title": "Gross Domestic Product (The circular flow and GDP)"
                 },
                 "macroecon-u2-l1-article": {
-                  "title": "Learn: Gross Domestic Product (The circular flow and GDP)"
+                  "title": "Learn: Gross Domestic Product (The circular flow and GDP)",
+                  "content": "# Gross Domestic Product: The Circular Flow and GDP\n\n## Circular flow of income and expenditures\n\nThe **circular flow model** shows how money, goods, and services flow through an economy between households and firms.\n\nKey components:\n- **Households**: Provide factors of production (labor, land, capital) and receive income\n- **Firms**: Use factors of production to produce goods and services, pay income to households\n- **Product market**: Where goods and services are sold\n- **Factor market**: Where factors of production are bought and sold\n\nMoney flows in one direction; goods, services, and factors flow in the opposite direction.\n\n## Parsing gross domestic product\n\n**Gross Domestic Product (GDP)** is the total market value of all final goods and services produced within a country's borders in a specific time period.\n\nKey terms:\n- **Gross**: Total, before accounting for depreciation\n- **Domestic**: Within country's borders (regardless of ownership)\n- **Product**: Final goods and services\n\n## More on final and intermediate GDP contributions\n\n**Final goods**: Goods sold to end users (consumers, businesses, government, foreign buyers). These are counted in GDP.\n\n**Intermediate goods**: Goods used in the production of other goods. These are NOT counted in GDP to avoid double-counting.\n\nExample: A car sold to a consumer is final; the steel used to make the car is intermediate.\n\n## Investment and consumption\n\n**Consumption (C)**: Spending by households on goods and services (except new housing).\n\n**Investment (I)**: Spending on capital goods that will be used in future production:\n- Business investment (machinery, equipment, buildings)\n- Residential investment (new housing)\n- Inventory investment (changes in unsold goods)\n\nNote: Investment in economics ≠ financial investment (stocks, bonds).\n\n## Income and expenditure views of GDP\n\nGDP can be measured two ways, and they should equal:\n\n**Expenditure approach**: GDP = C + I + G + (X - M)\n- C = Consumption\n- I = Investment\n- G = Government spending\n- X = Exports\n- M = Imports\n- (X - M) = Net exports\n\n**Income approach**: GDP = Wages + Rent + Interest + Profit\n\nBoth approaches should yield the same GDP value.\n\n## Value added approach to calculating GDP\n\n**Value added** = Value of output - Value of intermediate inputs\n\nGDP = Sum of value added at each stage of production\n\nThis avoids double-counting intermediate goods by only counting the value added at each stage.\n\n## Components of GDP\n\nGDP has four main components:\n\n1. **Consumption (C)**: Largest component, household spending\n2. **Investment (I)**: Business and residential investment\n3. **Government spending (G)**: Government purchases (not transfers)\n4. **Net exports (X - M)**: Exports minus imports\n\n## Expenditure approach to calculating GDP examples\n\nExample calculation:\n- Consumption: $10,000\n- Investment: $2,000\n- Government spending: $3,000\n- Exports: $1,500\n- Imports: $2,000\n\nGDP = C + I + G + (X - M)\nGDP = $10,000 + $2,000 + $3,000 + ($1,500 - $2,000)\nGDP = $14,500\n\n## Examples of accounting for GDP\n\nWhen calculating GDP:\n- Count final goods only\n- Don't count intermediate goods\n- Count goods produced within borders (regardless of ownership)\n- Count production in the time period (not sales of used goods)\n\n## Lesson summary: The circular flow and GDP\n\nGDP measures total production within a country's borders. It can be calculated using expenditure, income, or value-added approaches. GDP includes consumption, investment, government spending, and net exports. Only final goods are counted to avoid double-counting.",
+                  "importantPoints": [
+                    "GDP is the total market value of all final goods and services produced within a country's borders",
+                    "Only final goods are counted in GDP; intermediate goods are excluded",
+                    "GDP = C + I + G + (X - M) using the expenditure approach",
+                    "The circular flow model shows how money and goods flow between households and firms",
+                    "GDP can be measured using expenditure, income, or value-added approaches"
+                  ]
                 },
                 "macroecon-u2-l1-practice": {
                   "title": "Practice: The circular flow model and GDP"
@@ -821,8 +883,34 @@
                 "macroecon-u2-l2-video-1": {
                   "title": "Limitations of GDP"
                 },
-                "macroecon-u2-l2-article": {
-                  "title": "Learn: Limitations of GDP"
+                "macroecon-u2-l2-article-1": {
+                  "title": "Learn: Beyond GDP: other ways to measure the economy",
+                  "content": "# Beyond GDP: Other Ways to Measure the Economy\n\nAlternative measures include:\n\n**Gross National Product (GNP)**: GDP + income earned abroad by residents - income earned domestically by foreigners\n\n**Net Domestic Product (NDP)**: GDP - depreciation (capital consumption)\n\n**Green GDP**: GDP adjusted for environmental costs\n\n**Human Development Index (HDI)**: Combines income, education, and life expectancy\n\n**Genuine Progress Indicator (GPI)**: Adjusts GDP for social and environmental factors\n\n**Happy Planet Index**: Measures sustainable well-being\n\nThese alternative measures attempt to address the limitations of GDP by incorporating factors such as environmental sustainability, social well-being, and quality of life indicators.",
+                  "importantPoints": [
+                    "Alternative measures like HDI and GPI address GDP limitations",
+                    "Green GDP adjusts for environmental costs",
+                    "GNP includes income from abroad",
+                    "NDP accounts for capital depreciation"
+                  ]
+                },
+                "macroecon-u2-l2-article-2": {
+                  "title": "Learn: How well GDP measures the well-being of society",
+                  "content": "# How Well GDP Measures the Well-Being of Society\n\nGDP is a good measure of:\n- Economic output and production\n- Economic growth over time\n- Size of the economy\n\nGDP is NOT a good measure of:\n- Overall well-being or happiness\n- Quality of life\n- Environmental sustainability\n- Income equality\n- Non-market production\n- Leisure time\n\nA country can have high GDP but poor quality of life, or vice versa.\n\nGDP has several important limitations as a measure of economic well-being:\n\n1. **Doesn't measure non-market activities**: Unpaid work (household chores, childcare) isn't counted\n2. **Doesn't account for quality of life**: Environmental quality, leisure time, health aren't measured\n3. **Doesn't reflect income distribution**: GDP can grow while inequality increases\n4. **Doesn't account for negative externalities**: Pollution, resource depletion aren't subtracted\n5. **Doesn't measure informal economy**: Underground economy activities aren't included\n6. **Doesn't account for depreciation**: GDP is \"gross,\" not accounting for capital wear and tear\n7. **Doesn't measure sustainability**: Doesn't show if growth is sustainable long-term",
+                  "importantPoints": [
+                    "GDP doesn't measure non-market activities or quality of life",
+                    "GDP doesn't reflect income distribution or negative externalities",
+                    "GDP doesn't account for informal economy or sustainability",
+                    "GDP measures output well but not overall well-being"
+                  ]
+                },
+                "macroecon-u2-l2-article-3": {
+                  "title": "Learn: Lesson summary: The limitations of GDP",
+                  "content": "# Lesson Summary: The Limitations of GDP\n\nGDP measures economic output but has significant limitations. It doesn't capture non-market activities, quality of life, income distribution, environmental costs, or sustainability. Alternative measures like HDI, GPI, and Green GDP attempt to address these limitations.\n\n## Key Takeaways\n\n- GDP is a good measure of economic output and production\n- GDP does not measure overall well-being, quality of life, or environmental sustainability\n- Alternative measures like HDI, GPI, and Green GDP provide more comprehensive views of economic performance\n- A country can have high GDP but poor quality of life, or vice versa",
+                  "importantPoints": [
+                    "GDP measures output but has significant limitations",
+                    "Alternative measures address GDP limitations",
+                    "GDP does not capture well-being or sustainability"
+                  ]
                 },
                 "macroecon-u2-l2-practice": {
                   "title": "Practice: Limitations of GDP"
@@ -839,7 +927,15 @@
                   "title": "Unemployment"
                 },
                 "macroecon-u2-l3-article": {
-                  "title": "Learn: Unemployment"
+                  "title": "Learn: Unemployment",
+                  "content": "# Lesson Summary: Unemployment\n\nThe unemployment rate measures job seekers as a percentage of the labor force. Unemployment types include frictional (job transitions), structural (skills mismatch), and cyclical (economic downturns). The natural rate is frictional + structural unemployment. Full employment means zero cyclical unemployment.\n\n## Unemployment Rate Primer\n\nThe **unemployment rate** measures the percentage of the labor force that is unemployed but actively seeking work.\n\nFormula: Unemployment Rate = (Number of Unemployed / Labor Force) × 100\n\n**Labor Force** = Employed + Unemployed (actively seeking work)\n\n**Not in labor force**: People who are not working and not seeking work (students, retirees, discouraged workers)\n\nImportant: The unemployment rate doesn't include discouraged workers or underemployed workers.\n\n## Natural, Cyclical, Structural, and Frictional Unemployment Rates\n\n**Frictional unemployment**: Short-term unemployment due to people moving between jobs or entering the labor force. This is normal and healthy.\n\n**Structural unemployment**: Long-term unemployment due to skills mismatch or changes in the economy (e.g., technology replacing workers). Workers' skills don't match available jobs.\n\n**Cyclical unemployment**: Unemployment caused by economic downturns (recessions). This is the type that monetary and fiscal policy try to reduce.\n\n**Natural rate of unemployment**: The sum of frictional and structural unemployment. This is the \"normal\" unemployment rate when the economy is at full employment.\n\n**Full employment**: When cyclical unemployment = 0. The economy can still have frictional and structural unemployment.",
+                  "importantPoints": [
+                    "Unemployment rate = (Unemployed / Labor Force) × 100",
+                    "Frictional unemployment is normal job transitions",
+                    "Structural unemployment is due to skills mismatch",
+                    "Cyclical unemployment is caused by economic downturns",
+                    "Natural rate = Frictional + Structural unemployment"
+                  ]
                 },
                 "macroecon-u2-l3-practice": {
                   "title": "Practice: Types of unemployment and the natural rate of unemployment, Unemployment"
@@ -855,8 +951,50 @@
                 "macroecon-u2-l4-video-1": {
                   "title": "Inflation (Price indices and inflation)"
                 },
-                "macroecon-u2-l4-article": {
-                  "title": "Learn: Inflation (Price indices and inflation)"
+                "macroecon-u2-l4-article-1": {
+                  "title": "Learn: Tracking inflation",
+                  "content": "# Tracking Inflation\n\nInflation is tracked using various price indices:\n- **CPI**: Consumer Price Index (consumer goods)\n- **PPI**: Producer Price Index (wholesale prices)\n- **GDP Deflator**: Broader measure including all GDP components\n\nEach index serves different purposes and provides insights into different aspects of price changes in the economy.",
+                  "importantPoints": [
+                    "CPI tracks consumer prices",
+                    "PPI tracks wholesale prices",
+                    "GDP Deflator is a broader measure"
+                  ]
+                },
+                "macroecon-u2-l4-article-2": {
+                  "title": "Learn: How changes in the cost of living are measured",
+                  "content": "# How Changes in the Cost of Living are Measured\n\nThe CPI measures changes in the cost of living by:\n1. Selecting a representative basket of goods and services\n2. Tracking prices of items in the basket\n3. Calculating weighted average price changes\n4. Comparing to base period\n\nLimitations:\n- May not reflect individual consumption patterns\n- Doesn't account for quality changes\n- Substitution bias (people buy cheaper alternatives)",
+                  "importantPoints": [
+                    "CPI uses a representative basket of goods",
+                    "Limitations include substitution bias and quality changes"
+                  ]
+                },
+                "macroecon-u2-l4-article-3": {
+                  "title": "Learn: How the United States and other countries experience inflation",
+                  "content": "# How the United States and Other Countries Experience Inflation\n\nInflation rates vary by country and over time:\n- **Hyperinflation**: Extremely high inflation (e.g., Zimbabwe, 2000s)\n- **Moderate inflation**: 2-5% annually (typical target for many countries)\n- **Low inflation**: Near 0-2% (many developed countries)\n- **Deflation**: Negative inflation (Japan, 1990s-2000s)\n\nCentral banks typically target 2% inflation as optimal for economic growth.",
+                  "importantPoints": [
+                    "Inflation rates vary by country",
+                    "Central banks typically target 2% inflation",
+                    "Hyperinflation and deflation are extreme cases"
+                  ]
+                },
+                "macroecon-u2-l4-article-4": {
+                  "title": "Learn: The confusion over inflation",
+                  "content": "# The Confusion Over Inflation\n\nCommon misconceptions:\n- Inflation doesn't mean all prices rise (some may fall)\n- Deflation isn't always bad (if caused by productivity gains)\n- Low inflation is generally preferred to deflation\n- Moderate inflation can encourage spending and investment\n\nUnderstanding these nuances helps clarify how inflation affects the economy and individual purchasing power.",
+                  "importantPoints": [
+                    "Inflation doesn't mean all prices rise",
+                    "Deflation isn't always bad",
+                    "Moderate inflation can encourage spending"
+                  ]
+                },
+                "macroecon-u2-l4-article-5": {
+                  "title": "Learn: Lesson summary: Price indices and inflation",
+                  "content": "# Lesson Summary: Price Indices and Inflation\n\nInflation is a sustained increase in the general price level. CPI measures consumer price changes using a basket of goods. Inflation reduces purchasing power. Deflation can be dangerous, leading to deflationary spirals. Stagflation combines stagnation with inflation. Central banks typically target moderate inflation (around 2%).\n\n## Key Concepts\n\n- **Inflation**: Sustained increase in general price level\n- **Deflation**: Sustained decrease in general price level\n- **CPI**: Consumer Price Index measures consumer price changes\n- **Stagflation**: Combination of stagnation and high inflation\n- **Deflationary spiral**: Dangerous cycle of falling prices and reduced demand",
+                  "importantPoints": [
+                    "Inflation is a sustained increase in the general price level",
+                    "CPI measures changes in consumer prices using a basket of goods",
+                    "Deflation can lead to deflationary spirals",
+                    "Stagflation combines stagnation with high inflation"
+                  ]
                 },
                 "macroecon-u2-l4-practice": {
                   "title": "Practice: The Consumer Price Index (CPI)"
@@ -873,7 +1011,15 @@
                   "title": "Costs of Inflation"
                 },
                 "macroecon-u2-l5-article": {
-                  "title": "Learn: Costs of Inflation"
+                  "title": "Learn: Costs of Inflation",
+                  "content": "# Lesson Summary: The Costs of Inflation\n\nInflation redistributes wealth from lenders to borrowers and from savers to spenders. It hurts fixed-income earners and those holding cash. Deflation has opposite effects but can be more dangerous, leading to economic contraction. Moderate, predictable inflation is generally preferred to deflation.\n\n## Winners and Losers from Inflation and Deflation\n\n**Winners from inflation**:\n- **Borrowers**: Repay loans with dollars worth less than when borrowed\n- **People with fixed-rate debt**: Mortgage holders benefit\n- **Asset owners**: Real estate, stocks may increase in nominal value\n\n**Losers from inflation**:\n- **Lenders**: Receive repayment in dollars worth less than when lent\n- **Savers**: Money loses purchasing power\n- **Fixed-income earners**: Wages/pensions don't keep up with prices\n- **People holding cash**: Cash loses value\n\n**Winners from deflation**:\n- **Lenders**: Receive repayment in dollars worth more\n- **Savers**: Money gains purchasing power\n- **Fixed-income earners**: Purchasing power increases\n\n**Losers from deflation**:\n- **Borrowers**: Repay loans with dollars worth more\n- **Businesses**: Falling prices reduce profits\n- **Workers**: Often leads to wage cuts and unemployment",
+                  "importantPoints": [
+                    "Inflation benefits borrowers and hurts lenders",
+                    "Inflation reduces purchasing power of savings and fixed incomes",
+                    "Deflation benefits lenders but can cause economic contraction",
+                    "Inflation redistributes wealth between different groups",
+                    "Moderate, predictable inflation is generally preferred"
+                  ]
                 },
                 "macroecon-u2-l5-practice": {
                   "title": "Practice: The costs of inflation"
@@ -889,8 +1035,24 @@
                 "macroecon-u2-l6-video-1": {
                   "title": "Real vs. nominal GDP"
                 },
-                "macroecon-u2-l6-article": {
-                  "title": "Learn: Real vs. nominal GDP"
+                "macroecon-u2-l6-article-1": {
+                  "title": "Learn: Adjusting nominal values to real values",
+                  "content": "# Adjusting Nominal Values to Real Values\n\nTo convert nominal to real:\nReal Value = (Nominal Value / Price Index) × 100\n\nTo convert real to nominal:\nNominal Value = (Real Value × Price Index) / 100\n\nThis adjustment removes the effect of inflation, allowing comparison across time periods.\n\n## Key Concepts\n\n- **Nominal values**: Measured in current prices\n- **Real values**: Measured in constant (base year) prices\n- **Price index**: Used to adjust for inflation\n- **Purpose**: Compare economic values across different time periods",
+                  "importantPoints": [
+                    "Real value = (Nominal value / Price index) × 100",
+                    "This adjustment removes inflation effects",
+                    "Allows comparison across time periods"
+                  ]
+                },
+                "macroecon-u2-l6-article-2": {
+                  "title": "Learn: Lesson summary: Real vs. nominal GDP",
+                  "content": "# Lesson Summary: Real vs. Nominal GDP\n\nNominal GDP uses current prices; real GDP uses constant base-year prices. Real GDP measures actual production changes, removing inflation effects. The GDP deflator converts between nominal and real GDP. Real GDP is the preferred measure for comparing economic growth over time.\n\n## Real GDP and Nominal GDP\n\n**Nominal GDP**: GDP measured in current prices (prices of the year being measured). It includes both quantity and price changes.\n\n**Real GDP**: GDP measured in constant prices (prices of a base year). It shows only quantity changes, removing the effect of inflation.\n\nReal GDP is the better measure of actual economic growth because it isolates changes in production from changes in prices.\n\n## GDP Deflator\n\nThe **GDP deflator** is a price index that measures the average price level of all goods and services included in GDP.\n\nFormula: GDP Deflator = (Nominal GDP / Real GDP) × 100\n\nThe GDP deflator:\n- Uses current year quantities (unlike CPI which uses fixed basket)\n- Includes all GDP components (not just consumer goods)\n- Is broader than CPI",
+                  "importantPoints": [
+                    "Nominal GDP uses current prices; real GDP uses constant prices",
+                    "Real GDP removes inflation effects to show actual production changes",
+                    "GDP deflator = (Nominal GDP / Real GDP) × 100",
+                    "Real GDP is better for measuring economic growth"
+                  ]
                 },
                 "macroecon-u2-l6-practice": {
                   "title": "Practice: Real vs. nominal GDP"
@@ -906,8 +1068,25 @@
                 "macroecon-u2-l7-video-1": {
                   "title": "Business cycles"
                 },
-                "macroecon-u2-l7-article": {
-                  "title": "Learn: Business cycles"
+                "macroecon-u2-l7-article-1": {
+                  "title": "Learn: Tracking real GDP over time",
+                  "content": "# Tracking Real GDP Over Time\n\nReal GDP growth over time shows:\n- **Long-term trend**: Upward slope showing economic growth\n- **Cyclical fluctuations**: Short-term ups and downs around the trend\n- **Volatility**: How much the economy fluctuates\n\nA healthy economy shows:\n- Positive long-term growth trend\n- Relatively small, infrequent recessions\n- Quick recovery from downturns\n\n## The Business Cycle\n\nThe **business cycle** describes the fluctuations in economic activity over time. It consists of alternating periods of expansion and contraction.\n\n**Phases of the business cycle**:\n\n1. **Expansion (Boom)**: Period of economic growth\n   - Increasing GDP\n   - Rising employment\n   - Increasing prices\n   - Optimistic business expectations\n\n2. **Peak**: Highest point of economic activity\n   - Maximum GDP\n   - Low unemployment\n   - High inflation risk\n   - Economy at capacity\n\n3. **Contraction (Recession)**: Period of economic decline\n   - Decreasing GDP (for at least 2 quarters)\n   - Rising unemployment\n   - Falling prices (or disinflation)\n   - Pessimistic expectations\n\n4. **Trough**: Lowest point of economic activity\n   - Minimum GDP\n   - High unemployment\n   - Low inflation\n   - Economy below capacity\n\nThe cycle then repeats.",
+                  "importantPoints": [
+                    "Real GDP shows long-term growth trend with cyclical fluctuations",
+                    "Business cycle has four phases: expansion, peak, contraction, trough",
+                    "A healthy economy shows positive long-term growth with small, infrequent recessions"
+                  ]
+                },
+                "macroecon-u2-l7-article-2": {
+                  "title": "Learn: Lesson summary: Business cycles",
+                  "content": "# Lesson Summary: Business Cycles\n\nThe business cycle consists of expansion, peak, contraction (recession), and trough phases. Real GDP fluctuates around a long-term growth trend. Understanding business cycles helps predict economic conditions and inform policy decisions.\n\n## Key Concepts\n\n- **Expansion**: Period of economic growth with increasing GDP and employment\n- **Peak**: Highest point of economic activity\n- **Contraction (Recession)**: Period of economic decline (2+ quarters of negative GDP growth)\n- **Trough**: Lowest point of economic activity\n- **Long-term trend**: Upward slope showing overall economic growth\n- **Cyclical fluctuations**: Short-term ups and downs around the trend",
+                  "importantPoints": [
+                    "Business cycle has four phases: expansion, peak, contraction, trough",
+                    "Recession is defined as two consecutive quarters of negative GDP growth",
+                    "Real GDP shows long-term growth trend with cyclical fluctuations",
+                    "Expansions feature growth, employment, and rising prices",
+                    "Contractions feature decline, unemployment, and falling prices"
+                  ]
                 },
                 "macroecon-u2-l7-practice": {
                   "title": "Practice: Business cycles"
