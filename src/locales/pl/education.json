@@ -1636,7 +1636,61 @@
                   ]
                 },
                 "macroecon-u4-l2-quiz": {
-                  "title": "Quiz: Nominalne i realne stopy procentowe"
+                  "title": "Quiz: Nominalne i realne stopy procentowe",
+                  "questions": [
+                    {
+                      "id": "quiz-4-2-1",
+                      "question": "Hodor pożyczył 1000$. Bank pobiera od niego 5% odsetek rocznie. Pod koniec jednego roku zapłacił 50$ odsetek. W tym roku nastąpił wzrost deflatora PKB o 2%. Jaka była nominalna stopa procentowa?",
+                      "options": [
+                        "3%",
+                        "2%",
+                        "5%",
+                        "Nie można tego określić bez dodatkowych informacji",
+                        "7%"
+                      ],
+                      "correctAnswer": 2,
+                      "explanation": "Nominalna stopa procentowa to stopa, którą bank faktycznie pobiera, bez korekty o inflację. W tym przypadku bank pobiera 5% rocznie, więc nominalna stopa procentowa wynosi 5%. Informacja o inflacji (2%) jest potrzebna do obliczenia realnej stopy procentowej, ale nie do określenia nominalnej."
+                    },
+                    {
+                      "id": "quiz-4-2-2",
+                      "question": "Ygritte pożyczyła Mansowi 100$. Mans zwrócił jej 110$ rok później. Roczna stopa inflacji wynosiła 3%. Jaka była realna stopa procentowa, którą Ygritte zarobiła na tej pożyczce?",
+                      "options": [
+                        "100$",
+                        "3%",
+                        "10$",
+                        "7%",
+                        "10%"
+                      ],
+                      "correctAnswer": 3,
+                      "explanation": "Nominalna stopa procentowa = (110$ - 100$) / 100$ = 10%. Realna stopa procentowa = Nominalna stopa - Inflacja = 10% - 3% = 7%. Realna stopa procentowa pokazuje rzeczywistą siłę nabywczą zarobionych odsetek."
+                    },
+                    {
+                      "id": "quiz-4-2-3",
+                      "question": "Żelazny Bank chce upewnić się, że siła nabywcza odsetek, które otrzymuje z pożyczek, wynosi co najmniej 11%. Realny PKB rośnie o 5% rocznie, a oczekiwana stopa inflacji wynosi 7% rocznie. Jeśli wszystkie banki w Westeros chcą zarobić taką samą realną stopę zwrotu jak Żelazny Bank, jaka jest nominalna stopa procentowa (n.s.p.) w Westeros?",
+                      "options": [
+                        "11%",
+                        "-1%",
+                        "13%",
+                        "18%",
+                        "7%"
+                      ],
+                      "correctAnswer": 3,
+                      "explanation": "Nominalna stopa procentowa = Realna stopa procentowa + Oczekiwana inflacja. Jeśli banki chcą realnej stopy zwrotu 11%, a oczekiwana inflacja wynosi 7%, to nominalna stopa procentowa = 11% + 7% = 18%."
+                    },
+                    {
+                      "id": "quiz-4-2-4",
+                      "question": "Które z poniższych najlepiej opisuje różnicę między nominalnymi a realnymi stopami procentowymi?",
+                      "options": [
+                        "Nominalne stopy procentowe nie są skorygowane o inflację; realne stopy procentowe są skorygowane o inflację",
+                        "Nominalne stopy procentowe to to, co pobierają banki; realne odsetki to to, co płacą pożyczkobiorcy",
+                        "Nominalne odsetki to to, co zarabiasz z konta oszczędnościowego; realne odsetki to to, co bank płaci kontom oszczędnościowym",
+                        "Nominalne odsetki są płacone od obligacji; realne odsetki są płacone od akcji",
+                        "Nominalne odsetki są skorygowane o inflację; realne odsetki to to, co płacą pożyczkobiorcy"
+                      ],
+                      "correctAnswer": 0,
+                      "explanation": "Nominalna stopa procentowa to stopa bez korekty o inflację - to faktyczna stopa, którą widzisz. Realna stopa procentowa to nominalna stopa skorygowana o inflację, pokazująca rzeczywistą siłę nabywczą. Realna stopa = Nominalna stopa - Inflacja."
+                    }
+                  ]
                 }
               }
             },
@@ -1678,7 +1732,61 @@
                   ]
                 },
                 "macroecon-u4-l4-quiz": {
-                  "title": "Quiz: Bankowość i ekspansja podaży pieniądza"
+                  "title": "Quiz: Bankowość i ekspansja podaży pieniądza",
+                  "questions": [
+                    {
+                      "id": "quiz-4-4-1",
+                      "question": "Obowiązkowe rezerwy są najlepiej opisane przez które z poniższych stwierdzeń?",
+                      "options": [
+                        "Kwota, którą bank musi zapłacić za pożyczkę jednodniową od innego banku",
+                        "Pieniądze należne właścicielom banku",
+                        "Pieniądze, które bank może pożyczyć",
+                        "Proporcja depozytów czekowych, którą bank musi trzymać pod ręką",
+                        "Proporcja całkowitych aktywów, które bank trzyma jako obligacje"
+                      ],
+                      "correctAnswer": 3,
+                      "explanation": "Obowiązkowe rezerwy to minimalna proporcja depozytów czekowych, którą bank musi trzymać w rezerwie (w skarbcu lub w banku centralnym) zgodnie z wymogami banku centralnego. Nie mogą być pożyczone."
+                    },
+                    {
+                      "id": "quiz-4-4-2",
+                      "question": "Gdy Hodor zdeponował 1000$ w banku, bank trzymał 200$ w swoim skarbcu i pożyczył 800$. Które z poniższych najlepiej opisuje, co robi bank?",
+                      "options": [
+                        "Bankowość inwestycyjna",
+                        "Bankowość z pełnymi rezerwami",
+                        "Bankowość z nadmiernymi rezerwami",
+                        "Bankowość z obowiązkowymi rezerwami",
+                        "Bankowość z rezerwami cząstkowymi"
+                      ],
+                      "correctAnswer": 4,
+                      "explanation": "Bankowość z rezerwami cząstkowymi (fractional reserve banking) to system, w którym banki trzymają tylko część depozytów jako rezerwy (w tym przypadku 20%) i pożyczają resztę (80%). To pozwala bankom tworzyć pieniądze poprzez pożyczanie."
+                    },
+                    {
+                      "id": "quiz-4-4-3",
+                      "question": "Banki w Westeros były zobowiązane trzymać 10% wszystkich depozytów czekowych w rezerwie, ale teraz bank centralny zmienił wymóg rezerwowy na 20%. Jaki natychmiastowy efekt ma to na bilanse banków?",
+                      "options": [
+                        "Nadmierne rezerwy zwiększają się",
+                        "Zobowiązania zwiększają się",
+                        "Obowiązkowe rezerwy zmniejszają się",
+                        "Zobowiązania zmniejszają się",
+                        "Nadmierne rezerwy zmniejszają się"
+                      ],
+                      "correctAnswer": 4,
+                      "explanation": "Gdy wymóg rezerwowy wzrasta z 10% do 20%, banki muszą trzymać większą część depozytów jako rezerwy. To oznacza, że część ich nadmiernych rezerw (rezerwy powyżej wymogu) staje się teraz obowiązkowymi rezerwami, więc nadmierne rezerwy zmniejszają się."
+                    },
+                    {
+                      "id": "quiz-4-4-4",
+                      "question": "Milton zdeponował 100,000$ w Pierwszym Banku Shire. Które z poniższych najlepiej opisuje początkowy wpływ, jaki ten depozyt będzie miał na bilans banku?",
+                      "options": [
+                        "Aktywa wzrosną; zobowiązania nie zmienią się",
+                        "Aktywa nie zmienią się; zobowiązania wzrosną",
+                        "Aktywa wzrosną; zobowiązania wzrosną",
+                        "Aktywa zmniejszą się; zobowiązania wzrosną",
+                        "Aktywa wzrosną; zobowiązania zmniejszą się"
+                      ],
+                      "correctAnswer": 2,
+                      "explanation": "Gdy klient deponuje pieniądze w banku, bank otrzymuje gotówkę (aktyw) i jednocześnie ma zobowiązanie wobec deponenta (zobowiązanie). Depozyt zwiększa zarówno aktywa banku (gotówka w skarbcu), jak i zobowiązania (depozyty klientów)."
+                    }
+                  ]
                 }
               }
             },
@@ -2702,6 +2810,7 @@
                 },
                 "micro-u8-l1-article": {
                   "title": "Naucz się: Wprowadzenie do rynków czynników produkcji",
+                  "content": "# Wprowadzenie do rynków czynników produkcji\n\n## Krzywa krańcowego produktu w przychodzie firmy\n\n**Krańcowy produkt w przychodzie (MPR)** lub **Krańcowy przychód produktu (MRP)**: Dodatkowy przychód z zatrudnienia jeszcze jednej jednostki nakładu produkcji.\n\n**Wzór**: MRP = MR × MP\n\nGdzie:\n- MR = Przychód krańcowy (z rynku produkcji)\n- MP = Produkt krańcowy (nakładu produkcji)\n\n**Dla doskonałej konkurencji na rynku produkcji**:\n- MR = P (cena)\n- Więc: MRP = P × MP\n\n**Kluczowy wgląd**: MRP pokazuje, ile dodatkowego przychodu otrzymuje firma z zatrudnienia jeszcze jednej jednostki nakładu produkcji.\n\n## Ilu ludzi zatrudnić przy danej krzywej MPR\n\n**Reguła maksymalizacji zysku**: Zatrudniać, aż MRP = Płaca (cena nakładu produkcji).\n\n**Dlaczego**:\n- Jeśli MRP > Płaca: Zatrudnienie więcej zwiększa zysk\n- Jeśli MRP < Płaca: Zatrudnienie mniej zwiększa zysk\n- Jeśli MRP = Płaca: Zysk jest maksymalizowany\n\n**Reprezentacja graficzna**:\n- Krzywa MRP (opadająca, z powodu malejącego MP)\n- Linia płacy (pozioma, jeśli konkurencyjny rynek czynników)\n- Przecięcie określa optymalne zatrudnienie\n\n**Kluczowy wgląd**: Firmy zatrudniają nakłady produkcji, aż krańcowy przychód produktu równa się cenie nakładu produkcji.\n\n## Wprowadzenie do rynków pracy\n\n**Rynek pracy**: Rynek, gdzie pracownicy sprzedają pracę, a firmy kupują pracę.\n\n**Popyt na pracę**:\n- Pochodny od popytu na produkcję\n- Krzywa MRP to krzywa popytu\n- Opadająca (malejący produkt krańcowy)\n\n**Podaż pracy**:\n- Pracownicy oferują pracę\n- Wznosząca się (wyższa płaca → więcej podaży pracy)\n- Zależy od kompromisu praca-wypoczynek\n\n**Równowaga**:\n- Gdzie popyt na pracę = podaż pracy\n- Określa płacę i zatrudnienie\n\n**Kluczowy wgląd**: Rynki pracy określają płacę i zatrudnienie poprzez popyt i podaż.\n\n## Kompromis praca-wypoczynek i krzywa podaży pracy\n\n**Kompromis praca-wypoczynek**: Pracownicy wybierają między pracą (dochód) a wypoczynkiem (czas).\n\n**Kompromis**:\n- Więcej pracy → Więcej dochodu, ale mniej wypoczynku\n- Więcej wypoczynku → Mniej dochodu, ale więcej czasu\n\n**Efekt dochodowy**:\n- Wyższa płaca → Wyższy dochód → Może pracować mniej (wypoczynek to dobro normalne)\n\n**Efekt substytucji**:\n- Wyższa płaca → Wyższy koszt alternatywny wypoczynku → Pracować więcej\n\n**Efekt netto**:\n- Zwykle: Efekt substytucji dominuje → Podaż pracy wznosząca się\n- Ale: Przy bardzo wysokich płacach efekt dochodowy może dominować → Odwrotnie wygięta podaż\n\n**Krzywa podaży pracy**:\n- Zwykle wznosząca się\n- Pokazuje ilość podaży pracy przy każdej płacy\n- Może wyginać się do tyłu przy wysokich płacach\n\n**Kluczowy wgląd**: Podaż pracy zależy od kompromisu między dochodem a wypoczynkiem, z efektami dochodowymi i substytucji.",
                   "importantPoints": [
                     "Marginal revenue product (MRP) = MR × MP",
                     "Profit maximization: hire until MRP = wage",
@@ -2722,6 +2831,7 @@
                 },
                 "micro-u8-l2-article": {
                   "title": "Naucz się: Zmiany w popycie i podaży czynników produkcji",
+                  "content": "# Zmiany w popycie i podaży czynników produkcji\n\n## Dodawanie krzywych popytu\n\n**Popyt rynkowy na pracę**: Suma wszystkich indywidualnych krzywych popytu firm.\n\n**Jak znaleźć**:\n- Przy każdej płacy zsumować ilość popytu na pracę wszystkich firm\n- Popyt rynkowy = Σ Indywidualne popyty firm\n\n**Kluczowy wgląd**: Popyt rynkowy na nakład produkcji to pozioma suma indywidualnych popytów firm.\n\n## Zmiany w podaży pracy\n\n**Czynniki, które przesuwają podaż pracy**:\n\n1. **Zmiany populacji**:\n   - Więcej ludzi → Więcej podaży pracy (przesunięcie w prawo)\n   - Mniej ludzi → Mniej podaży pracy (przesunięcie w lewo)\n\n2. **Preferencje**:\n   - Preferencja pracy → Więcej podaży (przesunięcie w prawo)\n   - Preferencja wypoczynku → Mniej podaży (przesunięcie w lewo)\n\n3. **Dochód nie z płacy**:\n   - Wyższy dochód nie z płacy → Mniej podaży pracy (przesunięcie w lewo)\n   - Niższy dochód nie z płacy → Więcej podaży pracy (przesunięcie w prawo)\n\n4. **Możliwości na innych rynkach**:\n   - Lepsze możliwości gdzie indziej → Mniej podaży (przesunięcie w lewo)\n   - Gorsze możliwości gdzie indziej → Więcej podaży (przesunięcie w prawo)\n\n5. **Imigracja**:\n   - Więcej imigracji → Więcej podaży (przesunięcie w prawo)\n   - Mniej imigracji → Mniej podaży (przesunięcie w lewo)\n\n**Kluczowy wgląd**: Wiele czynników może przesuwać podaż pracy, wpływając na płacę i zatrudnienie.\n\n## Przesunięcia w popycie na pracę\n\n**Czynniki, które przesuwają popyt na pracę** (przesuwają krzywą MRP):\n\n1. **Cena produkcji**:\n   - Wyższa cena produkcji → Wyższy MRP → Więcej popytu (przesunięcie w prawo)\n   - Niższa cena produkcji → Niższy MRP → Mniej popytu (przesunięcie w lewo)\n\n2. **Technologia**:\n   - Lepsza technologia → Wyższy MP → Wyższy MRP → Więcej popytu (przesunięcie w prawo)\n   - Lub: Technologia może zastępować pracę → Mniej popytu (przesunięcie w lewo)\n\n3. **Cena innych nakładów produkcji**:\n   - Wyższa cena zastępującego nakładu → Więcej popytu na pracę (przesunięcie w prawo)\n   - Wyższa cena uzupełniającego nakładu → Mniej popytu na pracę (przesunięcie w lewo)\n\n4. **Liczba firm**:\n   - Więcej firm → Więcej popytu (przesunięcie w prawo)\n   - Mniej firm → Mniej popytu (przesunięcie w lewo)\n\n**Kluczowy wgląd**: Popyt na pracę przesuwa się, gdy zmieniają się czynniki wpływające na MRP.",
                   "importantPoints": [
                     "Market demand is sum of individual firm demands",
                     "Labor supply shifts: population, preferences, non-wage income, opportunities",
@@ -2741,6 +2851,7 @@
                 },
                 "micro-u8-l3-article": {
                   "title": "Naucz się: Optymalny wybór czynników produkcji na rynkach czynników produkcji z doskonałą konkurencją",
+                  "content": "# Optymalny wybór czynników produkcji na rynkach czynników produkcji z doskonałą konkurencją\n\n## Minimalizujący koszty wybór nakładów produkcji\n\n**Minimalizacja kosztów**: Produkować daną produkcję przy najniższych kosztach.\n\n**Reguła**: MPₗ / W = MPₖ / R\n\nGdzie:\n- MPₗ = Produkt krańcowy pracy\n- W = Płaca (cena pracy)\n- MPₖ = Produkt krańcowy kapitału\n- R = Stawka czynszu (cena kapitału)\n\n**Interpretacja**: Produkt krańcowy na dolara musi być równy dla wszystkich nakładów produkcji.\n\n**Dlaczego**:\n- Jeśli MPₗ/W > MPₖ/R: Otrzymujesz więcej produkcji na dolara z pracy\n- Należy używać więcej pracy, mniej kapitału\n- Kontynuować aż do równości\n\n**Kluczowy wgląd**: Minimalizacja kosztów wymaga wyrównania produktu krańcowego na dolara dla wszystkich nakładów produkcji.\n\n## Przykład pracy rynków czynników produkcji\n\n**Przykład**:\n\nDane:\n- Produkcja: Q = 100 jednostek\n- Praca: MPₗ = 10, W = $20\n- Kapitał: MPₖ = 15, R = $30\n\n**Sprawdzić, czy minimalizuje koszty**:\n- MPₗ/W = 10/20 = 0.5\n- MPₖ/R = 15/30 = 0.5\n- Równe → Minimalizuje koszty ✓\n\n**Jeśli nie równe**:\n- Jeśli MPₗ/W > MPₖ/R: Używać więcej pracy, mniej kapitału\n- Dostosować aż do równości\n\n**Maksymalizacja zysku**:\n- Również wymaga: MRP = Cena nakładu produkcji\n- Dla pracy: MRPₗ = W\n- Dla kapitału: MRPₖ = R\n\n**Kluczowy wgląd**: Firmy minimalizują koszty i maksymalizują zysk, wyrównując produkt krańcowy na dolara i ustawiając MRP równe cenom nakładów produkcji.",
                   "importantPoints": [
                     "Cost minimization: MP/W equal for all inputs",
                     "Profit maximization: MRP = input price",
@@ -2760,6 +2871,7 @@
                 },
                 "micro-u8-l4-article": {
                   "title": "Naucz się: Wybór zasobów, gdy rynki czynników produkcji są monopsonistycznie konkurencyjne",
+                  "content": "# Wybór zasobów, gdy rynki czynników produkcji są monopsonistycznie konkurencyjne\n\n## Monopsonistyczny rynek pracy\n\n**Monopsonia**: Rynek z jednym kupującym (pracodawcą).\n\n**Charakterystyki**:\n- Jeden pracodawca (lub kilku pracodawców)\n- Musi płacić wyższą płacę, aby przyciągnąć więcej pracowników\n- Napotyka wznoszącą się krzywą podaży\n- Ma władzę rynkową na rynku czynników produkcji\n\n**Krańcowy koszt czynnika produkcji (MFC)**:\n- Dodatkowy koszt zatrudnienia jeszcze jednego pracownika\n- MFC > Płaca (ponieważ musi podnieść płacę dla wszystkich pracowników)\n- Krzywa MFC znajduje się powyżej krzywej podaży\n\n**Maksymalizacja zysku**:\n- Zatrudniać, aż MRP = MFC\n- Ale: MFC > Płaca\n- Więc: MRP > Płaca (w przeciwieństwie do doskonałej konkurencji)\n\n**Kluczowy wgląd**: Monopsonia płaci pracownikom mniej i zatrudnia mniej pracowników niż rynek konkurencyjny.\n\n## Pracodawcy-monopsonie i płaca minimalna\n\n**Efekty płacy minimalnej na rynku konkurencyjnym**:\n- Tworzy nadwyżkę (bezrobocie)\n- Zmniejsza zatrudnienie\n- Strata dobrobytu\n\n**Efekty płacy minimalnej w monopsonii**:\n- Może zwiększyć zatrudnienie (jeśli płaca minimalna < płaca konkurencyjna)\n- Może zwiększyć płacę\n- Może zmniejszyć stratę dobrobytu\n- Może poprawić efektywność\n\n**Dlaczego**:\n- Monopsonia niedozatrudnia (MRP > Płaca)\n- Płaca minimalna może zmusić monopsonię do zatrudniania więcej\n- Jeśli płaca minimalna jest ustawiona prawidłowo, może zwiększyć zarówno płacę, jak i zatrudnienie\n\n**Kluczowy wgląd**: Płaca minimalna może mieć różne efekty w monopsonii w porównaniu z rynkami konkurencyjnymi. W monopsonii może zwiększyć zatrudnienie.",
                   "importantPoints": [
                     "Monopsony: one buyer in factor market",
                     "MFC > Wage (must raise wage for all workers)",
@@ -2784,6 +2896,7 @@
                 },
                 "micro-u9-l1-article": {
                   "title": "Naucz się: Efekty zewnętrzne",
+                  "content": "# Efekty zewnętrzne\n\n## Efektywność alokacyjna i korzyść krańcowa\n\n**Efektywność alokacyjna**: Zasoby są alokowane na najbardziej wartościowe zastosowania.\n\n**Wymaga**: Krańcowa korzyść społeczna (MSB) = Krańcowy koszt społeczny (MSC)\n\n**Krańcowa korzyść społeczna (MSB)**:\n- Korzyść dla społeczeństwa z jeszcze jednej jednostki\n- Obejmuje korzyść prywatną i korzyść zewnętrzną\n\n**Krańcowy koszt społeczny (MSC)**:\n- Koszt dla społeczeństwa z jeszcze jednej jednostki\n- Obejmuje koszty prywatne i koszty zewnętrzne\n\n**Kluczowy wgląd**: Efektywność alokacyjna wymaga uwzględnienia wszystkich korzyści i kosztów, a nie tylko prywatnych.\n\n## Negatywne efekty zewnętrzne\n\n**Negatywny efekt zewnętrzny**: Koszty nałożone na osoby trzecie (nie uczestniczące w transakcji).\n\n**Przykłady**: Zanieczyszczenie, hałas, korki, bierne palenie\n\n**Problem**:\n- Koszty prywatne < Koszty społeczne\n- Rynek produkuje za dużo (nadprodukcja)\n- Cena za niska, ilość za wysoka\n- Strata dobrobytu\n\n**Reprezentacja graficzna**:\n- Krzywa podaży = Krańcowy koszt prywatny (MPC)\n- Krzywa kosztów społecznych = Krańcowy koszt społeczny (MSC) powyżej podaży\n- Równowaga rynkowa: MPC = Popyt\n- Równowaga efektywna: MSC = Popyt\n- Trójkąt straty dobrobytu\n\n**Kluczowy wgląd**: Negatywne efekty zewnętrzne powodują nadprodukcję i nieefektywność.\n\n## Pozytywne efekty zewnętrzne\n\n**Pozytywny efekt zewnętrzny**: Korzyść otrzymana przez osoby trzecie (nie uczestniczące w transakcji).\n\n**Przykłady**: Edukacja, szczepienia, badania, pszczelarstwo (zapylanie)\n\n**Problem**:\n- Korzyść prywatna < Korzyść społeczna\n- Rynek produkuje za mało (niedoprodukcja)\n- Cena za wysoka, ilość za niska\n- Strata dobrobytu\n\n**Reprezentacja graficzna**:\n- Krzywa popytu = Krańcowa korzyść prywatna (MPB)\n- Krzywa korzyści społecznych = Krańcowa korzyść społeczna (MSB) powyżej popytu\n- Równowaga rynkowa: MPB = Podaż\n- Równowaga efektywna: MSB = Podaż\n- Trójkąt straty dobrobytu\n\n**Kluczowy wgląd**: Pozytywne efekty zewnętrzne powodują niedoprodukcję i nieefektywność.\n\n## Podatki na korektę negatywnych efektów zewnętrznych\n\n**Podatek Pigou**: Podatek równy kosztom zewnętrznym.\n\n**Efekt**:\n- Przesuwa krzywą podaży w górę o wielkość podatku\n- Uwewnętrznia efekt zewnętrzny\n- Przenosi rynek do efektywnej ilości\n- Zmniejsza stratę dobrobytu\n\n**Optymalny podatek**:\n- Podatek = Koszty zewnętrzne na jednostkę\n- Sprawia, że koszty prywatne = koszty społeczne\n- Osiąga efektywny wynik\n\n**Przykład**: Podatek węglowy na emisje\n- Podatek = koszt zanieczyszczenia\n- Firmy płacą pełne koszty społeczne\n- Zmniejsza emisje do efektywnego poziomu\n\n**Kluczowy wgląd**: Podatki mogą korygować negatywne efekty zewnętrzne, zmuszając firmy do płacenia pełnych kosztów społecznych.\n\n## Artykuły bonusowe: Zanieczyszczenie jako negatywny efekt zewnętrzny\n\n### Ekonomia zanieczyszczenia\n\n**Zanieczyszczenie jako negatywny efekt zewnętrzny**:\n- Firmy nie płacą pełnego kosztu zanieczyszczenia\n- Nadprodukują zanieczyszczające dobra\n- Społeczeństwo ponosi koszty\n\n**Efektywny poziom zanieczyszczenia**:\n- Nie zero (zbyt drogo wyeliminować wszystko)\n- Gdzie MSC = MSB\n- Równowaga między kosztem zanieczyszczenia a kosztem jego zmniejszenia\n\n### Regulacja nakazowo-kontrolna\n\n**Nakazowo-kontrolna**: Rząd ustanawia zasady i standardy.\n\n**Przykłady**:\n- Limity emisji\n- Wymagania technologiczne\n- Zakazy określonych działań\n\n**Problemy**:\n- Nieflexyjne\n- Nie uwzględnia różnic między firmami\n- Może być nieopłacalne\n\n### Czym są zorientowane na rynek instrumenty ochrony środowiska?\n\n**Zorientowane na rynek instrumenty**: Używają zachęt rynkowych do zmniejszenia zanieczyszczenia.\n\n**Zalety**:\n- Bardziej elastyczne\n- Opłacalne\n- Zachęcają do innowacji\n\n**Typy**: Podatki, kwoty i handel, subsydia\n\n### Typy zorientowanych na rynek instrumentów ochrony środowiska\n\n**1. Podatki Pigou**:\n- Podatek od zanieczyszczenia\n- Uwewnętrznia efekt zewnętrzny\n- Przykład: Podatek węglowy\n\n**2. Kwoty i handel**:\n- Ustanowić całkowity limit zanieczyszczenia\n- Wydać pozwolenia\n- Firmy handlują pozwoleniami\n- Przykład: Handel SO₂\n\n**3. Subsydia**:\n- Płacić firmom za zmniejszenie zanieczyszczenia\n- Przykład: Subsydia na energię odnawialną\n\n### Korzyści i koszty praw ochrony środowiska w USA\n\n**Korzyści**:\n- Czystsze powietrze i woda\n- Poprawa zdrowia\n- Ochrona ekosystemów\n\n**Koszty**:\n- Koszty zgodności\n- Zmniejszona produkcja ekonomiczna\n- Utrata miejsc pracy w niektórych branżach\n\n**Kluczowy wgląd**: Ochrona środowiska obejmuje kompromisy między korzyściami a kosztami.\n\n### Międzynarodowe problemy środowiskowe\n\n**Globalne efekty zewnętrzne**:\n- Zmiana klimatu\n- Zanieczyszczenie oceanu\n- Deplecja warstwy ozonowej\n\n**Problemy**:\n- Brak globalnego rządu\n- Problem gapowicza\n- Trudno koordynować\n\n**Rozwiązania**:\n- Umowy międzynarodowe (np. Porozumienie Paryskie)\n- Rynki węglowe\n- Transfer technologii\n\n### Kompromis między produkcją ekonomiczną a ochroną środowiska\n\n**Kompromis**:\n- Więcej ochrony środowiska → Mniej produkcji ekonomicznej (w krótkim okresie)\n- Mniej ochrony → Więcej produkcji, ale więcej zanieczyszczenia\n\n**Długi okres**:\n- Może być komplementarny (zielony wzrost)\n- Innowacje mogą zmniejszyć kompromis\n\n**Kluczowy wgląd**: Często jest kompromis, ale innowacje mogą pomóc go zmniejszyć.\n\n## Artykuły bonusowe: Innowacje jako pozytywny efekt zewnętrzny\n\n### Pozytywne efekty zewnętrzne innowacji\n\n**Korzyści z innowacji**:\n- Twórca otrzymuje korzyść (korzyść prywatna)\n- Inni otrzymują korzyść (przelewy, wiedza)\n- Społeczeństwo otrzymuje korzyść (wzrost ekonomiczny, lepsze produkty)\n\n**Problem**:\n- Korzyść prywatna < Korzyść społeczna\n- Niedoinwestowanie w innowacje\n- Za mało B+R\n\n### Inwestowanie w kapitał ludzki\n\n**Kapitał ludzki**: Edukacja, umiejętności, wiedza.\n\n**Pozytywny efekt zewnętrzny**:\n- Wykształceni ludzie przynoszą korzyści społeczeństwu\n- Przelewy wiedzy\n- Wzrost ekonomiczny\n\n**Polityka**: Edukacja publiczna, subsydia na edukację\n\n### Dlaczego sektor prywatny niedoinwestowuje w innowacje\n\n**Przyczyny**:\n1. **Przelewy**: Inni otrzymują korzyść z twoich innowacji\n2. **Niepewność**: Wysokie ryzyko, niepewny zwrot\n3. **Czas**: Długi okres zwrotu\n4. **Aspekt dóbr publicznych**: Wiedza jest niekonkurencyjna\n\n**Rozwiązania polityczne**:\n- Patenty (tymczasowy monopol)\n- Subsydia na B+R\n- Publiczne finansowanie badań\n- Kredyty podatkowe na B+R\n\n**Kluczowy wgląd**: Innowacje mają pozytywne efekty zewnętrzne, prowadząc do niedoinwestowania. Rząd może pomóc poprzez patenty, subsydia i publiczne finansowanie.",
                   "importantPoints": [
                     "Negative externalities: overproduction, MSC > MPC",
                     "Positive externalities: underproduction, MSB > MPB",
@@ -2801,6 +2914,7 @@
                 },
                 "micro-u9-l2-article": {
                   "title": "Naucz się: Cztery typy dóbr: dobra prywatne, dobra publiczne, zasoby wspólne i monopole naturalne",
+                  "content": "# Cztery typy dóbr: dobra prywatne, dobra publiczne, zasoby wspólne i monopole naturalne\n\n## Tragedia wspólnych zasobów\n\n**Wspólny zasób**: Konkurencyjny, ale niewykluczający.\n\n**Tragedia wspólnych zasobów**: Nadmierne wykorzystanie wspólnych zasobów.\n\n**Dlaczego to się dzieje**:\n- Nikt nie posiada zasobu\n- Każdy użytkownik otrzymuje korzyść z jego wykorzystania\n- Ale koszty są rozłożone na wszystkich\n- Zachęta do nadmiernego wykorzystania\n- Zasób się wyczerpuje\n\n**Przykłady**: Przełowienie ryb, wylesianie, wyczerpywanie wód gruntowych, zanieczyszczenie powietrza\n\n**Rozwiązania**:\n- Prawa własności prywatnej\n- Regulacja rządowa\n- Kwoty\n- Podatki\n\n**Kluczowy wgląd**: Wspólne zasoby są nadmiernie wykorzystywane, ponieważ nikt nie ma zachęty do zachowania.\n\n## Dobra konkurencyjne i wykluczające\n\n**Konkurencyjny**: Konsumpcja przez jedną osobę zapobiega konsumpcji przez inną.\n\n**Niekonkurencyjny**: Konsumpcja przez jedną osobę nie zapobiega konsumpcji przez inną.\n\n**Wykluczający**: Można zapobiec wykorzystaniu dobra przez ludzi.\n\n**Niewykluczający**: Nie można zapobiec wykorzystaniu dobra przez ludzi.\n\n**Klasyfikacja**:\n- **Konkurencyjny + Wykluczający**: Dobra prywatne\n- **Konkurencyjny + Niewykluczający**: Wspólne zasoby\n- **Niekonkurencyjny + Wykluczający**: Monopole naturalne (dobra klubowe)\n- **Niekonkurencyjny + Niewykluczający**: Dobra publiczne\n\n**Kluczowy wgląd**: Te charakterystyki określają typ dobra i odpowiednią politykę.\n\n## Czym są dobra publiczne?\n\n**Dobra publiczne**: Niekonkurencyjne i niewykluczające.\n\n**Charakterystyki**:\n- **Niekonkurencyjny**: Wykorzystanie przez jedną osobę nie zmniejsza dostępności dla innych\n- **Niewykluczający**: Nie można zapobiec wykorzystaniu przez ludzi\n\n**Przykłady**: Obrona narodowa, oświetlenie uliczne, parki publiczne, latarnie morskie, wiedza\n\n**Problem**: Problem gapowicza\n- Ludzie mogą otrzymywać korzyść bez płacenia\n- Brak zachęty do płacenia\n- Rynek niedoprodukuje (lub nie produkuje)\n\n**Rozwiązanie**: Dostarczanie przez rząd (finansowane z podatków)\n\n**Kluczowy wgląd**: Dobra publiczne są niedoprodukowane przez rynki z powodu problemu gapowicza.\n\n## Czym jest gapowicz?\n\n**Gapowicz**: Osoba, która otrzymuje korzyść z dobra bez płacenia za nie.\n\n**Dlaczego to problem**:\n- Jeśli wszyscy jadą na gapę, dobro nie jest dostarczane\n- Rynek zawodzi\n- Dobro nie jest produkowane, chociaż korzyści > koszty\n\n**Przykłady**:\n- Nie płacić za radio publiczne, ale słuchać\n- Nie wnosić wkładu w sąsiedzką straż, ale otrzymywać korzyść\n- Nie płacić podatków, ale korzystać z usług rządowych\n\n**Rozwiązanie**: Rząd wymusza płatność poprzez podatki\n\n**Kluczowy wgląd**: Problem gapowicza zapobiega prywatnemu dostarczaniu dóbr publicznych.\n\n## Dobra publiczne: przykłady ze świata rzeczywistego\n\n**Czyste dobra publiczne**:\n- **Obrona narodowa**: Chroni wszystkich, nie można wykluczyć\n- **Oświetlenie uliczne**: Wszyscy otrzymują korzyść, nie można wykluczyć\n- **Wiedza publiczna**: Niekonkurencyjna, trudno wykluczyć\n\n**Quasi-dobra publiczne** (pewna wykluczalność możliwa):\n- **Edukacja**: Można wykluczyć, ale korzyści przelewają się\n- **Opieka zdrowotna**: Można wykluczyć, ale zdrowie publiczne przynosi korzyści wszystkim\n- **Parki**: Można wykluczyć, ale często dostarczane publicznie\n\n**Kluczowy wgląd**: Wiele dóbr ma charakterystykę dóbr publicznych, wymagając dostarczania przez rząd lub regulacji.",
                   "importantPoints": [
                     "Rival: one person's use prevents another's",
                     "Excludable: can prevent use",
