@@ -157,7 +157,7 @@ export async function fetchForumComments(topicId: string): Promise<ForumComment[
       `)
       .eq('discussion_id', topicId)
       .eq('is_approved', true)
-      .order('created_at');
+      .order('created_at', { ascending: false });
     
     if (error) throw error;
     

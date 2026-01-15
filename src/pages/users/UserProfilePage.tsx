@@ -203,8 +203,8 @@ export default function UserProfilePage() {
       setProfile({
         id: userId,
         username: null,
-        display_name: t('header.unknown'),
-        bio: t('messages.profileNotAvailable'),
+        display_name: 'User',
+        bio: null,
         avatar_url: null,
         reputation: 0,
         post_count: 0,
