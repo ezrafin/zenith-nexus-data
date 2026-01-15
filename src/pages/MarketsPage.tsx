@@ -155,6 +155,7 @@ export default function MarketsPage() {
       <SEOHead
         title={seoTitle}
         description={seoDescription}
+        keywords="stock market data, market indices, stock prices, crypto prices, commodity prices, currency exchange rates, real-time market data, financial markets, market analysis"
       />
       <section className="section-spacing">
         <div className="container-wide">

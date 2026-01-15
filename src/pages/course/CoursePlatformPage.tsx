@@ -221,6 +221,8 @@ export default function CoursePlatformPage() {
       <SEOHead
         title={seoTitle}
         description={seoDescription}
+        keywords="investment courses, financial education, trading courses, economics courses, finance courses, investment education, financial market courses, online finance courses"
+        isCoursePage={true}
       />
       <div className="pt-20 pb-8 min-h-screen">
         {/* Mobile Navigation */}
@@ -488,21 +490,28 @@ export default function CoursePlatformPage() {
                 {selectedLesson.contentItems.length > 1 && (
                   <div className="glass-card p-4">
                     <div className="flex gap-2 flex-wrap">
-                      {selectedLesson.contentItems.map((item) => (
-                        <Button
-                          key={item.id}
-                          variant={selectedContentItem?.id === item.id ? 'default' : 'outline'}
-                          size="sm"
-                          onClick={() => handleContentItemClick(item)}
-                        >
-                          {item.type === 'video' && <Play className="h-3 w-3 mr-1" />}
-                          {item.type === 'article' && <BookOpen className="h-3 w-3 mr-1" />}
-                          {item.type === 'practice' && <FileText className="h-3 w-3 mr-1" />}
-                          {item.type === 'quiz' && <Award className="h-3 w-3 mr-1" />}
-                          {item.type === 'mastery-check' && <Target className="h-3 w-3 mr-1" />}
-                          {item.title || t(`courses.${item.type}`)}
-                        </Button>
-                      ))}
+                      {selectedLesson.contentItems.map((item) => {
+                        const unit = course.units.find(u => u.lessons.some(l => l.id === selectedLesson.id));
+                        const titleKey = `course.${course.id}.unit.${unit?.id}.lesson.${selectedLesson.id}.contentItem.${item.id}.title`;
+                        const translatedTitle = t(titleKey);
+                        const finalTitle = translatedTitle !== titleKey ? translatedTitle : (item.title || t(`courses.${item.type}`));
+                        
+                        return (
+                          <Button
+                            key={item.id}
+                            variant={selectedContentItem?.id === item.id ? 'default' : 'outline'}
+                            size="sm"
+                            onClick={() => handleContentItemClick(item)}
+                          >
+                            {item.type === 'video' && <Play className="h-3 w-3 mr-1" />}
+                            {item.type === 'article' && <BookOpen className="h-3 w-3 mr-1" />}
+                            {item.type === 'practice' && <FileText className="h-3 w-3 mr-1" />}
+                            {item.type === 'quiz' && <Award className="h-3 w-3 mr-1" />}
+                            {item.type === 'mastery-check' && <Target className="h-3 w-3 mr-1" />}
+                            {finalTitle}
+                          </Button>
+                        );
+                      })}
                     </div>
                   </div>
                 )}

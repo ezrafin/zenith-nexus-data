@@ -78,6 +78,10 @@ export function generateOrganizationSchema(): OrganizationSchema {
     logo: 'https://investopatronus.com/investo.png',
     sameAs: [
       'https://twitter.com/investopatronus',
+      'https://youtube.com/@investopatronus',
+      'https://www.linkedin.com/company/investopatronus',
+      'https://www.instagram.com/investopatronus',
+      'https://www.facebook.com/investopatronus',
     ],
     contactPoint: {
       '@type': 'ContactPoint',

@@ -14,6 +14,8 @@ export default function CourseListingPage() {
       <SEOHead
         title={t('courses.seoTitle')}
         description={t('courses.seoDescription')}
+        keywords="investment courses, finance courses, economics courses, trading courses, financial education, investment education, online finance courses, financial market courses"
+        isCoursePage={true}
       />
       <div className="pt-24 pb-16">
         <section className="container-wide section-spacing-sm">

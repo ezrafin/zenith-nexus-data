@@ -192,7 +192,12 @@ export default function ForumPage() {
     });
   };
   return <Layout>
-      <SEOHead title={t('pageTitle')} description={t('pageDescription')} />
+      <SEOHead 
+        title={t('pageTitle')} 
+        description={t('pageDescription')}
+        keywords="financial forum, investment discussion, trading forum, stock market discussion, crypto forum, investment community, financial community, trading community, market discussion"
+        isForumPage={true}
+      />
       {/* Hero */}
       <section className="border-b border-border">
         <div className="container-wide py-16 md:py-24">

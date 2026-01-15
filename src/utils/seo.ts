@@ -25,6 +25,7 @@ export interface SEOData {
 const defaultSEO = {
   title: 'INVESTOPATRONUS — Your Guardian in Global Markets',
   description: 'Professional financial market analytics, real-time data, and expert insights for informed investment decisions.',
+  keywords: 'financial markets, stock market analysis, crypto trading, investment insights, market data, financial analytics, trading platform, investment education, market news, financial news',
   image: 'https://investopatronus.com/investo.png',
   url: 'https://investopatronus.com',
   type: 'website',
@@ -39,10 +40,15 @@ export function generateSEOTags(data: SEOData = {}) {
     : defaultSEO.title;
   
   const description = data.description || defaultSEO.description;
+  const keywords = data.keywords || defaultSEO.keywords;
   const image = data.image || defaultSEO.image;
   const url = data.url || defaultSEO.url;
   const type = data.type || defaultSEO.type;
-  const canonical = data.canonical || url;
+  // Ensure canonical URL is absolute and has no trailing slash (except for root)
+  let canonical = data.canonical || url;
+  if (canonical && canonical !== 'https://investopatronus.com' && canonical !== 'https://investopatronus.com/' && canonical.endsWith('/')) {
+    canonical = canonical.slice(0, -1);
+  }
   const locale = data.locale || defaultSEO.locale;
   const siteName = data.siteName || defaultSEO.siteName;
   const twitterCard = data.twitterCard || defaultSEO.twitterCard;
@@ -55,7 +61,7 @@ export function generateSEOTags(data: SEOData = {}) {
   return {
     title,
     description,
-    keywords: data.keywords,
+    keywords,
     image,
     url,
     type,
@@ -138,21 +144,56 @@ export function updateDocumentHead(seoData: SEOData) {
     }
 
     // Hreflang tags for alternate languages
-    if (tags.alternateLanguages) {
-      Object.entries(tags.alternateLanguages).forEach(([lang, langUrl]) => {
-        try {
-          let hreflangLink = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
-          if (!hreflangLink) {
-            hreflangLink = document.createElement('link');
-            hreflangLink.setAttribute('rel', 'alternate');
-            hreflangLink.setAttribute('hreflang', lang);
-            document.head.appendChild(hreflangLink);
-          }
-          hreflangLink.setAttribute('href', langUrl);
-        } catch (error) {
-          logger.error(`Error updating hreflang for ${lang}:`, error);
+    // Only add hreflang if alternate language versions actually exist
+    // Remove any existing hreflang tags that point to the same URL (incorrect implementation)
+    if (tags.alternateLanguages && Object.keys(tags.alternateLanguages).length > 0) {
+      // Remove existing incorrect hreflang tags first
+      const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      existingHreflang.forEach((link) => {
+        const href = link.getAttribute('href');
+        const hreflang = link.getAttribute('hreflang');
+        // Remove if it points to the same URL as current page (incorrect)
+        if (href === tags.url && hreflang !== 'x-default') {
+          link.remove();
         }
       });
+
+      // Add x-default hreflang
+      try {
+        let defaultHreflang = document.querySelector('link[rel="alternate"][hreflang="x-default"]') as HTMLLinkElement;
+        if (!defaultHreflang) {
+          defaultHreflang = document.createElement('link');
+          defaultHreflang.setAttribute('rel', 'alternate');
+          defaultHreflang.setAttribute('hreflang', 'x-default');
+          document.head.appendChild(defaultHreflang);
+        }
+        defaultHreflang.setAttribute('href', tags.url);
+      } catch (error) {
+        logger.error('Error updating x-default hreflang:', error);
+      }
+
+      // Add language-specific hreflang tags only if URLs are different
+      Object.entries(tags.alternateLanguages).forEach(([lang, langUrl]) => {
+        // Only add if URL is different from current page
+        if (langUrl !== tags.url) {
+          try {
+            let hreflangLink = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
+            if (!hreflangLink) {
+              hreflangLink = document.createElement('link');
+              hreflangLink.setAttribute('rel', 'alternate');
+              hreflangLink.setAttribute('hreflang', lang);
+              document.head.appendChild(hreflangLink);
+            }
+            hreflangLink.setAttribute('href', langUrl);
+          } catch (error) {
+            logger.error(`Error updating hreflang for ${lang}:`, error);
+          }
+        }
+      });
+    } else {
+      // Remove all hreflang tags if no alternate languages are provided
+      const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      existingHreflang.forEach((link) => link.remove());
     }
 
     // Canonical URL

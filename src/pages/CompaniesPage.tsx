@@ -138,6 +138,7 @@ export default function CompaniesPage() {
       <SEOHead
         title="Financial Organizations & Companies Directory"
         description="Explore trusted financial organizations, brokers, exchanges, and financial institutions. Find regulated companies with expert trust ratings and community reviews."
+        keywords="financial companies, brokers, financial institutions, stock exchanges, regulated brokers, financial organizations, investment firms, trading platforms"
       />
       <section ref={sectionRef} className="section-spacing">
         <div className="container-wide">

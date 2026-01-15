@@ -95,6 +95,11 @@ export default function AnalyticsPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Financial Analytics & Market Insights"
+        description="Access expert financial analysis, market insights, and in-depth research from professional analysts. Get comprehensive analytics covering stocks, crypto, commodities, and global markets."
+        keywords="financial analytics, market analysis, investment research, financial insights, market research, trading analysis, financial reports, investment analysis, market trends, financial data"
+      />
       <section ref={sectionRef} className="section-spacing">
         <div className="container-wide">
           <div className="mb-10">

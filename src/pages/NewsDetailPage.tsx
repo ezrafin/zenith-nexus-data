@@ -135,6 +135,8 @@ export default function NewsDetailPage() {
         type="article"
         author={articleAuthor}
         publishedTime={news.date}
+        keywords={`${news.market} news, financial news, market news, ${news.title}, investment news, trading news`}
+        isNewsPage={true}
       />
       <StructuredData
         data={[

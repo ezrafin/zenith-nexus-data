@@ -37,6 +37,7 @@ export default function AboutPage() {
       <SEOHead
         title="About INVESTOPATRONUS - Your Guardian in Global Markets"
         description="Learn about INVESTOPATRONUS, a professional financial analytics platform providing real-time market data, expert insights, and comprehensive investment resources. Discover our mission, values, and commitment to empowering investors."
+        keywords="about investopatronus, financial platform, investment platform, financial analytics company, market data provider, investment education platform"
       />
       <div className="pt-24 pb-16">
         {/* Hero */}

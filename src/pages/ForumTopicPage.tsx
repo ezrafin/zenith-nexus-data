@@ -253,6 +253,8 @@ export default function ForumTopicPage() {
             description={topic.content?.substring(0, 160) || `Discussion about ${topic.title}`}
             type="article"
             noindex={false}
+            keywords={`${topic.title}, forum discussion, investment discussion, trading discussion, financial forum`}
+            isForumPage={true}
           />
           <StructuredData data={[generateOrganizationSchema()]} />
         </>

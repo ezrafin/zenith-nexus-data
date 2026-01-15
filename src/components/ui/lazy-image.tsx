@@ -11,6 +11,38 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   sizes?: string;
 }
 
+// Image loading queue to limit concurrent downloads
+let activeLoads = 0;
+const MAX_CONCURRENT_LOADS = 6;
+const loadQueue: Array<() => void> = [];
+
+function processLoadQueue() {
+  while (activeLoads < MAX_CONCURRENT_LOADS && loadQueue.length > 0) {
+    activeLoads++;
+    const loadFn = loadQueue.shift();
+    if (loadFn) {
+      loadFn();
+    }
+  }
+}
+
+function startImageLoad(onComplete: () => void) {
+  if (activeLoads < MAX_CONCURRENT_LOADS) {
+    activeLoads++;
+    onComplete();
+  } else {
+    loadQueue.push(() => {
+      activeLoads++;
+      onComplete();
+    });
+  }
+}
+
+function finishImageLoad() {
+  activeLoads = Math.max(0, activeLoads - 1);
+  processLoadQueue();
+}
+
 /**
  * Optimized lazy loading image component with WebP support and CLS prevention
  * Features:
@@ -19,6 +51,7 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
  * - Responsive images with srcset
  * - Aspect ratio preservation to prevent CLS
  * - Skeleton loading state
+ * - Concurrent load limiting for better performance
  */
 export function LazyImage({ 
   src, 
@@ -35,20 +68,33 @@ export function LazyImage({
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority); // Load immediately if priority
+  const [shouldLoad, setShouldLoad] = useState(priority); // Actual load trigger
   const [error, setError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (priority) return; // Skip observer for priority images
+    if (priority) {
+      // Priority images load immediately
+      startImageLoad(() => setShouldLoad(true));
+      return;
+    }
 
+    // Reduced rootMargin for better performance with many images
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
+          // Queue the actual load to limit concurrent downloads
+          startImageLoad(() => {
+            setShouldLoad(true);
+          });
           observer.disconnect();
         }
       },
-      { rootMargin: '100px' }
+      { 
+        rootMargin: priority ? '200px' : '50px', // Reduced from 100px
+        threshold: 0.01
+      }
     );
 
     if (imgRef.current) {
@@ -58,17 +104,15 @@ export function LazyImage({
     return () => observer.disconnect();
   }, [priority]);
 
-  // Generate WebP src with fallback
-  const getImageSrc = () => {
-    if (error) return fallback;
-    
-    // Try WebP first if supported
-    if (src && !src.includes('.svg') && !src.includes('.gif')) {
-      const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-      return webpSrc;
-    }
-    
-    return src;
+  const handleLoad = () => {
+    setIsLoaded(true);
+    finishImageLoad();
+  };
+
+  const handleError = () => {
+    setError(true);
+    setIsLoaded(true);
+    finishImageLoad();
   };
 
   const aspectClasses = {
@@ -99,8 +143,8 @@ export function LazyImage({
         <div className="absolute inset-0 animate-skeleton bg-muted" />
       )}
       
-      {/* Actual image */}
-      {isInView && (
+      {/* Actual image - only load when queued */}
+      {shouldLoad && (
         <picture>
           {/* WebP source */}
           {src && !src.includes('.svg') && !src.includes('.gif') && (
@@ -121,11 +165,8 @@ export function LazyImage({
             height={height}
             srcSet={srcSet}
             sizes={sizes}
-            onLoad={() => setIsLoaded(true)}
-            onError={() => {
-              setError(true);
-              setIsLoaded(true);
-            }}
+            onLoad={handleLoad}
+            onError={handleError}
             className={cn(
               'w-full h-full object-cover transition-opacity duration-300',
               isLoaded ? 'opacity-100' : 'opacity-0'

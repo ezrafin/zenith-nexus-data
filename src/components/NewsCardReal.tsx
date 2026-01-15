@@ -88,6 +88,9 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
 
   const imageUrl = article.image_url || getMarketImage(article.market, index);
 
+  // Priority loading for first 6 images (2 rows on desktop)
+  const isPriority = index < 6;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -109,6 +112,7 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
             alt={article.title}
             aspectRatio="wide"
             fallback={getMarketImage(article.market, index)}
+            priority={isPriority}
             className="w-full h-full group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
