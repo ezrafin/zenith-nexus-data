@@ -11,37 +11,8 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   sizes?: string;
 }
 
-// Image loading queue to limit concurrent downloads
-let activeLoads = 0;
-const MAX_CONCURRENT_LOADS = 6;
-const loadQueue: Array<() => void> = [];
-
-function processLoadQueue() {
-  while (activeLoads < MAX_CONCURRENT_LOADS && loadQueue.length > 0) {
-    activeLoads++;
-    const loadFn = loadQueue.shift();
-    if (loadFn) {
-      loadFn();
-    }
-  }
-}
-
-function startImageLoad(onComplete: () => void) {
-  if (activeLoads < MAX_CONCURRENT_LOADS) {
-    activeLoads++;
-    onComplete();
-  } else {
-    loadQueue.push(() => {
-      activeLoads++;
-      onComplete();
-    });
-  }
-}
-
-function finishImageLoad() {
-  activeLoads = Math.max(0, activeLoads - 1);
-  processLoadQueue();
-}
+// Simplified approach: rely on browser's native lazy loading and IntersectionObserver
+// No global queue needed - browser handles concurrent connections efficiently
 
 /**
  * Optimized lazy loading image component with WebP support and CLS prevention
@@ -67,32 +38,27 @@ export function LazyImage({
   ...props 
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority); // Load immediately if priority
-  const [shouldLoad, setShouldLoad] = useState(priority); // Actual load trigger
+  const [shouldLoad, setShouldLoad] = useState(priority); // Load immediately if priority
   const [error, setError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (priority) {
       // Priority images load immediately
-      startImageLoad(() => setShouldLoad(true));
+      setShouldLoad(true);
       return;
     }
 
-    // Reduced rootMargin for better performance with many images
+    // Use IntersectionObserver to trigger load when in view
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          // Queue the actual load to limit concurrent downloads
-          startImageLoad(() => {
-            setShouldLoad(true);
-          });
+          setShouldLoad(true);
           observer.disconnect();
         }
       },
       { 
-        rootMargin: priority ? '200px' : '50px', // Reduced from 100px
+        rootMargin: '100px', // Start loading slightly before in view
         threshold: 0.01
       }
     );
@@ -102,17 +68,24 @@ export function LazyImage({
     }
 
     return () => observer.disconnect();
-  }, [priority]);
+  }, [priority, src]); // Add src dependency to reset on page change
+
+  // Reset state when src changes (important for pagination)
+  useEffect(() => {
+    setIsLoaded(false);
+    setError(false);
+    if (!priority) {
+      setShouldLoad(false);
+    }
+  }, [src, priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
-    finishImageLoad();
   };
 
   const handleError = () => {
     setError(true);
     setIsLoaded(true);
-    finishImageLoad();
   };
 
   const aspectClasses = {

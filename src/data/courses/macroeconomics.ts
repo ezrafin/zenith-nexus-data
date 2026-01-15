@@ -4,7 +4,6 @@ import type {
   Lesson,
   VideoContent,
   ArticleContent,
-  PracticeContent,
   QuizContent,
 } from '../courseTypes';
 
