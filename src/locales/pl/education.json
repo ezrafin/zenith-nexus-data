@@ -676,8 +676,11 @@
       "description": "Kompleksowe badanie zasad makroekonomicznych, polityk i ich wpływu na globalne gospodarki",
       "unit": {
         "unit-1": {
+          "title": "Podstawowe koncepcje ekonomiczne",
+          "description": "Wprowadzenie do fundamentalnych koncepcji i zasad ekonomicznych",
           "lesson": {
             "lesson-1-1": {
+              "title": "Wprowadzenie do makroekonomii",
               "contentItem": {
                 "macroecon-u1-l1-video-1": {
                   "title": "Wprowadzenie do ekonomii"
@@ -711,6 +714,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Koszt alternatywny i krzywa możliwości produkcyjnych",
               "contentItem": {
                 "macroecon-u1-l2-video-1": {
                   "title": "Koszt alternatywny i krzywa możliwości produkcyjnych"
@@ -744,6 +748,7 @@
               }
             },
             "lesson-1-3": {
+              "title": "Przewaga komparatywna i korzyści z handlu",
               "contentItem": {
                 "macroecon-u1-l3-video-1": {
                   "title": "Przewaga komparatywna i korzyści z handlu"
@@ -783,6 +788,7 @@
               }
             },
             "lesson-1-4": {
+              "title": "Popyt",
               "contentItem": {
                 "macroecon-u1-l4-video-1": {
                   "title": "Popyt"
@@ -819,6 +825,7 @@
               }
             },
             "lesson-1-5": {
+              "title": "Podaż",
               "contentItem": {
                 "macroecon-u1-l5-video-1": {
                   "title": "Podaż"
@@ -846,6 +853,7 @@
               }
             },
             "lesson-1-6": {
+              "title": "Rynki",
               "contentItem": {
                 "macroecon-u1-l6-video-1": {
                   "title": "Rynki"
@@ -875,8 +883,11 @@
           }
         },
         "unit-2": {
+          "title": "Wskaźniki ekonomiczne i cykl koniunkturalny",
+          "description": "Zrozumienie PKB, bezrobocia, inflacji i cykli koniunkturalnych",
           "lesson": {
             "lesson-2-1": {
+              "title": "Produkt krajowy brutto (Obieg i PKB)",
               "contentItem": {
                 "macroecon-u2-l1-video-1": {
                   "title": "Produkt krajowy brutto (Obieg i PKB)"
@@ -919,6 +930,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Ograniczenia PKB",
               "contentItem": {
                 "macroecon-u2-l2-video-1": {
                   "title": "Ograniczenia PKB"
@@ -953,6 +965,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Bezrobocie",
               "contentItem": {
                 "macroecon-u2-l3-video-1": {
                   "title": "Bezrobocie"
@@ -974,6 +987,7 @@
               }
             },
             "lesson-2-4": {
+              "title": "Inflacja (Indeksy cen i inflacja)",
               "contentItem": {
                 "macroecon-u2-l4-video-1": {
                   "title": "Inflacja (Indeksy cen i inflacja)"
@@ -1044,6 +1058,7 @@
               }
             },
             "lesson-2-5": {
+              "title": "Koszty inflacji",
               "contentItem": {
                 "macroecon-u2-l5-video-1": {
                   "title": "Koszty inflacji"
@@ -1062,6 +1077,7 @@
               }
             },
             "lesson-2-6": {
+              "title": "Realny i nominalny PKB",
               "contentItem": {
                 "macroecon-u2-l6-video-1": {
                   "title": "Realny i nominalny PKB"
@@ -1093,6 +1109,7 @@
               }
             },
             "lesson-2-7": {
+              "title": "Cykle koniunkturalne",
               "contentItem": {
                 "macroecon-u2-l7-video-1": {
                   "title": "Cykle koniunkturalne"
@@ -1121,8 +1138,11 @@
           }
         },
         "unit-3": {
+          "title": "Dochód narodowy i określanie cen",
+          "description": "Zrozumienie popytu zagregowanego, podaży zagregowanej i polityki fiskalnej",
           "lesson": {
             "lesson-3-1": {
+              "title": "Popyt zagregowany",
               "contentItem": {
                 "macroecon-u3-l1-video-1": {
                   "title": "Popyt zagregowany"
@@ -1198,6 +1218,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Mnożniki",
               "contentItem": {
                 "macroecon-u3-l2-video-1": {
                   "title": "Mnożniki"
@@ -1273,6 +1294,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Krótkoterminowa podaż zagregowana",
               "contentItem": {
                 "macroecon-u3-l3-video-1": {
                   "title": "Krótkoterminowa podaż zagregowana"
@@ -1294,6 +1316,7 @@
               }
             },
             "lesson-3-4": {
+              "title": "Długoterminowa podaż zagregowana",
               "contentItem": {
                 "macroecon-u3-l4-video-1": {
                   "title": "Długoterminowa podaż zagregowana"
@@ -1369,6 +1392,7 @@
               }
             },
             "lesson-3-5": {
+              "title": "Równowaga w modelu AD-AS",
               "contentItem": {
                 "macroecon-u3-l5-video-1": {
                   "title": "Równowaga w modelu AD-AS"
@@ -1457,6 +1481,7 @@
               }
             },
             "lesson-3-6": {
+              "title": "Zmiany w modelu AD-AS w krótkim okresie",
               "contentItem": {
                 "macroecon-u3-l6-video-1": {
                   "title": "Zmiany w modelu AD-AS w krótkim okresie"
@@ -1532,6 +1557,7 @@
               }
             },
             "lesson-3-7": {
+              "title": "Długoterminowa samoregulacja",
               "contentItem": {
                 "macroecon-u3-l7-video-1": {
                   "title": "Długoterminowa samoregulacja"
@@ -1553,6 +1579,7 @@
               }
             },
             "lesson-3-8": {
+              "title": "Fiskalna polityka",
               "contentItem": {
                 "macroecon-u3-l8-video-1": {
                   "title": "Fiskalna polityka"
@@ -1574,6 +1601,7 @@
               }
             },
             "lesson-3-9": {
+              "title": "Automatyczne stabilizatory",
               "contentItem": {
                 "macroecon-u3-l9-video-1": {
                   "title": "Automatyczne stabilizatory"
@@ -1597,8 +1625,11 @@
           }
         },
         "unit-4": {
+          "title": "Sektor finansowy",
+          "description": "Zrozumienie pieniądza, bankowości, rynków finansowych i polityki monetarnej",
           "lesson": {
             "lesson-4-1": {
+              "title": "Aktywa finansowe",
               "contentItem": {
                 "macroecon-u4-l1-video-1": {
                   "title": "Aktywa finansowe"
@@ -1620,6 +1651,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Nominalne i realne stopy procentowe",
               "contentItem": {
                 "macroecon-u4-l2-video-1": {
                   "title": "Nominalne i realne stopy procentowe"
@@ -1695,6 +1727,7 @@
               }
             },
             "lesson-4-3": {
+              "title": "Definicja, pomiar i funkcje pieniądza",
               "contentItem": {
                 "macroecon-u4-l3-video-1": {
                   "title": "Definicja, pomiar i funkcje pieniądza"
@@ -1716,6 +1749,7 @@
               }
             },
             "lesson-4-4": {
+              "title": "Bankowość i ekspansja podaży pieniądza",
               "contentItem": {
                 "macroecon-u4-l4-video-1": {
                   "title": "Bankowość i ekspansja podaży pieniądza"
@@ -1791,6 +1825,7 @@
               }
             },
             "lesson-4-5": {
+              "title": "Rynek pieniężny",
               "contentItem": {
                 "macroecon-u4-l5-video-1": {
                   "title": "Rynek pieniężny"
@@ -1812,6 +1847,7 @@
               }
             },
             "lesson-4-6": {
+              "title": "Polityka monetarna",
               "contentItem": {
                 "macroecon-u4-l6-video-1": {
                   "title": "Polityka monetarna"
@@ -1833,6 +1869,7 @@
               }
             },
             "lesson-4-7": {
+              "title": "Rynek środków pożyczkowych",
               "contentItem": {
                 "macroecon-u4-l7-video-1": {
                   "title": "Rynek środków pożyczkowych"
@@ -1854,6 +1891,7 @@
               }
             },
             "lesson-4-8": {
+              "title": "Stopy procentowe i wartość pieniądza w czasie",
               "contentItem": {
                 "macroecon-u4-l8-video-1": {
                   "title": "Stopy procentowe i wartość pieniądza w czasie"
@@ -1877,8 +1915,11 @@
           }
         },
         "unit-5": {
+          "title": "Długoterminowe konsekwencje polityk stabilizacyjnych",
+          "description": "Zrozumienie długoterminowych efektów polityki fiskalnej i monetarnej, wzrostu i zadłużenia",
           "lesson": {
             "lesson-5-1": {
+              "title": "Działania polityki fiskalnej i monetarnej w krótkim okresie",
               "contentItem": {
                 "macroecon-u5-l1-video-1": {
                   "title": "Działania polityki fiskalnej i monetarnej w krótkim okresie"
@@ -1900,6 +1941,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "Krzywa Phillipsa",
               "contentItem": {
                 "macroecon-u5-l2-video-1": {
                   "title": "Krzywa Phillipsa"
@@ -1921,6 +1963,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Wzrost podaży pieniądza i inflacja",
               "contentItem": {
                 "macroecon-u5-l3-video-1": {
                   "title": "Wzrost podaży pieniądza i inflacja"
@@ -1942,6 +1985,7 @@
               }
             },
             "lesson-5-4": {
+              "title": "Efekt wypierania",
               "contentItem": {
                 "macroecon-u5-l4-video-1": {
                   "title": "Efekt wypierania"
@@ -1963,6 +2007,7 @@
               }
             },
             "lesson-5-5": {
+              "title": "Deficyt i dług",
               "contentItem": {
                 "macroecon-u5-l5-video-1": {
                   "title": "Deficyt i dług"
@@ -1984,6 +2029,7 @@
               }
             },
             "lesson-5-6": {
+              "title": "Wzrost gospodarczy",
               "contentItem": {
                 "macroecon-u5-l6-video-1": {
                   "title": "Wzrost gospodarczy"
@@ -2007,8 +2053,11 @@
           }
         },
         "unit-6": {
+          "title": "Gospodarka otwarta: handel międzynarodowy i finanse",
+          "description": "Zrozumienie bilansu płatniczego, kursów walutowych i międzynarodowych przepływów kapitału",
           "lesson": {
             "lesson-6-1": {
+              "title": "Bilans płatniczy",
               "contentItem": {
                 "macroecon-u6-l1-video-1": {
                   "title": "Bilans płatniczy"
@@ -2030,6 +2079,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Kursy walutowe",
               "contentItem": {
                 "macroecon-u6-l2-video-1": {
                   "title": "Kursy walutowe"
@@ -2051,6 +2101,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "Rynek walutowy",
               "contentItem": {
                 "macroecon-u6-l3-video-1": {
                   "title": "Rynek walutowy"
@@ -2072,6 +2123,7 @@
               }
             },
             "lesson-6-4": {
+              "title": "Wpływ zmian w polityce i warunkach gospodarczych na rynek walutowy",
               "contentItem": {
                 "macroecon-u6-l4-video-1": {
                   "title": "Wpływ zmian w polityce i warunkach gospodarczych na rynek walutowy"
@@ -2093,6 +2145,7 @@
               }
             },
             "lesson-6-5": {
+              "title": "Realne stopy procentowe i międzynarodowe przepływy kapitału",
               "contentItem": {
                 "macroecon-u6-l5-video-1": {
                   "title": "Realne stopy procentowe i międzynarodowe przepływy kapitału"
@@ -2116,8 +2169,11 @@
           }
         },
         "unit-7": {
+          "title": "Podejścia keynesowskie i IS-LM",
+          "description": "Zrozumienie funkcji konsumpcji, krzyż keynesowski, model IS-LM i ekonomia keynesowska",
           "lesson": {
             "lesson-7-1": {
+              "title": "Funkcja konsumpcji",
               "contentItem": {
                 "macroecon-u7-l1-video-1": {
                   "title": "Funkcja konsumpcji"
@@ -2136,6 +2192,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Krzyż keynesowski",
               "contentItem": {
                 "macroecon-u7-l2-video-1": {
                   "title": "Krzyż keynesowski"
@@ -2154,6 +2211,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "IS-LM",
               "contentItem": {
                 "macroecon-u7-l3-video-1": {
                   "title": "IS-LM"
@@ -2172,6 +2230,7 @@
               }
             },
             "lesson-7-4": {
+              "title": "Ekonomia keynesowska i jej krytyka",
               "contentItem": {
                 "macroecon-u7-l4-video-1": {
                   "title": "Ekonomia keynesowska i jej krytyka"
@@ -2192,8 +2251,11 @@
           }
         },
         "unit-8": {
+          "title": "Współczesne problemy makroekonomiczne",
+          "description": "Zrozumienie nierówności dochodowych, dystrybucji bogactwa i kryzysu finansowego z 2008 roku",
           "lesson": {
             "lesson-8-1": {
+              "title": "Analiza nierówności dochodowych w Stanach Zjednoczonych (we współpracy z The New York Times)",
               "contentItem": {
                 "macroecon-u8-l1-video-1": {
                   "title": "Analysis of income inequality in the United States"
@@ -2212,6 +2274,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Dochód narodowy i nierówność",
               "contentItem": {
                 "macroecon-u8-l2-video-1": {
                   "title": "Dochód narodowy i nierówność"
@@ -2230,6 +2293,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "Kryzys finansowy 2008 roku",
               "contentItem": {
                 "macroecon-u8-l3-video-1": {
                   "title": "Kryzys finansowy 2008 roku"
@@ -2255,8 +2319,11 @@
       "description": "Badanie pojedynczych jednostek ekonomicznych i procesów podejmowania decyzji",
       "unit": {
         "unit-1": {
+          "title": "Podstawowe koncepcje ekonomiczne",
+          "description": "Wprowadzenie do ekonomii, niedoboru, systemów ekonomicznych i modelu przepływu kołowego",
           "lesson": {
             "lesson-1-1": {
+              "title": "Wprowadzenie do ekonomii",
               "contentItem": {
                 "micro-u1-l1-video-1": {
                   "title": "Wprowadzenie do ekonomii"
@@ -2278,6 +2345,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Systemy ekonomiczne",
               "contentItem": {
                 "micro-u1-l2-video-1": {
                   "title": "Systemy ekonomiczne"
@@ -2301,8 +2369,11 @@
           }
         },
         "unit-2": {
+          "title": "Podaż, popyt i równowaga rynkowa",
+          "description": "Zrozumienie popytu, podaży, równowagi rynkowej i jak rynki dostosowują się do zmian",
           "lesson": {
             "lesson-2-1": {
+              "title": "Popyt",
               "contentItem": {
                 "micro-u2-l1-video-1": {
                   "title": "Popyt"
@@ -2324,6 +2395,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Podaż",
               "contentItem": {
                 "micro-u2-l2-video-1": {
                   "title": "Podaż"
@@ -2344,6 +2416,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Równowaga rynkowa i zmiany równowagi",
               "contentItem": {
                 "micro-u2-l3-video-1": {
                   "title": "Równowaga rynkowa i zmiany równowagi"
@@ -2367,8 +2440,11 @@
           }
         },
         "unit-3": {
+          "title": "Elastyczność",
+          "description": "Zrozumienie elastyczności cenowej popytu i podaży, elastyczności dochodowej i elastyczności krzyżowej",
           "lesson": {
             "lesson-3-1": {
+              "title": "Elastyczność cenowa popytu",
               "contentItem": {
                 "micro-u3-l1-video-1": {
                   "title": "Elastyczność cenowa popytu"
@@ -2390,6 +2466,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Elastyczność cenowa podaży",
               "contentItem": {
                 "micro-u3-l2-video-1": {
                   "title": "Elastyczność cenowa podaży"
@@ -2411,6 +2488,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Elastyczność popytu dochodowa i elastyczność krzyżowa popytu",
               "contentItem": {
                 "micro-u3-l3-video-1": {
                   "title": "Elastyczność popytu dochodowa i elastyczność krzyżowa popytu"
@@ -2434,8 +2512,11 @@
           }
         },
         "unit-4": {
+          "title": "Nadwyżka konsumenta i producenta, interwencje rynkowe i handel międzynarodowy",
+          "description": "Zrozumienie nadwyżki konsumenta i producenta, interwencji rynkowych, straty społecznej i handlu międzynarodowego",
           "lesson": {
             "lesson-4-1": {
+              "title": "Nadwyżka konsumenta i producenta",
               "contentItem": {
                 "micro-u4-l1-video-1": {
                   "title": "Nadwyżka konsumenta i producenta"
@@ -2457,6 +2538,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Interwencje rynkowe i strata dobrobytu",
               "contentItem": {
                 "micro-u4-l2-video-1": {
                   "title": "Interwencje rynkowe i strata dobrobytu"
@@ -2478,6 +2560,7 @@
               }
             },
             "lesson-4-3": {
+              "title": "Handel międzynarodowy",
               "contentItem": {
                 "micro-u4-l3-video-1": {
                   "title": "Handel międzynarodowy"
@@ -2501,8 +2584,11 @@
           }
         },
         "unit-5": {
+          "title": "Teoria konsumenta",
+          "description": "Zrozumienie użyteczności, użyteczności krańcowej, maksymalizacji użyteczności i wyboru konsumenta z krzywymi obojętności",
           "lesson": {
             "lesson-5-1": {
+              "title": "Wprowadzenie do teorii konsumenta; całkowita użyteczność i użyteczność krańcowa",
               "contentItem": {
                 "micro-u5-l1-video-1": {
                   "title": "Wprowadzenie do teorii konsumenta; użyteczność całkowita i użyteczność krańcowa"
@@ -2524,6 +2610,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "Maksymalizacja użyteczności z użyciem użyteczności krańcowej na wydanego dolara",
               "contentItem": {
                 "micro-u5-l2-video-1": {
                   "title": "Maksymalizacja użyteczności z użyciem użyteczności krańcowej na wydanego dolara"
@@ -2545,6 +2632,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Maksymalizacja użyteczności z krzywymi obojętności",
               "contentItem": {
                 "micro-u5-l3-video-1": {
                   "title": "Maksymalizacja użyteczności z krzywymi obojętności"
@@ -2565,8 +2653,11 @@
           }
         },
         "unit-6": {
+          "title": "Decyzje produkcyjne i zysk ekonomiczny",
+          "description": "Zrozumienie funkcji produkcji, kosztów, maksymalizacji zysku i decyzji o wejściu/wyjściu firm",
           "lesson": {
             "lesson-6-1": {
+              "title": "Wprowadzenie do produkcji i kosztów",
               "contentItem": {
                 "micro-u6-l1-video-1": {
                   "title": "Wprowadzenie do produkcji i kosztów"
@@ -2588,6 +2679,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Produkcja i koszty w krótkim okresie",
               "contentItem": {
                 "micro-u6-l2-video-1": {
                   "title": "Produkcja i koszty w krótkim okresie"
@@ -2609,6 +2701,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "Produkcja i koszty w długim okresie",
               "contentItem": {
                 "micro-u6-l3-video-1": {
                   "title": "Produkcja i koszty w długim okresie"
@@ -2630,6 +2723,7 @@
               }
             },
             "lesson-6-4": {
+              "title": "Typy zysku",
               "contentItem": {
                 "micro-u6-l4-video-1": {
                   "title": "Typy zysku"
@@ -2651,6 +2745,7 @@
               }
             },
             "lesson-6-5": {
+              "title": "Maksymalizacja zysku",
               "contentItem": {
                 "micro-u6-l5-video-1": {
                   "title": "Maksymalizacja zysku"
@@ -2671,6 +2766,7 @@
               }
             },
             "lesson-6-6": {
+              "title": "Wejście firm, wyjście i reguła zamknięcia",
               "contentItem": {
                 "micro-u6-l6-video-1": {
                   "title": "Wejście firm, wyjście i reguła zamknięcia"
@@ -2694,8 +2790,11 @@
           }
         },
         "unit-7": {
+          "title": "Formy konkurencji",
+          "description": "Zrozumienie konkurencji doskonałej, monopolu, konkurencji monopolistycznej, oligopolu i teorii gier",
           "lesson": {
             "lesson-7-1": {
+              "title": "Konkurencja doskonała",
               "contentItem": {
                 "micro-u7-l1-video-1": {
                   "title": "Doskonała konkurencja"
@@ -2717,6 +2816,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Monopol",
               "contentItem": {
                 "micro-u7-l2-video-1": {
                   "title": "Monopol"
@@ -2738,6 +2838,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "Dyskryminacja cenowa",
               "contentItem": {
                 "micro-u7-l3-video-1": {
                   "title": "Dyskryminacja cenowa"
@@ -2759,6 +2860,7 @@
               }
             },
             "lesson-7-4": {
+              "title": "Konkurencja monopolistyczna",
               "contentItem": {
                 "micro-u7-l4-video-1": {
                   "title": "Konkurencja monopolistyczna"
@@ -2780,6 +2882,7 @@
               }
             },
             "lesson-7-5": {
+              "title": "Oligopol i teoria gier",
               "contentItem": {
                 "micro-u7-l5-video-1": {
                   "title": "Oligopol i teoria gier"
@@ -2802,8 +2905,11 @@
           }
         },
         "unit-8": {
+          "title": "Rynki czynników produkcji",
+          "description": "Zrozumienie rynków czynników produkcji, popytu i podaży pracy, minimalizacji kosztów i monopsonu",
           "lesson": {
             "lesson-8-1": {
+              "title": "Wprowadzenie do rynków czynników produkcji",
               "contentItem": {
                 "micro-u8-l1-video-1": {
                   "title": "Wprowadzenie do rynków czynników produkcji"
@@ -2825,6 +2931,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Zmiany w popycie i podaży czynników produkcji",
               "contentItem": {
                 "micro-u8-l2-video-1": {
                   "title": "Zmiany w popycie i podaży czynników produkcji"
@@ -2845,6 +2952,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "Optymalny wybór czynników produkcji na rynkach czynników produkcji z doskonałą konkurencją",
               "contentItem": {
                 "micro-u8-l3-video-1": {
                   "title": "Optymalny wybór czynników produkcji na rynkach czynników produkcji z doskonałą konkurencją"
@@ -2865,6 +2973,7 @@
               }
             },
             "lesson-8-4": {
+              "title": "Wybór zasobów, gdy rynki czynników produkcji są monopsonistycznie konkurencyjne",
               "contentItem": {
                 "micro-u8-l4-video-1": {
                   "title": "Wybór zasobów, gdy rynki czynników produkcji są monopsonistycznie konkurencyjne"
@@ -2888,8 +2997,11 @@
           }
         },
         "unit-9": {
+          "title": "Niewydolność rynku i rola rządu",
+          "description": "Zrozumienie efektów zewnętrznych, dóbr publicznych, wspólnych zasobów i interwencji rządowej",
           "lesson": {
             "lesson-9-1": {
+              "title": "Efekty zewnętrzne",
               "contentItem": {
                 "micro-u9-l1-video-1": {
                   "title": "Efekty zewnętrzne"
@@ -2908,6 +3020,7 @@
               }
             },
             "lesson-9-2": {
+              "title": "Cztery typy dóbr: dobra prywatne, dobra publiczne, zasoby wspólne i monopole naturalne",
               "contentItem": {
                 "micro-u9-l2-video-1": {
                   "title": "Cztery typy dóbr: dobra prywatne, dobra publiczne, zasoby wspólne i monopole naturalne"
@@ -2934,8 +3047,11 @@
       "description": "Kompleksowe badanie rynków finansowych, instrumentów i strategii inwestycyjnych",
       "unit": {
         "unit-1": {
+          "title": "Odsetki i dług",
+          "description": "Zrozumienie odsetek, odsetek składanych, kart kredytowych, pożyczek, wartości bieżącej i bankructwa",
           "lesson": {
             "lesson-1-1": {
+              "title": "Podstawy procentu składanego",
               "contentItem": {
                 "finance-u1-l1-video-1": {
                   "title": "Podstawy procentu składanego"
@@ -2952,6 +3068,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Podstawy procentu",
               "contentItem": {
                 "finance-u1-l2-video-1": {
                   "title": "Podstawy procentu"
@@ -2968,6 +3085,7 @@
               }
             },
             "lesson-1-3": {
+              "title": "Karty kredytowe i pożyczki",
               "contentItem": {
                 "finance-u1-l3-video-1": {
                   "title": "Karty kredytowe i pożyczki"
@@ -2984,6 +3102,7 @@
               }
             },
             "lesson-1-4": {
+              "title": "Ciągły procent składany i liczba e",
               "contentItem": {
                 "finance-u1-l4-video-1": {
                   "title": "Ciągły procent składany i liczba e"
@@ -3000,6 +3119,7 @@
               }
             },
             "lesson-1-5": {
+              "title": "Wartość bieżąca",
               "contentItem": {
                 "finance-u1-l5-video-1": {
                   "title": "Wartość bieżąca"
@@ -3016,6 +3136,7 @@
               }
             },
             "lesson-1-6": {
+              "title": "Bankructwo osobiste",
               "contentItem": {
                 "finance-u1-l6-video-1": {
                   "title": "Bankructwo osobiste"
@@ -3034,8 +3155,11 @@
           }
         },
         "unit-2": {
+          "title": "Mieszkania",
+          "description": "Zrozumienie kapitału własnego w nieruchomościach, sprawozdań bilansowych, wynajmu vs zakupu, hipotek i procesu zakupu domu",
           "lesson": {
             "lesson-2-1": {
+              "title": "Kapitał własny w nieruchomościach i osobiste sprawozdania bilansowe",
               "contentItem": {
                 "finance-u2-l1-video-1": {
                   "title": "Kapitał własny w nieruchomościach i osobiste sprawozdania bilansowe"
@@ -3052,6 +3176,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Wynajem vs zakup mieszkania",
               "contentItem": {
                 "finance-u2-l2-video-1": {
                   "title": "Wynajem vs zakup mieszkania"
@@ -3069,6 +3194,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Hipoteka",
               "contentItem": {
                 "finance-u2-l3-video-1": {
                   "title": "Hipoteka"
@@ -3086,6 +3212,7 @@
               }
             },
             "lesson-2-4": {
+              "title": "Proces zakupu mieszkania",
               "contentItem": {
                 "finance-u2-l4-video-1": {
                   "title": "Proces zakupu mieszkania"
@@ -3105,8 +3232,11 @@
           }
         },
         "unit-3": {
+          "title": "Inflacja",
+          "description": "Zrozumienie inflacji, deflacji, realnych vs nominalnych zwrotów i wykorzystania mocy produkcyjnych",
           "lesson": {
             "lesson-3-1": {
+              "title": "Podstawy inflacji",
               "contentItem": {
                 "finance-u3-l1-video-1": {
                   "title": "Podstawy inflacji"
@@ -3123,6 +3253,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Scenariusze inflacji",
               "contentItem": {
                 "finance-u3-l2-video-1": {
                   "title": "Scenariusze inflacji"
@@ -3139,6 +3270,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Realna i nominalna stopa zwrotu",
               "contentItem": {
                 "finance-u3-l3-video-1": {
                   "title": "Realna i nominalna stopa zwrotu"
@@ -3155,6 +3287,7 @@
               }
             },
             "lesson-3-4": {
+              "title": "Wykorzystanie mocy produkcyjnych i inflacja",
               "contentItem": {
                 "finance-u3-l4-video-1": {
                   "title": "Wykorzystanie mocy produkcyjnych i inflacja"
@@ -3171,6 +3304,7 @@
               }
             },
             "lesson-3-5": {
+              "title": "Deflacja",
               "contentItem": {
                 "finance-u3-l5-video-1": {
                   "title": "Deflacja"
@@ -3189,8 +3323,11 @@
           }
         },
         "unit-4": {
+          "title": "Podatki",
+          "description": "Zrozumienie podatków osobistych, opodatkowania korporacyjnego i planowania podatkowego",
           "lesson": {
             "lesson-4-1": {
+              "title": "Podatki osobiste",
               "contentItem": {
                 "finance-u4-l1-video-1": {
                   "title": "Podatki osobiste"
@@ -3208,6 +3345,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Opodatkowanie korporacyjne",
               "contentItem": {
                 "finance-u4-l2-video-1": {
                   "title": "Opodatkowanie korporacyjne"
@@ -3227,8 +3365,11 @@
           }
         },
         "unit-5": {
+          "title": "Rachunkowość i sprawozdania finansowe",
+          "description": "Zrozumienie rachunkowości kasowej vs memoriałowej, sprawozdań finansowych i amortyzacji",
           "lesson": {
             "lesson-5-1": {
+              "title": "Rachunkowość kasowa vs memoriałowa",
               "contentItem": {
                 "finance-u5-l1-video-1": {
                   "title": "Rachunkowość kasowa vs memoriałowa"
@@ -3245,6 +3386,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "Trzy podstawowe sprawozdania finansowe",
               "contentItem": {
                 "finance-u5-l2-video-1": {
                   "title": "Trzy podstawowe sprawozdania finansowe"
@@ -3265,6 +3407,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Amortyzacja i zużycie",
               "contentItem": {
                 "finance-u5-l3-video-1": {
                   "title": "Amortyzacja i zużycie"
@@ -3284,8 +3427,11 @@
           }
         },
         "unit-6": {
+          "title": "Akcje i obligacje",
+          "description": "Zrozumienie akcji, obligacji, finansów korporacyjnych, wyceny i cyklu życia firmy",
           "lesson": {
             "lesson-6-1": {
+              "title": "Wprowadzenie do akcji",
               "contentItem": {
                 "finance-u6-l1-video-1": {
                   "title": "Wprowadzenie do akcji"
@@ -3302,6 +3448,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Krótka sprzedaż akcji",
               "contentItem": {
                 "finance-u6-l2-video-1": {
                   "title": "Krótka sprzedaż akcji"
@@ -3318,6 +3465,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "Zrozumienie sprawozdań firmy i struktury kapitału",
               "contentItem": {
                 "finance-u6-l3-video-1": {
                   "title": "Zrozumienie sprawozdań firmy i struktury kapitału"
@@ -3334,6 +3482,7 @@
               }
             },
             "lesson-6-4": {
+              "title": "Wskaźniki korporacyjne i wycena",
               "contentItem": {
                 "finance-u6-l4-video-1": {
                   "title": "Wskaźniki korporacyjne i wycena"
@@ -3351,6 +3500,7 @@
               }
             },
             "lesson-6-5": {
+              "title": "Życie firmy – od narodzin do śmierci",
               "contentItem": {
                 "finance-u6-l5-video-1": {
                   "title": "Życie firmy – od narodzin do śmierci"
@@ -3368,6 +3518,7 @@
               }
             },
             "lesson-6-6": {
+              "title": "Rozwodnienie",
               "contentItem": {
                 "finance-u6-l6-video-1": {
                   "title": "Rozwodnienie"
@@ -3383,6 +3534,7 @@
               }
             },
             "lesson-6-7": {
+              "title": "Fuzje i przejęcia",
               "contentItem": {
                 "finance-u6-l7-video-1": {
                   "title": "Fuzje i przejęcia"
@@ -3402,6 +3554,7 @@
               }
             },
             "lesson-6-8": {
+              "title": "Wykup z wykorzystaniem kapitału dłużnego",
               "contentItem": {
                 "finance-u6-l8-video-1": {
                   "title": "Wykup z wykorzystaniem kapitału dłużnego"
@@ -3421,6 +3574,7 @@
               }
             },
             "lesson-6-9": {
+              "title": "Obligacje",
               "contentItem": {
                 "finance-u6-l9-video-1": {
                   "title": "Obligacje"
@@ -3441,6 +3595,7 @@
               }
             },
             "lesson-6-10": {
+              "title": "Bankructwo korporacyjne",
               "contentItem": {
                 "finance-u6-l10-video-1": {
                   "title": "Bankructwo korporacyjne"
@@ -3462,8 +3617,11 @@
           }
         },
         "unit-7": {
+          "title": "Instrumenty inwestycyjne, ubezpieczenia i emerytura",
+          "description": "Zrozumienie funduszy wzajemnych, ETF, kont emerytalnych, ubezpieczeń, funduszy hedgingowych i zasad inwestowania",
           "lesson": {
             "lesson-7-1": {
+              "title": "Fundusze wzajemne i ETF",
               "contentItem": {
                 "finance-u7-l1-video-1": {
                   "title": "Fundusze wzajemne i ETF"
@@ -3483,6 +3641,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Konta emerytalne: IRA i 401k",
               "contentItem": {
                 "finance-u7-l2-video-1": {
                   "title": "Konta emerytalne: IRA i 401k"
@@ -3502,6 +3661,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "Ubezpieczenie na życie",
               "contentItem": {
                 "finance-u7-l3-video-1": {
                   "title": "Ubezpieczenie na życie"
@@ -3518,6 +3678,7 @@
               }
             },
             "lesson-7-4": {
+              "title": "Fundusze hedgingowe",
               "contentItem": {
                 "finance-u7-l4-video-1": {
                   "title": "Fundusze hedgingowe"
@@ -3534,6 +3695,7 @@
               }
             },
             "lesson-7-5": {
+              "title": "Inwestycje i konsumpcja",
               "contentItem": {
                 "finance-u7-l5-video-1": {
                   "title": "Inwestycje i konsumpcja"
@@ -3552,8 +3714,11 @@
           }
         },
         "unit-8": {
+          "title": "Pieniądze, bankowość i banki centralne",
+          "description": "Zrozumienie bankowości, tworzenia pieniądza, banków centralnych, luzowania ilościowego, kryzysów finansowych i kryptowalut",
           "lesson": {
             "lesson-8-1": {
+              "title": "Bankowość i pieniądze",
               "contentItem": {
                 "finance-u8-l1-video-1": {
                   "title": "Bankowość i pieniądze"
@@ -3571,6 +3736,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Luzowanie ilościowe",
               "contentItem": {
                 "finance-u8-l2-video-1": {
                   "title": "Luzowanie ilościowe"
@@ -3587,6 +3753,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "Ratowanie banków w 2008 roku",
               "contentItem": {
                 "finance-u8-l3-video-1": {
                   "title": "Ratowanie banków w 2008 roku"
@@ -3604,6 +3771,7 @@
               }
             },
             "lesson-8-4": {
+              "title": "Plan Geithnera",
               "contentItem": {
                 "finance-u8-l4-video-1": {
                   "title": "Plan Geithnera"
@@ -3620,6 +3788,7 @@
               }
             },
             "lesson-8-5": {
+              "title": "Wymiana walutowa i handel",
               "contentItem": {
                 "finance-u8-l5-video-1": {
                   "title": "Wymiana walutowa i handel"
@@ -3636,6 +3805,7 @@
               }
             },
             "lesson-8-6": {
+              "title": "Chińska waluta i dług USA",
               "contentItem": {
                 "finance-u8-l6-video-1": {
                   "title": "Chińska waluta i dług USA"
@@ -3652,6 +3822,7 @@
               }
             },
             "lesson-8-7": {
+              "title": "Grecki kryzys zadłużeniowy 2011-2012",
               "contentItem": {
                 "finance-u8-l7-video-1": {
                   "title": "Grecki kryzys zadłużeniowy 2011-2012"
@@ -3668,6 +3839,7 @@
               }
             },
             "lesson-8-8": {
+              "title": "Bitcoin",
               "contentItem": {
                 "finance-u8-l8-video-1": {
                   "title": "Bitcoin"
@@ -3687,8 +3859,11 @@
           }
         },
         "unit-9": {
+          "title": "Opcje, swapy, kontrakty terminowe, MBS, CDO i inne instrumenty pochodne",
+          "description": "Zrozumienie opcji, kontraktów terminowych, swapów, papierów wartościowych zabezpieczonych hipoteką, CDO, swapów ryzyka kredytowego i wyceny opcji",
           "lesson": {
             "lesson-9-1": {
+              "title": "Opcje put i call",
               "contentItem": {
                 "finance-u9-l1-video-1": {
                   "title": "Opcje put i call"
@@ -3706,6 +3881,7 @@
               }
             },
             "lesson-9-2": {
+              "title": "Kontrakty forward i futures",
               "contentItem": {
                 "finance-u9-l2-video-1": {
                   "title": "Kontrakty forward i futures"
@@ -3724,6 +3900,7 @@
               }
             },
             "lesson-9-3": {
+              "title": "Zabezpieczone hipoteką papiery wartościowe",
               "contentItem": {
                 "finance-u9-l3-video-1": {
                   "title": "Zabezpieczone hipoteką papiery wartościowe"
@@ -3739,6 +3916,7 @@
               }
             },
             "lesson-9-4": {
+              "title": "Zabezpieczone zobowiązania dłużne",
               "contentItem": {
                 "finance-u9-l4-video-1": {
                   "title": "Zabezpieczone zobowiązania dłużne"
@@ -3755,6 +3933,7 @@
               }
             },
             "lesson-9-5": {
+              "title": "Kredytowe swapy na wypadek niewypłacalności",
               "contentItem": {
                 "finance-u9-l5-video-1": {
                   "title": "Kredytowe swapy na wypadek niewypłacalności"
@@ -3771,6 +3950,7 @@
               }
             },
             "lesson-9-6": {
+              "title": "Swapy stóp procentowych",
               "contentItem": {
                 "finance-u9-l6-video-1": {
                   "title": "Swapy stóp procentowych"
@@ -3787,6 +3967,7 @@
               }
             },
             "lesson-9-7": {
+              "title": "Formuła Blacka-Scholesa",
               "contentItem": {
                 "finance-u9-l7-video-1": {
                   "title": "Formuła Blacka-Scholesa"
@@ -3805,8 +3986,11 @@
           }
         },
         "unit-10": {
+          "title": "Aktualna ekonomia",
+          "description": "Zrozumienie bezrobocia, cen mieszkań, kryzysu kredytowego, ratowań finansowych i kwestii Unii Europejskiej",
           "lesson": {
             "lesson-10-1": {
+              "title": "Bezrobocie",
               "contentItem": {
                 "finance-u10-l1-video-1": {
                   "title": "Bezrobocie"
@@ -3823,6 +4007,7 @@
               }
             },
             "lesson-10-2": {
+              "title": "Zagadka cen mieszkań",
               "contentItem": {
                 "finance-u10-l2-video-1": {
                   "title": "Zagadka cen mieszkań"
@@ -3839,6 +4024,7 @@
               }
             },
             "lesson-10-3": {
+              "title": "Kryzys kredytowy",
               "contentItem": {
                 "finance-u10-l3-video-1": {
                   "title": "Kryzys kredytowy"
@@ -3855,6 +4041,7 @@
               }
             },
             "lesson-10-4": {
+              "title": "Ratunek Paulsona",
               "contentItem": {
                 "finance-u10-l4-video-1": {
                   "title": "Ratunek Paulsona"
@@ -3872,6 +4059,7 @@
               }
             },
             "lesson-10-5": {
+              "title": "Brexit i wprowadzenie do Unii Europejskiej",
               "contentItem": {
                 "finance-u10-l5-video-1": {
                   "title": "Brexit i wprowadzenie do Unii Europejskiej"
@@ -3912,8 +4100,11 @@
       "description": "Zrozumienie finansów osobistych poprzez zasady ekonomiczne",
       "unit": {
         "unit-1": {
+          "title": "Podstawy ekonomii",
+          "description": "Zrozumienie niedoboru, kosztu alternatywnego, podejmowania decyzji, czynników produkcji, kapitału ludzkiego i systemów ekonomicznych",
           "lesson": {
             "lesson-1-1": {
+              "title": "Niedobór",
               "contentItem": {
                 "economics-u1-l1-video-1": {
                   "title": "Niedobór"
@@ -3936,6 +4127,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Koszty i korzyści",
               "contentItem": {
                 "economics-u1-l2-video-1": {
                   "title": "Koszty i korzyści"
@@ -3958,6 +4150,7 @@
               }
             },
             "lesson-1-3": {
+              "title": "Podejmowanie decyzji i niezamierzone konsekwencje",
               "contentItem": {
                 "economics-u1-l3-video-1": {
                   "title": "Podejmowanie decyzji i niezamierzone konsekwencje"
@@ -3980,6 +4173,7 @@
               }
             },
             "lesson-1-4": {
+              "title": "Czynniki produkcji",
               "contentItem": {
                 "economics-u1-l4-video-1": {
                   "title": "Czynniki produkcji"
@@ -4002,6 +4196,7 @@
               }
             },
             "lesson-1-5": {
+              "title": "Kapitał ludzki i dochód",
               "contentItem": {
                 "economics-u1-l5-video-1": {
                   "title": "Kapitał ludzki i dochód"
@@ -4024,6 +4219,7 @@
               }
             },
             "lesson-1-6": {
+              "title": "Systemy ekonomiczne",
               "contentItem": {
                 "economics-u1-l6-video-1": {
                   "title": "Systemy ekonomiczne"
@@ -4049,8 +4245,11 @@
           }
         },
         "unit-2": {
+          "title": "Producenci i konsumenci na rynkach",
+          "description": "Zrozumienie zachęt, marketingu, kosztów, przychodów, zysku, produktywności, organizacji biznesowej i struktur rynkowych",
           "lesson": {
             "lesson-2-1": {
+              "title": "Zachęty i marketing",
               "contentItem": {
                 "economics-u2-l1-video-1": {
                   "title": "Zachęty i marketing"
@@ -4073,6 +4272,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Koszt, przychód i zysk",
               "contentItem": {
                 "economics-u2-l2-video-1": {
                   "title": "Koszt, przychód i zysk"
@@ -4095,6 +4295,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Produktywność i wzrost gospodarczy",
               "contentItem": {
                 "economics-u2-l3-video-1": {
                   "title": "Produktywność i wzrost gospodarczy"
@@ -4117,6 +4318,7 @@
               }
             },
             "lesson-2-4": {
+              "title": "Organizacja biznesowa",
               "contentItem": {
                 "economics-u2-l4-video-1": {
                   "title": "Organizacja biznesowa"
@@ -4139,6 +4341,7 @@
               }
             },
             "lesson-2-5": {
+              "title": "Struktury rynkowe i konkurencja",
               "contentItem": {
                 "economics-u2-l5-video-1": {
                   "title": "Struktury rynkowe i konkurencja"
@@ -4164,8 +4367,11 @@
           }
         },
         "unit-3": {
+          "title": "Mikroekonomia i systemy cenowe",
+          "description": "Zrozumienie popytu, podaży, elastyczności, równowagi rynkowej i kontroli cen",
           "lesson": {
             "lesson-3-1": {
+              "title": "Popyt",
               "contentItem": {
                 "economics-u3-l1-video-1": {
                   "title": "Popyt"
@@ -4190,6 +4396,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Podaż",
               "contentItem": {
                 "economics-u3-l2-video-1": {
                   "title": "Podaż"
@@ -4212,6 +4419,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Elastyczność",
               "contentItem": {
                 "economics-u3-l3-video-1": {
                   "title": "Elastyczność"
@@ -4235,6 +4443,7 @@
               }
             },
             "lesson-3-4": {
+              "title": "Równowaga",
               "contentItem": {
                 "economics-u3-l4-video-1": {
                   "title": "Równowaga"
@@ -4258,6 +4467,7 @@
               }
             },
             "lesson-3-5": {
+              "title": "Kontrola cen",
               "contentItem": {
                 "economics-u3-l5-video-1": {
                   "title": "Kontrola cen"
@@ -4282,8 +4492,11 @@
           }
         },
         "unit-4": {
+          "title": "Rola rządu w rynkach",
+          "description": "Zrozumienie dóbr publicznych vs prywatnych, praw własności i redystrybucji bogactwa przez rząd",
           "lesson": {
             "lesson-4-1": {
+              "title": "Publiczne vs prywatne",
               "contentItem": {
                 "economics-u4-l1-video-1": {
                   "title": "Publiczne vs prywatne"
@@ -4307,6 +4520,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Prawa własności",
               "contentItem": {
                 "economics-u4-l2-video-1": {
                   "title": "Prawa własności"
@@ -4330,6 +4544,7 @@
               }
             },
             "lesson-4-3": {
+              "title": "Redystrybucja bogactwa",
               "contentItem": {
                 "economics-u4-l3-video-1": {
                   "title": "Redystrybucja bogactwa"
@@ -4355,8 +4570,11 @@
           }
         },
         "unit-5": {
+          "title": "Wyzwania makroekonomiczne",
+          "description": "Zrozumienie wskaźników makroekonomicznych, popytu zagregowanego i podaży oraz cykli koniunkturalnych",
           "lesson": {
             "lesson-5-1": {
+              "title": "Wskaźniki makroekonomiczne",
               "contentItem": {
                 "economics-u5-l1-video-1": {
                   "title": "Wskaźniki makroekonomiczne"
@@ -4381,6 +4599,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "Makroekonomia i wyzwania ekonomiczne",
               "contentItem": {
                 "economics-u5-l2-video-1": {
                   "title": "Makroekonomia i wyzwania ekonomiczne"
@@ -4403,6 +4622,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Cykle koniunkturalne",
               "contentItem": {
                 "economics-u5-l3-video-1": {
                   "title": "Cykle koniunkturalne"
@@ -4427,8 +4647,11 @@
           }
         },
         "unit-6": {
+          "title": "Pieniądze, bankowość i rynki finansowe",
+          "description": "Zrozumienie pieniądza, instytucji finansowych i rynków oraz Rezerwy Federalnej",
           "lesson": {
             "lesson-6-1": {
+              "title": "Pieniądze",
               "contentItem": {
                 "economics-u6-l1-video-1": {
                   "title": "Pieniądze"
@@ -4452,6 +4675,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Rynki finansowe i instytucje",
               "contentItem": {
                 "economics-u6-l2-video-1": {
                   "title": "Rynki finansowe i instytucje"
@@ -4475,6 +4699,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "Rezerwa Federalna",
               "contentItem": {
                 "economics-u6-l3-video-1": {
                   "title": "Rezerwa Federalna"
@@ -4500,8 +4725,11 @@
           }
         },
         "unit-7": {
+          "title": "Stabilizacja ekonomiczna",
+          "description": "Zrozumienie polityki pieniężnej, polityki fiskalnej i budżetów rządowych",
           "lesson": {
             "lesson-7-1": {
+              "title": "Polityka pieniężna",
               "contentItem": {
                 "economics-u7-l1-video-1": {
                   "title": "Polityka pieniężna"
@@ -4525,6 +4753,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Polityka fiskalna",
               "contentItem": {
                 "economics-u7-l2-video-1": {
                   "title": "Polityka fiskalna"
@@ -4547,6 +4776,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "Budżety rządowe; dochody i wydatki",
               "contentItem": {
                 "economics-u7-l3-video-1": {
                   "title": "Budżety rządowe; dochody i wydatki"
@@ -4573,8 +4803,11 @@
           }
         },
         "unit-8": {
+          "title": "Gospodarka globalna",
+          "description": "Zrozumienie handlu, kursów walutowych i globalizacji",
           "lesson": {
             "lesson-8-1": {
+              "title": "Handel",
               "contentItem": {
                 "economics-u8-l1-video-1": {
                   "title": "Handel"
@@ -4600,6 +4833,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Konwersja walut",
               "contentItem": {
                 "economics-u8-l2-video-1": {
                   "title": "Konwersja walut"
@@ -4624,6 +4858,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "Globalizacja",
               "contentItem": {
                 "economics-u8-l3-video-1": {
                   "title": "Globalizacja"
@@ -4650,8 +4885,11 @@
           }
         },
         "unit-9": {
+          "title": "Kariery i edukacja",
+          "description": "Zrozumienie edukacji jako inwestycji, płacenia za edukację, pomocy finansowej i pożyczek studenckich",
           "lesson": {
             "lesson-9-1": {
+              "title": "Edukacja i zarobki",
               "contentItem": {
                 "economics-u9-l1-video-1": {
                   "title": "Edukacja i zarobki"
@@ -4674,6 +4912,7 @@
               }
             },
             "lesson-9-2": {
+              "title": "Edukacja podyplomowa",
               "contentItem": {
                 "economics-u9-l2-video-1": {
                   "title": "Edukacja podyplomowa"
@@ -4699,6 +4938,7 @@
               }
             },
             "lesson-9-3": {
+              "title": "Koszt edukacji podyplomowej",
               "contentItem": {
                 "economics-u9-l3-video-1": {
                   "title": "Koszt edukacji podyplomowej"
@@ -4722,6 +4962,7 @@
               }
             },
             "lesson-9-4": {
+              "title": "Pomoc finansowa",
               "contentItem": {
                 "economics-u9-l4-video-1": {
                   "title": "Pomoc finansowa"
@@ -4745,6 +4986,7 @@
               }
             },
             "lesson-9-5": {
+              "title": "Pożyczki studenckie",
               "contentItem": {
                 "economics-u9-l5-video-1": {
                   "title": "Pożyczki studenckie"
@@ -4774,8 +5016,11 @@
           }
         },
         "unit-10": {
+          "title": "Zatrudnienie",
+          "description": "Zrozumienie wynagrodzenia, świadczeń, wypłat, nietypowego wynagrodzenia i procesu zatrudniania",
           "lesson": {
             "lesson-10-1": {
+              "title": "Wynagrodzenie",
               "contentItem": {
                 "economics-u10-l1-video-1": {
                   "title": "Wynagrodzenie"
@@ -4802,6 +5047,7 @@
               }
             },
             "lesson-10-2": {
+              "title": "Wypłata",
               "contentItem": {
                 "economics-u10-l2-video-1": {
                   "title": "Wypłata"
@@ -4825,6 +5071,7 @@
               }
             },
             "lesson-10-3": {
+              "title": "Niestandardowe wynagrodzenie",
               "contentItem": {
                 "economics-u10-l3-video-1": {
                   "title": "Niestandardowe wynagrodzenie"
@@ -4849,6 +5096,7 @@
               }
             },
             "lesson-10-4": {
+              "title": "Proces zatrudniania",
               "contentItem": {
                 "economics-u10-l4-video-1": {
                   "title": "Proces zatrudniania"
@@ -4874,8 +5122,11 @@
           }
         },
         "unit-11": {
+          "title": "Bankowość",
+          "description": "Zrozumienie instytucji bankowych, kont bankowych, zarządzania kontami i odsetek",
           "lesson": {
             "lesson-11-1": {
+              "title": "Bankowość i instytucje finansowe",
               "contentItem": {
                 "economics-u11-l1-video-1": {
                   "title": "Bankowość i instytucje finansowe"
@@ -4899,6 +5150,7 @@
               }
             },
             "lesson-11-2": {
+              "title": "Rozumienie kont bankowych",
               "contentItem": {
                 "economics-u11-l2-video-1": {
                   "title": "Rozumienie kont bankowych"
@@ -4929,6 +5181,7 @@
               }
             },
             "lesson-11-3": {
+              "title": "Śledzenie, uzgadnianie i więcej",
               "contentItem": {
                 "economics-u11-l3-video-1": {
                   "title": "Śledzenie, uzgadnianie i więcej"
@@ -4951,6 +5204,7 @@
               }
             },
             "lesson-11-4": {
+              "title": "Odsetki",
               "contentItem": {
                 "economics-u11-l4-video-1": {
                   "title": "Odsetki"
@@ -4980,8 +5234,11 @@
           }
         },
         "unit-12": {
+          "title": "Cele finansowe",
+          "description": "Zrozumienie celów SMART, celów krótko/średnio/długoterminowych i wartości netto",
           "lesson": {
             "lesson-12-1": {
+              "title": "Cele SMART",
               "contentItem": {
                 "economics-u12-l1-video-1": {
                   "title": "Cele SMART"
@@ -5004,6 +5261,7 @@
               }
             },
             "lesson-12-2": {
+              "title": "Cele krótko-, średnio- i długoterminowe",
               "contentItem": {
                 "economics-u12-l2-video-1": {
                   "title": "Cele krótko-, średnio- i długoterminowe"
@@ -5027,6 +5285,7 @@
               }
             },
             "lesson-12-3": {
+              "title": "Wartość netto",
               "contentItem": {
                 "economics-u12-l3-video-1": {
                   "title": "Wartość netto"
@@ -5052,8 +5311,11 @@
           }
         },
         "unit-13": {
+          "title": "Budżetowanie i oszczędzanie",
+          "description": "Zrozumienie budżetowania, oszczędzania pieniędzy, funduszy awaryjnych i redukcji wydatków",
           "lesson": {
             "lesson-13-1": {
+              "title": "Budżetowanie",
               "contentItem": {
                 "economics-u13-l1-video-1": {
                   "title": "Budżetowanie"
@@ -5077,6 +5339,7 @@
               }
             },
             "lesson-13-2": {
+              "title": "Oszczędzanie pieniędzy",
               "contentItem": {
                 "economics-u13-l2-video-1": {
                   "title": "Oszczędzanie pieniędzy"
@@ -5100,6 +5363,7 @@
               }
             },
             "lesson-13-3": {
+              "title": "Redukcja wydatków",
               "contentItem": {
                 "economics-u13-l3-video-1": {
                   "title": "Redukcja wydatków"
@@ -5125,8 +5389,11 @@
           }
         },
         "unit-14": {
+          "title": "Oszczędzanie i inwestowanie",
+          "description": "Zrozumienie ryzyka i zwrotu, planowania emerytury i ubezpieczeń społecznych",
           "lesson": {
             "lesson-14-1": {
+              "title": "Ryzyko i zwrot",
               "contentItem": {
                 "economics-u14-l1-video-1": {
                   "title": "Ryzyko i zwrot"
@@ -5151,6 +5418,7 @@
               }
             },
             "lesson-14-2": {
+              "title": "Planowanie emerytury",
               "contentItem": {
                 "economics-u14-l2-video-1": {
                   "title": "Planowanie emerytury"
@@ -5174,6 +5442,7 @@
               }
             },
             "lesson-14-3": {
+              "title": "Oszczędzanie na emeryturę",
               "contentItem": {
                 "economics-u14-l3-video-1": {
                   "title": "Oszczędzanie na emeryturę"
@@ -5199,8 +5468,11 @@
           }
         },
         "unit-15": {
+          "title": "Kredyt konsumencki",
+          "description": "Zrozumienie kart kredytowych, ocen kredytowych i zarządzania kredytem",
           "lesson": {
             "lesson-15-1": {
+              "title": "Karty kredytowe",
               "contentItem": {
                 "economics-u15-l1-video-1": {
                   "title": "Karty kredytowe"
@@ -5225,6 +5497,7 @@
               }
             },
             "lesson-15-2": {
+              "title": "Ocena kredytowa",
               "contentItem": {
                 "economics-u15-l2-video-1": {
                   "title": "Ocena kredytowa"
@@ -5253,8 +5526,11 @@
           }
         },
         "unit-16": {
+          "title": "Pożyczki i dług",
+          "description": "Zrozumienie warunków pożyczania, źródeł pożyczek, rodzajów pożyczek, zarządzania długiem i bankructwa",
           "lesson": {
             "lesson-16-1": {
+              "title": "Warunki pożyczania",
               "contentItem": {
                 "economics-u16-l1-video-1": {
                   "title": "Warunki pożyczania"
@@ -5278,6 +5554,7 @@
               }
             },
             "lesson-16-2": {
+              "title": "Pożyczanie pieniędzy",
               "contentItem": {
                 "economics-u16-l2-video-1": {
                   "title": "Pożyczanie pieniędzy"
@@ -5311,6 +5588,7 @@
               }
             },
             "lesson-16-3": {
+              "title": "Typy pożyczek",
               "contentItem": {
                 "economics-u16-l3-video-1": {
                   "title": "Typy pożyczek"
@@ -5333,6 +5611,7 @@
               }
             },
             "lesson-16-4": {
+              "title": "Dług",
               "contentItem": {
                 "economics-u16-l4-video-1": {
                   "title": "Dług"
@@ -5362,6 +5641,7 @@
               }
             },
             "lesson-16-5": {
+              "title": "Bankructwo",
               "contentItem": {
                 "economics-u16-l5-video-1": {
                   "title": "Bankructwo"
@@ -5387,8 +5667,11 @@
           }
         },
         "unit-17": {
+          "title": "Podatki",
+          "description": "Zrozumienie podatków, podatków lokalnych, formularzy podatkowych i podatków dochodowych osobistych",
           "lesson": {
             "lesson-17-1": {
+              "title": "Czym są podatki i dlaczego je płacimy",
               "contentItem": {
                 "economics-u17-l1-video-1": {
                   "title": "Czym są podatki i dlaczego je płacimy"
@@ -5411,6 +5694,7 @@
               }
             },
             "lesson-17-2": {
+              "title": "Podatki lokalne",
               "contentItem": {
                 "economics-u17-l2-video-1": {
                   "title": "Podatki lokalne"
@@ -5434,6 +5718,7 @@
               }
             },
             "lesson-17-3": {
+              "title": "Formularze podatkowe",
               "contentItem": {
                 "economics-u17-l3-video-1": {
                   "title": "Formularze podatkowe"
@@ -5460,6 +5745,7 @@
               }
             },
             "lesson-17-4": {
+              "title": "Podatki osobiste",
               "contentItem": {
                 "economics-u17-l4-video-1": {
                   "title": "Podatki osobiste"

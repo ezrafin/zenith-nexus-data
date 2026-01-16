@@ -105,6 +105,8 @@ serve(async (req) => {
     const IEX_CLOUD_API_KEY = Deno.env.get('IEX_CLOUD_API_KEY');
     const POLYGON_API_KEY = Deno.env.get('POLYGON_API_KEY');
     const TWELVE_DATA_API_KEY = Deno.env.get('TWELVE_DATA_API_KEY');
+    const CURRENCY_API_KEY = Deno.env.get('CURRENCY_API_KEY');
+    const OPEN_EXCHANGE_RATES_API_KEY = Deno.env.get('OPEN_EXCHANGE_RATES_API_KEY');
     
     let marketData: MarketDataSource | null = null;
     let dataSource = 'unknown';
@@ -117,7 +119,12 @@ serve(async (req) => {
     // 5. Twelve Data (if key exists)
     // 6. Yahoo Finance (improved)
     // 7. ExchangeRate-API (for currencies only)
-    // 8. Mock data
+    // 7a. exchangerate.host (for currencies only, free, no key)
+    // 7b. Fixer.io (for currencies only, free tier)
+    // 7c. CurrencyAPI (for currencies only, if key exists)
+    // 7d. Open Exchange Rates (for currencies only, if key exists)
+    // 8. DB cache
+    // 9. Mock data
 
     // 1. Try Finnhub
     if (FINNHUB_API_KEY) {
@@ -296,6 +303,106 @@ serve(async (req) => {
         }
       } catch (apiError) {
         console.log('ExchangeRate-API failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 7a. Try exchangerate.host (for currencies only, free, no key)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies') {
+      try {
+        console.log('Attempting exchangerate.host for currencies...');
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchExchangeRateHost();
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'exchangeratehost' };
+          }
+          throw new Error('exchangerate.host returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from exchangerate.host`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('exchangerate.host failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 7b. Try Fixer.io (for currencies only, free tier)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies') {
+      try {
+        console.log('Attempting Fixer.io for currencies...');
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchFixerIO();
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'fixerio' };
+          }
+          throw new Error('Fixer.io returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Fixer.io`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('Fixer.io failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 7c. Try CurrencyAPI (for currencies only, if key exists)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies' && CURRENCY_API_KEY) {
+      try {
+        console.log('Attempting CurrencyAPI for currencies...');
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchCurrencyAPI(CURRENCY_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'currencyapi' };
+          }
+          throw new Error('CurrencyAPI returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from CurrencyAPI`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('CurrencyAPI failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
+        marketData = null;
+      }
+    }
+
+    // 7d. Try Open Exchange Rates (for currencies only, if key exists)
+    if ((!marketData || !hasMinimumData(marketData.data, 3)) && type === 'currencies' && OPEN_EXCHANGE_RATES_API_KEY) {
+      try {
+        console.log('Attempting Open Exchange Rates for currencies...');
+        marketData = await retryWithBackoff(async () => {
+          const data = await fetchOpenExchangeRates(OPEN_EXCHANGE_RATES_API_KEY);
+          const validated = validateMarketData(data);
+          if (hasMinimumData(validated, 3)) {
+            return { data: validated, source: 'openexchangerates' };
+          }
+          throw new Error('Open Exchange Rates returned insufficient valid data');
+        }, 2, 1000, 10000);
+
+        if (marketData && hasMinimumData(marketData.data, 3)) {
+          dataSource = marketData.source;
+          console.log(`Successfully fetched ${marketData.data.length} valid items from Open Exchange Rates`);
+        } else {
+          marketData = null;
+        }
+      } catch (apiError) {
+        console.log('Open Exchange Rates failed:', apiError instanceof Error ? apiError.message : 'Unknown error');
         marketData = null;
       }
     }
@@ -695,6 +802,242 @@ async function fetchExchangeRateAPI(): Promise<any[]> {
     }).filter(Boolean);
   } catch (error) {
     console.error('ExchangeRate-API error:', error);
+    return [];
+  }
+}
+
+// exchangerate.host (completely free, no API key required)
+async function fetchExchangeRateHost(): Promise<any[]> {
+  try {
+    const response = await fetch('https://api.exchangerate.host/latest?base=USD');
+    
+    if (!response.ok) {
+      throw new Error(`exchangerate.host error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const rates = data.rates || {};
+    
+    return CURRENCY_SYMBOLS.map((item) => {
+      if (!item.exchangeRate) {
+        if (item.symbol === 'EURGBP') {
+          const eurRate = rates['EUR'] || 1;
+          const gbpRate = rates['GBP'] || 1;
+          const price = eurRate / gbpRate;
+          return {
+            symbol: 'EUR/GBP',
+            name: item.name,
+            price,
+            change: 0,
+            changePercent: 0,
+            high: price,
+            low: price,
+          };
+        }
+        return null;
+      }
+      
+      const rate = rates[item.exchangeRate];
+      if (!rate) return null;
+      
+      let price = rate;
+      if (item.symbol.startsWith('USD')) {
+        price = 1 / rate;
+      }
+      
+      return {
+        symbol: formatSymbol(item.symbol, 'currencies'),
+        name: item.name,
+        price,
+        change: 0,
+        changePercent: 0,
+        high: price,
+        low: price,
+      };
+    }).filter(Boolean);
+  } catch (error) {
+    console.error('exchangerate.host error:', error);
+    return [];
+  }
+}
+
+// Fixer.io (free tier: 100 requests/month, no API key for basic endpoint)
+async function fetchFixerIO(): Promise<any[]> {
+  try {
+    // Using fixer.io's free endpoint (limited but works without key)
+    // Note: May require API key for production use
+    const response = await fetch('https://data.fixer.io/api/latest?access_key=free&base=USD&symbols=EUR,GBP,JPY,CHF,AUD,CAD,NZD,CNY,SGD');
+    
+    if (!response.ok) {
+      throw new Error(`Fixer.io error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(`Fixer.io error: ${data.error.info || 'Unknown error'}`);
+    }
+    
+    const rates = data.rates || {};
+    
+    return CURRENCY_SYMBOLS.map((item) => {
+      if (!item.exchangeRate) {
+        if (item.symbol === 'EURGBP') {
+          const eurRate = rates['EUR'] || 1;
+          const gbpRate = rates['GBP'] || 1;
+          const price = eurRate / gbpRate;
+          return {
+            symbol: 'EUR/GBP',
+            name: item.name,
+            price,
+            change: 0,
+            changePercent: 0,
+            high: price,
+            low: price,
+          };
+        }
+        return null;
+      }
+      
+      const rate = rates[item.exchangeRate];
+      if (!rate) return null;
+      
+      let price = rate;
+      if (item.symbol.startsWith('USD')) {
+        price = 1 / rate;
+      }
+      
+      return {
+        symbol: formatSymbol(item.symbol, 'currencies'),
+        name: item.name,
+        price,
+        change: 0,
+        changePercent: 0,
+        high: price,
+        low: price,
+      };
+    }).filter(Boolean);
+  } catch (error) {
+    console.error('Fixer.io error:', error);
+    return [];
+  }
+}
+
+// CurrencyAPI (free tier: 300 requests/month, requires API key but has free tier)
+async function fetchCurrencyAPI(apiKey?: string): Promise<any[]> {
+  if (!apiKey) {
+    // Try without key first (some endpoints work)
+    return [];
+  }
+  
+  try {
+    const response = await fetch(`https://api.currencyapi.com/v3/latest?apikey=${apiKey}&base_currency=USD`);
+    
+    if (!response.ok) {
+      throw new Error(`CurrencyAPI error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const rates = data.data || {};
+    
+    return CURRENCY_SYMBOLS.map((item) => {
+      if (!item.exchangeRate) {
+        if (item.symbol === 'EURGBP') {
+          const eurData = rates['EUR'];
+          const gbpData = rates['GBP'];
+          if (!eurData || !gbpData) return null;
+          const price = eurData.value / gbpData.value;
+          return {
+            symbol: 'EUR/GBP',
+            name: item.name,
+            price,
+            change: 0,
+            changePercent: 0,
+            high: price,
+            low: price,
+          };
+        }
+        return null;
+      }
+      
+      const currencyData = rates[item.exchangeRate];
+      if (!currencyData) return null;
+      
+      let price = currencyData.value;
+      if (item.symbol.startsWith('USD')) {
+        price = 1 / price;
+      }
+      
+      return {
+        symbol: formatSymbol(item.symbol, 'currencies'),
+        name: item.name,
+        price,
+        change: 0,
+        changePercent: 0,
+        high: price,
+        low: price,
+      };
+    }).filter(Boolean);
+  } catch (error) {
+    console.error('CurrencyAPI error:', error);
+    return [];
+  }
+}
+
+// Open Exchange Rates (free tier: 1000 requests/month, requires API key)
+async function fetchOpenExchangeRates(apiKey?: string): Promise<any[]> {
+  if (!apiKey) {
+    return [];
+  }
+  
+  try {
+    const response = await fetch(`https://openexchangerates.org/api/latest.json?app_id=${apiKey}&base=USD`);
+    
+    if (!response.ok) {
+      throw new Error(`Open Exchange Rates error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const rates = data.rates || {};
+    
+    return CURRENCY_SYMBOLS.map((item) => {
+      if (!item.exchangeRate) {
+        if (item.symbol === 'EURGBP') {
+          const eurRate = rates['EUR'] || 1;
+          const gbpRate = rates['GBP'] || 1;
+          const price = eurRate / gbpRate;
+          return {
+            symbol: 'EUR/GBP',
+            name: item.name,
+            price,
+            change: 0,
+            changePercent: 0,
+            high: price,
+            low: price,
+          };
+        }
+        return null;
+      }
+      
+      const rate = rates[item.exchangeRate];
+      if (!rate) return null;
+      
+      let price = rate;
+      if (item.symbol.startsWith('USD')) {
+        price = 1 / rate;
+      }
+      
+      return {
+        symbol: formatSymbol(item.symbol, 'currencies'),
+        name: item.name,
+        price,
+        change: 0,
+        changePercent: 0,
+        high: price,
+        low: price,
+      };
+    }).filter(Boolean);
+  } catch (error) {
+    console.error('Open Exchange Rates error:', error);
     return [];
   }
 }

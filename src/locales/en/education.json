@@ -681,8 +681,11 @@
       "description": "Comprehensive study of macroeconomic principles, policies, and their impact on global economies",
       "unit": {
         "unit-1": {
+          "title": "Basic economics concepts",
+          "description": "Introduction to fundamental economic concepts and principles",
           "lesson": {
             "lesson-1-1": {
+              "title": "Introduction to macroeconomics",
               "contentItem": {
                 "macroecon-u1-l1-video-1": {
                   "title": "Introduction to economics"
@@ -715,6 +718,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Opportunity cost and the Production Possibilities Curve",
               "contentItem": {
                 "macroecon-u1-l2-video-1": {
                   "title": "Production possibilities curve"
@@ -747,6 +751,7 @@
               }
             },
             "lesson-1-3": {
+              "title": "Comparative advantage and the gains from trade",
               "contentItem": {
                 "macroecon-u1-l3-video-1": {
                   "title": "Comparative advantage, specialization, and gains from trade"
@@ -785,6 +790,7 @@
               }
             },
             "lesson-1-4": {
+              "title": "Demand",
               "contentItem": {
                 "macroecon-u1-l4-video-1": {
                   "title": "Law of demand"
@@ -820,6 +826,7 @@
               }
             },
             "lesson-1-5": {
+              "title": "Supply",
               "contentItem": {
                 "macroecon-u1-l5-video-1": {
                   "title": "Law of supply"
@@ -846,6 +853,7 @@
               }
             },
             "lesson-1-6": {
+              "title": "Markets",
               "contentItem": {
                 "macroecon-u1-l6-video-1": {
                   "title": "Market equilibrium"
@@ -874,8 +882,11 @@
           }
         },
         "unit-2": {
+          "title": "Economic indicators and the business cycle",
+          "description": "Understanding GDP, unemployment, inflation, and business cycles",
           "lesson": {
             "lesson-2-1": {
+              "title": "Gross Domestic Product (The circular flow and GDP)",
               "contentItem": {
                 "macroecon-u2-l1-video-1": {
                   "title": "Circular flow of income and expenditures"
@@ -917,6 +928,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Limitations of GDP",
               "contentItem": {
                 "macroecon-u2-l2-video-1": {
                   "title": "Limitations of GDP"
@@ -950,6 +962,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Unemployment",
               "contentItem": {
                 "macroecon-u2-l3-video-1": {
                   "title": "Unemployment rate primer"
@@ -970,6 +983,7 @@
               }
             },
             "lesson-2-4": {
+              "title": "Inflation (Price indices and inflation)",
               "contentItem": {
                 "macroecon-u2-l4-video-1": {
                   "title": "Introduction to inflation"
@@ -1035,6 +1049,7 @@
               }
             },
             "lesson-2-5": {
+              "title": "Costs of Inflation",
               "contentItem": {
                 "macroecon-u2-l5-video-1": {
                   "title": "Winners and losers from inflation and deflation"
@@ -1052,6 +1067,7 @@
               }
             },
             "lesson-2-6": {
+              "title": "Real vs. nominal GDP",
               "contentItem": {
                 "macroecon-u2-l6-video-1": {
                   "title": "Real GDP and nominal GDP"
@@ -1082,6 +1098,7 @@
               }
             },
             "lesson-2-7": {
+              "title": "Business cycles",
               "contentItem": {
                 "macroecon-u2-l7-video-1": {
                   "title": "The business cycle"
@@ -1109,8 +1126,11 @@
           }
         },
         "unit-3": {
+          "title": "National income and price determination",
+          "description": "Understanding aggregate demand, aggregate supply, and fiscal policy",
           "lesson": {
             "lesson-3-1": {
+              "title": "Aggregate demand",
               "contentItem": {
                 "macroecon-u3-l1-video-1": {
                   "title": "Aggregate demand"
@@ -1185,6 +1205,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Multipliers",
               "contentItem": {
                 "macroecon-u3-l2-video-1": {
                   "title": "Multipliers"
@@ -1259,6 +1280,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Short-run aggregate supply",
               "contentItem": {
                 "macroecon-u3-l3-video-1": {
                   "title": "Short-run aggregate supply"
@@ -1279,6 +1301,7 @@
               }
             },
             "lesson-3-4": {
+              "title": "Long-run aggregate supply",
               "contentItem": {
                 "macroecon-u3-l4-video-1": {
                   "title": "Long-run aggregate supply"
@@ -1353,6 +1376,7 @@
               }
             },
             "lesson-3-5": {
+              "title": "Equilibrium in the AD-AS model",
               "contentItem": {
                 "macroecon-u3-l5-video-1": {
                   "title": "Equilibrium in the AD-AS model"
@@ -1440,6 +1464,7 @@
               }
             },
             "lesson-3-6": {
+              "title": "Changes in the AD-AS model in the short run",
               "contentItem": {
                 "macroecon-u3-l6-video-1": {
                   "title": "Changes in the AD-AS model in the short run"
@@ -1514,6 +1539,7 @@
               }
             },
             "lesson-3-7": {
+              "title": "Long-run self-adjustment",
               "contentItem": {
                 "macroecon-u3-l7-video-1": {
                   "title": "Long-run self-adjustment"
@@ -1587,6 +1613,7 @@
               }
             },
             "lesson-3-8": {
+              "title": "Fiscal policy",
               "contentItem": {
                 "macroecon-u3-l8-video-1": {
                   "title": "Fiscal policy"
@@ -1661,6 +1688,7 @@
               }
             },
             "lesson-3-9": {
+              "title": "Automatic stabilizers",
               "contentItem": {
                 "macroecon-u3-l9-video-1": {
                   "title": "Automatic stabilizers"
@@ -1737,8 +1765,11 @@
           }
         },
         "unit-4": {
+          "title": "Financial sector",
+          "description": "Understanding money, banking, financial markets, and monetary policy",
           "lesson": {
             "lesson-4-1": {
+              "title": "Financial assets",
               "contentItem": {
                 "macroecon-u4-l1-video-1": {
                   "title": "Financial assets"
@@ -1813,6 +1844,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Nominal vs. real interest rates",
               "contentItem": {
                 "macroecon-u4-l2-video-1": {
                   "title": "Nominal vs. real interest rates"
@@ -1887,6 +1919,7 @@
               }
             },
             "lesson-4-3": {
+              "title": "Definition, measurement, and functions of money",
               "contentItem": {
                 "macroecon-u4-l3-video-1": {
                   "title": "Definition, measurement, and functions of money"
@@ -1907,6 +1940,7 @@
               }
             },
             "lesson-4-4": {
+              "title": "Banking and the expansion of the money supply",
               "contentItem": {
                 "macroecon-u4-l4-video-1": {
                   "title": "Banking and the expansion of the money supply"
@@ -1981,6 +2015,7 @@
               }
             },
             "lesson-4-5": {
+              "title": "The money market",
               "contentItem": {
                 "macroecon-u4-l5-video-1": {
                   "title": "The money market"
@@ -2001,6 +2036,7 @@
               }
             },
             "lesson-4-6": {
+              "title": "Monetary policy",
               "contentItem": {
                 "macroecon-u4-l6-video-1": {
                   "title": "Monetary policy"
@@ -2021,6 +2057,7 @@
               }
             },
             "lesson-4-7": {
+              "title": "The market for loanable funds",
               "contentItem": {
                 "macroecon-u4-l7-video-1": {
                   "title": "The market for loanable funds"
@@ -2041,6 +2078,7 @@
               }
             },
             "lesson-4-8": {
+              "title": "Interest rates and the time value of money",
               "contentItem": {
                 "macroecon-u4-l8-video-1": {
                   "title": "Interest rates and the time value of money"
@@ -2063,8 +2101,11 @@
           }
         },
         "unit-5": {
+          "title": "Long-run consequences of stabilization policies",
+          "description": "Understanding long-run effects of fiscal and monetary policy, growth, and debt",
           "lesson": {
             "lesson-5-1": {
+              "title": "Fiscal and Monetary Policy Actions in the Short Run",
               "contentItem": {
                 "macroecon-u5-l1-video-1": {
                   "title": "Fiscal and Monetary Policy Actions in the Short Run"
@@ -2085,6 +2126,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "The Phillips Curve",
               "contentItem": {
                 "macroecon-u5-l2-video-1": {
                   "title": "The Phillips Curve"
@@ -2105,6 +2147,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Money Growth and Inflation",
               "contentItem": {
                 "macroecon-u5-l3-video-1": {
                   "title": "Money Growth and Inflation"
@@ -2125,6 +2168,7 @@
               }
             },
             "lesson-5-4": {
+              "title": "Crowding Out",
               "contentItem": {
                 "macroecon-u5-l4-video-1": {
                   "title": "Crowding Out"
@@ -2145,6 +2189,7 @@
               }
             },
             "lesson-5-5": {
+              "title": "Deficits and Debts",
               "contentItem": {
                 "macroecon-u5-l5-video-1": {
                   "title": "Deficits and Debts"
@@ -2165,6 +2210,7 @@
               }
             },
             "lesson-5-6": {
+              "title": "Economic Growth",
               "contentItem": {
                 "macroecon-u5-l6-video-1": {
                   "title": "Economic Growth"
@@ -2187,8 +2233,11 @@
           }
         },
         "unit-6": {
+          "title": "Open economy: international trade and finance",
+          "description": "Understanding balance of payments, exchange rates, and international capital flows",
           "lesson": {
             "lesson-6-1": {
+              "title": "The balance of payments",
               "contentItem": {
                 "macroecon-u6-l1-video-1": {
                   "title": "The balance of payments"
@@ -2209,6 +2258,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Exchange rates",
               "contentItem": {
                 "macroecon-u6-l2-video-1": {
                   "title": "Exchange rates"
@@ -2229,6 +2279,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "The foreign exchange market",
               "contentItem": {
                 "macroecon-u6-l3-video-1": {
                   "title": "The foreign exchange market"
@@ -2249,6 +2300,7 @@
               }
             },
             "lesson-6-4": {
+              "title": "Effect of changes in policies and economic conditions on the foreign exchange market",
               "contentItem": {
                 "macroecon-u6-l4-video-1": {
                   "title": "Effect of changes in policies and economic conditions on the foreign exchange market"
@@ -2269,6 +2321,7 @@
               }
             },
             "lesson-6-5": {
+              "title": "Real interest rates and international capital flows",
               "contentItem": {
                 "macroecon-u6-l5-video-1": {
                   "title": "Real interest rates and international capital flows"
@@ -2291,8 +2344,11 @@
           }
         },
         "unit-7": {
+          "title": "Keynesian approaches and IS-LM",
+          "description": "Understanding consumption functions, Keynesian cross, IS-LM model, and Keynesian economics",
           "lesson": {
             "lesson-7-1": {
+              "title": "The consumption function",
               "contentItem": {
                 "macroecon-u7-l1-video-1": {
                   "title": "The consumption function"
@@ -2310,6 +2366,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "The Keynesian cross",
               "contentItem": {
                 "macroecon-u7-l2-video-1": {
                   "title": "The Keynesian cross"
@@ -2327,6 +2384,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "IS-LM",
               "contentItem": {
                 "macroecon-u7-l3-video-1": {
                   "title": "IS-LM"
@@ -2344,6 +2402,7 @@
               }
             },
             "lesson-7-4": {
+              "title": "Keynesian economics and its critiques",
               "contentItem": {
                 "macroecon-u7-l4-video-1": {
                   "title": "Keynesian economics and its critiques"
@@ -2363,8 +2422,11 @@
           }
         },
         "unit-8": {
+          "title": "Contemporary macroeconomic issues",
+          "description": "Understanding income inequality, wealth distribution, and the 2008 financial crisis",
           "lesson": {
             "lesson-8-1": {
+              "title": "Analysis of income inequality in the United States (in partnership with The New York Times)",
               "contentItem": {
                 "macroecon-u8-l1-video-1": {
                   "title": "Analysis of income inequality in the United States"
@@ -2382,6 +2444,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "National income and inequality",
               "contentItem": {
                 "macroecon-u8-l2-video-1": {
                   "title": "National income and inequality"
@@ -2399,6 +2462,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "The 2008 Financial Crisis",
               "contentItem": {
                 "macroecon-u8-l3-video-1": {
                   "title": "The 2008 Financial Crisis"
@@ -2424,8 +2488,11 @@
       "description": "Study of individual economic units and their decision-making processes",
       "unit": {
         "unit-1": {
+          "title": "Basic economic concepts",
+          "description": "Introduction to economics, scarcity, economic systems, and the circular flow model",
           "lesson": {
             "lesson-1-1": {
+              "title": "Introduction to economics",
               "contentItem": {
                 "micro-u1-l1-video-1": {
                   "title": "Introduction to economics"
@@ -2446,6 +2513,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Economic systems",
               "contentItem": {
                 "micro-u1-l2-video-1": {
                   "title": "Economic systems"
@@ -2468,8 +2536,11 @@
           }
         },
         "unit-2": {
+          "title": "Supply, demand, and market equilibrium",
+          "description": "Understanding demand, supply, market equilibrium, and how markets adjust to changes",
           "lesson": {
             "lesson-2-1": {
+              "title": "Demand",
               "contentItem": {
                 "micro-u2-l1-video-1": {
                   "title": "Demand"
@@ -2490,6 +2561,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Supply",
               "contentItem": {
                 "micro-u2-l2-video-1": {
                   "title": "Supply"
@@ -2509,6 +2581,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Market equilibrium and changes in equilibrium",
               "contentItem": {
                 "micro-u2-l3-video-1": {
                   "title": "Market equilibrium and changes in equilibrium"
@@ -2531,8 +2604,11 @@
           }
         },
         "unit-3": {
+          "title": "Elasticity",
+          "description": "Understanding price elasticity of demand and supply, income elasticity, and cross-price elasticity",
           "lesson": {
             "lesson-3-1": {
+              "title": "Price Elasticity of Demand",
               "contentItem": {
                 "micro-u3-l1-video-1": {
                   "title": "Price Elasticity of Demand"
@@ -2553,6 +2629,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Price Elasticity of Supply",
               "contentItem": {
                 "micro-u3-l2-video-1": {
                   "title": "Price Elasticity of Supply"
@@ -2573,6 +2650,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Income Elasticity of Demand and Cross-Price Elasticity of Demand",
               "contentItem": {
                 "micro-u3-l3-video-1": {
                   "title": "Income Elasticity of Demand and Cross-Price Elasticity of Demand"
@@ -2595,8 +2673,11 @@
           }
         },
         "unit-4": {
+          "title": "Consumer and producer surplus, market interventions, and international trade",
+          "description": "Understanding consumer and producer surplus, market interventions, deadweight loss, and international trade",
           "lesson": {
             "lesson-4-1": {
+              "title": "Consumer and Producer Surplus",
               "contentItem": {
                 "micro-u4-l1-video-1": {
                   "title": "Consumer and Producer Surplus"
@@ -2617,6 +2698,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Market Interventions and Deadweight Loss",
               "contentItem": {
                 "micro-u4-l2-video-1": {
                   "title": "Market Interventions and Deadweight Loss"
@@ -2637,6 +2719,7 @@
               }
             },
             "lesson-4-3": {
+              "title": "International Trade",
               "contentItem": {
                 "micro-u4-l3-video-1": {
                   "title": "International Trade"
@@ -2659,8 +2742,11 @@
           }
         },
         "unit-5": {
+          "title": "Consumer theory",
+          "description": "Understanding utility, marginal utility, utility maximization, and consumer choice with indifference curves",
           "lesson": {
             "lesson-5-1": {
+              "title": "Introduction to consumer theory; total utility and marginal utility",
               "contentItem": {
                 "micro-u5-l1-video-1": {
                   "title": "Introduction to consumer theory; total utility and marginal utility"
@@ -2681,6 +2767,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "Utility maximization using marginal utility per dollar spent",
               "contentItem": {
                 "micro-u5-l2-video-1": {
                   "title": "Utility maximization using marginal utility per dollar spent"
@@ -2701,6 +2788,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Utility maximization with indifference curves",
               "contentItem": {
                 "micro-u5-l3-video-1": {
                   "title": "Utility maximization with indifference curves"
@@ -2720,8 +2808,11 @@
           }
         },
         "unit-6": {
+          "title": "Production decisions and economic profit",
+          "description": "Understanding production functions, costs, profit maximization, and firm entry/exit decisions",
           "lesson": {
             "lesson-6-1": {
+              "title": "Introduction to production and costs",
               "contentItem": {
                 "micro-u6-l1-video-1": {
                   "title": "Introduction to production and costs"
@@ -2742,6 +2833,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Production and costs in the short run",
               "contentItem": {
                 "micro-u6-l2-video-1": {
                   "title": "Production and costs in the short run"
@@ -2762,6 +2854,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "Production and costs in the long run",
               "contentItem": {
                 "micro-u6-l3-video-1": {
                   "title": "Production and costs in the long run"
@@ -2782,6 +2875,7 @@
               }
             },
             "lesson-6-4": {
+              "title": "Types of profit",
               "contentItem": {
                 "micro-u6-l4-video-1": {
                   "title": "Types of profit"
@@ -2802,6 +2896,7 @@
               }
             },
             "lesson-6-5": {
+              "title": "Profit maximization",
               "contentItem": {
                 "micro-u6-l5-video-1": {
                   "title": "Profit maximization"
@@ -2821,6 +2916,7 @@
               }
             },
             "lesson-6-6": {
+              "title": "Firm entry, exit, and the shut-down rule",
               "contentItem": {
                 "micro-u6-l6-video-1": {
                   "title": "Firm entry, exit, and the shut-down rule"
@@ -2843,8 +2939,11 @@
           }
         },
         "unit-7": {
+          "title": "Forms of competition",
+          "description": "Understanding perfect competition, monopoly, monopolistic competition, oligopoly, and game theory",
           "lesson": {
             "lesson-7-1": {
+              "title": "Perfect competition",
               "contentItem": {
                 "micro-u7-l1-video-1": {
                   "title": "Perfect competition"
@@ -2865,6 +2964,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Monopoly",
               "contentItem": {
                 "micro-u7-l2-video-1": {
                   "title": "Monopoly"
@@ -2885,6 +2985,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "Price discrimination",
               "contentItem": {
                 "micro-u7-l3-video-1": {
                   "title": "Price discrimination"
@@ -2905,6 +3006,7 @@
               }
             },
             "lesson-7-4": {
+              "title": "Monopolistic competition",
               "contentItem": {
                 "micro-u7-l4-video-1": {
                   "title": "Monopolistic competition"
@@ -2925,6 +3027,7 @@
               }
             },
             "lesson-7-5": {
+              "title": "Oligopoly and game theory",
               "contentItem": {
                 "micro-u7-l5-video-1": {
                   "title": "Oligopoly and game theory"
@@ -2947,8 +3050,11 @@
           }
         },
         "unit-8": {
+          "title": "Factor markets",
+          "description": "Understanding factor markets, labor demand and supply, cost minimization, and monopsony",
           "lesson": {
             "lesson-8-1": {
+              "title": "Introduction to factor markets",
               "contentItem": {
                 "micro-u8-l1-video-1": {
                   "title": "Introduction to factor markets"
@@ -2969,6 +3075,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Changes in factor demand and supply",
               "contentItem": {
                 "micro-u8-l2-video-1": {
                   "title": "Changes in factor demand and supply"
@@ -2988,6 +3095,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "Optimal choice of factors in perfectly competitive factor markets",
               "contentItem": {
                 "micro-u8-l3-video-1": {
                   "title": "Optimal choice of factors in perfectly competitive factor markets"
@@ -3007,6 +3115,7 @@
               }
             },
             "lesson-8-4": {
+              "title": "Choosing inputs when factor markets are monopsonistically competitive",
               "contentItem": {
                 "micro-u8-l4-video-1": {
                   "title": "Choosing inputs when factor markets are monopsonistically competitive"
@@ -3029,8 +3138,11 @@
           }
         },
         "unit-9": {
+          "title": "Market failure and the role of government",
+          "description": "Understanding externalities, public goods, common resources, and government intervention",
           "lesson": {
             "lesson-9-1": {
+              "title": "Externalities",
               "contentItem": {
                 "micro-u9-l1-video-1": {
                   "title": "Externalities"
@@ -3048,6 +3160,7 @@
               }
             },
             "lesson-9-2": {
+              "title": "The four types of goods: private goods, public goods, common resources, and natural monopolies",
               "contentItem": {
                 "micro-u9-l2-video-1": {
                   "title": "The four types of goods: private goods, public goods, common resources, and natural monopolies"
@@ -3073,8 +3186,11 @@
       "description": "Comprehensive study of financial markets, instruments, and investment strategies",
       "unit": {
         "unit-1": {
+          "title": "Interest and debt",
+          "description": "Understanding interest, compound interest, credit cards, loans, present value, and bankruptcy",
           "lesson": {
             "lesson-1-1": {
+              "title": "Compound interest basics",
               "contentItem": {
                 "finance-u1-l1-video-1": {
                   "title": "Compound interest basics"
@@ -3091,6 +3207,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Interest basics",
               "contentItem": {
                 "finance-u1-l2-video-1": {
                   "title": "Interest basics"
@@ -3107,6 +3224,7 @@
               }
             },
             "lesson-1-3": {
+              "title": "Credit cards and loans",
               "contentItem": {
                 "finance-u1-l3-video-1": {
                   "title": "Credit cards and loans"
@@ -3123,6 +3241,7 @@
               }
             },
             "lesson-1-4": {
+              "title": "Continuous compound interest and e",
               "contentItem": {
                 "finance-u1-l4-video-1": {
                   "title": "Continuous compound interest and e"
@@ -3139,6 +3258,7 @@
               }
             },
             "lesson-1-5": {
+              "title": "Present value",
               "contentItem": {
                 "finance-u1-l5-video-1": {
                   "title": "Present value"
@@ -3155,6 +3275,7 @@
               }
             },
             "lesson-1-6": {
+              "title": "Personal bankruptcy",
               "contentItem": {
                 "finance-u1-l6-video-1": {
                   "title": "Personal bankruptcy"
@@ -3173,8 +3294,11 @@
           }
         },
         "unit-2": {
+          "title": "Housing",
+          "description": "Understanding home equity, balance sheets, renting vs. buying, mortgages, and the home buying process",
           "lesson": {
             "lesson-2-1": {
+              "title": "Home equity and personal balance sheets",
               "contentItem": {
                 "finance-u2-l1-video-1": {
                   "title": "Home equity and personal balance sheets"
@@ -3191,6 +3315,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Renting vs. buying a home",
               "contentItem": {
                 "finance-u2-l2-video-1": {
                   "title": "Renting vs. buying a home"
@@ -3208,6 +3333,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Mortgages",
               "contentItem": {
                 "finance-u2-l3-video-1": {
                   "title": "Mortgages"
@@ -3225,6 +3351,7 @@
               }
             },
             "lesson-2-4": {
+              "title": "Home buying process",
               "contentItem": {
                 "finance-u2-l4-video-1": {
                   "title": "Home buying process"
@@ -3244,8 +3371,11 @@
           }
         },
         "unit-3": {
+          "title": "Inflation",
+          "description": "Understanding inflation, deflation, real vs. nominal returns, and capacity utilization",
           "lesson": {
             "lesson-3-1": {
+              "title": "Inflation basics",
               "contentItem": {
                 "finance-u3-l1-video-1": {
                   "title": "Inflation basics"
@@ -3262,6 +3392,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Inflation scenarios",
               "contentItem": {
                 "finance-u3-l2-video-1": {
                   "title": "Inflation scenarios"
@@ -3278,6 +3409,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Real and nominal return",
               "contentItem": {
                 "finance-u3-l3-video-1": {
                   "title": "Real and nominal return"
@@ -3294,6 +3426,7 @@
               }
             },
             "lesson-3-4": {
+              "title": "Capacity utilization and inflation",
               "contentItem": {
                 "finance-u3-l4-video-1": {
                   "title": "Capacity utilization and inflation"
@@ -3310,6 +3443,7 @@
               }
             },
             "lesson-3-5": {
+              "title": "Deflation",
               "contentItem": {
                 "finance-u3-l5-video-1": {
                   "title": "Deflation"
@@ -3328,8 +3462,11 @@
           }
         },
         "unit-4": {
+          "title": "Taxes",
+          "description": "Understanding personal taxes, corporate taxation, and tax planning",
           "lesson": {
             "lesson-4-1": {
+              "title": "Personal taxes",
               "contentItem": {
                 "finance-u4-l1-video-1": {
                   "title": "Personal taxes"
@@ -3347,6 +3484,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Corporate taxation",
               "contentItem": {
                 "finance-u4-l2-video-1": {
                   "title": "Corporate taxation"
@@ -3366,8 +3504,11 @@
           }
         },
         "unit-5": {
+          "title": "Accounting and financial statements",
+          "description": "Understanding cash vs. accrual accounting, financial statements, and depreciation",
           "lesson": {
             "lesson-5-1": {
+              "title": "Cash versus accrual accounting",
               "contentItem": {
                 "finance-u5-l1-video-1": {
                   "title": "Cash versus accrual accounting"
@@ -3384,6 +3525,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "Three core financial statements",
               "contentItem": {
                 "finance-u5-l2-video-1": {
                   "title": "Three core financial statements"
@@ -3404,6 +3546,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Depreciation and amortization",
               "contentItem": {
                 "finance-u5-l3-video-1": {
                   "title": "Depreciation and amortization"
@@ -3423,8 +3566,11 @@
           }
         },
         "unit-6": {
+          "title": "Stocks and bonds",
+          "description": "Understanding stocks, bonds, corporate finance, valuation, and company life cycle",
           "lesson": {
             "lesson-6-1": {
+              "title": "Introduction to stocks",
               "contentItem": {
                 "finance-u6-l1-video-1": {
                   "title": "Introduction to stocks"
@@ -3441,6 +3587,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Shorting stock",
               "contentItem": {
                 "finance-u6-l2-video-1": {
                   "title": "Shorting stock"
@@ -3457,6 +3604,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "Understanding company statements and capital structure",
               "contentItem": {
                 "finance-u6-l3-video-1": {
                   "title": "Understanding company statements and capital structure"
@@ -3473,6 +3621,7 @@
               }
             },
             "lesson-6-4": {
+              "title": "Corporate metrics and valuation",
               "contentItem": {
                 "finance-u6-l4-video-1": {
                   "title": "Corporate metrics and valuation"
@@ -3490,6 +3639,7 @@
               }
             },
             "lesson-6-5": {
+              "title": "Life of a company – from birth to death",
               "contentItem": {
                 "finance-u6-l5-video-1": {
                   "title": "Life of a company – from birth to death"
@@ -3507,6 +3657,7 @@
               }
             },
             "lesson-6-6": {
+              "title": "Dilution",
               "contentItem": {
                 "finance-u6-l6-video-1": {
                   "title": "Dilution"
@@ -3522,6 +3673,7 @@
               }
             },
             "lesson-6-7": {
+              "title": "Mergers and acquisitions",
               "contentItem": {
                 "finance-u6-l7-video-1": {
                   "title": "Mergers and acquisitions"
@@ -3541,6 +3693,7 @@
               }
             },
             "lesson-6-8": {
+              "title": "Leveraged buy-outs",
               "contentItem": {
                 "finance-u6-l8-video-1": {
                   "title": "Leveraged buy-outs"
@@ -3560,6 +3713,7 @@
               }
             },
             "lesson-6-9": {
+              "title": "Bonds",
               "contentItem": {
                 "finance-u6-l9-video-1": {
                   "title": "Bonds"
@@ -3580,6 +3734,7 @@
               }
             },
             "lesson-6-10": {
+              "title": "Corporate bankruptcy",
               "contentItem": {
                 "finance-u6-l10-video-1": {
                   "title": "Corporate bankruptcy"
@@ -3601,8 +3756,11 @@
           }
         },
         "unit-7": {
+          "title": "Investment vehicles, insurance, and retirement",
+          "description": "Understanding mutual funds, ETFs, retirement accounts, insurance, hedge funds, and investment principles",
           "lesson": {
             "lesson-7-1": {
+              "title": "Mutual funds and ETFs",
               "contentItem": {
                 "finance-u7-l1-video-1": {
                   "title": "Mutual funds and ETFs"
@@ -3622,6 +3780,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Retirement accounts: IRAs and 401ks",
               "contentItem": {
                 "finance-u7-l2-video-1": {
                   "title": "Retirement accounts: IRAs and 401ks"
@@ -3641,6 +3800,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "Life insurance",
               "contentItem": {
                 "finance-u7-l3-video-1": {
                   "title": "Life insurance"
@@ -3657,6 +3817,7 @@
               }
             },
             "lesson-7-4": {
+              "title": "Hedge funds",
               "contentItem": {
                 "finance-u7-l4-video-1": {
                   "title": "Hedge funds"
@@ -3673,6 +3834,7 @@
               }
             },
             "lesson-7-5": {
+              "title": "Investment and consumption",
               "contentItem": {
                 "finance-u7-l5-video-1": {
                   "title": "Investment and consumption"
@@ -3691,8 +3853,11 @@
           }
         },
         "unit-8": {
+          "title": "Money, banking and central banks",
+          "description": "Understanding banking, money creation, central banks, quantitative easing, financial crises, and cryptocurrencies",
           "lesson": {
             "lesson-8-1": {
+              "title": "Banking and money",
               "contentItem": {
                 "finance-u8-l1-video-1": {
                   "title": "Banking and money"
@@ -3710,6 +3875,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Quantitative easing",
               "contentItem": {
                 "finance-u8-l2-video-1": {
                   "title": "Quantitative easing"
@@ -3726,6 +3892,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "2008 bank bailout",
               "contentItem": {
                 "finance-u8-l3-video-1": {
                   "title": "2008 bank bailout"
@@ -3743,6 +3910,7 @@
               }
             },
             "lesson-8-4": {
+              "title": "Geithner plan",
               "contentItem": {
                 "finance-u8-l4-video-1": {
                   "title": "Geithner plan"
@@ -3759,6 +3927,7 @@
               }
             },
             "lesson-8-5": {
+              "title": "Foreign exchange and trade",
               "contentItem": {
                 "finance-u8-l5-video-1": {
                   "title": "Foreign exchange and trade"
@@ -3775,6 +3944,7 @@
               }
             },
             "lesson-8-6": {
+              "title": "Chinese currency and U.S. debt",
               "contentItem": {
                 "finance-u8-l6-video-1": {
                   "title": "Chinese currency and U.S. debt"
@@ -3791,6 +3961,7 @@
               }
             },
             "lesson-8-7": {
+              "title": "2011-2012 Greek debt crisis",
               "contentItem": {
                 "finance-u8-l7-video-1": {
                   "title": "2011-2012 Greek debt crisis"
@@ -3807,6 +3978,7 @@
               }
             },
             "lesson-8-8": {
+              "title": "Bitcoin",
               "contentItem": {
                 "finance-u8-l8-video-1": {
                   "title": "Bitcoin"
@@ -3826,8 +3998,11 @@
           }
         },
         "unit-9": {
+          "title": "Options, swaps, futures, MBSs, CDOs, and other derivatives",
+          "description": "Understanding options, futures, swaps, mortgage-backed securities, CDOs, credit default swaps, and option pricing",
           "lesson": {
             "lesson-9-1": {
+              "title": "Put and call options",
               "contentItem": {
                 "finance-u9-l1-video-1": {
                   "title": "Put and call options"
@@ -3845,6 +4020,7 @@
               }
             },
             "lesson-9-2": {
+              "title": "Forward and futures contracts",
               "contentItem": {
                 "finance-u9-l2-video-1": {
                   "title": "Forward and futures contracts"
@@ -3863,6 +4039,7 @@
               }
             },
             "lesson-9-3": {
+              "title": "Mortgage-backed securities",
               "contentItem": {
                 "finance-u9-l3-video-1": {
                   "title": "Mortgage-backed securities"
@@ -3878,6 +4055,7 @@
               }
             },
             "lesson-9-4": {
+              "title": "Collateralized debt obligations",
               "contentItem": {
                 "finance-u9-l4-video-1": {
                   "title": "Collateralized debt obligations"
@@ -3894,6 +4072,7 @@
               }
             },
             "lesson-9-5": {
+              "title": "Credit default swaps",
               "contentItem": {
                 "finance-u9-l5-video-1": {
                   "title": "Credit default swaps"
@@ -3910,6 +4089,7 @@
               }
             },
             "lesson-9-6": {
+              "title": "Interest rate swaps",
               "contentItem": {
                 "finance-u9-l6-video-1": {
                   "title": "Interest rate swaps"
@@ -3926,6 +4106,7 @@
               }
             },
             "lesson-9-7": {
+              "title": "Black-Scholes formula",
               "contentItem": {
                 "finance-u9-l7-video-1": {
                   "title": "Black-Scholes formula"
@@ -3944,8 +4125,11 @@
           }
         },
         "unit-10": {
+          "title": "Current economics",
+          "description": "Understanding unemployment, housing prices, credit crisis, financial bailouts, and European Union issues",
           "lesson": {
             "lesson-10-1": {
+              "title": "Unemployment",
               "contentItem": {
                 "finance-u10-l1-video-1": {
                   "title": "Unemployment"
@@ -3962,6 +4146,7 @@
               }
             },
             "lesson-10-2": {
+              "title": "Housing price conundrum",
               "contentItem": {
                 "finance-u10-l2-video-1": {
                   "title": "Housing price conundrum"
@@ -3978,6 +4163,7 @@
               }
             },
             "lesson-10-3": {
+              "title": "Credit crisis",
               "contentItem": {
                 "finance-u10-l3-video-1": {
                   "title": "Credit crisis"
@@ -3994,6 +4180,7 @@
               }
             },
             "lesson-10-4": {
+              "title": "Paulson bailout",
               "contentItem": {
                 "finance-u10-l4-video-1": {
                   "title": "Paulson bailout"
@@ -4011,6 +4198,7 @@
               }
             },
             "lesson-10-5": {
+              "title": "Brexit and European Union primer",
               "contentItem": {
                 "finance-u10-l5-video-1": {
                   "title": "Brexit and European Union primer"
@@ -4051,12 +4239,11 @@
       "description": "Understanding personal finance through economic principles",
       "unit": {
         "unit-1": {
-          "title": "Unit 1: Economic Basics",
-          "description": "Understanding scarcity, opportunity cost, decision making, factors of production, human capital, and economic systems",
+          "title": "Foundations of economics",
+          "description": "Understanding scarcity, opportunity cost, decision-making, factors of production, human capital, and economic systems",
           "lesson": {
             "lesson-1-1": {
               "title": "Scarcity",
-            "lesson-1-1": {
               "contentItem": {
                 "economics-u1-l1-video-1": {
                   "title": "Scarcity"
@@ -4197,7 +4384,7 @@
           }
         },
         "unit-2": {
-          "title": "Unit 2: Producers and Consumers in Markets",
+          "title": "Producers and consumers in markets",
           "description": "Understanding incentives, marketing, costs, revenue, profit, productivity, business organization, and market structures",
           "lesson": {
             "lesson-2-1": {
@@ -4319,7 +4506,7 @@
           }
         },
         "unit-3": {
-          "title": "Unit 3: Microeconomics and Price Systems",
+          "title": "The microeconomy and price systems",
           "description": "Understanding demand, supply, elasticity, market equilibrium, and price controls",
           "lesson": {
             "lesson-3-1": {
@@ -4444,8 +4631,8 @@
           }
         },
         "unit-4": {
-          "title": "Unit 4: The Role of Government in Markets",
-          "description": "Understanding public and private goods, property rights, and government redistribution of wealth",
+          "title": "The role of government in markets",
+          "description": "Understanding public vs. private goods, property rights, and government redistribution of wealth",
           "lesson": {
             "lesson-4-1": {
               "title": "Public vs private",
@@ -4522,7 +4709,7 @@
           }
         },
         "unit-5": {
-          "title": "Unit 5: Macroeconomic Challenges",
+          "title": "Macroeconomic challenges",
           "description": "Understanding macroeconomic indicators, aggregate demand and supply, and business cycles",
           "lesson": {
             "lesson-5-1": {
@@ -4599,7 +4786,7 @@
           }
         },
         "unit-6": {
-          "title": "Unit 6: Money, Banking, and Financial Markets",
+          "title": "Money, Banking, and Financial Markets",
           "description": "Understanding money, financial institutions and markets, and the Federal Reserve",
           "lesson": {
             "lesson-6-1": {
@@ -4677,7 +4864,7 @@
           }
         },
         "unit-7": {
-          "title": "Unit 7: Economic Stabilization",
+          "title": "Economic stabilization",
           "description": "Understanding monetary policy, fiscal policy, and government budgets",
           "lesson": {
             "lesson-7-1": {
@@ -4755,8 +4942,8 @@
           }
         },
         "unit-8": {
-          "title": "Unit 8: Global Economy",
-          "description": "Understanding trade, currency conversion, and globalization",
+          "title": "Global economy",
+          "description": "Understanding trade, exchange rates, and globalization",
           "lesson": {
             "lesson-8-1": {
               "title": "Trade",
@@ -4837,8 +5024,8 @@
           }
         },
         "unit-9": {
-          "title": "Unit 9: Education and Career",
-          "description": "Understanding the value of education, paying for college, and managing student loans",
+          "title": "Careers and education",
+          "description": "Understanding education as investment, paying for education, financial aid, and student loans",
           "lesson": {
             "lesson-9-1": {
               "title": "Education and earnings",
@@ -4968,8 +5155,8 @@
           }
         },
         "unit-10": {
-          "title": "Unit 10: Employment and Income",
-          "description": "Understanding compensation, paychecks, career decisions, and income taxes",
+          "title": "Employment",
+          "description": "Understanding compensation, benefits, paychecks, non-typical pay, and hiring process",
           "lesson": {
             "lesson-10-1": {
               "title": "Compensation",
@@ -5072,8 +5259,11 @@
           }
         },
         "unit-11": {
+          "title": "Banking",
+          "description": "Understanding banking institutions, bank accounts, account management, and interest",
           "lesson": {
             "lesson-11-1": {
+              "title": "Banking institutions",
               "contentItem": {
                 "economics-u11-l1-video-1": {
                   "title": "Banking and financial institutions"
@@ -5178,8 +5368,11 @@
           }
         },
         "unit-12": {
+          "title": "Financial goals",
+          "description": "Understanding SMART goals, short/medium/long-term goals, and net worth",
           "lesson": {
             "lesson-12-1": {
+              "title": "SMART goals",
               "contentItem": {
                 "economics-u12-l1-video-1": {
                   "title": "SMART goals"
@@ -5250,8 +5443,11 @@
           }
         },
         "unit-13": {
+          "title": "Budgeting & saving",
+          "description": "Understanding budgeting, saving money, emergency funds, and reducing expenses",
           "lesson": {
             "lesson-13-1": {
+              "title": "Budgeting",
               "contentItem": {
                 "economics-u13-l1-video-1": {
                   "title": "Budgeting"
@@ -5323,8 +5519,11 @@
           }
         },
         "unit-14": {
+          "title": "Saving & investing",
+          "description": "Understanding risk and return, planning for retirement, and Social Security",
           "lesson": {
             "lesson-14-1": {
+              "title": "Risk and return",
               "contentItem": {
                 "economics-u14-l1-video-1": {
                   "title": "Risk and return"
@@ -5397,8 +5596,11 @@
           }
         },
         "unit-15": {
+          "title": "Consumer credit",
+          "description": "Understanding credit cards, credit scores, and credit management",
           "lesson": {
             "lesson-15-1": {
+              "title": "Credit cards",
               "contentItem": {
                 "economics-u15-l1-video-1": {
                   "title": "Credit cards"
@@ -5451,8 +5653,11 @@
           }
         },
         "unit-16": {
+          "title": "Loans and debt",
+          "description": "Understanding borrowing terms, loan sources, types of loans, debt management, and bankruptcy",
           "lesson": {
             "lesson-16-1": {
+              "title": "Terms of borrowing",
               "contentItem": {
                 "economics-u16-l1-video-1": {
                   "title": "Terms of borrowing"
@@ -5585,8 +5790,11 @@
           }
         },
         "unit-17": {
+          "title": "Taxes",
+          "description": "Understanding taxes, local taxes, tax forms, and personal income taxes",
           "lesson": {
             "lesson-17-1": {
+              "title": "What are taxes and why do we pay them",
               "contentItem": {
                 "economics-u17-l1-video-1": {
                   "title": "What are taxes and why do we pay them"
