@@ -136,7 +136,9 @@
     "questionXOfY": "Question {{current}} of {{total}}",
     "quizCompleted": "Quiz completed!",
     "masteryCheckCompleted": "Mastery Check completed!",
-    "examCompleted": "Exam completed!"
+    "examCompleted": "Exam completed!",
+    "seoCourseTitle": "{{title}} - Online Course | INVESTOPATRONUS",
+    "seoCourseDescription": "Learn {{title}} with our comprehensive online course. Access video lessons, interactive quizzes, and expert content to master {{description}}."
   },
   "course": {
     "investment-fundamentals": {
