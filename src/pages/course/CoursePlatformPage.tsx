@@ -474,7 +474,11 @@ export default function CoursePlatformPage() {
                       {selectedLesson.duration}
                     </span>
                   </div>
-                  <Button onClick={markComplete} disabled={completedLessons.includes(selectedLesson.id)}>
+                  <Button 
+                    variant="outline"
+                    onClick={markComplete} 
+                    disabled={completedLessons.includes(selectedLesson.id)}
+                  >
                     {completedLessons.includes(selectedLesson.id) ? (
                       <>
                         <CheckCircle className="h-4 w-4" />

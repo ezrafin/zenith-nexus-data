@@ -18,7 +18,7 @@ export function useUserFollow(targetUserId?: string) {
       if (!user || !targetUserId || user.id === targetUserId) return;
 
       const { data, error } = await supabase
-        .from('user_follows' as any)
+        .from('user_follows')
         .select('id')
         .eq('follower_id', user.id)
         .eq('following_id', targetUserId)
@@ -51,7 +51,7 @@ export function useUserFollow(targetUserId?: string) {
 
     try {
       if (next) {
-        const { error } = await supabase.from('user_follows' as any).insert({
+        const { error } = await supabase.from('user_follows').insert({
           follower_id: user.id,
           following_id: targetUserId,
         });
@@ -65,7 +65,7 @@ export function useUserFollow(targetUserId?: string) {
         });
       } else {
         const { error } = await supabase
-          .from('user_follows' as any)
+          .from('user_follows')
           .delete()
           .eq('follower_id', user.id)
           .eq('following_id', targetUserId);

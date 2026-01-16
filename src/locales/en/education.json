@@ -4051,7 +4051,11 @@
       "description": "Understanding personal finance through economic principles",
       "unit": {
         "unit-1": {
+          "title": "Unit 1: Economic Basics",
+          "description": "Understanding scarcity, opportunity cost, decision making, factors of production, human capital, and economic systems",
           "lesson": {
+            "lesson-1-1": {
+              "title": "Scarcity",
             "lesson-1-1": {
               "contentItem": {
                 "economics-u1-l1-video-1": {
@@ -4075,6 +4079,7 @@
               }
             },
             "lesson-1-2": {
+              "title": "Costs and benefits",
               "contentItem": {
                 "economics-u1-l2-video-1": {
                   "title": "Costs and benefits"
@@ -4097,6 +4102,7 @@
               }
             },
             "lesson-1-3": {
+              "title": "Decision making and unintended consequences",
               "contentItem": {
                 "economics-u1-l3-video-1": {
                   "title": "Decision making and unintended consequences"
@@ -4119,6 +4125,7 @@
               }
             },
             "lesson-1-4": {
+              "title": "Factors of production",
               "contentItem": {
                 "economics-u1-l4-video-1": {
                   "title": "Factors of production"
@@ -4141,6 +4148,7 @@
               }
             },
             "lesson-1-5": {
+              "title": "Human capital and income",
               "contentItem": {
                 "economics-u1-l5-video-1": {
                   "title": "Human capital and income"
@@ -4163,6 +4171,7 @@
               }
             },
             "lesson-1-6": {
+              "title": "Economic systems",
               "contentItem": {
                 "economics-u1-l6-video-1": {
                   "title": "Economic systems"
@@ -4188,8 +4197,11 @@
           }
         },
         "unit-2": {
+          "title": "Unit 2: Producers and Consumers in Markets",
+          "description": "Understanding incentives, marketing, costs, revenue, profit, productivity, business organization, and market structures",
           "lesson": {
             "lesson-2-1": {
+              "title": "Incentives and marketing",
               "contentItem": {
                 "economics-u2-l1-video-1": {
                   "title": "Incentives and marketing"
@@ -4212,6 +4224,7 @@
               }
             },
             "lesson-2-2": {
+              "title": "Cost, revenue, and profit",
               "contentItem": {
                 "economics-u2-l2-video-1": {
                   "title": "Cost, revenue, and profit"
@@ -4234,6 +4247,7 @@
               }
             },
             "lesson-2-3": {
+              "title": "Productivity and economic growth",
               "contentItem": {
                 "economics-u2-l3-video-1": {
                   "title": "Productivity and economic growth"
@@ -4256,6 +4270,7 @@
               }
             },
             "lesson-2-4": {
+              "title": "Business organization",
               "contentItem": {
                 "economics-u2-l4-video-1": {
                   "title": "Business organization"
@@ -4278,6 +4293,7 @@
               }
             },
             "lesson-2-5": {
+              "title": "Market structures and competition",
               "contentItem": {
                 "economics-u2-l5-video-1": {
                   "title": "Market structures and competition"
@@ -4303,8 +4319,11 @@
           }
         },
         "unit-3": {
+          "title": "Unit 3: Microeconomics and Price Systems",
+          "description": "Understanding demand, supply, elasticity, market equilibrium, and price controls",
           "lesson": {
             "lesson-3-1": {
+              "title": "Demand",
               "contentItem": {
                 "economics-u3-l1-video-1": {
                   "title": "Demand"
@@ -4329,6 +4348,7 @@
               }
             },
             "lesson-3-2": {
+              "title": "Supply",
               "contentItem": {
                 "economics-u3-l2-video-1": {
                   "title": "Supply"
@@ -4351,6 +4371,7 @@
               }
             },
             "lesson-3-3": {
+              "title": "Elasticity",
               "contentItem": {
                 "economics-u3-l3-video-1": {
                   "title": "Elasticity"
@@ -4374,6 +4395,7 @@
               }
             },
             "lesson-3-4": {
+              "title": "Equilibrium",
               "contentItem": {
                 "economics-u3-l4-video-1": {
                   "title": "Equilibrium"
@@ -4397,6 +4419,7 @@
               }
             },
             "lesson-3-5": {
+              "title": "Price controls",
               "contentItem": {
                 "economics-u3-l5-video-1": {
                   "title": "Price controls"
@@ -4421,8 +4444,11 @@
           }
         },
         "unit-4": {
+          "title": "Unit 4: The Role of Government in Markets",
+          "description": "Understanding public and private goods, property rights, and government redistribution of wealth",
           "lesson": {
             "lesson-4-1": {
+              "title": "Public vs private",
               "contentItem": {
                 "economics-u4-l1-video-1": {
                   "title": "Public vs private"
@@ -4446,6 +4472,7 @@
               }
             },
             "lesson-4-2": {
+              "title": "Property rights",
               "contentItem": {
                 "economics-u4-l2-video-1": {
                   "title": "Property rights"
@@ -4469,6 +4496,7 @@
               }
             },
             "lesson-4-3": {
+              "title": "Redistribution of wealth",
               "contentItem": {
                 "economics-u4-l3-video-1": {
                   "title": "Redistribution of wealth"
@@ -4494,8 +4522,11 @@
           }
         },
         "unit-5": {
+          "title": "Unit 5: Macroeconomic Challenges",
+          "description": "Understanding macroeconomic indicators, aggregate demand and supply, and business cycles",
           "lesson": {
             "lesson-5-1": {
+              "title": "Macroeconomic indicators",
               "contentItem": {
                 "economics-u5-l1-video-1": {
                   "title": "Macroeconomic indicators"
@@ -4520,6 +4551,7 @@
               }
             },
             "lesson-5-2": {
+              "title": "The macroeconomy and economic challenges",
               "contentItem": {
                 "economics-u5-l2-video-1": {
                   "title": "The macroeconomy and economic challenges"
@@ -4542,6 +4574,7 @@
               }
             },
             "lesson-5-3": {
+              "title": "Business cycles",
               "contentItem": {
                 "economics-u5-l3-video-1": {
                   "title": "Business cycles"
@@ -4566,8 +4599,11 @@
           }
         },
         "unit-6": {
+          "title": "Unit 6: Money, Banking, and Financial Markets",
+          "description": "Understanding money, financial institutions and markets, and the Federal Reserve",
           "lesson": {
             "lesson-6-1": {
+              "title": "Money",
               "contentItem": {
                 "economics-u6-l1-video-1": {
                   "title": "Money"
@@ -4591,6 +4627,7 @@
               }
             },
             "lesson-6-2": {
+              "title": "Financial markets and institutions",
               "contentItem": {
                 "economics-u6-l2-video-1": {
                   "title": "Financial markets and institutions"
@@ -4614,6 +4651,7 @@
               }
             },
             "lesson-6-3": {
+              "title": "The Federal Reserve",
               "contentItem": {
                 "economics-u6-l3-video-1": {
                   "title": "The Federal Reserve"
@@ -4639,8 +4677,11 @@
           }
         },
         "unit-7": {
+          "title": "Unit 7: Economic Stabilization",
+          "description": "Understanding monetary policy, fiscal policy, and government budgets",
           "lesson": {
             "lesson-7-1": {
+              "title": "Monetary policy",
               "contentItem": {
                 "economics-u7-l1-video-1": {
                   "title": "Monetary policy"
@@ -4664,6 +4705,7 @@
               }
             },
             "lesson-7-2": {
+              "title": "Fiscal policy",
               "contentItem": {
                 "economics-u7-l2-video-1": {
                   "title": "Fiscal policy"
@@ -4686,6 +4728,7 @@
               }
             },
             "lesson-7-3": {
+              "title": "Government budgets; revenue and expenditures",
               "contentItem": {
                 "economics-u7-l3-video-1": {
                   "title": "Government budgets; revenue and expenditures"
@@ -4712,8 +4755,11 @@
           }
         },
         "unit-8": {
+          "title": "Unit 8: Global Economy",
+          "description": "Understanding trade, currency conversion, and globalization",
           "lesson": {
             "lesson-8-1": {
+              "title": "Trade",
               "contentItem": {
                 "economics-u8-l1-video-1": {
                   "title": "Trade"
@@ -4739,6 +4785,7 @@
               }
             },
             "lesson-8-2": {
+              "title": "Currency conversion",
               "contentItem": {
                 "economics-u8-l2-video-1": {
                   "title": "Currency conversion"
@@ -4763,6 +4810,7 @@
               }
             },
             "lesson-8-3": {
+              "title": "Globalization",
               "contentItem": {
                 "economics-u8-l3-video-1": {
                   "title": "Globalization"
@@ -4789,8 +4837,11 @@
           }
         },
         "unit-9": {
+          "title": "Unit 9: Education and Career",
+          "description": "Understanding the value of education, paying for college, and managing student loans",
           "lesson": {
             "lesson-9-1": {
+              "title": "Education and earnings",
               "contentItem": {
                 "economics-u9-l1-video-1": {
                   "title": "Education and earnings"
@@ -4813,6 +4864,7 @@
               }
             },
             "lesson-9-2": {
+              "title": "Postsecondary education",
               "contentItem": {
                 "economics-u9-l2-video-1": {
                   "title": "Postsecondary education"
@@ -4838,6 +4890,7 @@
               }
             },
             "lesson-9-3": {
+              "title": "Cost of postsecondary education",
               "contentItem": {
                 "economics-u9-l3-video-1": {
                   "title": "Cost of postsecondary education"
@@ -4861,6 +4914,7 @@
               }
             },
             "lesson-9-4": {
+              "title": "Financial aid",
               "contentItem": {
                 "economics-u9-l4-video-1": {
                   "title": "Financial aid"
@@ -4884,6 +4938,7 @@
               }
             },
             "lesson-9-5": {
+              "title": "Student loans",
               "contentItem": {
                 "economics-u9-l5-video-1": {
                   "title": "Student loans"
@@ -4913,8 +4968,11 @@
           }
         },
         "unit-10": {
+          "title": "Unit 10: Employment and Income",
+          "description": "Understanding compensation, paychecks, career decisions, and income taxes",
           "lesson": {
             "lesson-10-1": {
+              "title": "Compensation",
               "contentItem": {
                 "economics-u10-l1-video-1": {
                   "title": "Compensation"
@@ -4941,6 +4999,7 @@
               }
             },
             "lesson-10-2": {
+              "title": "Paycheck",
               "contentItem": {
                 "economics-u10-l2-video-1": {
                   "title": "Paycheck"

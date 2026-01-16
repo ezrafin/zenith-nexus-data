@@ -38,11 +38,11 @@ export default function UserProfilePage() {
   const loadFollowStats = async (targetUserId: string) => {
     const [{ count: followers }, { count: following }] = await Promise.all([
       supabase
-        .from('user_follows' as any)
+        .from('user_follows')
         .select('*', { count: 'exact', head: true })
         .eq('following_id', targetUserId),
       supabase
-        .from('user_follows' as any)
+        .from('user_follows')
         .select('*', { count: 'exact', head: true })
         .eq('follower_id', targetUserId),
     ]);
