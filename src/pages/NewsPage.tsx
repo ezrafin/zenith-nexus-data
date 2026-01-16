@@ -15,7 +15,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { SEOHead } from '@/components/seo/SEOHead';
 
 const ITEMS_PER_PAGE = 15;
-const MAX_PAGES = 50; // Maximum number of pages to show
+const MAX_PAGES = 25; // Maximum number of pages to show
 export default function NewsPage() {
   // Bill collection: news_page_visit
   const { CoinComponent } = usePageBillCollection({ billId: 'news_page_visit' });
@@ -138,7 +138,7 @@ export default function NewsPage() {
     });
   };
 
-  // Server-side pagination - totalCount from database, limited to 50 pages
+  // Server-side pagination - totalCount from database, limited to 25 pages
   const totalPages = Math.min(MAX_PAGES, Math.ceil(totalCount / ITEMS_PER_PAGE));
   // No need to slice - already paginated from server
   const paginatedNews = news;

@@ -58,7 +58,7 @@ export function LazyImage({
         }
       },
       { 
-        rootMargin: '100px', // Start loading slightly before in view
+        rootMargin: '50px', // Start loading slightly before in view (reduced for more conservative loading)
         threshold: 0.01
       }
     );
