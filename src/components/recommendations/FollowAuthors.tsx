@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
-import { TrendingUp, FileText } from 'lucide-react';
+import { TrendingUp, FileText, UserPlus } from 'lucide-react';
 import { UserAvatar } from '@/components/user/UserAvatar';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { cn } from '@/lib/utils';

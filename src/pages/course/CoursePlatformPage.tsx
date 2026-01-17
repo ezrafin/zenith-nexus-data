@@ -814,7 +814,7 @@ export default function CoursePlatformPage() {
                 // Try to get translated options array
                 // Check if translation exists by trying to get the first option
                 const firstOptionKey = `${translationKey}.options.0`;
-                const firstTranslatedOpt = t(firstOptionKey, { defaultValue: null });
+                const firstTranslatedOpt = t(firstOptionKey, { defaultValue: '' });
                 let translatedOptions = question.options;
                 
                 // If first option translation exists, get all options

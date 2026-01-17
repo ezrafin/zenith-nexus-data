@@ -6166,5 +6166,7 @@ export const financeMarketsCourse: Course = {
       lessons: unit10Lessons,
     },
   ],
+  finalExamPassRate: 75,
+  finalExam: [],
 };
 

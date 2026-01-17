@@ -86,7 +86,9 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
     return new Date(article.published_at) > twoHoursAgo;
   };
 
-  const imageUrl = article.image_url || getMarketImage(article.market, index);
+  // Use fallback image if no image_url or if it's potentially broken
+  const fallbackImage = getMarketImage(article.market, index);
+  const imageUrl = article.image_url || fallbackImage;
 
   // Priority loading for first 6 images (2 rows on desktop)
   const isPriority = index < 6;
@@ -111,9 +113,12 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
             src={imageUrl}
             alt={article.title}
             aspectRatio="wide"
-            fallback={getMarketImage(article.market, index)}
+            fallback={fallbackImage}
             priority={isPriority}
             className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+            onError={() => {
+              // Image failed to load, LazyImage will show fallback
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
           <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 flex items-center gap-2 flex-wrap">

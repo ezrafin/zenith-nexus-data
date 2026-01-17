@@ -15,12 +15,12 @@ export function useAuthorFollow(authorId?: string) {
     const loadStatus = async () => {
       if (!user || !authorId) return;
 
-      const { data, error } = await supabase
-        .from('author_follows')
+      const { data, error } = await (supabase
+        .from('author_follows' as any)
         .select('id')
         .eq('user_id', user.id)
         .eq('author_id', authorId)
-        .maybeSingle();
+        .maybeSingle() as any);
 
       if (error) {
         logger.error('Error loading author follow status:', error);
@@ -52,19 +52,19 @@ export function useAuthorFollow(authorId?: string) {
         // Get current article count for this author
         // We'll need to fetch articles and count them
         // For now, set to 0 and update when articles are loaded
-        const { error } = await supabase.from('author_follows').insert({
+        const { error } = await (supabase.from('author_follows' as any).insert({
           user_id: user.id,
           author_id: authorId,
           last_article_count: 0,
-        });
+        }) as any);
         if (error) throw error;
         toast.success(t('toast.followingAuthor', 'Following author'));
       } else {
-        const { error } = await supabase
-          .from('author_follows')
+        const { error } = await (supabase
+          .from('author_follows' as any)
           .delete()
           .eq('user_id', user.id)
-          .eq('author_id', authorId);
+          .eq('author_id', authorId) as any);
         if (error) throw error;
         toast.success(t('toast.unfollowedAuthor', 'Unfollowed author'));
       }

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
-interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface LazyImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'onError'> {
   src: string;
   alt: string;
   fallback?: string;
@@ -9,6 +9,7 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   priority?: boolean; // For above-the-fold images
   srcSet?: string;
   sizes?: string;
+  onError?: () => void;
 }
 
 // Simplified approach: rely on browser's native lazy loading and IntersectionObserver
@@ -35,6 +36,7 @@ export function LazyImage({
   className,
   width,
   height,
+  onError: onErrorProp,
   ...props 
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -86,6 +88,7 @@ export function LazyImage({
   const handleError = () => {
     setError(true);
     setIsLoaded(true);
+    onErrorProp?.();
   };
 
   const aspectClasses = {
