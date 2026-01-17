@@ -5,6 +5,7 @@ import { requestNotificationPermission, showNotification, formatNotificationMess
 import { supabase } from '@/integrations/supabase/client';
 import type { RealtimeChannel } from '@supabase/supabase-js';
 import { logger } from '@/lib/logger';
+import { useAuthorArticleNotifications } from '@/hooks/useAuthorArticleNotifications';
 
 /**
  * NotificationManager component
@@ -13,6 +14,9 @@ import { logger } from '@/lib/logger';
 export function NotificationManager() {
   const { user } = useUser();
   const { preferences } = useUserPreferences();
+  
+  // Check for new articles from followed authors
+  useAuthorArticleNotifications();
 
   useEffect(() => {
     if (!user || !preferences.push_notifications) {
@@ -56,9 +60,11 @@ export function NotificationManager() {
           const formatted = formatNotificationMessage(
             notification.type as any,
             {
-              authorName: notification.data?.authorName,
+              authorName: notification.data?.authorName || notification.data?.author_name,
               discussionTitle: notification.data?.discussionTitle,
               reactionType: notification.data?.reactionType,
+              articleTitle: notification.data?.articleTitle,
+              articleCount: notification.data?.article_count,
             }
           );
 

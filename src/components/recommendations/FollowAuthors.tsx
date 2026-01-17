@@ -1,14 +1,14 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '@/context/UserContext';
-import { UserPlus, TrendingUp, FileText } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { TrendingUp, FileText } from 'lucide-react';
 import { UserAvatar } from '@/components/user/UserAvatar';
 import { SkeletonCard } from '@/components/ui/skeleton-card';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { authors } from '@/data/authors';
+import { AuthorFollowButton } from '@/components/social/AuthorFollowButton';
 
 interface Author {
   id: string;
@@ -138,15 +138,13 @@ function AuthorCard({
   return (
     <div className="p-3 rounded-lg border border-border/50 hover:bg-secondary/50 transition-all">
       <div className="flex items-center gap-3">
-        <Link to={`/users/${author.id}`} className="flex-shrink-0">
+        <div className="flex-shrink-0">
           <UserAvatar profile={profile} size="md" showReputation />
-        </Link>
+        </div>
         <div className="flex-1 min-w-0">
-          <Link to={`/users/${author.id}`} className="block">
-            <h4 className="font-medium text-sm hover:text-primary transition-colors">
-              {author.display_name || author.username || t('common.anonymous')}
-            </h4>
-          </Link>
+          <h4 className="font-medium text-sm">
+            {author.display_name || author.username || t('common.anonymous')}
+          </h4>
           {author.bio && (
             <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
               {author.bio}
@@ -160,16 +158,12 @@ function AuthorCard({
           </div>
         </div>
         {showFollowButton && (
-          <Link to={`/users/${author.id}`}>
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex-shrink-0 self-center"
-            >
-              <UserPlus className="h-3 w-3 mr-1" />
-              {t('followAuthors.viewProfile', 'View')}
-            </Button>
-          </Link>
+          <AuthorFollowButton
+            authorId={author.id}
+            variant="outline"
+            size="sm"
+            className="flex-shrink-0 self-center"
+          />
         )}
       </div>
     </div>

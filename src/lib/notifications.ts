@@ -14,7 +14,8 @@ export type NotificationType =
   | 'moderation_discussion_rejected'
   | 'moderation_reply_approved'
   | 'moderation_reply_rejected'
-  | 'new_comment_on_discussion';
+  | 'new_comment_on_discussion'
+  | 'new_article_by_followed_author';
 
 export interface NotificationPayload {
   type: NotificationType;
@@ -91,12 +92,16 @@ export function formatNotificationMessage(
     discussionTitle?: string;
     replyPreview?: string;
     reactionType?: string;
+    articleTitle?: string;
+    articleCount?: number;
   },
   t?: Translator
 ): { title: string; body: string } {
   const author = data.authorName || 'Someone';
   const discussion = data.discussionTitle || 'your discussion';
   const reaction = data.reactionType || 'liked';
+  const articleTitle = data.articleTitle || 'a new article';
+  const articleCount = data.articleCount || 1;
 
   switch (type) {
     case 'reply_to_discussion':
@@ -165,6 +170,15 @@ export function formatNotificationMessage(
       return {
         title: t ? t('notifications.moderationRejected') : 'Your comment was rejected',
         body: t ? t('notifications.moderationRejectedReplyBody') : 'Your comment was rejected',
+      };
+    case 'new_article_by_followed_author':
+      return {
+        title: t ? t('notifications.newArticleTitle') : 'New article published',
+        body: t
+          ? t('notifications.newArticleBody')
+              .replace('{{author}}', author)
+              .replace('{{count}}', articleCount > 1 ? `${articleCount} articles` : 'an article')
+          : `${author} published ${articleCount > 1 ? `${articleCount} new articles` : 'a new article'}`,
       };
     default:
       return {
