@@ -7,6 +7,7 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
 interface EmailRequest {
@@ -17,15 +18,37 @@ interface EmailRequest {
 
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { 
+      status: 200,
+      headers: corsHeaders 
+    });
   }
 
   try {
-    const { to, subject, message }: EmailRequest = await req.json();
+    let requestData: EmailRequest;
+    try {
+      requestData = await req.json();
+    } catch (jsonError) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid JSON in request body' }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    const { to, subject, message } = requestData;
 
     // Validate required fields
     if (!to || !subject || !message) {
-      throw new Error('Missing required fields: to, subject, or message');
+      return new Response(
+        JSON.stringify({ error: 'Missing required fields: to, subject, or message' }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
     }
 
     // Basic email format validation
