@@ -7,27 +7,22 @@ import { createHash } from 'crypto';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Parse command line arguments
-const args = process.argv.slice(2);
-const forceOverwrite = args.includes('--force') || args.includes('-f');
-const PEXELS_API_KEY = process.env.PEXELS_API_KEY || args.find(arg => !arg.startsWith('--') && !arg.startsWith('-'));
+// Get slug from command line argument or use default
+const slug = process.argv[2] || 'etf-strategies-for-long-term-wealth-building';
+
+// Get Pexels API key from environment variable or command line argument
+const PEXELS_API_KEY = process.env.PEXELS_API_KEY || process.argv[3];
 
 if (!PEXELS_API_KEY) {
-  console.error('Error: PEXELS_API_KEY is required. Set it as environment variable or pass as argument.');
-  console.error('Usage: node scripts/download-analytics-images.js <PEXELS_API_KEY> [--force]');
-  console.error('  --force, -f: Overwrite existing images');
+  console.error('Error: PEXELS_API_KEY is required. Set it as environment variable or pass as second argument.');
+  console.error('Usage: node scripts/download-single-image.js <slug> <PEXELS_API_KEY>');
   process.exit(1);
 }
-
-// Read slugs
-const slugsPath = path.join(__dirname, '..', 'analytics-slugs.json');
-const slugs = JSON.parse(fs.readFileSync(slugsPath, 'utf8'));
 
 // Create analytics directory
 const analyticsDir = path.join(__dirname, '..', 'public', 'analytics');
 if (!fs.existsSync(analyticsDir)) {
   fs.mkdirSync(analyticsDir, { recursive: true });
-  console.log(`Created directory: ${analyticsDir}`);
 }
 
 // Function to download image
@@ -173,92 +168,40 @@ function getPicsumFallbackUrl(slug) {
 async function getImageUrl(slug, apiKey) {
   try {
     const keywords = extractKeywords(slug);
-    console.log(`  Keywords: ${keywords}`);
+    console.log(`Keywords: ${keywords}`);
     const pexelsUrl = await searchPexelsImage(keywords, apiKey);
     return { url: pexelsUrl, source: 'pexels' };
   } catch (error) {
-    console.warn(`  Pexels failed: ${error.message}, using Picsum fallback`);
+    console.warn(`Pexels failed: ${error.message}, using Picsum fallback`);
     return { url: getPicsumFallbackUrl(slug), source: 'picsum' };
   }
 }
 
-// Alternative: Using Unsplash Source (uncomment if Picsum doesn't work well)
-// function getImageUrl(slug) {
-//   // Extract keywords from slug for better relevance
-//   const keywords = slug.split('-').slice(0, 3).join(',');
-//   return `https://source.unsplash.com/1600x900/?${keywords},finance,business`;
-// }
-
-async function downloadAllImages() {
-  console.log(`Starting download of ${slugs.length} images using Pexels API...`);
-  console.log(`Rate limit: 200 requests/hour (adding 18s delay between requests)\n`);
+async function downloadSingleImage() {
+  const imagePath = path.join(analyticsDir, `${slug}.jpg`);
   
-  let successCount = 0;
-  let failCount = 0;
-  let pexelsCount = 0;
-  let picsumCount = 0;
-  const failed = [];
-
-  for (let i = 0; i < slugs.length; i++) {
-    const slug = slugs[i];
-    const imagePath = path.join(analyticsDir, `${slug}.jpg`);
-    
-    // Skip if already exists (unless force overwrite)
-    if (fs.existsSync(imagePath) && !forceOverwrite) {
-      console.log(`[${i + 1}/${slugs.length}] Skipping ${slug}.jpg (already exists, use --force to overwrite)`);
-      successCount++;
-      continue;
-    }
-
-    try {
-      console.log(`[${i + 1}/${slugs.length}] Processing ${slug}.jpg...`);
-      
-      // Get image URL (Pexels with Picsum fallback)
-      const { url: imageUrl, source } = await getImageUrl(slug, PEXELS_API_KEY);
-      
-      if (source === 'pexels') {
-        pexelsCount++;
-      } else {
-        picsumCount++;
-      }
-      
-      // Download image
-      await downloadImage(imageUrl, imagePath);
-      
-      successCount++;
-      console.log(`✓ Downloaded ${slug}.jpg (${source})`);
-      
-      // Rate limiting: Pexels allows 200 requests/hour = ~18 seconds between requests
-      // Add delay to stay within limits
-      if (source === 'pexels') {
-        await new Promise(resolve => setTimeout(resolve, 18000)); // 18 seconds
-      } else {
-        // Smaller delay for Picsum fallback
-        await new Promise(resolve => setTimeout(resolve, 500));
-      }
-    } catch (error) {
-      failCount++;
-      failed.push(slug);
-      console.error(`✗ Failed to download ${slug}.jpg: ${error.message}`);
-      
-      // Still add delay even on error to avoid hammering APIs
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
+  // Skip if already exists
+  if (fs.existsSync(imagePath)) {
+    console.log(`File ${slug}.jpg already exists`);
+    return;
   }
 
-  console.log('\n=== Download Summary ===');
-  console.log(`Total: ${slugs.length}`);
-  console.log(`Success: ${successCount}`);
-  console.log(`Failed: ${failCount}`);
-  console.log(`Pexels: ${pexelsCount}`);
-  console.log(`Picsum (fallback): ${picsumCount}`);
-  
-  if (failed.length > 0) {
-    console.log('\nFailed slugs:');
-    failed.forEach(slug => console.log(`  - ${slug}`));
+  try {
+    console.log(`Processing ${slug}.jpg...`);
+    
+    // Get image URL (Pexels with Picsum fallback)
+    const { url: imageUrl, source } = await getImageUrl(slug, PEXELS_API_KEY);
+    
+    console.log(`Downloading from ${source}...`);
+    await downloadImage(imageUrl, imagePath);
+    
+    console.log(`✓ Downloaded ${slug}.jpg (${source})`);
+  } catch (error) {
+    console.error(`✗ Failed to download ${slug}.jpg: ${error.message}`);
+    process.exit(1);
   }
 }
 
 // Run
-downloadAllImages().catch(console.error);
+downloadSingleImage().catch(console.error);
 
