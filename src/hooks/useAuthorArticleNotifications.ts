@@ -29,10 +29,10 @@ export function useAuthorArticleNotifications() {
 
       try {
         // Get all followed authors
-        const { data: followedAuthors, error: followError } = await (supabase
-          .from('author_follows' as any)
+        const { data: followedAuthors, error: followError } = await supabase
+          .from('author_follows')
           .select('author_id, last_article_count')
-          .eq('user_id', user.id) as any);
+          .eq('user_id', user.id);
 
         if (followError) {
           logger.error('Error fetching followed authors:', followError);
@@ -87,22 +87,22 @@ export function useAuthorArticleNotifications() {
             }
 
             // Update last_article_count
-            const { error: updateError } = await (supabase
-              .from('author_follows' as any)
+            const { error: updateError } = await supabase
+              .from('author_follows')
               .update({ last_article_count: currentCount })
               .eq('user_id', user.id)
-              .eq('author_id', authorId) as any);
+              .eq('author_id', authorId);
 
             if (updateError) {
               logger.error('Error updating article count:', updateError);
             }
           } else if (lastCount === 0 && currentCount > 0) {
             // First time checking - just update the count, don't notify
-            const { error: updateError } = await (supabase
-              .from('author_follows' as any)
+            const { error: updateError } = await supabase
+              .from('author_follows')
               .update({ last_article_count: currentCount })
               .eq('user_id', user.id)
-              .eq('author_id', authorId) as any);
+              .eq('author_id', authorId);
 
             if (updateError) {
               logger.error('Error updating article count:', updateError);

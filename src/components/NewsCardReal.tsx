@@ -86,9 +86,18 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
     return new Date(article.published_at) > twoHoursAgo;
   };
 
-  // Use fallback image if no image_url or if it's potentially broken
+  // Use fallback image if no image_url or if it's potentially broken (like Guardian media which has CORS issues)
   const fallbackImage = getMarketImage(article.market, index);
-  const imageUrl = article.image_url || fallbackImage;
+  
+  // Check if image URL is from sources known to have CORS issues
+  const hasCorsProblem = article.image_url && (
+    article.image_url.includes('media.guim.co.uk') ||
+    article.image_url.includes('guardian') ||
+    article.image_url.includes('static.guim')
+  );
+  
+  // Always use fallback for problematic sources
+  const imageUrl = (article.image_url && !hasCorsProblem) ? article.image_url : fallbackImage;
 
   // Priority loading for first 6 images (2 rows on desktop)
   const isPriority = index < 6;

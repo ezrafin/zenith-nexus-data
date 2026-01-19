@@ -64,6 +64,30 @@ export type Database = {
         }
         Relationships: []
       }
+      author_follows: {
+        Row: {
+          author_id: string
+          created_at: string | null
+          id: string
+          last_article_count: number | null
+          user_id: string
+        }
+        Insert: {
+          author_id: string
+          created_at?: string | null
+          id?: string
+          last_article_count?: number | null
+          user_id: string
+        }
+        Update: {
+          author_id?: string
+          created_at?: string | null
+          id?: string
+          last_article_count?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       collectible_bills: {
         Row: {
           bill_id: string
