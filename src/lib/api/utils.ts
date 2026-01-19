@@ -101,15 +101,14 @@ export const categoryImages: Record<string, string[]> = {
 
 /**
  * Get unique local image path for analytics article by slug
- * Images should be stored in public/analytics/{slug}.jpg or public/analytics/{slug}.webp
- * Falls back to placeholder if image doesn't exist
+ * Images are stored in public/analytics/{slug}.jpg
+ * Falls back to placeholder if image doesn't exist (handled by LazyImage component)
  * 
  * @param slug - Article slug (e.g., 'mediterranean-tourism-and-hospitality-recovery-and-transformation')
  * @returns Path to local image file
  */
 export function getAnalyticsImage(slug: string): string {
-  // Try webp first (better compression), then jpg, then fallback to placeholder
-  // Note: In production, you should verify the file exists, but for now we'll let
-  // the browser handle 404s and LazyImage component will show fallback
-  return `/analytics/${slug}.webp`;
+  // Images are downloaded as JPG from Picsum Photos
+  // LazyImage component will handle fallback if image doesn't exist
+  return `/analytics/${slug}.jpg`;
 }
