@@ -13,7 +13,13 @@ export function useRoutePrefetch() {
 
   useEffect(() => {
     const handleMouseEnter = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
+      const target = event.target;
+      
+      // Check if target is an Element (not a text node or other non-element)
+      if (!target || !(target instanceof Element)) {
+        return;
+      }
+      
       const link = target.closest('a[href]') as HTMLAnchorElement;
       
       if (!link) return;
@@ -51,7 +57,13 @@ export function useRoutePrefetch() {
     };
 
     const handleMouseLeave = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
+      const target = event.target;
+      
+      // Check if target is an Element (not a text node or other non-element)
+      if (!target || !(target instanceof Element)) {
+        return;
+      }
+      
       const link = target.closest('a[href]') as HTMLAnchorElement;
       
       if (!link) return;
