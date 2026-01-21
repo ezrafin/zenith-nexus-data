@@ -90,6 +90,7 @@ export function GlobalSearch() {
     const searchPromises: Promise<void>[] = [];
 
     // Search companies (local) - FAST, no async needed, expanded search
+    // Show results immediately for better UX
     if (contentType === 'all' || contentType === 'company') {
       const companyResults = organizations
         .filter(org => 
@@ -106,6 +107,11 @@ export function GlobalSearch() {
           logo: org.logo,
         }));
       allResults.push(...companyResults);
+      
+      // Show company results immediately (don't wait for other searches)
+      if (companyResults.length > 0) {
+        setResults([...companyResults]);
+      }
     }
 
     // Search news articles (database) - parallel
@@ -176,8 +182,8 @@ export function GlobalSearch() {
       );
     }
 
-    // Search tickers (market symbols) - OPTIMIZED: parallel requests
-    if (contentType === 'all' || contentType === 'ticker') {
+    // Search tickers (market symbols) - OPTIMIZED: use cache first, only search if >= 2 chars
+    if ((contentType === 'all' || contentType === 'ticker') && searchQuery.trim().length >= 2) {
       searchPromises.push(
         (async () => {
           try {
@@ -185,51 +191,88 @@ export function GlobalSearch() {
             const marketTypes: Array<'stocks' | 'crypto' | 'indices' | 'commodities' | 'currencies'> = 
               ['stocks', 'crypto', 'indices', 'commodities', 'currencies'];
             
-            // Execute all market type searches in parallel
-            const tickerPromises = marketTypes.map(async (marketType) => {
+            const tickerResults: SearchResult[] = [];
+            
+            // Try to use cached data first (much faster than API calls)
+            for (const marketType of marketTypes) {
               try {
-                const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-                const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+                const cacheKey = `market_data_cache_${marketType}`;
+                const cached = localStorage.getItem(cacheKey);
                 
-                if (!supabaseUrl || !supabaseKey) return [];
-
-                const response = await fetch(
-                  `${supabaseUrl}/functions/v1/fetch-stocks?type=${marketType}`,
-                  {
-                    headers: {
-                      'Authorization': `Bearer ${supabaseKey}`,
-                      'Content-Type': 'application/json',
-                    },
+                if (cached) {
+                  try {
+                    const parsed = JSON.parse(cached);
+                    // Check if cache is fresh (less than 5 minutes old)
+                    const cacheAge = Date.now() - (parsed.cachedAt || 0);
+                    if (parsed.data && Array.isArray(parsed.data) && cacheAge < 5 * 60 * 1000) {
+                      const filtered = parsed.data
+                        .filter((item: MarketData) => 
+                          item.symbol.toUpperCase().includes(queryUpper) ||
+                          item.name.toUpperCase().includes(queryUpper)
+                        )
+                        .slice(0, 3)
+                        .map((item: MarketData) => ({
+                          type: 'ticker' as const,
+                          id: `${marketType}-${item.symbol}`,
+                          title: item.symbol,
+                          subtitle: item.name,
+                          symbol: item.symbol,
+                          marketType: marketType,
+                        }));
+                      tickerResults.push(...filtered);
+                      continue; // Used cache, skip API call
+                    }
+                  } catch (parseError) {
+                    // Cache parse error, fall through to API call
+                    logger.warn(`Cache parse error for ${marketType}:`, parseError);
                   }
-                );
+                }
                 
-                if (!response.ok) return [];
+                // Cache miss or stale - make API call only if needed
+                // Only fetch if query is 3+ chars (more specific searches)
+                if (searchQuery.trim().length >= 3) {
+                  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+                  const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+                  
+                  if (!supabaseUrl || !supabaseKey) continue;
 
-                const result = await response.json();
-                if (!result?.data) return [];
+                  const response = await fetch(
+                    `${supabaseUrl}/functions/v1/fetch-stocks?type=${marketType}`,
+                    {
+                      headers: {
+                        'Authorization': `Bearer ${supabaseKey}`,
+                        'Content-Type': 'application/json',
+                      },
+                    }
+                  );
+                  
+                  if (!response.ok) continue;
 
-                return result.data
-                  .filter((item: MarketData) => 
-                    item.symbol.toUpperCase().includes(queryUpper) ||
-                    item.name.toUpperCase().includes(queryUpper)
-                  )
-                  .slice(0, 3)
-                  .map((item: MarketData) => ({
-                    type: 'ticker' as const,
-                    id: `${marketType}-${item.symbol}`,
-                    title: item.symbol,
-                    subtitle: item.name,
-                    symbol: item.symbol,
-                    marketType: marketType,
-                  }));
+                  const result = await response.json();
+                  if (!result?.data) continue;
+
+                  const filtered = result.data
+                    .filter((item: MarketData) => 
+                      item.symbol.toUpperCase().includes(queryUpper) ||
+                      item.name.toUpperCase().includes(queryUpper)
+                    )
+                    .slice(0, 3)
+                    .map((item: MarketData) => ({
+                      type: 'ticker' as const,
+                      id: `${marketType}-${item.symbol}`,
+                      title: item.symbol,
+                      subtitle: item.name,
+                      symbol: item.symbol,
+                      marketType: marketType,
+                    }));
+                  tickerResults.push(...filtered);
+                }
               } catch (error) {
                 logger.error(`Error searching ${marketType}:`, error);
-                return [];
               }
-            });
+            }
 
-            const tickerResults = await Promise.all(tickerPromises);
-            allResults.push(...tickerResults.flat());
+            allResults.push(...tickerResults);
           } catch (error) {
             logger.error('Ticker search error:', error);
           }
@@ -280,7 +323,7 @@ export function GlobalSearch() {
     }
   }, [contentType, dateFilter, collectBill, isCollected]);
 
-  // Debounce search - 300ms delay to reduce API calls
+  // Debounce search - 200ms delay to reduce API calls (optimized for faster response)
   useEffect(() => {
     if (!query.trim()) {
       setResults([]);
@@ -291,7 +334,7 @@ export function GlobalSearch() {
     setLoading(true); // Show loading state during debounce
     const timeoutId = setTimeout(() => {
       searchAll(query);
-    }, 300);
+    }, 200); // Reduced from 300ms to 200ms for faster response
     return () => clearTimeout(timeoutId);
   }, [query, searchAll]);
 

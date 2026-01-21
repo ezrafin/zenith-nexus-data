@@ -128,6 +128,7 @@ export function Header() {
       name: t('navigation.aboutUs'),
       href: '/about',
       icon: Award,
+      customIcon: '/logos/navigation/about-us.png', // Custom icon image
       description: t('descriptions.aboutUs')
     }, {
       name: t('navigation.contactUs'),
@@ -216,7 +217,15 @@ export function Header() {
                       className="absolute top-full left-0 mt-2 w-72 py-3 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-xl">
                         {item.children.map(child => <Link key={child.href} to={child.href} className="flex items-start gap-3 px-4 py-3 hover:bg-secondary/50 transition-colors">
                             <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                              <child.icon className="h-4 w-4 text-primary" />
+                              {(child as any).customIcon ? (
+                                <img 
+                                  src={(child as any).customIcon} 
+                                  alt={child.name}
+                                  className="h-4 w-4 object-contain"
+                                />
+                              ) : (
+                                <child.icon className="h-4 w-4 text-primary" />
+                              )}
                             </div>
                             <div>
                               <div className="text-sm font-medium text-foreground">{child.name}</div>
@@ -454,7 +463,15 @@ export function Header() {
                     </div>
                     <div className="pl-4 space-y-1">
                       {item.children.map(child => <Link key={child.href} to={child.href} onClick={() => setMobileMenuOpen(false)} className={`flex items-center gap-3 px-4 py-3 text-sm rounded-lg transition-colors min-h-[44px] ${isActive(child.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
-                          <child.icon className="h-4 w-4 text-primary flex-shrink-0" />
+                          {(child as any).customIcon ? (
+                            <img 
+                              src={(child as any).customIcon} 
+                              alt={child.name}
+                              className="h-4 w-4 object-contain flex-shrink-0"
+                            />
+                          ) : (
+                            <child.icon className="h-4 w-4 text-primary flex-shrink-0" />
+                          )}
                           {child.name}
                         </Link>)}
                     </div>

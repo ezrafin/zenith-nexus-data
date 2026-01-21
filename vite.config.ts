@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => ({
           // Only split vendor libraries - let Vite handle app code
           // This prevents circular dependency issues
           if (id.includes('node_modules')) {
-            // React core - keep separate for better caching
+            // React core - keep separate for better caching (most stable, changes rarely)
             if (
               id.includes('node_modules/react') || 
               id.includes('node_modules/react-dom') ||
@@ -34,31 +34,30 @@ export default defineConfig(({ mode }) => ({
             ) {
               return 'vendor-react';
             }
-            // UI libraries - frequently used together
+            // UI libraries - frequently used together (stable, good for caching)
             if (
               id.includes('node_modules/@radix-ui') ||
               id.includes('node_modules/lucide-react')
             ) {
               return 'vendor-ui';
             }
-            // Animation library - separate chunk as it's large
+            // Animation library - separate chunk as it's large (can be lazy loaded)
             if (id.includes('node_modules/framer-motion')) {
               return 'vendor-animation';
             }
-            // Query library
+            // Query library - used throughout app (keep separate for caching)
             if (id.includes('node_modules/@tanstack/react-query')) {
               return 'vendor-query';
             }
-            // Supabase
+            // Supabase - large library, separate chunk (can be lazy loaded if needed)
             if (id.includes('node_modules/@supabase')) {
               return 'vendor-supabase';
             }
-            // Charts - keep with vendor-react to avoid initialization issues
-            // Recharts has dependencies on React that need to be loaded together
+            // Charts - separate chunk as it's large and not always needed
             if (id.includes('node_modules/recharts') || id.includes('node_modules/d3')) {
-              return 'vendor-react';
+              return 'vendor-charts';
             }
-            // Form libraries
+            // Form libraries - used in forms, can be lazy loaded
             if (
               id.includes('node_modules/react-hook-form') ||
               id.includes('node_modules/@hookform') ||
@@ -66,24 +65,35 @@ export default defineConfig(({ mode }) => ({
             ) {
               return 'vendor-forms';
             }
+            // Vercel analytics - separate as it's optional and loads async
+            if (id.includes('node_modules/@vercel')) {
+              return 'vendor-analytics';
+            }
+            // All other node_modules go into a common vendor chunk
+            return 'vendor';
           }
           // Let Vite handle app code splitting automatically
+          // This allows route-based code splitting for optimal loading
         },
+        // Optimize chunk file names for better caching
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
       },
     },
-    // Warn if chunk exceeds 1MB
-    chunkSizeWarningLimit: 1000,
-    // Optimize asset handling
+    // Warn if chunk exceeds 500KB (more aggressive limit for better performance)
+    chunkSizeWarningLimit: 500,
+    // Optimize asset handling - inline small assets to reduce HTTP requests
     assetsInlineLimit: 4096,
-    // Enable source maps in production for debugging
+    // Enable source maps only in development for faster builds
     sourcemap: mode === 'development',
-    // Minify CSS
+    // Minify CSS for smaller bundle size
     cssMinify: true,
-    // Minify JS - use esbuild for better compatibility
+    // Minify JS - use esbuild for faster builds and better compatibility
     minify: mode === 'production' ? 'esbuild' : false,
-    // Target modern browsers
+    // Target modern browsers for smaller bundle size
     target: 'esnext',
-    // Report compressed size
+    // Report compressed size to track bundle optimization
     reportCompressedSize: true,
   },
   // Optimize dependencies

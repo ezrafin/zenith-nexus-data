@@ -87,8 +87,8 @@ export interface Course {
   title: string;
   description: string;
   units: Unit[];
-  finalExamPassRate: number;
-  finalExam: QuizQuestion[];
+  finalExamPassRate?: number;
+  finalExam?: QuizQuestion[];
 }
 
 

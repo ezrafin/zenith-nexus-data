@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { UserProvider } from "@/context/UserContext";
 import { I18nProvider } from "@/context/I18nContext";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
+import { PageSkeleton } from "@/components/layout/PageSkeleton";
 import { educationRoutes } from "@/lib/educationRoutes";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -17,6 +18,8 @@ import { AnimatedRoutesWrapper } from "@/components/navigation/AnimatedRoutesWra
 import { ErrorBoundary } from "@/components/error/ErrorBoundary";
 import { OfflineIndicator } from "@/components/layout/OfflineIndicator";
 import { logger } from "@/lib/logger";
+import { useRoutePrefetch } from "@/hooks/useRoutePrefetch";
+import { PrefetchData } from "@/components/prefetch/PrefetchData";
 
 // Eager load critical pages
 import Index from "./pages/Index";
@@ -127,19 +130,21 @@ const queryClient = new QueryClient({
   },
 });
 
-const App = () => {
+const AppContent = () => {
+  // Enable route prefetching on link hover
+  useRoutePrefetch();
+
   return (
-    <ErrorBoundary>
-      <QueryClientProvider client={queryClient}>
-        <UserProvider>
-          <I18nProvider>
-            <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              {/* Skip to main content link is handled in Layout component */}
-              <OfflineIndicator />
-              <Suspense fallback={<LoadingScreen />}>
+    <>
+      {/* Prefetch critical data for Index page */}
+      <PrefetchData />
+      <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        {/* Skip to main content link is handled in Layout component */}
+        <OfflineIndicator />
+        <Suspense fallback={<PageSkeleton />}>
                 <ErrorBoundary>
                   <AnimatedRoutesWrapper>
                 <Route path="/" element={<Index />} />
@@ -200,7 +205,18 @@ const App = () => {
             <CookieConsentBanner />
             <Analytics />
             <SpeedInsights />
-          </TooltipProvider>
+        </TooltipProvider>
+      </>
+  );
+};
+
+const App = () => {
+  return (
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <UserProvider>
+          <I18nProvider>
+            <AppContent />
           </I18nProvider>
         </UserProvider>
       </QueryClientProvider>

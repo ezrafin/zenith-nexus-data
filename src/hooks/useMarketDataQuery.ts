@@ -65,7 +65,7 @@ function setCachedData(type: string, data: MarketData[], timestamp: string, isDe
   }
 }
 
-async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies'): Promise<{ data: MarketData[]; timestamp: string; isDemo: boolean }> {
+export async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies'): Promise<{ data: MarketData[]; timestamp: string; isDemo: boolean }> {
   if (type === 'crypto') {
     const { data: responseData, error: fetchError } = await supabase.functions.invoke('fetch-crypto');
     

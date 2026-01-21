@@ -304,31 +304,33 @@ export default function CoursePlatformPage() {
                     )}
                   </div>
                 ))}
-                <button
-                  onClick={() => {
-                    // Collect all quiz questions and randomly select 20
-                    const allQuestions = collectAllQuizQuestions(course);
-                    const selectedQuestions = selectRandomQuestions(allQuestions, 20);
-                    setFinalExamQuestions(selectedQuestions);
-                    setShowFinalExam(true);
-                    setShowQuiz(false);
-                    setShowMasteryCheck(false);
-                    setSelectedLesson(undefined);
-                    setSelectedContentItem(undefined);
-                    setCurrentExamQuestionIndex(0);
-                    setFinalExamAnswers({});
-                    setMobileMenuOpen(false);
-                  }}
-                  className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm font-medium hover:bg-secondary/50 mt-2"
-                >
-                  <Award className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span className="flex-1 truncate">{t('courses.finalExam')}</span>
-                  {totalLessons === completedLessons.length ? (
-                    <CheckCircle className="h-3 w-3 flex-shrink-0 text-green-500" />
-                  ) : (
-                    <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />
-                  )}
-                </button>
+                {course.finalExam !== undefined && (
+                  <button
+                    onClick={() => {
+                      // Collect all quiz questions and randomly select 20
+                      const allQuestions = collectAllQuizQuestions(course);
+                      const selectedQuestions = selectRandomQuestions(allQuestions, 20);
+                      setFinalExamQuestions(selectedQuestions);
+                      setShowFinalExam(true);
+                      setShowQuiz(false);
+                      setShowMasteryCheck(false);
+                      setSelectedLesson(undefined);
+                      setSelectedContentItem(undefined);
+                      setCurrentExamQuestionIndex(0);
+                      setFinalExamAnswers({});
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm font-medium hover:bg-secondary/50 mt-2"
+                  >
+                    <Award className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="flex-1 truncate">{t('courses.finalExam')}</span>
+                    {totalLessons === completedLessons.length ? (
+                      <CheckCircle className="h-3 w-3 flex-shrink-0 text-green-500" />
+                    ) : (
+                      <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />
+                    )}
+                  </button>
+                )}
               </div>
             )}
             <div className="mt-3 pt-3 border-t border-border/50">
@@ -427,32 +429,34 @@ export default function CoursePlatformPage() {
                 </div>
               ))}
 
-              <div className="mt-4 p-3 border-t border-border">
-                <button 
-                  onClick={() => { 
-                    // Collect all quiz questions and randomly select 20
-                    const allQuestions = collectAllQuizQuestions(course);
-                    const selectedQuestions = selectRandomQuestions(allQuestions, 20);
-                    setFinalExamQuestions(selectedQuestions);
-                    setShowFinalExam(true); 
-                    setShowQuiz(false); 
-                    setShowMasteryCheck(false); 
-                    setSelectedLesson(undefined); 
-                    setSelectedContentItem(undefined); 
-                    setCurrentExamQuestionIndex(0);
-                    setFinalExamAnswers({});
-                  }}
-                  className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm font-medium hover:bg-secondary/50"
-                >
-                  <Award className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="flex-1 truncate">{t('courses.finalExam')}</span>
-                  {totalLessons === completedLessons.length ? (
-                    <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-500" />
-                  ) : (
-                    <Lock className="h-4 w-4 flex-shrink-0 text-muted-foreground" />
-                  )}
-                </button>
-              </div>
+              {course.finalExam !== undefined && (
+                <div className="mt-4 p-3 border-t border-border">
+                  <button 
+                    onClick={() => { 
+                      // Collect all quiz questions and randomly select 20
+                      const allQuestions = collectAllQuizQuestions(course);
+                      const selectedQuestions = selectRandomQuestions(allQuestions, 20);
+                      setFinalExamQuestions(selectedQuestions);
+                      setShowFinalExam(true); 
+                      setShowQuiz(false); 
+                      setShowMasteryCheck(false); 
+                      setSelectedLesson(undefined); 
+                      setSelectedContentItem(undefined); 
+                      setCurrentExamQuestionIndex(0);
+                      setFinalExamAnswers({});
+                    }}
+                    className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-sm font-medium hover:bg-secondary/50"
+                  >
+                    <Award className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="flex-1 truncate">{t('courses.finalExam')}</span>
+                    {totalLessons === completedLessons.length ? (
+                      <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-500" />
+                    ) : (
+                      <Lock className="h-4 w-4 flex-shrink-0 text-muted-foreground" />
+                    )}
+                  </button>
+                </div>
+              )}
             </nav>
           </aside>
 
@@ -994,7 +998,7 @@ export default function CoursePlatformPage() {
                     <div>
                       <h2 className="heading-md">{t('courses.finalExam')}</h2>
                       <p className="text-sm text-muted-foreground mt-1">
-                        {t('courses.passRate')}: {course.finalExamPassRate}% • {t('courses.questions', { count: questions.length })}
+                        {t('courses.passRate')}: {course.finalExamPassRate ?? 75}% • {t('courses.questions', { count: questions.length })}
                       </p>
                     </div>
                     <Button variant="outline" onClick={() => {
@@ -1111,7 +1115,7 @@ export default function CoursePlatformPage() {
                           q => finalExamAnswers[q.id] === q.correctAnswer
                         ).length;
                         const percentage = Math.round((correct / questions.length) * 100);
-                        const passed = percentage >= course.finalExamPassRate;
+                        const passed = percentage >= (course.finalExamPassRate ?? 75);
                         return (
                           <div className="space-y-4">
                             <div className="text-center">
@@ -1122,7 +1126,7 @@ export default function CoursePlatformPage() {
                             </div>
                             <div className={`text-center p-4 rounded-lg ${passed ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'}`}>
                               <p className={`font-semibold ${passed ? 'text-green-400' : 'text-red-400'}`}>
-                                {passed ? t('courses.congratulations') : t('courses.needToPass', { rate: course.finalExamPassRate })}
+                                {passed ? t('courses.congratulations') : t('courses.needToPass', { rate: course.finalExamPassRate ?? 75 })}
                               </p>
                             </div>
                           </div>

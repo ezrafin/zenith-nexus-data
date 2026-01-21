@@ -56,6 +56,46 @@
     <link rel="prefetch" href="/analytics" />
     <link rel="prefetch" href="/forum" />
     <link rel="prefetch" href="/community" />
+    <link rel="prefetch" href="/companies" />
+    <link rel="prefetch" href="/learning" />
+    <link rel="prefetch" href="/academy" />
+    
+    <!-- Prefetch translation files for popular languages -->
+    <!-- Translations are loaded via dynamic imports, but we can hint the browser -->
+    <script>
+      // Detect browser language and prefetch critical translation namespaces
+      (function() {
+        const supportedLanguages = ['en', 'zh', 'es', 'ru', 'de', 'fr', 'pl'];
+        const criticalNamespaces = ['common', 'ui'];
+        
+        // Get browser language
+        const browserLang = (navigator.language || navigator.languages?.[0] || 'en').split('-')[0].toLowerCase();
+        const detectedLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+        
+        // Prefetch critical translation namespaces for detected language
+        // Note: Vite will handle these as dynamic imports, but this helps browser prioritize
+        criticalNamespaces.forEach(namespace => {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = `/src/locales/${detectedLang}/${namespace}.json`;
+          link.as = 'fetch';
+          link.crossOrigin = 'anonymous';
+          document.head.appendChild(link);
+        });
+        
+        // Also prefetch English as fallback
+        if (detectedLang !== 'en') {
+          criticalNamespaces.forEach(namespace => {
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = `/src/locales/en/${namespace}.json`;
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+          });
+        }
+      })();
+    </script>
   </head>
 
   <body>
