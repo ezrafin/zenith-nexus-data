@@ -26,20 +26,16 @@ export default defineConfig(({ mode }) => ({
           // Only split vendor libraries - let Vite handle app code
           // This prevents circular dependency issues
           if (id.includes('node_modules')) {
-            // React core - keep separate for better caching (most stable, changes rarely)
+            // React core + UI libraries - must be together as UI libs depend on React
+            // Keep together to ensure React is available when UI components initialize
             if (
               id.includes('node_modules/react') || 
               id.includes('node_modules/react-dom') ||
-              id.includes('node_modules/react-router')
-            ) {
-              return 'vendor-react';
-            }
-            // UI libraries - frequently used together (stable, good for caching)
-            if (
+              id.includes('node_modules/react-router') ||
               id.includes('node_modules/@radix-ui') ||
               id.includes('node_modules/lucide-react')
             ) {
-              return 'vendor-ui';
+              return 'vendor-react-ui';
             }
             // Animation library - separate chunk as it's large (can be lazy loaded)
             if (id.includes('node_modules/framer-motion')) {
