@@ -26,14 +26,17 @@ export default defineConfig(({ mode }) => ({
           // Only split vendor libraries - let Vite handle app code
           // This prevents circular dependency issues
           if (id.includes('node_modules')) {
-            // React core + UI libraries - must be together as UI libs depend on React
-            // Keep together to ensure React is available when UI components initialize
+            // React core + UI libraries + Charts - must be together
+            // Charts (recharts) has dependencies on React that need to be loaded together
+            // UI libs also depend on React, so keep all together to avoid initialization issues
             if (
               id.includes('node_modules/react') || 
               id.includes('node_modules/react-dom') ||
               id.includes('node_modules/react-router') ||
               id.includes('node_modules/@radix-ui') ||
-              id.includes('node_modules/lucide-react')
+              id.includes('node_modules/lucide-react') ||
+              id.includes('node_modules/recharts') ||
+              id.includes('node_modules/d3')
             ) {
               return 'vendor-react-ui';
             }
@@ -48,10 +51,6 @@ export default defineConfig(({ mode }) => ({
             // Supabase - large library, separate chunk (can be lazy loaded if needed)
             if (id.includes('node_modules/@supabase')) {
               return 'vendor-supabase';
-            }
-            // Charts - separate chunk as it's large and not always needed
-            if (id.includes('node_modules/recharts') || id.includes('node_modules/d3')) {
-              return 'vendor-charts';
             }
             // Form libraries - used in forms, can be lazy loaded
             if (
