@@ -16,6 +16,7 @@ import { useI18n } from '@/context/I18nContext';
 import { LANGUAGE_NAMES, type SupportedLanguage } from '@/lib/i18n';
 import { themes, ALL_THEME_CLASSES } from '@/components/layout/ThemeSwitcher';
 import { cn } from '@/lib/utils';
+import { preloadImages } from '@/lib/utils/preloadImages';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -156,6 +157,51 @@ export function Header() {
     name: t('navigation.companies'),
     href: '/companies'
   }], [t]);
+
+  // Extract all custom icon URLs from navigation structure
+  const navigationIconUrls = useMemo(() => {
+    const urls: string[] = [];
+    
+    const extractIcons = (items: typeof navigation) => {
+      items.forEach(item => {
+        if (item.children) {
+          item.children.forEach(child => {
+            if ((child as any).customIcon) {
+              urls.push((child as any).customIcon);
+            }
+          });
+        }
+      });
+    };
+    
+    extractIcons(navigation);
+    return urls;
+  }, [navigation]);
+
+  // Preload navigation icons on mount
+  useEffect(() => {
+    if (navigationIconUrls.length === 0) return;
+
+    // Use requestIdleCallback if available for low-priority preloading
+    // Otherwise use setTimeout to avoid blocking initial render
+    const preloadIcons = () => {
+      preloadImages(navigationIconUrls).then(() => {
+        logger.debug(`Preloaded ${navigationIconUrls.length} navigation icons`);
+      }).catch(error => {
+        logger.warn('Failed to preload some navigation icons:', error);
+      });
+    };
+
+    if ('requestIdleCallback' in window) {
+      const idleCallbackId = (window as any).requestIdleCallback(preloadIcons, { timeout: 2000 });
+      return () => (window as any).cancelIdleCallback(idleCallbackId);
+    } else {
+      // Fallback for browsers without requestIdleCallback
+      const timeoutId = setTimeout(preloadIcons, 100);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [navigationIconUrls]);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);

@@ -50,6 +50,12 @@
     <!-- Preload critical resources -->
     <!-- Removed favicon preload as it's not critical and causes warnings -->
     
+    <!-- Preload critical navigation icons for instant menu display -->
+    <link rel="preload" as="image" href="/logos/navigation/news.png" />
+    <link rel="preload" as="image" href="/logos/navigation/analytics.png" />
+    <link rel="preload" as="image" href="/logos/navigation/forum.png" />
+    <link rel="preload" as="image" href="/logos/navigation/academy.png" />
+    
     <!-- Prefetch likely next pages based on common user flows -->
     <link rel="prefetch" href="/news" />
     <link rel="prefetch" href="/markets" />
