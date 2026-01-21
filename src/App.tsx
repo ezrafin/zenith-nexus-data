@@ -96,7 +96,7 @@ const ModerationPage = lazyWithRetry(() => import("./pages/admin/ModerationPage"
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5 * 60 * 1000, // 5 minutes
+      staleTime: 5 * 60 * 1000, // 5 minutes default
       gcTime: 10 * 60 * 1000, // 10 minutes (formerly cacheTime)
       retry: (failureCount, error) => {
         // Don't retry on 4xx errors (client errors)
@@ -110,9 +110,11 @@ const queryClient = new QueryClient({
         return failureCount < 2;
       },
       retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000), // Exponential backoff
-      refetchOnWindowFocus: true, // Refetch when window regains focus
-      refetchOnReconnect: true, // Refetch when network reconnects
-      refetchOnMount: true, // Always refetch on mount for fresh data
+      // Only refetch on window focus if data is stale (more than staleTime old)
+      refetchOnWindowFocus: false, // Disabled by default - can be enabled per-query for critical data
+      refetchOnReconnect: true, // Refetch when network reconnects (important for recovery)
+      // Only refetch on mount if data is stale, not always
+      refetchOnMount: false, // Disabled by default - queries will use cached data if fresh
       networkMode: 'online', // Only run queries when online
       // Use placeholderData for better UX during refetch
       // This allows showing cached data while fetching fresh data

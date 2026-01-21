@@ -13,6 +13,7 @@ import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { useTranslation } from '@/hooks/useTranslation';
 import { supabase } from '@/integrations/supabase/client';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { useCompanyRatingsBatch } from '@/hooks/useCompanyRatingsBatch';
 
 type SortOption = 'alphabetical' | 'combined' | 'community' | 'expert';
 const ITEMS_PER_PAGE = 15;
@@ -114,6 +115,13 @@ export default function CompaniesPage() {
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
+
+  // Batch load ratings for all companies on current page
+  const companySlugs = useMemo(
+    () => paginatedOrganizations.map(org => org.id),
+    [paginatedOrganizations]
+  );
+  const { ratings: companyRatings } = useCompanyRatingsBatch(companySlugs);
 
   const handleTypeChange = (type: OrganizationType | 'all') => {
     setSelectedType(type);
@@ -290,7 +298,12 @@ export default function CompaniesPage() {
           {/* Organizations Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
             {paginatedOrganizations.map((org, index) => (
-              <OrganizationCard key={org.id} organization={org} index={index} />
+              <OrganizationCard 
+                key={org.id} 
+                organization={org} 
+                index={index}
+                ratingData={companyRatings[org.id]}
+              />
             ))}
           </div>
 

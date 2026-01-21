@@ -5,14 +5,13 @@ import { Organization, OrganizationType } from '@/lib/organizations';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useUser } from '@/context/UserContext';
-import { logger } from '@/lib/logger';
 import { useTranslation } from '@/hooks/useTranslation';
+import { CompanyRatingData } from '@/hooks/useCompanyRatingsBatch';
+
 interface OrganizationCardProps {
   organization: Organization;
   index?: number;
+  ratingData?: CompanyRatingData; // Optional rating data passed from parent
 }
 
 const typeColors: Record<OrganizationType, string> = {
@@ -37,12 +36,13 @@ function getTrustBgColor(score: number): string {
   return 'bg-red-500';
 }
 
-export function OrganizationCard({ organization, index = 0 }: OrganizationCardProps) {
+export function OrganizationCard({ organization, index = 0, ratingData }: OrganizationCardProps) {
   const { t } = useTranslation({ namespace: 'ui' });
-  const { user } = useUser();
   const combinedTrust = Math.round((organization.communityTrust + organization.expertTrust) / 2);
-  const [ratingCount, setRatingCount] = useState<number | null>(null);
-  const [userRating, setUserRating] = useState<number | null>(null);
+  
+  // Use rating data from props if available, otherwise default values
+  const ratingCount = ratingData?.ratingCount ?? null;
+  const userRating = ratingData?.userRating ?? null;
 
   const getTypeLabel = (type: OrganizationType): string => {
     const labelKey = type === 'broker' ? 'organizationCard.broker'
@@ -54,51 +54,6 @@ export function OrganizationCard({ organization, index = 0 }: OrganizationCardPr
       : 'organizationCard.wealthManager';
     return t(labelKey);
   };
-
-  useEffect(() => {
-    async function loadRatingData() {
-      try {
-        // Get pre-calculated rating count from companies_metadata (optimized)
-        const { data: metadata, error: metadataError } = await supabase
-          .from('companies_metadata')
-          .select('rating_count')
-          .eq('company_slug', organization.id)
-          .maybeSingle();
-
-        if (metadataError) {
-          logger.error('Error loading metadata:', metadataError);
-          // Fallback to direct count if metadata not found
-          const { count, error: countError } = await supabase
-            .from('company_evaluations')
-            .select('*', { count: 'exact', head: true })
-            .eq('company_slug', organization.id)
-            .eq('is_approved', true);
-          if (!countError) setRatingCount(count || 0);
-        } else {
-          setRatingCount(metadata?.rating_count || 0);
-        }
-
-        // Get user's rating if logged in
-        if (user) {
-          const { data, error: userError } = await supabase
-            .from('company_evaluations')
-            .select('rating')
-            .eq('company_slug', organization.id)
-            .eq('user_id', user.id)
-            .maybeSingle();
-
-          if (userError) throw userError;
-          setUserRating(data?.rating ?? null);
-        } else {
-          setUserRating(null);
-        }
-      } catch (error) {
-        logger.error('Error loading rating data:', error);
-      }
-    }
-
-    loadRatingData();
-  }, [organization.id, user]);
   
   const handleWebsiteClick = (e: React.MouseEvent) => {
     e.preventDefault();

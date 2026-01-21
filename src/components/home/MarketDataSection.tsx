@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import { memo, useMemo, useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MarketMiniTable } from '@/components/MarketMiniTable';
@@ -8,8 +8,42 @@ import { ArrowRight, TrendingUp, BarChart3, Coins, Bitcoin, DollarSign } from 'l
 import { useTranslation } from '@/hooks/useTranslation';
 
 export const MarketDataSection = memo(function MarketDataSection() {
-  const { indices, stocks, crypto, commodities, currencies, loading: marketLoading } = useAllMarkets();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const { t } = useTranslation({ namespace: 'ui' });
+  
+  // Use Intersection Observer to detect when section becomes visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            // Disconnect observer after first intersection to avoid unnecessary checks
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        // Start loading when section is 200px away from viewport
+        rootMargin: '200px',
+        threshold: 0.01,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Only load market data when section is visible or about to be visible
+  const { indices, stocks, crypto, commodities, currencies, loading: marketLoading } = useAllMarkets({
+    enabled: isVisible,
+  });
 
   // Helper function to sort by market cap and get top 40
   const getTop40ByMarketCap = useMemo(() => {
@@ -43,7 +77,7 @@ export const MarketDataSection = memo(function MarketDataSection() {
   ], [indices.data, stocks.data, commodities.data, crypto.data, currencies.data, t, getTop40ByMarketCap]);
 
   return (
-    <section className="section-spacing-sm section-gradient">
+    <section ref={sectionRef} className="section-spacing-sm section-gradient">
       <div className="container-wide">
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 

@@ -1,11 +1,45 @@
 import { useMarketDataQuery } from './useMarketDataQuery';
 
-export function useAllMarkets() {
-  const indices = useMarketDataQuery({ type: 'indices', refreshInterval: 120000, staleTime: 30000 });
-  const stocks = useMarketDataQuery({ type: 'stocks', refreshInterval: 120000, staleTime: 30000 });
-  const crypto = useMarketDataQuery({ type: 'crypto', refreshInterval: 120000, staleTime: 60000 });
-  const commodities = useMarketDataQuery({ type: 'commodities', refreshInterval: 120000, staleTime: 30000 });
-  const currencies = useMarketDataQuery({ type: 'currencies', refreshInterval: 120000, staleTime: 30000 });
+interface UseAllMarketsOptions {
+  enabled?: boolean;
+}
+
+export function useAllMarkets(options: UseAllMarketsOptions = {}) {
+  const { enabled = true } = options;
+  
+  // Use individual hooks for better type safety and individual control
+  // This approach is actually better than useQueries for our use case
+  // because each market type has different configurations
+  const indices = useMarketDataQuery({ 
+    type: 'indices', 
+    refreshInterval: 120000, 
+    staleTime: 30000, 
+    enabled 
+  });
+  const stocks = useMarketDataQuery({ 
+    type: 'stocks', 
+    refreshInterval: 120000, 
+    staleTime: 30000, 
+    enabled 
+  });
+  const crypto = useMarketDataQuery({ 
+    type: 'crypto', 
+    refreshInterval: 120000, 
+    staleTime: 60000, // Longer staleTime for crypto
+    enabled 
+  });
+  const commodities = useMarketDataQuery({ 
+    type: 'commodities', 
+    refreshInterval: 120000, 
+    staleTime: 30000, 
+    enabled 
+  });
+  const currencies = useMarketDataQuery({ 
+    type: 'currencies', 
+    refreshInterval: 120000, 
+    staleTime: 30000, 
+    enabled 
+  });
 
   return {
     indices: {

@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 import { parseTickers } from './TickerParser';
 
 interface MarkdownContentProps {
@@ -6,9 +7,53 @@ interface MarkdownContentProps {
   className?: string;
 }
 
+/**
+ * Sanitize URL to prevent XSS attacks
+ * Only allows http, https, and relative URLs
+ */
+function sanitizeUrl(url: string): string {
+  if (!url) return '#';
+  
+  // Remove any whitespace
+  url = url.trim();
+  
+  // Check for dangerous protocols
+  const dangerousProtocols = ['javascript:', 'data:', 'vbscript:', 'file:'];
+  const lowerUrl = url.toLowerCase();
+  
+  for (const protocol of dangerousProtocols) {
+    if (lowerUrl.startsWith(protocol)) {
+      return '#';
+    }
+  }
+  
+  // Allow http, https, and relative URLs
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/') || url.startsWith('#')) {
+    // Sanitize the URL using DOMPurify
+    return DOMPurify.sanitize(url, { ALLOWED_URI_REGEXP: /^(?:(?:(?:f|ht)tps?|mailto|tel|callto|sms|cid|xmpp):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i });
+  }
+  
+  // Default to safe relative URL
+  return '#';
+}
+
+/**
+ * Sanitize text content to prevent XSS
+ * React automatically escapes text, but we sanitize for extra safety
+ */
+function sanitizeText(text: string): string {
+  if (!text) return '';
+  // DOMPurify sanitizes HTML, but since we're using React elements, we just need to ensure no script tags
+  // React will escape the text anyway, but this adds an extra layer
+  return DOMPurify.sanitize(text, { ALLOWED_TAGS: [] });
+}
+
 export function MarkdownContent({ content, className = '' }: MarkdownContentProps) {
+  // Sanitize input content first
+  const sanitizedContent = sanitizeText(content);
+  
   // Split content into blocks (paragraphs, lists, code blocks, quotes, etc.)
-  const blocks = parseBlocks(content);
+  const blocks = parseBlocks(sanitizedContent);
 
   return (
     <div className={`max-w-none ${className}`}>
@@ -114,9 +159,11 @@ function parseBlocks(content: string): Block[] {
 function renderBlock(block: Block, index: number): React.ReactNode {
   switch (block.type) {
     case 'code':
+      // Sanitize code block content
+      const sanitizedCodeBlock = sanitizeText(block.content);
       return (
         <pre key={index} className="mb-4 p-4 bg-muted/50 rounded-lg border border-border/50 overflow-x-auto">
-          <code className="text-sm font-mono text-foreground">{block.content}</code>
+          <code className="text-sm font-mono text-foreground">{sanitizedCodeBlock}</code>
         </pre>
       );
 
@@ -273,22 +320,27 @@ function renderInlineMarkdown(text: string): React.ReactNode[] {
         );
         break;
       case 'code':
+        // Sanitize code content
+        const sanitizedCode = sanitizeText(match.content);
         parts.push(
           <code key={key++} className="px-1.5 py-0.5 bg-muted/80 rounded text-sm font-mono text-foreground border border-border/50">
-            {match.content}
+            {sanitizedCode}
           </code>
         );
         break;
       case 'link':
+        // Sanitize URL and link text
+        const sanitizedUrl = sanitizeUrl(match.url || '#');
+        const sanitizedLinkText = sanitizeText(match.content);
         parts.push(
           <a 
             key={key++} 
-            href={match.url} 
+            href={sanitizedUrl} 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            {match.content}
+            {sanitizedLinkText}
           </a>
         );
         break;

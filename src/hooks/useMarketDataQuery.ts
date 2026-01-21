@@ -7,6 +7,7 @@ interface UseMarketDataQueryOptions {
   type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies';
   refreshInterval?: number; // in milliseconds
   staleTime?: number; // in milliseconds, defaults to 30-60 seconds
+  enabled?: boolean; // whether the query should run
 }
 
 interface UseMarketDataQueryReturn {
@@ -144,6 +145,7 @@ export function useMarketDataQuery({
   type, 
   refreshInterval = 120000,
   staleTime = 30000, // 30 seconds default, align with server cache
+  enabled = true, // by default, queries are enabled
 }: UseMarketDataQueryOptions): UseMarketDataQueryReturn {
   // Get initial cached data for immediate display
   const cachedData = getCachedData(type);
@@ -154,10 +156,11 @@ export function useMarketDataQuery({
       const result = await fetchMarketDataFromAPI(type);
       return result;
     },
+    enabled,
     staleTime,
     gcTime: 5 * 60 * 1000, // 5 minutes
-    refetchInterval: refreshInterval,
-    refetchIntervalInBackground: true,
+    refetchInterval: enabled ? refreshInterval : false, // Only refetch if enabled
+    refetchIntervalInBackground: enabled,
     // Use cached data as initial data for instant display
     initialData: cachedData ? {
       data: cachedData.data,

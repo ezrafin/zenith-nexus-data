@@ -64,6 +64,14 @@ const marketImages: Record<string, string[]> = {
   ],
 };
 
+// In-memory cache of image URLs that have failed to load at least once.
+// This lets us "learn" that specific external URLs are broken and skip them
+// on subsequent renders, falling back immediately to our market images.
+const badImageCache = new Set<string>();
+
+// Domains that are known to often cause CORS or loading issues (e.g. Guardian)
+const problematicDomains = ['media.guim.co.uk', 'guardian', 'static.guim'];
+
 const getMarketImage = (market: string, index: number): string => {
   const images = marketImages[market] || marketImages.general;
   return images[index % images.length];
@@ -86,18 +94,31 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
     return new Date(article.published_at) > twoHoursAgo;
   };
 
-  // Use fallback image if no image_url or if it's potentially broken (like Guardian media which has CORS issues)
+  // Fallback image per market, used when there's no URL or the URL is known-bad
   const fallbackImage = getMarketImage(article.market, index);
-  
-  // Check if image URL is from sources known to have CORS issues
-  const hasCorsProblem = article.image_url && (
-    article.image_url.includes('media.guim.co.uk') ||
-    article.image_url.includes('guardian') ||
-    article.image_url.includes('static.guim')
-  );
-  
-  // Always use fallback for problematic sources
-  const imageUrl = (article.image_url && !hasCorsProblem) ? article.image_url : fallbackImage;
+
+  // If we have an image URL, decide whether to use it or immediately fall back.
+  // Strategy:
+  // - First time we see any URL, we always TRY to load it.
+  // - If it fails, onError will add it to badImageCache.
+  // - For subsequent renders with the same URL, we skip it and use fallback immediately.
+  const originalImageUrl = article.image_url || undefined;
+
+  // Has this exact URL already failed at least once?
+  const isKnownBadUrl =
+    !!originalImageUrl && badImageCache.has(originalImageUrl);
+
+  // For "problematic" domains, we still try them the first time,
+  // but once they fail, they'll be cached in badImageCache and skipped later.
+  const isProblematicDomain =
+    !!originalImageUrl &&
+    problematicDomains.some(domain => originalImageUrl.includes(domain));
+
+  // If URL is known bad, skip it entirely and use fallback.
+  // Otherwise, try real URL; LazyImage will fall back if it errors.
+  const imageUrl = !originalImageUrl || isKnownBadUrl
+    ? fallbackImage
+    : originalImageUrl;
 
   // Priority loading for first 6 images (2 rows on desktop)
   const isPriority = index < 6;
@@ -126,7 +147,11 @@ export function NewsCardReal({ article, featured = false, index = 0 }: NewsCardR
             priority={isPriority}
             className="w-full h-full group-hover:scale-105 transition-transform duration-500"
             onError={() => {
-              // Image failed to load, LazyImage will show fallback
+              // If the real URL fails, remember it so future renders skip it
+              if (originalImageUrl) {
+                badImageCache.add(originalImageUrl);
+              }
+              // LazyImage itself will handle showing the fallback image
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
