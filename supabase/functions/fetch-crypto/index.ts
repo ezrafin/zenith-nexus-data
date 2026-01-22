@@ -12,6 +12,49 @@ interface CryptoSource {
   source: string;
 }
 
+// Helper function to parse marketCap string to number
+function parseMarketCap(marketCapStr: string): number {
+  if (!marketCapStr || marketCapStr === '-') return 0;
+  
+  // Remove $ and spaces
+  const cleaned = marketCapStr.replace(/[$\s]/g, '');
+  
+  // Extract number and multiplier
+  const match = cleaned.match(/^([\d.]+)([TBMK]?)$/i);
+  if (!match) return 0;
+  
+  const num = parseFloat(match[1]);
+  const multiplier = match[2].toUpperCase();
+  
+  switch (multiplier) {
+    case 'T': return num * 1e12;
+    case 'B': return num * 1e9;
+    case 'M': return num * 1e6;
+    case 'K': return num * 1e3;
+    default: return num;
+  }
+}
+
+// Helper function to filter out Wrapped tokens
+function filterWrappedTokens(data: any[]): any[] {
+  return data.filter((coin) => {
+    const name = (coin.name || '').toLowerCase();
+    const symbol = (coin.symbol || '').toLowerCase();
+    
+    // Filter out tokens with "wrapped" in name or symbol starting with "W" that are wrapped tokens
+    // Common wrapped tokens: WBTC, WETH, WBNB, etc.
+    const isWrapped = 
+      name.includes('wrapped') ||
+      (symbol.startsWith('w') && (
+        symbol === 'wbtc' || symbol === 'weth' || symbol === 'wbnb' || 
+        symbol === 'wmatic' || symbol === 'wavax' || symbol === 'wsol' ||
+        name.includes('wrapped bitcoin') || name.includes('wrapped ethereum')
+      ));
+    
+    return !isWrapped;
+  });
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -37,7 +80,7 @@ serve(async (req) => {
       console.log('Attempting CoinGecko API...');
       marketData = await retryWithBackoff(async () => {
         const response = await fetch(
-          'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h',
+          'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h',
           {
             headers: {
               'Accept': 'application/json',
@@ -227,7 +270,7 @@ serve(async (req) => {
         console.log('Attempting CoinCap API...');
         marketData = await retryWithBackoff(async () => {
           const response = await fetch(
-            'https://api.coincap.io/v2/assets?limit=20',
+            'https://api.coincap.io/v2/assets?limit=50',
             {
               headers: {
                 'Accept': 'application/json',
@@ -360,9 +403,25 @@ serve(async (req) => {
     const finalData = marketData.data;
     console.log(`Returning ${finalData.length} items from source: ${dataSource}`);
 
+    // Filter out Wrapped tokens
+    const filteredData = filterWrappedTokens(finalData);
+    console.log(`After filtering Wrapped tokens: ${filteredData.length} items`);
+
+    // Sort by marketCap (descending) and take top 20
+    const sortedData = filteredData
+      .map((coin) => ({
+        ...coin,
+        marketCapNum: parseMarketCap(coin.marketCap || '-'),
+      }))
+      .sort((a, b) => b.marketCapNum - a.marketCapNum)
+      .slice(0, 20)
+      .map(({ marketCapNum, ...rest }) => rest); // Remove temporary marketCapNum field
+
+    console.log(`Returning top 20 by market cap: ${sortedData.length} items`);
+
     return new Response(
       JSON.stringify({
-        data: finalData,
+        data: sortedData,
         timestamp: new Date().toISOString(),
         source: dataSource,
         isDemo: dataSource === 'mock',
@@ -382,9 +441,20 @@ serve(async (req) => {
     // Even on error, return mock data so UI doesn't break
     const mockData = validateMarketData(getMockCryptoData());
     
+    // Filter and sort mock data too
+    const filteredMock = filterWrappedTokens(mockData);
+    const sortedMock = filteredMock
+      .map((coin) => ({
+        ...coin,
+        marketCapNum: parseMarketCap(coin.marketCap || '-'),
+      }))
+      .sort((a, b) => b.marketCapNum - a.marketCapNum)
+      .slice(0, 20)
+      .map(({ marketCapNum, ...rest }) => rest);
+    
     return new Response(
       JSON.stringify({
-        data: mockData,
+        data: sortedMock,
         timestamp: new Date().toISOString(),
         source: 'mock',
         isDemo: true,
@@ -435,7 +505,7 @@ function getMockCryptoData() {
 async function fetchCoinMarketCap(apiKey: string): Promise<any[]> {
   try {
     const response = await fetch(
-      'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=20&convert=USD',
+      'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=50&convert=USD',
       {
         headers: {
           'X-CMC_PRO_API_KEY': apiKey,
