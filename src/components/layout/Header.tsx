@@ -510,7 +510,7 @@ export function Header() {
                 <GlobalSearch />
               </div>
               {navigation.map(item => item.children ? <div key={item.name} className="space-y-2">
-                    <div className="px-4 py-2 text-sm font-medium text-foreground">
+                    <div className="px-4 py-2 text-sm font-medium text-foreground text-center">
                       {item.name}
                     </div>
                     <div className="px-4 grid grid-cols-2 gap-2">
