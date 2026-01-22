@@ -75,6 +75,7 @@ export function Header() {
       name: t('navigation.communityHub'),
       href: '/community',
       icon: Users,
+      customIcon: '/logos/navigation/community-hub.png',
       description: t('navigation.communityHub')
     }]
   }, {
@@ -113,6 +114,7 @@ export function Header() {
       name: t('navigation.learning'),
       href: educationRoutes.learning,
       icon: BookOpen,
+      customIcon: '/logos/navigation/learning.png',
       description: t('descriptions.learning')
     }, {
       name: t('navigation.academy'),
@@ -140,6 +142,7 @@ export function Header() {
       name: t('navigation.contactUs'),
       href: '/contact',
       icon: BookOpen,
+      customIcon: '/logos/navigation/contact-us.png',
       description: t('descriptions.contactUs')
     }, {
       name: t('navigation.careers'),
@@ -151,6 +154,7 @@ export function Header() {
       name: t('navigation.authors'),
       href: '/authors',
       icon: Award,
+      customIcon: '/logos/navigation/authors.png',
       description: t('descriptions.authors')
     }]
   }, {
