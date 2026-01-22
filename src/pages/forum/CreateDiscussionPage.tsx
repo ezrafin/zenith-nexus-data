@@ -138,8 +138,8 @@ export default function CreateDiscussionPage() {
 
     setErrors({});
 
-    // Check rate limit
-    const rateLimitCheck = await checkRateLimit('create_discussion', 10, 60);
+    // Check rate limit (server-side)
+    const rateLimitCheck = await checkRateLimit('create_discussion', 10, 60, user.id);
     if (!rateLimitCheck.allowed) {
       toast.error(rateLimitCheck.message || t('rateLimitCreateExceeded'));
       return;

@@ -10,6 +10,7 @@ import { useCollectibleBills } from '@/hooks/useCollectibleBills';
 import { motion, AnimatePresence } from 'framer-motion';
 import { checkmarkAnimation, shakeAnimation, prefersReducedMotion, transitions } from '@/lib/animations';
 import { useTranslation } from '@/hooks/useTranslation';
+import { checkRateLimit } from '@/lib/api/rateLimit';
 
 interface ReactionButtonProps {
   contentType: 'discussion' | 'reply';
@@ -77,6 +78,14 @@ export function ReactionButton({
   const reactionMutation = useMutation({
     mutationFn: async (action: 'add' | 'remove'): Promise<'add' | 'remove'> => {
       if (!user) throw new Error(t('toast.pleaseSignInToReact'));
+
+      // Server-side rate limit check for adding reactions
+      if (action === 'add') {
+        const rateLimitCheck = await checkRateLimit('create_reaction', 30, 60, user.id);
+        if (!rateLimitCheck.allowed) {
+          throw new Error(rateLimitCheck.message || t('toast.rateLimitExceeded'));
+        }
+      }
 
       if (action === 'remove') {
         const { error } = await supabase

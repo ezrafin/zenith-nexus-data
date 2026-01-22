@@ -126,8 +126,8 @@ export default function ForumTopicPage() {
       return;
     }
 
-    // Check rate limit
-    const rateLimitCheck = await checkRateLimit('create_reply', 20, 60);
+    // Check rate limit (server-side)
+    const rateLimitCheck = await checkRateLimit('create_reply', 20, 60, user.id);
     if (!rateLimitCheck.allowed) {
       toast.error(rateLimitCheck.message || t('toast.rateLimitExceeded'));
       return;
