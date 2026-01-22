@@ -999,7 +999,39 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      forum_topic_requests_public: {
+        Row: {
+          admin_notes: string | null
+          created_at: string | null
+          id: string | null
+          requester_name: string | null
+          reviewed_at: string | null
+          status: string | null
+          topic_description: string | null
+          topic_title: string | null
+        }
+        Insert: {
+          admin_notes?: string | null
+          created_at?: string | null
+          id?: string | null
+          requester_name?: string | null
+          reviewed_at?: string | null
+          status?: string | null
+          topic_description?: string | null
+          topic_title?: string | null
+        }
+        Update: {
+          admin_notes?: string | null
+          created_at?: string | null
+          id?: string | null
+          requester_name?: string | null
+          reviewed_at?: string | null
+          status?: string | null
+          topic_description?: string | null
+          topic_title?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       get_user_collection_progress: {
