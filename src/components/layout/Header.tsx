@@ -509,24 +509,30 @@ export function Header() {
               <div className="px-4 mb-4">
                 <GlobalSearch />
               </div>
-              {navigation.map(item => item.children ? <div key={item.name} className="space-y-1">
+              {navigation.map(item => item.children ? <div key={item.name} className="space-y-2">
                     <div className="px-4 py-2 text-sm font-medium text-foreground">
                       {item.name}
                     </div>
-                    <div className="pl-4 space-y-1">
-                      {item.children.map(child => <Link key={child.href} to={child.href} onClick={() => setMobileMenuOpen(false)} className={`flex items-center gap-3 px-4 py-3 text-sm rounded-lg transition-colors min-h-[44px] ${isActive(child.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
+                    <div className="px-4 grid grid-cols-2 gap-2">
+                      {item.children.map(child => <Link 
+                        key={child.href} 
+                        to={child.href} 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className={`flex flex-col items-center justify-center gap-2 px-3 py-3 text-xs rounded-lg transition-colors ${isActive(child.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
                           {(child as any).customIcon ? (
-                            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                               <img 
                                 src={(child as any).customIcon} 
                                 alt={child.name}
-                                className="h-full w-full object-contain p-1"
+                                className="h-full w-full object-contain p-1.5"
                               />
                             </div>
                           ) : (
-                            <child.icon className="h-4 w-4 text-primary flex-shrink-0" />
+                            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <child.icon className="h-6 w-6 text-primary" />
+                            </div>
                           )}
-                          {child.name}
+                          <span className="text-center leading-tight">{child.name}</span>
                         </Link>)}
                     </div>
                   </div> :                   <Link key={item.name} to={item.href} onClick={() => setMobileMenuOpen(false)} className={`block px-4 py-3 text-sm rounded-lg transition-colors min-h-[44px] flex items-center ${isActive(item.href) ? 'text-foreground bg-secondary/50' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/30'}`}>
