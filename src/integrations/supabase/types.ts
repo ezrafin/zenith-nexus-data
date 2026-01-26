@@ -755,6 +755,36 @@ export type Database = {
         }
         Relationships: []
       }
+      rate_limits: {
+        Row: {
+          action_type: string
+          created_at: string
+          id: string
+          ip_address: unknown
+          request_count: number
+          updated_at: string
+          window_start: string
+        }
+        Insert: {
+          action_type: string
+          created_at?: string
+          id?: string
+          ip_address: unknown
+          request_count?: number
+          updated_at?: string
+          window_start?: string
+        }
+        Update: {
+          action_type?: string
+          created_at?: string
+          id?: string
+          ip_address?: unknown
+          request_count?: number
+          updated_at?: string
+          window_start?: string
+        }
+        Relationships: []
+      }
       user_achievements: {
         Row: {
           achievement_id: string
@@ -1034,6 +1064,17 @@ export type Database = {
       }
     }
     Functions: {
+      check_rate_limit: {
+        Args: {
+          p_action_type?: string
+          p_ip_address?: unknown
+          p_max_attempts?: number
+          p_user_id?: string
+          p_window_seconds?: number
+        }
+        Returns: boolean
+      }
+      cleanup_rate_limits: { Args: never; Returns: number }
       get_user_collection_progress: {
         Args: { p_user_id: string }
         Returns: {
