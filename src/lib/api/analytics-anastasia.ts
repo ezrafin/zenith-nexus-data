@@ -1440,141 +1440,141 @@ Turkey is one of the clearest examples of how macro markets are ultimately marke
 - Конкурентоспособность экспортных секторов;
 - Доверие к любой программе дезинфляции.
 
-## Scenario framework: three plausible paths
+## Рамка сценариев: три правдоподобных пути
 
-### Scenario 1: Credible fiscal adjustment + FX normalization (base case for “reform optimism”)
+### Сценарий 1: Надежная фискальная корректировка + нормализация валютного курса (базовый случай для "оптимизма реформ")
 
-In this path:
+На этом пути:
 
-- The government achieves primary surplus through spending cuts, subsidy reform, and improved tax enforcement.
-- FX regime moves toward unification, gradually reducing distortions.
-- Inflation falls, but not instantly—indexation and inertia take time.
-- Market access improves as credibility builds.
+- Правительство достигает первичного профицита через сокращение расходов, реформу субсидий и улучшение налогового правоприменения.
+- Валютный режим движется к унификации, постепенно снижая искажения.
+- Инфляция падает, но не мгновенно — индексация и инерция требуют времени.
+- Доступ к рынку улучшается по мере построения доверия.
 
-Bond implications:
+Последствия для облигаций:
 
-- Spreads compress, but likely in steps, not a straight line.
-- The belly of the curve may outperform if near-term rollover risk declines.
-- Local assets rally, but volatility remains high due to political events.
+- Спреды сжимаются, но вероятно пошагово, а не по прямой линии.
+- Средняя часть кривой может превзойти, если краткосрочный риск пролонгации снижается.
+- Местные активы растут, но волатильность остается высокой из-за политических событий.
 
-Risks:
+Риски:
 
-- Social backlash and strikes;
-- Legislative gridlock;
-- External shocks (commodity prices, global rates).
+- Социальная обратная реакция и забастовки;
+- Законодательный тупик;
+- Внешние шоки (цены на сырьевые товары, глобальные ставки).
 
-### Scenario 2: Partial reform + persistent controls (the “muddle through” path)
+### Сценарий 2: Частичная реформа + постоянные контроли (путь "пробирания сквозь")
 
-In this path:
+На этом пути:
 
-- Fiscal adjustment is incomplete; deficits persist at a lower but still meaningful level.
-- Controls remain; FX becomes a patchwork of official and parallel rates.
-- Inflation declines temporarily but re-accelerates as credibility fades.
-- The IMF relationship becomes transactional rather than transformative.
+- Фискальная корректировка неполная; дефициты сохраняются на более низком, но все еще значимом уровне.
+- Контроли остаются; валютный курс становится лоскутным одеялом официальных и параллельных ставок.
+- Инфляция временно снижается, но снова ускоряется по мере угасания доверия.
+- Отношения с МВФ становятся транзакционными, а не трансформационными.
 
-Bond implications:
+Последствия для облигаций:
 
-- Curve remains distressed with periodic rallies and selloffs.
-- Carry trades can look attractive but are fragile to sentiment shifts.
-- The market prices recurring “near misses” rather than a reset.
+- Кривая остается в бедственном положении с периодическими ралли и распродажами.
+- Керри-трейды могут выглядеть привлекательными, но хрупки к сдвигам настроений.
+- Рынок оценивает повторяющиеся "почти промахи", а не сброс.
 
-### Scenario 3: Policy reversal or political fragmentation (stress case)
+### Сценарий 3: Обращение политики или политическая фрагментация (стрессовый случай)
 
-In this path:
+На этом пути:
 
-- Coalition fractures or reforms are reversed.
-- FX pressure builds, reserves decline, and inflation spikes again.
-- Debt servicing becomes politically contested.
+- Коалиция распадается или реформы обращаются.
+- Давление на валютный курс нарастает, резервы снижаются, и инфляция снова всплескивает.
+- Обслуживание долга становится политически оспариваемым.
 
-Bond implications:
+Последствия для облигаций:
 
-- Spreads widen sharply; liquidity evaporates.
-- Restructuring risk moves from tail to central scenario.
-- Investors face “gap risk”: prices can reprice overnight.
+- Спреды резко расширяются; ликвидность испаряется.
+- Риск реструктуризации перемещается из хвоста в центральный сценарий.
+- Инвесторы сталкиваются с "риском разрыва": цены могут переоцениваться за ночь.
 
-## FX regime: the hinge variable
+## Валютный режим: шарнирная переменная
 
-### Why FX unification is hard
+### Почему унификация валютного курса сложна
 
-Multiple exchange rates function like a hidden tax system:
+Множественные обменные курсы функционируют как скрытая налоговая система:
 
-- Importers receive an implicit subsidy or penalty depending on the rate they access.
-- Exporters face implicit taxation when forced to convert at unfavorable rates.
-- Arbitrage opportunities proliferate, creating rent-seeking and corruption.
+- Импортеры получают неявную субсидию или штраф в зависимости от ставки, к которой они получают доступ.
+- Экспортеры сталкиваются с неявным налогообложением, когда вынуждены конвертировать по неблагоприятным ставкам.
+- Возможности арбитража распространяются, создавая рентоискательство и коррупцию.
 
-Unification removes distortions but can trigger:
+Унификация удаляет искажения, но может вызвать:
 
-- A one-off price level adjustment (inflation spike);
-- Short-term recessionary effects via real income compression;
-- Financial stress if balance sheets are mismatched.
+- Разовую корректировку уровня цен (всплеск инфляции);
+- Краткосрочные рецессионные эффекты через сжатие реального дохода;
+- Финансовый стресс, если балансы несоответствуют.
 
-For investors, FX policy is not a technical footnote—it is the pivot that determines inflation path, growth, and debt dynamics.
+Для инвесторов валютная политика — это не техническая сноска — это шарнир, который определяет путь инфляции, рост и динамику долга.
 
-## The political economy: disinflation is a social contract
+## Политическая экономика: дезинфляция — это социальный контракт
 
-Disinflation is not simply “tighten and wait.” It requires:
+Дезинфляция — это не просто "ужесточить и ждать". Она требует:
 
-- Social tolerance for real wage compression in the short run;
-- Credibility that pain leads to stability;
-- Institutional capacity to enforce budgets and rules.
+- Социальной толерантности к сжатию реальной зарплаты в краткосрочной перспективе;
+- Доверия, что боль ведет к стабильности;
+- Институциональной способности обеспечивать бюджеты и правила.
 
-Investors should treat political indicators as market indicators:
+Инвесторы должны относиться к политическим индикаторам как к рыночным индикаторам:
 
-- Legislative support and coalition cohesion;
-- Public approval and protest intensity;
-- Ability to maintain reform through mid-cycle elections.
+- Законодательная поддержка и сплоченность коалиции;
+- Общественное одобрение и интенсивность протестов;
+- Способность поддерживать реформы через выборы в середине цикла.
 
-The market can price macro variables quickly, but political credibility is slower—and often the deciding factor.
+Рынок может быстро оценивать макроэкономические переменные, но политическое доверие медленнее — и часто является решающим фактором.
 
-## Positioning and risk management: how professionals approach the problem
+## Позиционирование и управление рисками: как профессионалы подходят к проблеме
 
-### Size and liquidity discipline
+### Дисциплина размера и ликвидности
 
-Argentina trades like a high beta credit. Liquidity can vanish during stress. Professionals typically:
+Аргентина торгуется как кредит с высокой бетой. Ликвидность может исчезнуть во время стресса. Профессионалы обычно:
 
-- Size positions assuming forced exit could be costly;
-- Avoid concentration in a single maturity;
-- Treat local market instruments as higher risk due to convertibility and controls.
+- Размеряют позиции, предполагая, что вынужденный выход может быть дорогим;
+- Избегают концентрации в одном сроке погашения;
+- Относятся к инструментам местного рынка как к более высокому риску из-за конвертируемости и контролей.
 
-### Prefer frameworks over forecasts
+### Предпочитают рамки прогнозам
 
-The correct approach is to define triggers:
+Правильный подход — определить триггеры:
 
-- What signals confirm credibility improving?
-- What signals suggest the program is failing?
-- What is the stop-loss logic in a market that gaps?
+- Какие сигналы подтверждают улучшение доверия?
+- Какие сигналы предполагают, что программа терпит неудачу?
+- Какова логика стоп-лосса на рынке, который разрывается?
 
-Triggers are often a blend:
+Триггеры часто являются смесью:
 
-- Fiscal prints and reserve dynamics;
-- FX policy announcements and implementation;
-- Political events (votes, protests, coalition shifts).
+- Фискальных показателей и динамики резервов;
+- Объявлений валютной политики и реализации;
+- Политических событий (голосования, протесты, сдвиги коалиции).
 
-## A concrete monitoring dashboard (what to track weekly)
+## Конкретная панель мониторинга (что отслеживать еженедельно)
 
-Argentina often moves faster than quarterly macro data. A practical dashboard focuses on variables that update frequently and signal credibility early:
+Аргентина часто движется быстрее, чем квартальные макроэкономические данные. Практическая панель фокусируется на переменных, которые обновляются часто и сигнализируют о доверии рано:
 
-- **Net international reserves and reserve composition:** headline reserves can look stable while usable reserves decline. Watch changes in liquid reserves and the pace of FX intervention.
-- **Parallel vs official FX gap:** a widening gap is a pressure gauge for future devaluation or tighter controls; a narrowing gap can signal improving confidence or temporary suppression—context matters.
-- **Short-term cash flow calendar:** near-term payment dates, IMF disbursement timing, and local rollover needs often drive short-horizon volatility in the curve.
-- **Inflation momentum vs administered price adjustments:** disinflation can look strong until regulated prices (energy, transport) are reset. Track the timing of these resets.
-- **Political stability indicators:** cabinet changes, coalition votes, protest intensity, and polling trends can matter as much as fiscal prints.
+- **Чистые международные резервы и состав резервов:** заголовочные резервы могут выглядеть стабильными, пока используемые резервы снижаются. Следите за изменениями в ликвидных резервах и темпе валютных интервенций.
+- **Разрыв между параллельным и официальным валютным курсом:** расширяющийся разрыв — это манометр давления для будущей девальвации или более жестких контролей; сужающийся разрыв может сигнализировать об улучшении уверенности или временном подавлении — контекст имеет значение.
+- **Календарь краткосрочных денежных потоков:** ближайшие даты платежей, сроки выплат МВФ и местные потребности в пролонгации часто вызывают краткосрочную волатильность в кривой.
+- **Импульс инфляции против административных корректировок цен:** дезинфляция может выглядеть сильной, пока регулируемые цены (энергия, транспорт) не сброшены. Отслеживайте время этих сбросов.
+- **Индикаторы политической стабильности:** изменения в кабинете, голосования коалиции, интенсивность протестов и тренды опросов могут иметь такое же значение, как фискальные показатели.
 
-This dashboard does not eliminate risk, but it converts “Argentina uncertainty” into measurable signals that help investors reduce surprise.
+Эта панель не устраняет риск, но преобразует "неопределенность Аргентины" в измеримые сигналы, которые помогают инвесторам снизить неожиданность.
 
-## Curve intuition: why “front-end vs belly vs long end” is a regime question
+## Интуиция кривой: почему "краткосрочная часть против средней части против долгосрочной части" — это вопрос режима
 
-Argentina’s curve often reflects regime risk more than traditional duration logic. In credibility-building phases, the **belly** can outperform as rollover risk declines and market access probabilities rise. In stress phases, the market can “flatten” in a painful way—short maturities reprice on liquidity fear while the long end prices restructuring risk. Investors should avoid assuming the curve will behave like developed market sovereigns; it behaves more like a set of conditional claims on policy durability.
+Кривая Аргентины часто отражает риск режима больше, чем традиционная логика длительности. В фазах построения доверия **средняя часть** может превзойти, поскольку риск пролонгации снижается и вероятности доступа к рынку растут. В стрессовых фазах рынок может "уплощиться" болезненным образом — краткосрочные сроки погашения переоцениваются на страхе ликвидности, в то время как долгосрочная часть оценивает риск реструктуризации. Инвесторы должны избегать предположения, что кривая будет вести себя как суверены развитых рынков; она ведет себя больше как набор условных требований на долговечность политики.
 
-Practically, this means investors should define in advance whether they are expressing a **liquidity view** (front-end), a **credibility transition view** (belly), or a **terminal solvency view** (long end). Mixing the three without sizing discipline can produce unintended exposures—especially when local politics shift faster than macro data.
+Практически это означает, что инвесторы должны заранее определить, выражают ли они **взгляд на ликвидность** (краткосрочная часть), **взгляд на переход доверия** (средняя часть) или **взгляд на терминальную платежеспособность** (долгосрочная часть). Смешивание трех без дисциплины размера может привести к непреднамеренным воздействиям — особенно когда местная политика меняется быстрее, чем макроэкономические данные.
 
-In practice, many losses come from confusing a “policy headline” with implemented reform. The curve tends to reward execution, not announcements, and it punishes delays quickly.
+На практике многие потери происходят от путаницы "заголовка политики" с реализованной реформой. Кривая склонна вознаграждать исполнение, а не объявления, и быстро наказывает задержки.
 
-## Conclusion
+## Заключение
 
-Argentina is a case study in credibility and sequencing. The sovereign curve is not just a reflection of “default risk”; it is a probability-weighted forecast of political durability, FX regime evolution, and fiscal discipline.
+Аргентина — это кейс-стади о доверии и последовательности. Суверенная кривая — это не просто отражение "риска дефолта"; это вероятностно взвешенный прогноз политической долговечности, эволюции валютного режима и фискальной дисциплины.
 
-For investors, the opportunity is not simply “buy distressed debt and wait.” The opportunity is to understand how specific policy paths change the distribution of outcomes—and to size exposure accordingly. In Argentina, the tail risks are real, the upside can be meaningful, and the difference is often made by politics rather than economics.`,
+Для инвесторов возможность — это не просто "купить проблемный долг и ждать". Возможность — это понять, как конкретные политические пути меняют распределение результатов — и соответственно размерять воздействие. В Аргентине хвостовые риски реальны, потенциал роста может быть значимым, и разница часто делается политикой, а не экономикой.`,
     date: formatDate(0),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -1592,63 +1592,63 @@ Argentina is the macroeconomist’s stress test: high inflation, recurring curre
     relatedMarkets: ['currencies', 'bonds'],
   },
   {
-    slug: 'frontier-africa-debt-markets-opportunities-and-risks',
-    title: 'Frontier Africa Debt Markets: Opportunities and Risks',
+    slug: 'dolgovye-rynki-frontirnoy-afriki-vozmozhnosti-i-riski',
+    title: 'Долговые рынки фронтирной Африки: возможности и риски',
     excerpt:
-      'Analysis of frontier African debt markets, focusing on sovereign credit dynamics, currency risk, and the role of multilaterals and private investors in financing growth.',
-    content: `# Frontier Africa Debt Markets: Opportunities and Risks
+      'Анализ долговых рынков фронтирной Африки с фокусом на динамику суверенного кредита, валютный риск и роль многосторонних организаций и частных инвесторов в финансировании роста.',
+    content: `# Долговые рынки фронтирной Африки: возможности и риски
 
-## Introduction
+## Введение
 
-Frontier African economies occupy a distinctive space within emerging markets, offering both significant opportunities and substantial risks for investors. These markets represent some of the world's fastest-growing economies, with young populations, abundant natural resources, and significant development potential. However, they also face challenges including political instability, infrastructure gaps, and limited financial market development.
+Экономики фронтирной Африки занимают отличительное место в развивающихся рынках, предлагая как значительные возможности, так и существенные риски для инвесторов. Эти рынки представляют одни из самых быстрорастущих экономик мира с молодым населением, обильными природными ресурсами и значительным потенциалом развития. Однако они также сталкиваются с вызовами, включая политическую нестабильность, инфраструктурные пробелы и ограниченное развитие финансовых рынков.
 
-They offer several attractive characteristics:
+Они предлагают несколько привлекательных характеристик:
 
-- **Young and growing populations**: Africa has the world's youngest population, with a median age of around 20 years, compared to 30+ in Asia and 40+ in Europe. This demographic dividend creates opportunities for economic growth, consumption, and investment, though it also requires job creation and infrastructure investment.
+- **Молодое и растущее население**: Африка имеет самое молодое население в мире со средним возрастом около 20 лет по сравнению с 30+ в Азии и 40+ в Европе. Этот демографический дивиденд создает возможности для экономического роста, потребления и инвестиций, хотя также требует создания рабочих мест и инфраструктурных инвестиций.
 
-- **Significant infrastructure and development needs**: Africa faces massive infrastructure gaps, with estimates suggesting $100-150 billion in annual infrastructure investment needs. These needs span power, transportation, water, and telecommunications, creating investment opportunities but also financing challenges.
+- **Значительные потребности в инфраструктуре и развитии**: Африка сталкивается с масштабными инфраструктурными пробелами, с оценками, предполагающими $100-150 млрд ежегодных потребностей в инфраструктурных инвестициях. Эти потребности охватывают энергетику, транспорт, воду и телекоммуникации, создавая инвестиционные возможности, но также и вызовы финансирования.
 
-- **Underpenetrated financial systems**: Financial systems in many frontier African countries are underdeveloped, with low banking penetration, limited capital markets, and restricted access to credit. This creates opportunities for financial sector development and investment, though it also limits financing options and market depth.
+- **Недостаточно проникнутые финансовые системы**: Финансовые системы во многих странах фронтирной Африки недостаточно развиты, с низким банковским проникновением, ограниченными рынками капитала и ограниченным доступом к кредиту. Это создает возможности для развития финансового сектора и инвестиций, хотя также ограничивает варианты финансирования и глубину рынка.
 
-At the same time, they present significant challenges:
+В то же время они представляют значительные вызовы:
 
-- **Higher macro and political volatility**: Frontier African economies often experience higher volatility in growth, inflation, and exchange rates than more developed emerging markets. Political transitions, policy changes, and external shocks can create significant volatility and uncertainty.
+- **Более высокая макроэкономическая и политическая волатильность**: Экономики фронтирной Африки часто испытывают более высокую волатильность в росте, инфляции и обменных курсах, чем более развитые развивающиеся рынки. Политические переходы, изменения политики и внешние шоки могут создавать значительную волатильность и неопределенность.
 
-- **Limited market depth and liquidity**: Debt markets in frontier Africa are typically shallow, with limited issuance, few participants, and low secondary market liquidity. This creates execution challenges and liquidity risk for investors.
+- **Ограниченная глубина рынка и ликвидность**: Долговые рынки в фронтирной Африке обычно мелкие, с ограниченной эмиссией, небольшим количеством участников и низкой ликвидностью вторичного рынка. Это создает вызовы исполнения и риск ликвидности для инвесторов.
 
-- **Elevated sensitivity to global financial conditions**: Frontier African markets are highly sensitive to global financial conditions, including interest rates, commodity prices, and risk appetite. Changes in these conditions can significantly affect market access, borrowing costs, and capital flows.
+- **Повышенная чувствительность к глобальным финансовым условиям**: Рынки фронтирной Африки высоко чувствительны к глобальным финансовым условиям, включая процентные ставки, цены на сырьевые товары и аппетит к риску. Изменения в этих условиях могут значительно влиять на доступ к рынку, стоимость заимствования и потоки капитала.
 
-This article examines frontier Africa debt markets through the lens of sovereign credit, currency risk, and the evolving role of multilaterals and private investors. Understanding these factors is crucial for investors seeking to navigate the opportunities and risks in these markets.
+Эта статья исследует долговые рынки фронтирной Африки через призму суверенного кредита, валютного риска и развивающейся роли многосторонних организаций и частных инвесторов. Понимание этих факторов крайне важно для инвесторов, стремящихся ориентироваться в возможностях и рисках на этих рынках.
 
-## Sovereign Credit Dynamics
+## Динамика суверенного кредита
 
-### Growth, Fiscal Space, and Debt Sustainability
+### Рост, фискальное пространство и устойчивость долга
 
-Understanding sovereign credit dynamics in frontier Africa requires analyzing growth prospects, fiscal space, and debt sustainability. These factors determine creditworthiness and investment opportunities.
+Понимание динамики суверенного кредита в фронтирной Африке требует анализа перспектив роста, фискального пространства и устойчивости долга. Эти факторы определяют кредитоспособность и инвестиционные возможности.
 
-Many frontier African sovereigns face common challenges:
+Многие суверены фронтирной Африки сталкиваются с общими вызовами:
 
-- **Depend heavily on commodity exports for foreign exchange**: Many frontier African countries rely on one or a few commodities (like oil, copper, or cocoa) for export revenue. This concentration creates vulnerability to commodity price volatility, as seen during the 2014-2016 commodity price collapse and the 2020 COVID-19 pandemic. Countries with more diversified export bases are more resilient.
+- **Сильно зависят от экспорта сырьевых товаров для иностранной валюты**: Многие страны фронтирной Африки полагаются на один или несколько сырьевых товаров (таких как нефть, медь или какао) для экспортных доходов. Эта концентрация создает уязвимость к волатильности цен на сырьевые товары, как видно во время коллапса цен на сырьевые товары 2014-2016 годов и пандемии COVID-19 2020 года. Страны с более диверсифицированными экспортными базами более устойчивы.
 
-- **Face infrastructure and social‑spending needs that exceed domestic revenue capacity**: Frontier African countries need significant investment in infrastructure (power, transportation, water) and social services (education, healthcare) to support growth and development. However, domestic revenue (from taxes and other sources) is often insufficient to fund these needs, requiring external financing.
+- **Сталкиваются с потребностями в инфраструктуре и социальных расходах, которые превышают внутреннюю доходную способность**: Страны фронтирной Африки нуждаются в значительных инвестициях в инфраструктуру (энергетика, транспорт, вода) и социальные услуги (образование, здравоохранение) для поддержки роста и развития. Однако внутренние доходы (от налогов и других источников) часто недостаточны для финансирования этих потребностей, требуя внешнего финансирования.
 
-- **Have limited access to long‑tenor local‑currency funding**: Local currency bond markets in many frontier African countries are underdeveloped, with limited tenors (often 5-10 years maximum) and high interest rates. This forces governments to rely on external financing or short-term local financing, creating maturity and currency mismatches.
+- **Имеют ограниченный доступ к долгосрочному финансированию в местной валюте**: Рынки облигаций в местной валюте во многих странах фронтирной Африки недостаточно развиты, с ограниченными сроками погашения (часто максимум 5-10 лет) и высокими процентными ставками. Это заставляет правительства полагаться на внешнее финансирование или краткосрочное местное финансирование, создавая несоответствия сроков погашения и валюты.
 
-Debt sustainability hinges on several factors:
+Устойчивость долга зависит от нескольких факторов:
 
-- **The relationship between growth, interest rates, and primary balances**: Debt sustainability requires that economic growth exceeds interest rates (creating a negative interest-growth differential) or that primary balances (revenue minus non-interest spending) are sufficient to service debt. Countries with high growth and low interest rates can sustain higher debt levels, while countries with low growth and high interest rates face sustainability challenges.
+- **Связь между ростом, процентными ставками и первичными балансами**: Устойчивость долга требует, чтобы экономический рост превышал процентные ставки (создавая отрицательный дифференциал процентных ставок и роста) или чтобы первичные балансы (доходы минус не процентные расходы) были достаточны для обслуживания долга. Страны с высоким ростом и низкими процентными ставками могут поддерживать более высокие уровни долга, в то время как страны с низким ростом и высокими процентными ставками сталкиваются с вызовами устойчивости.
 
-- **The currency composition and maturity profile of debt**: Debt denominated in foreign currency creates currency risk, as depreciation increases the local-currency cost of servicing debt. Short maturities create rollover risk, as debt must be refinanced frequently. Countries with more local-currency debt and longer maturities are more resilient.
+- **Валютный состав и профиль сроков погашения долга**: Долг, номинированный в иностранной валюте, создает валютный риск, поскольку обесценивание увеличивает стоимость обслуживания долга в местной валюте. Короткие сроки погашения создают риск пролонгации, поскольку долг должен часто рефинансироваться. Страны с большим долгом в местной валюте и более длинными сроками погашения более устойчивы.
 
-- **The credibility of fiscal and monetary institutions**: Strong institutions (independent central banks, transparent fiscal frameworks, effective tax collection) support debt sustainability by ensuring sound policy and revenue generation. Weak institutions create policy risk and revenue challenges.
+- **Доверие к фискальным и монетарным институтам**: Сильные институты (независимые центральные банки, прозрачные фискальные рамки, эффективный сбор налогов) поддерживают устойчивость долга, обеспечивая разумную политику и генерацию доходов. Слабые институты создают политический риск и вызовы доходов.
 
-Sustained real growth can support higher debt burdens, but several factors can undermine sustainability:
+Устойчивый реальный рост может поддерживать более высокие долговые бремена, но несколько факторов могут подрывать устойчивость:
 
-- **External shocks (commodity prices, weather events, global rates) can quickly erode buffers**: External shocks can rapidly deteriorate fiscal and external positions, as seen during commodity price collapses, droughts, or global financial crises. Countries with limited buffers (reserves, fiscal space) are particularly vulnerable.
+- **Внешние шоки (цены на сырьевые товары, погодные события, глобальные ставки) могут быстро разрушать буферы**: Внешние шоки могут быстро ухудшать фискальные и внешние позиции, как видно во время коллапсов цен на сырьевые товары, засух или глобальных финансовых кризисов. Страны с ограниченными буферами (резервы, фискальное пространство) особенно уязвимы.
 
-- **Weak tax bases constrain counter‑cyclical policy**: Many frontier African countries have narrow tax bases (often 10-15% of GDP, compared to 20-30% in more developed countries), limiting revenue and constraining counter-cyclical fiscal policy. This makes countries more vulnerable to shocks and limits policy flexibility.
+- **Слабые налоговые базы ограничивают контрциклическую политику**: Многие страны фронтирной Африки имеют узкие налоговые базы (часто 10-15% ВВП по сравнению с 20-30% в более развитых странах), ограничивая доходы и ограничивая контрциклическую фискальную политику. Это делает страны более уязвимыми к шокам и ограничивает гибкость политики.
 
-- **Political cycles can complicate consolidation efforts**: Political transitions, elections, and social pressures can complicate fiscal consolidation efforts, as governments may prioritize short-term spending over long-term sustainability. This creates policy risk and can undermine debt sustainability.
+- **Политические циклы могут усложнять усилия по консолидации**: Политические переходы, выборы и социальные давления могут усложнять усилия по фискальной консолидации, поскольку правительства могут приоритизировать краткосрочные расходы над долгосрочной устойчивостью. Это создает политический риск и может подрывать устойчивость долга.
 
 ### External vs. Domestic Debt
 
@@ -2326,149 +2326,149 @@ This article examines how the new rate environment reshapes EM debt and FX dynam
   },
   {
     slug: 'eastern-europe-macro-economic-outlook',
-    title: 'Eastern Europe Macro: Economic Outlook and Investment Implications',
-    excerpt: 'Analysis of Eastern European economies, examining growth drivers, policy dynamics, and investment opportunities. Assessment of key markets, sector trends, and risks in the region.',
-    content: `# Eastern Europe Macro: Economic Outlook and Investment Implications
+    title: 'Макроэкономика Восточной Европы: экономические перспективы и инвестиционные последствия',
+    excerpt: 'Анализ экономик Восточной Европы, изучение драйверов роста, динамики политики и инвестиционных возможностей. Оценка ключевых рынков, отраслевых трендов и рисков в регионе.',
+    content: `# Макроэкономика Восточной Европы: экономические перспективы и инвестиционные последствия
 
-## Introduction
+## Введение
 
-Eastern Europe represents a diverse and dynamic region with distinct economic characteristics, growth drivers, and investment opportunities. As the region navigates geopolitical challenges, EU integration, and economic transitions, understanding Eastern European macro dynamics is essential for investors seeking exposure to emerging market growth with European proximity.
+Восточная Европа представляет собой разнообразный и динамичный регион с отличительными экономическими характеристиками, драйверами роста и инвестиционными возможностями. Поскольку регион преодолевает геополитические вызовы, интеграцию в ЕС и экономические переходы, понимание макроэкономической динамики Восточной Европы необходимо для инвесторов, ищущих доступ к росту развивающихся рынков с европейской близостью.
 
-Eastern European economies vary significantly in size, development level, and economic structure. Some countries are EU members with strong integration, while others maintain closer ties to other regions. This diversity creates both opportunities and challenges for investors.
+Экономики Восточной Европы значительно различаются по размеру, уровню развития и экономической структуре. Некоторые страны являются членами ЕС с сильной интеграцией, в то время как другие поддерживают более тесные связи с другими регионами. Это разнообразие создает как возможности, так и вызовы для инвесторов.
 
-For investors, Eastern Europe offers several key advantages:
+Для инвесторов Восточная Европа предлагает несколько ключевых преимуществ:
 
-- **Emerging market growth** with European proximity and integration benefits
-- **Attractive valuations** relative to developed European markets
-- **Diversified opportunities** across sectors and countries
-- **EU integration benefits** for member countries including market access and structural funds
+- **Рост развивающихся рынков** с европейской близостью и преимуществами интеграции
+- **Привлекательные оценки** относительно развитых европейских рынков
+- **Диверсифицированные возможности** по секторам и странам
+- **Преимущества интеграции в ЕС** для стран-членов, включая доступ к рынкам и структурные фонды
 
-However, the region also faces challenges:
+Однако регион также сталкивается с вызовами:
 
-- **Geopolitical risks** from regional tensions and global geopolitics
-- **Economic volatility** due to external dependencies and structural issues
-- **Policy uncertainty** in some countries affecting investment climate
-- **Structural issues** including demographic challenges and infrastructure needs
+- **Геополитические риски** от региональных напряжений и глобальной геополитики
+- **Экономическая волатильность** из-за внешних зависимостей и структурных проблем
+- **Неопределенность политики** в некоторых странах, влияющая на инвестиционный климат
+- **Структурные проблемы**, включая демографические вызовы и потребности в инфраструктуре
 
-Success requires understanding both regional trends and country-specific factors.
+Успех требует понимания как региональных трендов, так и страновых факторов.
 
-## Economic Overview
+## Экономический обзор
 
-Eastern European economies have distinct characteristics that influence investment opportunities and risks.
+Экономики Восточной Европы имеют отличительные характеристики, которые влияют на инвестиционные возможности и риски.
 
-### Growth Drivers
+### Драйверы роста
 
-Eastern European growth is driven by several factors: EU integration benefits, foreign investment, export competitiveness, and domestic consumption. Growth rates vary by country and reflect different economic structures and policies.
+Рост Восточной Европы обусловлен несколькими факторами: преимуществами интеграции в ЕС, иностранными инвестициями, экспортной конкурентоспособностью и внутренним потреблением. Темпы роста различаются по странам и отражают различные экономические структуры и политику.
 
-EU membership has provided significant benefits for some countries: access to markets, structural funds, and policy frameworks. However, benefits vary, and some countries face challenges from integration.
+Членство в ЕС предоставило значительные преимущества для некоторых стран: доступ к рынкам, структурные фонды и политические рамки. Однако преимущества различаются, и некоторые страны сталкиваются с вызовами от интеграции.
 
-Foreign investment has been crucial for development, bringing capital, technology, and expertise. However, dependence on foreign investment creates risks if investment declines.
+Иностранные инвестиции были важны для развития, принося капитал, технологии и экспертизу. Однако зависимость от иностранных инвестиций создает риски, если инвестиции снижаются.
 
-### Economic Structure
+### Экономическая структура
 
-Economic structures vary across Eastern Europe. Some countries have strong manufacturing sectors, others focus on services, and some rely on natural resources. Understanding economic structure helps assess opportunities and risks.
+Экономические структуры различаются по Восточной Европе. Некоторые страны имеют сильные производственные секторы, другие фокусируются на услугах, а некоторые полагаются на природные ресурсы. Понимание экономической структуры помогает оценивать возможности и риски.
 
-Manufacturing competitiveness has been a strength for many Eastern European countries, benefiting from lower costs and EU market access. However, competition and automation create challenges.
+Производственная конкурентоспособность была сильной стороной для многих стран Восточной Европы, выигрывая от более низких затрат и доступа к рынкам ЕС. Однако конкуренция и автоматизация создают вызовы.
 
-Service sectors are growing in many countries, driven by outsourcing, tourism, and domestic demand. This growth creates opportunities but also requires skills and infrastructure.
+Секторы услуг растут во многих странах, движимые аутсорсингом, туризмом и внутренним спросом. Этот рост создает возможности, но также требует навыков и инфраструктуры.
 
-### Policy Environment
+### Политическая среда
 
-Policy environments vary across Eastern Europe. Some countries have stable, pro-business policies, while others face policy uncertainty or challenges. Understanding policy environments helps assess investment climate.
+Политические среды различаются по Восточной Европе. Некоторые страны имеют стабильную, про-бизнес политику, в то время как другие сталкиваются с неопределенностью политики или вызовами. Понимание политических сред помогает оценивать инвестиционный климат.
 
-EU membership provides policy frameworks for some countries, but national policies also matter significantly. Policy changes can create opportunities or risks.
+Членство в ЕС предоставляет политические рамки для некоторых стран, но национальная политика также имеет большое значение. Изменения политики могут создавать возможности или риски.
 
-## Key Markets
+## Ключевые рынки
 
-Different Eastern European markets offer distinct opportunities and challenges.
+Различные рынки Восточной Европы предлагают отличительные возможности и вызовы.
 
-### Poland
+### Польша
 
-Poland is the largest Eastern European economy and offers diverse opportunities. The economy has grown steadily, benefiting from EU membership, foreign investment, and domestic consumption.
+Польша является крупнейшей экономикой Восточной Европы и предлагает разнообразные возможности. Экономика стабильно росла, выигрывая от членства в ЕС, иностранных инвестиций и внутреннего потребления.
 
-Polish companies span diverse sectors: manufacturing, financial services, retail, and technology. Understanding Polish market dynamics helps assess opportunities.
+Польские компании охватывают различные секторы: производство, финансовые услуги, розничная торговля и технологии. Понимание динамики польского рынка помогает оценивать возможности.
 
-### Czech Republic
+### Чешская Республика
 
-The Czech Republic offers exposure to strong manufacturing and automotive sectors. The economy has performed well, benefiting from EU membership and export competitiveness.
+Чешская Республика предлагает доступ к сильным производственным и автомобильным секторам. Экономика показала хорошие результаты, выигрывая от членства в ЕС и экспортной конкурентоспособности.
 
-Czech companies often have strong manufacturing capabilities and export orientation. Understanding Czech market dynamics helps assess opportunities.
+Чешские компании часто имеют сильные производственные возможности и экспортную ориентацию. Понимание динамики чешского рынка помогает оценивать возможности.
 
-### Hungary
+### Венгрия
 
-Hungary offers exposure to diverse sectors and has benefited from EU membership and foreign investment. However, policy uncertainty creates risks.
+Венгрия предлагает доступ к различным секторам и выиграла от членства в ЕС и иностранных инвестиций. Однако неопределенность политики создает риски.
 
-Hungarian companies span various sectors, and the market offers opportunities but also requires careful risk assessment.
+Венгерские компании охватывают различные секторы, и рынок предлагает возможности, но также требует тщательной оценки рисков.
 
-### Other Markets
+### Другие рынки
 
-Other Eastern European markets offer specialized opportunities. Some focus on specific sectors or have unique characteristics.
+Другие рынки Восточной Европы предлагают специализированные возможности. Некоторые фокусируются на конкретных секторах или имеют уникальные характеристики.
 
-Understanding smaller market dynamics requires country-specific knowledge. These markets can offer opportunities but also require careful analysis.
+Понимание динамики меньших рынков требует страновых знаний. Эти рынки могут предлагать возможности, но также требуют тщательного анализа.
 
-## Investment Themes
+## Инвестиционные темы
 
-Several investment themes drive Eastern European opportunities.
+Несколько инвестиционных тем движут возможностями Восточной Европы.
 
-### EU Integration
+### Интеграция в ЕС
 
-EU integration creates opportunities for companies and investors. Access to EU markets, structural funds, and policy frameworks all provide benefits.
+Интеграция в ЕС создает возможности для компаний и инвесторов. Доступ к рынкам ЕС, структурные фонды и политические рамки предоставляют преимущества.
 
-However, integration benefits vary, and some countries face challenges. Understanding integration dynamics helps assess opportunities.
+Однако преимущества интеграции различаются, и некоторые страны сталкиваются с вызовами. Понимание динамики интеграции помогает оценивать возможности.
 
-### Manufacturing Competitiveness
+### Производственная конкурентоспособность
 
-Manufacturing competitiveness has been a strength for many Eastern European countries. Lower costs, skilled labor, and EU market access create advantages.
+Производственная конкурентоспособность была сильной стороной для многих стран Восточной Европы. Более низкие затраты, квалифицированная рабочая сила и доступ к рынкам ЕС создают преимущества.
 
-However, competition and automation create challenges. Companies adapting effectively can maintain advantages.
+Однако конкуренция и автоматизация создают вызовы. Компании, эффективно адаптирующиеся, могут поддерживать преимущества.
 
-### Domestic Consumption
+### Внутреннее потребление
 
-Domestic consumption is growing in many Eastern European countries as incomes rise and middle classes expand. This creates opportunities across sectors.
+Внутреннее потребление растет во многих странах Восточной Европы по мере роста доходов и расширения среднего класса. Это создает возможности по секторам.
 
-Understanding consumption trends helps assess opportunities. However, consumption growth depends on economic conditions.
+Понимание трендов потребления помогает оценивать возможности. Однако рост потребления зависит от экономических условий.
 
-## Risks and Challenges
+## Риски и вызовы
 
-Eastern European investments face several risks.
+Инвестиции в Восточную Европу сталкиваются с несколькими рисками.
 
-### Geopolitical Risks
+### Геополитические риски
 
-Geopolitical risks are significant for Eastern Europe. Regional tensions, EU relationships, and global geopolitics all create risks.
+Геополитические риски значительны для Восточной Европы. Региональные напряжения, отношения с ЕС и глобальная геополитика создают риски.
 
-Understanding geopolitical risks helps assess market stability. However, geopolitical developments can be difficult to predict.
+Понимание геополитических рисков помогает оценивать стабильность рынка. Однако геополитические разработки могут быть трудными для прогнозирования.
 
-### Economic Volatility
+### Экономическая волатильность
 
-Economic volatility exists in Eastern European markets. Economic conditions can change rapidly, impacting companies and markets.
+Экономическая волатильность существует на рынках Восточной Европы. Экономические условия могут быстро изменяться, влияя на компании и рынки.
 
-Understanding economic sensitivity helps assess risks. However, economic conditions can be difficult to predict.
+Понимание экономической чувствительности помогает оценивать риски. Однако экономические условия могут быть трудными для прогнозирования.
 
-### Currency Risks
+### Валютные риски
 
-Currency risks exist for investors. Exchange rate movements can impact returns independently of equity performance.
+Валютные риски существуют для инвесторов. Движения обменных курсов могут влиять на доходность независимо от результатов акций.
 
-Understanding currency dynamics helps assess risks. However, currency movements can be difficult to predict.
+Понимание валютной динамики помогает оценивать риски. Однако движения валют могут быть трудными для прогнозирования.
 
-### Structural Challenges
+### Структурные вызовы
 
-Structural challenges exist in some Eastern European economies: demographic trends, infrastructure needs, and institutional development. These challenges can impact long-term prospects.
+Структурные вызовы существуют в некоторых экономиках Восточной Европы: демографические тренды, потребности в инфраструктуре и институциональное развитие. Эти вызовы могут влиять на долгосрочные перспективы.
 
-Understanding structural challenges helps assess long-term opportunities and risks.
+Понимание структурных вызовов помогает оценивать долгосрочные возможности и риски.
 
-## Long-Term Outlook
+## Долгосрочные перспективы
 
-Eastern European markets' long-term outlook depends on numerous factors: economic growth, EU integration, policy environment, and geopolitical stability.
+Долгосрочные перспективы рынков Восточной Европы зависят от многочисленных факторов: экономического роста, интеграции в ЕС, политической среды и геополитической стабильности.
 
-Eastern Europe offers growth opportunities and attractive valuations. However, risks exist, and investors should maintain realistic expectations and focus on quality companies with sustainable advantages.
+Восточная Европа предлагает возможности роста и привлекательные оценки. Однако риски существуют, и инвесторы должны поддерживать реалистичные ожидания и фокусироваться на качественных компаниях с устойчивыми преимуществами.
 
-## Conclusion
+## Заключение
 
-Eastern European markets offer diverse opportunities for investors seeking emerging market exposure with European proximity. However, understanding market dynamics, risks, and opportunities is essential for success.
+Рынки Восточной Европы предлагают разнообразные возможности для инвесторов, ищущих доступ к развивающимся рынкам с европейской близостью. Однако понимание динамики рынка, рисков и возможностей необходимо для успеха.
 
-Investors should focus on quality companies, appropriate diversification, and risk management. Success requires understanding both regional trends and country-specific factors.
+Инвесторы должны фокусироваться на качественных компаниях, соответствующей диверсификации и управлении рисками. Успех требует понимания как региональных трендов, так и страновых факторов.
 
-Eastern European markets will continue evolving with economic conditions, EU integration, and geopolitical developments. Investors who understand these dynamics and manage risk appropriately can navigate Eastern European markets successfully.`,
+Рынки Восточной Европы будут продолжать развиваться с экономическими условиями, интеграцией в ЕС и геополитическими разработками. Инвесторы, которые понимают эту динамику и управляют рисками соответствующим образом, могут успешно ориентироваться на рынках Восточной Европы.`,
     date: formatDate(259),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -2607,166 +2607,166 @@ Eastern European markets will continue evolving with economic conditions, EU int
 
   {
     slug: 'energy-exports-and-terms-of-trade-shocks-in-cee',
-    title: 'Energy Exports and Terms-of-Trade Shocks in Central & Eastern Europe',
+    title: 'Энергетический экспорт и шоки условий торговли в Центральной и Восточной Европе',
     excerpt:
-      'How shifts in energy prices and trade flows reshape growth, inflation, and currency dynamics across Central & Eastern Europe—and what that means for equity and fixed income investors.',
-    content: `# Energy Exports and Terms-of-Trade Shocks in Central & Eastern Europe
+      'Как изменения цен на энергоносители и торговых потоков перестраивают рост, инфляцию и валютную динамику в Центральной и Восточной Европе — и что это означает для инвесторов в акции и облигации.',
+    content: `# Энергетический экспорт и шоки условий торговли в Центральной и Восточной Европе
 
-## Introduction
+## Введение
 
-Central and Eastern Europe (CEE) sits at the intersection of energy markets, geopolitical tensions, and European Union integration. For many countries in the region, energy imports and exports dominate the external account and heavily influence growth, inflation, and currency dynamics. The past few years have delivered a series of powerful terms‑of‑trade shocks—first from pandemic disruptions, then from the surge in commodity prices following Russia’s invasion of Ukraine, and more recently from the adjustment to new energy routes.
+Центральная и Восточная Европа (ЦВЕ) находится на пересечении энергетических рынков, геополитических напряжений и интеграции в Европейский Союз. Для многих стран региона импорт и экспорт энергоносителей доминируют во внешнем счете и сильно влияют на рост, инфляцию и валютную динамику. Последние несколько лет принесли серию мощных шоков условий торговли — сначала от пандемических нарушений, затем от всплеска цен на сырьевые товары после вторжения России в Украину, и более недавно от адаптации к новым энергетическим маршрутам.
 
-For investors, these shocks are not abstract macro headlines. They feed directly into company earnings, sovereign credit metrics, banking‑sector asset quality, and local‑currency bond performance. Understanding how energy price swings and trade re‑routing affect each CEE economy is essential for building robust emerging‑Europe portfolios.
+Для инвесторов эти шоки не являются абстрактными макро-заголовками. Они напрямую влияют на прибыль компаний, показатели суверенного кредита, качество активов банковского сектора и результаты облигаций в местной валюте. Понимание того, как колебания цен на энергоносители и перенаправление торговли влияют на каждую экономику ЦВЕ, необходимо для построения устойчивых портфелей развивающейся Европы.
 
-This article provides a pragmatic framework for analyzing energy‑driven terms‑of‑trade shocks in CEE and translating them into cross‑asset views.
+Эта статья предоставляет прагматичную рамку для анализа энергетических шоков условий торговли в ЦВЕ и перевода их в кросс-активные взгляды.
 
-## Mapping Energy Exposure Across the Region
+## Картирование энергетической экспозиции по региону
 
-CEE is not homogeneous. Countries differ markedly in their energy dependencies, industrial structures, and policy capacities. Understanding these differences is essential for analyzing how terms-of-trade shocks affect each economy and identifying investment opportunities and risks. The region's energy landscape has been fundamentally reshaped by geopolitical events, supply chain reconfiguration, and the energy transition.
+ЦВЕ не является однородным. Страны значительно различаются по своим энергетическим зависимостям, промышленным структурам и политическим возможностям. Понимание этих различий необходимо для анализа того, как шоки условий торговли влияют на каждую экономику и выявления инвестиционных возможностей и рисков. Энергетический ландшафт региона был фундаментально перестроен геополитическими событиями, реконфигурацией цепочек поставок и энергетическим переходом.
 
-Countries differ markedly in:
+Страны значительно различаются по:
 
-- **Their dependence on imported gas and oil** – Some countries are heavily dependent on energy imports, while others have domestic production or alternative sources. Energy import dependence creates vulnerability to price shocks and supply disruptions. Countries with higher import dependence face larger terms-of-trade impacts when energy prices rise.
-- **The share of energy‑intensive industry in GDP** – Energy-intensive industries such as chemicals, metals, and heavy manufacturing are particularly sensitive to energy costs. Countries with larger shares of energy-intensive industry face greater economic impacts from energy price shocks. Industrial structure determines how energy shocks translate into economic effects.
-- **Access to alternative supply routes and LNG capacity** – Countries with access to alternative supply routes, LNG terminals, or diversified sources are better positioned to manage supply disruptions. Infrastructure investments in LNG capacity, pipeline connections, and storage facilities enhance energy security. Alternative supply routes reduce dependence on single sources.
-- **The pace of renewable‑energy deployment** – Renewable energy deployment reduces dependence on imported fossil fuels and creates opportunities for investment and growth. Countries with faster renewable deployment are better positioned for the energy transition. Renewable energy investments support long-term energy security and competitiveness.
+- **Их зависимости от импортируемого газа и нефти** – Некоторые страны сильно зависят от импорта энергоносителей, в то время как другие имеют внутреннее производство или альтернативные источники. Зависимость от импорта энергоносителей создает уязвимость к ценовым шокам и нарушениям поставок. Страны с более высокой зависимостью от импорта сталкиваются с более значительными воздействиями условий торговли, когда цены на энергоносители растут.
+- **Доле энергоемкой промышленности в ВВП** – Энергоемкие отрасли, такие как химическая промышленность, металлургия и тяжелое машиностроение, особенно чувствительны к затратам на энергоносители. Страны с большей долей энергоемкой промышленности сталкиваются с более значительными экономическими воздействиями от энергетических ценовых шоков. Промышленная структура определяет, как энергетические шоки переводятся в экономические эффекты.
+- **Доступу к альтернативным маршрутам поставок и мощности СПГ** – Страны с доступом к альтернативным маршрутам поставок, терминалам СПГ или диверсифицированным источникам лучше позиционированы для управления нарушениями поставок. Инфраструктурные инвестиции в мощность СПГ, соединения трубопроводов и хранилища повышают энергетическую безопасность. Альтернативные маршруты поставок снижают зависимость от единых источников.
+- **Темпам развертывания возобновляемой энергетики** – Развертывание возобновляемой энергетики снижает зависимость от импортируемых ископаемых видов топлива и создает возможности для инвестиций и роста. Страны с более быстрым развертыванием возобновляемых источников лучше позиционированы для энергетического перехода. Инвестиции в возобновляемую энергетику поддерживают долгосрочную энергетическую безопасность и конкурентоспособность.
 
-Broadly, we can distinguish three groups:
+В целом, мы можем выделить три группы:
 
-1. **Energy‑import‑dependent manufacturing hubs** – Countries like Poland, Czech Republic, Slovakia, and Hungary are major manufacturing hubs with high energy import dependence. These countries have strong manufacturing sectors but face vulnerability to energy price shocks. Manufacturing competitiveness depends on energy costs, making these countries sensitive to terms-of-trade shocks. However, manufacturing strength also provides opportunities for energy efficiency investments and supply chain diversification.
-2. **Mixed exporters with some domestic production** – Countries like Romania have some domestic energy production (gas and oil) plus hydro and nuclear capacity, providing partial protection from import price shocks. These countries benefit from domestic production while still importing some energy. Mixed positions create more balanced terms-of-trade dynamics and reduce vulnerability to price shocks.
-3. **Transit and storage hubs** – Countries that play key roles in moving energy to the rest of Europe benefit from transit fees, storage capacity, and infrastructure investments. These countries can benefit from energy trade and infrastructure development. Transit hubs can generate revenue and enhance energy security for the region.
+1. **Производственные центры, зависящие от импорта энергоносителей** – Страны, такие как Польша, Чешская Республика, Словакия и Венгрия, являются крупными производственными центрами с высокой зависимостью от импорта энергоносителей. Эти страны имеют сильные производственные секторы, но сталкиваются с уязвимостью к энергетическим ценовым шокам. Производственная конкурентоспособность зависит от затрат на энергоносители, что делает эти страны чувствительными к шокам условий торговли. Однако производственная сила также предоставляет возможности для инвестиций в энергоэффективность и диверсификацию цепочек поставок.
+2. **Смешанные экспортеры с некоторым внутренним производством** – Страны, такие как Румыния, имеют некоторое внутреннее производство энергоносителей (газ и нефть) плюс гидроэнергетические и ядерные мощности, обеспечивая частичную защиту от импортных ценовых шоков. Эти страны выигрывают от внутреннего производства, продолжая импортировать некоторую энергию. Смешанные позиции создают более сбалансированную динамику условий торговли и снижают уязвимость к ценовым шокам.
+3. **Транзитные и складские центры** – Страны, которые играют ключевые роли в перемещении энергоносителей в остальную Европу, выигрывают от транзитных сборов, складских мощностей и инфраструктурных инвестиций. Эти страны могут выиграть от энергетической торговли и развития инфраструктуры. Транзитные центры могут генерировать доходы и повышать энергетическую безопасность для региона.
 
-Each group reacts differently to terms‑of‑trade shocks. Investors should build country‑level scorecards capturing:
+Каждая группа реагирует по-разному на шоки условий торговли. Инвесторам следует строить страновые карточки, отражающие:
 
-- **Net energy import/export position** – Understanding whether a country is a net importer or exporter of energy determines how terms-of-trade shocks affect the economy. Net importers face negative impacts when energy prices rise, while net exporters benefit. Net positions determine the direction and magnitude of terms-of-trade effects.
-- **Industrial structure and energy intensity** – Countries with energy-intensive industries face larger economic impacts from energy price shocks. Understanding industrial structure helps assess vulnerability and identify sectors most affected. Energy intensity determines how energy costs translate into economic effects.
-- **Fiscal capacity to cushion price shocks** – Countries with stronger fiscal positions can provide support to households and businesses during energy price shocks, reducing economic impacts. Fiscal capacity affects how countries respond to shocks and support economic stability. Strong fiscal positions enable policy responses that mitigate negative effects.
-- **EU support mechanisms and cohesion‑fund inflows** – EU member countries can access support mechanisms and structural funds that help manage energy transitions and economic adjustments. EU support provides additional resources for investment and policy responses. EU mechanisms enhance policy capacity and support long-term transitions.
+- **Чистую позицию импорта/экспорта энергоносителей** – Понимание того, является ли страна чистым импортером или экспортером энергоносителей, определяет, как шоки условий торговли влияют на экономику. Чистые импортеры сталкиваются с негативными воздействиями, когда цены на энергоносители растут, в то время как чистые экспортеры выигрывают. Чистые позиции определяют направление и величину эффектов условий торговли.
+- **Промышленную структуру и энергоемкость** – Страны с энергоемкой промышленностью сталкиваются с более значительными экономическими воздействиями от энергетических ценовых шоков. Понимание промышленной структуры помогает оценивать уязвимость и выявлять наиболее затронутые секторы. Энергоемкость определяет, как затраты на энергоносители переводятся в экономические эффекты.
+- **Фискальную способность смягчать ценовые шоки** – Страны с более сильными фискальными позициями могут предоставлять поддержку домохозяйствам и предприятиям во время энергетических ценовых шоков, снижая экономические воздействия. Фискальная способность влияет на то, как страны реагируют на шоки и поддерживают экономическую стабильность. Сильные фискальные позиции позволяют политическим ответам, которые смягчают негативные эффекты.
+- **Механизмы поддержки ЕС и притоки фондов сплочения** – Страны-члены ЕС могут получать доступ к механизмам поддержки и структурным фондам, которые помогают управлять энергетическими переходами и экономическими корректировками. Поддержка ЕС предоставляет дополнительные ресурсы для инвестиций и политических ответов. Механизмы ЕС повышают политические возможности и поддерживают долгосрочные переходы.
 
-## Growth and Inflation Channels
+## Каналы роста и инфляции
 
-### Growth Effects
+### Эффекты роста
 
-For energy‑import‑dependent economies, higher global energy prices act like a tax on domestic demand:
+Для экономик, зависящих от импорта энергоносителей, более высокие глобальные цены на энергоносители действуют как налог на внутренний спрос:
 
-- Corporate margins are squeezed, especially in heavy industry and chemicals.
-- Household real incomes fall as utility and fuel bills rise.
-- Investment decisions are delayed amid uncertainty about future energy costs.
+- Корпоративные маржи сжимаются, особенно в тяжелой промышленности и химической отрасли.
+- Реальные доходы домохозяйств падают по мере роста счетов за коммунальные услуги и топливо.
+- Инвестиционные решения откладываются на фоне неопределенности относительно будущих затрат на энергоносители.
 
-Conversely, when prices decline or supply risks ease, these headwinds can rapidly turn into tailwinds, supporting rebounds in manufacturing output and consumer spending.
+Наоборот, когда цены снижаются или риски поставок ослабевают, эти встречные ветры могут быстро превратиться в попутные, поддерживая восстановление производственного выпуска и потребительских расходов.
 
-### Inflation and Monetary Policy
+### Инфляция и монетарная политика
 
-Energy shocks pass through to inflation via:
+Энергетические шоки передаются в инфляцию через:
 
-- Direct effects on fuel and utility prices.
-- Indirect effects via production and transport costs.
+- Прямые эффекты на цены на топливо и коммунальные услуги.
+- Косвенные эффекты через затраты на производство и транспорт.
 
-Central banks in the region—often more orthodox and inflation‑averse than some Western peers—have historically reacted with swift rate hikes to avoid de‑anchoring expectations. This creates:
+Центральные банки в регионе — часто более ортодоксальные и инфляционно-аверсивные, чем некоторые западные коллеги — исторически реагировали быстрыми повышениями ставок, чтобы избежать расстыковки ожиданий. Это создает:
 
-- Periods of **elevated nominal yields** and attractive real rates.
-- Tighter financial conditions that weigh on growth.
+- Периоды **повышенных номинальных доходностей** и привлекательных реальных ставок.
+- Более жесткие финансовые условия, которые давят на рост.
 
-Investors should track how quickly headline inflation converges back toward targets once energy shocks fade, as this often sets the stage for cutting cycles and local‑currency bond rallies.
+Инвесторам следует отслеживать, насколько быстро инфляция сходится обратно к целям после того, как энергетические шоки исчезают, поскольку это часто создает основу для циклов снижения ставок и ралли облигаций в местной валюте.
 
-## Currency Dynamics and External Balances
+## Валютная динамика и внешние балансы
 
-Terms‑of‑trade shocks manifest clearly in:
+Шоки условий торговли проявляются четко в:
 
-- **Current‑account balances** – widening deficits for importers during price spikes.
-- **Exchange rates** – pressure on currencies of energy‑dependent economies.
+- **Балансах текущего счета** – расширяющихся дефицитах для импортеров во время ценовых всплесков.
+- **Обменных курсах** – давлении на валюты экономик, зависящих от энергоносителей.
 
-Central banks may respond with:
+Центральные банки могут реагировать:
 
-- Higher policy rates to support currencies.
-- FX interventions drawn from reserves.
+- Более высокими политическими ставками для поддержки валют.
+- Валютными интервенциями из резервов.
 
-For investors, key questions include:
+Для инвесторов ключевые вопросы включают:
 
-- Does the country have sufficient **FX reserves** to manage volatility?
-- Are external imbalances financed by stable FDI and EU funds, or by more fragile portfolio flows?
+- Имеет ли страна достаточные **валютные резервы** для управления волатильностью?
+- Финансируются ли внешние дисбалансы стабильными ПИИ и фондами ЕС, или более хрупкими портфельными потоками?
 
-Countries with credible policy frameworks, ample reserves, and EU support tend to weather energy‑driven currency shocks better than those with weaker fundamentals.
+Страны с заслуживающими доверия политическими рамками, достаточными резервами и поддержкой ЕС, как правило, лучше переносят энергетические валютные шоки, чем те, у которых более слабые основы.
 
-## Sector-Level Implications
+## Отраслевые последствия
 
-### Utilities and Energy Infrastructure
+### Коммунальные услуги и энергетическая инфраструктура
 
-Policy and regulation largely determine how energy‑price shocks are shared between governments, utilities, and households. Investors need to understand:
+Политика и регулирование в значительной степени определяют, как энергетические ценовые шоки распределяются между правительствами, коммунальными службами и домохозяйствами. Инвесторам необходимо понимать:
 
-- Price‑cap regimes and compensation mechanisms.
-- Investment frameworks for renewables, grid upgrades, and storage.
-- Ownership structures (state versus private).
+- Режимы ограничения цен и механизмы компенсации.
+- Инвестиционные рамки для возобновляемых источников, модернизации сетей и хранения.
+- Структуры собственности (государственная против частной).
 
-Well‑regulated utilities with clear frameworks for cost recovery can be long‑term beneficiaries of the transition away from imported fossil fuels.
+Хорошо регулируемые коммунальные службы с четкими рамками для возмещения затрат могут быть долгосрочными бенефициарами перехода от импортируемых ископаемых видов топлива.
 
-### Industrials and Exporters
+### Промышленность и экспортеры
 
-Energy‑intensive industries—chemicals, metals, heavy manufacturing—are particularly sensitive to energy costs. However, global supply‑chain realignment can also present opportunities for CEE exporters as Western Europe diversifies suppliers.
+Энергоемкие отрасли — химическая промышленность, металлургия, тяжелое машиностроение — особенно чувствительны к затратам на энергоносители. Однако глобальное перестроение цепочек поставок также может представлять возможности для экспортеров ЦВЕ, поскольку Западная Европа диверсифицирует поставщиков.
 
-Investors should differentiate between:
+Инвесторам следует различать:
 
-- Companies with **high energy intensity and limited pricing power**.
-- Firms that have invested in efficiency, on‑site generation, or long‑term supply contracts.
+- Компании с **высокой энергоемкостью и ограниченной ценовой силой**.
+- Фирмы, которые инвестировали в эффективность, локальную генерацию или долгосрочные контракты на поставку.
 
-### Financials
+### Финансовый сектор
 
-For banks, terms‑of‑trade shocks influence:
+Для банков шоки условий торговли влияют на:
 
-- Borrower creditworthiness in energy‑sensitive sectors.
-- Household debt‑servicing capacity amid higher utility bills and interest rates.
-- Demand for credit as investment plans adjust.
+- Кредитоспособность заемщиков в энергочувствительных секторах.
+- Способность домохозяйств обслуживать долг на фоне более высоких счетов за коммунальные услуги и процентных ставок.
+- Спрос на кредит по мере корректировки инвестиционных планов.
 
-Banks with diversified loan books, conservative underwriting, and strong capital buffers are better placed to navigate these cycles.
+Банки с диверсифицированными кредитными портфелями, консервативным андеррайтингом и сильными капитальными буферами лучше позиционированы для навигации по этим циклам.
 
-## Investment Framework: From Macro Shocks to Portfolio Views
+## Инвестиционная рамка: от макро-шоков к портфельным взглядам
 
-Investors can structure their analysis in four steps:
+Инвесторы могут структурировать свой анализ в четыре шага:
 
-1. **Country Diagnostics**
-   - Map each country’s net energy position, industrial structure, and policy capacity.
-   - Assess how recent price shocks have affected current accounts and fiscal positions.
-2. **Macro Scenarios**
-   - Build base, upside, and downside paths for global energy prices and European demand.
-   - Overlay likely policy responses (monetary and fiscal) in each country.
-3. **Cross‑Asset Implications**
-   - For each scenario, estimate impacts on:
-     - Local‑currency bonds (yields, term premia).
-     - FX (relative to peers and the euro).
-     - Equities (by sector and factor exposure).
-4. **Security Selection**
-   - Within favored countries and sectors, focus on companies with:
-     - Strong balance sheets and access to diversified energy sources.
-     - Pricing power to pass on higher costs.
-     - Clear capex plans aligned with the energy transition.
+1. **Страновая диагностика**
+   - Отобразить чистую энергетическую позицию каждой страны, промышленную структуру и политические возможности.
+   - Оценить, как недавние ценовые шоки повлияли на текущие счета и фискальные позиции.
+2. **Макро-сценарии**
+   - Построить базовые, оптимистичные и пессимистичные пути для глобальных цен на энергоносители и европейского спроса.
+   - Наложить вероятные политические ответы (монетарные и фискальные) в каждой стране.
+3. **Кросс-активные последствия**
+   - Для каждого сценария оценить воздействия на:
+     - Облигации в местной валюте (доходности, премии за срок).
+     - Валюты (относительно коллег и евро).
+     - Акции (по секторам и факторной экспозиции).
+4. **Выбор ценных бумаг**
+   - В рамках предпочтительных стран и секторов фокусироваться на компаниях с:
+     - Сильными балансами и доступом к диверсифицированным источникам энергии.
+     - Ценовой силой для передачи более высоких затрат.
+     - Четкими планами капитальных затрат, согласованными с энергетическим переходом.
 
-## Conclusion
+## Заключение
 
-Energy‑driven terms‑of‑trade shocks are a defining feature of the CEE investment landscape. They can rapidly change growth trajectories, inflation paths, and policy reactions. Rather than treating these shocks as unpredictable exogenous risks, investors can systematically analyze how each economy and sector is exposed, and which assets are best positioned to benefit when conditions normalize. The energy transition, supply chain reconfiguration, and geopolitical developments are reshaping the region's energy landscape, creating both challenges and opportunities.
+Энергетические шоки условий торговли являются определяющей чертой инвестиционного ландшафта ЦВЕ. Они могут быстро изменять траектории роста, пути инфляции и политические реакции. Вместо того чтобы рассматривать эти шоки как непредсказуемые экзогенные риски, инвесторы могут систематически анализировать, как каждая экономика и сектор подвержены воздействию, и какие активы лучше всего позиционированы для выгоды, когда условия нормализуются. Энергетический переход, реконфигурация цепочек поставок и геополитические разработки перестраивают энергетический ландшафт региона, создавая как вызовы, так и возможности.
 
-The CEE region's energy exposure creates significant investment implications across equities, fixed income, and currencies. Understanding how energy price shocks affect each country's economy, sectors, and policy responses is essential for building robust portfolios. The region's heterogeneity requires country-specific analysis, but common themes include energy transition opportunities, supply chain diversification, and policy responses to manage shocks.
+Энергетическая экспозиция региона ЦВЕ создает значительные инвестиционные последствия по акциям, облигациям и валютам. Понимание того, как энергетические ценовые шоки влияют на экономику, секторы и политические ответы каждой страны, необходимо для построения устойчивых портфелей. Гетерогенность региона требует странового анализа, но общие темы включают возможности энергетического перехода, диверсификацию цепочек поставок и политические ответы для управления шоками.
 
-**Key Investment Principles:**
+**Ключевые инвестиционные принципы:**
 
-- **Country-specific analysis** is essential given the heterogeneity across CEE. Each country has different energy dependencies, industrial structures, and policy capacities that determine how they respond to shocks. Investors should build detailed country scorecards that capture energy positions, industrial structures, fiscal capacity, and policy frameworks. Country-specific analysis enables more accurate assessment of risks and opportunities.
-- **Sector differentiation** matters significantly. Energy-intensive sectors face different challenges than services or technology sectors. Investors should identify sectors and companies that are well-positioned for the energy transition, have pricing power to pass on costs, or benefit from supply chain diversification. Sector differentiation helps identify winners and losers from energy shocks and the transition.
-- **Policy credibility** is a critical factor. Countries with credible policy frameworks and strong institutions tend to weather shocks better and recover faster. Policy credibility affects currency stability, bond yields, and equity valuations. Investors should assess policy frameworks, institutional strength, and policy responses to energy shocks. Policy credibility provides stability and supports long-term investment cases.
-- **Long-term perspective** is important as the energy transition creates both near-term volatility and long-term opportunities. Investors should balance short-term risk management with long-term positioning for the transition. The energy transition will create winners and losers, and investors should identify companies and sectors positioned to benefit. Long-term perspective helps capture value from structural changes.
+- **Страновой анализ** необходим учитывая гетерогенность по ЦВЕ. Каждая страна имеет различные энергетические зависимости, промышленные структуры и политические возможности, которые определяют, как они реагируют на шоки. Инвесторам следует строить детальные страновые карточки, отражающие энергетические позиции, промышленные структуры, фискальную способность и политические рамки. Страновой анализ позволяет более точную оценку рисков и возможностей.
+- **Отраслевая дифференциация** имеет большое значение. Энергоемкие секторы сталкиваются с различными вызовами, чем секторы услуг или технологий. Инвесторам следует выявлять секторы и компании, которые хорошо позиционированы для энергетического перехода, имеют ценовую силу для передачи затрат или выигрывают от диверсификации цепочек поставок. Отраслевая дифференциация помогает выявлять победителей и проигравших от энергетических шоков и перехода.
+- **Политическая надежность** является критическим фактором. Страны с заслуживающими доверия политическими рамками и сильными институтами, как правило, лучше переносят шоки и быстрее восстанавливаются. Политическая надежность влияет на валютную стабильность, доходности облигаций и оценки акций. Инвесторам следует оценивать политические рамки, институциональную силу и политические ответы на энергетические шоки. Политическая надежность обеспечивает стабильность и поддерживает долгосрочные инвестиционные случаи.
+- **Долгосрочная перспектива** важна, поскольку энергетический переход создает как краткосрочную волатильность, так и долгосрочные возможности. Инвесторам следует балансировать краткосрочное управление рисками с долгосрочным позиционированием для перехода. Энергетический переход создаст победителей и проигравших, и инвесторам следует выявлять компании и секторы, позиционированные для выгоды. Долгосрочная перспектива помогает захватывать ценность от структурных изменений.
 
-**The Energy Transition Opportunity:**
+**Возможность энергетического перехода:**
 
-- **Renewable energy investment** is creating opportunities across CEE as countries invest in solar, wind, and other renewable sources. Companies involved in renewable energy development, grid infrastructure, and energy storage may benefit. Renewable energy investments support energy security, reduce import dependence, and create growth opportunities. The renewable energy transition is a major investment theme.
-- **Energy efficiency** investments are becoming more attractive as energy costs remain elevated. Companies that help other businesses reduce energy consumption may see strong demand. Energy efficiency investments support competitiveness and reduce vulnerability to price shocks. Energy efficiency is a key component of the transition.
-- **Supply chain diversification** away from Russia is creating opportunities for CEE countries to become alternative suppliers to Western Europe. This can benefit exporters and logistics companies. Supply chain diversification supports manufacturing competitiveness and creates investment opportunities. CEE countries can benefit from supply chain reconfiguration.
+- **Инвестиции в возобновляемую энергетику** создают возможности по ЦВЕ, поскольку страны инвестируют в солнечную, ветровую и другие возобновляемые источники. Компании, вовлеченные в развитие возобновляемой энергетики, инфраструктуру сетей и хранение энергии, могут выиграть. Инвестиции в возобновляемую энергетику поддерживают энергетическую безопасность, снижают зависимость от импорта и создают возможности роста. Переход на возобновляемую энергетику является крупной инвестиционной темой.
+- **Энергоэффективность** инвестиции становятся более привлекательными, поскольку затраты на энергоносители остаются повышенными. Компании, которые помогают другим предприятиям снижать потребление энергии, могут увидеть сильный спрос. Инвестиции в энергоэффективность поддерживают конкурентоспособность и снижают уязвимость к ценовым шокам. Энергоэффективность является ключевым компонентом перехода.
+- **Диверсификация цепочек поставок** от России создает возможности для стран ЦВЕ стать альтернативными поставщиками для Западной Европы. Это может выгодно экспортерам и логистическим компаниям. Диверсификация цепочек поставок поддерживает производственную конкурентоспособность и создает инвестиционные возможности. Страны ЦВЕ могут выиграть от реконфигурации цепочек поставок.
 
-**Cross-Asset Investment Implications:**
+**Кросс-активные инвестиционные последствия:**
 
-Energy-driven terms-of-trade shocks create implications across asset classes. For local-currency bonds, energy shocks affect inflation, monetary policy, and yields. For currencies, energy dependence affects current accounts and exchange rates. For equities, energy costs affect corporate margins, sector performance, and investment opportunities. Investors should analyze how energy shocks translate into cross-asset views and position portfolios accordingly.
+Энергетические шоки условий торговли создают последствия по классам активов. Для облигаций в местной валюте энергетические шоки влияют на инфляцию, монетарную политику и доходности. Для валют зависимость от энергоносителей влияет на текущие счета и обменные курсы. Для акций затраты на энергоносители влияют на корпоративные маржи, отраслевую производительность и инвестиционные возможности. Инвесторам следует анализировать, как энергетические шоки переводятся в кросс-активные взгляды и позиционировать портфели соответственно.
 
-The CEE region's energy exposure will continue to shape investment opportunities and risks. Investors that systematically analyze energy dependencies, sector exposures, and policy responses will be better positioned to navigate volatility and capture opportunities from the energy transition and supply chain reconfiguration.
+Энергетическая экспозиция региона ЦВЕ будет продолжать формировать инвестиционные возможности и риски. Инвесторы, которые систематически анализируют энергетические зависимости, отраслевые экспозиции и политические ответы, будут лучше позиционированы для навигации по волатильности и захвата возможностей от энергетического перехода и реконфигурации цепочек поставок.
 
-For long‑horizon investors, the transition away from concentrated fossil‑fuel dependence and toward more diversified energy systems creates both near‑term volatility and long‑term opportunity. A disciplined, country‑by‑country approach—grounded in external‑balance analysis, policy credibility, and sector fundamentals—offers the best path to navigating this evolving landscape. Success requires patience, careful analysis, and the ability to identify companies and sectors that are well-positioned for the energy transition while managing near-term volatility.`,
+Для долгосрочных инвесторов переход от концентрированной зависимости от ископаемого топлива к более диверсифицированным энергетическим системам создает как краткосрочную волатильность, так и долгосрочную возможность. Дисциплинированный, страновой подход — основанный на анализе внешних балансов, политической надежности и отраслевых основах — предлагает лучший путь для навигации по этому развивающемуся ландшафту. Успех требует терпения, тщательного анализа и способности выявлять компании и секторы, которые хорошо позиционированы для энергетического перехода, управляя краткосрочной волатильностью.`,
     date: formatDate(260),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -2784,259 +2784,259 @@ Central and Eastern Europe (CEE) sits at the intersection of energy markets, geo
   },
   {
     slug: 'cee-banking-sectors-in-a-higher-rate-world',
-    title: 'CEE Banking Sectors in a Higher-Rate World: Balancing Growth, Risk, and Regulation',
+    title: 'Банковские секторы ЦВЕ в мире повышенных ставок: балансирование роста, рисков и регулирования',
     excerpt:
-      'How higher interest rates, energy shocks, and EU policy interact in Central & Eastern European banking systems—and what that means for equity, credit, and local-currency investors.',
-    content: `# CEE Banking Sectors in a Higher-Rate World: Balancing Growth, Risk, and Regulation
+      'Как повышенные процентные ставки, энергетические шоки и политика ЕС взаимодействуют в банковских системах Центральной и Восточной Европы — и что это означает для инвесторов в акции, кредиты и местную валюту.',
+    content: `# Банковские секторы ЦВЕ в мире повышенных ставок: балансирование роста, рисков и регулирования
 
-## Introduction
+## Введение
 
-Central and Eastern Europe’s banking systems sit at the intersection of multiple forces: higher global interest rates, regional energy shocks, EU regulatory frameworks, and evolving capital‑market integration. For many countries in the region, banks remain the primary transmission channel of monetary policy and the dominant source of credit to households and corporates.
+Банковские системы Центральной и Восточной Европы находятся на пересечении множественных сил: повышенных глобальных процентных ставок, региональных энергетических шоков, регуляторных рамок ЕС и развивающейся интеграции рынков капитала. Для многих стран региона банки остаются основным каналом передачи монетарной политики и доминирующим источником кредита для домохозяйств и корпораций.
 
-The shift from ultra‑low to structurally higher rates has reshaped banks’ income statements and balance sheets. Net interest margins have widened, but credit quality, funding costs, and regulatory expectations have also changed. This article offers a practical framework for analyzing **CEE banking sectors** in today’s higher‑rate environment and translating that view into cross‑asset positioning.
+Переход от сверхнизких к структурно более высоким ставкам перестроил отчеты о прибылях и убытках и балансы банков. Чистые процентные маржи расширились, но качество кредитов, затраты на финансирование и регуляторные ожидания также изменились. Эта статья предлагает практическую рамку для анализа **банковских секторов ЦВЕ** в сегодняшней среде повышенных ставок и перевода этого взгляда в кросс-активное позиционирование.
 
-## Structural Features of CEE Banking Systems
+## Структурные особенности банковских систем ЦВЕ
 
-### Foreign Ownership and Business Models
+### Иностранная собственность и бизнес-модели
 
-Many CEE banking systems are characterized by:
+Многие банковские системы ЦВЕ характеризуются:
 
-- **Significant foreign ownership**, often by Western European banking groups.
-- **Universal banking models** with a focus on:
-  - Retail and SME lending.
-  - Payment services and transaction banking.
-  - Limited capital‑markets activities compared with core Western hubs.
+- **Значительной иностранной собственностью**, часто западноевропейскими банковскими группами.
+- **Универсальными банковскими моделями** с фокусом на:
+  - Розничное кредитование и кредитование МСП.
+  - Платежные услуги и транзакционный банкинг.
+  - Ограниченную деятельность на рынках капитала по сравнению с основными западными центрами.
 
-Foreign‑owned banks bring:
+Иностранные банки приносят:
 
-- Access to parent funding and expertise.
-- Group‑wide risk management frameworks.
+- Доступ к финансированию и экспертизе материнской компании.
+- Групповые рамки управления рисками.
 
-But they also introduce:
+Но они также вводят:
 
-- Potential for **strategic retrenchment** if parent banks refocus on core markets.
-- Complex intra‑group funding and capital relationships.
+- Потенциал для **стратегического сокращения**, если материнские банки перефокусируются на основные рынки.
+- Сложные внутригрупповые отношения финансирования и капитала.
 
-### Currency Regimes and Euro Adoption
+### Валютные режимы и принятие евро
 
-CEE banking systems operate under heterogeneous currency regimes:
+Банковские системы ЦВЕ работают под гетерогенными валютными режимами:
 
-- Eurozone members (e.g., Slovakia, Slovenia, the Baltics).
-- Countries with euro pegs or tightly managed regimes.
-- Independent floating currencies (e.g., Poland, Hungary, Czech Republic, Romania).
+- Члены еврозоны (например, Словакия, Словения, страны Балтии).
+- Страны с привязкой к евро или жестко управляемыми режимами.
+- Независимые плавающие валюты (например, Польша, Венгрия, Чешская Республика, Румыния).
 
-This matters for:
+Это важно для:
 
-- **Interest‑rate differentials** versus the euro area.
-- **FX risk** on foreign‑currency lending and funding.
-- The extent to which ECB policy versus local central‑bank policy drives conditions.
+- **Дифференциалов процентных ставок** относительно еврозоны.
+- **Валютного риска** на кредитование и финансирование в иностранной валюте.
+- Степени, в которой политика ЕЦБ против политики местного центрального банка движет условия.
 
-Investors should map each country’s regime, central‑bank reaction function, and track record of managing FX and inflation shocks.
+Инвесторам следует отображать режим каждой страны, функцию реакции центрального банка и послужной список управления валютными и инфляционными шоками.
 
-## Net Interest Margins and Higher-Rate Dynamics
+## Чистые процентные маржи и динамика повышенных ставок
 
-### Deposit Structures and Betas
+### Структуры депозитов и беты
 
-The benefit of higher rates for CEE banks depends heavily on **deposit structures**:
+Выгода от повышенных ставок для банков ЦВЕ сильно зависит от **структур депозитов**:
 
-- Retail‑heavy franchises with:
-  - Granular current accounts.
-  - Low‑beta savings deposits.
-  often see significant NIM expansion when policy rates rise.
-- Corporate‑heavy deposit bases or reliance on wholesale funding see faster pass‑through of higher rates to funding costs.
+- Филиалы с преобладанием розничных клиентов с:
+  - Гранулированными текущими счетами.
+  - Низкобетовыми сберегательными депозитами.
+  часто видят значительное расширение NIM, когда политические ставки растут.
+- Базисы депозитов с преобладанием корпоративных клиентов или зависимость от оптового финансирования видят более быструю передачу повышенных ставок в затраты на финансирование.
 
-Key diagnostics include:
+Ключевые диагностики включают:
 
-- Share of **non‑interest‑bearing or low‑rate deposits**.
-- Speed and magnitude of **deposit repricing** across cycles.
-- Competition from money‑market funds or government savings instruments.
+- Долю **непроцентных или низкопроцентных депозитов**.
+- Скорость и величину **переоценки депозитов** по циклам.
+- Конкуренцию со стороны фондов денежного рынка или государственных сберегательных инструментов.
 
-### Loan Repricing and Product Mix
+### Переоценка кредитов и продуктовый микс
 
-On the asset side, the impact of higher rates depends on:
+На стороне активов воздействие повышенных ставок зависит от:
 
-- Prevalence of **variable‑rate versus fixed‑rate** lending in:
-  - Mortgages.
-  - Consumer loans.
-  - Corporate credit.
-- Maturity structure and contractual repricing terms.
+- Распространенности кредитования с **переменной ставкой против фиксированной ставкой** в:
+  - Ипотеке.
+  - Потребительских кредитах.
+  - Корпоративном кредите.
+- Структуры сроков погашения и договорных условий переоценки.
 
-In many CEE markets, variable‑rate or short‑reset loans are common, implying:
+Во многих рынках ЦВЕ кредиты с переменной ставкой или коротким периодом пересмотра являются обычными, что подразумевает:
 
-- Faster NII uplift when rates rise.
-- Greater sensitivity of borrowers to interest‑rate shocks.
+- Более быстрое повышение NII, когда ставки растут.
+- Большую чувствительность заемщиков к процентным шокам.
 
-Investors should track:
+Инвесторам следует отслеживать:
 
-- Loan‑book segmentation by rate type and currency.
-- Historical behavior of arrears and defaults under prior hiking cycles.
+- Сегментацию кредитного портфеля по типу ставки и валюте.
+- Историческое поведение просрочек и дефолтов при предыдущих циклах повышения ставок.
 
-## Credit Quality and Macro Sensitivity
+## Качество кредитов и макро-чувствительность
 
-### Household and Corporate Balance Sheets
+### Балансы домохозяйств и корпораций
 
-Higher rates, combined with energy shocks and inflation, have pressured:
+Повышенные ставки в сочетании с энергетическими шоками и инфляцией оказали давление на:
 
-- **Household real incomes**, especially where wage growth lagged price increases.
-- **Corporate margins** in energy‑intensive industries and export‑oriented sectors exposed to weaker Western European demand.
+- **Реальные доходы домохозяйств**, особенно там, где рост заработной платы отставал от роста цен.
+- **Корпоративные маржи** в энергоемких отраслях и экспортно-ориентированных секторах, подверженных более слабому спросу Западной Европы.
 
-CEE banks’ asset quality hinges on:
+Качество активов банков ЦВЕ зависит от:
 
-- Household leverage levels (mortgages and consumer credit to income).
-- Sectoral exposures (construction, real estate, SMEs).
-- Share of loans with:
-  - FX risk.
-  - Variable rates and limited interest‑rate hedging.
+- Уровней левериджа домохозяйств (ипотека и потребительский кредит к доходу).
+- Отраслевых экспозиций (строительство, недвижимость, МСП).
+- Доли кредитов с:
+  - Валютным риском.
+  - Переменными ставками и ограниченным хеджированием процентных ставок.
 
-Investors should monitor:
+Инвесторам следует мониторить:
 
-- Stage 2 loan migrations under IFRS 9.
-- Early‑arrears trends and restructuring volumes.
-- Coverage ratios and collateral valuations (especially in real estate).
+- Миграции кредитов Стадии 2 по МСФО 9.
+- Тренды ранних просрочек и объемы реструктуризации.
+- Коэффициенты покрытия и оценки залога (особенно в недвижимости).
 
-### Government Support and Policy Responses
+### Государственная поддержка и политические ответы
 
-Governments in the region have used:
+Правительства региона использовали:
 
-- **Price caps, subsidies, and targeted transfers** to cushion energy and inflation shocks.
-- **Credit moratoria or relief schemes** during stress episodes (including the pandemic).
+- **Ограничения цен, субсидии и целевые трансферты** для смягчения энергетических и инфляционных шоков.
+- **Кредитные моратории или схемы помощи** во время стрессовых эпизодов (включая пандемию).
 
-While these measures can stabilize asset quality in the near term, they may:
+Хотя эти меры могут стабилизировать качество активов в краткосрочной перспективе, они могут:
 
-- Delay recognition of problem loans.
-- Introduce political risk if banks are asked to shoulder quasi‑fiscal burdens.
+- Задержать признание проблемных кредитов.
+- Ввести политический риск, если банки просят взять на себя квази-фискальные бремена.
 
-Investors should assess:
+Инвесторам следует оценивать:
 
-- The design and sunset clauses of prior support schemes.
-- The likelihood of **ad‑hoc interventions** in future crises.
+- Дизайн и закатные клаузулы предыдущих схем поддержки.
+- Вероятность **ад-хок интервенций** в будущих кризисах.
 
-## Regulation, Taxation, and Windfall Measures
+## Регулирование, налогообложение и меры по сверхприбылям
 
-### EU-Level Frameworks and Local Implementation
+### Рамки уровня ЕС и местная реализация
 
-Most CEE EU members operate under:
+Большинство членов ЕС ЦВЕ работают под:
 
-- Single Rulebook bank regulation.
-- ECB or national competent authorities supervising capital and liquidity.
+- Единым сводом правил банковского регулирования.
+- ЕЦБ или национальными компетентными органами, контролирующими капитал и ликвидность.
 
-However, **local implementation and political overlays** matter:
+Однако **местная реализация и политические наложения** имеют значение:
 
-- Sector‑specific taxes or levies on banks.
-- Windfall taxes during periods of high profitability.
-- Requirements to hold domestic sovereign bonds.
+- Отраслевые налоги или сборы на банки.
+- Налоги на сверхприбыли в периоды высокой прибыльности.
+- Требования держать внутренние суверенные облигации.
 
-Episodes of bank taxation in some CEE countries highlight:
+Эпизоды налогообложения банков в некоторых странах ЦВЕ подчеркивают:
 
-- The need to assess **political risk to earnings**.
-- Differences between headline ROE and **after‑tax, after‑levy sustainable profitability**.
+- Необходимость оценивать **политический риск для прибыли**.
+- Различия между заявленной ROE и **после-налоговой, после-сборов устойчивой прибыльностью**.
 
-### Capital and Dividend Policies
+### Капитал и политика дивидендов
 
-Capital positions in CEE banking systems are generally solid, but:
+Капитальные позиции в банковских системах ЦВЕ в целом прочные, но:
 
-- Some subsidiaries may run with **buffer levels tailored by parent banks**.
-- Regulatory add‑ons (systemic buffers, O‑SII buffers, counter‑cyclical buffers) vary by country.
+- Некоторые дочерние компании могут работать с **уровнями буферов, настроенными материнскими банками**.
+- Регуляторные дополнения (системные буферы, буферы O-SII, контрциклические буферы) различаются по странам.
 
-For equity investors, key questions include:
+Для инвесторов в акции ключевые вопросы включают:
 
-- How much capital sits **above regulatory minima and management buffers**.
-- Regulator tolerance for **dividends and upstreaming** to parent groups.
-- Exposure to model risk and potential capital requirement changes.
+- Сколько капитала находится **выше регуляторных минимумов и управленческих буферов**.
+- Толерантность регулятора к **дивидендам и переводу вверх** материнским группам.
+- Экспозиция к риску моделей и потенциальным изменениям требований к капиталу.
 
-## Cross-Asset Implications
+## Кросс-активные последствия
 
-### Bank Equities
+### Банковские акции
 
-Bank equities in CEE can offer:
+Банковские акции в ЦВЕ могут предлагать:
 
-- Attractive dividend yields.
-- Exposure to local credit and growth cycles.
-- Leverage to **NIM expansion** when rates remain supportive and asset quality holds.
+- Привлекательные дивидендные доходности.
+- Экспозицию к местным кредитным и ростовым циклам.
+- Леверидж к **расширению NIM**, когда ставки остаются поддерживающими и качество активов сохраняется.
 
-But they also carry:
+Но они также несут:
 
-- Higher volatility than Western European peers.
-- Greater sensitivity to domestic politics and regulatory interventions.
+- Более высокую волатильность, чем западноевропейские коллеги.
+- Большую чувствительность к внутренней политике и регуляторным интервенциям.
 
-Valuation frameworks should consider:
+Рамки оценки должны учитывать:
 
-- Normalized ROE versus cost of equity.
-- Stability and credibility of dividend policies.
-- Country risk premia embedded in multiples.
+- Нормализованную ROE против стоимости капитала.
+- Стабильность и надежность политики дивидендов.
+- Премии странового риска, встроенные в мультипликаторы.
 
-### Bank and Sovereign Credit
+### Банковский и суверенный кредит
 
-CEEs’ bank and sovereign credit are often intertwined:
+Банковский и суверенный кредит ЦВЕ часто переплетены:
 
-- Banks hold domestic government debt on their balance sheets.
-- Sovereigns benefit from bank stability and funding.
+- Банки держат внутренний государственный долг на своих балансах.
+- Суверены выигрывают от стабильности банков и финансирования.
 
-For credit investors, focus areas include:
+Для кредитных инвесторов области фокуса включают:
 
-- Bank senior and subordinated spreads relative to Western peers.
-- Sovereign ratings trajectories and fiscal dynamics.
-- Systemic risk channels in stress scenarios (e.g., bank‑sovereign loops).
+- Банковские спреды старших и субординированных облигаций относительно западных коллег.
+- Траектории суверенных рейтингов и фискальная динамика.
+- Каналы системного риска в стрессовых сценариях (например, банковско-суверенные петли).
 
-### Local-Currency Bonds and FX
+### Облигации в местной валюте и валюты
 
-Banking‑sector health influences:
+Здоровье банковского сектора влияет на:
 
-- Central‑bank tolerance for **higher or lower policy rates**.
-- The pace and nature of tightening or easing cycles.
+- Толерантность центрального банка к **более высоким или более низким политическим ставкам**.
+- Темп и характер циклов ужесточения или смягчения.
 
-In markets where banks have strong capital and asset quality:
+На рынках, где банки имеют сильный капитал и качество активов:
 
-- Monetary authorities may have more room to normalize rates gradually.
+- Монетарные власти могут иметь больше пространства для постепенной нормализации ставок.
 
-Where vulnerabilities are larger:
+Где уязвимости больше:
 
-- Policy trade‑offs between inflation control and financial stability become sharper.
+- Торговые компромиссы политики между контролем инфляции и финансовой стабильностью становятся более острыми.
 
-For investors in local‑currency bonds and FX, it is important to integrate:
+Для инвесторов в облигации в местной валюте и валюты важно интегрировать:
 
-- Banking‑sector diagnostics.
-- Sovereign balance‑sheet analysis.
-- External‑balance and terms‑of‑trade considerations.
+- Диагностику банковского сектора.
+- Анализ суверенного баланса.
+- Соображения внешнего баланса и условий торговли.
 
-## A Practical Checklist for Investors
+## Практический чеклист для инвесторов
 
-When evaluating CEE banking exposures, a structured checklist can help:
+При оценке банковских экспозиций ЦВЕ структурированный чеклист может помочь:
 
-1. **Macro and policy context**
-   - Growth, inflation, energy dependence, and external balances.
-   - Currency regime and central‑bank credibility.
-2. **Banking‑system structure**
-   - Foreign versus domestic ownership.
-   - Market concentration and competitive dynamics.
-3. **Profitability and NIM drivers**
-   - Deposit structure and repricing behavior.
-   - Loan‑book mix, rate structure, and currency composition.
-4. **Asset quality and capital**
-   - NPL ratios, Stage 2 trends, and coverage.
-   - Capital buffers above minima; sensitivity to stress scenarios.
-5. **Policy and political risk**
-   - History of bank taxes or ad‑hoc interventions.
-   - Regulatory stance on dividends and payouts.
+1. **Макро и политический контекст**
+   - Рост, инфляция, зависимость от энергоносителей и внешние балансы.
+   - Валютный режим и надежность центрального банка.
+2. **Структура банковской системы**
+   - Иностранная против внутренней собственности.
+   - Концентрация рынка и конкурентная динамика.
+3. **Прибыльность и драйверы NIM**
+   - Структура депозитов и поведение переоценки.
+   - Микс кредитного портфеля, структура ставок и валютный состав.
+4. **Качество активов и капитал**
+   - Коэффициенты NPL, тренды Стадии 2 и покрытие.
+   - Капитальные буферы выше минимумов; чувствительность к стрессовым сценариям.
+5. **Политический и политический риск**
+   - История налогов на банки или ад-хок интервенций.
+   - Регуляторная позиция по дивидендам и выплатам.
 
-This checklist applies across equity, credit, and local‑currency strategies, with position sizes and instruments tailored to mandate and risk appetite.
+Этот чеклист применяется по стратегиям акций, кредитов и местной валюты, с размерами позиций и инструментами, адаптированными к мандату и аппетиту к риску.
 
-## Conclusion
+## Заключение
 
-CEE banking sectors are central to understanding the region's macro and market dynamics in a higher‑rate world. They sit at the nexus of monetary policy, energy‑driven terms‑of‑trade shocks, and EU regulatory frameworks.
+Банковские секторы ЦВЕ центральны для понимания макро и рыночной динамики региона в мире повышенных ставок. Они находятся на пересечении монетарной политики, энергетических шоков условий торговли и регуляторных рамок ЕС.
 
-**Key Investment Principles:**
-- **Country-specific analysis** is essential given the heterogeneity across CEE banking systems. Each country has different ownership structures, currency regimes, and regulatory environments that determine how banks perform in higher-rate environments.
-- **NIM sustainability** depends on deposit structures, loan repricing, and competitive dynamics. Banks with favorable deposit structures and loan portfolios can maintain higher NIMs, while others may see compression as funding costs rise.
-- **Asset quality monitoring** is critical as higher rates and energy shocks pressure borrowers. Investors should track early warning indicators including arrears trends, Stage 2 migrations, and sectoral exposures.
-- **Political and regulatory risk** assessment is important given the history of bank taxes and ad-hoc interventions in some CEE countries. Investors should evaluate the likelihood of future policy interventions that could impact profitability.
+**Ключевые инвестиционные принципы:**
+- **Страновой анализ** необходим учитывая гетерогенность банковских систем ЦВЕ. Каждая страна имеет различные структуры собственности, валютные режимы и регуляторные среды, которые определяют, как банки работают в средах повышенных ставок.
+- **Устойчивость NIM** зависит от структур депозитов, переоценки кредитов и конкурентной динамики. Банки с благоприятными структурами депозитов и кредитными портфелями могут поддерживать более высокие NIM, в то время как другие могут видеть сжатие по мере роста затрат на финансирование.
+- **Мониторинг качества активов** критичен, поскольку повышенные ставки и энергетические шоки давят на заемщиков. Инвесторам следует отслеживать ранние предупреждающие индикаторы, включая тренды просрочек, миграции Стадии 2 и отраслевые экспозиции.
+- **Оценка политического и регуляторного риска** важна учитывая историю налогов на банки и ад-хок интервенций в некоторых странах ЦВЕ. Инвесторам следует оценивать вероятность будущих политических интервенций, которые могут повлиять на прибыльность.
 
-**The Higher-Rate Environment:**
-- **NIM expansion** has benefited many CEE banks as rates have risen, but the sustainability of this expansion depends on deposit betas, loan repricing, and competitive dynamics. Some banks may see NIM compression as funding costs catch up to asset yields.
-- **Credit quality** remains a key concern as higher rates, energy shocks, and inflation pressure borrowers. Banks with strong underwriting, diversified loan books, and conservative risk management are better positioned.
-- **Regulatory evolution** continues as EU frameworks evolve and local implementations vary. Investors should monitor regulatory developments that could impact capital requirements, dividend policies, or business models.
+**Среда повышенных ставок:**
+- **Расширение NIM** выгодно многим банкам ЦВЕ по мере роста ставок, но устойчивость этого расширения зависит от бета депозитов, переоценки кредитов и конкурентной динамики. Некоторые банки могут видеть сжатие NIM, когда затраты на финансирование догоняют доходности активов.
+- **Качество кредитов** остается ключевой заботой, поскольку повышенные ставки, энергетические шоки и инфляция давят на заемщиков. Банки с сильным андеррайтингом, диверсифицированными кредитными портфелями и консервативным управлением рисками лучше позиционированы.
+- **Эволюция регулирования** продолжается по мере развития рамок ЕС и варьирования местных реализаций. Инвесторам следует мониторить регуляторные разработки, которые могут повлиять на требования к капиталу, политику дивидендов или бизнес-модели.
 
-For investors, the opportunity lies in identifying countries and banks where higher rates support sustainably stronger profitability **without** undermining asset quality or triggering political backlash. By combining macro diagnostics with granular banking‑sector analysis, cross‑asset investors can build exposures that capture the upside of financial‑sector normalization while managing the region's distinctive risks. Success requires careful country selection, bank-specific analysis, and ongoing monitoring of macro, credit, and regulatory developments.`,
+Для инвесторов возможность заключается в выявлении стран и банков, где повышенные ставки поддерживают устойчиво более сильную прибыльность **без** подрыва качества активов или запуска политической реакции. Комбинируя макро-диагностику с гранулярным анализом банковского сектора, кросс-активные инвесторы могут строить экспозиции, которые захватывают преимущества нормализации финансового сектора, управляя отличительными рисками региона. Успех требует тщательного выбора стран, банкового анализа и постоянного мониторинга макро, кредитных и регуляторных разработок.`,
     date: formatDate(261),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -3054,235 +3054,235 @@ Central and Eastern Europe’s banking systems sit at the intersection of multip
   },
   {
     slug: 'fx-regimes-and-monetary-policy-in-central-eastern-europe',
-    title: 'FX Regimes and Monetary Policy in Central & Eastern Europe: Implications for Equities, Bonds, and FX',
+    title: 'Валютные режимы и монетарная политика в Центральной и Восточной Европе: последствия для акций, облигаций и валют',
     excerpt:
-      'How different exchange-rate frameworks and monetary-policy strategies shape market risk and return across Central & Eastern Europe—and what that means for cross-asset positioning.',
-    content: `# FX Regimes and Monetary Policy in Central & Eastern Europe: Implications for Equities, Bonds, and FX
+      'Как различные валютные рамки и стратегии монетарной политики формируют рыночный риск и доходность в Центральной и Восточной Европе — и что это означает для кросс-активного позиционирования.',
+    content: `# Валютные режимы и монетарная политика в Центральной и Восточной Европе: последствия для акций, облигаций и валют
 
-## Introduction
+## Введение
 
-Central & Eastern Europe (CEE) is not a single macro bloc. Countries differ materially in their **exchange‑rate regimes, inflation histories, and monetary‑policy frameworks**. Some are euro area members; others manage de facto pegs; still others operate floating currencies with inflation‑targeting central banks.
+Центральная и Восточная Европа (ЦВЕ) не является единым макро-блоком. Страны существенно различаются по своим **валютным режимам, историям инфляции и рамкам монетарной политики**. Некоторые являются членами еврозоны; другие управляют де-факто привязками; третьи работают с плавающими валютами с центральными банками, таргетирующими инфляцию.
 
-For investors, these differences are more than macro footnotes. They shape:
+Для инвесторов эти различия больше, чем макро-примечания. Они формируют:
 
-- The behavior of **local‑currency bond yields**.
-- The volatility and direction of **FX rates**.
-- The resilience of **equity and banking sectors** to external shocks.
+- Поведение доходностей **облигаций в местной валюте**.
+- Волатильность и направление **валютных курсов**.
+- Устойчивость **секторов акций и банков** к внешним шокам.
 
-This article provides a practitioner’s framework for analyzing FX regimes and monetary policy across CEE and translating that into cross‑asset views.
+Эта статья предоставляет практическую рамку для анализа валютных режимов и монетарной политики по ЦВЕ и перевода этого в кросс-активные взгляды.
 
-## Mapping FX Regimes Across the Region
+## Картирование валютных режимов по региону
 
-### Euro Area Members
+### Члены еврозоны
 
-Countries such as Slovakia, Slovenia, and the Baltic states are:
+Страны, такие как Словакия, Словения и страны Балтии:
 
-- Members of the euro area.
-- Subject to **ECB monetary policy** and euro‑wide inflation targeting.
+- Являются членами еврозоны.
+- Подвержены **монетарной политике ЕЦБ** и таргетированию инфляции в масштабе евро.
 
-Implications:
+Последствия:
 
-- No independent monetary policy or nominal FX rate.
-- Shocks are absorbed through:
-  - Domestic wages and prices.
-  - Fiscal policy and capital flows.
+- Нет независимой монетарной политики или номинального валютного курса.
+- Шоки поглощаются через:
+  - Внутренние заработные платы и цены.
+  - Фискальную политику и потоки капитала.
 
-For investors:
+Для инвесторов:
 
-- Sovereign yields primarily reflect:
-  - Credit risk.
-  - Local supply/demand and liquidity.
-  - Euro area term premia.
-- Currency risk is largely removed for euro‑based investors.
+- Суверенные доходности в основном отражают:
+  - Кредитный риск.
+  - Местное предложение/спрос и ликвидность.
+  - Премии за срок еврозоны.
+- Валютный риск в значительной степени удален для инвесторов, базирующихся на евро.
 
-### Managed Exchange-Rate Regimes
+### Управляемые валютные режимы
 
-Some CEE countries maintain:
+Некоторые страны ЦВЕ поддерживают:
 
-- **Pegged or tightly managed exchange rates** versus the euro.
+- **Привязанные или жестко управляемые обменные курсы** относительно евро.
 
-This framework:
+Эта рамка:
 
-- Constrains independent monetary policy—interest rates must broadly align with anchor currency conditions.
-- Offers exchange‑rate stability for trade and financial flows.
+- Ограничивает независимую монетарную политику — процентные ставки должны широко соответствовать условиям якорной валюты.
+- Предлагает стабильность обменного курса для торговых и финансовых потоков.
 
-However, it can create:
+Однако это может создавать:
 
-- Tensions when domestic cycles diverge from the anchor.
-- Periodic speculative pressure if pegs are perceived as misaligned.
+- Напряжения, когда внутренние циклы расходятся с якорем.
+- Периодическое спекулятивное давление, если привязки воспринимаются как несоответствующие.
 
-### Floating Currencies and Inflation Targeting
+### Плавающие валюты и таргетирование инфляции
 
-Large CEE economies such as Poland, Czech Republic, Hungary, and Romania typically:
+Крупные экономики ЦВЕ, такие как Польша, Чешская Республика, Венгрия и Румыния, обычно:
 
-- Operate **floating or managed‑float FX regimes**.
-- Use **inflation‑targeting** as the main monetary‑policy framework.
+- Работают с **плавающими или управляемо-плавающими валютными режимами**.
+- Используют **таргетирование инфляции** как основную рамку монетарной политики.
 
-Implications:
+Последствия:
 
-- Interest rates can adjust more flexibly to domestic conditions.
-- FX absorbs part of external and terms‑of‑trade shocks.
+- Процентные ставки могут более гибко корректироваться к внутренним условиям.
+- Валюты поглощают часть внешних и шоков условий торговли.
 
-For investors:
+Для инвесторов:
 
-- Local‑currency bonds and FX are closely linked:
-  - Aggressive hikes can support FX and anchor inflation expectations.
-  - FX depreciation can tighten domestic conditions via inflation and balance sheets.
+- Облигации в местной валюте и валюты тесно связаны:
+  - Агрессивные повышения могут поддерживать валюты и закреплять инфляционные ожидания.
+  - Обесценивание валют может ужесточать внутренние условия через инфляцию и балансы.
 
-## Monetary Policy, Inflation, and Terms-of-Trade Shocks
+## Монетарная политика, инфляция и шоки условий торговли
 
-### Inflation Histories and Policy Credibility
+### Истории инфляции и политическая надежность
 
-CEE countries entered the recent inflation surge with:
+Страны ЦВЕ вошли в недавний всплеск инфляции с:
 
-- Different inflation track records.
-- Varying degrees of central‑bank credibility.
+- Различными послужными списками инфляции.
+- Различными степенями надежности центральных банков.
 
-Those with:
+Те, у которых:
 
-- Stronger credibility and communication frameworks tended to:
-  - React earlier to inflation surprises.
-  - Maintain better‑anchored expectations.
+- Более сильная надежность и рамки коммуникации, как правило:
+  - Реагировали раньше на инфляционные сюрпризы.
+  - Поддерживали лучше закрепленные ожидания.
 
-Others faced:
+Другие столкнулись с:
 
-- More persistent inflation.
-- Greater pressure on FX.
-- Higher risk premia in bond markets.
+- Более устойчивой инфляцией.
+- Большим давлением на валюты.
+- Более высокими премиями риска на рынках облигаций.
 
-Investors should:
+Инвесторам следует:
 
-- Track central‑bank reaction functions over multiple cycles.
-- Assess how quickly policy settings adjust to changing data.
+- Отслеживать функции реакции центральных банков по множественным циклам.
+- Оценивать, насколько быстро политические настройки корректируются к изменяющимся данным.
 
-### Energy and External Shocks
+### Энергетика и внешние шоки
 
-Energy‑price spikes and terms‑of‑trade shocks have:
+Всплески цен на энергоносители и шоки условий торговли:
 
-- Widened current‑account deficits for import‑dependent economies.
-- Pressured FX and complicated policy trade‑offs.
+- Расширили дефициты текущего счета для экономик, зависящих от импорта.
+- Оказали давление на валюты и усложнили торговые компромиссы политики.
 
-In floating‑rate regimes:
+В плавающих режимах:
 
-- Depreciation can partially offset external shocks.
-- But also feeds into domestic inflation via imported prices.
+- Обесценивание может частично компенсировать внешние шоки.
+- Но также питает внутреннюю инфляцию через импортируемые цены.
 
-Central banks must choose between:
+Центральные банки должны выбирать между:
 
-- Higher rates to support FX and combat inflation.
-- More gradual tightening to protect growth and financial stability.
+- Более высокими ставками для поддержки валют и борьбы с инфляцией.
+- Более постепенным ужесточением для защиты роста и финансовой стабильности.
 
-These choices create:
+Эти выборы создают:
 
-- Dispersion in **real yields**.
-- Diverging paths for FX and local bonds.
+- Дисперсию в **реальных доходностях**.
+- Расходящиеся пути для валют и местных облигаций.
 
-## Cross-Asset Implications
+## Кросс-активные последствия
 
-### Local-Currency Bonds
+### Облигации в местной валюте
 
-For LCY bonds, key questions include:
+Для облигаций в местной валюте ключевые вопросы включают:
 
-- Are **real policy rates** sufficiently positive to anchor expectations?
-- How steep is the real and nominal yield curve?
-- Is the market pricing a **credible disinflation path**, or persistent risk premia?
+- Являются ли **реальные политические ставки** достаточно положительными для закрепления ожиданий?
+- Насколько крута реальная и номинальная кривая доходности?
+- Ценит ли рынок **заслуживающий доверия путь дезинфляции** или устойчивые премии риска?
 
-Countries with:
+Страны с:
 
-- Credible frameworks.
-- Appropriately tight policy.
-- Clear disinflation trajectories.
+- Заслуживающими доверия рамками.
+- Соответственно жесткой политикой.
+- Четкими траекториями дезинфляции.
 
-can offer attractive LCY opportunities, especially when:
+могут предлагать привлекательные возможности в местной валюте, особенно когда:
 
-- Yields embed significant risk premia after inflation spikes.
+- Доходности включают значительные премии риска после инфляционных всплесков.
 
-### FX
+### Валюты
 
-FX outcomes depend on:
+Результаты валют зависят от:
 
-- Relative growth and rate differentials.
-- External balances and reserve adequacy.
-- Political and geopolitical risk.
+- Относительного роста и дифференциалов ставок.
+- Внешних балансов и адекватности резервов.
+- Политического и геополитического риска.
 
-Floating currencies with credible inflation targeting may:
+Плавающие валюты с заслуживающим доверия таргетированием инфляции могут:
 
-- Offer carry opportunities when:
-  - Rate differentials are wide.
-  - External vulnerabilities are manageable.
+- Предлагать возможности керри, когда:
+  - Дифференциалы ставок широки.
+  - Внешние уязвимости управляемы.
 
-But they can also experience:
+Но они также могут испытывать:
 
-- Sharp repricing during global risk‑off episodes.
-- Overshooting when markets test policy resolve.
+- Резкую переоценку во время глобальных эпизодов избегания риска.
+- Перестрел, когда рынки проверяют решимость политики.
 
-Investors should integrate:
+Инвесторам следует интегрировать:
 
-- FX analysis with LCY bonds and equities.
-- Hedging decisions with broader portfolio currency risk.
+- Анализ валют с облигациями в местной валюте и акциями.
+- Решения по хеджированию с более широким валютным риском портфеля.
 
-### Equities and Banks
+### Акции и банки
 
-FX and policy regimes influence:
+Валютные и политические режимы влияют на:
 
-- **Corporate earnings** (especially exporters and FX‑debt borrowers).
-- **Bank profitability and asset quality**, via:
-  - FX‑linked lending.
-  - Funding and deposit behavior.
+- **Корпоративную прибыль** (особенно экспортеров и заемщиков с валютным долгом).
+- **Прибыльность банков и качество активов**, через:
+  - Кредитование, связанное с валютой.
+  - Поведение финансирования и депозитов.
 
-For example:
+Например:
 
-- Strong, credible policy that stabilizes inflation and FX can:
-  - Support bank margins.
-  - Reduce NPL risk in FX‑exposed borrowers.
-- Unanchored inflation and volatile FX can:
-  - Pressure real incomes and credit quality.
-  - Depress valuation multiples.
+- Сильная, заслуживающая доверия политика, которая стабилизирует инфляцию и валюты, может:
+  - Поддерживать банковские маржи.
+  - Снижать риск NPL у заемщиков, подверженных валютному риску.
+- Незакрепленная инфляция и волатильные валюты могут:
+  - Давить на реальные доходы и качество кредитов.
+  - Снижать мультипликаторы оценки.
 
-## Practical Framework for Investors
+## Практическая рамка для инвесторов
 
-When analyzing CEE FX and policy regimes, investors can apply a checklist:
+При анализе валютных и политических режимов ЦВЕ инвесторы могут применять чеклист:
 
-1. **Regime classification**
-   - Euro, peg, or float.
-   - Degree of de facto flexibility.
-2. **Policy framework and credibility**
-   - Inflation‑targeting track record.
-   - Communication and transparency.
-3. **External balances and reserves**
-   - Current‑account dynamics.
-   - Reserve coverage ratios.
-4. **Market pricing**
-   - Real yields and curve shape.
-   - FX valuation and positioning indicators.
+1. **Классификация режима**
+   - Евро, привязка или плавание.
+   - Степень де-факто гибкости.
+2. **Политическая рамка и надежность**
+   - Послужной список таргетирования инфляции.
+   - Коммуникация и прозрачность.
+3. **Внешние балансы и резервы**
+   - Динамика текущего счета.
+   - Коэффициенты покрытия резервами.
+4. **Рыночное ценообразование**
+   - Реальные доходности и форма кривой.
+   - Индикаторы оценки валют и позиционирования.
 
-This framework can inform:
+Эта рамка может информировать:
 
-- LCY bond duration and curve positioning.
-- FX carry and hedging strategies.
-- Sector and factor tilts in equity allocations.
+- Дюрацию облигаций в местной валюте и позиционирование кривой.
+- Стратегии валютного керри и хеджирования.
+- Отраслевые и факторные наклоны в распределении акций.
 
-## Conclusion
+## Заключение
 
-FX regimes and monetary‑policy frameworks are central to understanding risk and return in Central & Eastern Europe. They determine how countries absorb shocks, how quickly inflation is brought under control, and how attractive local assets appear to both domestic and foreign investors.
+Валютные режимы и рамки монетарной политики центральны для понимания риска и доходности в Центральной и Восточной Европе. Они определяют, как страны поглощают шоки, насколько быстро инфляция берется под контроль, и насколько привлекательными местные активы выглядят для внутренних и иностранных инвесторов.
 
-**Key Investment Principles:**
-- **Regime classification** is the starting point for analysis. Understanding whether a country uses the euro, a peg, or a floating currency determines how monetary policy works and how shocks are absorbed.
-- **Policy credibility** is critical for FX stability and bond market performance. Countries with credible central banks and clear policy frameworks tend to have more stable currencies and lower risk premia in bond markets.
-- **External balance analysis** helps assess FX vulnerability. Countries with strong external positions and ample reserves are better positioned to weather shocks, while those with weak external positions face greater FX risk.
-- **Cross-asset integration** is essential as FX, bonds, and equities are interconnected. FX movements affect bond yields and equity valuations, while monetary policy impacts all three asset classes.
+**Ключевые инвестиционные принципы:**
+- **Классификация режима** является отправной точкой для анализа. Понимание того, использует ли страна евро, привязку или плавающую валюту, определяет, как работает монетарная политика и как поглощаются шоки.
+- **Политическая надежность** критична для стабильности валют и производительности рынков облигаций. Страны с заслуживающими доверия центральными банками и четкими политическими рамками, как правило, имеют более стабильные валюты и более низкие премии риска на рынках облигаций.
+- **Анализ внешнего баланса** помогает оценивать валютную уязвимость. Страны с сильными внешними позициями и достаточными резервами лучше позиционированы для перенесения шоков, в то время как те, у которых слабые внешние позиции, сталкиваются с большим валютным риском.
+- **Кросс-активная интеграция** необходима, поскольку валюты, облигации и акции взаимосвязаны. Движения валют влияют на доходности облигаций и оценки акций, в то время как монетарная политика воздействует на все три класса активов.
 
-**The Higher-Rate Environment:**
-- **Real yields** have become more attractive in many CEE countries as central banks have raised rates to combat inflation. However, real yields must be assessed relative to inflation expectations and policy credibility.
-- **FX volatility** has increased as countries navigate higher rates, energy shocks, and external imbalances. Floating currencies provide flexibility but also create volatility that investors must manage.
-- **Policy trade-offs** have become more acute as central banks balance inflation control, growth, and financial stability. Countries with stronger fundamentals have more policy flexibility.
+**Среда повышенных ставок:**
+- **Реальные доходности** стали более привлекательными во многих странах ЦВЕ, поскольку центральные банки повысили ставки для борьбы с инфляцией. Однако реальные доходности должны оцениваться относительно инфляционных ожиданий и политической надежности.
+- **Валютная волатильность** увеличилась, поскольку страны навигают по повышенным ставкам, энергетическим шокам и внешним дисбалансам. Плавающие валюты предоставляют гибкость, но также создают волатильность, которую инвесторы должны управлять.
+- **Торговые компромиссы политики** стали более острыми, поскольку центральные банки балансируют контроль инфляции, рост и финансовую стабильность. Страны с более сильными основами имеют больше политической гибкости.
 
-For cross‑asset portfolios, the opportunity lies in distinguishing between:
+Для кросс-активных портфелей возможность заключается в различении между:
 
-- Countries where policy frameworks and external positions support **credible disinflation and FX stability**. These countries may offer attractive real yields and currency stability, creating opportunities in local-currency bonds and FX carry strategies.
-- Those where policy trade‑offs are more acute and risk premia must be significantly higher. These countries may offer higher yields but also higher risks, requiring careful position sizing and risk management.
+- Странами, где политические рамки и внешние позиции поддерживают **заслуживающую доверия дезинфляцию и валютную стабильность**. Эти страны могут предлагать привлекательные реальные доходности и валютную стабильность, создавая возможности в облигациях в местной валюте и стратегиях валютного керри.
+- Теми, где торговые компромиссы политики более острые и премии риска должны быть значительно выше. Эти страны могут предлагать более высокие доходности, но также более высокие риски, требуя тщательного определения размера позиций и управления рисками.
 
-By integrating FX‑regime analysis with banking‑sector diagnostics, terms‑of‑trade assessments, and market pricing, investors can build more resilient exposures to CEE across equities, bonds, and currencies. Success requires understanding the interconnections between FX, monetary policy, and asset markets, and maintaining flexibility to adjust positions as conditions evolve.`,
+Интегрируя анализ валютных режимов с диагностикой банковского сектора, оценками условий торговли и рыночным ценообразованием, инвесторы могут строить более устойчивые экспозиции к ЦВЕ по акциям, облигациям и валютам. Успех требует понимания взаимосвязей между валютами, монетарной политикой и рынками активов, и поддержания гибкости для корректировки позиций по мере эволюции условий.`,
     date: formatDate(262),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -3300,476 +3300,476 @@ Central & Eastern Europe (CEE) is not a single macro bloc. Countries differ mate
   },
   {
     slug: 'cee-equity-markets-and-privatization-themes',
-    title: 'CEE Equity Markets and Privatization Themes: Sizing Opportunities in a Shallow but Evolving Landscape',
+    title: 'Рынки акций ЦВЕ и темы приватизации: оценка возможностей на мелком, но развивающемся ландшафте',
     excerpt:
-      'Why Central & Eastern European equity markets remain shallow, how privatizations and listings may change the opportunity set, and how investors can approach liquidity, governance, and country risk.',
-    content: `# CEE Equity Markets and Privatization Themes: Sizing Opportunities in a Shallow but Evolving Landscape
+      'Почему рынки акций Центральной и Восточной Европы остаются мелкими, как приватизации и листинги могут изменить набор возможностей, и как инвесторы могут подходить к ликвидности, управлению и страновому риску.',
+    content: `# Рынки акций ЦВЕ и темы приватизации: оценка возможностей на мелком, но развивающемся ландшафте
 
-## Introduction
+## Введение
 
-Central & Eastern Europe (CEE) offers exposure to converging economies, open trade regimes, and integration with EU value chains. The region encompasses countries that have undergone significant economic transformation since the fall of communism, creating opportunities for investors seeking exposure to catch-up growth, EU integration benefits, and regional economic convergence.
+Центральная и Восточная Европа (ЦВЕ) предлагает доступ к конвергирующим экономикам, открытым торговым режимам и интеграции с цепочками создания стоимости ЕС. Регион охватывает страны, которые претерпели значительную экономическую трансформацию с момента падения коммунизма, создавая возможности для инвесторов, ищущих доступ к догоняющему росту, преимуществам интеграции в ЕС и региональной экономической конвергенции.
 
-The CEE region includes countries such as Poland, Czech Republic, Hungary, Romania, Bulgaria, Slovakia, and others that have joined the European Union over the past two decades. These economies share common characteristics: relatively young populations, competitive labor costs, strong manufacturing bases, and increasing integration with Western European supply chains.
+Регион ЦВЕ включает страны, такие как Польша, Чешская Республика, Венгрия, Румыния, Болгария, Словакия и другие, которые присоединились к Европейскому Союзу за последние два десятилетия. Эти экономики разделяют общие характеристики: относительно молодое население, конкурентоспособные затраты на рабочую силу, сильные производственные базы и растущая интеграция с западноевропейскими цепочками поставок.
 
-Yet its **equity markets** remain comparatively shallow when measured against the region's economic size and growth potential. This shallowness manifests in several ways:
+Однако их **рынки акций** остаются сравнительно мелкими при измерении относительно экономического размера региона и потенциала роста. Эта мелкость проявляется несколькими способами:
 
-- Limited free float in some flagship names, with significant state or strategic ownership
-- Concentration in a few sectors (banks, energy, utilities, telecoms) that reflect the region's economic structure
-- A relatively small universe of liquid, index‑eligible stocks compared to Western European markets
-- Lower market capitalization relative to GDP than in more developed markets
+- Ограниченный свободный флоат в некоторых флагманских именах, со значительной государственной или стратегической собственностью
+- Концентрация в нескольких секторах (банки, энергетика, коммунальные услуги, телекоммуникации), которые отражают экономическую структуру региона
+- Относительно небольшая вселенная ликвидных, подходящих для индекса акций по сравнению с западноевропейскими рынками
+- Более низкая рыночная капитализация относительно ВВП, чем в более развитых рынках
 
-This market structure creates both challenges and opportunities for investors. The limited liquidity and concentration can make portfolio construction difficult, but they can also create mispricing opportunities where fundamentals improve faster than market recognition.
-
-At the same time, privatization plans, new listings, and cross‑border M&A are gradually reshaping the opportunity set. Governments across the region are pursuing capital market development agendas, seeking to attract foreign investment and deepen local markets. This evolution creates a dynamic investment landscape that requires careful navigation.
+Эта структура рынка создает как вызовы, так и возможности для инвесторов. Ограниченная ликвидность и концентрация могут затруднять построение портфеля, но они также могут создавать возможности неправильного ценообразования, где основы улучшаются быстрее, чем признание рынка.
+
+В то же время планы приватизации, новые листинги и кросс-граничные M&A постепенно перестраивают набор возможностей. Правительства по всему региону преследуют программы развития рынков капитала, стремясь привлечь иностранные инвестиции и углубить местные рынки. Эта эволюция создает динамичный инвестиционный ландшафт, который требует тщательной навигации.
 
-This article explores how investors can approach CEE equity markets, with a focus on market structure and liquidity, privatization and listing pipelines, and governance and country‑risk considerations.
-
-## Understanding the CEE Region
-
-### Economic Characteristics
-
-**Growth Dynamics:**
-- Catch-up growth potential relative to Western Europe
-- EU membership benefits and structural fund access
-- Competitive manufacturing and export sectors
-- Young and educated workforces
-- Increasing urbanization and consumer spending
-
-**Economic Structure:**
-- Strong manufacturing sectors, particularly automotive and electronics
-- Growing services sectors
-- Energy and infrastructure development needs
-- Banking systems that are central to financial intermediation
-
-**Integration Benefits:**
-- Access to EU single market
-- Supply chain integration with Western Europe
-- Technology and knowledge transfer
-- Regulatory harmonization
-
-### Regional Diversity
-
-**Country Variations:**
-- Poland: Largest economy, most developed equity market
-- Czech Republic: Strong manufacturing, developed market
-- Hungary: Smaller market, policy volatility
-- Romania: Large population, growth potential, governance challenges
-- Bulgaria: Smaller market, EU integration benefits
-- Other markets: Varying sizes and development levels
-
-**Investment Implications:**
-- Country-specific risk assessment required
-- Different market structures and liquidity profiles
-- Varying governance and regulatory standards
-- Diverse economic drivers and sector compositions
-
-## Structure of CEE Equity Markets
-
-### Market Depth and Free Float
-
-CEE equity indices often feature distinct structural characteristics:
-
-**Large-Cap Concentration:**
-- A small number of large caps with significant state ownership
-- Concentrated domestic shareholder bases
-- Strategic investors holding substantial stakes
-- Limited free float reducing available shares
-
-**Small and Mid-Cap Universe:**
-- A long tail of small and mid caps with thin trading volumes
-- Limited analyst coverage creating information gaps
-- Lower institutional ownership
-- More idiosyncratic risk
-
-**Market Depth Challenges:**
-- Difficulty building or exiting positions without moving prices
-- Concentration risk in a handful of liquid names
-- Limited diversification options within single markets
-- Higher transaction costs due to wider spreads
-
-**Opportunities from Market Structure:**
-- Mis‑pricings where fundamentals improve faster than liquidity
-- Governance reforms that unlock value
-- Privatization creating new investment opportunities
-- Market development expanding the opportunity set
-
-### Sector Concentration
-
-Common sector tilts reflect the region's economic structure:
-
-**Banks and Financials:**
-- Large weights reflecting bank‑centric financial systems
-- Banks as primary financial intermediaries
-- Exposure to credit cycles and economic growth
-- Dividend yields and capital return potential
-
-**Energy and Utilities:**
-- Legacy national champions with strategic importance
-- Increasing exposure to transition investments
-- Regulatory frameworks affecting returns
-- Infrastructure development needs
-
-**Telecoms and Infrastructure:**
-- Stable cash flows from essential services
-- Regulated pricing frameworks
-- Infrastructure investment requirements
-- Digital transformation opportunities
-
-**Underrepresented Sectors:**
-- High‑growth technology companies (though this is changing)
-- Diversified consumer names (growing but still limited)
-- Healthcare and pharmaceuticals (developing)
-- Real estate (growing but fragmented)
-
-**Investment Implications:**
-- Investors must recognize that CEE equity allocations often imply specific sector and factor exposures
-- Portfolios behave differently from broader EM or European benchmarks
-- Sector concentration creates both risk and opportunity
-- Understanding sector dynamics is crucial for risk management
-
-### Market Size and Liquidity
-
-**Market Capitalization:**
-- Total market cap varies significantly by country
-- Poland has the largest market in the region
-- Other markets are smaller but growing
-- Market cap to GDP ratios lower than Western Europe
-
-**Liquidity Characteristics:**
-- Top names have reasonable liquidity
-- Mid and small caps often illiquid
-- Trading volumes concentrated in few stocks
-- Liquidity can disappear during stress
-
-**Index Composition:**
-- Narrow indices with few constituents
-- High concentration in top holdings
-- Limited diversification within indices
-- Active management can add value
-
-## Privatizations, IPOs, and Market Development
-
-### Privatization Waves and State Ownership
-
-CEE countries have gone through multiple waves of privatization since the transition from communism:
-
-**Historical Privatization:**
-- Early post‑transition privatizations in the 1990s
-- Subsequent sales of residual state stakes
-- Strategic sales to foreign investors
-- Public offerings creating listed companies
-
-**Current State Ownership:**
-- States retain significant stakes in strategic sectors
-- Golden shares providing veto rights
-- Blocking minorities preventing full control
-- Informal influence over strategy and operations
-
-**Privatization Plans:**
-- Ongoing privatization programs in several countries
-- Plans to reduce state ownership
-- Strategic sector considerations
-- Political factors affecting timing and execution
-
-**For Investors:**
-- Clarity about future privatization plans is critical
-- Governance arrangements in partially privatized entities matter
-- Political interference risk affects valuations
-- Dividend policy stability depends on ownership structure
-
-**Valuation Considerations:**
-- State ownership discounts or premiums
-- Privatization potential creating optionality
-- Governance improvements unlocking value
-- Policy risk affecting multiples
-
-### New Listings and Capital-Market Agendas
-
-Some governments and exchanges in the region have explicit goals to deepen local capital markets:
-
-**Market Development Objectives:**
-- Attract regional champions to list locally
-- Encourage new economy firms to go public
-- Develop local institutional investor base
-- Increase market liquidity and depth
-
-**Recent Developments:**
-- IPOs of infrastructure assets
-- Energy and utility spin‑offs
-- Listings of regional banks
-- Consumer‑facing companies going public
-
-**Challenges:**
-- Pipelines can be uneven across countries
-- Macroeconomic volatility affects timing
-- Global risk appetite heavily influences IPO windows
-- Regulatory and governance standards vary
-
-**Investor Engagement:**
-- Track national capital‑market strategies
-- Engage with exchanges and regulators
-- Understand pipeline quality and timing
-- Assess investor‑protection frameworks
-
-**Future Opportunities:**
-- Infrastructure privatization creating new listings
-- Technology companies considering public markets
-- Regional champions expanding through listings
-- Cross-border listings and dual listings
-
-## Governance, Minority Rights, and ESG Considerations
-
-### State Influence and Corporate Governance
-
-State involvement creates complex dynamics:
-
-**Potential Benefits:**
-- Implicit support in crises
-- Policy alignment in strategic sectors
-- Long-term orientation
-- Strategic sector protection
-
-**Potential Drawbacks:**
-- Conflicts between political and commercial objectives
-- Uncertainty around capital allocation and payout policies
-- Political interference in operations
-- Minority shareholder concerns
-
-**Governance Assessment:**
-- Board independence and composition
-- Minority shareholder protections
-- Track record of related‑party transactions
-- Policy‑driven decisions affecting equity value
-
-**Investor Considerations:**
-- Governance quality varies significantly
-- State ownership creates specific risks
-- Minority rights protection is crucial
-- Transparency and disclosure standards matter
-
-### ESG and Transition Risks
-
-CEE companies face significant ESG challenges:
-
-**Legacy Assets:**
-- High‑emitting energy sectors
-- Industrial and mining activities
-- Environmental remediation needs
-- Transition capital requirements
-
-**Regulatory Pressure:**
-- Increasing EU‑level climate and environmental regulation
-- Carbon pricing and emissions trading
-- Environmental standards and compliance
-- Transition planning requirements
-
-**For Equity Investors:**
-- Transition plans and capex commitments are critical
-- Environmental liabilities and remediation obligations affect valuations
-- Disclosure quality and ESG‑risk management vary
-- Transition risks can create both challenges and opportunities
-
-**ESG Integration:**
-- Assessing company ESG practices
-- Understanding transition risks
-- Evaluating ESG improvement potential
-- Considering ESG in investment decisions
-
-## Country-Specific Considerations
-
-### Poland
-
-**Market Characteristics:**
-- Largest CEE equity market
-- Most developed capital markets
-- Reasonable liquidity in top names
-- Growing small-cap universe
-
-**Investment Themes:**
-- Banking sector strength
-- Consumer growth
-- Infrastructure development
-- Technology sector growth
-
-### Czech Republic
-
-**Market Characteristics:**
-- Developed market structure
-- Strong manufacturing focus
-- Reasonable liquidity
-- Quality companies
-
-**Investment Themes:**
-- Manufacturing excellence
-- Automotive sector
-- Consumer growth
-- Infrastructure
-
-### Hungary
-
-**Market Characteristics:**
-- Smaller market size
-- Policy volatility
-- State influence
-- Limited liquidity
-
-**Investment Themes:**
-- Selective opportunities
-- Policy risk management
-- Quality focus
-- Careful position sizing
-
-### Romania
-
-**Market Characteristics:**
-- Large population and growth potential
-- Governance challenges
-- Developing markets
-- Limited liquidity
-
-**Investment Themes:**
-- Growth potential
-- Banking sector
-- Consumer growth
-- Selective quality
-
-### Other Markets
-
-**Characteristics:**
-- Varying sizes and development
-- Different risk profiles
-- Selective opportunities
-- Liquidity considerations
-
-## Portfolio Construction and Risk Management
-
-### Liquidity-Aware Position Sizing
-
-Given market depth constraints, careful position sizing is essential:
-
-**Position Sizing Principles:**
-- Calibrate sizes to average daily volumes
-- Structure positions to allow exits under stress scenarios
-- Consider free float and ownership structure
-- Account for concentration risks
-
-**Liquidity Management Tools:**
-- Combine direct holdings in larger names with regional funds or ETFs for smaller markets
-- Use staggered execution strategies to limit market impact
-- Maintain liquidity buffers
-- Monitor position sizes relative to market depth
-
-**Risk Management:**
-- Set position limits based on liquidity
-- Diversify across countries and sectors
-- Monitor concentration risks
-- Plan exit strategies
-
-### Country and Political Risk
-
-CEE equity returns are influenced by multiple risk factors:
-
-**Political Factors:**
-- Domestic political cycles
-- Policy changes and reversals
-- EU relations and conditionality
-- Geopolitical tensions
-
-**Economic Factors:**
-- EU funding flows and conditionality
-- Economic growth cycles
-- Currency volatility
-- Inflation dynamics
-
-**Geopolitical Factors:**
-- Relations with neighboring countries
-- Broader geopolitical bloc dynamics
-- Regional tensions
-- EU integration depth
-
-**Country‑Level Diagnostics:**
-- Stability and predictability of policy and regulation
-- Tax and fiscal regime consistency
-- Treatment of foreign investors
-- Rule of law and institutional quality
-
-**Risk Management:**
-- Diversify across multiple CEE markets
-- Adjust exposure as political risk premia widen or narrow
-- Monitor country-specific developments
-- Maintain flexibility in allocation
-
-### Sector and Factor Considerations
-
-**Sector Allocation:**
-- Understand sector concentration risks
-- Balance cyclical and defensive exposures
-- Consider sector-specific risks
-- Monitor sector developments
-
-**Factor Exposure:**
-- Recognize implicit factor tilts
-- Balance factor exposures
-- Consider style factors
-- Monitor factor performance
-
-## Investment Strategies
-
-### Active vs. Passive Approaches
-
-**Active Management:**
-- Can add value through stock selection
-- Important for liquidity management
-- Governance engagement opportunities
-- Flexibility in positioning
-
-**Passive Approaches:**
-- Lower cost
-- Broad diversification
-- Index tracking
-- Limited flexibility
-
-**Hybrid Approaches:**
-- Core passive with active satellite
-- Active in liquid names, passive in smaller markets
-- Factor-based strategies
-- Thematic approaches
-
-### Thematic Opportunities
-
-**EU Integration:**
-- Structural fund beneficiaries
-- Supply chain integration
-- Regulatory harmonization
-- Market access benefits
-
-**Digitalization:**
-- Technology adoption
-- Digital infrastructure
-- E-commerce growth
-- Fintech development
-
-**Sustainability:**
-- Energy transition
-- Environmental investments
-- ESG improvements
-- Green finance
-
-**Consumer Growth:**
-- Rising incomes
-- Urbanization
-- Consumer spending growth
-- Brand development
-
-## Conclusion
-
-CEE equity markets remain relatively shallow and concentrated, but they are not static. Privatizations, new listings, and the integration of regional champions into broader European supply chains are gradually expanding the opportunity set. The region offers unique opportunities for investors willing to navigate the complexities of shallow markets, governance challenges, and country-specific risks.
-
-For investors, the key is to treat CEE equities as a **targeted, liquidity‑aware allocation** within a broader EM or European portfolio. Success requires focus on governance and minority‑rights protections, sector and country balance, and sensible position sizes relative to market depth.
-
-The CEE region's economic fundamentals remain attractive, with catch-up growth potential, EU integration benefits, and competitive advantages in manufacturing and services. As capital markets develop and governance standards improve, the investment opportunity set should continue to expand.
-
-With a disciplined framework that accounts for liquidity constraints, governance risks, and country-specific factors, CEE can provide differentiated exposure to convergence, reform, and regional growth without unduly compromising liquidity or governance standards. Investors who commit the necessary resources to understand these markets and manage their unique risks can find attractive opportunities in this evolving landscape.`,
+Эта статья исследует, как инвесторы могут подходить к рынкам акций ЦВЕ, с фокусом на структуру рынка и ликвидность, трубопроводы приватизации и листингов, и соображения управления и странового риска.
+
+## Понимание региона ЦВЕ
+
+### Экономические характеристики
+
+**Динамика роста:**
+- Потенциал догоняющего роста относительно Западной Европы
+- Преимущества членства в ЕС и доступ к структурным фондам
+- Конкурентоспособные производственные и экспортные секторы
+- Молодые и образованные рабочие силы
+- Растущая урбанизация и потребительские расходы
+
+**Экономическая структура:**
+- Сильные производственные секторы, особенно автомобильная промышленность и электроника
+- Растущие секторы услуг
+- Потребности в развитии энергетики и инфраструктуры
+- Банковские системы, которые центральны для финансового посредничества
+
+**Преимущества интеграции:**
+- Доступ к единому рынку ЕС
+- Интеграция цепочек поставок с Западной Европой
+- Передача технологий и знаний
+- Регуляторная гармонизация
+
+### Региональное разнообразие
+
+**Вариации стран:**
+- Польша: Крупнейшая экономика, наиболее развитый рынок акций
+- Чешская Республика: Сильное производство, развитый рынок
+- Венгрия: Меньший рынок, волатильность политики
+- Румыния: Большое население, потенциал роста, вызовы управления
+- Болгария: Меньший рынок, преимущества интеграции в ЕС
+- Другие рынки: Различные размеры и уровни развития
+
+**Инвестиционные последствия:**
+- Требуется страновая оценка риска
+- Различные структуры рынка и профили ликвидности
+- Различные стандарты управления и регулирования
+- Разнообразные экономические драйверы и отраслевые составы
+
+## Структура рынков акций ЦВЕ
+
+### Глубина рынка и свободный флоат
+
+Индексы акций ЦВЕ часто имеют отличительные структурные характеристики:
+
+**Концентрация крупных компаний:**
+- Небольшое количество крупных компаний со значительной государственной собственностью
+- Концентрированные внутренние базы акционеров
+- Стратегические инвесторы, держащие существенные доли
+- Ограниченный свободный флоат, снижающий доступные акции
+
+**Вселенная малых и средних компаний:**
+- Длинный хвост малых и средних компаний с тонкими объемами торговли
+- Ограниченное аналитическое покрытие, создающее информационные пробелы
+- Более низкая институциональная собственность
+- Более идиосинкратический риск
+
+**Вызовы глубины рынка:**
+- Сложность построения или выхода из позиций без движения цен
+- Риск концентрации в горстке ликвидных имен
+- Ограниченные опции диверсификации в рамках отдельных рынков
+- Более высокие транзакционные затраты из-за более широких спредов
+
+**Возможности от структуры рынка:**
+- Неправильное ценообразование, где основы улучшаются быстрее, чем ликвидность
+- Реформы управления, которые разблокируют ценность
+- Приватизация, создающая новые инвестиционные возможности
+- Развитие рынка, расширяющее набор возможностей
+
+### Отраслевая концентрация
+
+Общие отраслевые наклоны отражают экономическую структуру региона:
+
+**Банки и финансы:**
+- Большие веса, отражающие банко-центрические финансовые системы
+- Банки как основные финансовые посредники
+- Экспозиция к кредитным циклам и экономическому росту
+- Дивидендные доходности и потенциал возврата капитала
+
+**Энергетика и коммунальные услуги:**
+- Наследие национальных чемпионов со стратегической важностью
+- Растущая экспозиция к переходным инвестициям
+- Регуляторные рамки, влияющие на доходность
+- Потребности в развитии инфраструктуры
+
+**Телекоммуникации и инфраструктура:**
+- Стабильные денежные потоки от основных услуг
+- Регулируемые ценовые рамки
+- Требования к инфраструктурным инвестициям
+- Возможности цифровой трансформации
+
+**Недопредставленные секторы:**
+- Высокорослые технологические компании (хотя это меняется)
+- Диверсифицированные потребительские имена (растущие, но все еще ограниченные)
+- Здравоохранение и фармацевтика (развивающиеся)
+- Недвижимость (растущая, но фрагментированная)
+
+**Инвестиционные последствия:**
+- Инвесторы должны признавать, что распределения акций ЦВЕ часто подразумевают специфические отраслевые и факторные экспозиции
+- Портфели ведут себя иначе, чем более широкие бенчмарки развивающихся рынков или Европы
+- Отраслевая концентрация создает как риск, так и возможность
+- Понимание отраслевой динамики критично для управления рисками
+
+### Размер рынка и ликвидность
+
+**Рыночная капитализация:**
+- Общая рыночная капитализация значительно варьируется по странам
+- Польша имеет крупнейший рынок в регионе
+- Другие рынки меньше, но растут
+- Коэффициенты рыночной капитализации к ВВП ниже, чем в Западной Европе
+
+**Характеристики ликвидности:**
+- Топовые имена имеют разумную ликвидность
+- Средние и малые компании часто неликвидны
+- Объемы торговли сконцентрированы в нескольких акциях
+- Ликвидность может исчезать во время стресса
+
+**Состав индекса:**
+- Узкие индексы с небольшим количеством составляющих
+- Высокая концентрация в топовых холдингах
+- Ограниченная диверсификация в рамках индексов
+- Активное управление может добавлять ценность
+
+## Приватизации, IPO и развитие рынка
+
+### Волны приватизации и государственная собственность
+
+Страны ЦВЕ прошли через множественные волны приватизации с момента перехода от коммунизма:
+
+**Историческая приватизация:**
+- Ранние пост-переходные приватизации в 1990-х годах
+- Последующие продажи остаточных государственных долей
+- Стратегические продажи иностранным инвесторам
+- Публичные предложения, создающие листинговые компании
+
+**Текущая государственная собственность:**
+- Государства сохраняют значительные доли в стратегических секторах
+- Золотые акции, предоставляющие права вето
+- Блокирующие меньшинства, предотвращающие полный контроль
+- Неформальное влияние на стратегию и операции
+
+**Планы приватизации:**
+- Текущие программы приватизации в нескольких странах
+- Планы по сокращению государственной собственности
+- Соображения стратегических секторов
+- Политические факторы, влияющие на сроки и выполнение
+
+**Для инвесторов:**
+- Ясность относительно будущих планов приватизации критична
+- Управленческие договоренности в частично приватизированных организациях имеют значение
+- Риск политического вмешательства влияет на оценки
+- Стабильность политики дивидендов зависит от структуры собственности
+
+**Соображения оценки:**
+- Скидки или премии государственной собственности
+- Потенциал приватизации, создающий опциональность
+- Улучшения управления, разблокирующие ценность
+- Политический риск, влияющий на мультипликаторы
+
+### Новые листинги и программы рынков капитала
+
+Некоторые правительства и биржи в регионе имеют явные цели по углублению местных рынков капитала:
+
+**Цели развития рынка:**
+- Привлечь региональных чемпионов к листингу локально
+- Поощрить компании новой экономики к выходу на публичные рынки
+- Развить местную базу институциональных инвесторов
+- Увеличить ликвидность и глубину рынка
+
+**Недавние разработки:**
+- IPO инфраструктурных активов
+- Спин-оффы энергетики и коммунальных услуг
+- Листинги региональных банков
+- Потребительские компании, выходящие на публичные рынки
+
+**Вызовы:**
+- Трубопроводы могут быть неравномерными по странам
+- Макроэкономическая волатильность влияет на сроки
+- Глобальный аппетит к риску сильно влияет на окна IPO
+- Регуляторные и управленческие стандарты различаются
+
+**Вовлеченность инвесторов:**
+- Отслеживать национальные стратегии рынков капитала
+- Взаимодействовать с биржами и регуляторами
+- Понимать качество и сроки трубопроводов
+- Оценивать рамки защиты инвесторов
+
+**Будущие возможности:**
+- Приватизация инфраструктуры, создающая новые листинги
+- Технологические компании, рассматривающие публичные рынки
+- Региональные чемпионы, расширяющиеся через листинги
+- Кросс-граничные листинги и двойные листинги
+
+## Управление, права меньшинств и соображения ESG
+
+### Государственное влияние и корпоративное управление
+
+Государственное участие создает сложную динамику:
+
+**Потенциальные преимущества:**
+- Неявная поддержка в кризисах
+- Политическое выравнивание в стратегических секторах
+- Долгосрочная ориентация
+- Защита стратегических секторов
+
+**Потенциальные недостатки:**
+- Конфликты между политическими и коммерческими целями
+- Неопределенность вокруг распределения капитала и политики выплат
+- Политическое вмешательство в операции
+- Заботы акционеров-меньшинств
+
+**Оценка управления:**
+- Независимость и состав совета директоров
+- Защита акционеров-меньшинств
+- Послужной список связанных сторонних транзакций
+- Политически-движимые решения, влияющие на стоимость акций
+
+**Соображения инвесторов:**
+- Качество управления значительно варьируется
+- Государственная собственность создает специфические риски
+- Защита прав меньшинств критична
+- Стандарты прозрачности и раскрытия имеют значение
+
+### ESG и переходные риски
+
+Компании ЦВЕ сталкиваются со значительными вызовами ESG:
+
+**Наследие активов:**
+- Высокоэмиссионные энергетические секторы
+- Промышленная и горнодобывающая деятельность
+- Потребности в экологической реабилитации
+- Требования к переходному капиталу
+
+**Регуляторное давление:**
+- Растущее климатическое и экологическое регулирование уровня ЕС
+- Ценообразование на углерод и торговля выбросами
+- Экологические стандарты и соответствие
+- Требования к планированию перехода
+
+**Для инвесторов в акции:**
+- Планы перехода и обязательства по капитальным затратам критичны
+- Экологические обязательства и обязательства по реабилитации влияют на оценки
+- Качество раскрытия и управление ESG-рисками различаются
+- Переходные риски могут создавать как вызовы, так и возможности
+
+**Интеграция ESG:**
+- Оценка практик ESG компаний
+- Понимание переходных рисков
+- Оценка потенциала улучшения ESG
+- Учет ESG в инвестиционных решениях
+
+## Страновые соображения
+
+### Польша
+
+**Характеристики рынка:**
+- Крупнейший рынок акций ЦВЕ
+- Наиболее развитые рынки капитала
+- Разумная ликвидность в топовых именах
+- Растущая вселенная малых компаний
+
+**Инвестиционные темы:**
+- Сила банковского сектора
+- Рост потребителей
+- Развитие инфраструктуры
+- Рост технологического сектора
+
+### Чешская Республика
+
+**Характеристики рынка:**
+- Развитая структура рынка
+- Сильный фокус на производство
+- Разумная ликвидность
+- Качественные компании
+
+**Инвестиционные темы:**
+- Производственное превосходство
+- Автомобильный сектор
+- Рост потребителей
+- Инфраструктура
+
+### Венгрия
+
+**Характеристики рынка:**
+- Меньший размер рынка
+- Волатильность политики
+- Государственное влияние
+- Ограниченная ликвидность
+
+**Инвестиционные темы:**
+- Селективные возможности
+- Управление политическим риском
+- Фокус на качестве
+- Тщательное определение размера позиций
+
+### Румыния
+
+**Характеристики рынка:**
+- Большое население и потенциал роста
+- Вызовы управления
+- Развивающиеся рынки
+- Ограниченная ликвидность
+
+**Инвестиционные темы:**
+- Потенциал роста
+- Банковский сектор
+- Рост потребителей
+- Селективное качество
+
+### Другие рынки
+
+**Характеристики:**
+- Различные размеры и развитие
+- Различные профили риска
+- Селективные возможности
+- Соображения ликвидности
+
+## Построение портфеля и управление рисками
+
+### Определение размера позиций с учетом ликвидности
+
+Учитывая ограничения глубины рынка, тщательное определение размера позиций необходимо:
+
+**Принципы определения размера позиций:**
+- Калибровать размеры к средним дневным объемам
+- Структурировать позиции для возможности выхода в стрессовых сценариях
+- Учитывать свободный флоат и структуру собственности
+- Учитывать риски концентрации
+
+**Инструменты управления ликвидностью:**
+- Комбинировать прямые холдинги в крупных именах с региональными фондами или ETF для меньших рынков
+- Использовать поэтапные стратегии выполнения для ограничения рыночного воздействия
+- Поддерживать буферы ликвидности
+- Мониторить размеры позиций относительно глубины рынка
+
+**Управление рисками:**
+- Устанавливать лимиты позиций на основе ликвидности
+- Диверсифицировать по странам и секторам
+- Мониторить риски концентрации
+- Планировать стратегии выхода
+
+### Страновой и политический риск
+
+Доходности акций ЦВЕ влияют множественные факторы риска:
+
+**Политические факторы:**
+- Внутренние политические циклы
+- Изменения политики и развороты
+- Отношения с ЕС и обусловленность
+- Геополитические напряжения
+
+**Экономические факторы:**
+- Потоки финансирования ЕС и обусловленность
+- Циклы экономического роста
+- Валютная волатильность
+- Динамика инфляции
+
+**Геополитические факторы:**
+- Отношения с соседними странами
+- Более широкая геополитическая динамика блоков
+- Региональные напряжения
+- Глубина интеграции в ЕС
+
+**Страновые диагностики:**
+- Стабильность и предсказуемость политики и регулирования
+- Последовательность налогового и фискального режима
+- Обращение с иностранными инвесторами
+- Верховенство закона и качество институтов
+
+**Управление рисками:**
+- Диверсифицировать по множественным рынкам ЦВЕ
+- Корректировать экспозицию по мере расширения или сужения политических премий риска
+- Мониторить страновые разработки
+- Поддерживать гибкость в распределении
+
+### Соображения секторов и факторов
+
+**Отраслевое распределение:**
+- Понимать риски отраслевой концентрации
+- Балансировать циклические и защитные экспозиции
+- Учитывать отраслевые риски
+- Мониторить отраслевые разработки
+
+**Факторная экспозиция:**
+- Распознавать неявные факторные наклоны
+- Балансировать факторные экспозиции
+- Учитывать стилевые факторы
+- Мониторить факторную производительность
+
+## Инвестиционные стратегии
+
+### Активные против пассивных подходов
+
+**Активное управление:**
+- Может добавлять ценность через отбор акций
+- Важно для управления ликвидностью
+- Возможности вовлечения в управление
+- Гибкость в позиционировании
+
+**Пассивные подходы:**
+- Более низкая стоимость
+- Широкая диверсификация
+- Отслеживание индекса
+- Ограниченная гибкость
+
+**Гибридные подходы:**
+- Основной пассивный с активным спутником
+- Активный в ликвидных именах, пассивный в меньших рынках
+- Факторные стратегии
+- Тематические подходы
+
+### Тематические возможности
+
+**Интеграция в ЕС:**
+- Бенефициары структурных фондов
+- Интеграция цепочек поставок
+- Регуляторная гармонизация
+- Преимущества доступа к рынку
+
+**Цифровизация:**
+- Принятие технологий
+- Цифровая инфраструктура
+- Рост электронной коммерции
+- Развитие финтех
+
+**Устойчивость:**
+- Энергетический переход
+- Экологические инвестиции
+- Улучшения ESG
+- Зеленые финансы
+
+**Рост потребителей:**
+- Растущие доходы
+- Урбанизация
+- Рост потребительских расходов
+- Развитие брендов
+
+## Заключение
+
+Рынки акций ЦВЕ остаются относительно мелкими и концентрированными, но они не статичны. Приватизации, новые листинги и интеграция региональных чемпионов в более широкие европейские цепочки поставок постепенно расширяют набор возможностей. Регион предлагает уникальные возможности для инвесторов, готовых навигации по сложностям мелких рынков, вызовам управления и страновым рискам.
+
+Для инвесторов ключ заключается в том, чтобы относиться к акциям ЦВЕ как к **целевому, учитывающему ликвидность распределению** в рамках более широкого портфеля развивающихся рынков или Европы. Успех требует фокуса на защите управления и прав меньшинств, балансе секторов и стран, и разумных размерах позиций относительно глубины рынка.
+
+Экономические основы региона ЦВЕ остаются привлекательными, с потенциалом догоняющего роста, преимуществами интеграции в ЕС и конкурентными преимуществами в производстве и услугах. По мере развития рынков капитала и улучшения стандартов управления набор инвестиционных возможностей должен продолжать расширяться.
+
+С дисциплинированной рамкой, которая учитывает ограничения ликвидности, риски управления и страновые факторы, ЦВЕ может предоставлять дифференцированную экспозицию к конвергенции, реформам и региональному росту без чрезмерного компромисса ликвидности или стандартов управления. Инвесторы, которые выделяют необходимые ресурсы для понимания этих рынков и управления их уникальными рисками, могут найти привлекательные возможности в этом развивающемся ландшафте.`,
     date: formatDate(263),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -3787,374 +3787,374 @@ Central & Eastern Europe (CEE) offers exposure to converging economies, open tra
   },
   {
     slug: 'turkey-equities-and-lira-risk-new-policy-mix',
-    title: 'Turkey Equities and Lira Risk: Navigating the New Policy Mix',
+    title: 'Акции Турции и риск лиры: навигация по новой политической смеси',
     excerpt:
-      'How Turkey’s evolving monetary and fiscal policy mix, FX dynamics, and corporate balance sheets shape equity risk/return—and what that means for sector selection and position sizing.',
-    content: `# Turkey Equities and Lira Risk: Navigating the New Policy Mix
-
-## Introduction
-
-Turkey has long attracted—and tested—emerging‑market investors. Its equity market offers compelling opportunities alongside significant challenges. The market provides:
-
-- Large, liquid banks and industrials with regional scale
-- Consumer and logistics names geared to a young, urbanizing population creating growth potential
-- Exporters linked to European and Middle Eastern demand benefiting from geographic position
-
-**At the same time, investors must contend with:**
-- Episodes of unorthodox monetary policy creating uncertainty
-- High and volatile inflation eroding real returns
-- Sharp moves in the Turkish lira (TRY) affecting foreign investor returns
-- Geopolitical tensions and regional instability
-- Policy reversals and credibility challenges
-
-Recent shifts toward a more orthodox policy mix have re‑ignited debate about whether Turkey is entering a new, more investable phase or simply another tactical window. The policy changes have been significant, but history suggests caution. This article outlines a framework for analyzing Turkey's equity market in the context of macro policy, FX, and sector dynamics.
-
-## Macro Backdrop and Policy Regimes
-
-### From Unorthodox to Gradually More Orthodox
-
-Over the past decade, Turkey has experienced significant policy volatility:
-
-**Unconventional Monetary Policy Periods:**
-- Periods of **unconventional monetary policy**:
-  - Reluctance to keep policy rates high despite inflation prioritizing growth
-  - Use of regulatory and macroprudential tools to steer credit bypassing rates
-  - Multiple policy frameworks and frequent changes
-- Episodes of:
-  - Sharp TRY depreciation creating FX volatility
-  - High and volatile inflation eroding purchasing power
-  - Capital controls and regulatory interventions
-
-**Recent Policy Shifts:**
-- More recently, authorities have signaled:
-  - A shift toward higher nominal policy rates addressing inflation
-  - Efforts to simplify the policy framework improving clarity
-  - A desire to rebuild credibility with investors restoring confidence
-  - Commitment to orthodox monetary policy
-
-**For equities, this transition phase is critical:**
-- It can:
-  - Improve macro stability if sustained reducing uncertainty
-  - Support banks' margins and reduce tail risk improving fundamentals
-  - Attract foreign capital supporting valuations
-- But policy **reversals** or partial implementation remain key risks requiring vigilance
-- Historical patterns suggest policy can change quickly
-- Credibility must be earned over time
-
-### Inflation, Growth, and External Balances
-
-Turkey's economy has distinct characteristics:
-
-**Economic Structure:**
-- Turkey's economy is:
-  - Relatively large and diversified with multiple growth drivers
-  - Driven by:
-    - Domestic consumption supporting growth
-    - Construction and real estate creating employment
-    - Export‑oriented manufacturing and tourism generating foreign exchange
-
-**Challenges:**
-- However:
-  - Persistent inflation has eroded real incomes affecting consumption
-  - The current account has been:
-    - Sensitive to energy prices creating volatility
-    - Influenced by domestic demand cycles and tourism revenues affecting sustainability
-  - External financing needs remain significant
-  - Reserve adequacy concerns persist
-
-**Equity investors must keep a close eye on:**
-- The trajectory of inflation under the new policy mix affecting real returns
-- The balance between:
-  - Growth support maintaining economic activity
-  - External‑balance and inflation control ensuring stability
-- Policy credibility and sustainability
-- Geopolitical developments
-
-## Key Sectors: Banks, Exporters, and Domestic Demand
-
-### Banks: Leverage to Policy and Lira Dynamics
-
-Turkish banks are central to the economy and equity market:
-
-**Central Role:**
-- Turkish banks play a central role in:
-  - Financing the economy supporting growth
-  - Transmitting monetary policy to households and firms affecting credit
-  - Managing FX flows and reserves
-  - Supporting government financing
-
-**Risk Exposures:**
-- They are exposed to:
-  - **Interest‑rate risk**:
-    - Changes in policy and bond yields affect asset and liability pricing
-    - Net interest margins sensitive to rate cycles
-    - Securities portfolios affected by rate moves
-  - **FX risk**:
-    - Borrowers with FX debt but TRY cash flows creating currency mismatch
-    - Regulatory limits and hedging requirements partially mitigate this
-    - FX lending restrictions and requirements
-  - Credit risk from economic cycles
-  - Regulatory and policy risk
-
-**Recent Policy Shifts:**
-- Recent policy shifts toward higher rates have:
-  - The potential to:
-    - Normalize margins over time improving profitability
-    - Strengthen the lira if sustained reducing FX risk
-    - Improve bank fundamentals
-  - Short‑term pressure on:
-    - Funding costs increasing expenses
-    - Borrower repayment capacity affecting asset quality
-    - Profitability during transition
-
-**Investors should evaluate:**
-- Capital adequacy and provisioning policies assessing resilience
-- Asset‑quality trends in:
-  - Corporate loans affected by economic cycles
-  - Household and SME segments sensitive to rates
-- Regulatory changes affecting:
-  - Securities portfolios and risk management
-  - FX exposure management and limits
-- Management quality and strategy
-- Competitive positioning
-
-### Exporters and Industrial Names
-
-Export‑oriented companies represent important opportunities:
-
-**Competitive Advantages:**
-- Export‑oriented companies can:
-  - Benefit from:
-    - Competitive cost structures supporting margins
-    - A weaker TRY improving price competitiveness
-    - Geographic position between Europe and Middle East
-    - Young, skilled workforce
-  - Suffer from:
-    - Input‑cost volatility affecting margins
-    - Trade and geopolitical tensions disrupting flows
-    - Energy price sensitivity
-    - Supply chain disruptions
-
-**Key Industries Include:**
-- Autos and components with strong European presence
-- White goods and appliances with global brands
-- Textiles and apparel with competitive positioning
-- Steel and metals with regional demand
-- Chemicals and petrochemicals
-
-**Investment Differentiation:**
-- Investors should distinguish between:
-  - Firms with:
-    - Strong brands and distribution networks abroad creating moats
-    - Robust balance sheets and risk management providing resilience
-    - Diversified markets reducing concentration
-  - More commoditized producers with:
-    - Thin margins vulnerable to competition
-    - High leverage increasing risk
-    - Limited differentiation
-
-### Domestic Demand and Consumer Names
-
-Consumer, retail, and logistics companies are sensitive to domestic conditions:
-
-**Demand Drivers:**
-- Consumer, retail, and logistics companies are:
-  - Levered to:
-    - Real‑income trends affecting purchasing power
-    - Employment and wage dynamics supporting consumption
-    - Credit availability enabling spending
-    - Demographic trends with young population
-
-**High-Inflation Environment:**
-- In high‑inflation environments:
-  - Inventory and pricing management become critical for profitability
-  - Companies that:
-    - Adjust prices quickly maintaining margins
-    - Manage working capital tightly reducing risk
-    - Have pricing power protecting profitability
-  may defend margins better
-
-**Challenges:**
-- However, elevated rates and inflation can:
-  - Weigh on discretionary spending reducing demand
-  - Increase credit risk in retail portfolios affecting banks
-  - Reduce consumer confidence
-  - Create operational challenges
-
-## FX and Equity Risk: Thinking About the Lira
-
-### TRY as a Central Risk Channel
-
-For foreign investors, TRY performance is often the dominant factor:
-
-**Return Driver:**
-- For foreign investors, TRY performance is often:
-  - The dominant driver of **total returns** in unhedged equity allocations
-  - Can overwhelm equity performance
-  - Creates significant volatility
-  - Requires active management
-
-**TRY Dynamics:**
-- TRY can:
-  - Rallies under:
-    - Credible policy tightening restoring confidence
-    - Improved external balances reducing vulnerability
-    - Positive surprises on reform attracting capital
-    - Strong tourism and export performance
-  - Weaken sharply when:
-    - Policy appears unsustainable creating doubt
-    - Geopolitical risks flare affecting sentiment
-    - Global risk appetite turns reducing EM flows
-    - External imbalances worsen
-    - Political uncertainty increases
-
-**Historical Patterns:**
-- TRY has experienced significant volatility
-- Policy credibility is key driver
-- External factors matter significantly
-- Capital flows are sensitive
-
-### Hedging Considerations
-
-Hedging TRY exposure requires careful analysis:
-
-**Hedging Options:**
-- Hedging TRY exposure:
-  - Can reduce FX volatility providing stability
-  - May be:
-    - Expensive or capacity‑constrained, depending on instruments and tenors
-    - Complex to implement
-    - Subject to regulatory constraints
-
-**Investment Approach:**
-- Investors must decide:
-  - Whether Turkey is:
-    - A **tactical bet** sized small enough to tolerate FX swings accepting volatility
-    - Or a more **strategic allocation** where partial hedging could make sense reducing risk
-  - Risk tolerance and objectives
-  - Time horizon and strategy
-
-**Hedging Strategies:**
-- Full hedging eliminates FX risk but also upside
-- Partial hedging balances risk and return
-- Dynamic hedging adjusts to conditions
-- No hedging maximizes exposure to TRY moves
-
-## Portfolio Construction and Risk Management
-
-### Sizing and Time Horizon
-
-Given macro and FX volatility, Turkey requires careful positioning:
-
-**Portfolio Role:**
-- Given macro and FX volatility, Turkey is best approached as:
-  - A **small satellite allocation** within EM or EMEA portfolios limiting risk
-  - Not a core holding given volatility
-  - Tactical or strategic depending on view
-
-**Position Sizing:**
-- Position sizes should:
-  - Reflect:
-    - Risk tolerance for:
-      - Double‑digit drawdowns accepting volatility
-      - Policy surprises requiring flexibility
-    - Liquidity of key names ensuring exit options
-  - Be sized appropriately for risk budget
-  - Consider correlation with other holdings
-
-**Time Horizons:**
-- Short‑term traders may focus on:
-  - Cycles in policy communication and inflows
-  - Technical factors and sentiment
-  - Event-driven opportunities
-- Long‑horizon investors should:
-  - Require a:
-    - Clear narrative on policy normalization providing confidence
-    - Buffer against reversals managing risk
-  - Focus on fundamentals and value
-  - Take long-term view
-
-### Stock Selection and Governance
-
-Corporate governance varies significantly:
-
-**Governance Quality:**
-- Corporate governance and shareholder treatment vary:
-  - Some Turkish companies:
-    - Have improved disclosures providing transparency
-    - Follow international standards enabling comparison
-    - Have strong management and boards
-  - Others:
-    - Remain more opaque creating risk
-    - Exhibit cyclical or politically influenced decision‑making affecting strategy
-    - Have weak governance structures
-
-**Investment Focus:**
-- Investors should:
-  - Focus on:
-    - Governance quality reducing risk
-    - Capital‑allocation discipline ensuring value creation
-    - Balance‑sheet resilience providing safety
-  - Avoid companies with governance concerns
-  - Engage with management where possible
-  - Monitor governance developments
-
-## Geopolitical and Regional Factors
-
-### Geopolitical Risks
-
-Turkey faces significant geopolitical challenges:
-
-**Regional Tensions:**
-- Relations with neighbors can affect markets
-- EU relations impact trade and investment
-- Middle East dynamics create risks
-- Refugee and migration issues
-
-**Impact on Markets:**
-- Geopolitical tensions can:
-  - Affect foreign investment flows
-  - Impact trade relationships
-  - Create policy uncertainty
-  - Affect currency and markets
-
-### Regional Position
-
-Turkey's geographic position creates both opportunities and risks:
-
-**Opportunities:**
-- Bridge between Europe and Asia
-- Access to multiple markets
-- Strategic location for trade
-- Tourism from multiple regions
-
-**Risks:**
-- Exposure to regional conflicts
-- Dependence on trade routes
-- Energy transit risks
-- Refugee and migration pressures
-
-## Conclusion
-
-Turkey offers a combination of:
-
-- Deep equity liquidity enabling investment
-- Exposure to:
-  - Banks with policy sensitivity
-  - Exporters with competitive advantages
-  - Domestic demand with growth potential
-- Elevated macro and FX volatility requiring management
-
-**The recent shift toward a more orthodox policy mix may **improve the risk‑reward balance**, but credibility must be earned over time, not assumed.** Policy changes are positive but need to be sustained. **For investors, Turkey is best treated as:**
-
-- A targeted, risk‑budgeted exposure sized appropriately
-- Built on:
-  - Careful bank and corporate selection focusing on quality
-  - Explicit views on the lira and policy path managing FX risk
-  - Understanding of geopolitical factors
-  - Appropriate time horizon and strategy
-
-**With such a framework, Turkey can complement broader emerging‑Europe allocations, offering upside in reform and normalization scenarios without overwhelming portfolio risk.** Success requires discipline, risk management, and realistic expectations. The market offers opportunities but demands respect for its volatility and complexity.`,
+      'Как развивающаяся смесь монетарной и фискальной политики Турции, валютная динамика и корпоративные балансы формируют риск/доходность акций — и что это означает для выбора секторов и определения размера позиций.',
+    content: `# Акции Турции и риск лиры: навигация по новой политической смеси
+
+## Введение
+
+Турция долгое время привлекала — и испытывала — инвесторов развивающихся рынков. Её рынок акций предлагает убедительные возможности наряду со значительными вызовами. Рынок предоставляет:
+
+- Крупные, ликвидные банки и промышленные компании регионального масштаба
+- Потребительские и логистические имена, ориентированные на молодое, урбанизирующееся население, создающее потенциал роста
+- Экспортеры, связанные с европейским и ближневосточным спросом, выигрывающие от географического положения
+
+**В то же время инвесторы должны бороться с:**
+- Эпизодами неортодоксальной монетарной политики, создающими неопределенность
+- Высокой и волатильной инфляцией, разъедающей реальную доходность
+- Резкими движениями турецкой лиры (TRY), влияющими на доходность иностранных инвесторов
+- Геополитическими напряжениями и региональной нестабильностью
+- Разворотами политики и вызовами надежности
+
+Недавние сдвиги к более ортодоксальной политической смеси вновь разожгли дебаты о том, входит ли Турция в новую, более инвестируемую фазу или это просто еще одно тактическое окно. Изменения политики были значительными, но история предполагает осторожность. Эта статья описывает рамку для анализа рынка акций Турции в контексте макро-политики, валют и отраслевой динамики.
+
+## Макро-фон и политические режимы
+
+### От неортодоксального к постепенно более ортодоксальному
+
+За последнее десятилетие Турция пережила значительную волатильность политики:
+
+**Периоды неконвенциональной монетарной политики:**
+- Периоды **неконвенциональной монетарной политики**:
+  - Нежелание держать политические ставки высокими, несмотря на инфляцию, приоритизируя рост
+  - Использование регуляторных и макропруденциальных инструментов для управления кредитом, обходя ставки
+  - Множественные политические рамки и частые изменения
+- Эпизоды:
+  - Резкого обесценивания TRY, создающего валютную волатильность
+  - Высокой и волатильной инфляции, разъедающей покупательную способность
+  - Контроля капитала и регуляторных интервенций
+
+**Недавние политические сдвиги:**
+- Более недавно власти сигнализировали:
+  - Сдвиг к более высоким номинальным политическим ставкам, решая инфляцию
+  - Усилия по упрощению политической рамки, улучшая ясность
+  - Желание восстановить надежность с инвесторами, восстанавливая доверие
+  - Приверженность ортодоксальной монетарной политике
+
+**Для акций эта переходная фаза критична:**
+- Она может:
+  - Улучшить макро-стабильность, если поддерживается, снижая неопределенность
+  - Поддержать маржи банков и снизить хвостовой риск, улучшая основы
+  - Привлечь иностранный капитал, поддерживая оценки
+- Но политические **развороты** или частичная реализация остаются ключевыми рисками, требующими бдительности
+- Исторические паттерны предполагают, что политика может быстро изменяться
+- Надежность должна зарабатываться со временем
+
+### Инфляция, рост и внешние балансы
+
+Экономика Турции имеет отличительные характеристики:
+
+**Экономическая структура:**
+- Экономика Турции:
+  - Относительно крупная и диверсифицированная с множественными драйверами роста
+  - Движима:
+    - Внутренним потреблением, поддерживающим рост
+    - Строительством и недвижимостью, создающими занятость
+    - Экспортно-ориентированным производством и туризмом, генерирующими иностранную валюту
+
+**Вызовы:**
+- Однако:
+  - Устойчивая инфляция разъела реальные доходы, влияя на потребление
+  - Текущий счет был:
+    - Чувствителен к ценам на энергоносители, создавая волатильность
+    - Под влиянием циклов внутреннего спроса и доходов от туризма, влияя на устойчивость
+  - Потребности во внешнем финансировании остаются значительными
+  - Заботы об адекватности резервов сохраняются
+
+**Инвесторы в акции должны внимательно следить за:**
+- Траекторией инфляции под новой политической смесью, влияющей на реальную доходность
+- Балансом между:
+  - Поддержкой роста, поддерживающей экономическую активность
+  - Контролем внешнего баланса и инфляции, обеспечивающим стабильность
+- Политической надежностью и устойчивостью
+- Геополитическими разработками
+
+## Ключевые секторы: банки, экспортеры и внутренний спрос
+
+### Банки: леверидж к политике и динамике лиры
+
+Турецкие банки центральны для экономики и рынка акций:
+
+**Центральная роль:**
+- Турецкие банки играют центральную роль в:
+  - Финансировании экономики, поддерживая рост
+  - Передаче монетарной политики домохозяйствам и фирмам, влияя на кредит
+  - Управлении валютными потоками и резервами
+  - Поддержке государственного финансирования
+
+**Экспозиции риска:**
+- Они подвержены:
+  - **Процентному риску**:
+    - Изменения политики и доходностей облигаций влияют на ценообразование активов и обязательств
+    - Чистые процентные маржи чувствительны к циклам ставок
+    - Портфели ценных бумаг, затронутые движениями ставок
+  - **Валютному риску**:
+    - Заемщики с валютным долгом, но денежными потоками TRY, создающие валютное несоответствие
+    - Регуляторные лимиты и требования хеджирования частично смягчают это
+    - Ограничения и требования валютного кредитования
+  - Кредитному риску от экономических циклов
+  - Регуляторному и политическому риску
+
+**Недавние политические сдвиги:**
+- Недавние политические сдвиги к более высоким ставкам имеют:
+  - Потенциал:
+    - Нормализовать маржи со временем, улучшая прибыльность
+    - Укрепить лиру, если поддерживается, снижая валютный риск
+    - Улучшить основы банков
+  - Краткосрочное давление на:
+    - Затраты на финансирование, увеличивая расходы
+    - Способность заемщиков к погашению, влияя на качество активов
+    - Прибыльность во время перехода
+
+**Инвесторам следует оценивать:**
+- Адекватность капитала и политику резервирования, оценивая устойчивость
+- Тренды качества активов в:
+  - Корпоративных кредитах, затронутых экономическими циклами
+  - Сегментах домохозяйств и МСП, чувствительных к ставкам
+- Регуляторные изменения, влияющие на:
+  - Портфели ценных бумаг и управление рисками
+  - Управление валютной экспозицией и лимиты
+- Качество управления и стратегию
+- Конкурентное позиционирование
+
+### Экспортеры и промышленные имена
+
+Экспортно-ориентированные компании представляют важные возможности:
+
+**Конкурентные преимущества:**
+- Экспортно-ориентированные компании могут:
+  - Выигрывать от:
+    - Конкурентоспособных структур затрат, поддерживающих маржи
+    - Более слабой TRY, улучшающей ценовую конкурентоспособность
+    - Географического положения между Европой и Ближним Востоком
+    - Молодой, квалифицированной рабочей силы
+  - Страдать от:
+    - Волатильности затрат на входы, влияющей на маржи
+    - Торговых и геополитических напряжений, нарушающих потоки
+    - Чувствительности к ценам на энергоносители
+    - Нарушений цепочек поставок
+
+**Ключевые отрасли включают:**
+- Автомобили и компоненты с сильным европейским присутствием
+- Бытовая техника и приборы с глобальными брендами
+- Текстиль и одежда с конкурентным позиционированием
+- Сталь и металлы с региональным спросом
+- Химическая промышленность и нефтехимия
+
+**Инвестиционная дифференциация:**
+- Инвесторам следует различать между:
+  - Фирмами с:
+    - Сильными брендами и дистрибьюторскими сетями за рубежом, создающими рвы
+    - Прочными балансами и управлением рисками, обеспечивающими устойчивость
+    - Диверсифицированными рынками, снижающими концентрацию
+  - Более стандартизированными производителями с:
+    - Тонкими маржами, уязвимыми к конкуренции
+    - Высоким левериджем, увеличивающим риск
+    - Ограниченной дифференциацией
+
+### Внутренний спрос и потребительские имена
+
+Потребительские, розничные и логистические компании чувствительны к внутренним условиям:
+
+**Драйверы спроса:**
+- Потребительские, розничные и логистические компании:
+  - Имеют леверидж к:
+    - Трендам реальных доходов, влияющим на покупательную способность
+    - Динамике занятости и заработной платы, поддерживающей потребление
+    - Доступности кредита, позволяющей траты
+    - Демографическим трендам с молодым населением
+
+**Среда высокой инфляции:**
+- В средах высокой инфляции:
+  - Управление запасами и ценообразованием становится критичным для прибыльности
+  - Компании, которые:
+    - Быстро корректируют цены, поддерживая маржи
+    - Плотно управляют оборотным капиталом, снижая риск
+    - Имеют ценовую силу, защищая прибыльность
+  могут лучше защищать маржи
+
+**Вызовы:**
+- Однако повышенные ставки и инфляция могут:
+  - Давить на дискреционные расходы, снижая спрос
+  - Увеличивать кредитный риск в розничных портфелях, влияя на банки
+  - Снижать потребительское доверие
+  - Создавать операционные вызовы
+
+## Валютный и акционный риск: размышления о лире
+
+### TRY как центральный канал риска
+
+Для иностранных инвесторов производительность TRY часто является доминирующим фактором:
+
+**Драйвер доходности:**
+- Для иностранных инвесторов производительность TRY часто:
+  - Доминирующий драйвер **общей доходности** в нехеджированных распределениях акций
+  - Может перевешивать производительность акций
+  - Создает значительную волатильность
+  - Требует активного управления
+
+**Динамика TRY:**
+- TRY может:
+  - Расти при:
+    - Заслуживающем доверия ужесточении политики, восстанавливающем доверие
+    - Улучшенных внешних балансах, снижающих уязвимость
+    - Позитивных сюрпризах по реформам, привлекающих капитал
+    - Сильной производительности туризма и экспорта
+  - Резко ослабевать, когда:
+    - Политика кажется неустойчивой, создавая сомнения
+    - Геополитические риски вспыхивают, влияя на настроения
+    - Глобальный аппетит к риску поворачивается, снижая потоки развивающихся рынков
+    - Внешние дисбалансы ухудшаются
+    - Политическая неопределенность увеличивается
+
+**Исторические паттерны:**
+- TRY пережила значительную волатильность
+- Политическая надежность является ключевым драйвером
+- Внешние факторы имеют большое значение
+- Потоки капитала чувствительны
+
+### Соображения хеджирования
+
+Хеджирование экспозиции TRY требует тщательного анализа:
+
+**Опции хеджирования:**
+- Хеджирование экспозиции TRY:
+  - Может снижать валютную волатильность, обеспечивая стабильность
+  - Может быть:
+    - Дорогим или ограниченным по емкости, в зависимости от инструментов и сроков
+    - Сложным для реализации
+    - Подверженным регуляторным ограничениям
+
+**Инвестиционный подход:**
+- Инвесторы должны решать:
+  - Является ли Турция:
+    - **Тактической ставкой**, размеренной достаточно малой, чтобы терпеть валютные колебания, принимая волатильность
+    - Или более **стратегическим распределением**, где частичное хеджирование может иметь смысл, снижая риск
+  - Толерантность к риску и цели
+  - Временной горизонт и стратегия
+
+**Стратегии хеджирования:**
+- Полное хеджирование устраняет валютный риск, но также и потенциал роста
+- Частичное хеджирование балансирует риск и доходность
+- Динамическое хеджирование корректируется к условиям
+- Отсутствие хеджирования максимизирует экспозицию к движениям TRY
+
+## Построение портфеля и управление рисками
+
+### Определение размера и временной горизонт
+
+Учитывая макро и валютную волатильность, Турция требует тщательного позиционирования:
+
+**Роль портфеля:**
+- Учитывая макро и валютную волатильность, Турцию лучше всего рассматривать как:
+  - **Малое спутниковое распределение** в рамках портфелей развивающихся рынков или EMEA, ограничивая риск
+  - Не основной холдинг, учитывая волатильность
+  - Тактический или стратегический в зависимости от взгляда
+
+**Определение размера позиций:**
+- Размеры позиций должны:
+  - Отражать:
+    - Толерантность к риску для:
+      - Двузначных просадок, принимая волатильность
+      - Политических сюрпризов, требующих гибкости
+    - Ликвидность ключевых имен, обеспечивая опции выхода
+  - Быть размеренными соответственно бюджету риска
+  - Учитывать корреляцию с другими холдингами
+
+**Временные горизонты:**
+- Краткосрочные трейдеры могут фокусироваться на:
+  - Циклах в политической коммуникации и притоках
+  - Технических факторах и настроениях
+  - Возможностях, движимых событиями
+- Долгосрочные инвесторы должны:
+  - Требовать:
+    - Четкий нарратив о нормализации политики, обеспечивающий уверенность
+    - Буфер против разворотов, управляя риском
+  - Фокусироваться на основах и ценности
+  - Принимать долгосрочный взгляд
+
+### Отбор акций и управление
+
+Корпоративное управление значительно варьируется:
+
+**Качество управления:**
+- Корпоративное управление и обращение с акционерами различаются:
+  - Некоторые турецкие компании:
+    - Улучшили раскрытие, обеспечивая прозрачность
+    - Следуют международным стандартам, позволяя сравнение
+    - Имеют сильное управление и советы директоров
+  - Другие:
+    - Остаются более непрозрачными, создавая риск
+    - Проявляют циклическое или политически влияемое принятие решений, влияющее на стратегию
+    - Имеют слабые структуры управления
+
+**Инвестиционный фокус:**
+- Инвесторам следует:
+  - Фокусироваться на:
+    - Качестве управления, снижая риск
+    - Дисциплине распределения капитала, обеспечивая создание ценности
+    - Устойчивости баланса, обеспечивая безопасность
+  - Избегать компаний с заботами управления
+  - Взаимодействовать с управлением, где возможно
+  - Мониторить разработки управления
+
+## Геополитические и региональные факторы
+
+### Геополитические риски
+
+Турция сталкивается со значительными геополитическими вызовами:
+
+**Региональные напряжения:**
+- Отношения с соседями могут влиять на рынки
+- Отношения с ЕС влияют на торговлю и инвестиции
+- Динамика Ближнего Востока создает риски
+- Проблемы беженцев и миграции
+
+**Воздействие на рынки:**
+- Геополитические напряжения могут:
+  - Влиять на потоки иностранных инвестиций
+  - Воздействовать на торговые отношения
+  - Создавать политическую неопределенность
+  - Влиять на валюту и рынки
+
+### Региональная позиция
+
+Географическое положение Турции создает как возможности, так и риски:
+
+**Возможности:**
+- Мост между Европой и Азией
+- Доступ к множественным рынкам
+- Стратегическое расположение для торговли
+- Туризм из множественных регионов
+
+**Риски:**
+- Экспозиция к региональным конфликтам
+- Зависимость от торговых маршрутов
+- Риски транзита энергоносителей
+- Давление беженцев и миграции
+
+## Заключение
+
+Турция предлагает комбинацию:
+
+- Глубокой ликвидности акций, позволяющей инвестиции
+- Экспозиции к:
+  - Банкам с политической чувствительностью
+  - Экспортерам с конкурентными преимуществами
+  - Внутреннему спросу с потенциалом роста
+- Повышенной макро и валютной волатильности, требующей управления
+
+**Недавний сдвиг к более ортодоксальной политической смеси может **улучшить баланс риск-доходность**, но надежность должна зарабатываться со временем, а не предполагаться.** Изменения политики позитивны, но должны поддерживаться. **Для инвесторов Турцию лучше всего рассматривать как:**
+
+- Целевую, учитывающую бюджет риска экспозицию, размеренную соответственно
+- Построенную на:
+  - Тщательном отборе банков и корпораций, фокусируясь на качестве
+  - Явных взглядах на лиру и политический путь, управляя валютным риском
+  - Понимании геополитических факторов
+  - Соответствующем временном горизонте и стратегии
+
+**С такой рамкой Турция может дополнять более широкие распределения развивающейся Европы, предлагая потенциал роста в сценариях реформ и нормализации без перегрузки портфельного риска.** Успех требует дисциплины, управления рисками и реалистичных ожиданий. Рынок предлагает возможности, но требует уважения к его волатильности и сложности.`,
     date: formatDate(264),
     author: 'Anastasia Petrova',
     authorAvatar: getAuthorAvatar('Anastasia Petrova'),
@@ -4172,70 +4172,70 @@ Turkey has long attracted—and tested—emerging‑market investors, combining 
   },
   {
     slug: 'poland-equity-markets-eu-integration-and-growth-dynamics',
-    title: 'Poland Equity Markets: EU Integration and Growth Dynamics',
+    title: 'Рынки акций Польши: интеграция в ЕС и динамика роста',
     excerpt:
-      'How Polish equity markets benefit from EU integration, why Poland remains attractive for emerging market investors, and which sectors offer the best growth opportunities.',
-    content: `# Poland Equity Markets: EU Integration and Growth Dynamics
+      'Как рынки акций Польши выигрывают от интеграции в ЕС, почему Польша остается привлекательной для инвесторов развивающихся рынков, и какие секторы предлагают лучшие возможности роста.',
+    content: `# Рынки акций Польши: интеграция в ЕС и динамика роста
 
-## Introduction
+## Введение
 
-Poland has been one of the most successful emerging market stories in Central and Eastern Europe, with its equity market benefiting from European Union membership, strong economic growth, and a large domestic market. Since joining the EU in 2004, Poland has transformed from a post-communist economy to a dynamic market economy with deep capital markets, strong institutions, and growing corporate sophistication. This transformation has created attractive investment opportunities while maintaining emerging market growth characteristics.
+Польша была одной из самых успешных историй развивающихся рынков в Центральной и Восточной Европе, с её рынком акций, выигрывающим от членства в Европейском Союзе, сильного экономического роста и большого внутреннего рынка. С момента присоединения к ЕС в 2004 году Польша трансформировалась из пост-коммунистической экономики в динамичную рыночную экономику с глубокими рынками капитала, сильными институтами и растущей корпоративной изощренностью. Эта трансформация создала привлекательные инвестиционные возможности, сохраняя характеристики роста развивающихся рынков.
 
-As of late 2024, Polish equities face a complex environment. EU structural funds continue to support infrastructure and development. The economy has shown resilience despite regional challenges. Corporate earnings have been solid. Yet, concerns about rule of law, EU relations, and regional geopolitics create volatility. For investors, Poland offers exposure to a large, growing economy with EU integration benefits and emerging market growth potential.
+По состоянию на конец 2024 года польские акции сталкиваются со сложной средой. Структурные фонды ЕС продолжают поддерживать инфраструктуру и развитие. Экономика показала устойчивость, несмотря на региональные вызовы. Корпоративная прибыль была солидной. Однако заботы о верховенстве закона, отношениях с ЕС и региональной геополитике создают волатильность. Для инвесторов Польша предлагает доступ к крупной, растущей экономике с преимуществами интеграции в ЕС и потенциалом роста развивающихся рынков.
 
-This evolution creates investment opportunities across multiple sectors:
-- **Financials** – well-capitalized banks with growth potential.
-- **Consumer** – growing consumer market.
-- **Technology** – emerging technology sector.
-- **Infrastructure** – infrastructure development.
+Эта эволюция создает инвестиционные возможности по множественным секторам:
+- **Финансы** – хорошо капитализированные банки с потенциалом роста.
+- **Потребители** – растущий потребительский рынок.
+- **Технологии** – развивающийся технологический сектор.
+- **Инфраструктура** – развитие инфраструктуры.
 
-This article explores how Polish equity markets are positioned, which factors drive performance, what risks exist, and how investors should evaluate opportunities in this key Central European market.
+Эта статья исследует, как позиционированы рынки акций Польши, какие факторы движут производительностью, какие риски существуют, и как инвесторы должны оценивать возможности на этом ключевом центральноевропейском рынке.
 
-## Market Fundamentals
+## Основы рынка
 
-### Market Structure
+### Структура рынка
 
-The Warsaw Stock Exchange (GPW) is the primary equity market in Poland and one of the largest stock exchanges in Central and Eastern Europe. Established in 1991, the exchange has evolved into a sophisticated market with multiple trading segments and strong regulatory oversight. The market structure reflects Poland's transition from a centrally planned economy to a market-based system integrated with European capital markets.
+Варшавская фондовая биржа (GPW) является основным рынком акций в Польше и одной из крупнейших фондовых бирж в Центральной и Восточной Европе. Основанная в 1991 году, биржа эволюционировала в изощренный рынок с множественными торговыми сегментами и сильным регуляторным надзором. Структура рынка отражает переход Польши от централизованно планируемой экономики к рыночной системе, интегрированной с европейскими рынками капитала.
 
-**Warsaw Stock Exchange:**
-- **Main market** – The main market segment includes over 400 listed companies, with the WIG20 index representing the 20 largest and most liquid stocks. Companies on the main market must meet strict listing requirements, including minimum capitalization, free float, and reporting standards aligned with EU regulations.
-- **NewConnect** – This alternative market provides access to capital for smaller, growth-oriented companies. With over 300 listed companies, NewConnect offers lower listing requirements but maintains transparency standards. Many successful companies have graduated from NewConnect to the main market.
-- **Liquidity** – Daily trading volumes average around €200-300 million, with the WIG20 stocks accounting for the majority of turnover. While liquidity is concentrated in large-cap stocks, mid-cap stocks have shown improving liquidity as foreign investor participation increases.
-- **Listings** – The exchange hosts over 700 listed companies across both markets, representing a diverse range of sectors from traditional manufacturing to modern technology and services.
+**Варшавская фондовая биржа:**
+- **Основной рынок** – Сегмент основного рынка включает более 400 листинговых компаний, с индексом WIG20, представляющим 20 крупнейших и наиболее ликвидных акций. Компании на основном рынке должны соответствовать строгим требованиям листинга, включая минимальную капитализацию, свободный флоат и стандарты отчетности, согласованные с правилами ЕС.
+- **NewConnect** – Этот альтернативный рынок предоставляет доступ к капиталу для меньших, ориентированных на рост компаний. С более чем 300 листинговыми компаниями, NewConnect предлагает более низкие требования листинга, но поддерживает стандарты прозрачности. Многие успешные компании перешли с NewConnect на основной рынок.
+- **Ликвидность** – Средние дневные объемы торговли составляют около €200-300 миллионов, с акциями WIG20, составляющими большинство оборота. Хотя ликвидность сконцентрирована в крупных компаниях, средние компании показали улучшающуюся ликвидность по мере увеличения участия иностранных инвесторов.
+- **Листинги** – Биржа принимает более 700 листинговых компаний на обоих рынках, представляя разнообразный диапазон секторов от традиционного производства до современных технологий и услуг.
 
-**Market Characteristics:**
-- **Size** – Total market capitalization exceeds €200 billion, making Poland one of the largest equity markets in Central and Eastern Europe. The market has grown significantly since EU accession, with market cap increasing from approximately €50 billion in 2004.
-- **Liquidity** – Trading liquidity is strong for WIG20 constituents, with average daily turnover representing 0.5-1% of market capitalization. Mid-cap and small-cap stocks show lower liquidity but improving trends as institutional participation grows.
-- **Sector composition** – The market is well-diversified, with financials (25%), consumer goods (15%), technology (12%), energy (10%), and industrials (10%) representing the largest sectors. This diversification provides investors with exposure to multiple growth themes.
-- **Foreign ownership** – Foreign investors hold approximately 40-50% of free float, with particularly high ownership in large-cap stocks. This international participation reflects confidence in Polish markets and provides liquidity support.
+**Характеристики рынка:**
+- **Размер** – Общая рыночная капитализация превышает €200 миллиардов, делая Польшу одним из крупнейших рынков акций в Центральной и Восточной Европе. Рынок значительно вырос с момента присоединения к ЕС, с рыночной капитализацией, увеличившейся с приблизительно €50 миллиардов в 2004 году.
+- **Ликвидность** – Торговая ликвидность сильна для составляющих WIG20, со средним дневным оборотом, представляющим 0,5-1% рыночной капитализации. Средние и малые компании показывают более низкую ликвидность, но улучшающиеся тренды по мере роста институционального участия.
+- **Отраслевой состав** – Рынок хорошо диверсифицирован, с финансами (25%), потребительскими товарами (15%), технологиями (12%), энергетикой (10%) и промышленностью (10%), представляющими крупнейшие секторы. Эта диверсификация предоставляет инвесторам доступ к множественным темам роста.
+- **Иностранная собственность** – Иностранные инвесторы держат приблизительно 40-50% свободного флоата, с особенно высокой собственностью в крупных компаниях. Это международное участие отражает уверенность в польских рынках и предоставляет поддержку ликвидности.
 
-**Indices:**
-- **WIG** – The WIG (Warsaw Stock Exchange Index) is the broad market index covering all listed companies on the main market. It serves as the primary benchmark for overall market performance and includes over 400 constituents.
-- **WIG20** – The WIG20 index represents the 20 largest and most liquid stocks, rebalanced quarterly. This index is the most widely followed benchmark and accounts for approximately 60% of total market capitalization. It includes major companies like PKO Bank Polski, PZU, and KGHM.
-- **Sector indices** – The exchange maintains sector-specific indices including WIG-Banki (banks), WIG-IT (technology), WIG-Energia (energy), and others. These indices help investors track sector-specific performance and identify sector rotation opportunities.
-- **Benchmarks** – International index providers like MSCI and FTSE include Polish stocks in their emerging market and European indices, providing additional benchmarking options and facilitating international investment flows.
+**Индексы:**
+- **WIG** – WIG (Индекс Варшавской фондовой биржи) является широким рыночным индексом, охватывающим все листинговые компании на основном рынке. Он служит основным бенчмарком для общей производительности рынка и включает более 400 составляющих.
+- **WIG20** – Индекс WIG20 представляет 20 крупнейших и наиболее ликвидных акций, перебалансируемых ежеквартально. Этот индекс является наиболее широко отслеживаемым бенчмарком и составляет приблизительно 60% общей рыночной капитализации. Он включает крупные компании, такие как PKO Bank Polski, PZU и KGHM.
+- **Отраслевые индексы** – Биржа поддерживает отраслевые индексы, включая WIG-Banki (банки), WIG-IT (технологии), WIG-Energia (энергетика) и другие. Эти индексы помогают инвесторам отслеживать отраслевую производительность и выявлять возможности отраслевой ротации.
+- **Бенчмарки** – Международные поставщики индексов, такие как MSCI и FTSE, включают польские акции в свои индексы развивающихся рынков и Европы, предоставляя дополнительные опции бенчмаркинга и облегчая международные инвестиционные потоки.
 
-### Economic Fundamentals
+### Экономические основы
 
-Poland's economic fundamentals have been among the strongest in Central and Eastern Europe, driven by EU integration, structural reforms, and favorable demographics. The economy has demonstrated remarkable resilience, avoiding recession even during the 2008-2009 global financial crisis and maintaining positive growth during the COVID-19 pandemic. This economic strength provides a solid foundation for equity market performance.
+Экономические основы Польши были одними из самых сильных в Центральной и Восточной Европе, движимые интеграцией в ЕС, структурными реформами и благоприятной демографией. Экономика продемонстрировала замечательную устойчивость, избегая рецессии даже во время глобального финансового кризиса 2008-2009 годов и поддерживая положительный рост во время пандемии COVID-19. Эта экономическая сила предоставляет прочную основу для производительности рынка акций.
 
-**GDP Growth:**
-- **Historical growth** – Poland has achieved average annual GDP growth of approximately 4% since EU accession in 2004, significantly outperforming most European economies. The economy grew from approximately €200 billion in 2004 to over €600 billion by 2024, representing one of the most successful economic transformations in post-communist Europe.
-- **Resilience** – The economy has shown exceptional resilience, maintaining positive growth during the 2008-2009 crisis (the only EU country to do so), the European debt crisis, and the COVID-19 pandemic. This resilience reflects strong domestic demand, flexible labor markets, and prudent fiscal management.
-- **Drivers** – Growth is driven by multiple factors including EU structural funds supporting infrastructure investment, strong domestic consumption from a growing middle class, competitive manufacturing exports, and a dynamic services sector. Foreign direct investment has also been a key driver, with Poland attracting significant capital from multinational corporations.
-- **Outlook** – Medium-term growth outlook remains positive, with GDP growth expected to average 3-4% annually. However, growth faces headwinds from demographic challenges (aging population), potential EU fund reductions, and regional geopolitical tensions. Structural reforms will be necessary to maintain growth momentum.
+**Рост ВВП:**
+- **Исторический рост** – Польша достигла среднего годового роста ВВП приблизительно 4% с момента присоединения к ЕС в 2004 году, значительно превосходя большинство европейских экономик. Экономика выросла с приблизительно €200 миллиардов в 2004 году до более €600 миллиардов к 2024 году, представляя одну из самых успешных экономических трансформаций в пост-коммунистической Европе.
+- **Устойчивость** – Экономика показала исключительную устойчивость, поддерживая положительный рост во время кризиса 2008-2009 годов (единственная страна ЕС, сделавшая это), европейского долгового кризиса и пандемии COVID-19. Эта устойчивость отражает сильный внутренний спрос, гибкие рынки труда и благоразумное фискальное управление.
+- **Драйверы** – Рост движим множественными факторами, включая структурные фонды ЕС, поддерживающие инфраструктурные инвестиции, сильное внутреннее потребление от растущего среднего класса, конкурентоспособный производственный экспорт и динамичный сектор услуг. Прямые иностранные инвестиции также были ключевым драйвером, с Польшей, привлекающей значительный капитал от транснациональных корпораций.
+- **Перспективы** – Среднесрочные перспективы роста остаются позитивными, с ожидаемым средним ростом ВВП 3-4% ежегодно. Однако рост сталкивается с встречными ветрами от демографических вызовов (стареющее население), потенциальных сокращений фондов ЕС и региональных геополитических напряжений. Структурные реформы будут необходимы для поддержания импульса роста.
 
-**EU Integration:**
-- **EU membership** – EU membership since 2004 has been transformative, providing access to the single market, structural funds, and EU institutions. Membership has accelerated economic convergence, improved governance standards, and enhanced market confidence. Poland has been one of the largest net recipients of EU funds, receiving over €200 billion in structural and cohesion funds since accession.
-- **Structural funds** – EU structural and cohesion funds have supported massive infrastructure investment, including highways, railways, airports, and digital infrastructure. These investments have improved productivity, reduced regional disparities, and created investment opportunities in construction, transportation, and related sectors. The 2021-2027 EU budget allocates approximately €76 billion to Poland.
-- **Market access** – EU membership provides Polish companies with unrestricted access to the 450-million-person EU market, enabling export growth and market expansion. Polish exports to the EU have grown from approximately €50 billion in 2004 to over €200 billion by 2024, with manufacturing and services exports leading the way.
-- **Standards** – Adoption of EU standards has improved product quality, environmental standards, and corporate governance. This alignment has enhanced competitiveness, facilitated trade, and attracted foreign investment. Polish companies have successfully adapted to EU regulations, often using compliance as a competitive advantage.
+**Интеграция в ЕС:**
+- **Членство в ЕС** – Членство в ЕС с 2004 года было трансформативным, предоставляя доступ к единому рынку, структурным фондам и институтам ЕС. Членство ускорило экономическую конвергенцию, улучшило стандарты управления и повысило рыночную уверенность. Польша была одним из крупнейших чистых получателей фондов ЕС, получив более €200 миллиардов в структурных и фондах сплочения с момента присоединения.
+- **Структурные фонды** – Структурные и фонды сплочения ЕС поддерживали массивные инфраструктурные инвестиции, включая автомагистрали, железные дороги, аэропорты и цифровую инфраструктуру. Эти инвестиции улучшили производительность, снизили региональные диспропорции и создали инвестиционные возможности в строительстве, транспорте и связанных секторах. Бюджет ЕС 2021-2027 выделяет приблизительно €76 миллиардов Польше.
+- **Доступ к рынку** – Членство в ЕС предоставляет польским компаниям неограниченный доступ к рынку ЕС с 450 миллионами человек, позволяя рост экспорта и расширение рынка. Польский экспорт в ЕС вырос с приблизительно €50 миллиардов в 2004 году до более €200 миллиардов к 2024 году, с производственным и экспортом услуг, ведущим путь.
+- **Стандарты** – Принятие стандартов ЕС улучшило качество продукции, экологические стандарты и корпоративное управление. Это выравнивание повысило конкурентоспособность, облегчило торговлю и привлекло иностранные инвестиции. Польские компании успешно адаптировались к правилам ЕС, часто используя соответствие как конкурентное преимущество.
 
-**Demographics:**
-- **Population** – Poland has a population of approximately 38 million, making it the sixth-largest EU member by population. This large domestic market provides a solid base for consumer-oriented businesses and creates economies of scale for domestic companies.
-- **Urbanization** – Urbanization has increased from approximately 60% in 2000 to over 70% by 2024, creating opportunities in real estate, retail, services, and infrastructure. Major cities like Warsaw, Krakow, and Wroclaw have experienced significant growth and development.
-- **Education** – Poland has a well-educated workforce, with high secondary and tertiary education attainment rates. The country produces a large number of STEM graduates, supporting technology and innovation sectors. However, brain drain to Western Europe remains a challenge.
-- **Workforce** – The labor market is characterized by relatively low labor costs compared to Western Europe, high labor force participation, and improving productivity. However, demographic trends show an aging population and declining working-age population, which will create challenges for long-term growth.
+**Демография:**
+- **Население** – Польша имеет население приблизительно 38 миллионов, делая её шестым по величине членом ЕС по населению. Этот крупный внутренний рынок предоставляет прочную базу для потребительско-ориентированных предприятий и создает экономию масштаба для внутренних компаний.
+- **Урбанизация** – Урбанизация увеличилась с приблизительно 60% в 2000 году до более 70% к 2024 году, создавая возможности в недвижимости, розничной торговле, услугах и инфраструктуре. Крупные города, такие как Варшава, Краков и Вроцлав, пережили значительный рост и развитие.
+- **Образование** – Польша имеет хорошо образованную рабочую силу, с высокими показателями среднего и высшего образования. Страна производит большое количество выпускников STEM, поддерживая технологические и инновационные секторы. Однако утечка мозгов в Западную Европу остается вызовом.
+- **Рабочая сила** – Рынок труда характеризуется относительно низкими затратами на рабочую силу по сравнению с Западной Европой, высокой долей участия рабочей силы и улучшающейся производительностью. Однако демографические тренды показывают стареющее население и снижающееся население трудоспособного возраста, что создаст вызовы для долгосрочного роста.
 
 ## Investment Opportunities
 
@@ -4441,22 +4441,22 @@ The Polish equity market has evolved significantly since the 1990s, transforming
 - **Access** – Market access has improved through EU integration, with Polish stocks included in European indices, accessible to European investors, and integrated with European trading systems. This access has increased liquidity, reduced costs, and expanded investor base. International investors can easily access Polish markets.
 - **Competitiveness** – Competitiveness has improved through market development, regulatory alignment, and corporate sophistication. The Polish market competes effectively with other Central and Eastern European markets and attracts international investment. However, competition for capital is intense, requiring continued improvement.
 
-## Conclusion
+## Заключение
 
-Polish equity markets offer attractive opportunities for emerging market investors seeking exposure to a large, growing economy with EU integration benefits. The market combines emerging market growth potential with EU institutional framework and market access, creating a unique investment proposition. While political and economic risks exist, the fundamental investment case remains strong, supported by solid economic fundamentals, corporate earnings growth, and attractive valuations.
+Рынки акций Польши предлагают привлекательные возможности для инвесторов развивающихся рынков, ищущих доступ к крупной, растущей экономике с преимуществами интеграции в ЕС. Рынок комбинирует потенциал роста развивающихся рынков с институциональной рамкой ЕС и доступом к рынку, создавая уникальное инвестиционное предложение. Хотя политические и экономические риски существуют, фундаментальный инвестиционный случай остается сильным, поддерживаемый солидными экономическими основами, ростом корпоративной прибыли и привлекательными оценками.
 
-The Polish economy has been one of the most successful in Central and Eastern Europe, achieving strong growth, maintaining stability, and attracting investment. EU membership has been transformative, providing market access, structural funds, and institutional framework. The equity market has evolved into a sophisticated, well-regulated market with good liquidity and diverse investment opportunities across sectors.
+Экономика Польши была одной из самых успешных в Центральной и Восточной Европе, достигая сильного роста, поддерживая стабильность и привлекая инвестиции. Членство в ЕС было трансформативным, предоставляя доступ к рынку, структурные фонды и институциональную рамку. Рынок акций эволюционировал в изощренный, хорошо регулируемый рынок с хорошей ликвидностью и разнообразными инвестиционными возможностями по секторам.
 
-For investors, Poland requires understanding EU integration dynamics, political risks, and economic fundamentals. Success requires monitoring rule of law developments, EU relations, and economic trends while identifying companies with strong competitive positions and growth potential. Investors must balance opportunities with risks, using appropriate risk management and portfolio construction.
+Для инвесторов Польша требует понимания динамики интеграции в ЕС, политических рисков и экономических основ. Успех требует мониторинга разработок верховенства закона, отношений с ЕС и экономических трендов, одновременно выявляя компании с сильными конкурентными позициями и потенциалом роста. Инвесторы должны балансировать возможности с рисками, используя соответствующее управление рисками и построение портфеля.
 
-The Polish equity market will continue to evolve as EU integration deepens, the economy grows, and corporate sophistication increases. Demographic challenges, political risks, and economic cycles will create headwinds, but strong fundamentals and growth potential support long-term investment cases. Investors that successfully navigate political risks while capturing growth opportunities will be positioned to benefit from this key Central European market.
+Рынок акций Польши будет продолжать эволюционировать по мере углубления интеграции в ЕС, роста экономики и увеличения корпоративной изощренности. Демографические вызовы, политические риски и экономические циклы создадут встречные ветры, но сильные основы и потенциал роста поддерживают долгосрочные инвестиционные случаи. Инвесторы, которые успешно навигают политические риски, захватывая возможности роста, будут позиционированы для выгоды от этого ключевого центральноевропейского рынка.
 
-**Investment Focus Areas:**
+**Области инвестиционного фокуса:**
 
-Investors should focus on:
-- **Strong fundamentals** – Companies with strong fundamentals, including solid balance sheets, competitive positions, and growth potential. These companies are better positioned to navigate economic cycles and political uncertainty while delivering returns.
-- **EU integration** – Beneficiaries of EU integration, including companies that benefit from EU funds, market access, and standards. These companies are positioned to benefit from continued EU integration and structural fund flows.
-- **Risk management** – Managing political and economic risks through diversification, position sizing, monitoring, and hedging. Risk management is essential given political and economic volatility.
+Инвесторам следует фокусироваться на:
+- **Сильных основах** – Компаниях с сильными основами, включая прочные балансы, конкурентные позиции и потенциал роста. Эти компании лучше позиционированы для навигации по экономическим циклам и политической неопределенности, одновременно обеспечивая доходность.
+- **Интеграции в ЕС** – Бенефициарах интеграции в ЕС, включая компании, которые выигрывают от фондов ЕС, доступа к рынку и стандартов. Эти компании позиционированы для выгоды от продолжающейся интеграции в ЕС и потоков структурных фондов.
+- **Управлении рисками** – Управлении политическими и экономическими рисками через диверсификацию, определение размера позиций, мониторинг и хеджирование. Управление рисками необходимо учитывая политическую и экономическую волатильность.
 - **Long-term** – Long-term investment horizon, as short-term volatility can be significant. Long-term investors can capture growth while managing short-term risks. Patience and discipline are important.
 
 **Market Positioning:**
@@ -4481,69 +4481,69 @@ Poland has been one of the most successful emerging market stories in Central an
   },
   {
     slug: 'czech-republic-equity-markets-stability-and-eu-integration',
-    title: 'Czech Republic Equity Markets: Stability and EU Integration Benefits',
+    title: 'Рынки акций Чешской Республики: стабильность и преимущества интеграции в ЕС',
     excerpt:
-      'How Czech equity markets benefit from EU membership and economic stability, why Czech equities offer defensive characteristics, and which sectors present investment opportunities.',
-    content: `# Czech Republic Equity Markets: Stability and EU Integration Benefits
+      'Как рынки акций Чешской Республики выигрывают от членства в ЕС и экономической стабильности, почему чешские акции предлагают защитные характеристики, и какие секторы представляют инвестиционные возможности.',
+    content: `# Рынки акций Чешской Республики: стабильность и преимущества интеграции в ЕС
 
-## Introduction
+## Введение
 
-The Czech Republic has established itself as one of the most stable and developed markets in Central and Eastern Europe, with its equity market benefiting from strong institutions, EU membership, and a well-diversified economy. Since joining the EU in 2004, the Czech Republic has maintained macroeconomic stability, developed deep capital markets, and created an attractive environment for both domestic and foreign investors. This stability, combined with EU integration benefits and a skilled workforce, makes Czech equities attractive for investors seeking exposure to Central Europe with lower volatility than many emerging markets.
+Чешская Республика утвердила себя как один из самых стабильных и развитых рынков в Центральной и Восточной Европе, с её рынком акций, выигрывающим от сильных институтов, членства в ЕС и хорошо диверсифицированной экономики. С момента присоединения к ЕС в 2004 году Чешская Республика поддерживала макроэкономическую стабильность, развивала глубокие рынки капитала и создавала привлекательную среду как для внутренних, так и для иностранных инвесторов. Эта стабильность, в сочетании с преимуществами интеграции в ЕС и квалифицированной рабочей силой, делает чешские акции привлекательными для инвесторов, ищущих доступ к Центральной Европе с более низкой волатильностью, чем многие развивающиеся рынки.
 
-As of late 2024, Czech equities face a mixed environment. The economy has shown resilience, with strong fundamentals including low unemployment, fiscal discipline, and stable inflation. EU structural funds continue to support development. Corporate earnings have been solid. Yet, the market faces challenges from slower growth, regional geopolitical concerns, and limited market size. For investors, the Czech Republic offers exposure to a stable, developed market with EU integration benefits and defensive characteristics.
+По состоянию на конец 2024 года чешские акции сталкиваются со смешанной средой. Экономика показала устойчивость, с сильными основами, включая низкую безработицу, фискальную дисциплину и стабильную инфляцию. Структурные фонды ЕС продолжают поддерживать развитие. Корпоративная прибыль была солидной. Однако рынок сталкивается с вызовами от более медленного роста, региональных геополитических забот и ограниченного размера рынка. Для инвесторов Чешская Республика предлагает доступ к стабильному, развитому рынку с преимуществами интеграции в ЕС и защитными характеристиками.
 
-This evolution creates investment opportunities across multiple sectors:
-- **Financials** – well-managed banks with stability.
-- **Consumer** – developed consumer market.
-- **Industrial** – strong industrial base.
-- **Technology** – growing technology sector.
+Эта эволюция создает инвестиционные возможности по множественным секторам:
+- **Финансы** – хорошо управляемые банки со стабильностью.
+- **Потребители** – развитый потребительский рынок.
+- **Промышленность** – сильная промышленная база.
+- **Технологии** – растущий технологический сектор.
 
-This article explores how Czech equity markets are positioned, which factors drive performance, what opportunities exist, and how investors should evaluate this stable Central European market.
+Эта статья исследует, как позиционированы рынки акций Чешской Республики, какие факторы движут производительностью, какие возможности существуют, и как инвесторы должны оценивать этот стабильный центральноевропейский рынок.
 
-## Market Fundamentals
+## Основы рынка
 
-### Market Structure
+### Структура рынка
 
-Czech equity market structure:
+Структура рынка акций Чешской Республики:
 
-**Prague Stock Exchange:**
-- **Market structure** – The Prague Stock Exchange operates a main market with approximately 20-25 listed companies, focusing on quality over quantity. The exchange maintains strict listing requirements aligned with EU regulations, ensuring high standards for listed companies. Trading is electronic, with modern clearing and settlement systems integrated with European infrastructure.
-- **Listings** – The exchange hosts a relatively small number of listed companies (approximately 20-25 on the main market), reflecting the market's focus on quality and the preference of many Czech companies for private ownership or foreign listings. The small number of listings creates concentration but also ensures that listed companies are typically well-established and financially sound.
-- **Liquidity** – Market liquidity is concentrated in the largest stocks, particularly those in the PX index. Daily trading volumes average €20-40 million, with the largest stocks (like ČEZ, Komerční banka) accounting for the majority of turnover. Liquidity for smaller stocks can be limited, requiring careful position sizing and execution.
-- **Indices** – The PX index is the primary market benchmark, representing the largest and most liquid stocks. The index is rebalanced periodically and serves as the main reference for market performance. Sector-specific indices are limited due to the small number of listed companies, but the PX index provides good representation of the market.
+**Пражская фондовая биржа:**
+- **Структура рынка** – Пражская фондовая биржа работает с основным рынком с приблизительно 20-25 листинговыми компаниями, фокусируясь на качестве над количеством. Биржа поддерживает строгие требования листинга, согласованные с правилами ЕС, обеспечивая высокие стандарты для листинговых компаний. Торговля электронная, с современными системами клиринга и расчетов, интегрированными с европейской инфраструктурой.
+- **Листинги** – Биржа принимает относительно небольшое количество листинговых компаний (приблизительно 20-25 на основном рынке), отражая фокус рынка на качестве и предпочтение многих чешских компаний к частной собственности или иностранным листингам. Небольшое количество листингов создает концентрацию, но также обеспечивает, что листинговые компании, как правило, хорошо зарекомендовавшие себя и финансово устойчивые.
+- **Ликвидность** – Рыночная ликвидность сконцентрирована в крупнейших акциях, особенно тех, что в индексе PX. Средние дневные объемы торговли составляют €20-40 миллионов, с крупнейшими акциями (такими как ČEZ, Komerční banka), составляющими большинство оборота. Ликвидность для меньших акций может быть ограничена, требуя тщательного определения размера позиций и выполнения.
+- **Индексы** – Индекс PX является основным рыночным бенчмарком, представляя крупнейшие и наиболее ликвидные акции. Индекс перебалансируется периодически и служит основным ориентиром для производительности рынка. Отраслевые индексы ограничены из-за небольшого количества листинговых компаний, но индекс PX обеспечивает хорошее представление рынка.
 
-**Market Characteristics:**
-- **Size** – Total market capitalization is approximately €40-50 billion, making it one of the smaller markets in Central and Eastern Europe. However, the market's focus on quality companies means that market cap is concentrated in well-established, profitable companies. The relatively small size creates both opportunities and challenges for investors.
-- **Sector composition** – The market is well-diversified across sectors, with utilities (ČEZ), financials (Komerční banka, Moneta Money Bank), consumer (Pegas Nonwovens), and industrials representing major sectors. This diversification provides exposure to multiple economic themes while maintaining defensive characteristics.
-- **Foreign ownership** – Foreign investors hold a significant portion of free float, typically 40-60% for major stocks. This international participation reflects confidence in Czech markets and provides liquidity support. Foreign ownership is particularly high in large-cap stocks and sectors with international appeal.
-- **Liquidity** – Trading liquidity is adequate for large-cap stocks but can be limited for smaller stocks. The market's small size means that large trades can impact prices, requiring careful execution. However, the quality of listed companies and foreign investor participation support liquidity for major stocks.
+**Характеристики рынка:**
+- **Размер** – Общая рыночная капитализация составляет приблизительно €40-50 миллиардов, делая его одним из меньших рынков в Центральной и Восточной Европе. Однако фокус рынка на качественные компании означает, что рыночная капитализация сконцентрирована в хорошо зарекомендовавших себя, прибыльных компаниях. Относительно небольшой размер создает как возможности, так и вызовы для инвесторов.
+- **Отраслевой состав** – Рынок хорошо диверсифицирован по секторам, с коммунальными услугами (ČEZ), финансами (Komerční banka, Moneta Money Bank), потребителями (Pegas Nonwovens) и промышленностью, представляющими основные секторы. Эта диверсификация предоставляет доступ к множественным экономическим темам, поддерживая защитные характеристики.
+- **Иностранная собственность** – Иностранные инвесторы держат значительную долю свободного флоата, обычно 40-60% для крупных акций. Это международное участие отражает уверенность в чешских рынках и предоставляет поддержку ликвидности. Иностранная собственность особенно высока в крупных компаниях и секторах с международной привлекательностью.
+- **Ликвидность** – Торговая ликвидность адекватна для крупных компаний, но может быть ограничена для меньших акций. Небольшой размер рынка означает, что крупные сделки могут влиять на цены, требуя тщательного выполнения. Однако качество листинговых компаний и участие иностранных инвесторов поддерживают ликвидность для крупных акций.
 
-**Indices:**
-- **PX Index** – The PX index is the primary market benchmark, including the largest and most liquid stocks. The index typically includes 10-15 stocks and represents approximately 80-90% of total market capitalization. The index is rebalanced periodically to reflect market changes and maintain representation.
-- **Sector indices** – Sector-specific indices are limited due to the small number of listed companies, but the PX index provides good sector representation. Investors can track sector performance through individual stock analysis and European sector indices that include Czech stocks.
-- **Benchmarks** – International index providers like MSCI and FTSE include Czech stocks in their emerging market and European indices, providing additional benchmarking options. However, Czech stocks typically have small weights in these indices due to market size, limiting their impact on index performance.
+**Индексы:**
+- **Индекс PX** – Индекс PX является основным рыночным бенчмарком, включая крупнейшие и наиболее ликвидные акции. Индекс обычно включает 10-15 акций и представляет приблизительно 80-90% общей рыночной капитализации. Индекс перебалансируется периодически для отражения изменений рынка и поддержания представления.
+- **Отраслевые индексы** – Отраслевые индексы ограничены из-за небольшого количества листинговых компаний, но индекс PX обеспечивает хорошее отраслевое представление. Инвесторы могут отслеживать отраслевую производительность через индивидуальный анализ акций и европейские отраслевые индексы, которые включают чешские акции.
+- **Бенчмарки** – Международные поставщики индексов, такие как MSCI и FTSE, включают чешские акции в свои индексы развивающихся рынков и Европы, предоставляя дополнительные опции бенчмаркинга. Однако чешские акции обычно имеют малые веса в этих индексах из-за размера рынка, ограничивая их влияние на производительность индекса.
 
-### Economic Fundamentals
+### Экономические основы
 
-The Czech Republic has established one of the most stable and well-managed economies in Central and Eastern Europe, with strong macroeconomic fundamentals, fiscal discipline, and a well-diversified economic structure. Since EU accession in 2004, the economy has maintained stability while achieving solid growth, low unemployment, and controlled inflation. This economic stability provides a strong foundation for equity market performance and makes Czech equities attractive for defensive investors.
+Чешская Республика утвердила одну из самых стабильных и хорошо управляемых экономик в Центральной и Восточной Европе, с сильными макроэкономическими основами, фискальной дисциплиной и хорошо диверсифицированной экономической структурой. С момента присоединения к ЕС в 2004 году экономика поддерживала стабильность, достигая солидного роста, низкой безработицы и контролируемой инфляции. Эта экономическая стабильность предоставляет прочную основу для производительности рынка акций и делает чешские акции привлекательными для защитных инвесторов.
 
-**Stability:**
-- **Macro stability** – The Czech Republic has maintained exceptional macroeconomic stability, with consistent GDP growth, low unemployment (typically 2-4%), and controlled inflation. The economy has avoided major crises and maintained stability even during regional and global economic stress. This stability reflects sound economic management, strong institutions, and prudent policies.
-- **Fiscal discipline** – Fiscal policy has been disciplined, with government debt-to-GDP ratios typically below 40%, significantly lower than many European peers. The government has maintained balanced budgets or small deficits, supporting economic stability and market confidence. Fiscal discipline provides flexibility for countercyclical policies when needed.
-- **Inflation** – Inflation has been low and stable, typically ranging from 1-3%, with the Czech National Bank (CNB) successfully maintaining price stability. Recent inflation has been elevated due to energy prices and supply chain disruptions, but the CNB has responded with interest rate increases. Long-term inflation expectations remain anchored.
-- **Currency** – The Czech koruna (CZK) has been relatively stable, with the CNB managing exchange rate policy to support price stability and economic objectives. The koruna's stability reflects strong fundamentals, foreign investment flows, and central bank credibility. Currency volatility has been lower than many emerging market currencies.
+**Стабильность:**
+- **Макро-стабильность** – Чешская Республика поддерживала исключительную макроэкономическую стабильность, с последовательным ростом ВВП, низкой безработицей (обычно 2-4%) и контролируемой инфляцией. Экономика избежала крупных кризисов и поддерживала стабильность даже во время регионального и глобального экономического стресса. Эта стабильность отражает разумное экономическое управление, сильные институты и благоразумную политику.
+- **Фискальная дисциплина** – Фискальная политика была дисциплинированной, с коэффициентами государственного долга к ВВП обычно ниже 40%, значительно ниже многих европейских коллег. Правительство поддерживало сбалансированные бюджеты или небольшие дефициты, поддерживая экономическую стабильность и рыночную уверенность. Фискальная дисциплина предоставляет гибкость для контрциклической политики при необходимости.
+- **Инфляция** – Инфляция была низкой и стабильной, обычно в диапазоне 1-3%, с Чешским национальным банком (CNB), успешно поддерживающим ценовую стабильность. Недавняя инфляция была повышенной из-за цен на энергоносители и нарушений цепочек поставок, но CNB ответил повышениями процентных ставок. Долгосрочные инфляционные ожидания остаются закрепленными.
+- **Валюта** – Чешская крона (CZK) была относительно стабильной, с CNB, управляющим политикой обменного курса для поддержки ценовой стабильности и экономических целей. Стабильность кроны отражает сильные основы, потоки иностранных инвестиций и надежность центрального банка. Валютная волатильность была ниже, чем у многих валют развивающихся рынков.
 
-**EU Integration:**
-- **EU membership** – EU membership since 2004 has provided significant benefits, including access to the single market, structural funds, and EU institutions. Membership has accelerated economic development, improved governance standards, and enhanced market confidence. The Czech Republic has been a committed EU member, supporting integration and European policies.
-- **Structural funds** – EU structural and cohesion funds have supported infrastructure investment, research and development, and regional development. The Czech Republic has received significant EU funding, supporting economic growth and development. The 2021-2027 EU budget allocates approximately €25 billion to the Czech Republic.
-- **Market access** – EU membership provides Czech companies with unrestricted access to the 450-million-person EU market, enabling export growth and market expansion. Czech exports to the EU have grown significantly since accession, with manufacturing and services exports leading the way. Market access has supported corporate growth and profitability.
-- **Standards** – Adoption of EU standards has improved product quality, environmental standards, and corporate governance. This alignment has enhanced competitiveness, facilitated trade, and attracted foreign investment. Czech companies have successfully adapted to EU regulations, using compliance as a competitive advantage.
+**Интеграция в ЕС:**
+- **Членство в ЕС** – Членство в ЕС с 2004 года предоставило значительные преимущества, включая доступ к единому рынку, структурным фондам и институтам ЕС. Членство ускорило экономическое развитие, улучшило стандарты управления и повысило рыночную уверенность. Чешская Республика была преданным членом ЕС, поддерживая интеграцию и европейскую политику.
+- **Структурные фонды** – Структурные и фонды сплочения ЕС поддерживали инфраструктурные инвестиции, исследования и разработки, и региональное развитие. Чешская Республика получила значительное финансирование ЕС, поддерживая экономический рост и развитие. Бюджет ЕС 2021-2027 выделяет приблизительно €25 миллиардов Чешской Республике.
+- **Доступ к рынку** – Членство в ЕС предоставляет чешским компаниям неограниченный доступ к рынку ЕС с 450 миллионами человек, позволяя рост экспорта и расширение рынка. Чешский экспорт в ЕС значительно вырос с момента присоединения, с производственным и экспортом услуг, ведущим путь. Доступ к рынку поддерживал корпоративный рост и прибыльность.
+- **Стандарты** – Принятие стандартов ЕС улучшило качество продукции, экологические стандарты и корпоративное управление. Это выравнивание повысило конкурентоспособность, облегчило торговлю и привлекло иностранные инвестиции. Чешские компании успешно адаптировались к правилам ЕС, используя соответствие как конкурентное преимущество.
 
-**Economic Structure:**
-- **Diversified** – The economy is well-diversified across sectors, with manufacturing, services, and agriculture all contributing significantly. This diversification provides resilience and reduces dependence on single sectors or markets. The diversified structure supports stable growth and reduces economic volatility.
-- **Industrial** – The industrial base is strong, with manufacturing representing approximately 30% of GDP. Key industries include automotive (Škoda Auto, suppliers), machinery, electronics, and chemicals. The industrial sector benefits from skilled workforce, competitive costs, and EU market access. Manufacturing quality and productivity are high.
-- **Services** – The services sector is well-developed, representing approximately 60% of GDP. Key services include financial services, IT services, tourism, and retail. The services sector has grown significantly, supported by rising incomes, urbanization, and EU integration. Services exports, particularly IT services, have been strong.
-- **Exports** – The economy is highly export-oriented, with exports representing approximately 80% of GDP. Major export destinations include Germany, Slovakia, Poland, and other EU countries. Export orientation creates sensitivity to external demand but also provides growth opportunities. Export competitiveness is strong, supported by quality, productivity, and EU market access.
+**Экономическая структура:**
+- **Диверсифицированная** – Экономика хорошо диверсифицирована по секторам, с производством, услугами и сельским хозяйством, все вносящими значительный вклад. Эта диверсификация обеспечивает устойчивость и снижает зависимость от отдельных секторов или рынков. Диверсифицированная структура поддерживает стабильный рост и снижает экономическую волатильность.
+- **Промышленная** – Промышленная база сильна, с производством, представляющим приблизительно 30% ВВП. Ключевые отрасли включают автомобильную промышленность (Škoda Auto, поставщики), машиностроение, электронику и химическую промышленность. Промышленный сектор выигрывает от квалифицированной рабочей силы, конкурентоспособных затрат и доступа к рынкам ЕС. Качество и производительность производства высоки.
+- **Услуги** – Сектор услуг хорошо развит, представляя приблизительно 60% ВВП. Ключевые услуги включают финансовые услуги, IT-услуги, туризм и розничную торговлю. Сектор услуг значительно вырос, поддерживаемый растущими доходами, урбанизацией и интеграцией в ЕС. Экспорт услуг, особенно IT-услуг, был сильным.
+- **Экспорт** – Экономика высоко экспортно-ориентирована, с экспортом, представляющим приблизительно 80% ВВП. Основные направления экспорта включают Германию, Словакию, Польшу и другие страны ЕС. Экспортная ориентация создает чувствительность к внешнему спросу, но также предоставляет возможности роста. Экспортная конкурентоспособность сильна, поддерживаемая качеством, производительностью и доступом к рынкам ЕС.
 
 ## Investment Opportunities
 
