@@ -66,15 +66,15 @@ export const authors: AuthorProfile[] = [
     comment_count: 534,
   },
   {
-    id: 'luca-montefiore',
-    username: 'luca_montefiore',
-    display_name: 'Luca Montefiore',
+    id: 'radomir-klosek',
+    username: 'radomir_klosek',
+    display_name: 'Radomir Kłosek',
     avatar_url:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
-    bio: 'Mediterranean markets analyst focusing on luxury goods, tourism sector investments, and Italian financial markets.',
-    reputation: 1750,
-    post_count: 25,
-    comment_count: 456,
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    bio: 'Polish markets analyst specializing in Central European economies, long-term investment strategies, and financial education for individual investors.',
+    reputation: 1850,
+    post_count: 27,
+    comment_count: 512,
   },
   {
     id: 'isabelle-dubois',

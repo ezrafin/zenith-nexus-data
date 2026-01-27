@@ -8,6 +8,7 @@ import { anastasiaArticles } from './analytics-anastasia';
 import { lucaArticles } from './analytics-luca';
 import { isabelleArticles } from './analytics-isabelle';
 import { xuArticles } from './analytics-xu';
+import { radomirArticles } from './analytics-radomir';
 
 // Helper to format dates
 const formatDate = (offset: number) => {
@@ -3038,16 +3039,25 @@ The consumer tech market will continue growing and evolving. Investors positione
   ...lucaArticles,
   ...isabelleArticles,
   ...xuArticles,
+  ...radomirArticles,
   
   // Note: Existing articles above will be migrated to author modules
   // New articles should be added directly to the appropriate author module
 ];
 
-export async function fetchAnalytics(type?: string): Promise<AnalyticsArticle[]> {
+export async function fetchAnalytics(type?: string, language?: string): Promise<AnalyticsArticle[]> {
   let result = [...quickAnalytics];
 
   if (type && type !== 'all') {
     result = result.filter((item) => item.type === type);
+  }
+
+  // Filter by language if specified
+  if (language) {
+    result = result.filter((item) => item.language === language);
+  } else {
+    // If no language specified, show articles without language tag (default English)
+    result = result.filter((item) => !item.language);
   }
 
   // Sort by date (newest first)

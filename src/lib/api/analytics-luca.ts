@@ -18,388 +18,389 @@ const countWords = (text: string): number => {
   return text.trim().split(/\s+/).filter(word => word.length > 0).length;
 };
 
-// Luca Montefiore - Italian & Mediterranean Markets (25 articles)
+// Radomir Kłosek - Polish Markets Analyst (25 articles translated to Polish)
 export const lucaArticles: AnalyticsArticle[] = [
   {
     slug: 'mediterranean-tourism-and-hospitality-recovery-and-transformation',
-    title: 'Mediterranean Tourism and Hospitality: Recovery and Transformation',
+    title: 'Turystyka i Gościnność Śródziemnomorska: Odrodzenie i Transformacja',
     excerpt:
-      'How Mediterranean tourism is recovering from the pandemic, why sustainability and digital transformation matter, and how to identify investment opportunities in Mediterranean tourism and hospitality sectors.',
+      'Jak turystyka śródziemnomorska odradza się po pandemii, dlaczego zrównoważony rozwój i transformacja cyfrowa mają znaczenie, oraz jak identyfikować możliwości inwestycyjne w sektorach turystyki i gościnności śródziemnomorskiej.',
     imageUrl: getAnalyticsImage('mediterranean-tourism-and-hospitality-recovery-and-transformation'),
-    content: `# Mediterranean Tourism and Hospitality: Recovery and Transformation
-
-## Introduction
-
-The Mediterranean has long been one of the world's premier tourism destinations. Countries like Italy, Spain, Greece, Turkey, and Croatia attract millions of visitors annually, drawn by beautiful coastlines, rich history, cultural attractions, and Mediterranean cuisine. But the COVID-19 pandemic devastated Mediterranean tourism, with travel restrictions and health concerns causing visitor numbers to collapse. As the industry recovers, it is also transforming: sustainability concerns, digitalization, and changing consumer preferences are reshaping how tourism operates.
-
-Mediterranean tourism is characterized by:
-- **Seasonality** – strong seasonal patterns.
-- **Coastal focus** – focus on coastal destinations.
-- **Cultural heritage** – rich cultural heritage.
-- **Diversity** – diverse destinations and experiences.
-
-For investors, Mediterranean tourism offers:
-- **Recovery potential** – recovery from pandemic.
-- **Growth exposure** – exposure to long-term tourism growth.
-- **Transformation** – opportunities from industry transformation.
-- **Diversification** – diversification within tourism sector.
-
-But challenges remain:
-- **Seasonality** – seasonal revenue patterns.
-- **Climate risk** – climate change risks.
-- **Competition** – competition between destinations.
-- **Economic sensitivity** – sensitivity to economic conditions.
-
-This article explores Mediterranean tourism recovery, transformation themes, and investment opportunities.
-
-## Mediterranean Tourism Market
-
-### Major Destinations
-
-**Italy:**
-- **Cultural heritage** – rich cultural heritage.
-- **Coastal** – beautiful coastlines.
-- **Cities** – major cities (Rome, Florence, Venice).
-- **Diversity** – diverse tourism offerings.
-
-**Spain:**
-- **Coastal** – popular coastal destinations.
-- **Cities** – major cities (Barcelona, Madrid).
-- **Islands** – Balearic and Canary Islands.
-- **Volume** – high tourist volumes.
-
-**Greece:**
-- **Islands** – popular Greek islands.
-- **History** – historical sites.
-- **Coastal** – beautiful coastlines.
-- **Recovery** – strong recovery from crisis.
-
-**Turkey:**
-- **Coastal** – Mediterranean and Aegean coasts.
-- **Culture** – rich cultural heritage.
-- **Value** – good value for money.
-- **Growth** – growing tourism.
-
-**Croatia:**
-- **Coastal** – Adriatic coast.
-- **Islands** – beautiful islands.
-- **Growth** – growing tourism.
-- **Value** – good value.
-
-### Market Characteristics
-
-**Visitor Patterns:**
-- **Seasonality** – strong summer seasonality.
-- **Origins** – visitors from Europe, North America, Asia.
-- **Duration** – varying stay durations.
-- **Preferences** – diverse preferences.
-
-**Accommodation:**
-- **Hotels** – hotel accommodation.
-- **Resorts** – resort accommodation.
-- **Alternative** – alternative accommodation (Airbnb).
-- **Capacity** – accommodation capacity.
-
-**Spending:**
-- **Accommodation** – accommodation spending.
-- **Food and beverage** – food and beverage spending.
-- **Activities** – activities and experiences.
-- **Shopping** – shopping spending.
-
-## Recovery from Pandemic
-
-### Recovery Trends
-
-**Visitor Recovery:**
-- **2020 collapse** – visitor numbers collapsed in 2020.
-- **2021 recovery** – partial recovery in 2021.
-- **2022-2023** – stronger recovery in 2022-2023.
-- **2024+** – continued recovery expected.
-
-**Factors Driving Recovery:**
-- **Vaccination** – vaccination enabling travel.
-- **Travel restrictions** – easing travel restrictions.
-- **Pent-up demand** – pent-up travel demand.
-- **Confidence** – returning travel confidence.
-
-**Recovery Variations:**
-- **Destination differences** – recovery varies by destination.
-- **Segment differences** – recovery varies by segment.
-- **Timing** – recovery timing varies.
-
-### Sector Recovery
-
-**Accommodation:**
-- **Hotels** – hotel recovery.
-- **Resorts** – resort recovery.
-- **Alternative** – alternative accommodation recovery.
-- **Occupancy** – occupancy rate recovery.
-
-**Food and Beverage:**
-- **Restaurants** – restaurant recovery.
-- **Bars** – bar and nightlife recovery.
-- **Spending** – food and beverage spending recovery.
-
-**Activities:**
-- **Tours** – tour and activity recovery.
-- **Attractions** – attraction recovery.
-- **Experiences** – experience recovery.
-
-## Transformation Themes
-
-### Sustainability
-
-**Environmental Concerns:**
-- **Climate change** – climate change affecting destinations.
-- **Overtourism** – overtourism concerns.
-- **Environmental impact** – environmental impact of tourism.
-- **Sustainability** – need for sustainable tourism.
-
-**Sustainable Practices:**
-- **Eco-friendly** – eco-friendly practices.
-- **Local** – supporting local communities.
-- **Conservation** – conservation efforts.
-- **Certification** – sustainability certification.
-
-**Investment Opportunities:**
-- **Sustainable hotels** – sustainable hotel development.
-- **Eco-tourism** – eco-tourism projects.
-- **Renewable energy** – renewable energy for tourism.
-- **Waste management** – waste management solutions.
-
-### Digital Transformation
-
-**Technology Adoption:**
-- **Online booking** – online booking platforms.
-- **Mobile** – mobile technology.
-- **Digital experiences** – digital experiences.
-- **Data analytics** – data analytics for tourism.
-
-**Digital Opportunities:**
-- **Platforms** – online travel platforms.
-- **Technology** – tourism technology.
-- **Digital marketing** – digital marketing.
-- **Customer experience** – digital customer experience.
-
-**Investment Opportunities:**
-- **Technology companies** – tourism technology companies.
-- **Platforms** – online travel platforms.
-- **Digital services** – digital services for tourism.
-
-### Changing Consumer Preferences
-
-**Experience Focus:**
-- **Experiences** – focus on experiences over things.
-- **Authenticity** – demand for authentic experiences.
-- **Local** – interest in local culture.
-- **Personalization** – demand for personalized experiences.
-
-**Wellness and Health:**
-- **Wellness** – wellness tourism.
-- **Health** – health-focused travel.
-- **Spas** – spa and wellness facilities.
-- **Activities** – wellness activities.
-
-**Investment Opportunities:**
-- **Experience providers** – experience providers.
-- **Wellness** – wellness tourism projects.
-- **Local experiences** – local experience providers.
-
-## Investment Opportunities
-
-### Accommodation
-
-**Hotels:**
-- **Recovery** – hotel recovery from pandemic.
-- **Renovation** – hotel renovation opportunities.
-- **New development** – new hotel development.
-- **Brands** – hotel brand opportunities.
-
-**Resorts:**
-- **Resort development** – resort development.
-- **Luxury** – luxury resort opportunities.
-- **Sustainability** – sustainable resort development.
-
-**Alternative Accommodation:**
-- **Platforms** – alternative accommodation platforms.
-- **Properties** – alternative accommodation properties.
-- **Management** – property management.
-
-### Food and Beverage
-
-**Restaurants:**
-- **Recovery** – restaurant recovery.
-- **Concepts** – new restaurant concepts.
-- **Local** – local restaurant opportunities.
-- **Chains** – restaurant chain opportunities.
-
-**Bars and Nightlife:**
-- **Recovery** – bar and nightlife recovery.
-- **Concepts** – new bar concepts.
-- **Entertainment** – entertainment venues.
-
-### Activities and Experiences
-
-**Tours and Activities:**
-- **Tour operators** – tour operator opportunities.
-- **Activities** – activity providers.
-- **Experiences** – experience providers.
-- **Technology** – technology for tours.
-
-**Attractions:**
-- **Museums** – museum opportunities.
-- **Cultural sites** – cultural site management.
-- **Entertainment** – entertainment venues.
-
-## Risk Management
-
-### Seasonality Risk
-
-**Seasonal Patterns:**
-- **Summer peak** – strong summer season.
-- **Off-season** – weak off-season.
-- **Revenue** – seasonal revenue patterns.
-- **Cash flow** – seasonal cash flow.
-
-**Mitigation:**
-- **Diversification** – diversify across seasons.
-- **Year-round** – develop year-round offerings.
-- **Reserves** – maintain cash reserves.
-- **Planning** – careful financial planning.
-
-**Seasonality Management Strategies:**
-- **Diversified offerings** – offer both seasonal and year-round experiences.
-- **Marketing** – marketing to extend seasons.
-- **Pricing** – dynamic pricing to manage demand.
-- **Partnerships** – partnerships to extend seasons.
-
-**Off-Season Opportunities:**
-- **Business travel** – target business travel in off-season.
-- **Events** – host events and conferences.
-- **Maintenance** – use off-season for maintenance and upgrades.
-- **Local market** – focus on local market in off-season.
-
-### Climate Risk
-
-**Climate Change:**
-- **Temperature** – rising temperatures.
-- **Weather** – extreme weather events.
-- **Sea level** – sea level rise.
-- **Impact** – impact on destinations.
-
-**Mitigation:**
-- **Adaptation** – climate adaptation measures.
-- **Sustainability** – sustainable practices.
-- **Diversification** – diversify destinations.
-- **Insurance** – climate risk insurance.
-
-**Climate Adaptation Measures:**
-- **Infrastructure** – climate-resilient infrastructure.
-- **Water management** – water management for drought.
-- **Cooling** – cooling systems for extreme heat.
-- **Planning** – climate risk planning.
-
-**Sustainability Practices:**
-- **Energy efficiency** – energy-efficient operations.
-- **Renewable energy** – renewable energy adoption.
-- **Waste reduction** – waste reduction and recycling.
-- **Water conservation** – water conservation measures.
-
-### Economic Sensitivity
-
-**Economic Cycles:**
-- **Recessions** – sensitivity to recessions.
-- **Disposable income** – sensitivity to disposable income.
-- **Currency** – currency fluctuations.
-- **Impact** – impact on tourism.
-
-**Mitigation:**
-- **Diversification** – diversify across markets.
-- **Value** – focus on value offerings.
-- **Resilience** – build resilient business models.
-
-**Economic Resilience Strategies:**
-- **Market diversification** – diversify across source markets.
-- **Value positioning** – position for value-conscious travelers.
-- **Flexible pricing** – flexible pricing strategies.
-- **Cost management** – efficient cost management.
-
-**Crisis Management:**
-- **Contingency planning** – contingency planning for crises.
-- **Liquidity** – maintain adequate liquidity.
-- **Flexibility** – flexible operations and cost structure.
-- **Communication** – effective crisis communication.
-
-**Operational Resilience:**
-- **Supply chain** – resilient supply chains for tourism operations.
-- **Staffing** – flexible staffing models for seasonality.
-- **Technology** – technology infrastructure for operations.
-- **Partnerships** – strategic partnerships for resilience.
-
-**Investment Considerations:**
-- **Recovery timing** – timing of recovery varies by destination and segment.
-- **Transformation** – transformation creates both opportunities and risks.
-- **Sustainability** – sustainability is becoming a competitive advantage.
-- **Digitalization** – digitalization is essential for competitiveness.
-
-## Conclusion
-
-Mediterranean tourism is recovering from the pandemic while transforming through sustainability, digitalization, and changing consumer preferences. Understanding Mediterranean tourism requires:
-- **Market structure** – understanding market structure and destinations.
-- **Recovery** – understanding recovery trends.
-- **Transformation** – understanding transformation themes.
-- **Risk management** – managing seasonality, climate, and economic risks.
-
-For investors, the key is to:
-- **Understand recovery** – understand recovery trends and timing.
-- **Identify transformation** – identify transformation opportunities.
-- **Diversify** – diversify across destinations, sectors, and seasons.
-- **Manage risks** – carefully manage seasonality, climate, and economic risks.
-
-Mediterranean tourism can provide attractive investment opportunities when managed properly. Investors who understand Mediterranean tourism markets and identify transformation opportunities will be well-positioned to benefit from recovery and transformation while managing risks effectively.`,
+    content: `# Turystyka i Gościnność Śródziemnomorska: Odrodzenie i Transformacja
+
+## Wprowadzenie
+
+Morze Śródziemne od dawna jest jednym z najważniejszych celów turystycznych na świecie. Kraje takie jak Włochy, Hiszpania, Grecja, Turcja i Chorwacja przyciągają miliony odwiedzających rocznie, kusząc pięknymi wybrzeżami, bogatą historią, atrakcjami kulturalnymi i kuchnią śródziemnomorską. Jednak pandemia COVID-19 zdziesiątkowała turystykę śródziemnomorską, a ograniczenia w podróżowaniu i obawy zdrowotne spowodowały załamanie liczby odwiedzających. W miarę jak branża się odradza, przechodzi również transformację: obawy o zrównoważony rozwój, cyfryzacja i zmieniające się preferencje konsumentów przekształcają sposób funkcjonowania turystyki.
+
+Turystyka śródziemnomorska charakteryzuje się:
+- **Sezonowością** – silnymi wzorcami sezonowymi.
+- **Skupieniem na wybrzeżu** – koncentracją na destynacjach nadmorskich.
+- **Dziedzictwem kulturowym** – bogatym dziedzictwem kulturowym.
+- **Różnorodnością** – zróżnicowanymi destynacjami i doświadczeniami.
+
+Dla inwestorów turystyka śródziemnomorska oferuje:
+- **Potencjał odrodzenia** – odrodzenie po pandemii.
+- **Ekspozycję na wzrost** – ekspozycję na długoterminowy wzrost turystyki.
+- **Transformację** – możliwości wynikające z transformacji branży.
+- **Dywersyfikację** – dywersyfikację w sektorze turystycznym.
+
+Jednak wyzwania pozostają:
+- **Sezonowość** – sezonowe wzorce przychodów.
+- **Ryzyko klimatyczne** – ryzyka związane ze zmianami klimatu.
+- **Konkurencja** – konkurencja między destynacjami.
+- **Wrażliwość ekonomiczna** – wrażliwość na warunki ekonomiczne.
+
+Ten artykuł bada odrodzenie turystyki śródziemnomorskiej, tematy transformacji i możliwości inwestycyjne.
+
+## Rynek Turystyki Śródziemnomorskiej
+
+### Główne Destynacje
+
+**Włochy:**
+- **Dziedzictwo kulturowe** – bogate dziedzictwo kulturowe.
+- **Wybrzeże** – piękne wybrzeża.
+- **Miasta** – główne miasta (Rzym, Florencja, Wenecja).
+- **Różnorodność** – zróżnicowana oferta turystyczna.
+
+**Hiszpania:**
+- **Wybrzeże** – popularne destynacje nadmorskie.
+- **Miasta** – główne miasta (Barcelona, Madryt).
+- **Wyspy** – Baleary i Wyspy Kanaryjskie.
+- **Wolumen** – wysokie wolumeny turystyczne.
+
+**Grecja:**
+- **Wyspy** – popularne greckie wyspy.
+- **Historia** – miejsca historyczne.
+- **Wybrzeże** – piękne wybrzeża.
+- **Odrodzenie** – silne odrodzenie po kryzysie.
+
+**Turcja:**
+- **Wybrzeże** – wybrzeża Morza Śródziemnego i Egejskiego.
+- **Kultura** – bogate dziedzictwo kulturowe.
+- **Wartość** – dobra relacja jakości do ceny.
+- **Wzrost** – rosnąca turystyka.
+
+**Chorwacja:**
+- **Wybrzeże** – wybrzeże Adriatyku.
+- **Wyspy** – piękne wyspy.
+- **Wzrost** – rosnąca turystyka.
+- **Wartość** – dobra wartość.
+
+### Charakterystyka Rynku
+
+**Wzorce Odwiedzających:**
+- **Sezonowość** – silna sezonowość letnia.
+- **Pochodzenie** – odwiedzający z Europy, Ameryki Północnej, Azji.
+- **Czas trwania** – różne długości pobytu.
+- **Preferencje** – zróżnicowane preferencje.
+
+**Zakwaterowanie:**
+- **Hotele** – zakwaterowanie hotelowe.
+- **Resorty** – zakwaterowanie w resortach.
+- **Alternatywne** – alternatywne zakwaterowanie (Airbnb).
+- **Pojemność** – pojemność zakwaterowania.
+
+**Wydatki:**
+- **Zakwaterowanie** – wydatki na zakwaterowanie.
+- **Jedzenie i napoje** – wydatki na jedzenie i napoje.
+- **Aktywności** – aktywności i doświadczenia.
+- **Zakupy** – wydatki na zakupy.
+
+## Odrodzenie po Pandemii
+
+### Trendy Odrodzenia
+
+**Odrodzenie Odwiedzających:**
+- **Załamanie 2020** – liczba odwiedzających załamała się w 2020 roku.
+- **Odrodzenie 2021** – częściowe odrodzenie w 2021 roku.
+- **2022-2023** – silniejsze odrodzenie w latach 2022-2023.
+- **2024+** – oczekiwane dalsze odrodzenie.
+
+**Czynniki Napędzające Odrodzenie:**
+- **Szczepienia** – szczepienia umożliwiające podróże.
+- **Ograniczenia podróży** – złagodzenie ograniczeń podróży.
+- **Stłumiony popyt** – stłumiony popyt na podróże.
+- **Zaufanie** – powracające zaufanie do podróży.
+
+**Różnice w Odrodzeniu:**
+- **Różnice między destynacjami** – odrodzenie różni się w zależności od destynacji.
+- **Różnice między segmentami** – odrodzenie różni się w zależności od segmentu.
+- **Czas** – czas odrodzenia jest różny.
+
+### Odrodzenie Sektora
+
+**Zakwaterowanie:**
+- **Hotele** – odrodzenie hoteli.
+- **Resorty** – odrodzenie resortów.
+- **Alternatywne** – odrodzenie alternatywnego zakwaterowania.
+- **Obłożenie** – odrodzenie wskaźnika obłożenia.
+
+**Jedzenie i Napoje:**
+- **Restauracje** – odrodzenie restauracji.
+- **Bary** – odrodzenie barów i życia nocnego.
+- **Wydatki** – odrodzenie wydatków na jedzenie i napoje.
+
+**Aktywności:**
+- **Wycieczki** – odrodzenie wycieczek i aktywności.
+- **Atrakcje** – odrodzenie atrakcji.
+- **Doświadczenia** – odrodzenie doświadczeń.
+
+## Tematy Transformacji
+
+### Zrównoważony Rozwój
+
+**Obawy Środowiskowe:**
+- **Zmiany klimatu** – zmiany klimatu wpływające na destynacje.
+- **Overturystyka** – obawy związane z overturystyką.
+- **Wpływ na środowisko** – wpływ turystyki na środowisko.
+- **Zrównoważony rozwój** – potrzeba zrównoważonej turystyki.
+
+**Praktyki Zrównoważone:**
+- **Przyjazne dla środowiska** – praktyki przyjazne dla środowiska.
+- **Lokalne** – wspieranie lokalnych społeczności.
+- **Ochrona** – działania na rzecz ochrony.
+- **Certyfikacja** – certyfikacja zrównoważonego rozwoju.
+
+**Możliwości Inwestycyjne:**
+- **Zrównoważone hotele** – rozwój zrównoważonych hoteli.
+- **Ekoturystyka** – projekty ekoturystyczne.
+- **Energia odnawialna** – energia odnawialna dla turystyki.
+- **Gospodarka odpadami** – rozwiązania w zakresie gospodarki odpadami.
+
+### Transformacja Cyfrowa
+
+**Adopcja Technologii:**
+- **Rezerwacje online** – platformy rezerwacji online.
+- **Mobilne** – technologia mobilna.
+- **Doświadczenia cyfrowe** – doświadczenia cyfrowe.
+- **Analiza danych** – analiza danych dla turystyki.
+
+**Możliwości Cyfrowe:**
+- **Platformy** – platformy podróży online.
+- **Technologia** – technologia turystyczna.
+- **Marketing cyfrowy** – marketing cyfrowy.
+- **Doświadczenie klienta** – cyfrowe doświadczenie klienta.
+
+**Możliwości Inwestycyjne:**
+- **Firmy technologiczne** – firmy technologii turystycznej.
+- **Platformy** – platformy podróży online.
+- **Usługi cyfrowe** – usługi cyfrowe dla turystyki.
+
+### Zmieniające się Preferencje Konsumentów
+
+**Skupienie na Doświadczeniach:**
+- **Doświadczenia** – skupienie na doświadczeniach zamiast na rzeczach.
+- **Autentyczność** – popyt na autentyczne doświadczenia.
+- **Lokalne** – zainteresowanie lokalną kulturą.
+- **Personalizacja** – popyt na spersonalizowane doświadczenia.
+
+**Wellness i Zdrowie:**
+- **Wellness** – turystyka wellness.
+- **Zdrowie** – podróże skupione na zdrowiu.
+- **Spa** – obiekty spa i wellness.
+- **Aktywności** – aktywności wellness.
+
+**Możliwości Inwestycyjne:**
+- **Dostawcy doświadczeń** – dostawcy doświadczeń.
+- **Wellness** – projekty turystyki wellness.
+- **Lokalne doświadczenia** – dostawcy lokalnych doświadczeń.
+
+## Możliwości Inwestycyjne
+
+### Zakwaterowanie
+
+**Hotele:**
+- **Odrodzenie** – odrodzenie hoteli po pandemii.
+- **Renowacja** – możliwości renowacji hoteli.
+- **Nowy rozwój** – nowy rozwój hoteli.
+- **Marki** – możliwości marek hotelowych.
+
+**Resorty:**
+- **Rozwój resortów** – rozwój resortów.
+- **Luksus** – możliwości luksusowych resortów.
+- **Zrównoważony rozwój** – zrównoważony rozwój resortów.
+
+**Alternatywne Zakwaterowanie:**
+- **Platformy** – platformy alternatywnego zakwaterowania.
+- **Nieruchomości** – nieruchomości alternatywnego zakwaterowania.
+- **Zarządzanie** – zarządzanie nieruchomościami.
+
+### Jedzenie i Napoje
+
+**Restauracje:**
+- **Odrodzenie** – odrodzenie restauracji.
+- **Koncepcje** – nowe koncepcje restauracji.
+- **Lokalne** – możliwości lokalnych restauracji.
+- **Sieci** – możliwości sieci restauracji.
+
+**Bary i Życie Nocne:**
+- **Odrodzenie** – odrodzenie barów i życia nocnego.
+- **Koncepcje** – nowe koncepcje barów.
+- **Rozrywka** – miejsca rozrywki.
+
+### Aktywności i Doświadczenia
+
+**Wycieczki i Aktywności:**
+- **Organizatorzy wycieczek** – możliwości organizatorów wycieczek.
+- **Aktywności** – dostawcy aktywności.
+- **Doświadczenia** – dostawcy doświadczeń.
+- **Technologia** – technologia dla wycieczek.
+
+**Atrakcje:**
+- **Muzea** – możliwości muzeów.
+- **Miejsca kulturowe** – zarządzanie miejscami kulturowymi.
+- **Rozrywka** – miejsca rozrywki.
+
+## Zarządzanie Ryzykiem
+
+### Ryzyko Sezonowości
+
+**Wzorce Sezonowe:**
+- **Szczyt letni** – silny sezon letni.
+- **Poza sezonem** – słaby sezon poza szczytem.
+- **Przychody** – sezonowe wzorce przychodów.
+- **Przepływ środków pieniężnych** – sezonowy przepływ środków pieniężnych.
+
+**Łagodzenie:**
+- **Dywersyfikacja** – dywersyfikacja w różnych sezonach.
+- **Całoroczne** – rozwój całorocznej oferty.
+- **Rezerwy** – utrzymanie rezerw gotówkowych.
+- **Planowanie** – ostrożne planowanie finansowe.
+
+**Strategie Zarządzania Sezonowością:**
+- **Zróżnicowana oferta** – oferowanie zarówno sezonowych, jak i całorocznych doświadczeń.
+- **Marketing** – marketing w celu przedłużenia sezonów.
+- **Ceny** – dynamiczne ceny w celu zarządzania popytem.
+- **Partnerstwa** – partnerstwa w celu przedłużenia sezonów.
+
+**Możliwości Poza Sezonem:**
+- **Podróże służbowe** – skupienie na podróżach służbowych poza sezonem.
+- **Wydarzenia** – organizowanie wydarzeń i konferencji.
+- **Konserwacja** – wykorzystanie poza sezonem do konserwacji i modernizacji.
+- **Rynek lokalny** – skupienie na rynku lokalnym poza sezonem.
+
+### Ryzyko Klimatyczne
+
+**Zmiany Klimatu:**
+- **Temperatura** – rosnące temperatury.
+- **Pogoda** – ekstremalne zjawiska pogodowe.
+- **Poziom morza** – podnoszenie się poziomu morza.
+- **Wpływ** – wpływ na destynacje.
+
+**Łagodzenie:**
+- **Adaptacja** – środki adaptacji do zmian klimatu.
+- **Zrównoważony rozwój** – praktyki zrównoważone.
+- **Dywersyfikacja** – dywersyfikacja destynacji.
+- **Ubezpieczenie** – ubezpieczenie od ryzyka klimatycznego.
+
+**Środki Adaptacji do Zmian Klimatu:**
+- **Infrastruktura** – infrastruktura odporna na zmiany klimatu.
+- **Gospodarka wodna** – gospodarka wodna na wypadek suszy.
+- **Chłodzenie** – systemy chłodzenia na ekstremalne upały.
+- **Planowanie** – planowanie ryzyka klimatycznego.
+
+**Praktyki Zrównoważone:**
+- **Efektywność energetyczna** – efektywne energetycznie operacje.
+- **Energia odnawialna** – adopcja energii odnawialnej.
+- **Redukcja odpadów** – redukcja odpadów i recykling.
+- **Oszczędzanie wody** – środki oszczędzania wody.
+
+### Wrażliwość Ekonomiczna
+
+**Cykle Ekonomiczne:**
+- **Recesje** – wrażliwość na recesje.
+- **Dochód rozporządzalny** – wrażliwość na dochód rozporządzalny.
+- **Waluta** – wahania kursów walut.
+- **Wpływ** – wpływ na turystykę.
+
+**Łagodzenie:**
+- **Dywersyfikacja** – dywersyfikacja w różnych rynkach.
+- **Wartość** – skupienie na ofercie wartościowej.
+- **Odporność** – budowanie odpornych modeli biznesowych.
+
+**Strategie Odporności Ekonomicznej:**
+- **Dywersyfikacja rynku** – dywersyfikacja w różnych rynkach źródłowych.
+- **Pozycjonowanie wartości** – pozycjonowanie dla podróżujących świadomych wartości.
+- **Elastyczne ceny** – elastyczne strategie cenowe.
+- **Zarządzanie kosztami** – efektywne zarządzanie kosztami.
+
+**Zarządzanie Kryzysem:**
+- **Planowanie awaryjne** – planowanie awaryjne na wypadek kryzysów.
+- **Płynność** – utrzymanie odpowiedniej płynności.
+- **Elastyczność** – elastyczne operacje i struktura kosztów.
+- **Komunikacja** – skuteczna komunikacja kryzysowa.
+
+**Odporność Operacyjna:**
+- **Łańcuch dostaw** – odporny łańcuch dostaw dla operacji turystycznych.
+- **Personel** – elastyczne modele zatrudnienia dla sezonowości.
+- **Technologia** – infrastruktura technologiczna dla operacji.
+- **Partnerstwa** – strategiczne partnerstwa dla odporności.
+
+**Uwagi Inwestycyjne:**
+- **Czas odrodzenia** – czas odrodzenia różni się w zależności od destynacji i segmentu.
+- **Transformacja** – transformacja tworzy zarówno możliwości, jak i ryzyka.
+- **Zrównoważony rozwój** – zrównoważony rozwój staje się przewagą konkurencyjną.
+- **Cyfryzacja** – cyfryzacja jest niezbędna dla konkurencyjności.
+
+## Wnioski
+
+Turystyka śródziemnomorska odradza się po pandemii, jednocześnie przechodząc transformację poprzez zrównoważony rozwój, cyfryzację i zmieniające się preferencje konsumentów. Zrozumienie turystyki śródziemnomorskiej wymaga:
+- **Struktury rynku** – zrozumienia struktury rynku i destynacji.
+- **Odrodzenia** – zrozumienia trendów odrodzenia.
+- **Transformacji** – zrozumienia tematów transformacji.
+- **Zarządzania ryzykiem** – zarządzania ryzykiem sezonowości, klimatu i ekonomicznym.
+
+Dla inwestorów kluczowe jest:
+- **Zrozumienie odrodzenia** – zrozumienie trendów i czasu odrodzenia.
+- **Identyfikacja transformacji** – identyfikacja możliwości transformacji.
+- **Dywersyfikacja** – dywersyfikacja w różnych destynacjach, sektorach i sezonach.
+- **Zarządzanie ryzykiem** – ostrożne zarządzanie ryzykiem sezonowości, klimatu i ekonomicznym.
+
+Turystyka śródziemnomorska może zapewnić atrakcyjne możliwości inwestycyjne przy właściwym zarządzaniu. Inwestorzy, którzy rozumieją rynki turystyki śródziemnomorskiej i identyfikują możliwości transformacji, będą dobrze przygotowani do korzystania z odrodzenia i transformacji przy jednoczesnym skutecznym zarządzaniu ryzykiem.`,
     date: formatDate(307),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
-      countWords(`# Mediterranean Tourism and Hospitality: Recovery and Transformation
+      countWords(`# Turystyka i Gościnność Śródziemnomorska: Odrodzenie i Transformacja
 
-## Introduction
+## Wprowadzenie
 
-The Mediterranean has long been one of the world's premier tourism destinations.`),
+Morze Śródziemne od dawna jest jednym z najważniejszych celów turystycznych na świecie.`),
     ),
-    tags: ['Mediterranean', 'Tourism', 'Hospitality', 'Recovery', 'European Markets'],
+    tags: ['Śródziemnomorskie', 'Turystyka', 'Gościnność', 'Odrodzenie', 'Rynki Europejskie'],
   },
   {
     slug: 'italian-energy-transition-and-green-infrastructure-investment-opportunities',
-    title: 'Italian Energy Transition and Green Infrastructure: Investment Opportunities',
+    title: 'Włoski Przejście Energetyczne i Zielona Infrastruktura: Możliwości Inwestycyjne',
     excerpt:
-      'How Italy\'s energy transition is creating investment opportunities in renewable energy, green infrastructure, and energy efficiency—and how investors can identify opportunities in Italy\'s evolving energy landscape.',
-    content: `# Italian Energy Transition and Green Infrastructure: Investment Opportunities
+      'Jak włoskie przejście energetyczne tworzy możliwości inwestycyjne w energię odnawialną, zieloną infrastrukturę i efektywność energetyczną—oraz jak inwestorzy mogą identyfikować możliwości w ewoluującym krajobrazie energetycznym Włoch.',
+    content: `# Włoski Przejście Energetyczne i Zielona Infrastruktura: Możliwości Inwestycyjne
 
-## Introduction
+## Wprowadzenie
 
-Italy has long been dependent on energy imports, importing over 75% of its energy needs. This dependence, combined with ambitious EU climate targets and rising energy costs, is driving Italy's energy transition toward renewable energy and energy efficiency. The transition is creating significant investment opportunities across renewable energy generation, grid infrastructure, energy storage, and energy efficiency.
+Włochy od dawna są zależne od importu energii, importując ponad 75% swoich potrzeb energetycznych. Ta zależność, w połączeniu z ambitnymi celami klimatycznymi UE i rosnącymi kosztami energii, napędza włoskie przejście energetyczne w kierunku energii odnawialnej i efektywności energetycznej. Przejście tworzy znaczące możliwości inwestycyjne w zakresie wytwarzania energii odnawialnej, infrastruktury sieciowej, magazynowania energii i efektywności energetycznej.
 
-Italy's energy transition is driven by several factors:
-- **EU climate targets** – EU targets for emissions reduction and renewable energy.
-- **Energy security** – reducing dependence on energy imports.
-- **Cost competitiveness** – renewable energy becoming cost-competitive.
-- **Policy support** – policy support for renewable energy and energy efficiency.
+Włoskie przejście energetyczne jest napędzane przez kilka czynników:
+- **Cele klimatyczne UE** – cele UE dotyczące redukcji emisji i energii odnawialnej.
+- **Bezpieczeństwo energetyczne** – zmniejszenie zależności od importu energii.
+- **Konkurencyjność kosztowa** – energia odnawialna staje się konkurencyjna kosztowo.
+- **Wsparcie polityczne** – wsparcie polityczne dla energii odnawialnej i efektywności energetycznej.
 
-For investors, Italy's energy transition offers:
-- **Growth opportunities** – rapidly growing markets for renewable energy and green infrastructure.
-- **Policy support** – strong policy support for renewable energy.
-- **Stable income** – renewable energy assets can provide stable income.
-- **ESG alignment** – alignment with ESG objectives.
+Dla inwestorów włoskie przejście energetyczne oferuje:
+- **Możliwości wzrostu** – szybko rosnące rynki energii odnawialnej i zielonej infrastruktury.
+- **Wsparcie polityczne** – silne wsparcie polityczne dla energii odnawialnej.
+- **Stabilny dochód** – aktywa energii odnawialnej mogą zapewnić stabilny dochód.
+- **Zgodność z ESG** – zgodność z celami ESG.
 
-But challenges remain:
-- **Regulatory complexity** – complex regulatory framework.
-- **Grid constraints** – grid capacity constraints limiting renewable energy.
-- **Permitting** – permitting challenges for renewable energy projects.
-- **Competition** – competition from established and new players.
+Jednak wyzwania pozostają:
+- **Złożoność regulacyjna** – złożone ramy regulacyjne.
+- **Ograniczenia sieci** – ograniczenia pojemności sieci ograniczające energię odnawialną.
+- **Pozwolenia** – wyzwania związane z pozwoleniami dla projektów energii odnawialnej.
+- **Konkurencja** – konkurencja ze strony ugruntowanych i nowych graczy.
 
-This article explores Italy's energy transition, investment opportunities, and how investors can identify opportunities in Italy's evolving energy landscape.
+Ten artykuł bada włoskie przejście energetyczne, możliwości inwestycyjne i jak inwestorzy mogą identyfikować możliwości w ewoluującym krajobrazie energetycznym Włoch.
 
 ## Italy's Energy Landscape
 
@@ -658,45 +659,46 @@ This article explores Italy's energy transition, investment opportunities, and h
 - **Quality** – focus on quality projects.
 - **Efficiency** – improve operational efficiency.
 
-## Conclusion
+## Wnioski
 
-Italy's energy transition creates significant investment opportunities across renewable energy, grid infrastructure, and energy efficiency. Understanding Italy's energy transition requires:
-- **Energy landscape** – understanding current energy mix and targets.
-- **Investment opportunities** – identifying investment opportunities.
-- **Market structure** – understanding market structure and competition.
-- **Risk management** – managing regulatory, grid, permitting, and competition risks.
+Włoskie przejście energetyczne tworzy znaczące możliwości inwestycyjne w zakresie energii odnawialnej, infrastruktury sieciowej i efektywności energetycznej. Zrozumienie włoskiego przejścia energetycznego wymaga:
+- **Krajobrazu energetycznego** – zrozumienia obecnego miksu energetycznego i celów.
+- **Możliwości inwestycyjnych** – identyfikacji możliwości inwestycyjnych.
+- **Struktury rynku** – zrozumienia struktury rynku i konkurencji.
+- **Zarządzania ryzykiem** – zarządzania ryzykiem regulacyjnym, sieciowym, związanym z pozwoleniami i konkurencją.
 
-For investors, the key is to:
-- **Focus on quality** – focus on quality projects and companies.
-- **Understand risks** – understand and manage risks.
-- **Diversify** – diversify across technologies and projects.
-- **Be patient** – energy transition is a long-term theme.
+Dla inwestorów kluczowe jest:
+- **Skupienie na jakości** – skupienie na jakościowych projektach i firmach.
+- **Zrozumienie ryzyka** – zrozumienie i zarządzanie ryzykiem.
+- **Dywersyfikacja** – dywersyfikacja w różnych technologiach i projektach.
+- **Cierpliwość** – przejście energetyczne to długoterminowy temat.
 
-Italy's energy transition can provide attractive risk-adjusted returns when managed properly. Investors who understand Italy's energy landscape and construct resilient portfolios will be well-positioned to capture opportunities while managing risks.`,
+Włoskie przejście energetyczne może zapewnić atrakcyjne skorygowane o ryzyko zwroty przy właściwym zarządzaniu. Inwestorzy, którzy rozumieją włoski krajobraz energetyczny i budują odporne portfele, będą dobrze przygotowani do wykorzystania możliwości przy jednoczesnym zarządzaniu ryzykiem.`,
     date: formatDate(306),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'longterm',
     readTime: calculateReadTime(
-      countWords(`# Italian Energy Transition and Green Infrastructure: Investment Opportunities
+      countWords(`# Włoski Przejście Energetyczne i Zielona Infrastruktura: Możliwości Inwestycyjne
 
-## Introduction
+## Wprowadzenie
 
-Italy has long been dependent on energy imports, importing over 75% of its energy needs.`),
+Włochy od dawna są zależne od importu energii, importując ponad 75% swoich potrzeb energetycznych.`),
     ),
     imageUrl: getAnalyticsImage('italian-energy-transition-and-green-infrastructure-investment-opportunities'),
-    tags: ['Italy', 'Energy Transition', 'Renewable Energy', 'Green Infrastructure', 'European Markets'],
+    tags: ['Włochy', 'Przejście Energetyczne', 'Energia Odnawialna', 'Zielona Infrastruktura', 'Rynki Europejskie'],
   },
   {
     slug: 'italian-banking-consolidation-and-npl-resolution-the-path-to-normalization',
-    title: 'Italian Banking Consolidation and NPL Resolution: The Path to Normalization',
+    title: 'Konsolidacja Bankowa i Rozwiązanie NPL we Włoszech: Droga do Normalizacji',
     excerpt:
-      'How Italy\'s banking sector is consolidating, resolving non-performing loans, and rebuilding profitability after years of crisis—and what this means for equity investors in Italian banks and the broader Italian market.',
-    content: `# Italian Banking Consolidation and NPL Resolution: The Path to Normalization
+      'Jak włoski sektor bankowy konsoliduje się, rozwiązuje kredyty zagrożone i odbudowuje rentowność po latach kryzysu—oraz co to oznacza dla inwestorów akcyjnych we włoskich bankach i szerszym włoskim rynku.',
+    content: `# Konsolidacja Bankowa i Rozwiązanie NPL we Włoszech: Droga do Normalizacji
 
-## Introduction
+## Wprowadzenie
 
-Italy's banking sector has been through a long and painful restructuring. The combination of the global financial crisis, the European sovereign debt crisis, weak economic growth, and a legacy of non-performing loans (NPLs) created a perfect storm that left Italian banks undercapitalized, unprofitable, and struggling to support the economy. But after years of consolidation, NPL resolution, and capital raising, the sector is finally showing signs of normalization.
+Włoski sektor bankowy przeszedł długą i bolesną restrukturyzację. Połączenie globalnego kryzysu finansowego, europejskiego kryzysu zadłużenia suwerennego, słabego wzrostu gospodarczego i dziedzictwa kredytów zagrożonych (NPL) stworzyło idealną burzę, która pozostawiła włoskie banki niedokapitalizowane, nierentowne i walczące o wsparcie gospodarki. Ale po latach konsolidacji, rozwiązania NPL i pozyskiwania kapitału, sektor w końcu wykazuje oznaki normalizacji.
 
 The transformation has been significant:
 - **NPL ratios** have fallen from over 17% in 2015 to under 4% today.
@@ -1019,52 +1021,53 @@ Italian banks trade at discounts to:
 - **Satellite positions** – smaller positions in recovery plays.
 - **Risk limits** – limit exposure to single banks or sectors.
 
-## Conclusion
+## Wnioski
 
-Italian banking consolidation and NPL resolution are creating a path to normalization. After years of crisis, the sector is showing signs of recovery:
-- **NPL resolution** – significant progress in resolving NPLs.
-- **Consolidation** – significant consolidation creating larger, more efficient banks.
-- **Profitability** – profitability is recovering, though still below European peers.
-- **Capital** – banks are well-capitalized.
+Włoska konsolidacja bankowa i rozwiązanie NPL tworzą drogę do normalizacji. Po latach kryzysu sektor wykazuje oznaki odrodzenia:
+- **Rozwiązanie NPL** – znaczący postęp w rozwiązywaniu NPL.
+- **Konsolidacja** – znacząca konsolidacja tworząca większe, bardziej efektywne banki.
+- **Rentowność** – rentowność się odradza, choć nadal poniżej europejskich odpowiedników.
+- **Kapitał** – banki są dobrze skapitalizowane.
 
-For equity investors, Italian banks offer:
-- **Recovery potential** – significant upside if profitability normalizes.
-- **Dividend yields** – attractive dividend yields.
-- **Consolidation plays** – opportunities from further consolidation.
-- **Rate sensitivity** – benefit from higher interest rates.
+Dla inwestorów akcyjnych włoskie banki oferują:
+- **Potencjał odrodzenia** – znaczący potencjał wzrostu, jeśli rentowność się znormalizuje.
+- **Dywidendy** – atrakcyjne stopy dywidendy.
+- **Możliwości konsolidacji** – możliwości wynikające z dalszej konsolidacji.
+- **Wrażliwość na stopy** – korzyści z wyższych stóp procentowych.
 
-But risks remain:
-- **Economic sensitivity** – banks are highly sensitive to Italian economic conditions.
-- **Interest rate exposure** – profitability depends on interest rate levels.
-- **Political risk** – political uncertainty can affect bank valuations.
-- **Structural challenges** – low profitability, high costs, and weak digitalization.
+Jednak ryzyka pozostają:
+- **Wrażliwość ekonomiczna** – banki są bardzo wrażliwe na warunki ekonomiczne Włoch.
+- **Ekspozycja na stopy procentowe** – rentowność zależy od poziomu stóp procentowych.
+- **Ryzyko polityczne** – niepewność polityczna może wpływać na wyceny banków.
+- **Wyzwania strukturalne** – niska rentowność, wysokie koszty i słaba cyfryzacja.
 
-The key is to:
-- **Focus on quality** – invest in well-capitalized, profitable banks with strong franchises.
-- **Manage risks** – closely monitor economic, interest rate, and political risks.
-- **Be patient** – banking recovery is a multi-year process.
-- **Diversify** – don't over-concentrate in Italian banks.
+Kluczowe jest:
+- **Skupienie na jakości** – inwestowanie w dobrze skapitalizowane, rentowne banki z silnymi markami.
+- **Zarządzanie ryzykiem** – ścisłe monitorowanie ryzyka ekonomicznego, stóp procentowych i politycznego.
+- **Cierpliwość** – odrodzenie bankowe to proces wieloletni.
+- **Dywersyfikacja** – nie koncentrować się zbytnio na włoskich bankach.
 
-With careful selection and risk management, Italian banks can offer attractive risk-adjusted returns as the sector continues to normalize.`,
+Przy ostrożnym wyborze i zarządzaniu ryzykiem włoskie banki mogą oferować atrakcyjne skorygowane o ryzyko zwroty, gdy sektor kontynuuje normalizację.`,
     date: formatDate(305),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
-      countWords(`# Italian Banking Consolidation and NPL Resolution: The Path to Normalization
+      countWords(`# Konsolidacja Bankowa i Rozwiązanie NPL we Włoszech: Droga do Normalizacji
 
-## Introduction
+## Wprowadzenie
 
-Italy's banking sector has been through a long and painful restructuring.`),
+Włoski sektor bankowy przeszedł długą i bolesną restrukturyzację.`),
     ),
     imageUrl: getAnalyticsImage('italian-banking-consolidation-and-npl-resolution-the-path-to-normalization'),
-    tags: ['Italy', 'Banking', 'NPLs', 'Consolidation', 'European Markets'],
+    tags: ['Włochy', 'Bankowość', 'NPL', 'Konsolidacja', 'Rynki Europejskie'],
   },
   {
     slug: 'mediterranean-ports-and-shipping-lanes-trade-rewiring-and-logistics-winners',
-    title: 'Mediterranean Ports and Shipping Lanes: Trade Rewiring and Logistics Winners',
+    title: 'Porty i Szlaki Morskie Śródziemnomorskie: Przeprowadzka Handlu i Zwycięzcy Logistyki',
     excerpt:
-      'Trade routes are being rewired by geopolitics, energy flows, and nearshoring. This framework maps why Mediterranean ports and logistics nodes can gain strategic value—and where investors can find durable cash flows.',
+      'Szlaki handlowe są przeprojektowywane przez geopolitykę, przepływy energii i nearshoring. Ten framework mapuje, dlaczego porty śródziemnomorskie i węzły logistyczne mogą zyskać strategiczną wartość—oraz gdzie inwestorzy mogą znaleźć trwałe przepływy gotówkowe.',
     content: `# Mediterranean Ports and Shipping Lanes: Trade Rewiring and Logistics Winners
 
 ## Introduction
@@ -1229,31 +1232,32 @@ Reliability, by contrast, compounds.
 
 This compounding shows up in small, repeatable advantages: faster clearance times, fewer missed sailings, higher throughput per berth, and stronger long-term relationships with shippers and inland operators. Over years, those small edges become the difference between stable concession cash flows and chronic reinvestment pressure.
 
-## Conclusion
+## Wnioski
 
-The Mediterranean is re-entering the strategic map of global trade as supply chains prioritize resilience and energy security. Ports and shipping lanes can gain value when reliability becomes scarce, but investable outcomes depend on business model, capital discipline, and inland connectivity.
+Morze Śródziemne ponownie wchodzi na strategiczną mapę globalnego handlu, ponieważ łańcuchy dostaw priorytetyzują odporność i bezpieczeństwo energetyczne. Porty i szlaki morskie mogą zyskać wartość, gdy niezawodność staje się rzadka, ale wyniki inwestycyjne zależą od modelu biznesowego, dyscypliny kapitałowej i połączeń lądowych.
 
-For investors, the most durable opportunities often sit in concessions and bottleneck infrastructure rather than pure shipping cyclicality. In an era of geopolitical friction, logistics is no longer background—it is strategy, and the Mediterranean is one of its key theaters.`,
+Dla inwestorów najbardziej trwałe możliwości często znajdują się w koncesjach i infrastrukturze wąskich gardeł, a nie w czystej cykliczności żeglugi. W erze geopolitycznych tarć logistyka nie jest już tłem—to strategia, a Morze Śródziemne jest jednym z jej kluczowych teatrów.`,
     date: formatDate(0),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
-      countWords(`# Mediterranean Ports and Shipping Lanes: Trade Rewiring and Logistics Winners
+      countWords(`# Porty i Szlaki Morskie Śródziemnomorskie: Przeprowadzka Handlu i Zwycięzcy Logistyki
 
-## Introduction
+## Wprowadzenie
 
-For decades, global trade felt like a solved problem. Containerization, predictable shipping lanes, and an optimizing supply chain produced a simple mental model.`)
+Przez dziesięciolecia globalny handel wydawał się rozwiązany. Konteneryzacja, przewidywalne szlaki morskie i optymalizujący łańcuch dostaw stworzyły prosty model mentalny.`)
     ),
     imageUrl: getAnalyticsImage('mediterranean-ports-and-shipping-lanes-trade-rewiring-and-logistics-winners'),
-    tags: ['Mediterranean', 'Logistics', 'Ports', 'Shipping', 'Trade'],
+    tags: ['Śródziemnomorskie', 'Logistyka', 'Porty', 'Żegluga', 'Handel'],
     relatedMarkets: ['stocks', 'commodities'],
   },
   {
     slug: 'luxury-pricing-power-and-fx-a-micro-to-macro-investing-framework',
-    title: 'Luxury Pricing Power and FX: A Micro-to-Macro Investing Framework',
+    title: 'Siła Cenowa Luksusu i FX: Framework Inwestycyjny od Mikro do Makro',
     excerpt:
-      'European luxury looks like brand storytelling, but it is fundamentally a pricing-power and FX business. This framework links product mix, tourist flows, and currency dynamics to margins and valuation.',
+      'Europejski luksus wygląda jak opowiadanie historii marki, ale jest to zasadniczo biznes siły cenowej i FX. Ten framework łączy mix produktów, przepływy turystyczne i dynamikę walutową z marżami i wyceną.',
     content: `# Luxury Pricing Power and FX: A Micro-to-Macro Investing Framework
 
 ## Introduction
@@ -1460,8 +1464,9 @@ European luxury’s unique appeal for investors is that it converts intangible b
 
 The right analytical approach is micro-to-macro: understand product and channel structure first, then overlay currencies and travel flows. Done well, luxury becomes one of the cleanest ways to express global consumption trends through high-quality European equities—while managing the risks that narrative-driven investors often ignore.`,
     date: formatDate(0),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'longterm',
     readTime: calculateReadTime(
       countWords(`# Luxury Pricing Power and FX: A Micro-to-Macro Investing Framework
@@ -1692,8 +1697,9 @@ The transition to institutional capital will continue, creating opportunities fo
 
 Those who navigate regulation, partnership structures, and market cycles effectively can build resilient, income‑generating portfolios that tap into the enduring appeal of Italian property across regions and asset classes. Success requires commitment, local partnerships, and understanding of diverse markets and regulatory environments. The Italian real estate market offers significant opportunities for investors willing to navigate complexity and build local capabilities.`,
     date: formatDate(2),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'longterm',
     readTime: calculateReadTime(
       countWords(`# Italian Real Estate: From Family-Owned Assets to Institutional Capital
@@ -2030,8 +2036,9 @@ AI and digital transformation are gradually reshaping Italian SMBs in services, 
 
 The Italian SMB digital transformation story is still being written, but the direction is clear: technology adoption is accelerating, and companies that position themselves well can capture significant value from this multi-year trend.`,
     date: formatDate(1),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# AI and Digital Transformation in Italian SMBs and Services
@@ -2218,8 +2225,9 @@ For investors, the focus should shift from chasing cyclicality to owning busines
 
 In doing so, portfolios can continue to benefit from the enduring appeal of Mediterranean destinations and Italian craftsmanship—while respecting the new constraints imposed by a world where money once again has a meaningful cost.`,
     date: formatDate(0),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Mediterranean Consumer, Luxury, and Tourism Under Higher Rates
@@ -2613,8 +2621,9 @@ Italian luxury goods offer attractive investment opportunities through strong br
 
 Investors who understand these dynamics and manage risk appropriately can navigate Italian luxury markets successfully. The sector offers unique opportunities for those willing to invest in understanding brand value, market positioning, and long-term value creation.`,
     date: formatDate(299),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'expert',
     readTime: calculateReadTime(countWords(`# Italian Markets: Luxury Goods and Investment Opportunities
 
@@ -3049,8 +3058,9 @@ Success requires:
 
 The Mediterranean tourism sector will continue evolving, with sustainability, technology, and changing consumer preferences shaping the future. Investors who understand these dynamics and focus on quality can capture value from this important economic sector.`,
     date: formatDate(300),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Mediterranean Tourism Recovery: Cycles, Capacity, and Investment Themes
@@ -3289,8 +3299,9 @@ Italian mid‑cap industrials occupy an important but sometimes overlooked posit
 
 For investors, this segment offers a blend of **structural themes and company‑specific stories**, with potential for attractive risk‑adjusted returns when approached with disciplined fundamental analysis and portfolio construction. In a Europe that must reconcile decarbonization with industrial competitiveness, Italy’s industrial mid caps are likely to remain central players—and, for selective investors, compelling opportunities.`,
     date: formatDate(301),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'expert',
     readTime: calculateReadTime(
       countWords(`# Italian Mid‑Cap Industrials and the Energy Transition: Hidden Champions in a Changing Europe
@@ -3522,8 +3533,9 @@ Italian government bonds offer a combination of higher yields and deep markets w
 
 For multi‑asset and fixed income portfolios, the goal is not to predict every spread move, but to **size and time exposure** such that carry and potential spread compression are adequate compensation for tail risks. With a structured approach to fiscal analysis, ECB policy interpretation, and market technicals, investors can use BTPs as a deliberate, risk‑managed component of their European fixed income allocation.`,
     date: formatDate(302),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Italian Government Bonds and Spread Dynamics vs. Bunds: Navigating Risk and Carry in the BTP Market
@@ -3928,8 +3940,9 @@ Spanish and Portuguese equities sit at an interesting intersection of:
 
 **Approached through this lens, Spanish and Portuguese equities can complement Italian and broader Mediterranean exposures in a thoughtfully diversified regional strategy.** Success requires understanding country-specific dynamics, sector selection, and risk management while maintaining focus on quality and valuation discipline.`,
     date: formatDate(303),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Spanish and Portuguese Equities: Tourism, Banks, and Infrastructure in Iberia’s Recovery Cycle
@@ -4392,8 +4405,9 @@ to:
 
 Success requires understanding the unique characteristics of the Greek market, careful risk management, and focus on quality companies with strong fundamentals and improving governance. Investors who approach Greece with appropriate expectations and risk management can find attractive opportunities in this evolving market.`,
     date: formatDate(304),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Greek Equities: Tourism, Banks, and Privatization in a Post-Crisis Market
@@ -4808,8 +4822,9 @@ For investors, success lies in distinguishing temporary demand softness from str
 
 The key is selectivity: focus on brands with strong pricing power, geographic diversification, and operational excellence. Use valuation cycles to build exposure during periods of market pessimism, and maintain a long-term perspective on the structural growth trends supporting the luxury sector. With proper analysis and risk management, Italian luxury brands can be valuable components of a well-diversified portfolio, providing exposure to quality, growth, and the long-term trend of global wealth creation.`,
     date: formatDate(310),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'expert',
     readTime: calculateReadTime(
       countWords(`# Italian Luxury Brands: Global Demand, Margin Resilience, and Valuation Cycles
@@ -5362,8 +5377,9 @@ For investors, success lies in aligning asset selection with enduring demand dri
 
 Whether considering a second home, rental property, or institutional investment, the Mediterranean real estate market demands thorough due diligence, local expertise, and realistic expectations. With proper approach and risk management, Mediterranean real estate can be a valuable addition to a diversified investment portfolio.`,
     date: formatDate(316),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Mediterranean Real Estate: Tourism, Residential Markets, and Second Homes
@@ -5881,8 +5897,9 @@ Successful wine and spirits investing requires understanding market dynamics, pr
 
 The Mediterranean's rich wine and spirits heritage, combined with growing global demand and supply constraints, creates ongoing investment opportunities. However, these markets require specialized knowledge and should be approached with realistic expectations about returns, liquidity, and holding periods.`,
     date: formatDate(322),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'expert',
     readTime: calculateReadTime(
       countWords(`# Wine and Spirits: Investment Markets in Italy and the Wider Mediterranean
@@ -6347,8 +6364,9 @@ For Mediterranean investors, selective exposure to well-capitalised, cost-discip
 
 The Italian banking sector's transformation demonstrates the potential for recovery in distressed financial sectors, but also highlights the ongoing challenges of operating in a low-growth, highly regulated, and competitive environment. Investors should approach the sector with realistic expectations and a focus on quality franchises with sustainable business models.`,
     date: formatDate(328),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Italian Banking Sector: Recovery, Profitability, and NPL Trends
@@ -6712,8 +6730,9 @@ For investors, success requires understanding project types, geographic opportun
 
 The energy transition in the Mediterranean is accelerating, creating significant investment opportunities across the value chain. As always, project and regulatory due diligence remain central to protecting downside while capturing the upside potential of this transformative sector.`,
     date: formatDate(334),
-    author: 'Luca Montefiore',
-    authorAvatar: getAuthorAvatar('Luca Montefiore'),
+    author: 'Radomir Kłosek',
+    language: 'pl',
+    authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
       countWords(`# Mediterranean Renewable Energy: Wind, Solar, and Offshore Opportunities

@@ -176,10 +176,10 @@ export const coursePeople: CoursePerson[] = [
     role: 'author',
   },
   {
-    id: 'luca-montefiore',
-    canonicalName: 'Luca Montefiore',
-    nameVariations: ['Luca Montefiore'],
-    avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face',
+    id: 'radomir-klosek',
+    canonicalName: 'Radomir Kłosek',
+    nameVariations: ['Radomir Kłosek', 'Radomir Klosek'],
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
     role: 'author',
   },
   {

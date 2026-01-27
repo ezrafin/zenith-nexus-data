@@ -22,6 +22,7 @@ export interface AnalyticsArticle {
   type: 'expert' | 'markets' | 'longterm' | 'technical';
   readTime: string;
   imageUrl: string;
+  language?: string;
   resources?: Array<{ title: string; url: string; type?: 'article' | 'data' | 'tool' | 'video' }>;
   images?: string[];
   sections?: Array<{ heading: string; content: string }>;
