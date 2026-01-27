@@ -1458,32 +1458,32 @@ There is also an increasingly important strategic tension between **brand elevat
 
 For investors, this is a qualitative question that becomes quantitative over time: you will see it in repeat purchase rates, regional traffic patterns, and the stability of full-price sell-through.
 
-## Conclusion
+## Wnioski
 
-European luxury’s unique appeal for investors is that it converts intangible brand equity into measurable financial outcomes: pricing power, mix, and cash flow. But the sector is also deeply intertwined with FX, tourism, and global demand cycles.
+Unikalny urok europejskiego luksusu dla inwestorów polega na tym, że przekształca niematerialny kapitał marki w mierzalne wyniki finansowe: siłę cenową, mix i przepływ gotówki. Ale sektor jest również głęboko powiązany z FX, turystyką i globalnymi cyklami popytu.
 
-The right analytical approach is micro-to-macro: understand product and channel structure first, then overlay currencies and travel flows. Done well, luxury becomes one of the cleanest ways to express global consumption trends through high-quality European equities—while managing the risks that narrative-driven investors often ignore.`,
+Właściwe podejście analityczne to od mikro do makro: najpierw zrozum strukturę produktu i kanałów, a następnie nałóż waluty i przepływy podróży. Wykonane dobrze, luksus staje się jednym z najczystszych sposobów wyrażania globalnych trendów konsumpcyjnych poprzez wysokiej jakości akcje europejskie—przy jednoczesnym zarządzaniu ryzykiem, które inwestorzy napędzani narracją często ignorują.`,
     date: formatDate(0),
     author: 'Radomir Kłosek',
     language: 'pl',
     authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'longterm',
     readTime: calculateReadTime(
-      countWords(`# Luxury Pricing Power and FX: A Micro-to-Macro Investing Framework
+      countWords(`# Siła Cenowa Luksusu i FX: Framework Inwestycyjny od Mikro do Makro
 
-## Introduction
+## Wprowadzenie
 
-European luxury is often discussed in the language of culture: heritage, craftsmanship, desirability. Investors sometimes treat it like a “category bet” that rises and falls with sentiment.`)
+Europejski luksus jest często omawiany w języku kultury: dziedzictwo, rzemiosło, pożądanie. Inwestorzy czasami traktują go jak "zakład kategorii", który rośnie i spada wraz z sentymentem.`)
     ),
     imageUrl: getAnalyticsImage('luxury-pricing-power-and-fx-a-micro-to-macro-investing-framework'),
-    tags: ['Luxury', 'Europe', 'FX', 'Tourism', 'Consumer'],
+    tags: ['Luksus', 'Europa', 'FX', 'Turystyka', 'Konsument'],
     relatedMarkets: ['stocks', 'currencies'],
   },
   {
     slug: 'italian-real-estate-markets-from-family-owned-assets-to-institutional-capital',
-    title: 'Italian Real Estate: From Family-Owned Assets to Institutional Capital',
+    title: 'Włoska Nieruchomości: Od Aktywów Rodzinnych do Kapitału Instytucjonalnego',
     excerpt:
-      'Overview of Italian real estate markets as they evolve from fragmented, family-owned assets toward greater institutional participation across residential, office, and hospitality segments.',
+      'Przegląd włoskich rynków nieruchomości, które ewoluują od rozdrobnionych aktywów rodzinnych w kierunku większego udziału instytucjonalnego w segmentach mieszkaniowych, biurowych i gościnności.',
     content: `# Italian Real Estate: From Family-Owned Assets to Institutional Capital
 
 ## Introduction
@@ -1678,24 +1678,24 @@ Liquidity varies:
 
 Clear exit planning—via sales to core buyers, IPOs of platforms, or recapitalizations—is a key part of the investment thesis, especially for value‑add and opportunistic strategies.
 
-## Conclusion
+## Wnioski
 
-Italian real estate is transitioning from a predominantly family‑owned, fragmented market to one with growing institutional participation, particularly in residential, office, and hospitality segments. This evolution creates opportunities for patient capital that respects local specificities while bringing professional management, ESG integration, and long‑term vision. The transition is driven by demographic shifts, policy changes, and market development, creating investment opportunities across multiple segments.
+Włoski rynek nieruchomości przechodzi transformację z rynku głównie rodzinnego i rozdrobnionego w kierunku rosnącego udziału instytucjonalnego, szczególnie w segmentach mieszkaniowych, biurowych i gościnności. Ta ewolucja tworzy możliwości dla cierpliwego kapitału, który szanuje lokalne specyfiki, jednocześnie wprowadzając profesjonalne zarządzanie, integrację ESG i długoterminową wizję. Przejście jest napędzane przez zmiany demograficzne, zmiany polityczne i rozwój rynku, tworząc możliwości inwestycyjne w wielu segmentach.
 
-The integration of institutional capital into Italian real estate markets is reshaping market structures, creating new investment opportunities, and improving professional standards. However, success requires understanding local dynamics, regulatory environments, and market structures. The transition creates opportunities for investors who can navigate complexity and build local capabilities.
+Integracja kapitału instytucjonalnego w włoskie rynki nieruchomości przekształca struktury rynkowe, tworzy nowe możliwości inwestycyjne i poprawia standardy profesjonalne. Jednak sukces wymaga zrozumienia lokalnej dynamiki, środowisk regulacyjnych i struktur rynkowych. Przejście tworzy możliwości dla inwestorów, którzy potrafią nawigować w złożoności i budować lokalne możliwości.
 
-**Key Success Factors:**
+**Kluczowe Czynniki Sukcesu:**
 
-- **Deep local insight** – Combining deep local insight with disciplined underwriting is essential for successful investment. Local insight includes understanding of market dynamics, regulatory requirements, cultural factors, and operational considerations. Local partnerships and expertise are critical for navigating complexity and managing risks.
-- **Disciplined underwriting** – Disciplined underwriting requires careful assessment of risks, returns, and market dynamics. Underwriting should include conservative base cases, stress testing, and scenario analysis. Understanding of local market dynamics and regulatory requirements is essential for accurate underwriting.
-- **Careful vehicle selection** – Careful vehicle selection affects governance, control rights, fee structures, and exit options. Vehicle choice should align with investment strategy, risk profile, and return objectives. Understanding of vehicle structures and implications is essential for successful investment.
-- **Regulation and partnership navigation** – Navigating regulation, partnership structures, and market cycles effectively requires ongoing monitoring, relationship management, and adaptation. Regulatory requirements evolve, requiring ongoing compliance and engagement. Partnership structures require careful design and management.
+- **Głęboki lokalny wgląd** – Połączenie głębokiego lokalnego wglądu z dyscyplinowanym underwritingiem jest niezbędne dla udanej inwestycji. Lokalny wgląd obejmuje zrozumienie dynamiki rynku, wymagań regulacyjnych, czynników kulturowych i rozważań operacyjnych. Lokalne partnerstwa i ekspertyza są kluczowe dla nawigacji w złożoności i zarządzania ryzykiem.
+- **Dyscyplinowany underwriting** – Dyscyplinowany underwriting wymaga ostrożnej oceny ryzyka, zwrotów i dynamiki rynku. Underwriting powinien obejmować konserwatywne przypadki bazowe, testy stresowe i analizę scenariuszy. Zrozumienie lokalnej dynamiki rynku i wymagań regulacyjnych jest niezbędne dla dokładnego underwritingu.
+- **Ostrożny wybór pojazdu** – Ostrożny wybór pojazdu wpływa na zarządzanie, prawa kontrolne, struktury opłat i opcje wyjścia. Wybór pojazdu powinien być zgodny ze strategią inwestycyjną, profilem ryzyka i celami zwrotu. Zrozumienie struktur pojazdów i ich implikacji jest niezbędne dla udanej inwestycji.
+- **Nawigacja w regulacjach i partnerstwach** – Skuteczna nawigacja w regulacjach, strukturach partnerstw i cyklach rynkowych wymaga ciągłego monitorowania, zarządzania relacjami i adaptacji. Wymagania regulacyjne ewoluują, wymagając ciągłego przestrzegania i zaangażowania. Struktury partnerstw wymagają ostrożnego projektowania i zarządzania.
 
-**Future Outlook:**
+**Perspektywa Przyszłości:**
 
-The transition to institutional capital will continue, creating opportunities for investors who can navigate complexity and build local capabilities. Market development, policy evolution, and demographic shifts will drive continued change. Investors who engage thoughtfully with local dynamics will be well-positioned to capture opportunities while contributing to market development.
+Przejście do kapitału instytucjonalnego będzie kontynuowane, tworząc możliwości dla inwestorów, którzy potrafią nawigować w złożoności i budować lokalne możliwości. Rozwój rynku, ewolucja polityki i zmiany demograficzne będą napędzać dalsze zmiany. Inwestorzy, którzy angażują się przemyślanie w lokalną dynamikę, będą dobrze przygotowani do wykorzystania możliwości, jednocześnie przyczyniając się do rozwoju rynku.
 
-Those who navigate regulation, partnership structures, and market cycles effectively can build resilient, income‑generating portfolios that tap into the enduring appeal of Italian property across regions and asset classes. Success requires commitment, local partnerships, and understanding of diverse markets and regulatory environments. The Italian real estate market offers significant opportunities for investors willing to navigate complexity and build local capabilities.`,
+Ci, którzy skutecznie nawigują w regulacjach, strukturach partnerstw i cyklach rynkowych, mogą budować odporne, generujące dochód portfele, które wykorzystują trwały urok włoskiej nieruchomości w różnych regionach i klasach aktywów. Sukces wymaga zaangażowania, lokalnych partnerstw i zrozumienia zróżnicowanych rynków i środowisk regulacyjnych. Włoski rynek nieruchomości oferuje znaczące możliwości dla inwestorów gotowych nawigować w złożoności i budować lokalne możliwości.`,
     date: formatDate(2),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -1709,13 +1709,13 @@ Those who navigate regulation, partnership structures, and market cycles effecti
 Italy’s real estate market has long combined high homeownership, strong emotional attachment to property, and fragmented ownership structures. As institutional capital takes a greater interest in Italian assets, the landscape is slowly but meaningfully changing.`)
     ),
     imageUrl: getAnalyticsImage('italian-real-estate-markets-from-family-owned-assets-to-institutional-capital'),
-    tags: ['Italy', 'Real Estate', 'Institutional Investors', 'Residential', 'Hospitality'],
+    tags: ['Włochy', 'Nieruchomości', 'Inwestorzy Instytucjonalni', 'Mieszkaniowe', 'Gościnność'],
   },
   {
     slug: 'ai-and-digital-transformation-in-italian-smbs-and-services',
-    title: 'AI and Digital Transformation in Italian SMBs and Services',
+    title: 'AI i Transformacja Cyfrowa we Włoskich MŚP i Usługach',
     excerpt:
-      'Assessment of how AI and digital tools are changing Italian small and mid-sized businesses in services, retail, and hospitality, and what this means for productivity, margins, and local equity stories.',
+      'Ocena tego, jak AI i narzędzia cyfrowe zmieniają włoskie małe i średnie przedsiębiorstwa w usługach, handlu detalicznym i gościnności, oraz co to oznacza dla produktywności, marż i lokalnych historii akcji.',
     content: `# AI and Digital Transformation in Italian SMBs and Services
 
 ## Introduction
@@ -2026,15 +2026,15 @@ Tracking adoption helps assess market development:
 - Customer satisfaction
 - Retention and churn rates
 
-## Conclusion
+## Wnioski
 
-AI and digital transformation are gradually reshaping Italian SMBs in services, retail, and hospitality. The change is incremental rather than overnight, but cumulative effects on productivity, margins, and resilience can be substantial over time. Early adopters are already seeing benefits, and the gap between leaders and laggards is widening.
+AI i transformacja cyfrowa stopniowo przekształcają włoskie MŚP w usługach, handlu detalicznym i gościnności. Zmiana jest przyrostowa, a nie z dnia na dzień, ale skumulowane efekty na produktywność, marże i odporność mogą być znaczące w czasie. Wcześni adoptujący już widzą korzyści, a przepaść między liderami a opóźnionymi się powiększa.
 
-**For investors, the opportunity lies in identifying the enabling platforms—payments, vertical SaaS, connectivity, and service providers—that are best positioned to scale with this transformation.** These companies can benefit from the long-term trend toward digitalization while serving a large and underserved market.
+**Dla inwestorów możliwość leży w identyfikacji platform umożliwiających—płatności, pionowy SaaS, łączność i dostawcy usług—które są najlepiej pozycjonowane do skalowania wraz z tą transformacją.** Te firmy mogą skorzystać z długoterminowego trendu w kierunku cyfryzacji, jednocześnie obsługując duży i niedostatecznie obsłużony rynek.
 
-**As more Italian businesses move from intuition‑driven to data‑augmented decision‑making, those platforms can become essential infrastructure for the country's economic backbone.** The transformation represents both a challenge and an opportunity for Italian SMBs and the companies that serve them. Success requires understanding local market dynamics, building trust, and delivering practical value that improves business outcomes.
+**Gdy więcej włoskich firm przechodzi od decyzji napędzanych intuicją do decyzji wspieranych danymi, te platformy mogą stać się niezbędną infrastrukturą dla gospodarczego kręgosłupa kraju.** Transformacja reprezentuje zarówno wyzwanie, jak i możliwość dla włoskich MŚP i firm, które je obsługują. Sukces wymaga zrozumienia lokalnej dynamiki rynku, budowania zaufania i dostarczania praktycznej wartości, która poprawia wyniki biznesowe.
 
-The Italian SMB digital transformation story is still being written, but the direction is clear: technology adoption is accelerating, and companies that position themselves well can capture significant value from this multi-year trend.`,
+Historia transformacji cyfrowej włoskich MŚP jest wciąż pisana, ale kierunek jest jasny: adopcja technologii przyspiesza, a firmy, które dobrze się pozycjonują, mogą przechwycić znaczącą wartość z tego wieloletniego trendu.`,
     date: formatDate(1),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -2048,13 +2048,13 @@ The Italian SMB digital transformation story is still being written, but the dir
 Italy’s economic fabric is woven from small and mid‑sized businesses—family‑owned firms in services, retail, manufacturing, and hospitality that collectively drive employment and regional identity. Historically, many of these firms lagged larger peers in digital adoption, constrained by limited resources, risk aversion, and fragmented markets.`)
     ),
     imageUrl: getAnalyticsImage('ai-and-digital-transformation-in-italian-smbs-and-services'),
-    tags: ['Italy', 'SMB', 'AI', 'Digital Transformation', 'Services'],
+    tags: ['Włochy', 'MŚP', 'AI', 'Transformacja Cyfrowa', 'Usługi'],
   },
   {
     slug: 'mediterranean-consumer-luxury-and-tourism-under-higher-rates',
-    title: 'Mediterranean Consumer, Luxury, and Tourism Under Higher Rates',
+    title: 'Konsument Śródziemnomorski, Luksus i Turystyka przy Wyższych Stopach',
     excerpt:
-      'Examination of how sustained higher interest rates and tighter financial conditions affect Mediterranean consumer spending, luxury demand, and tourism-driven economies, with a focus on Italy and Southern Europe.',
+      'Badanie tego, jak utrzymujące się wyższe stopy procentowe i zaostrzone warunki finansowe wpływają na wydatki konsumentów śródziemnomorskich, popyt na luksus i gospodarki napędzane turystyką, ze szczególnym uwzględnieniem Włoch i Europy Południowej.',
     content: `# Mediterranean Consumer, Luxury, and Tourism Under Higher Rates
 
 ## Introduction
@@ -2213,17 +2213,17 @@ At the sovereign level, countries with high debt loads must manage:
 
 Tourism‑dependent economies benefit from sustained visitor inflows and tax revenues but remain exposed to shocks in global travel and energy prices. Higher rates raise the importance of credible fiscal frameworks to maintain market confidence.
 
-## Conclusion
+## Wnioski
 
-The Mediterranean consumer, luxury, and tourism complex is entering a new phase. Higher interest rates and tighter financial conditions introduce headwinds, but they also sharpen the distinction between resilient, high‑quality franchises and more fragile, leverage‑dependent models.
+Kompleks konsumenta śródziemnomorskiego, luksusu i turystyki wchodzi w nową fazę. Wyższe stopy procentowe i zaostrzone warunki finansowe wprowadzają przeciwności, ale również wyostrzają rozróżnienie między odpornymi, wysokiej jakości franczyzami a bardziej kruchymi modelami zależnymi od dźwigni.
 
-For investors, the focus should shift from chasing cyclicality to owning businesses and assets that can:
+Dla inwestorów skupienie powinno przesunąć się od ścigania cykliczności do posiadania firm i aktywów, które mogą:
 
-- Withstand higher borrowing costs;
-- Maintain pricing power and brand equity;
-- Adapt operations and capital allocation to a more demanding macro backdrop.
+- Wytrzymać wyższe koszty pożyczania;
+- Utrzymać siłę cenową i kapitał marki;
+- Dostosować operacje i alokację kapitału do bardziej wymagającego makro tła.
 
-In doing so, portfolios can continue to benefit from the enduring appeal of Mediterranean destinations and Italian craftsmanship—while respecting the new constraints imposed by a world where money once again has a meaningful cost.`,
+W ten sposób portfele mogą nadal korzystać z trwałego uroku destynacji śródziemnomorskich i włoskiego rzemiosła—jednocześnie szanując nowe ograniczenia narzucone przez świat, w którym pieniądze ponownie mają znaczący koszt.`,
     date: formatDate(0),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -2245,12 +2245,12 @@ A higher‑for‑longer rate regime influences Mediterranean markets through sev
 This article explores how these dynamics interact and how investors can position across Mediterranean consumer, luxury, and tourism exposures.`)
     ),
     imageUrl: getAnalyticsImage('mediterranean-consumer-luxury-and-tourism-under-higher-rates'),
-    tags: ['Italy', 'Mediterranean', 'Consumer', 'Luxury', 'Tourism'],
+    tags: ['Włochy', 'Śródziemnomorskie', 'Konsument', 'Luksus', 'Turystyka'],
   },
   {
     slug: 'italian-markets-luxury-goods-investment',
-    title: 'Italian Markets: Luxury Goods and Investment Opportunities',
-    excerpt: 'Analysis of Italian luxury goods sector, examining market leaders, brand strength, and investment opportunities. Assessment of competitive positioning, growth drivers, and long-term value creation in Italian luxury brands.',
+    title: 'Rynki Włoskie: Dobra Luksusowe i Możliwości Inwestycyjne',
+    excerpt: 'Analiza włoskiego sektora dóbr luksusowych, badanie liderów rynku, siły marki i możliwości inwestycyjnych. Ocena pozycjonowania konkurencyjnego, czynników wzrostu i długoterminowego tworzenia wartości w włoskich markach luksusowych.',
     content: `# Italian Markets: Luxury Goods and Investment Opportunities
 
 ## Introduction
@@ -2603,23 +2603,23 @@ Italian luxury goods' long-term outlook depends on brand strength, market positi
 - Long-term value creation requires brand strength and execution
 - Sector evolution creating both risks and opportunities
 
-## Conclusion
+## Wnioski
 
-Italian luxury goods offer attractive investment opportunities through strong brands, high margins, and global growth. The sector has historically delivered strong returns for investors who understand its dynamics. However, understanding sector dynamics, competitive positioning, and risks is essential for success.
+Włoskie dobra luksusowe oferują atrakcyjne możliwości inwestycyjne poprzez silne marki, wysokie marże i globalny wzrost. Sektor historycznie zapewniał silne zwroty dla inwestorów, którzy rozumieją jego dynamikę. Jednak zrozumienie dynamiki sektora, pozycjonowania konkurencyjnego i ryzyka jest niezbędne dla sukcesu.
 
-**Investment Success Factors:**
-- Focus on companies with strong brands, effective execution, and sustainable competitive advantages
-- Understanding both luxury sector dynamics and company-specific factors
-- Managing risks including economic sensitivity, competition, and digital transformation
-- Long-term perspective recognizing brand value creation
+**Czynniki Sukcesu Inwestycyjnego:**
+- Skupienie na firmach z silnymi markami, skuteczną realizacją i trwałymi przewagami konkurencyjnymi
+- Zrozumienie zarówno dynamiki sektora luksusowego, jak i czynników specyficznych dla firmy
+- Zarządzanie ryzykiem, w tym wrażliwością ekonomiczną, konkurencją i transformacją cyfrową
+- Długoterminowa perspektywa rozpoznająca tworzenie wartości marki
 
-**Market Evolution:**
-- Italian luxury markets will continue evolving with consumer preferences, competition, and economic conditions
-- Digital transformation and ESG considerations shaping future
-- Emerging markets providing growth opportunities
-- Innovation and adaptation remaining crucial
+**Ewolucja Rynku:**
+- Włoskie rynki luksusowe będą nadal ewoluować wraz z preferencjami konsumentów, konkurencją i warunkami ekonomicznymi
+- Transformacja cyfrowa i rozważania ESG kształtujące przyszłość
+- Rynki wschodzące zapewniające możliwości wzrostu
+- Innowacja i adaptacja pozostające kluczowe
 
-Investors who understand these dynamics and manage risk appropriately can navigate Italian luxury markets successfully. The sector offers unique opportunities for those willing to invest in understanding brand value, market positioning, and long-term value creation.`,
+Inwestorzy, którzy rozumieją tę dynamikę i odpowiednio zarządzają ryzykiem, mogą skutecznie nawigować w włoskich rynkach luksusowych. Sektor oferuje unikalne możliwości dla tych, którzy są gotowi zainwestować w zrozumienie wartości marki, pozycjonowania rynkowego i długoterminowego tworzenia wartości.`,
     date: formatDate(299),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -2741,14 +2741,14 @@ Investors should focus on companies with strong brands, effective execution, and
 
 Italian luxury markets will continue evolving with consumer preferences, competition, and economic conditions. Investors who understand these dynamics and manage risk appropriately can navigate Italian luxury markets successfully.`)),
     imageUrl: getAnalyticsImage('italian-markets-luxury-goods-investment'),
-    tags: ['Italian Markets', 'Luxury Goods', 'Fashion', 'Investment', 'Brands'],
+    tags: ['Rynki Włoskie', 'Dobra Luksusowe', 'Moda', 'Inwestycje', 'Marki'],
   },
 
   {
     slug: 'mediterranean-tourism-recovery-and-investment-themes',
-    title: 'Mediterranean Tourism Recovery: Cycles, Capacity, and Investment Themes',
+    title: 'Odrodzenie Turystyki Śródziemnomorskiej: Cykle, Pojemność i Tematy Inwestycyjne',
     excerpt:
-      'How the post-pandemic recovery in Mediterranean tourism is reshaping airlines, hotels, infrastructure, and local banks. A guide to identifying durable winners in a structurally cyclical sector.',
+      'Jak odrodzenie po pandemii w turystyce śródziemnomorskiej przekształca linie lotnicze, hotele, infrastrukturę i lokalne banki. Przewodnik po identyfikacji trwałych zwycięzców w strukturalnie cyklicznym sektorze.',
     content: `# Mediterranean Tourism Recovery: Cycles, Capacity, and Investment Themes
 
 ## Introduction
@@ -3043,16 +3043,16 @@ ESG factors increasingly important in tourism investments:
 - Stakeholder engagement
 - Regulatory compliance
 
-## Conclusion
+## Wnioski
 
-The Mediterranean tourism recovery offers compelling stories and attractive cash‑flow assets—but also classic cyclicality. The sector's recovery has been strong, but investors must understand both opportunities and risks. **Long‑term investors can participate in the theme by focusing on quality operators, robust balance sheets, and destinations capable of managing both volume and value.**
+Odrodzenie turystyki śródziemnomorskiej oferuje przekonujące historie i atrakcyjne aktywa przepływów gotówkowych—ale także klasyczną cykliczność. Odrodzenie sektora było silne, ale inwestorzy muszą zrozumieć zarówno możliwości, jak i ryzyka. **Inwestorzy długoterminowi mogą uczestniczyć w temacie, skupiając się na jakościowych operatorach, solidnych bilansach i destynacjach zdolnych do zarządzania zarówno wolumenem, jak i wartością.**
 
-**Italy and its Mediterranean peers will remain global tourism magnets.** The region's combination of culture, history, natural beauty, and hospitality creates enduring appeal. **The challenge, and opportunity, lies in identifying which companies can translate recovering visitor numbers into durable, shareholder‑friendly returns across the cycle.**
+**Włochy i ich śródziemnomorscy odpowiednicy pozostaną globalnymi magnesami turystycznymi.** Kombinacja kultury, historii, naturalnego piękna i gościnności regionu tworzy trwały urok. **Wyzwanie i możliwość leży w identyfikacji, które firmy mogą przełożyć odradzające się liczby odwiedzających na trwałe, przyjazne akcjonariuszom zwroty w całym cyklu.**
 
-Success requires:
-- Understanding cyclical and structural factors
-- Focusing on quality and competitive advantages
-- Managing risks and leverage appropriately
+Sukces wymaga:
+- Zrozumienia czynników cyklicznych i strukturalnych
+- Skupienia na jakości i przewagach konkurencyjnych
+- Odpowiedniego zarządzania ryzykiem i dźwignią
 - Taking a long-term perspective
 - Considering ESG factors
 
@@ -3070,13 +3070,13 @@ The Mediterranean tourism sector will continue evolving, with sustainability, te
 Tourism is one of the Mediterranean region’s most important economic engines. It supports millions of jobs, anchors current-account balances, and shapes investment across transport, real estate, and services.`),
     ),
     imageUrl: getAnalyticsImage('mediterranean-tourism-recovery-and-investment-themes'),
-    tags: ['Tourism', 'Mediterranean', 'Italy', 'Cyclicals', 'Equities'],
+    tags: ['Turystyka', 'Śródziemnomorskie', 'Włochy', 'Cykliczne', 'Akcje'],
   },
   {
     slug: 'italian-mid-cap-industrials-and-the-energy-transition',
-    title: 'Italian Mid‑Cap Industrials and the Energy Transition: Hidden Champions in a Changing Europe',
+    title: 'Włoskie Przemysłowe Mid-Cap i Przejście Energetyczne: Ukryci Mistrzowie w Zmieniającej się Europie',
     excerpt:
-      'How Italian mid‑cap industrials are repositioning around electrification, efficiency, and automation—and where investors can find resilient balance sheets and pricing power in a structurally changing Europe.',
+      'Jak włoskie przemysłowe mid-cap przekształcają się wokół elektryfikacji, efektywności i automatyzacji—oraz gdzie inwestorzy mogą znaleźć odporne bilanse i siłę cenową w strukturalnie zmieniającej się Europie.',
     content: `# Italian Mid‑Cap Industrials and the Energy Transition: Hidden Champions in a Changing Europe
 
 ## Introduction
@@ -3293,11 +3293,11 @@ Investors should maintain a structured risk checklist:
 
 Scenario analysis—modelling earnings under weaker European growth or delayed policy implementation—helps calibrate downside tolerance.
 
-## Conclusion
+## Wnioski
 
-Italian mid‑cap industrials occupy an important but sometimes overlooked position in Europe’s energy transition. They provide the equipment, systems, and engineering expertise that make electrification and efficiency improvements possible in practice.
+Włoskie przemysłowe mid-cap zajmują ważną, ale czasami pomijaną pozycję w europejskim przejściu energetycznym. Zapewniają sprzęt, systemy i ekspertyzę inżynierską, które umożliwiają elektryfikację i poprawę efektywności w praktyce.
 
-For investors, this segment offers a blend of **structural themes and company‑specific stories**, with potential for attractive risk‑adjusted returns when approached with disciplined fundamental analysis and portfolio construction. In a Europe that must reconcile decarbonization with industrial competitiveness, Italy’s industrial mid caps are likely to remain central players—and, for selective investors, compelling opportunities.`,
+Dla inwestorów ten segment oferuje mieszankę **tematów strukturalnych i historii specyficznych dla firm**, z potencjałem atrakcyjnych skorygowanych o ryzyko zwrotów przy podejściu z dyscyplinowaną analizą fundamentalną i konstrukcją portfela. W Europie, która musi pogodzić dekarbonizację z konkurencyjnością przemysłową, włoskie przemysłowe mid-cap prawdopodobnie pozostaną kluczowymi graczami—i dla selektywnych inwestorów, przekonującymi możliwościami.`,
     date: formatDate(301),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -3311,13 +3311,13 @@ For investors, this segment offers a blend of **structural themes and company‑
 Italy is best known in markets for luxury goods, tourism, and sovereign‑debt headlines. Yet beneath the surface of major indices lies a broad ecosystem of mid‑cap industrial companies that play critical roles in European supply chains.`),
     ),
     imageUrl: getAnalyticsImage('italian-mid-cap-industrials-and-the-energy-transition'),
-    tags: ['Italy', 'Industrials', 'Energy Transition', 'Mid Caps', 'Equities'],
+    tags: ['Włochy', 'Przemysłowe', 'Przejście Energetyczne', 'Mid Cap', 'Akcje'],
   },
   {
     slug: 'italian-government-bonds-and-spread-dynamics-vs-bunds',
-    title: 'Italian Government Bonds and Spread Dynamics vs. Bunds: Navigating Risk and Carry in the BTP Market',
+    title: 'Włoskie Obligacje Rządowe i Dynamika Spreadów vs. Bundy: Nawigacja Ryzyka i Carry na Rynku BTP',
     excerpt:
-      'How to think about Italian BTP spreads versus German Bunds across cycles, assessing fiscal risk, ECB policy, and technical flows when allocating to Italian government debt.',
+      'Jak myśleć o spreadach włoskich BTP w porównaniu z niemieckimi Bundami w różnych cyklach, oceniając ryzyko fiskalne, politykę EBC i przepływy techniczne przy alokacji do włoskiego długu rządowego.',
     content: `# Italian Government Bonds and Spread Dynamics vs. Bunds: Navigating Risk and Carry in the BTP Market
 
 ## Introduction
@@ -3527,11 +3527,11 @@ When assessing Italian BTP exposure, investors can use a checklist:
    - BTP‑Bund spreads vs. history and fundamentals.
    - Volatility and positioning indicators.
 
-## Conclusion
+## Wnioski
 
-Italian government bonds offer a combination of higher yields and deep markets within the euro area, but come with embedded fiscal, political, and policy risks. BTP‑Bund spreads encapsulate how investors perceive this balance at any point in time.
+Włoskie obligacje rządowe oferują kombinację wyższych rentowności i głębokich rynków w strefie euro, ale wiążą się z wbudowanym ryzykiem fiskalnym, politycznym i politycznym. Spready BTP‑Bund ujmują, jak inwestorzy postrzegają tę równowagę w danym momencie.
 
-For multi‑asset and fixed income portfolios, the goal is not to predict every spread move, but to **size and time exposure** such that carry and potential spread compression are adequate compensation for tail risks. With a structured approach to fiscal analysis, ECB policy interpretation, and market technicals, investors can use BTPs as a deliberate, risk‑managed component of their European fixed income allocation.`,
+Dla portfeli multi-aktywów i dochodów stałych celem nie jest przewidzenie każdego ruchu spreadu, ale **wielkość i czas ekspozycji** tak, aby carry i potencjalna kompresja spreadu były odpowiednią rekompensatą za ryzyko ogonowe. Przy strukturalnym podejściu do analizy fiskalnej, interpretacji polityki EBC i technik rynkowych, inwestorzy mogą używać BTP jako przemyślanego, zarządzanego pod kątem ryzyka składnika swojej europejskiej alokacji dochodów stałych.`,
     date: formatDate(302),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -3545,13 +3545,13 @@ For multi‑asset and fixed income portfolios, the goal is not to predict every 
 Italian government bonds (BTPs) are a cornerstone of the euro‑area fixed income landscape.`),
     ),
     imageUrl: getAnalyticsImage('italian-government-bonds-and-spread-dynamics-vs-bunds'),
-    tags: ['Italy', 'BTP', 'Government Bonds', 'Spreads', 'Euro Area'],
+    tags: ['Włochy', 'BTP', 'Obligacje Rządowe', 'Spready', 'Strefa Euro'],
   },
   {
     slug: 'spanish-and-portuguese-equities-tourism-banks-and-infrastructure',
-    title: 'Spanish and Portuguese Equities: Tourism, Banks, and Infrastructure in Iberia’s Recovery Cycle',
+    title: 'Akcje Hiszpańskie i Portugalskie: Turystyka, Banki i Infrastruktura w Cyklu Odrodzenia Półwyspu Iberyjskiego',
     excerpt:
-      'How Spain and Portugal’s tourism, banking, and infrastructure sectors are positioned in the current cycle, and where investors can find resilient cash flows versus higher-beta cyclical exposure.',
+      'Jak sektory turystyki, bankowości i infrastruktury Hiszpanii i Portugalii są pozycjonowane w obecnym cyklu, oraz gdzie inwestorzy mogą znaleźć odporne przepływy gotówkowe w porównaniu z ekspozycją cykliczną o wyższym beta.',
     content: `# Spanish and Portuguese Equities: Tourism, Banks, and Infrastructure in Iberia's Recovery Cycle
 
 ## Introduction
@@ -3920,23 +3920,23 @@ An Iberian allocation can blend different risk-return profiles:
 - Currency exposure (all in euro)
 - Correlation with broader European markets
 
-## Conclusion
+## Wnioski
 
-Spanish and Portuguese equities sit at an interesting intersection of:
+Akcje hiszpańskie i portugalskie znajdują się na interesującym skrzyżowaniu:
 
-- Tourism‑driven recovery supporting growth and earnings
-- Post‑crisis banking‑sector normalization improving fundamentals
-- Infrastructure and energy‑transition investment creating opportunities
+- Odrodzenie napędzane turystyką wspierające wzrost i zyski
+- Normalizacja sektora bankowego po kryzysie poprawiająca fundamenty
+- Inwestycje w infrastrukturę i przejście energetyczne tworzące możliwości
 
-**For Mediterranean and broader European portfolios, Iberia offers:**
-- Both higher‑beta cyclicality and pockets of structural, dividend‑paying quality providing diversification
-- Different risk-return profiles than other Southern European markets
-- Quality companies with competitive advantages
+**Dla portfeli śródziemnomorskich i szerszych europejskich, Półwysep Iberyjski oferuje:**
+- Zarówno wyższą beta cykliczność, jak i kieszenie strukturalnej, wypłacającej dywidendy jakości zapewniającej dywersyfikację
+- Różne profile ryzyko-zwrot niż inne rynki południowoeuropejskie
+- Jakościowe firmy z przewagami konkurencyjnymi
 
-**The most compelling opportunities lie in:**
-- Well‑capitalized banks with credible capital‑return policies providing income and value
-- Infrastructure and utilities with transparent regulatory frameworks offering stability
-- Tourism and consumer names capable of translating strong demand into durable cash flows, not just transient rebounds
+**Najbardziej przekonujące możliwości leżą w:**
+- Dobrze skapitalizowanych bankach z wiarygodnymi politykami zwrotu kapitału zapewniających dochód i wartość
+- Infrastrukturze i mediach z przejrzystymi ramami regulacyjnymi oferującymi stabilność
+- Nazwach turystycznych i konsumenckich zdolnych do przełożenia silnego popytu na trwałe przepływy gotówkowe, a nie tylko przejściowe odbicia
 
 **Approached through this lens, Spanish and Portuguese equities can complement Italian and broader Mediterranean exposures in a thoughtfully diversified regional strategy.** Success requires understanding country-specific dynamics, sector selection, and risk management while maintaining focus on quality and valuation discipline.`,
     date: formatDate(303),
@@ -3952,13 +3952,13 @@ Spanish and Portuguese equities sit at an interesting intersection of:
 While my focus is often Italy and the broader Mediterranean, Iberia—Spain and Portugal—shares many structural features with Italy.`),
     ),
     imageUrl: getAnalyticsImage('spanish-and-portuguese-equities-tourism-banks-and-infrastructure'),
-    tags: ['Spain', 'Portugal', 'Tourism', 'Banks', 'Infrastructure'],
+    tags: ['Hiszpania', 'Portugalia', 'Turystyka', 'Banki', 'Infrastruktura'],
   },
   {
     slug: 'greek-equities-tourism-banks-and-privatization',
-    title: 'Greek Equities: Tourism, Banks, and Privatization in a Post-Crisis Market',
+    title: 'Akcje Greckie: Turystyka, Banki i Prywatyzacja na Rynku Po Kryzysie',
     excerpt:
-      'How Greece’s tourism rebound, banking-sector repair, and privatization agenda are reshaping its small but dynamic equity market, and how investors can balance upside with liquidity and political risk.',
+      'Jak odbicie turystyki w Grecji, naprawa sektora bankowego i agenda prywatyzacji przekształcają jego mały, ale dynamiczny rynek akcji, oraz jak inwestorzy mogą zrównoważyć potencjał wzrostu z płynnością i ryzykiem politycznym.',
     content: `# Greek Equities: Tourism, Banks, and Privatization in a Post-Crisis Market
 
 ## Introduction
@@ -4381,24 +4381,24 @@ Given its size and volatility, Greece is typically:
 - Regional currency dynamics
 - Safe-haven flows during stress
 
-## Conclusion
+## Wnioski
 
-Greek equities have moved from being:
+Akcje greckie przeszły od:
 
-- Purely crisis‑driven trades with high risk and volatility
+- Czysto napędzanych kryzysem transakcji z wysokim ryzykiem i zmiennością
 
-to:
+do:
 
-- A more nuanced opportunity set combining:
-  - Tourism and services with strong recovery and growth potential
-  - Repaired banks with improving fundamentals and returns
-  - Privatizations and infrastructure plays offering long-term value
+- Bardziej zniuansowanego zestawu możliwości łączącego:
+  - Turystykę i usługi z silnym potencjałem odrodzenia i wzrostu
+  - Naprawione banki z poprawiającymi się fundamentami i zwrotami
+  - Prywatyzacje i gry infrastrukturalne oferujące długoterminową wartość
 
-**Risks remain elevated compared with core Europe**, but for investors willing to:
+**Ryzyka pozostają podwyższone w porównaniu z rdzeniem Europy**, ale dla inwestorów gotowych do:
 
-- Manage liquidity and position sizes carefully respecting market constraints
-- Prioritize quality balance sheets and governance in stock selection
-- Integrate macro and EU‑policy views into their investment process
+- Ostrożnego zarządzania płynnością i rozmiarami pozycji, szanując ograniczenia rynku
+- Priorytetyzowania jakościowych bilansów i zarządzania w wyborze akcji
+- Integracji makro i widoków polityki UE w ich proces inwestycyjny
 - Maintain patience and long-term perspective
 
 **Greece can provide differentiated exposure within a broader Mediterranean equity strategy**—adding both return potential and thematic breadth around tourism and European recovery. The market's transformation from crisis to recovery creates opportunities for selective investors who can navigate the complexities and risks while capturing the benefits of Greece's economic normalization and structural improvements.
@@ -4417,13 +4417,13 @@ Success requires understanding the unique characteristics of the Greek market, c
 Greece has traveled a long road from the depths of the euro‑area sovereign crisis, and its equity market is gradually normalizing.`),
     ),
     imageUrl: getAnalyticsImage('greek-equities-tourism-banks-and-privatization'),
-    tags: ['Greece', 'Equities', 'Tourism', 'Banks', 'Privatization'],
+    tags: ['Grecja', 'Akcje', 'Turystyka', 'Banki', 'Prywatyzacja'],
   },
   {
     slug: 'italian-luxury-brands-global-demand-and-valuation-cycles',
-    title: 'Italian Luxury Brands: Global Demand, Margin Resilience, and Valuation Cycles',
+    title: 'Włoskie Marki Luksusowe: Globalny Popyt, Odporność Marż i Cykle Wyceny',
     excerpt:
-      'How Italian luxury houses balance heritage and growth, why margins and brand power matter more than short-term sales volatility, and how investors can navigate valuation cycles in this premium segment.',
+      'Jak włoskie domy luksusowe równoważą dziedzictwo i wzrost, dlaczego marże i siła marki mają większe znaczenie niż krótkoterminowa zmienność sprzedaży, oraz jak inwestorzy mogą nawigować w cyklach wyceny w tym segmentie premium.',
     content: `# Italian Luxury Brands: Global Demand, Margin Resilience, and Valuation Cycles
 
 ## Introduction
@@ -4814,13 +4814,13 @@ Italian luxury names can:
 - Currency movements
 - Geopolitical factors
 
-## Conclusion
+## Wnioski
 
-Italian luxury houses remain among the most durable assets in Mediterranean markets. Their combination of heritage, pricing power, and global reach supports attractive long-term economics, even as short-term cycles become more volatile. These brands represent some of the most valuable intangible assets in global markets, with strong pricing power, high margins, and exposure to long-term wealth creation trends.
+Włoskie domy luksusowe pozostają jednymi z najbardziej trwałych aktywów na rynkach śródziemnomorskich. Ich kombinacja dziedzictwa, siły cenowej i globalnego zasięgu wspiera atrakcyjną długoterminową ekonomię, nawet gdy krótkoterminowe cykle stają się bardziej zmienne. Te marki reprezentują jedne z najbardziej wartościowych niematerialnych aktywów na globalnych rynkach, z silną siłą cenową, wysokimi marżami i ekspozycją na długoterminowe trendy tworzenia bogactwa.
 
-For investors, success lies in distinguishing temporary demand softness from structural brand erosion and in using valuation cycles—not headlines—to time entries and exits. Luxury stocks are cyclical, not defensive, and can experience significant volatility. However, for investors with a long-term perspective and the ability to navigate cycles, Italian luxury brands offer exposure to some of the most attractive business models in global consumer markets.
+Dla inwestorów sukces leży w rozróżnieniu tymczasowej miękkości popytu od strukturalnej erozji marki oraz w wykorzystaniu cykli wyceny—nie nagłówków—do czasu wejść i wyjść. Akcje luksusowe są cykliczne, nie defensywne, i mogą doświadczać znaczącej zmienności. Jednak dla inwestorów z długoterminową perspektywą i zdolnością do nawigacji w cyklach, włoskie marki luksusowe oferują ekspozycję na jedne z najbardziej atrakcyjnych modeli biznesowych na globalnych rynkach konsumenckich.
 
-The key is selectivity: focus on brands with strong pricing power, geographic diversification, and operational excellence. Use valuation cycles to build exposure during periods of market pessimism, and maintain a long-term perspective on the structural growth trends supporting the luxury sector. With proper analysis and risk management, Italian luxury brands can be valuable components of a well-diversified portfolio, providing exposure to quality, growth, and the long-term trend of global wealth creation.`,
+Kluczem jest selektywność: skupienie na markach z silną siłą cenową, dywersyfikacją geograficzną i doskonałością operacyjną. Użyj cykli wyceny do budowania ekspozycji w okresach pesymizmu rynkowego i utrzymaj długoterminową perspektywę na strukturalne trendy wzrostu wspierające sektor luksusowy. Przy właściwej analizie i zarządzaniu ryzykiem, włoskie marki luksusowe mogą być wartościowymi składnikami dobrze zdywersyfikowanego portfela, zapewniając ekspozycję na jakość, wzrost i długoterminowy trend globalnego tworzenia bogactwa.`,
     date: formatDate(310),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -4834,13 +4834,13 @@ The key is selectivity: focus on brands with strong pricing power, geographic di
 Italian luxury is a cornerstone of the Mediterranean investment universe.`),
     ),
     imageUrl: getAnalyticsImage('italian-luxury-brands-global-demand-and-valuation-cycles'),
-    tags: ['Italy', 'Luxury', 'Consumer', 'Mediterranean Markets', 'Brand Power'],
+    tags: ['Włochy', 'Luksus', 'Konsument', 'Rynki Śródziemnomorskie', 'Siła Marki'],
   },
   {
     slug: 'mediterranean-real-estate-tourism-residential-and-second-homes',
-    title: 'Mediterranean Real Estate: Tourism, Residential Markets, and Second Homes',
+    title: 'Nieruchomości Śródziemnomorskie: Turystyka, Rynki Mieszkaniowe i Drugie Domy',
     excerpt:
-      'How Mediterranean real estate markets are shaped by tourism, second-home demand, and local fundamentals, and where investors can find resilient income and long-term appreciation potential.',
+      'Jak rynki nieruchomości śródziemnomorskich są kształtowane przez turystykę, popyt na drugie domy i lokalne fundamenty, oraz gdzie inwestorzy mogą znaleźć odporny dochód i długoterminowy potencjał aprecjacji.',
     content: `# Mediterranean Real Estate: Tourism, Residential Markets, and Second Homes
 
 ## Introduction
@@ -5367,15 +5367,15 @@ Financing options and costs vary significantly by country and investor profile.
 - Interest rate sensitivity
 - Currency risk with foreign financing
 
-## Conclusion
+## Wnioski
 
-Mediterranean real estate can provide attractive combinations of income, appreciation, and diversification when approached with a granular, location-specific lens. The region's unique combination of natural beauty, cultural heritage, climate, and infrastructure creates compelling investment opportunities across hospitality, residential, and second-home markets.
+Nieruchomości śródziemnomorskie mogą zapewnić atrakcyjne kombinacje dochodu, aprecjacji i dywersyfikacji przy podejściu z granularnym, specyficznym dla lokalizacji obiektywem. Unikalna kombinacja naturalnego piękna, dziedzictwa kulturowego, klimatu i infrastruktury regionu tworzy przekonujące możliwości inwestycyjne w rynkach gościnności, mieszkaniowych i drugich domów.
 
-However, success requires careful consideration of multiple factors: location selection, property type, demand drivers, regulatory environment, and risk management. Markets vary significantly, and what works in one location may not work in another. Understanding local dynamics, regulations, and market cycles is essential.
+Jednak sukces wymaga ostrożnego rozważenia wielu czynników: wyboru lokalizacji, typu nieruchomości, czynników popytu, środowiska regulacyjnego i zarządzania ryzykiem. Rynki różnią się znacznie, a to, co działa w jednej lokalizacji, może nie działać w innej. Zrozumienie lokalnej dynamiki, regulacji i cykli rynkowych jest niezbędne.
 
-For investors, success lies in aligning asset selection with enduring demand drivers—accessibility, amenities, and climate—while actively managing regulatory and environmental risks. The Mediterranean real estate market offers opportunities for both income generation and capital appreciation, but requires expertise, patience, and careful risk management.
+Dla inwestorów sukces leży w dostosowaniu wyboru aktywów do trwałych czynników popytu—dostępności, udogodnień i klimatu—przy jednoczesnym aktywnym zarządzaniu ryzykiem regulacyjnym i środowiskowym. Rynek nieruchomości śródziemnomorskich oferuje możliwości zarówno generowania dochodu, jak i aprecjacji kapitału, ale wymaga ekspertyzy, cierpliwości i ostrożnego zarządzania ryzykiem.
 
-Whether considering a second home, rental property, or institutional investment, the Mediterranean real estate market demands thorough due diligence, local expertise, and realistic expectations. With proper approach and risk management, Mediterranean real estate can be a valuable addition to a diversified investment portfolio.`,
+Niezależnie od rozważania drugiego domu, nieruchomości wynajmowanej czy inwestycji instytucjonalnej, rynek nieruchomości śródziemnomorskich wymaga dokładnej due diligence, lokalnej ekspertyzy i realistycznych oczekiwań. Przy właściwym podejściu i zarządzaniu ryzykiem, nieruchomości śródziemnomorskie mogą być wartościowym dodatkiem do zdywersyfikowanego portfela inwestycyjnego.`,
     date: formatDate(316),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -5389,13 +5389,13 @@ Whether considering a second home, rental property, or institutional investment,
 Mediterranean real estate blends lifestyle and investment in ways few other regions can replicate.`),
     ),
     imageUrl: getAnalyticsImage('mediterranean-real-estate-tourism-residential-and-second-homes'),
-    tags: ['Mediterranean', 'Real Estate', 'Tourism', 'Second Homes', 'Property Markets'],
+    tags: ['Śródziemnomorskie', 'Nieruchomości', 'Turystyka', 'Drugie Domy', 'Rynki Nieruchomości'],
   },
   {
     slug: 'wine-and-spirits-investment-markets-in-italy-and-the-mediterranean',
-    title: 'Wine and Spirits: Investment Markets in Italy and the Wider Mediterranean',
+    title: 'Wino i Alkohole: Rynki Inwestycyjne we Włoszech i Szerszym Śródziemnomorzu',
     excerpt:
-      'How premium wine and spirits from Italy and the Mediterranean have evolved into investable assets, what drives pricing and secondary-market liquidity, and how investors can access the theme without overpaying for scarcity.',
+      'Jak premium wino i alkohole z Włoch i Śródziemnomorza ewoluowały w aktywa inwestycyjne, co napędza ceny i płynność rynku wtórnego, oraz jak inwestorzy mogą uzyskać dostęp do tematu bez przepłacania za rzadkość.',
     content: `# Wine and Spirits: Investment Markets in Italy and the Wider Mediterranean
 
 ## Introduction
@@ -5887,15 +5887,15 @@ Wine and spirits investments carry unique risks not present in traditional asset
 - Import/export restrictions
 - Appellation rule changes
 
-## Conclusion
+## Wnioski
 
-Wine and spirits from Italy and the Mediterranean can complement broader Mediterranean allocations as niche, long-term holdings, but they require specialist knowledge and patience. The market offers potential for attractive returns, portfolio diversification, and tangible asset ownership. However, high transaction costs, liquidity constraints, and various risks require careful consideration.
+Wino i alkohole z Włoch i Śródziemnomorza mogą uzupełniać szersze alokacje śródziemnomorskie jako niszowe, długoterminowe posiadania, ale wymagają specjalistycznej wiedzy i cierpliwości. Rynek oferuje potencjał atrakcyjnych zwrotów, dywersyfikacji portfela i własności aktywów materialnych. Jednak wysokie koszty transakcyjne, ograniczenia płynności i różne ryzyka wymagają ostrożnego rozważenia.
 
-For most investors, listed consumer companies and luxury groups with strong wine and spirits franchises offer a more liquid and scalable way to access the theme than building cellars directly. These investments provide exposure to the wine and spirits business without the challenges of direct ownership.
+Dla większości inwestorów notowane firmy konsumenckie i grupy luksusowe z silnymi franczyzami wina i alkoholi oferują bardziej płynny i skalowalny sposób dostępu do tematu niż bezpośrednie budowanie piwnic. Te inwestycje zapewniają ekspozycję na biznes wina i alkoholi bez wyzwań bezpośredniej własności.
 
-Successful wine and spirits investing requires understanding market dynamics, producer reputation, vintage quality, and practical considerations like storage and costs. For investors with the expertise, capital, and patience, direct investment can be rewarding. For others, listed company exposure provides a more practical approach.
+Udane inwestowanie w wino i alkohole wymaga zrozumienia dynamiki rynku, reputacji producenta, jakości rocznika i praktycznych rozważań, takich jak przechowywanie i koszty. Dla inwestorów z ekspertyzą, kapitałem i cierpliwością, bezpośrednia inwestycja może być opłacalna. Dla innych, ekspozycja na notowane firmy zapewnia bardziej praktyczne podejście.
 
-The Mediterranean's rich wine and spirits heritage, combined with growing global demand and supply constraints, creates ongoing investment opportunities. However, these markets require specialized knowledge and should be approached with realistic expectations about returns, liquidity, and holding periods.`,
+Bogate dziedzictwo wina i alkoholi Śródziemnomorza, w połączeniu z rosnącym globalnym popytem i ograniczeniami podaży, tworzy trwające możliwości inwestycyjne. Jednak te rynki wymagają specjalistycznej wiedzy i powinny być podejmowane z realistycznymi oczekiwaniami dotyczącymi zwrotów, płynności i okresów utrzymywania.`,
     date: formatDate(322),
     author: 'Radomir Kłosek',
     language: 'pl',
@@ -5909,13 +5909,13 @@ The Mediterranean's rich wine and spirits heritage, combined with growing global
 Wine and spirits markets in Italy, France, Spain, and other Mediterranean countries have long attracted collectors and investors.`),
     ),
     imageUrl: getAnalyticsImage('wine-and-spirits-investment-markets-in-italy-and-the-mediterranean'),
-    tags: ['Wine', 'Spirits', 'Alternative Assets', 'Mediterranean', 'Consumer'],
+    tags: ['Wino', 'Alkohole', 'Aktywa Alternatywne', 'Śródziemnomorskie', 'Konsument'],
   },
   {
     slug: 'italian-banking-sector-recovery-profitability-and-npl-trends',
-    title: 'Italian Banking Sector: Recovery, Profitability, and NPL Trends',
+    title: 'Włoski Sektor Bankowy: Odrodzenie, Rentowność i Trendy NPL',
     excerpt:
-      'How Italian banks have repaired balance sheets since the euro-area crisis, why higher rates have supported profitability, and which risks around credit quality and regulation still require close monitoring.',
+      'Jak włoskie banki naprawiły bilanse od kryzysu strefy euro, dlaczego wyższe stopy wsparły rentowność, oraz które ryzyka związane z jakością kredytów i regulacjami nadal wymagają ścisłego monitorowania.',
     content: `# Italian Banking Sector: Recovery, Profitability, and NPL Trends
 
 ## Introduction
@@ -6356,33 +6356,33 @@ Given the sector's characteristics, a selective approach is essential:
 
 ## Conclusion
 
-Italian banks have travelled a long way from the crisis years, but they remain cyclically and structurally sensitive. The sector has successfully reduced NPLs, strengthened capital, and restored profitability. Higher interest rates have provided a significant boost, expanding margins and improving returns.
+Włoskie banki przeszły długą drogę od lat kryzysu, ale pozostają cyklicznie i strukturalnie wrażliwe. Sektor z powodzeniem zmniejszył NPL, wzmocnił kapitał i przywrócił rentowność. Wyższe stopy procentowe zapewniły znaczący impuls, rozszerzając marże i poprawiając zwroty.
 
-However, challenges remain. The sector faces economic headwinds, digital disruption, competitive pressure, and ongoing regulatory requirements. Growth prospects are modest, and the sector remains sensitive to sovereign spreads and economic conditions.
+Jednak wyzwania pozostają. Sektor stoi przed przeciwnościami ekonomicznymi, zakłóceniami cyfrowymi, presją konkurencyjną i trwającymi wymaganiami regulacyjnymi. Perspektywy wzrostu są skromne, a sektor pozostaje wrażliwy na spready suwerenne i warunki ekonomiczne.
 
-For Mediterranean investors, selective exposure to well-capitalised, cost-disciplined franchises can add income and cyclical upside, provided that sovereign and macro risks are carefully monitored. The sector's recovery has created investment opportunities, but success requires careful selection and ongoing risk management.
+Dla inwestorów śródziemnomorskich selektywna ekspozycja na dobrze skapitalizowane, dyscyplinowane kosztowo franczyzy może dodać dochód i cykliczny potencjał wzrostu, pod warunkiem, że ryzyko suwerenne i makro są ostrożnie monitorowane. Odrodzenie sektora stworzyło możliwości inwestycyjne, ale sukces wymaga ostrożnego wyboru i ciągłego zarządzania ryzykiem.
 
-The Italian banking sector's transformation demonstrates the potential for recovery in distressed financial sectors, but also highlights the ongoing challenges of operating in a low-growth, highly regulated, and competitive environment. Investors should approach the sector with realistic expectations and a focus on quality franchises with sustainable business models.`,
+Transformacja włoskiego sektora bankowego demonstruje potencjał odrodzenia w sektorach finansowych w trudnej sytuacji, ale również podkreśla trwające wyzwania działania w środowisku niskiego wzrostu, wysoce regulowanym i konkurencyjnym. Inwestorzy powinni podejść do sektora z realistycznymi oczekiwaniami i skupieniem na jakościowych franczyzach ze zrównoważonymi modelami biznesowymi.`,
     date: formatDate(328),
     author: 'Radomir Kłosek',
     language: 'pl',
     authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
-      countWords(`# Italian Banking Sector: Recovery, Profitability, and NPL Trends
+      countWords(`# Włoski Sektor Bankowy: Odrodzenie, Rentowność i Trendy NPL
 
-## Introduction
+## Wprowadzenie
 
-Italian banks were at the centre of market concerns during the euro-area sovereign crisis, but the sector has since undergone substantial repair.`),
+Włoskie banki były w centrum obaw rynkowych podczas kryzysu suwerennego strefy euro, ale sektor od tego czasu przeszedł znaczącą naprawę.`),
     ),
     imageUrl: getAnalyticsImage('italian-banking-sector-recovery-profitability-and-npl-trends'),
-    tags: ['Italy', 'Banks', 'NPLs', 'Profitability', 'Mediterranean Markets'],
+    tags: ['Włochy', 'Banki', 'NPL', 'Rentowność', 'Rynki Śródziemnomorskie'],
   },
   {
     slug: 'mediterranean-renewable-energy-projects-wind-solar-and-offshore',
-    title: 'Mediterranean Renewable Energy: Wind, Solar, and Offshore Opportunities',
+    title: 'Energia Odnawialna Śródziemnomorska: Wiatr, Słońce i Możliwości Morskie',
     excerpt:
-      'How the Mediterranean region is building out wind, solar, and offshore renewable capacity, which countries and projects are leading, and where investors can find attractive risk-adjusted returns in the transition.',
+      'Jak region śródziemnomorski buduje moce odnawialne wiatrowe, słoneczne i morskie, które kraje i projekty prowadzą, oraz gdzie inwestorzy mogą znaleźć atrakcyjne skorygowane o ryzyko zwroty w przejściu.',
     content: `# Mediterranean Renewable Energy: Wind, Solar, and Offshore Opportunities
 
 ## Introduction
@@ -6722,26 +6722,26 @@ Recent supply chain disruptions have increased costs. Solar panel prices rose in
 
 Competitive auctions drive cost reduction but compress returns. Auction competition is intense in many markets. Winning bids require careful cost management. Understanding auction dynamics is crucial.
 
-## Conclusion
+## Wnioski
 
-Mediterranean renewable energy offers compelling investment opportunities driven by excellent resources, supportive policies, and improving economics. Solar PV and onshore wind are well-established with proven economics. Offshore wind is emerging with significant potential. Different countries offer varying opportunities and risks.
+Energia odnawialna śródziemnomorska oferuje przekonujące możliwości inwestycyjne napędzane doskonałymi zasobami, wspierającymi politykami i poprawiającą się ekonomią. Fotowoltaika słoneczna i wiatr lądowy są dobrze ugruntowane z udowodnioną ekonomią. Wiatr morski pojawia się z znaczącym potencjałem. Różne kraje oferują różne możliwości i ryzyka.
 
-For investors, success requires understanding project types, geographic opportunities, contract structures, and key risks. Careful due diligence on project economics, regulatory frameworks, and grid integration is essential. The Mediterranean renewable energy market is dynamic and evolving, offering opportunities for investors with the right expertise and risk appetite.
+Dla inwestorów sukces wymaga zrozumienia typów projektów, możliwości geograficznych, struktur kontraktów i kluczowych ryzyk. Ostrożna due diligence dotycząca ekonomii projektu, ram regulacyjnych i integracji sieci jest niezbędna. Rynek energii odnawialnej śródziemnomorskiej jest dynamiczny i ewoluujący, oferując możliwości dla inwestorów z odpowiednią ekspertyzą i apetytem na ryzyko.
 
-The energy transition in the Mediterranean is accelerating, creating significant investment opportunities across the value chain. As always, project and regulatory due diligence remain central to protecting downside while capturing the upside potential of this transformative sector.`,
+Przejście energetyczne w Śródziemnomorzu przyspiesza, tworząc znaczące możliwości inwestycyjne w całym łańcuchu wartości. Jak zawsze, due diligence projektowa i regulacyjna pozostają kluczowe dla ochrony przed spadkami przy jednoczesnym wykorzystaniu potencjału wzrostu tego transformacyjnego sektora.`,
     date: formatDate(334),
     author: 'Radomir Kłosek',
     language: 'pl',
     authorAvatar: getAuthorAvatar('Radomir Kłosek'),
     type: 'markets',
     readTime: calculateReadTime(
-      countWords(`# Mediterranean Renewable Energy: Wind, Solar, and Offshore Opportunities
+      countWords(`# Energia Odnawialna Śródziemnomorska: Wiatr, Słońce i Możliwości Morskie
 
-## Introduction
+## Wprowadzenie
 
-The Mediterranean region offers abundant solar and wind resources, making it a natural candidate for large-scale renewable energy deployment.`),
+Region śródziemnomorski oferuje obfite zasoby słoneczne i wiatrowe, czyniąc go naturalnym kandydatem do wdrożenia energii odnawialnej na dużą skalę.`),
     ),
     imageUrl: getAnalyticsImage('mediterranean-renewable-energy-projects-wind-solar-and-offshore'),
-    tags: ['Mediterranean', 'Renewables', 'Wind', 'Solar', 'Energy Transition'],
+    tags: ['Śródziemnomorskie', 'Odnawialne', 'Wiatr', 'Słońce', 'Przejście Energetyczne'],
   },
 ];
