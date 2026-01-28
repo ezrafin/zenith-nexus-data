@@ -16,6 +16,7 @@ interface UseMarketDataQueryReturn {
   error: Error | null;
   lastUpdated: Date | null;
   isDemo: boolean;
+  provider?: string;
   refetch: () => void;
 }
 
@@ -24,7 +25,11 @@ interface CachedMarketData {
   timestamp: string;
   isDemo: boolean;
   cachedAt: number;
+  schemaVersion?: number;
+  provider?: string;
 }
+
+export const MARKET_DATA_SCHEMA_VERSION = 1;
 
 const CACHE_KEY_PREFIX = 'market_data_cache_';
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
@@ -37,6 +42,11 @@ function getCachedData(type: string): CachedMarketData | null {
     
     const parsed: CachedMarketData = JSON.parse(cached);
     const now = Date.now();
+
+    // Invalidate cache if schema version has changed
+    if (!parsed.schemaVersion || parsed.schemaVersion !== MARKET_DATA_SCHEMA_VERSION) {
+      return null;
+    }
     
     // Return cached data if it's still fresh
     if (now - parsed.cachedAt < CACHE_DURATION) {
@@ -51,13 +61,21 @@ function getCachedData(type: string): CachedMarketData | null {
 }
 
 // Save data to localStorage cache
-function setCachedData(type: string, data: MarketData[], timestamp: string, isDemo: boolean): void {
+function setCachedData(
+  type: string,
+  data: MarketData[],
+  timestamp: string,
+  isDemo: boolean,
+  provider?: string,
+): void {
   try {
     const cacheEntry: CachedMarketData = {
       data,
       timestamp,
       isDemo,
       cachedAt: Date.now(),
+      schemaVersion: MARKET_DATA_SCHEMA_VERSION,
+      provider,
     };
     localStorage.setItem(CACHE_KEY_PREFIX + type, JSON.stringify(cacheEntry));
   } catch {
@@ -65,7 +83,9 @@ function setCachedData(type: string, data: MarketData[], timestamp: string, isDe
   }
 }
 
-export async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies'): Promise<{ data: MarketData[]; timestamp: string; isDemo: boolean }> {
+export async function fetchMarketDataFromAPI(
+  type: 'crypto' | 'stocks' | 'indices' | 'commodities' | 'currencies',
+): Promise<{ data: MarketData[]; timestamp: string; isDemo: boolean; provider?: string }> {
   if (type === 'crypto') {
     const { data: responseData, error: fetchError } = await supabase.functions.invoke('fetch-crypto');
     
@@ -73,11 +93,12 @@ export async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indice
 
     if (responseData?.data && responseData.data.length > 0) {
       const result = {
-        data: responseData.data,
-        timestamp: responseData.timestamp || new Date().toISOString(),
-        isDemo: responseData.isDemo || false,
+        data: responseData.data as MarketData[],
+        timestamp: (responseData as any).timestamp || new Date().toISOString(),
+        isDemo: Boolean((responseData as any).isDemo),
+        provider: (responseData as any).source || 'unknown',
       };
-      setCachedData(type, result.data, result.timestamp, result.isDemo);
+      setCachedData(type, result.data, result.timestamp, result.isDemo, result.provider);
       return result;
     } else {
       // Fallback to local mock data
@@ -87,7 +108,7 @@ export async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indice
         timestamp: new Date().toISOString(),
         isDemo: true,
       };
-      setCachedData(type, result.data, result.timestamp, result.isDemo);
+      setCachedData(type, result.data, result.timestamp, result.isDemo, 'mock');
       return result;
     }
   } else {
@@ -117,21 +138,23 @@ export async function fetchMarketDataFromAPI(type: 'crypto' | 'stocks' | 'indice
     const result = await response.json();
     if (result?.data) {
       const data = {
-        data: result.data,
+        data: result.data as MarketData[],
         timestamp: result.timestamp || new Date().toISOString(),
         isDemo: result.isDemo || false,
+        provider: result.source || (result.isCached ? 'db_cache' : 'unknown'),
       };
-      setCachedData(type, data.data, data.timestamp, data.isDemo);
+      setCachedData(type, data.data, data.timestamp, data.isDemo, data.provider);
       return data;
     } else if (result?.error) {
       // Even on error, return mock data if available
       if (result.data && Array.isArray(result.data) && result.data.length > 0) {
         const data = {
-          data: result.data,
+          data: result.data as MarketData[],
           timestamp: result.timestamp || new Date().toISOString(),
           isDemo: result.isDemo !== undefined ? result.isDemo : true,
+          provider: result.source || (result.isCached ? 'db_cache' : 'unknown'),
         };
-        setCachedData(type, data.data, data.timestamp, data.isDemo);
+        setCachedData(type, data.data, data.timestamp, data.isDemo, data.provider);
         return data;
       }
       throw new Error(result.error);

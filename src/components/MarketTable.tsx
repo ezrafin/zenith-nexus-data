@@ -5,6 +5,7 @@ import { MarketData } from '@/lib/api/types';
 import { SimpleChart } from './SimpleChart';
 import { WatchlistButton } from './markets/WatchlistButton';
 import { useTranslation } from '@/hooks/useTranslation';
+import { formatPrice as formatMarketPrice, formatPercent as formatMarketPercent, parseVolume } from '@/utils/formatMarketNumber';
 
 interface MarketTableProps {
   data: MarketData[];
@@ -17,7 +18,7 @@ type SortKey = 'symbol' | 'name' | 'price' | 'changePercent' | 'volume';
 type SortDirection = 'asc' | 'desc';
 
 export function MarketTable({ data, showVolume = false, showChart = true, marketType = 'stocks' }: MarketTableProps) {
-  const { t } = useTranslation({ namespace: 'ui' });
+  const { t, language } = useTranslation({ namespace: 'ui' });
   const [sortKey, setSortKey] = useState<SortKey>('symbol');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
 
@@ -30,7 +31,16 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
     }
   };
 
-  const sortedData = [...data].sort((a, b) => {
+  const dataWithNumericVolume = useMemo(
+    () =>
+      data.map((item) => ({
+        ...item,
+        _numericVolume: showVolume ? parseVolume((item as any).volume) : 0,
+      })),
+    [data, showVolume],
+  );
+
+  const sortedData = [...dataWithNumericVolume].sort((a, b) => {
     let comparison = 0;
     
     switch (sortKey) {
@@ -43,21 +53,15 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
         comparison = a[sortKey] - b[sortKey];
         break;
       case 'volume':
-        const aVol = parseFloat(a.volume?.replace(/[^0-9.]/g, '') || '0');
-        const bVol = parseFloat(b.volume?.replace(/[^0-9.]/g, '') || '0');
-        comparison = aVol - bVol;
+        comparison = (a as any)._numericVolume - (b as any)._numericVolume;
         break;
     }
     
     return sortDirection === 'asc' ? comparison : -comparison;
   });
 
-  const formatPrice = (price: number) => {
-    if (price >= 1000) {
-      return price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    }
-    return price.toFixed(price < 10 ? 4 : 2);
-  };
+  const formatPrice = (price: number) => formatMarketPrice(price, language);
+  const formatPct = (value: number) => formatMarketPercent(value, language);
 
   const SortIcon = ({ column }: { column: SortKey }) => {
     if (sortKey !== column) {
@@ -101,7 +105,7 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                 </div>
                 <WatchlistButton symbol={item.symbol} marketType={marketType} />
               </div>
-              <div className="grid grid-cols-2 gap-3 text-sm">
+            <div className="grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <span className="text-xs text-muted-foreground">{t('marketTable.price')}</span>
                   <div className="font-mono font-medium">{formatPrice(item.price)}</div>
@@ -109,7 +113,8 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                 <div>
                   <span className="text-xs text-muted-foreground">%</span>
                   <div className={`font-mono ${isPositive ? 'text-positive' : 'text-negative'}`}>
-                    {isPositive ? '+' : ''}{Math.abs(item.changePercent).toFixed(2)}%
+                    {isPositive ? '+' : ''}
+                    {formatPct(Math.abs(item.changePercent))}%
                   </div>
                 </div>
                 {showVolume && (
@@ -207,15 +212,17 @@ export function MarketTable({ data, showVolume = false, showChart = true, market
                     <span className="font-mono font-medium text-sm tabular-nums">{formatPrice(item.price)}</span>
                   </td>
                   <td className="px-3 md:px-4 py-3 md:py-4 text-right">
-                    <span className={`inline-flex items-center gap-1 font-mono text-sm font-medium tabular-nums ${
+                  <span
+                    className={`inline-flex items-center gap-1 font-mono text-sm font-medium tabular-nums ${
                       isPositive ? 'text-positive' : 'text-negative'
-                    }`}>
+                    }`}
+                  >
                       {isPositive ? (
                         <TrendingUp className="h-3 w-3" />
                       ) : (
                         <TrendingDown className="h-3 w-3" />
                       )}
-                      {Math.abs(item.changePercent).toFixed(2)}%
+                      {formatPct(item.changePercent)}%
                     </span>
                   </td>
                   {showVolume && (

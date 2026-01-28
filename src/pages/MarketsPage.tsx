@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/input';
 import { useTranslation } from '@/hooks/useTranslation';
 import { usePageBillCollection } from '@/hooks/usePageBillCollection';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { Badge } from '@/components/ui/badge';
 
 type MarketType = 'indices' | 'stocks' | 'commodities' | 'crypto' | 'currencies';
 
@@ -64,7 +65,7 @@ export default function MarketsPage() {
   );
 
   // Load current market type data
-  const { data, isLoading: loading, error, lastUpdated, refetch } = useMarketDataQuery({
+  const { data, isLoading: loading, error, lastUpdated, isDemo, provider, refetch } = useMarketDataQuery({
     type: marketType,
     refreshInterval: 120000,
   });
@@ -161,10 +162,17 @@ export default function MarketsPage() {
         <div className="container-wide">
           <div className="mb-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-            <h1 className="heading-lg">{info.title}</h1>
-              <LastUpdated timestamp={lastUpdated} onRefresh={refresh} loading={loading} />
+              <h1 className="heading-lg">{info.title}</h1>
+              <div className="flex items-center gap-3">
+                {provider && (
+                  <Badge variant={isDemo ? 'secondary' : 'outline'} className="whitespace-nowrap text-xs">
+                    {isDemo ? t('marketsPage.dataSourceDemo', { provider }) : t('marketsPage.dataSourceLive', { provider })}
+                  </Badge>
+                )}
+                <LastUpdated timestamp={lastUpdated} onRefresh={refresh} loading={loading} />
+              </div>
             </div>
-          <p className="body-md max-w-2xl">{info.description}</p>
+            <p className="body-md max-w-2xl">{info.description}</p>
           </div>
 
           {/* Market Tabs */}
@@ -210,14 +218,15 @@ export default function MarketsPage() {
             </div>
             {searchQuery && (
               <p className="mt-2 text-sm text-muted-foreground">
-                {filteredData.length > 0 
-                  ? t('marketsPage.searchResults', {
-                      count: filteredData.length,
-                      label: filteredData.length === 1 ? t('marketsPage.searchResultOne') : t('marketsPage.searchResultMany'),
-                      query: searchQuery,
-                    })
-                  : t('marketsPage.searchNoResults', { query: searchQuery })
-                }
+                {searchQuery.trim().length === 1
+                  ? t('marketsPage.searchHintMinChars')
+                  : filteredData.length > 0
+                    ? t('marketsPage.searchResults', {
+                        count: filteredData.length,
+                        label: filteredData.length === 1 ? t('marketsPage.searchResultOne') : t('marketsPage.searchResultMany'),
+                        query: searchQuery,
+                      })
+                    : t('marketsPage.searchNoResults', { query: searchQuery })}
               </p>
             )}
           </div>
