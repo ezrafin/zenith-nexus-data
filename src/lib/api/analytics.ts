@@ -3047,42 +3047,13 @@ The consumer tech market will continue growing and evolving. Investors positione
   // New articles should be added directly to the appropriate author module
 ];
 
+// Note: `language` parameter is currently ignored. All articles are always returned
+// in their original language so that each article is shown regardless of site locale.
 export async function fetchAnalytics(type?: string, language?: string): Promise<AnalyticsArticle[]> {
   let result = [...quickAnalytics];
 
   if (type && type !== 'all') {
     result = result.filter((item) => item.type === type);
-  }
-
-  // Filter by language if specified
-  // Special handling: Anastasia Petrova articles always show in Russian regardless of site language
-  if (language) {
-    if (language === 'ru') {
-      // Show Russian articles (including Anastasia Petrova)
-      result = result.filter((item) => item.language === 'ru');
-    } else {
-      // For other languages, show articles in that language
-      // OR articles by Anastasia Petrova (always Russian)
-      // OR articles by Radomir Kłosek (Polish) and Olaf Klein (German),
-      // which we want to surface regardless of site language
-      result = result.filter(
-        (item) =>
-          item.language === language ||
-          item.author === 'Anastasia Petrova' ||
-          item.author === 'Radomir Kłosek' ||
-          item.author === 'Olaf Klein'
-      );
-    }
-  } else {
-    // If no language specified, show default-language (no language tag) articles
-    // OR articles by Anastasia Petrova, Radomir Kłosek, and Olaf Klein
-    result = result.filter(
-      (item) =>
-        !item.language ||
-        item.author === 'Anastasia Petrova' ||
-        item.author === 'Radomir Kłosek' ||
-        item.author === 'Olaf Klein'
-    );
   }
 
   // Sort by date (newest first)
